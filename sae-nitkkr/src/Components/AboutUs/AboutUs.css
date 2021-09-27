@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+.boxes{
+  display: flex;
+  flex-direction: row;
+  margin-left: 80px;
+  margin-right: 80px;
+  /* margin: auto; */
+  /* border: solid #000000 2px; */
+  padding: 20px ;
+
+}
+img{
+ margin-right: 50px;
+}
+.box2{
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  /* padding: ; */
+  
+  /* padding-right: 10px; */
+}
+.box21{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap   ;
+padding-bottom: 10px;
+}
+.box22{
+  margin: 20px 0px;
+}
+.head{
+  background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+	-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-left: 5px;
+  
+}
+.box23{
+  background: linear-gradient(white,white), 
+              linear-gradient(to bottom, #30CFD0 0%, #330867 100%);
+  background-origin: padding-box, border-box;
+  background-repeat: no-repeat; /* this is important */
+  border-left: 3px solid transparent;
+  margin: 10px;
+  padding-left: 10px;
+  margin-top: 20px;
+}
+@media only screen and (max-width: 767px) {
+  .boxes{
+    margin: 20px; 
+  }
+  .box1{
+    display: none;
+  }
+  .box2{
+    padding: 0;
+  }
+}
+/* @media only screen and (width: 768px){
+  img{
+    margin-right: 15px;
+  }
+} */
+@media (min-width: 1440px) and (max-width: 2560px) {
+  .boxes{
+            margin-left:280px;
+            margin-right:280px;    
+   }
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .boxes {
+              margin-left: 120px;
+              margin-right: 120px;
+              font-size: 18px;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1024px) {
+
+    .boxes {
+      margin-left: 40px;
+      margin-right: 40px;
+}}
+@media (min-width: 768px) and (max-width: 900px) {
+  .boxes {
+            margin-left: 18px;
+            margin-right: 18px;
+  }
+  img{
+    margin-right: 15px;
+  }
+}
+@media (min-width: 375px) and (max-width: 425px) {
+  .boxes {
+   margin-left: 12px;
+   margin-right: 12px;
+  }
+}
+@media (min-width: 320px) and (max-width: 375px) {
+  .boxes {
+   margin-left: 8px;
+   margin-right: 8px;
+  }
+}
+@media (min-width: 120pxpx) and (max-width: 320px) {
+   .boxes{
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+}
+
+@media (min-width: 150px) and (max-width: 425px) {
+
+}
