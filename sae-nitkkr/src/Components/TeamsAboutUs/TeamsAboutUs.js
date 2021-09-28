@@ -1,4 +1,5 @@
 import React from 'react'
+import accimg from '../../Assets/Accelrons.jpg'
 
 function Acc() {
   return (
@@ -16,7 +17,7 @@ From being a first-timer in SUPRA 2014 to standing on top among all NITS in SUPR
           FORMULA BHARAT
         </div>
       </div>
-      <div className="image_container"><div className="image"><img src="./images/Accelrons.jpg" alt="image" /></div></div>
+      <div className="image_container"><div className="image"><img src={accimg} alt="image" /></div></div>
     </div>
     </div>
   )
