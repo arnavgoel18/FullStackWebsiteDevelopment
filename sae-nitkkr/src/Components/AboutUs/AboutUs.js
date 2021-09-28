@@ -1,4 +1,4 @@
-import './App.css';
+import './AboutUS.css';
 
 function Home(props) {
   return (
@@ -14,7 +14,6 @@ function Home(props) {
     </div>
   </div>
   </>
-    
   );
 }
 export default Home
