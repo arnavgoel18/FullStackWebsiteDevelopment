@@ -1,0 +1,98 @@
+* {
+    color: white;
+  }
+  body {
+    background-image: url("../../../Assets/ss.jpg");
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: center;
+    background-color: #000000;
+  }
+  .boxes {
+    margin: 80px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+  }
+  .box1 {
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+  }
+  .box11 {
+    display: flex;
+  }
+  .box112 {
+    margin-left: 10px;
+  }
+  .box12 {
+    font-weight: bold;
+    background: -webkit-linear-gradient(right, blue, purple);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: flex;
+  }
+  .box121 {
+    margin-left: 10px;
+  }
+  .box122 {
+    margin-left: 15px;
+  }
+  .box2 {
+    font-size: 40px;
+  }
+  .box23 {
+    font-weight: bold;
+  }
+  .box3 {
+    padding-left: 10px;
+    border-left: 5px solid transparent;
+    border-image: linear-gradient(to bottom, blue, purple);
+    border-image-slice: 1;
+    margin: 20px;
+    font-size: 20px;
+    width: 380px;
+  }
+  .box4 {
+    font-size: 22px;
+    font-weight: bold;
+    width: 140px;
+    padding: 5px;
+    background: linear-gradient(to right, blue, purple),
+      linear-gradient(to right, white, white);
+    position: relative;
+    left: 140px;
+  }
+
+  @media (min-width: 628px) and (max-width: 767px) {
+    .boxes {
+      margin: 60px;
+    }
+  }
+  @media (width: 768px) {
+    body {
+      background-position-x: 18px;
+    }
+  }
+  @media (min-width: 580px) and (max-width: 628px) {
+    .boxes {
+      margin: 40px;
+    }
+  }
+  @media (min-width: 30px) and (max-width: 580px) {
+    .boxes {
+      margin: 20px;
+      width: 340px;
+    }
+    body {
+      background-image: url("./ss.jpg");
+      background-repeat: no-repeat;
+      background-position-x: 0px;
+      background-position-y: center;
+    }
+    .box1 {
+      flex-direction: column;
+    }
+  }
+  
