@@ -10,6 +10,7 @@ body{
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 /*PROF INCHARGES*/
 
@@ -22,7 +23,7 @@ body{
 }
 
 .profIncharge_container p{
-    font-weight: bolder;
+    font-weight: bold;
 }
 
 .persons_container{
@@ -42,11 +43,18 @@ body{
     border-radius: 50%;
     border: solid black 1px;
     margin-bottom: 1vh;
+    overflow: hidden;
+}
+
+.circle img{
+    height: inherit;
+    width: inherit;
 }
 
 /*MANAGERS*/
 
 .managers_container{
+    margin-top: 0px;
     width: 100%;
     height: auto;
     background-color: #fff;
