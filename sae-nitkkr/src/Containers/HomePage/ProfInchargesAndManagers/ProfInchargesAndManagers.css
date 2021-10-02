@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background-color: #000;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+/*PROF INCHARGES*/
+
+.profIncharge_container{
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    text-align: center;
+    padding: 4vh;
+}
+
+.profIncharge_container p{
+    font-weight: bolder;
+}
+
+.persons_container{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10vh;
+}
+
+.person{
+    width: auto;
+}
+
+.circle{
+    width: 20vh;
+    height: 20vh;
+    border-radius: 50%;
+    border: solid black 1px;
+    margin-bottom: 1vh;
+}
+
+/*MANAGERS*/
+
+.managers_container{
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    text-align: center;
+    padding: 4vh;
+}
+
+.profIncharge_container p{
+    font-weight: bolder;
+}
+
+.persons_container{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10vh;
+}
+
+.person{
+    width: auto;
+}
+
+.circle{
+    width: 20vh;
+    height: 20vh;
+    border-radius: 50%;
+    border: solid black 1px;
+    margin-bottom: 1vh;
+}
+
+@media screen and (max-width: 1020px){
+    .persons_container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .person{
+        margin-bottom: 1vh;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .managers_container{
+        display: none;
+    }
+}
