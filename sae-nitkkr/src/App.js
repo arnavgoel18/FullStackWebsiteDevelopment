@@ -1,11 +1,9 @@
-import ProfInchargesAndManagers from './Containers/HomePage/ProfInchargesAndManagers/ProfIncharges.js';
-import Managers from './Containers/HomePage/ProfInchargesAndManagers/Managers.js'
+import Gallery from './Components/Gallery/Gallery';
 
 function App() {
   return (
     <>
-      <ProfInchargesAndManagers/>
-      <Managers/>
+      
     </>
   );
 }
