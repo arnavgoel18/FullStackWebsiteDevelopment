@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tester Code (Put next div inside smthgn with sim props as #one) */
+/* #one{
+    background: #000;
+    height: 100vh;
+    width: auto;
+} */
+
+.content{
+    width: 100%;
+    height: 100vh;
+}
+
+.main-container{
+    width: 100%;
+    height: 100vh;
+    min-height: 50vh;
+    max-height: 100vh;
+    /* background: url();
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-attachment: fixed;*/
+}
+
+.main-container p{
+    display: none;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.smthng{
+    width: 100%; 
+    height: 100vh;
+}
+
+@media screen and (max-width:1440px) {
+    .main-container{
+        height: auto;
+    }
+}
+
+@media screen and (max-width:775px) {
+    .main-container{
+        height: 50vh;
+    }
+}
+
+@media screen and (max-width:750px) {
+    .main-container{
+        height: 40vh;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .main-container img{
+        display: none;
+    }
+
+    .main-container p{
+        display: block;        
+    }
+
+    .main-container{
+        background: #000;
+        color: #fff;
+        /* color: rgb(61,69,125);
+        color: linear-gradient(90deg, rgba(61,69,125,1) 2%, rgba(78,56,113,1) 36%, rgba(171,17,241,1) 100%); */
+        text-align: left;
+        padding-left: 9vh;
+        padding-top: 45%;
+        font-size: 45px;
+    }
+}
+
+@media screen and (max-width:560px){
+    .main-container{
+        padding-left: 7vh;
+    }
+}
+
+@media screen and (max-width:510px){
+    .main-container{
+        padding-left: 5vh;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .main-container p{
+        font-size: 35px;
+    }
+}

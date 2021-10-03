@@ -1,9 +1,9 @@
-import Gallery from './Components/Gallery/Gallery';
+import FirstDisplayDiv from "./Components/FirstDisplayDIV/FirstDisplayDIV";
+import NavigationBar from "./Components/NavigationBar/NavigationBar"
 
 function App() {
   return (
     <>
-      
     </>
   );
 }
