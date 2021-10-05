@@ -1,9 +1,9 @@
-import FirstDisplayDiv from "./Components/FirstDisplayDIV/FirstDisplayDIV";
-import NavigationBar from "./Components/NavigationBar/NavigationBar"
+import Saga from './Components/Saga/Saga.js';
 
 function App() {
   return (
     <>
+      <Saga/>
     </>
   );
 }
