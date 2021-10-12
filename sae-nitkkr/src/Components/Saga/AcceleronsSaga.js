@@ -1,5 +1,4 @@
 import React from 'react';
-import { ReactDOM } from 'react-dom';
 import { useState } from 'react';
 
 import './Saga.css';
@@ -21,19 +20,19 @@ function Saga(){
     const [comp1Achievements, setcomp1Achievements] = useState([]);
     const [comp2Achievements, setcomp2Achievements] = useState([]);
 
-    const nitroxInfo = [
+    const acceleronsInfo = [
         {
-            competition1Name: "ATVC",
-            competition2Name: "BAJA SAE India",
+            competition1Name: "Supra",
+            competition2Name: "Formula Bharat",
         },
         {
             id: 2011,
-            atvc: {
+            supra: {
                 achievement1: "AIR1 in Terrain Response",
                 achievement2: "AIR2 in VD",
                 achievement3: "AIR3 in Stability",
             },
-            baja: {
+            fb: {
                 achievement1: "AIR5 in Desgin",
                 achievement2: "AIR6 in VD",
                 achievement3: "AIR7 in Stability",
@@ -41,12 +40,12 @@ function Saga(){
         },
         {
             id: 2012,
-            atvc: {
+            supra: {
                 achievement1: "AIR1 in Desgin",
                 achievement2: "AIR2 in VD",
                 achievement3: "AIR3 in Stability",
             },
-            baja: {
+            fb: {
                 achievement1: "AIR5 in Desgin",
                 achievement2: "AIR6 in VD",
                 achievement3: "AIR7 in Stability",
@@ -54,12 +53,12 @@ function Saga(){
         },
         {
             id: 2013,
-            atvc: {
+            supra: {
                 achievement1: "AIR1 in Desgin",
                 achievement2: "AIR2 in VD",
                 achievement3: "AIR3 in Stability",
             },
-            baja: {
+            fb: {
                 achievement1: "AIR5 in Desgin",
                 achievement2: "AIR6 in VD",
                 achievement3: "AIR7 in Stability",
@@ -67,12 +66,12 @@ function Saga(){
         },
         {
             id: 2014,
-            atvc: {
+            supra: {
                 achievement1: "AIR1 in Desgin",
                 achievement2: "AIR2 in VD",
                 achievement3: "AIR3 in Stability",
             },
-            baja: {
+            fb: {
                 achievement1: "AIR5 in Desgin",
                 achievement2: "AIR6 in VD",
                 achievement3: "AIR7 in Stability",
@@ -80,12 +79,12 @@ function Saga(){
         },
         {
             id: 2015,
-            atvc: {
+            supra: {
                 achievement1: "AIR1 in Desgin",
                 achievement2: "AIR2 in VD",
                 achievement3: "AIR3 in Stability",
             },
-            baja: {
+            fb: {
                 achievement1: "AIR5 in Desgin",
                 achievement2: "AIR6 in VD",
                 achievement3: "AIR7 in Stability",
@@ -93,12 +92,12 @@ function Saga(){
         },
         {
             id: 2016,
-            atvc: {
+            supra: {
                 achievement1: "AIR1 in Desgin",
                 achievement2: "AIR2 in VD",
                 achievement3: "AIR3 in Stability",
             },
-            baja: {
+            fb: {
                 achievement1: "AIR5 in Desgin",
                 achievement2: "AIR6 in VD",
                 achievement3: "AIR7 in Stability",
@@ -106,12 +105,12 @@ function Saga(){
         },
         {
             id: 2017,
-            atvc: {
+            supra: {
                 achievement1: "AIR1 in Desgin",
                 achievement2: "AIR2 in VD",
                 achievement3: "AIR3 in Stability",
             },
-            baja: {
+            fb: {
                 achievement1: "AIR5 in Desgin",
                 achievement2: "AIR6 in VD",
                 achievement3: "AIR7 in Stability",
@@ -119,12 +118,12 @@ function Saga(){
         },
         {
             id: 2018,
-            atvc: {
+            supra: {
                 achievement1: "AIR1 in Desgin",
                 achievement2: "AIR2 in VD",
                 achievement3: "AIR3 in Stability",
             },
-            baja: {
+            fb: {
                 achievement1: "AIR5 in Desgin",
                 achievement2: "AIR6 in VD",
                 achievement3: "AIR7 in Stability",
@@ -132,12 +131,12 @@ function Saga(){
         },
         {
             id: 2019,
-            atvc: {
+            supra: {
                 achievement1: "AIR1 in Desgin",
                 achievement2: "AIR2 in VD",
                 achievement3: "AIR3 in Stability",
             },
-            baja: {
+            fb: {
                 achievement1: "AIR5 in Desgin",
                 achievement2: "AIR6 in VD",
                 achievement3: "AIR7 in Stability",
@@ -145,12 +144,12 @@ function Saga(){
         },
         {
             id: 2020,
-            atvc: {
+            supra: {
                 achievement1: "AIR1 in Desgin",
                 achievement2: "AIR2 in VD",
                 achievement3: "AIR3 in Stability",
             },
-            baja: {
+            fb: {
                 achievement1: "AIR5 in Desgin",
                 achievement2: "AIR6 in VD",
                 achievement3: "AIR7 in Stability",
@@ -165,13 +164,13 @@ function Saga(){
             setcomp1Achievements(comp1Achievements => []);
             setcomp2Achievements(comp2Achievements => []);
 
-            setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[3].atvc.achievement1]);
-            setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[3].atvc.achievement2]);
-            setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[3].atvc.achievement3]);
+            setcomp1Achievements(comp1Achievements => [...comp1Achievements, acceleronsInfo[3].supra.achievement1]);
+            setcomp1Achievements(comp1Achievements => [...comp1Achievements, acceleronsInfo[3].supra.achievement2]);
+            setcomp1Achievements(comp1Achievements => [...comp1Achievements, acceleronsInfo[3].supra.achievement3]);
 
-            setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[3].baja.achievement1]);
-            setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[3].baja.achievement2]);
-            setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[3].baja.achievement3]);
+            setcomp2Achievements(comp2Achievements => [...comp2Achievements, acceleronsInfo[3].fb.achievement1]);
+            setcomp2Achievements(comp2Achievements => [...comp2Achievements, acceleronsInfo[3].fb.achievement2]);
+            setcomp2Achievements(comp2Achievements => [...comp2Achievements, acceleronsInfo[3].fb.achievement3]);
         }
         else if(year === 2014){
             document.getElementById('carPic').src = Accelerons2014;
@@ -179,13 +178,13 @@ function Saga(){
             setcomp1Achievements(comp1Achievements => []);
             setcomp2Achievements(comp2Achievements => []);
 
-            setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[4].atvc.achievement1]);
-            setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[4].atvc.achievement2]);
-            setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[4].atvc.achievement3]);
+            setcomp1Achievements(comp1Achievements => [...comp1Achievements, acceleronsInfo[4].supra.achievement1]);
+            setcomp1Achievements(comp1Achievements => [...comp1Achievements, acceleronsInfo[4].supra.achievement2]);
+            setcomp1Achievements(comp1Achievements => [...comp1Achievements, acceleronsInfo[4].supra.achievement3]);
 
-            setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[4].baja.achievement1]);
-            setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[4].baja.achievement2]);
-            setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[4].baja.achievement3]);
+            setcomp2Achievements(comp2Achievements => [...comp2Achievements, acceleronsInfo[4].fb.achievement1]);
+            setcomp2Achievements(comp2Achievements => [...comp2Achievements, acceleronsInfo[4].fb.achievement2]);
+            setcomp2Achievements(comp2Achievements => [...comp2Achievements, acceleronsInfo[4].fb.achievement3]);
         }
         else if(year === 2015){
             document.getElementById('carPic').src = Accelerons2015;
@@ -193,13 +192,13 @@ function Saga(){
             setcomp1Achievements(comp1Achievements => []);
             setcomp2Achievements(comp2Achievements => []);
 
-            setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[5].atvc.achievement1]);
-            setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[5].atvc.achievement2]);
-            setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[5].atvc.achievement3]);
+            setcomp1Achievements(comp1Achievements => [...comp1Achievements, acceleronsInfo[5].supra.achievement1]);
+            setcomp1Achievements(comp1Achievements => [...comp1Achievements, acceleronsInfo[5].supra.achievement2]);
+            setcomp1Achievements(comp1Achievements => [...comp1Achievements, acceleronsInfo[5].supra.achievement3]);
 
-            setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[5].baja.achievement1]);
-            setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[5].baja.achievement2]);
-            setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[5].baja.achievement3]);
+            setcomp2Achievements(comp2Achievements => [...comp2Achievements, acceleronsInfo[5].fb.achievement1]);
+            setcomp2Achievements(comp2Achievements => [...comp2Achievements, acceleronsInfo[5].fb.achievement2]);
+            setcomp2Achievements(comp2Achievements => [...comp2Achievements, acceleronsInfo[5].fb.achievement3]);
         }
         else if(year === 2016){
             document.getElementById('carPic').src = Accelerons2016;
@@ -207,13 +206,13 @@ function Saga(){
             setcomp1Achievements(comp1Achievements => []);
             setcomp2Achievements(comp2Achievements => []);
 
-            setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[6].atvc.achievement1]);
-            setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[6].atvc.achievement2]);
-            setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[6].atvc.achievement3]);
+            setcomp1Achievements(comp1Achievements => [...comp1Achievements, acceleronsInfo[6].supra.achievement1]);
+            setcomp1Achievements(comp1Achievements => [...comp1Achievements, acceleronsInfo[6].supra.achievement2]);
+            setcomp1Achievements(comp1Achievements => [...comp1Achievements, acceleronsInfo[6].supra.achievement3]);
 
-            setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[6].baja.achievement1]);
-            setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[6].baja.achievement2]);
-            setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[6].baja.achievement3]);
+            setcomp2Achievements(comp2Achievements => [...comp2Achievements, acceleronsInfo[6].fb.achievement1]);
+            setcomp2Achievements(comp2Achievements => [...comp2Achievements, acceleronsInfo[6].fb.achievement2]);
+            setcomp2Achievements(comp2Achievements => [...comp2Achievements, acceleronsInfo[6].fb.achievement3]);
         }
         else if(year === 2017){
             document.getElementById('carPic').src = Accelerons2017;
@@ -221,13 +220,13 @@ function Saga(){
             setcomp1Achievements(comp1Achievements => []);
             setcomp2Achievements(comp2Achievements => []);
 
-            setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[7].atvc.achievement1]);
-            setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[7].atvc.achievement2]);
-            setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[7].atvc.achievement3]);
+            setcomp1Achievements(comp1Achievements => [...comp1Achievements, acceleronsInfo[7].supra.achievement1]);
+            setcomp1Achievements(comp1Achievements => [...comp1Achievements, acceleronsInfo[7].supra.achievement2]);
+            setcomp1Achievements(comp1Achievements => [...comp1Achievements, acceleronsInfo[7].supra.achievement3]);
 
-            setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[7].baja.achievement1]);
-            setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[7].baja.achievement2]);
-            setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[7].baja.achievement3]);
+            setcomp2Achievements(comp2Achievements => [...comp2Achievements, acceleronsInfo[7].fb.achievement1]);
+            setcomp2Achievements(comp2Achievements => [...comp2Achievements, acceleronsInfo[7].fb.achievement2]);
+            setcomp2Achievements(comp2Achievements => [...comp2Achievements, acceleronsInfo[7].fb.achievement3]);
         }
         else if(year === 2018){
             document.getElementById('carPic').src = Accelerons2018;
@@ -235,13 +234,13 @@ function Saga(){
             setcomp1Achievements(comp1Achievements => []);
             setcomp2Achievements(comp2Achievements => []);
 
-            setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[8].atvc.achievement1]);
-            setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[8].atvc.achievement2]);
-            setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[8].atvc.achievement3]);
+            setcomp1Achievements(comp1Achievements => [...comp1Achievements, acceleronsInfo[8].supra.achievement1]);
+            setcomp1Achievements(comp1Achievements => [...comp1Achievements, acceleronsInfo[8].supra.achievement2]);
+            setcomp1Achievements(comp1Achievements => [...comp1Achievements, acceleronsInfo[8].supra.achievement3]);
 
-            setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[8].baja.achievement1]);
-            setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[8].baja.achievement2]);
-            setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[8].baja.achievement3]);
+            setcomp2Achievements(comp2Achievements => [...comp2Achievements, acceleronsInfo[8].fb.achievement1]);
+            setcomp2Achievements(comp2Achievements => [...comp2Achievements, acceleronsInfo[8].fb.achievement2]);
+            setcomp2Achievements(comp2Achievements => [...comp2Achievements, acceleronsInfo[8].fb.achievement3]);
         }
         else if(year === 2019){
             document.getElementById('carPic').src = Accelerons2019;
@@ -249,13 +248,13 @@ function Saga(){
             setcomp1Achievements(comp1Achievements => []);
             setcomp2Achievements(comp2Achievements => []);
 
-            setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[9].atvc.achievement1]);
-            setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[9].atvc.achievement2]);
-            setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[9].atvc.achievement3]);
+            setcomp1Achievements(comp1Achievements => [...comp1Achievements, acceleronsInfo[9].supra.achievement1]);
+            setcomp1Achievements(comp1Achievements => [...comp1Achievements, acceleronsInfo[9].supra.achievement2]);
+            setcomp1Achievements(comp1Achievements => [...comp1Achievements, acceleronsInfo[9].supra.achievement3]);
 
-            setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[9].baja.achievement1]);
-            setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[9].baja.achievement2]);
-            setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[9].baja.achievement3]);
+            setcomp2Achievements(comp2Achievements => [...comp2Achievements, acceleronsInfo[9].fb.achievement1]);
+            setcomp2Achievements(comp2Achievements => [...comp2Achievements, acceleronsInfo[9].fb.achievement2]);
+            setcomp2Achievements(comp2Achievements => [...comp2Achievements, acceleronsInfo[9].fb.achievement3]);
         }
         else if(year === 2020){
             document.getElementById('carPic').src = Accelerons2020;
@@ -263,13 +262,13 @@ function Saga(){
             setcomp1Achievements(comp1Achievements => []);
             setcomp2Achievements(comp2Achievements => []);
 
-            setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[10].atvc.achievement1]);
-            setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[10].atvc.achievement2]);
-            setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[10].atvc.achievement3]);
+            setcomp1Achievements(comp1Achievements => [...comp1Achievements, acceleronsInfo[10].supra.achievement1]);
+            setcomp1Achievements(comp1Achievements => [...comp1Achievements, acceleronsInfo[10].supra.achievement2]);
+            setcomp1Achievements(comp1Achievements => [...comp1Achievements, acceleronsInfo[10].supra.achievement3]);
 
-            setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[10].baja.achievement1]);
-            setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[10].baja.achievement2]);
-            setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[10].baja.achievement3]);
+            setcomp2Achievements(comp2Achievements => [...comp2Achievements, acceleronsInfo[10].fb.achievement1]);
+            setcomp2Achievements(comp2Achievements => [...comp2Achievements, acceleronsInfo[10].fb.achievement2]);
+            setcomp2Achievements(comp2Achievements => [...comp2Achievements, acceleronsInfo[10].fb.achievement3]);
         }
     }
 
@@ -290,9 +289,6 @@ function Saga(){
                     <div id="year"><p onClick={() => changeInfo(2015)}>2015</p> <div className="vl"></div></div>
                     <div id="year"><p onClick={() => changeInfo(2014)}>2014</p> <div className="vl"></div></div>
                     <div id="year"><p onClick={() => changeInfo(2013)}>2013</p> <div className="vl"></div></div>
-                    <div id="year"><p onClick={() => changeInfo(2012)}>2012</p> <div className="vl"></div></div>
-                    <div id="year"><p onClick={() => changeInfo(2011)}>2011</p> <div className="vl"></div></div>
-                    {/* Replace The Code Here With a Component at Last */}
                 </div>
                 <div className="main-content">
                     <div className="image">
@@ -300,7 +296,7 @@ function Saga(){
                     </div>
                     <div className="text">
                         <div className="comp1">
-                            <h4 id="competition1">{nitroxInfo[0].competition1Name}</h4>
+                            <h4 id="competition1">{acceleronsInfo[0].competition1Name}</h4>
                             <p>
                                 <ul>
                                     {comp1Achievements.map(position => 
@@ -312,7 +308,7 @@ function Saga(){
                             </p>
                         </div>
                         <div className="comp2">
-                            <h4 id="competition1">{nitroxInfo[0].competition2Name}</h4>
+                            <h4 id="competition1">{acceleronsInfo[0].competition2Name}</h4>
                             <p>
                                 <ul>
                                 {comp2Achievements.map(position => 

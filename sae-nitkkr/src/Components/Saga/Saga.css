@@ -28,11 +28,17 @@
     
 }
 
-/* Years COmpnent */
+/* Years Compnent */
 .years{
     text-align: center;
     display: flex;
     justify-content: center;
+}
+
+@media (max-width: 640px){
+    .years{
+        overflow-x: auto;
+    }
 }
 
 #year{
