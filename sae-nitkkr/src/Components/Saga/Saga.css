@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.saga-outside-container{
+    width: 100%;
+    height: 100vh;
+    border: solid 0.5px #000;
+    padding: 10vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.heading{
+    width: 100%;
+    height: auto;
+    border: solid #000 1px;
+    padding: 5vh;
+}
+
+.heading p{
+    display: inline;
+}
+
+.legacy{
+    
+}
+
+/* Years COmpnent */
+.years{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+#year{
+    display: inline-block;
+    padding: 1vh;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Vertical Line */
+.vl {
+    border-left: 3px solid #000;
+    height: 3vh;
+    margin-left: 2vh;
+}
+
+.saga-container{
+    border: solid 1px red;
+    position: relative;
+}
+
+
+/* Content Will Change on clicking the button */
+.main-content{
+    display: flex;
+}
+
+.image{
+    width: 48%;
+    height: 60vh;
+    border: solid #000 .5px;
+    margin-left: 1%;
+}
+
+.image img{
+    width: 100%;
+    height: 100%;
+}
+
+.text{
+    width: 48%;
+    height: 60vh;
+    border: solid #000 .5px;
+    margin-left: 2%;
+    padding: 3%;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.comp1{
+    width: 94%;
+    height: 45%;
+    border: solid #000 .5px;
+}
+.comp2{
+    width: 94%;
+    height: 45%;
+    border: solid #000 .5px;
+}
+
+.text ul{
+    margin-top: 3vh;
+    margin-left: 4vh;
+}
