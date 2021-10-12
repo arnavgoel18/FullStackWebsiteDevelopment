@@ -1,9 +1,10 @@
-import Saga from './Components/Saga/Saga.js';
+import NitroxSaga from './Components/Saga/NitroxSaga.js';
+import AcceleronsSaga from './Components/Saga/AcceleronsSaga.js'
 
 function App() {
   return (
     <>
-      <Saga/>
+      <AcceleronsSaga/>
     </>
   );
 }
