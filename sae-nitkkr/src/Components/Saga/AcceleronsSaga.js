@@ -13,8 +13,6 @@ import Accelerons2015 from '../../Assets/Saga/Accelerons2015.png';
 import Accelerons2014 from '../../Assets/Saga/Accelerons2014.png';
 import Accelerons2013 from '../../Assets/Saga/Accelerons2013.png';
 
-
-
 function Saga(){
 
     const [comp1Achievements, setcomp1Achievements] = useState([]);
