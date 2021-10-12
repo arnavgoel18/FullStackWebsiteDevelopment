@@ -1,11 +1,11 @@
 // import FooterBlack from "./Components/Footer/Footer(black)/FooterBlack";
 // import FooterWhite from "./Components/Footer/Footer(white)/FooterWhite";
-import AboutUs from './Components/AboutUs/AboutUs'
+import FirstDisplayDiv from './Components/FirstDisplayDIV/FirstDisplayDIV';
 
 function App() {
   return (
     <>
-      <AboutUs/>
+      <FirstDisplayDiv page="Autokriti"/>
     </>
   );
 }
