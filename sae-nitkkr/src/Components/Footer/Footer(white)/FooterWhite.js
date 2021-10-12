@@ -1,5 +1,6 @@
 import React from 'react'
-import "./Footerautokriti.css";
+import "./FooterWhite.css";
+
 function Footerautokriti(props) {
   return (
     <div id="footer">

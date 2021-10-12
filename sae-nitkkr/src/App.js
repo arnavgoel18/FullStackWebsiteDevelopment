@@ -1,11 +1,9 @@
-import NitroxSaga from './Components/Saga/NitroxSaga.js';
-import AcceleronsSaga from './Components/Saga/AcceleronsSaga.js'
-
+// import FooterBlack from "./Components/Footer/Footer(black)/FooterBlack";
+import FooterWhite from "./Components/Footer/Footer(white)/FooterWhite";
 function App() {
   return (
     <>
-      
-      <AcceleronsSaga/>
+      <FooterWhite/>
     </>
   );
 }
