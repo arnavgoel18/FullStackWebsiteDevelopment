@@ -6,12 +6,17 @@ function Home() {
   <>
   <div className="boxes">
     <div className="box1">
-      <img src={image} alt="images" />
+      <img src={image} alt="images"/>
     </div>
     <div className="box2">
       <div className="box21"><h2>who are</h2><h2 className="head">We</h2></div>
-      <div className="box22">SAE NIT Kurukshetra is a collegiate club affiliated under SAE India, which is a wing of SAE International, on a national scale. The club is a platform for budding engineers to work together in arrive at solutions to the problems in the mobility field. It forms a link between naive talents and pioneers of the industry. Valuing the interdisciplinary nature of the automobile sector, under graduate students from various branches strive to innovate better under the guidance of our professors here at NIT Kurukshetra. </div>
-      <div className="box23"><b>lowerword</b>lowertext</div>
+      <div className="box22">SAE NIT Kurukshetra is a collegiate club affiliated under SAE India, which is a wing of SAE International, on a national scale. The club is a platform for budding engineers to work together in arrive at solutions to the problems in the mobility field. It forms a link between naive talents and pioneers of the industry. Valuing the interdisciplinary nature of the automobile sector, under graduate students from various branches strive to innovate better under the guidance of our professors here at NIT Kurukshetra. <br/><br/>We bring our skills to many competitions </div>
+      <div className="box23">
+        Baja SAE India <br/>
+        ATVC <br/>
+        SUPRA India <br/>
+        Formual Bharat <br/>
+      </div>
     </div>
   </div>
   </>
