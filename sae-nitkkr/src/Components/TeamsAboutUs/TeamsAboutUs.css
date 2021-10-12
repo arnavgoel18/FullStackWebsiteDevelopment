@@ -8,31 +8,31 @@ body{
   margin-right: 80px;
   padding: 10px;
 }
-.heading{
+.TeamAboutUs-heading{
   display: flex;
   padding: 20px;
 }
-.weare{
+.TeamAboutUs-weare{
   font-size: 30px;
   margin-right: 5px;
 }
-.boldcolor{
+.TeamAboutUs-boldcolor{
 font-size: 30px;
 font-weight: 900;
 color: rgb(67, 67, 197);
 }
-.bigcontainer{
+.TeamAboutUs-bigcontainer{
   display: flex;
 } 
-.text_container{
+.TeamAboutUs-text_container{
 order: 0;
 width: 610px;
 }
 
-.text{
+.TeamAboutUs-text{
   padding: 20px;
 }
-.comp{
+.TeamAboutUs-comp{
   border-left : solid rgb(67, 67, 197) 3px;
   font-weight: 150;
   margin-left: 20px;
@@ -46,10 +46,10 @@ align-items: flex-end;
 }
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 760px) {
-.bigcontainer{
+.TeamAboutUs-bigcontainer{
   display: block;
 }
-.image{
+.TeamAboutUs-image{
 position: relative;
 left:80px;
 } 

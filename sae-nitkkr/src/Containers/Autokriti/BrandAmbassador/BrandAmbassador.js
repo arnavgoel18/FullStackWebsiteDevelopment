@@ -3,32 +3,32 @@ import "./BrandAmbassador.css";
 function BrandAmbassador() {
   return (
     <>
-      <div className="boxes">
-        <div className="box1">
-          <div className="box11">
-            <div className="box111">AUTOKRITI</div>{" "}
-            <div className="box112"> x</div>{" "}
+      <div className="BrandAmbassador-boxes">
+        <div className="BrandAmbassador-box1">
+          <div className="BrandAmbassador-box11">
+            <div className="BrandAmbassador-box111">AUTOKRITI</div>{" "}
+            <div className="BrandAmbassador-box112"> x</div>{" "}
           </div>
-          <div className="box12">
-            <div className="box121">BRAND</div>{" "}
-            <div className="box122">AMBASSADOR </div>{" "}
+          <div className="BrandAmbassador-box12">
+            <div className="BrandAmbassador-box121">BRAND</div>{" "}
+            <div className="BrandAmbassador-box122">AMBASSADOR </div>{" "}
           </div>
         </div>
         <br />
         <br />
-        <div className="box2">
-          <div className="box21">Become</div>
-          <div className="box22">our</div>
-          <dic className="box23">BRAND AMBASSADOR</dic>
+        <div className="BrandAmbassador-box2">
+          <div className="BrandAmbassador-box21">Become</div>
+          <div className="BrandAmbassador-box22">our</div>
+          <dic className="BrandAmbassador-box23">BRAND AMBASSADOR</dic>
         </div>
         <br />
-        <div className="box3">
+        <div className="BrandAmbassador-box3">
           Spread a word about us in your college and get amazing perks!
         </div>
         <br />
         <br />
         <br />
-        <button className="box4">JOIN US</button>
+        <button className="BrandAmbassador-box4">JOIN US</button>
       </div>
     </>
   );
