@@ -7,9 +7,9 @@ import prof3 from '../../../Assets/ProfIncharges/angra.jpg';
 function ProfIncharges(){
     return(
         <>
-            /* Professor Incharges */
+            {/*Professor Incharges*/}
             <div className = "profIncharge_container">
-                <p>Professor Incharges</p>
+                <p className="heading">Professor Incharges</p>
                 
                 <div className = "persons_container">
                     <PersonCard name={"Dr. Vinod Mittal"} designation={"Professor"} url={prof1}/>

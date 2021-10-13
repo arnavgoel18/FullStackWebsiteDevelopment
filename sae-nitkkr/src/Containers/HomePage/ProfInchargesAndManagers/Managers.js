@@ -7,12 +7,12 @@ function Managers(){
     return(
         <>
             <div className = "managers_container">
-                <p>Team Managers</p>
+                <p className="Managers-Heading">Team Managers</p>
                 
                 <div className = "persons_container">
-                    <PersonCard name={"Dr. Mittal"} designation={"President"} url={prof1}/>
-                    <PersonCard name={"Dr. Mittal"} designation={"Vice-President"} url={prof3}/>
-                    <PersonCard name={"Dr. Mittal"} designation={"Treasurer"} url={prof2}/>
+                    <PersonCard name={"Deepak Yadav"} designation={"President"} url={prof1}/>
+                    <PersonCard name={""} designation={"Vice-President"} url={prof3}/>
+                    <PersonCard name={"Sarthak Mittal"} designation={"Secretary"} url={prof2}/>
                 </div>
             </div>
         </>

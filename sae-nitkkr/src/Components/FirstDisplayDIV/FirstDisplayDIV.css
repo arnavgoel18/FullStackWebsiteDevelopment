@@ -32,7 +32,7 @@
     display: none;
 }
 
-img{
+.main-container img{
     width: 100%;
     height: 100%;
 }
@@ -76,7 +76,7 @@ img{
         color: linear-gradient(90deg, rgba(61,69,125,1) 2%, rgba(78,56,113,1) 36%, rgba(171,17,241,1) 100%); */
         text-align: left;
         padding-left: 9vh;
-        padding-top: 45%;
+        padding-top: 30%;
         font-size: 45px;
     }
 }
