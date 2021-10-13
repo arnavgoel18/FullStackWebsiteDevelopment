@@ -17,8 +17,8 @@ function Gallery() {
   return (
     <>
 
-      <div class="row">
-        <div class="column">
+      <div className="Gallery-row">
+        <div className="Gallery-column">
           <img src={one1} />
           <img src={one2} />
           <img src={one} />
@@ -27,7 +27,7 @@ function Gallery() {
           <img src={one} />
           <img src={one1} />
         </div>
-        <div class="column">
+        <div className="Gallery-column">
           <img src={one2} />
           <img src={one} />
           <img src={one} />
@@ -35,7 +35,7 @@ function Gallery() {
           <img src={one} />
           <img src={one} />
         </div>
-        <div class="column">
+        <div className="Gallery-column">
           <img src={one1} />
           <img src={one2} />
           <img src={one} />
@@ -44,7 +44,7 @@ function Gallery() {
           <img src={one} />
           <img src={one1} />
         </div>
-        <div class="column">
+        <div className="Gallery-column">
           <img src={one2} />
           <img src={one} />
           <img src={one} />
@@ -52,7 +52,7 @@ function Gallery() {
           <img src={one} />
           <img src={one} />
         </div>
-        <div class="column">
+        <div className="Gallery-column">
           <img src={one1} />
           <img src={one2} />
           <img src={one} />

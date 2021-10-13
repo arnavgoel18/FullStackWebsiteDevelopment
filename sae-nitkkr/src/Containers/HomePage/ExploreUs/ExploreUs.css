@@ -18,7 +18,7 @@
   flex-wrap: wrap;
   margin-top: 50px;
 }
-.box {
+.ExploreUs-box {
   border: white, 1px;
   justify-content: space-between;
   display: flex;
@@ -26,7 +26,7 @@
   margin: 15px 5px;
   
 }
-.box1 {
+.ExploreUs-box1 {
 
   width: 250px;
   height: 250px;
@@ -38,10 +38,10 @@
   cursor: pointer;
   transition: all 0.4s;
 }
-.box1:hover {
+.ExploreUs-box1:hover {
   color: white;
 }
-.text {
+.ExploreUs-text {
   position: inherit;
   z-index: 9999;
   background-color: transparent;
@@ -55,8 +55,8 @@ h1 {
   border-image-slice: 1;
   width: max-content;
 }
-.box1::before,
-.box1::after {
+.ExploreUs-box1::before,
+.ExploreUs-box1::after {
   content: "";
   position: absolute;
   top: 0;
@@ -68,13 +68,13 @@ h1 {
   border-radius: 10px;
   transition: all 0.4s;
 }
-.box1::after {
+.ExploreUs-box1::after {
  
   transform: translate(10%, 10%) scale(0.3);
   border-radius: 110%;
   transition: all 0.4s;
 }
-.box1:hover::after {
+.ExploreUs-box1:hover::after {
  
   background-image: linear-gradient(315deg, #f8ceec 0%, #a88beb 74%);
 
@@ -83,11 +83,11 @@ h1 {
   border-radius: 10px;
 }
 
-.lines {
+.ExploreUs-lines {
   display: flex;
   justify-content: space-evenly;
 }
-.sourabh {
+.ExploreUs-sourabh {
   position: relative;
   height: 100vh;
   width: 2px;
@@ -130,17 +130,17 @@ h1 {
 }
 
 @media (min-width: 150px) and (max-width: 425px) {
-  .box {
+  .ExploreUs-box {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     
   }
 
-  .box {
+  .ExploreUs-box {
     flex: 0 1 calc(25% - 1em);
   }
-  .heading {
+  .ExploreUs-heading {
     text-align: center;
   }
 }

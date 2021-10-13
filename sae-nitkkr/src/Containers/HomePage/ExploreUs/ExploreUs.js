@@ -3,13 +3,13 @@ import "./ExploreUs.css";
 function App() {
   return (
     <div id="ExploreUs-root">
-      <h1 className="heading">EXPLORE US</h1>
+      <h1 className="ExploreUs-heading">EXPLORE US</h1>
 
       <div className="ExploreUs-Container">
-        <div className="box">
+        <div className="ExploreUs-box">
           <Card text="GALLERY" />
         </div>
-        <div className="box">
+        <div className="ExploreUs-box">
           <Card text="SPONSERS" />
         </div>
       </div>
@@ -19,9 +19,9 @@ function App() {
 
 function Card(props) {
   return (
-    <div class="box">
-      <div class="box1">
-        <h2 class="text">{props.text}</h2>
+    <div className="ExploreUs-box">
+      <div className="ExploreUs-box1">
+        <h2 className="ExploreUs-text">{props.text}</h2>
       </div>
     </div>
   );

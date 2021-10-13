@@ -1,12 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200&display=swap");
 * {
   font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 
 }
 body {
   background-color: black;
 }
-.card {
+.CheckOurEvents-card {
   
   width: 320px;
   height: 380px;
@@ -22,12 +26,12 @@ img {
   height: 170px;
 }
 
-.card:hover {
+.CheckOurEvents-card:hover {
   box-shadow: 0 8px 16px 0 linear-gradient(to right, #74ebd5 0%, #9face6 100%);
 }
 
 
-.container {
+.CheckOurEvents-container {
 
   display: flex;
   flex-direction: column;
@@ -43,21 +47,21 @@ p {
   background-color: transparent;
 }
 
-.heading {
+.CheckOurEvents-heading {
   color: white;
   margin-top: 40px;
   margin-bottom: 40px;
   margin-left: 190px;
   font-size: 30px;
 }
-.heading1 {
+.CheckOurEvents-heading1 {
   color: white;
   margin-top: 40px;
   margin-bottom: 40px;
   margin-left: 190px;
   font-size: 30px;
 }
-.events {
+.CheckOurEvents-events {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -69,7 +73,7 @@ a {
   font-weight: 1000;
   text-decoration: none;
 }
-.subheading {
+.CheckOurEvents-subheading {
 
   background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
 
@@ -86,7 +90,7 @@ a {
   font-weight: 1000;
 }
 
-.subheading1 {
+.CheckOurEvents-subheading1 {
   
   background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
 
@@ -142,23 +146,23 @@ image {
 }
 
 @media (min-width: 1440px) and (max-width: 2560px) {
-  .heading {
+  .CheckOurEvents-heading {
     margin-left: 278px;
   }
-  .showmore {
+  .CheckOurEvents-showmore {
     margin-right: 280px;
   }
 }
 @media (min-width: 1024px) and (max-width: 1440px) {
-  .heading {
+  .CheckOurEvents-heading {
     margin-left: 130px;
   }
-  .showmore {
+  .CheckOurEvents-showmore {
     margin-right: 200px;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-  .heading {
+  .CheckOurEvents-heading {
     margin-left: 130px;
   }
   .showmore {
@@ -166,13 +170,13 @@ image {
   }
 }
 @media (min-width: 425px) and (max-width: 768px) {
-  .heading {
+  .CheckOurEvents-heading {
     margin-left: 40px;
   }
-  .showmore {
+  .CheckOurEvents-showmore {
     margin-right: 60px;
   }
-  .events {
+  .CheckOurEvents-events {
     display: flex;
     flex-direction: column;
     align-content: space-evenly;
@@ -181,17 +185,17 @@ image {
   }
 }
 @media (min-width: 375px) and (max-width: 425px) {
-  .heading {
+  .CheckOurEvents-heading {
     margin-left: 50px;
     font-size: 25px;
   }
-  .showmore {
+  .CheckOurEvents-showmore {
     margin-right: 30px;
   }
-  .subheading {
+  .CheckOurEvents-subheading {
     font-size: 30px;
   }
-  .events {
+  .CheckOurEvents-events {
     display: flex;
     flex-direction: column;
     align-content: space-evenly;
@@ -199,43 +203,43 @@ image {
   }
 }
 @media (min-width: 320px) and (max-width: 375px) {
-  .heading {
+  .CheckOurEvents-heading {
     margin-left: 20px;
     font-size: 25px;
   }
-  .showmore {
+  .CheckOurEvents-showmore {
     margin-right: 60px;
     font-size: 10px;
   }
-  .subheading {
+  .CheckOurEvents-subheading {
     font-size: 30px;
   }
-  .events {
+  .CheckOurEvents-events {
     display: flex;
     flex-direction: column;
     align-content: space-evenly;
     flex-wrap: wrap;
   }
-  .card {
+  .CheckOurEvents-card {
     width: 300px;
   }
 }
 @media (min-width: 120pxpx) and (max-width: 320px) {
-  .heading {
+  .CheckOurEvents-heading {
     margin-left: 40px;
     font-size: 30px;
   }
-  .showmore {
+  .CheckOurEvents-showmore {
     margin-right: 0px;
     font-size: 10px;
   }
-  .events {
+  .CheckOurEvents-events {
     display: flex;
     flex-direction: column;
     align-content: space-evenly;
     flex-wrap: wrap;
   }
-  .card {
+  .CheckOurEvents-card {
     width: 310px;
   }
 }
