@@ -1,15 +1,18 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
-* {
-  background-color: #000;
-  
+* {  
   font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   height: max-content;
 }
-.Container{
+
+#ExploreUs-root{
+  background-color: #000;
+}
+
+.ExploreUs-Container{
   justify-content: space-evenly;
   display: flex;
   flex-wrap: wrap;
@@ -44,7 +47,6 @@
   background-color: transparent;
 }
 h1 {
- 
   font-size: 35px;
   color: white;
   padding-top: 60px;

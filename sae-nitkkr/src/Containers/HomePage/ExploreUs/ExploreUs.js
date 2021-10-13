@@ -2,10 +2,10 @@ import "./ExploreUs.css";
 
 function App() {
   return (
-    <div>
+    <div id="ExploreUs-root">
       <h1 className="heading">EXPLORE US</h1>
 
-      <div className="Container">
+      <div className="ExploreUs-Container">
         <div className="box">
           <Card text="GALLERY" />
         </div>
