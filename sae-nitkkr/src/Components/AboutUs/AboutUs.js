@@ -6,7 +6,7 @@ function Home() {
   <>
   <div className="AboutUs-boxes">
     <div className="AboutUs-box1">
-      <img src={image} alt="images"/>
+      <img src={image} alt="images" className="AboutUs-image"/>
     </div>
     <div className="AboutUs-box2">
       <div className="AboutUs-box21"><h2>who are</h2><h2 className="AboutUs-head">We</h2></div>
