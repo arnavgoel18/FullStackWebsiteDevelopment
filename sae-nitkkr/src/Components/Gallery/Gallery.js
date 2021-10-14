@@ -1,12 +1,12 @@
 import './Gallery.css';
-import one1 from '../../Assets/one1.jpg';
-import one from '../../Assets/one.JPG';
-import one2 from '../../Assets/one2.jpg';
+import one1 from "./one1.jpg";
+import one from './one.JPG';
+import one2 from './one2.jpg';
 
 function App() {
   return (
     <div>
-      <h1>PHOTOS</h1>
+      <h1 className="Gallery-photos">PHOTOS</h1>
       <Gallery />
     </div>
   );
@@ -19,47 +19,47 @@ function Gallery() {
 
       <div className="Gallery-row">
         <div className="Gallery-column">
-          <img src={one1} />
-          <img src={one2} />
-          <img src={one} />
-          <img src={one} />
-          <img src={one2} />
-          <img src={one} />
-          <img src={one1} />
+          <img src={one1} alt="hello" className="image_of_gallery" />
+          <img src={one2} alt="hello" className="image_of_gallery" />
+          <img src={one} alt="hello" className="image_of_gallery" />
+          <img src={one} alt="hello" className="image_of_gallery" />
+          <img src={one2} alt="hello" className="image_of_gallery" />
+          <img src={one} alt="hello" className="image_of_gallery" />
+          <img src={one1} alt="hello" className="image_of_gallery" />
         </div>
         <div className="Gallery-column">
-          <img src={one2} />
-          <img src={one} />
-          <img src={one} />
-          <img src={one2} />
-          <img src={one} />
-          <img src={one} />
+          <img src={one2} alt="hello" className="image_of_gallery" />
+          <img src={one} alt="hello" className="image_of_gallery" />
+          <img src={one} alt="hello" className="image_of_gallery" />
+          <img src={one2} alt="hello" className="image_of_gallery" />
+          <img src={one} alt="hello" className="image_of_gallery" />
+          <img src={one} alt="hello" className="image_of_gallery" />
         </div>
         <div className="Gallery-column">
-          <img src={one1} />
-          <img src={one2} />
-          <img src={one} />
-          <img src={one} />
-          <img src={one2} />
-          <img src={one} />
-          <img src={one1} />
+          <img src={one1} alt="hello" className="image_of_gallery" />
+          <img src={one2} alt="hello" className="image_of_gallery" />
+          <img src={one} alt="hello" className="image_of_gallery" />
+          <img src={one} alt="hello" className="image_of_gallery" />
+          <img src={one2} alt="hello" className="image_of_gallery" />
+          <img src={one} alt="hello" className="image_of_gallery" />
+          <img src={one1} alt="hello" className="image_of_gallery" />
         </div>
         <div className="Gallery-column">
-          <img src={one2} />
-          <img src={one} />
-          <img src={one} />
-          <img src={one2} />
-          <img src={one} />
-          <img src={one} />
+          <img src={one2} className="image_of_gallery"  />
+          <img src={one} className="image_of_gallery" />
+          <img src={one} className="image_of_gallery" />
+          <img src={one2} className="image_of_gallery"  />
+          <img src={one} className="image_of_gallery" />
+          <img src={one} className="image_of_gallery"  />
         </div>
         <div className="Gallery-column">
-          <img src={one1} />
-          <img src={one2} />
-          <img src={one} />
-          <img src={one} />
-          <img src={one2} />
-          <img src={one} />
-          <img src={one1} />
+          <img src={one1} alt="hello" className="image_of_gallery" />
+          <img src={one2} alt="hello" className="image_of_gallery" />
+          <img src={one} alt="hello" className="image_of_gallery" />
+          <img src={one} alt="hello" className="image_of_gallery" />
+          <img src={one2} alt="hello" className="image_of_gallery" />
+          <img src={one} alt="hello" className="image_of_gallery" />
+          <img src={one1} alt="hello" className="image_of_gallery" />
         </div>
 
       </div>

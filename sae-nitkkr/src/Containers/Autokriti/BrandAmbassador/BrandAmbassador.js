@@ -2,7 +2,7 @@ import "./BrandAmbassador.css";
 
 function BrandAmbassador() {
   return (
-    <>
+    <div className="BrandAmbassador-body">
       <div className="BrandAmbassador-boxes">
         <div className="BrandAmbassador-box1">
           <div className="BrandAmbassador-box11">
@@ -19,7 +19,7 @@ function BrandAmbassador() {
         <div className="BrandAmbassador-box2">
           <div className="BrandAmbassador-box21">Become</div>
           <div className="BrandAmbassador-box22">our</div>
-          <dic className="BrandAmbassador-box23">BRAND AMBASSADOR</dic>
+          <div className="BrandAmbassador-box23">BRAND AMBASSADOR</div>
         </div>
         <br />
         <div className="BrandAmbassador-box3">
@@ -30,7 +30,7 @@ function BrandAmbassador() {
         <br />
         <button className="BrandAmbassador-box4">JOIN US</button>
       </div>
-    </>
+    </div>
   );
 }
 

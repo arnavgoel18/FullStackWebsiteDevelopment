@@ -1,7 +1,6 @@
 import React from "react";
-import "./FooterBlack.css";
-
-function Footer(props) {
+import "./Footer.css";
+function Footer() {
 
   return (
     <div id="footer">
@@ -35,12 +34,12 @@ function Footer(props) {
             Team Accelerons
             <img
               id="insta_image_acelerons"
-              src={props.insta}
+              src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png"
               alt="insta_image_acelerons"
             />
             <img
               id="fb_image_acelerons"
-              src={props.fb}
+              src="https://img.icons8.com/ios-glyphs/30/ffffff/facebook.png"
               alt="fb_image_acelerons"
             />
           </p>
@@ -49,12 +48,12 @@ function Footer(props) {
             Team Nitrox
             <img
               id="insta_image_nitrox"
-              src={props.insta}
+              src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png"
               alt="insta_image_nitrox"
             />
             <img
               id="fb_image_nitrox"
-              src={props.fb}
+              src="https://img.icons8.com/ios-glyphs/30/ffffff/facebook.png"
               alt="fb_image_nitrox"
             />
           </p>
@@ -63,12 +62,12 @@ function Footer(props) {
             Autokriti
             <img
               id="insta_image_auto"
-              src={props.insta}
+              src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png"
               alt="insta_image_auto"
             />
             <img
               id="fb_image_auto"
-              src={props.fb}
+              src="https://img.icons8.com/ios-glyphs/30/ffffff/facebook.png"
               alt="fb_image_auto"
             />
           </p>
@@ -86,7 +85,7 @@ function Footer(props) {
             {" "}
             <img
               className="contact_image"
-              src={props.email}
+              src="https://img.icons8.com/ios-filled/50/ffffff/mail.png"
               alt="contact_image"
             />
             <span id="email_text"> saenitkurukshetra@gmail.com</span>
@@ -96,7 +95,7 @@ function Footer(props) {
             {" "}
             <img
               className="contact_image"
-              src={props.linkedin}
+              src="https://img.icons8.com/ios-glyphs/30/ffffff/linkedin.png"
               alt="contact_image"
             />
             <span id="linkedin_text">linked.com/company/sae-nit-kkr</span>

@@ -43,11 +43,12 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
-    width: 651px;
+    width: 670px;
     padding: 10px;
     /* position: relative;
     top:-40px; */
     margin-top: -31px;
+    margin-left: 35px;
   
 }
 .nav

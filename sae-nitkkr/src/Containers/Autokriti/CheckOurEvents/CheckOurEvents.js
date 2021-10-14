@@ -1,7 +1,7 @@
-import "./CheckOurEvents.css";
+import "./App.css";
 import React, {useState} from 'react';
 
-import eventimg from "../../../Assets/eventimg.jpeg";
+import images1 from "./images1.jpeg";
 
 import { FaAngleDoubleDown } from "react-icons/fa";
 
@@ -14,10 +14,10 @@ function App() {
   
   return (
     <>
-      <h2 className="CheckOurEvents-heading">
-        check out the <b className="CheckOurEvents-subheading"> EVENTS </b>
+      <h2 className="heading">
+        check out the <b className="subheading"> EVENTS </b>
       </h2>
-      <div  className="CheckOurEvents-events">
+      <div  className="events">
         <Session title="Understanding Transmission"
          status="online"
          date="24th-January-2021"/>
@@ -28,12 +28,16 @@ function App() {
         <Session  title="Understanding Transmission"
          status="offline"
          date="24th-January-2021"/>
+
+<Session  title="Understanding Transmission"
+         status="offline"
+         date="24th-January-2432"/>
       </div>
       
-      <div className="CheckOurEvents-showmore">
-        <p className="CheckOurEvents-heading1">
-          SOME MORE <b className="CheckOurEvents-subheading1"> EVENTS </b>
-          <FontAwesomeIcon id="button1" className="CheckOurEvents-icon" icon={faAngleDoubleDown} />{" "}
+      <div className="showmore">
+        <p className="heading1">
+          SOME MORE <b className="subheading1"> EVENTS </b>
+          <FontAwesomeIcon id="button1" className="icon" icon={faAngleDoubleDown} />{" "}
           
         </p>
       </div>
@@ -44,9 +48,9 @@ function App() {
 function Session(props) {
   return (
     <>
-      <div className="CheckOurEvents-card">
-        <img src={eventimg} alt="Avatar" />
-        <div className="CheckOurEvents-container">
+      <div className="card">
+        <img src={images1} alt="Avatar" />
+        <div className="container">
           <h2>
             <b>{props.title}</b>
           </h2>
@@ -56,7 +60,7 @@ function Session(props) {
            {props.date}
           </p>
 
-          <div className="CheckOurEvents-register"></div>
+          <div className="register"></div>
           <a href="">
             <b>REGISTER</b>
           </a>

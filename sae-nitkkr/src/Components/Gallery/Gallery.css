@@ -6,7 +6,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-h1{
+.Gallery-photos{
   font-size: 50px;
   font-family: "Montserrat", sans-serif;
   /* color: white; */
@@ -40,7 +40,7 @@ h1{
   /* padding: 0 1px; */
 }
 
-.Gallery-column img {
+.image_of_gallery {
   margin-top: 8px;
   vertical-align: middle;
   width: 92%;
@@ -59,9 +59,9 @@ h1{
     vertical-align: middle;
     /* padding: 0px; */
   }
-  .Gallery-column img {
+  .image_of_gallery {
     vertical-align: middle;
-    width: 98%;
+    width: 95%;
     margin-left: 1px;
     margin-right: auto;
   }
@@ -73,7 +73,7 @@ h1{
     flex: 100%;
     max-width: 100%;
   }
-  .Gallery-column img {
+  .image_of_gallery {
     margin-top: 10px;
     vertical-align: middle;
     width: 100%;
