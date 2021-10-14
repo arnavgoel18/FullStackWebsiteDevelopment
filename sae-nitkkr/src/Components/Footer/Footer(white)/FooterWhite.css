@@ -6,7 +6,7 @@
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
-#footer
+#white_footer
 {
     display: flex;
     flex-direction: row;
@@ -22,9 +22,11 @@
     margin-bottom: -26px;
     font-weight: 900;
     padding-top: 5vh;
+    border-top: solid #000 1px;
+    border-bottom: solid #000 1px;
 }
 
-#footer_box1,#footer_box2,#footer_box3,#footer_box4
+#white_footer_box1,#white_footer_box2,#white_footer_box3,#white_footer_box4
 {
     margin-right: 10px;
    width:280px;
@@ -41,7 +43,7 @@
     width:350px;
 } */
 
-#line_for_first{
+#white_line_for_first{
    position: relative;
    left: -30px;
    top: -2px;
@@ -52,7 +54,7 @@
     /* border-radius: 10px; */
     /* width: 20px; */
 }
-#line_for_first_white{
+#white_line_for_first_white{
     position: relative;
     left: -30px;
     top: -2px;
@@ -62,7 +64,7 @@
      /* border-radius: 10px; */
      /* width: 20px; */
  }
-#line_for_second{
+#white_line_for_second{
     position: relative;
     top: -2px;
     left: -65px;
@@ -73,7 +75,7 @@
      /* border-radius: 10px; */
      /* width: 20px; */
  }
- #line_for_third{
+ #white_line_for_third{
     position: relative;
     top: -2px;
     left: -60px;
@@ -84,7 +86,7 @@
      /* border-radius: 10px; */
      /* width: 20px; */
  }
- #line_for_fourth{
+ #white_line_for_fourth{
     position: relative;
     top: -2px;
     
@@ -95,11 +97,11 @@
      /* border-radius: 10px; */
      /* width: 20px; */
  }
- .things_to_explore
+ .white_things_to_explore
  {
      margin-top: 7px;
  }
- .each_footer_content
+ .white_each_footer_content
  {
      /*border: 2px solid black*/
      height:171px;
@@ -110,30 +112,30 @@
     
 
  }
- #contact_us_content
+ #white_contact_us_content
  {
     width: 250px;
  }
 
 
- #heading_of_footers1,#heading_of_footers2
+ #white_heading_of_footers1,#white_heading_of_footers2
  {
      /* border: 1px solid black; */
      width: 200px;
      
  }
- #heading_of_footers3,#heading_of_footers4
+ #white_heading_of_footers3,#white_heading_of_footers4
  {
      /* border: 1px solid black; */
      width: 250px;
      
  }
 
- #newsletter_content
+ #white_newsletter_content
  {
      width: 250px;
  }
- .icons
+ .white_icons
  {
     
      left: 160px;
@@ -142,50 +144,50 @@
      width: 40px;
  }
  /* Logo css */
- .contact_image
+ .white_contact_image
  {
      width: 37px;
      position: relative;
      top: 10px;
  }
- .contact_image:hover
+ .white_contact_image:hover
  {
      cursor: pointer;
  }
- #insta_image_auto,#fb_image_auto
+ #white_insta_image_auto,#white_fb_image_auto
  {
      width: 30px;
      position: relative;
      top: 10px;
      left: 70px;
  }
- #insta_image_auto,#fb_image_auto
+ #white_insta_image_auto,#white_fb_image_auto
  {
      cursor: pointer;
  }
- #insta_image_nitrox,#fb_image_nitrox
+ #white_insta_image_nitrox,#white_fb_image_nitrox
  {
      width: 30px;
      position: relative;
      top: 10px;
      left: 50px;
  }
- #insta_image_nitrox,#fb_image_nitrox
+ #white_insta_image_nitrox,#white_fb_image_nitrox
  {
      cursor: pointer;
  }
- #insta_image_acelerons,#fb_image_acelerons
+ #white_insta_image_acelerons,#white_fb_image_acelerons
  {
      width: 30px;
      position: relative;
      top: 10px;
      left: 21px;
  }
- #insta_image_acelerons,#fb_image_acelerons:hover
+ #white_insta_image_acelerons,#white_fb_image_acelerons:hover
  {
      cursor: pointer;
  }
- #getting_mail
+ #white_getting_mail
  {
      background-color: rgb(163, 157, 157);
      color: rgb(248, 242, 242);
@@ -195,7 +197,7 @@
      height: 25px;
      width: 199px;
  }
- #joinus
+ #white_joinus
  {
      color: white;
      font-weight: bolder;
@@ -206,28 +208,28 @@
     border: none;
     
  }
- button:hover{
+ #white_joinus:hover{
      cursor: pointer;
  }
- #select
+ #white_select
  {
      position: relative;
      top: 3px;
  }
- #select:hover
+ #white_select:hover
  {
      cursor: pointer;
  }
- #checkbox_disclaimer
+ #white_checkbox_disclaimer
  {
      font-size: 10px;
      color: grey;
  }
- #linkedin_text,#email_text
+ #white_linkedin_text,#white_email_text
  {
      position: relative;
      left: 10px;
  }
- .things_to_explore:hover{
+ .white_things_to_explore:hover{
      cursor: pointer;
  }

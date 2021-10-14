@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
-#footer
+#black_footer
 {
     display: flex;
     flex-direction: row;
@@ -22,12 +22,12 @@
     padding-top: 5vh;
 }
 
-.things_to_explore
+.black_things_to_explore
 {
     margin-top:10px
 }
 
-#footer_box1,#footer_box2,#footer_box3,#footer_box4
+#black_footer_box1,#black_footer_box2,#black_footer_box3,#black_footer_box4
 {
     margin-right: 10px;
    width:280px;
@@ -44,7 +44,7 @@
     width:350px;
 } */
 
-#line_for_first{
+#black_line_for_first{
    position: relative;
    left: -30px;
    top: 0px;
@@ -54,7 +54,7 @@
     /* border-radius: 10px; */
     /* width: 20px; */
 }
-#line_for_first_white{
+#black_line_for_first_white{
     position: relative;
     left: -30px;
     top: 0px;
@@ -64,7 +64,7 @@
      /* border-radius: 10px; */
      /* width: 20px; */
  }
-#line_for_second{
+#black_line_for_second{
     position: relative;
     /* top: -19px; */
     left: -65px;
@@ -74,7 +74,7 @@
      /* border-radius: 10px; */
      /* width: 20px; */
  }
- #line_for_third{
+ #black_line_for_third{
     position: relative;
     /* top: -19px; */
     left: -60px;
@@ -84,7 +84,7 @@
      /* border-radius: 10px; */
      /* width: 20px; */
  }
- #line_for_fourth{
+ #black_line_for_fourth{
     position: relative;
     /* top: -19px; */
     
@@ -94,7 +94,7 @@
      /* border-radius: 10px; */
      /* width: 20px; */
  }
- .each_footer_content
+ .black_each_footer_content
  {
      border: 2px solid black;
      height:171px;
@@ -105,26 +105,26 @@
     
 
  }
- #contact_us_content
+ #black_contact_us_content
  {
     width: 250px;
  }
 
 
- #heading_of_footers1,#heading_of_footers2
+ #black_heading_of_footers1,#black_heading_of_footers2
  {
      border: 1px solid black;
      width: 200px;
      
  }
- #heading_of_footers3,#heading_of_footers4
+ #black_heading_of_footers3,#black_heading_of_footers4
  {
      border: 1px solid black;
      width: 250px;
      
  }
 
- #newsletter_content
+ #black_newsletter_content
  {
      width: 250px;
  }
@@ -137,50 +137,50 @@
      width: 40px;
  }
  /* Logo css */
- .contact_image
+ .black_contact_image
  {
      width: 30px;
      position: relative;
      top: 10px;
  }
- .contact_image:hover
+ .black_contact_image:hover
  {
      cursor: pointer;
  }
- #insta_image_auto,#fb_image_auto
+ #black_insta_image_auto,#black_fb_image_auto
  {
      width: 30px;
      position: relative;
      top: 10px;
      left: 70px;
  }
- #insta_image_auto,#fb_image_auto
+ #black_insta_image_auto,#black_fb_image_auto
  {
      cursor: pointer;
  }
- #insta_image_nitrox,#fb_image_nitrox
+ #black_insta_image_nitrox,#black_fb_image_nitrox
  {
      width: 30px;
      position: relative;
      top: 10px;
      left: 50px;
  }
- #insta_image_nitrox,#fb_image_nitrox
+ #black_insta_image_nitrox,#black_fb_image_nitrox
  {
      cursor: pointer;
  }
- #insta_image_acelerons,#fb_image_acelerons
+ #black_insta_image_acelerons,#black_fb_image_acelerons
  {
      width: 30px;
      position: relative;
      top: 10px;
      left: 25px;
  }
- #insta_image_acelerons,#fb_image_acelerons:hover
+ #black_insta_image_acelerons,#black_fb_image_acelerons:hover
  {
      cursor: pointer;
  }
- #getting_mail
+ #black_getting_mail
  {
      background-color: rgb(71, 69, 69);
      color: rgb(248, 242, 242);
@@ -189,7 +189,7 @@
      height: 25px;
      width: 200px;
  }
- #joinus
+ #black_joinus
  {
      color: white;
      font-weight: bolder;
@@ -199,28 +199,28 @@
     border: none;
     
  }
- button:hover{
+ #black_joinus:hover{
      cursor: pointer;
  }
- #select
+ #black_select
  {
      position: relative;
      top: 3px;
  }
- #select:hover
+ #black_select:hover
  {
      cursor: pointer;
  }
- #checkbox_disclaimer
+ #black_checkbox_disclaimer
  {
      font-size: 10px;
      color: grey;
  }
- #linkedin_text,#email_text
+ #black_linkedin_text,#black_email_text
  {
      position: relative;
      left: 10px;
  }
- .things_to_explore:hover{
+ .black_things_to_explore:hover{
      cursor: pointer;
  }

@@ -9,6 +9,8 @@
 
 .CheckOurEvents-main_container{
   background-color: #000;
+  padding-bottom: 5vh;
+  padding-top: 5vh;
 }
 
 .CheckOurEvents-card {
@@ -53,7 +55,6 @@
 .CheckOurEvents-heading1 {
   color: white;
   margin-top: 40px;
-  margin-bottom: 40px;
   margin-left: 190px;
   font-size: 30px;
 }
