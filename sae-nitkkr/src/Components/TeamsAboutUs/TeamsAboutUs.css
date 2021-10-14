@@ -1,65 +1,73 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-*{
-  margin: 0;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
   padding: 0px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
-.TeamAboutUs-main_container{
-  width: auto;
-  padding-left: 17vh;
+
+.TeamAboutUs-main_container {
+  margin-left: 80px;
+  margin-right: 80px;
+  padding: 10px;
 }
-.TeamAboutUs-heading{
+.TeamAboutUs-heading {
   display: flex;
   padding: 20px;
 }
-.TeamAboutUs-weare{
+.TeamAboutUs-weare {
   font-size: 30px;
   margin-right: 5px;
 }
-.TeamAboutUs-boldcolor{
+.TeamAboutUs-boldcolor {
   font-size: 30px;
   font-weight: 900;
   color: rgb(67, 67, 197);
 }
-.TeamAboutUs-bigcontainer{
+.TeamAboutUs-bigcontainer {
   display: flex;
 }
-.TeamAboutUs-text_container{
+.TeamAboutUs-text_container {
   order: 0;
   width: 610px;
 }
 
-.TeamAboutUs-text{
+.TeamAboutUs-text {
   padding: 20px;
 }
-.TeamAboutUs-comp{
-  border-left : solid rgb(67, 67, 197) 3px;
+.TeamAboutUs-comp {
+  border-left: solid rgb(67, 67, 197) 3px;
   font-weight: 150;
   margin-left: 20px;
   padding: 10px;
 }
-.TeamAboutUs-image img{
-  height:320px;
+.TeamAboutUs-image img {
+  height: 320px;
   width: 470px;
   align-items: flex-end;
   clip-path: polygon(33% 0, 100% 0, 100% 100%, 0 100%, 0 30%);
 }
-
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (max-width: 950px) {
-  .TeamAboutUs-bigcontainer{
+@media only screen and (max-width: 760px) {
+  .TeamAboutUs-bigcontainer {
     display: block;
   }
-
-  .TeamAboutUs-image{
+  .TeamAboutUs-image {
     position: relative;
-    left:80px;
+    left: 80px;
+  }
+  TeamAboutUs-main_container {
+    margin-left: 20px;
+    margin-right: 20px;
   }
 }
-@media (min-width: 949px) and (max-width: 822px) {
-
+@media (min-width: 1440px) and (max-width: 2560px) {
+  TeamAboutUs-main_container {
+    margin-left: 200px;
+    margin-right: 200px;
+  }
 }
-
 @media (min-width: 1024px) and (max-width: 1440px) {
-
+  TeamAboutUs-main_container {
+    margin-left: 150px;
+    margin-right: 150px;
+  }
 }

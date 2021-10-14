@@ -10,7 +10,7 @@ import Nitrox from "./Containers/Nitrox/Nitrox"
 function App() {
   return (
     <>
-      <Autokriti/>
+      <Accelerons/>
       {/* <Router>
         <Switch>
           <Route path="/" exact component={() => <HomePage />} />
