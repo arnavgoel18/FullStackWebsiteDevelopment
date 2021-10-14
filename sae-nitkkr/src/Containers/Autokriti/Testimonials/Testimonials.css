@@ -4,9 +4,11 @@
   margin: 2px;
   font-family: "Montserrat", sans-serif;
 }
-body {
+.Testimonials-body{
   margin-left: 80px;
   margin-right: 80px;
+  height: 100vh;
+  padding-top: 5vh;
 }
 .Testimonials-head {
   margin-top: 50px;
@@ -25,7 +27,7 @@ body {
 }
 .Testimonials-cards {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   position: relative;
   top: 100px;
 }
@@ -34,11 +36,16 @@ body {
   border: solid black 2px;
   width: 250px;
   text-align: center;
-  padding: 30px;
+  padding: 10px;
 }
+
+#Testimonials-nameChangedToBlack{
+  color: #000;
+}
+
 .Testimonials-card13 {
-  display: inline-flex;
-  flex-direction: row;
+  display: flex;
+  flex-direction:column;
   flex-wrap: wrap;
   margin-top: 40px;
 }
@@ -49,7 +56,7 @@ body {
   margin: auto;
 }
 @media (min-width: 690px) {
-  .card1 {
+  .Testimonials-card1 {
     position: absolute;
     right: 48vw;
     /* left: 0px; */
@@ -62,14 +69,14 @@ body {
 }
 @media (max-width: 690px) {
   .Testimonials-cards {
-    display: flex;
+    display: flex;  
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
   }
   .Testimonials-card13 {
-    display: flex;
+    display:inl;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     margin: auto;
   }
   .Testimonials-card1 {
@@ -84,13 +91,16 @@ body {
 }
 @media (max-width: 1200px) and (min-width: 690px) {
   .Testimonials-card13 {
-    margin-top: 180px;
+    margin-top: 5px;
   }
 }
 @media (max-width: 810px) {
-  body {
+  .Testimonials-body{
     margin-left: 20px;
     margin-right: 20px;
+  }
+  .Testimonials-card2{
+    margin-bottom: 4vh;
   }
 }
 @media (min-width: 1220px) {
@@ -100,25 +110,35 @@ body {
   }
 }
 @media only screen and (max-width: 760px) {
-  body {
+  .Testimonials-body {
     margin-left: 20px;
     margin-right: 20px;
   }
 }
 @media (min-width: 1440px) and (max-width: 2560px) {
-  body {
+  .Testimonials-body {
     margin-left: 200px;
     margin-right: 200px;
   }
 }
 @media (min-width: 1024px) and (max-width: 1440px) {
-  body {
+  .Testimonials-body {
     margin-left: 150px;
     margin-right: 150px;
   }
 }
+
+@media only screen and (max-width:690px){
+  .Testimonials-card2{
+    margin-bottom: 5vh;
+  }
+  .Testimonials-card1{
+    margin-bottom: 5vh;
+  }
+}
+
 @media only screen and (max-width: 350px) {
-  body {
+  .Testimonials-body {
     margin: auto;
   }
 }

@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 *{
+  margin: 0;
   padding: 0px;
   font-family: 'Montserrat', sans-serif;
 }
-body{
-  margin-left: 80px;
-  margin-right: 80px;
-  padding: 10px;
+.TeamAboutUs-main_container{
+  width: auto;
+  padding-left: 17vh;
 }
 .TeamAboutUs-heading{
   display: flex;
@@ -17,16 +17,16 @@ body{
   margin-right: 5px;
 }
 .TeamAboutUs-boldcolor{
-font-size: 30px;
-font-weight: 900;
-color: rgb(67, 67, 197);
+  font-size: 30px;
+  font-weight: 900;
+  color: rgb(67, 67, 197);
 }
 .TeamAboutUs-bigcontainer{
   display: flex;
-} 
+}
 .TeamAboutUs-text_container{
-order: 0;
-width: 610px;
+  order: 0;
+  width: 610px;
 }
 
 .TeamAboutUs-text{
@@ -41,31 +41,25 @@ width: 610px;
 .TeamAboutUs-image img{
   height:320px;
   width: 470px;
-align-items: flex-end;
+  align-items: flex-end;
   clip-path: polygon(33% 0, 100% 0, 100% 100%, 0 100%, 0 30%);
 }
+
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (max-width: 760px) {
-.TeamAboutUs-bigcontainer{
-  display: block;
+@media only screen and (max-width: 950px) {
+  .TeamAboutUs-bigcontainer{
+    display: block;
+  }
+
+  .TeamAboutUs-image{
+    position: relative;
+    left:80px;
+  }
 }
-.TeamAboutUs-image{
-position: relative;
-left:80px;
-} 
-body{
-  margin-left: 20px;
-  margin-right: 20px;
+@media (min-width: 949px) and (max-width: 822px) {
+
 }
-}
-@media (min-width: 1440px) and (max-width: 2560px) {
-body{
-  margin-left: 200px;
-  margin-right: 200px;
-}
-}
+
 @media (min-width: 1024px) and (max-width: 1440px) {
-  body{margin-left: 150px;
-  margin-right: 150px;
-  }}
- 
+
+}
