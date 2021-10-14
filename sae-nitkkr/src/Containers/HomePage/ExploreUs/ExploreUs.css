@@ -4,19 +4,20 @@
   font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  height: max-content;
+  /* box-sizing: border-box; */
+  /* height: max-content; */
 }
 
 #ExploreUs-root{
   background-color: #000;
+  height: max-content;
 }
 
 .ExploreUs-Container{
   justify-content: space-evenly;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 50px;
+  /* margin-top: 50px; */
 }
 .ExploreUs-box {
   border: white, 1px;
@@ -46,7 +47,7 @@
   z-index: 9999;
   background-color: transparent;
 }
-h1 {
+.ExploreUs-heading {
   font-size: 35px;
   color: white;
   padding-top: 60px;
@@ -94,37 +95,38 @@ h1 {
   background: #ffff;
 }
 @media (min-width: 1440px) and (max-width: 2560px) {
-  h1 {
-    margin-left: 690px;
+  .eExploreUs-heading {
+    margin-left: 157px;
   }
 }
 @media (min-width: 1024px) and (max-width: 1440px) {
-  h1 {
-    margin-left: 250px;
+  .ExploreUs-heading{
+    margin-left: 95px;
+    padding-top: 25px;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-  h1 {
+  .ExploreUs-heading{
     margin-left: 165px;
   }
 }
 @media (min-width: 425px) and (max-width: 768px) {
-  h1 {
+  .ExploreUs-heading {
     margin-left: 90px;
   }
 }
 @media (min-width: 375px) and (max-width: 425px) {
-  h1 {
+  .ExploreUs-heading{
     margin-left: 60px;
   }
 }
 @media (min-width: 320px) and (max-width: 375px) {
-  h1 {
+  .ExploreUs-heading{
     margin-left: 30px;
   }
 }
 @media (min-width: 120pxpx) and (max-width: 320px) {
-  h1 {
+  .ExploreUs-heading{
     margin-left: 30px;
   }
 }

@@ -1,6 +1,6 @@
 import "./ExploreUs.css";
 
-function App() {
+function ExploreUs() {
   return (
     <div id="ExploreUs-root">
       <h1 className="ExploreUs-heading">EXPLORE US</h1>
@@ -27,4 +27,4 @@ function Card(props) {
   );
 }
 
-export default App;
+export default ExploreUs;

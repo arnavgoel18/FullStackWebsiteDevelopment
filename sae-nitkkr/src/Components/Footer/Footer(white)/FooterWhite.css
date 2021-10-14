@@ -41,7 +41,7 @@
 #line_for_first{
    position: relative;
    left: -30px;
-   top: -19px;
+   top: -2px;
    width: 140px;
   background-image:linear-gradient(to bottom right,rgb(31, 182, 228),rgb(26, 22, 224));
   /* background-color: rgb(248, 11, 51); */
@@ -52,7 +52,7 @@
 #line_for_first_white{
     position: relative;
     left: -30px;
-    top: -19px;
+    top: -2px;
     width: 140px;
    background-image:rgb(248, 6, 58);
      height: 3px;
@@ -61,7 +61,7 @@
  }
 #line_for_second{
     position: relative;
-    top: -19px;
+    top: -2px;
     left: -65px;
     width: 75px;
      background-image:  linear-gradient(to bottom right,rgb(31, 182, 228),rgb(26, 22, 224));
@@ -72,7 +72,7 @@
  }
  #line_for_third{
     position: relative;
-    top: -19px;
+    top: -2px;
     left: -60px;
     width: 130px;
      background-image: linear-gradient(to bottom right,rgb(31, 182, 228),rgb(26, 22, 224));
@@ -83,7 +83,7 @@
  }
  #line_for_fourth{
     position: relative;
-    top: -19px;
+    top: -2px;
     
     width: 250px;
    background-image: linear-gradient(to bottom right,rgb(31, 182, 228),rgb(26, 22, 224));
@@ -92,13 +92,17 @@
      /* border-radius: 10px; */
      /* width: 20px; */
  }
+ .things_to_explore
+ {
+     margin-top: 7px;
+ }
  .each_footer_content
  {
      /*border: 2px solid black*/
      height:171px;
      width: 200px;
      position: relative;
-     top: -20px;
+     top: 0px;
     
     
 

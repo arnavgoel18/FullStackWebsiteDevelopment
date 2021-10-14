@@ -1,98 +1,163 @@
 * {
-    color: white;
-  }
-  body {
-    background-image: url("../../../Assets/BrandAmbassador/ss.jpg");
-    background-repeat: no-repeat;
-    background-position-x: right;
-    background-position-y: center;
-    background-color: #000000;
-  }
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+
+}
+.BrandAmbassador-body {
+  background-image: url("ss.jpg");
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: center;
+  background-color: #000000;
+  height: 470px;
+  
+}
+.BrandAmbassador-boxes {
+  margin: 80px;
+  padding: 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+}
+.BrandAmbassador-box1 {
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+}
+.BrandAmbassador-box11 {
+  display: flex;
+}
+.BrandAmbassador-box112 {
+  margin-left: 10px;
+}
+.BrandAmbassador-box12 {
+  font-weight: bold;
+  background: -webkit-linear-gradient(right, blue, purple);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: flex;
+}
+.BrandAmbassador-box121 {
+  margin-left: 10px;
+}
+.BrandAmbassador-box122 {
+  margin-left: 15px;
+}
+.BrandAmbassador-box2 {
+  font-size: 40px;
+}
+.BrandAmbassador-box23 {
+  font-weight: bold;
+}
+.BrandAmbassador-box3 {
+  padding-left: 10px;
+  border-left: 5px solid transparent;
+  border-image: linear-gradient(to bottom, blue, purple);
+  border-image-slice: 1;
+  margin: 20px;
+  font-size: 20px;
+  width: 380px;
+}
+.BrandAmbassador-box4 {
+  font-size: 22px;
+  font-weight: bold;
+  width: 140px;
+  padding: 5px;
+  background: linear-gradient(to right, blue, purple),
+    linear-gradient(to right, white, white);
+  position: relative;
+  left: 140px;
+  top: -45px;
+}
+/* @media (min-width:375px) and (max-width:425px) {
+
+  
+} */
+@media (min-width:425px) and (max-width:579px)
+{
+.BrandAmbassador-box4 {
+  font-size: 22px;
+  font-weight: bold;
+  width: 140px;
+  padding: 5px;
+  background: linear-gradient(to right, blue, purple),
+    linear-gradient(to right, white, white);
+  position: relative;
+  left: 140px;
+  top: -66px;
+}
+}
+
+@media (min-width: 628px) and (max-width: 767px) {
   .BrandAmbassador-boxes {
-    margin: 80px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    width: 500px;
+    margin: 60px;
+  }
+}
+@media (width: 768px) {
+  .BrandAmbassador-body {
+    background-position-x: 18px;
+  }
+}
+@media (min-width: 580px) and (max-width: 628px) {
+  .BrandAmbassador-boxes {
+    margin: 40px;
+  }
+}
+@media (min-width: 30px) and (max-width: 580px) {
+  .BrandAmbassador-boxes {
+    margin: 20px;
+    margin-left: -90px;
+    width: 340px;
+  }
+  .BrandAmbassador-body {
+    background-image: url("./ss.jpg");
+    background-repeat: no-repeat;
+    background-position-x: 0px;
+    background-position-y: center;
   }
   .BrandAmbassador-box1 {
-    display: flex;
-    flex-direction: row;
-    font-size: 30px;
+    flex-direction: column;
   }
-  .BrandAmbassador-box11 {
-    display: flex;
-  }
-  .BrandAmbassador-box112 {
-    margin-left: 10px;
-  }
-  .BrandAmbassador-box12 {
-    font-weight: bold;
-    background: -webkit-linear-gradient(right, blue, purple);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: flex;
-  }
-  .BrandAmbassador-box121 {
-    margin-left: 10px;
+  .BrandAmbassador-box111
+  {
+    margin-left: 90px;
   }
   .BrandAmbassador-box122 {
-    margin-left: 15px;
-  }
-  .BrandAmbassador-box2 {
-    font-size: 40px;
-  }
-  .BrandAmbassador-box23 {
-    font-weight: bold;
-  }
-  .BrandAmbassador-box3 {
-    padding-left: 10px;
-    border-left: 5px solid transparent;
-    border-image: linear-gradient(to bottom, blue, purple);
-    border-image-slice: 1;
-    margin: 20px;
+    margin-left: 6px;
     font-size: 20px;
-    width: 380px;
-  }
-  .BrandAmbassador-box4 {
-    font-size: 22px;
-    font-weight: bold;
-    width: 140px;
-    padding: 5px;
-    background: linear-gradient(to right, blue, purple),
-      linear-gradient(to right, white, white);
-    position: relative;
-    left: 140px;
-  }
+    
+}
+.BrandAmbassador-box3 {
+  padding-left: 63px;
+  border-left: 5px solid transparent;
+  border-image: linear-gradient(to bottom, blue, purple);
+  border-image-slice: 1;
+  margin: 20px;
+  font-size: 20px;
+  width: 380px;
+}
+.BrandAmbassador-box23 {
+  margin-left: 93px;
+}
+.BrandAmbassador-box121 {
+margin-left: 81px;
+font-size: 20px;
+}
+.BrandAmbassador-box21{
+margin-left: 94px;
+}
 
-  @media (min-width: 628px) and (max-width: 767px) {
-    .BrandAmbassador-boxes {
-      margin: 60px;
-    }
-  }
-  @media (width: 768px) {
-    body {
-      background-position-x: 18px;
-    }
-  }
-  @media (min-width: 580px) and (max-width: 628px) {
-    .BrandAmbassador-boxes {
-      margin: 40px;
-    }
-  }
-  @media (min-width: 30px) and (max-width: 580px) {
-    .BrandAmbassador-boxes {
-      margin: 20px;
-      width: 340px;
-    }
-    body {
-      background-image: url("./ss.jpg");
-      background-repeat: no-repeat;
-      background-position-x: 0px;
-      background-position-y: center;
-    }
-    .BrandAmbassador-box1 {
-      flex-direction: column;
-    }
-  }
-  
+.BrandAmbassador-box4 {
+font-size: 22px;
+font-weight: bold;
+width: 140px;
+padding: 5px;
+background: linear-gradient(to right, blue, purple),
+  linear-gradient(to right, white, white);
+position: relative;
+left: 170px;
+top: -80px;
+}
+}

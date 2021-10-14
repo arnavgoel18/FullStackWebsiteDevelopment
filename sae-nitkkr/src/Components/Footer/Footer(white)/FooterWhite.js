@@ -1,7 +1,6 @@
 import React from 'react'
-import "./FooterWhite.css";
-
-function Footerautokriti(props) {
+import "./Footerautokriti.css";
+function Footerautokriti() {
   return (
     <div id="footer">
     <div id="footer_box1">
@@ -34,12 +33,12 @@ function Footerautokriti(props) {
           Team Accelerons
           <img
             id="insta_image_acelerons"
-            src={props.insta}
+            src="https://img.icons8.com/ios/50/000000/instagram-new--v1.png"
             alt="insta_image_acelerons"
           />
           <img
             id="fb_image_acelerons"
-            src={props.fb}
+            src="https://img.icons8.com/ios-filled/50/000000/facebook--v1.png" 
             alt="fb_image_acelerons"
           />
         </p>
@@ -48,12 +47,12 @@ function Footerautokriti(props) {
           Team Nitrox
           <img
             id="insta_image_nitrox"
-            src={props.insta}
+            src="https://img.icons8.com/ios/50/000000/instagram-new--v1.png"
             alt="insta_image_nitrox"
           />
           <img
             id="fb_image_nitrox"
-            src={props.fb}
+            src="https://img.icons8.com/ios-filled/50/000000/facebook--v1.png"
             alt="fb_image_nitrox"
           />
         </p>
@@ -62,12 +61,12 @@ function Footerautokriti(props) {
           Autokriti
           <img
             id="insta_image_auto"
-            src={props.insta}
+            src="https://img.icons8.com/ios/50/000000/instagram-new--v1.png"
             alt="insta_image_auto"
           />
           <img
             id="fb_image_auto"
-            src={props.fb}
+            src="https://img.icons8.com/ios-filled/50/000000/facebook--v1.png"
             alt="fb_image_auto"
           />
         </p>
@@ -85,7 +84,7 @@ function Footerautokriti(props) {
           {" "}
           <img
             className="contact_image"
-            src={props.email}
+            src="https://img.icons8.com/material-outlined/24/000000/mail.png"
             alt="contact_image"
           />
           <span id="email_text"> saenitkurukshetra@gmail.com</span>
@@ -95,7 +94,7 @@ function Footerautokriti(props) {
           {" "}
           <img
             className="contact_image"
-            src={props.linkedin}
+            src="https://img.icons8.com/ios-glyphs/30/000000/linkedin.png"
             alt="contact_image"
           />
           <span id="linkedin_text">linked.com/company/sae-nit-kkr</span>
