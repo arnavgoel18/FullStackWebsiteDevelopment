@@ -4,7 +4,7 @@ import './TeamsAboutUs.css'
 
 function Acc() {
   return (
-    <div>
+    <div className="TeamAboutUs_main_main">
     <div className="TeamAboutUs-main_container">
       <div className="TeamAboutUs-heading">
          <h2 className="TeamAboutUs-weare"> we </h2>
