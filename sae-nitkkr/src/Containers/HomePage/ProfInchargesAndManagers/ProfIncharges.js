@@ -8,10 +8,10 @@ function ProfIncharges(){
     return(
         <>
             {/*Professor Incharges*/}
-            <div className = "profIncharge_container">
-                <p className="heading">Professor Incharges</p>
+            <div className = "ProfInchargesandManagers-profIncharge_container">
+                <p className="ProfInchargesandManagers-heading">Professor Incharges</p>
                 
-                <div className = "persons_container">
+                <div className = "ProfInchargesandManagers-persons_container">
                     <PersonCard name={"Dr. Vinod Mittal"} designation={"Professor"} url={prof1}/>
                     <PersonCard name={"Dr. Jaideep Gupta"} designation={"Professor"} url={prof2}/>
                     <PersonCard name={"Dr. Surjeet Angra"} designation={"Professor"} url={prof3}/>

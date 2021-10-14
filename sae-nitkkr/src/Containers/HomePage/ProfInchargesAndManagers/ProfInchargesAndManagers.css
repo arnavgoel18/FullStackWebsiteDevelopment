@@ -10,7 +10,7 @@
 
 /*PROF INCHARGES*/
 
-.profIncharge_container{
+.ProfInchargesandManagers-profIncharge_container{
     width: 100%;
     height: auto;
     background-color: #fff;
@@ -18,22 +18,22 @@
     padding: 4vh;
 }
 
-.profIncharge_container p{
+.ProfInchargesandManagers-profIncharge_container p{
     font-weight: bold;
 }
 
-.persons_container{
+.ProfInchargesandManagers-persons_container{
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     padding: 10vh;
 }
 
-.person{
+.ProfInchargesandManagers-person{
     width: auto;
 }
 
-.circle{
+.ProfInchargesandManagers-circle{
     width: 20vh;
     height: 20vh;
     border-radius: 50%;
@@ -42,14 +42,14 @@
     overflow: hidden;
 }
 
-.circle img{
+.ProfInchargesandManagers-circle img{
     height: inherit;
     width: inherit;
 }
 
 /*MANAGERS*/
 
-.managers_container{
+.ProfInchargesandManagers-managers_container{
     margin-top: 0px;
     width: 100%;
     height: auto;
@@ -58,22 +58,22 @@
     padding: 4vh;
 }
 
-.profIncharge_container p{
+.ProfInchargesandManagers-profIncharge_container p{
     font-weight: bolder;
 }
 
-.persons_container{
+.ProfInchargesandManagers-persons_container{
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     padding: 10vh;
 }
 
-.person{
+.ProfInchargesandManagers-person{
     width: auto;
 }
 
-.circle{
+.ProfInchargesandManagers-circle{
     width: 20vh;
     height: 20vh;
     border-radius: 50%;

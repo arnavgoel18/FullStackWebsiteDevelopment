@@ -31,14 +31,10 @@ function FirstDisplayDiv(props){
 
     return(
         <>
-            <div className = "main-container">
+            <div className = "FirstDisplayDIV-main-container">
                 <img src = {Picture}></img>
                 <p>{text1}<br/>{text2}</p>
             </div>
-
-            {/* <div id = "one">
-        
-            </div> */}
         </>
     )
 }

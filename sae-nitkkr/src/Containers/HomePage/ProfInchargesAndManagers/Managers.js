@@ -6,10 +6,10 @@ import prof3 from '../../../Assets/ProfIncharges/angra.jpg';
 function Managers(){
     return(
         <>
-            <div className = "managers_container">
-                <p className="Managers-Heading">Team Managers</p>
+            <div className = "ProfInchargesandManagers-managers_container">
+                <p className="ProfInchargesandManagers-Managers-Heading">Team Managers</p>
                 
-                <div className = "persons_container">
+                <div className = "ProfInchargesandManagers-persons_container">
                     <PersonCard name={"Deepak Yadav"} designation={"President"} url={prof1}/>
                     <PersonCard name={"Ritik "} designation={"Vice-President"} url={prof3}/>
                     <PersonCard name={"Sarthak Mittal"} designation={"Secretary"} url={prof2}/>

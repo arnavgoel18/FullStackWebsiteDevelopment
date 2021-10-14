@@ -10,8 +10,8 @@ function Wherenitrox() {
   function swap()
   {
     console.log("navneet");
-     image2=document.getElementById("image2");
-     image1=document.getElementById("image1");
+     image2=document.getElementById("Nitrox-image2");
+     image1=document.getElementById("Nitrox-image1");
      if (check1==0)
      {
      image1.style.backgroundImage="url(/static/media/def1.86edba72.jpeg)";
@@ -28,8 +28,8 @@ function Wherenitrox() {
   function swap2()
   {
     console.log("nishant");
-     image22=document.getElementById("image22");
-     image11=document.getElementById("image11");
+     image22=document.getElementById("Nitrox-image22");
+     image11=document.getElementById("Nitrox-image11");
      if(check2==0)
      {
      image11.style.backgroundImage="url(/static/media/def1.86edba72.jpeg)";
@@ -44,35 +44,35 @@ function Wherenitrox() {
      }
   }
   return (
-    <div id="participate">
-      <div id="titlecomp1" className="content1">
-        where do we <span id="participate1">PARTICIPATE?</span>
+    <div id="Nitrox-participate">
+      <div id="Nitrox-titlecomp1" className="Nitrox-content1">
+        where do we <span id="Nitrox-participate1">PARTICIPATE?</span>
       </div>
       <br />
       <br />
-      <div id="baja" className="content">
-        <span id="baja_title"> BAJA</span>
+      <div id="Nitrox-baja" className="Nitrox-content">
+        <span id="Nitrox-baja_title"> BAJA</span>
         <br />
         <br />
-        <div id="baja_content">
-          <div id="baja_text">
+        <div id="Nitrox-baja_content">
+          <div id="Nitrox-baja_text">
             Baja SAE is an Collegiate Design Series competition run by the
             Society Of Automotive Engineers International (SAE INTERNATIONAL)
             Teams of Students from universities all over the world design and
             build small off-road cars. <br />
             <br />
-            <div id="bajaline">
+            <div id="Nitrox-bajaline">
               The goal in Baja SAE racing is to <b> design, build</b> and{" "}
               <b>race</b> off-road vehicles that can withstand the harshest
               elements of rough terrain. The vehicles used in Baja SAE racing
               are often similar in appearance to dune buggies.
             </div>
           </div>
-          <div id="baja_image">
-            <div id="image1">
+          <div id="Nitrox-baja_image">
+            <div id="Nitrox-image1">
               {/* <img src={abc1new} alt="imagee" id="car1" /> */}
             </div>
-            <div id="image2" onClick={swap}>
+            <div id="Nitrox-image2" onClick={swap}>
               {/* <img
               src={def2}
               alt="imagee"
@@ -84,16 +84,16 @@ function Wherenitrox() {
       </div>
 
       <br />
-      <div id="atvc" className="content">
-        <span id="atvc_title"> ATVC</span>
+      <div id="Nitrox-atvc" className="Nitrox-content">
+        <span id="Nitrox-atvc_title"> ATVC</span>
         <br />
         <br />
-        <div id="atvc_content">
-          <div id="atvc_image">
-            <div id="image22" onClick={swap2}>
+        <div id="Nitrox-atvc_content">
+          <div id="Nitrox-atvc_image">
+            <div id="Nitrox-image22" onClick={swap2}>
               {/* <img src={abc1new} alt="imagee" id="car1" /> */}
             </div>
-            <div id="image11">
+            <div id="Nitrox-image11">
               {/* <img
               src={def2}
               alt="imagee"
@@ -102,12 +102,12 @@ function Wherenitrox() {
             </div>
           </div>
 
-          <div id="atvc_text">
+          <div id="Nitrox-atvc_text">
             The Third season of Aravalli Terrain Vehicle Championship, powered
             by infi-league Motorsports is a natioanl championship earnmarking
             all the techno freaks across the country <br />
             <br />
-            <div id="atvcline">
+            <div id="Nitrox-atvcline">
               The goal in Baja SAE racing is to <b> design, build</b> and{" "}
               <b>race</b> off-road vehicles that can withstand the harshest
               elements of rough terrain. The vehicles used in Baja SAE racing

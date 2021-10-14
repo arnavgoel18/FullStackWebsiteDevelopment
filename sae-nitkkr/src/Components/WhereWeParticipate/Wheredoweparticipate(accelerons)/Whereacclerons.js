@@ -14,8 +14,8 @@ function Whereacclerons() {
   function swap()
   {
     console.log("navneet");
-     image2=document.getElementById("image2");
-     image1=document.getElementById("image1");
+     image2=document.getElementById("Accelarons-image2");
+     image1=document.getElementById("Accelarons-image1");
      if(acheck1==0)
      {
      image1.style.backgroundImage="url(/static/media/def1.86edba72.jpeg)";
@@ -33,8 +33,8 @@ function Whereacclerons() {
   function swap2()
   {
     console.log("nishant");
-     image22=document.getElementById("image22");
-     image11=document.getElementById("image11");
+     image22=document.getElementById("Accelarons-image22");
+     image11=document.getElementById("Accelarons-image11");
      if(acheck2==0)
      {
      image11.style.backgroundImage="url(/static/media/def1.86edba72.jpeg)";
@@ -51,35 +51,35 @@ function Whereacclerons() {
   }
   
   return (
-    <div id="participate">
-      <div id="titlecomp1" className="content1">
-        where do we <span id="participate1">PARTICIPATE?</span>
+    <div id="Accelarons-participate">
+      <div id="Accelarons-titlecomp1" className="Accelarons-content1">
+        where do we <span id="Accelarons-participate1">PARTICIPATE?</span>
       </div>
       <br/>
       <br/>
-      <div id="supra" className="content">
-       <span id="supra_title"> SUPRA</span>
+      <div id="Accelarons-supra" className="Accelarons-content">
+       <span id="Accelarons-supra_title"> SUPRA</span>
        <br/>
        <br/>
-        <div id="supra_content">
-          <div id="supra_text">
+        <div id="Accelarons-supra_content">
+          <div id="Accelarons-supra_text">
             SUPRA SAEINDIA Student Formula is a national engineering design
             competition held by the Society of Automotive Engineers
             Indian(SAEINDIA). The goal is to develop and provide a platform for
             student engineers to experience build and learn. <br />
             <br />
-            <div id="supraline">
+            <div id="Accelarons-supraline">
               Students gain and develop skills such as engineering,project
               management and team work.Points are earned in a series off
               track,"Static" events, and on track,"Dyanamic" events. The team
               with the most points at the end of the competion wins.
             </div>
           </div>
-          <div id="supra_image">
-            <div id="image1">
+          <div id="Accelarons-supra_image">
+            <div id="Accelarons-image1">
            
             </div>
-            <div id="image2" onClick={swap}>
+            <div id="Accelarons-image2" onClick={swap}>
             
             </div>
           </div>
@@ -87,29 +87,29 @@ function Whereacclerons() {
       </div>
     
     <br/>
-    <div id="formula" className="content">
-       <span id="formula_title"> FORMULA BHARAT</span>
+    <div id="Accelarons-formula" className="Accelarons-content">
+       <span id="Accelarons-formula_title"> FORMULA BHARAT</span>
        <br/>
        <br/>
-        <div id="formula_content">
-        <div id="formula_image">
-        <div id="image22" onClick={swap2}>
+        <div id="Accelarons-formula_content">
+        <div id="Accelarons-formula_image">
+        <div id="Accelarons-image22" onClick={swap2}>
               
             </div>
-        <div id="image11" >
+        <div id="Accelarons-image11" >
               
             </div>
            
           </div>
             
           
-          <div id="formula_text">
+          <div id="Accelarons-formula_text">
           Formula Bharat is an engineering design competitionin which
      Studentsfrom colleges and universities all over the country, compete
      with a life-size Formula-style vehicle in areas of engineering
      design,overall cost,marketability and dynamic performance. <br />
             <br />
-            <div id="formulaline">
+            <div id="Accelarons-formulaline">
             These student teams are required to build a new vehicle from
        scratch year-after-year and seek sponsorship and donations by
        their own means to fund the project
