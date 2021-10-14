@@ -10,15 +10,15 @@
 #second
 {
     
-        color: white;
-        background-color: black;
-        position: relative;
-        top: -50px;
-        left: 33px;
-        width: 32px;
-        font-size: 20px;
-    
+    color: white;
+    background-color: black;
+    position: relative;
+    top: -50px;
+    left: 33px;
+    width: 32px;
+    font-size: 20px;
 }
+
 #burger
 {
     width: 30px;
@@ -136,19 +136,18 @@
         
     }
     .nav0
-{
-    display: flex;
-    padding: 10px;
-    justify-content: center;
-    width:97%;
-    /* border: 2px solid black; */
-    color: white;
-    font-size: 16px;
-    font-family: 'Montserrat', sans-serif;
+    {
+        display: flex;
+        padding: 10px;
+        justify-content: center;
+        width:97%;
+        /* border: 2px solid black; */
+        color: white;
+        font-size: 16px;
+        font-family: 'Montserrat', sans-serif;
+    }
 }
-  
 
-}
 @media  (min-width:425px) and (max-width:768px)      
 {
     #main
@@ -159,7 +158,6 @@
     {
         width: 103%;
         margin-right: -8px;
-        
     }
     .nav0
     {

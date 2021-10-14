@@ -1,5 +1,6 @@
 import React from "react";
 import "./Menu.css";
+
 function Menu() {
   function change() {
     // let first=document.getElementById("navbar");
@@ -14,6 +15,7 @@ function Menu() {
     // let hams=document.getElementById("burger");
     // hams.setAttribute("onclick",{change_back});
   }
+
   function change_back() {
     let hamsmenu = document.getElementById("hamsmenu");
     let first = document.getElementById("first");
@@ -35,14 +37,14 @@ function Menu() {
       <div id="hamsburger">
         <div id="but">
           {" "}
-          <button id="first" onClick={change}>
+          <button id="first" onClick={change}>{/*hamburger*/}
             <img
               id="burger"
               src="https://th.bing.com/th/id/OIP.mcRBPQNgjpICYSCV2BRK2wHaHa?pid=ImgDet&rs=1"
               alt="burger"
             />
           </button>
-          <button id="second" style={{ display: "none" }} onClick={change_back}>
+          <button id="second" style={{ display: "none" }} onClick={change_back}>{/*cross*/}
             X
           </button>
         </div>

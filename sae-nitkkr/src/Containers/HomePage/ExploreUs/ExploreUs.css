@@ -17,6 +17,8 @@
   justify-content: space-evenly;
   display: flex;
   flex-wrap: wrap;
+  padding-bottom: 4vh;
+  padding-top: 3vh;
   /* margin-top: 50px; */
 }
 .ExploreUs-box {
