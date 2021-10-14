@@ -1,21 +1,21 @@
 import React from 'react'
 import Navbar from '../../Components/NavigationBar/Navbar(big)/Navbar'
 import FirstDisplayDiv from '../../Components/FirstDisplayDIV/FirstDisplayDIV'
-import TeamsAboutUs from '../../Components/TeamsAboutUs/TeamsAboutUs'
-import WhereDoWeParticipate from '../../Components/WhereWeParticipate/Wheredoweparticipate(nitrox)/Wherenitrox'
-import Gallery from '../../Components/Gallery/Gallery'
-import Saga from '../../Components/Saga/NitroxSaga'
-import Footer from '../../Components/Footer/Footer(black)/FooterBlack'
+// import TeamsAboutUs from '../../Components/TeamsAboutUs/TeamsAboutUs'
+// import WhereDoWeParticipate from '../../Components/WhereWeParticipate/Wheredoweparticipate(nitrox)/Wherenitrox'
+// import Gallery from '../../Components/Gallery/Gallery'
+// import Saga from '../../Components/Saga/NitroxSaga'
+import Footer from '../../Components/Footer/Footer(white)/FooterWhite'
 
 function Nitrox(){
     return(
         <>
             <Navbar/>
             <FirstDisplayDiv page="Nitrox"/>
-            <TeamsAboutUs/>
-            <WhereDoWeParticipate/>
-            <Gallery/>
-            <Saga/>
+            {/* <TeamsAboutUs/> */}
+            {/* <WhereDoWeParticipate/> */}
+            {/* <Gallery/> */}
+            {/* <Saga/> */}
             <Footer/>
         </>
     )

@@ -15,7 +15,6 @@ function App() {
 function Gallery() {
   return (
     <>
-
       <div className="Gallery-row">
         <div className="Gallery-column">
           <img src={one1} alt="hello" className="image_of_gallery" />
@@ -60,14 +59,9 @@ function Gallery() {
           <img src={one} alt="hello" className="image_of_gallery" />
           <img src={one1} alt="hello" className="image_of_gallery" />
         </div>
-
       </div>
-
-
-
-
+      <br/><br/>
     </>
-
   );
 }
 export default App;
