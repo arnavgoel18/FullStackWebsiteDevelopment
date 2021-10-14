@@ -18,7 +18,7 @@ function BrandAmbassador() {
         <br />
         <div className="BrandAmbassador-box2">
           <div className="BrandAmbassador-box21">Become</div>
-          <div className="BrandAmbassador-box22">our</div>
+          <div className="BrandAmbassador-box22">our</div>s
           <div className="BrandAmbassador-box23">BRAND AMBASSADOR</div>
         </div>
         <br />

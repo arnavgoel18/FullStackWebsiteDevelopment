@@ -1,7 +1,8 @@
-import "./App.css";
+import "./CheckOurEvents.css";
+
 import React, {useState} from 'react';
 
-import images1 from "./images1.jpeg";
+// import images1 from "./images1.jpeg";
 
 import { FaAngleDoubleDown } from "react-icons/fa";
 
@@ -10,8 +11,6 @@ import { faCoffee, faAngleDoubleDown } from "@fortawesome/free-solid-svg-icons";
 
 
 function App() {
-  
-  
   return (
     <>
       <h2 className="heading">
@@ -28,8 +27,7 @@ function App() {
         <Session  title="Understanding Transmission"
          status="offline"
          date="24th-January-2021"/>
-
-<Session  title="Understanding Transmission"
+        <Session  title="Understanding Transmission"
          status="offline"
          date="24th-January-2432"/>
       </div>
@@ -38,7 +36,6 @@ function App() {
         <p className="heading1">
           SOME MORE <b className="subheading1"> EVENTS </b>
           <FontAwesomeIcon id="button1" className="icon" icon={faAngleDoubleDown} />{" "}
-          
         </p>
       </div>
     </>
@@ -49,7 +46,7 @@ function Session(props) {
   return (
     <>
       <div className="card">
-        <img src={images1} alt="Avatar" />
+        <img src="" alt="Avatar" />
         <div className="container">
           <h2>
             <b>{props.title}</b>
@@ -69,8 +66,5 @@ function Session(props) {
     </>
   );
 }
-
-
-
 
 export default App;

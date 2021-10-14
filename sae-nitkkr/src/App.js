@@ -1,22 +1,22 @@
-// import FooterWhite from "./Components/Footer/Footer(white)/FooterWhite";
-// import FirstDisplayDiv from './Components/FirstDisplayDIV/FirstDisplayDIV';
-// import ProfIncharges from './Containers/HomePage/ProfInchargesAndManagers/ProfIncharges'
-// import Managers from './Containers/HomePage/ProfInchargesAndManagers/Managers'
-// import AboutUs from './Components/AboutUs/AboutUs'
+import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import AboutUs from './Components/AboutUs/AboutUs'
-import Footer from './Components/Footer/Footer(black)/FooterBlack'
-
+import HomePage from './Containers/HomePage/homePage'
+import Autokriti from "./Containers/Autokriti/Autokriti";
+import Accelerons from "./Containers/Accelerons/Accelerons";
+import Nitrox from "./Containers/Nitrox/Nitrox"
 
 function App() {
   return (
     <>
-      <Router>
+      <Nitrox/>
+      {/* <Router>
         <Switch>
-          <Route path="/" exact component={() => <Footer />} />
-          <Route path="/about" exact component={() => <AboutUs />} />
+          <Route path="/" exact component={() => <HomePage />} />
+          <Route path="/autokriti" exact component={() => <Autokriti />} />
+          <Route path="/accelerons" exact component={() => <Accelerons />} />
+          <Route path="/nitrox" exact component={() => <Nitrox />} />
         </Switch>
-      </Router>
+      </Router> */}
     </>
   );
 }

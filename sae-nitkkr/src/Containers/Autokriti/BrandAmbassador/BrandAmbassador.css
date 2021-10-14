@@ -5,7 +5,7 @@
 
 }
 .BrandAmbassador-body {
-  background-image: url("ss.jpg");
+  background-image: url("../../../Assets/BrandAmbassador/ss.jpg");
   background-repeat: no-repeat;
   background-position-x: right;
   background-position-y: center;
@@ -112,7 +112,7 @@
     width: 340px;
   }
   .BrandAmbassador-body {
-    background-image: url("./ss.jpg");
+    background-image: url("../../../Assets/BrandAmbassador/ss.jpg");
     background-repeat: no-repeat;
     background-position-x: 0px;
     background-position-y: center;

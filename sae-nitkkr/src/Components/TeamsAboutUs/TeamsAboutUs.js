@@ -1,5 +1,5 @@
 import React from 'react'
-import accimg from '../../Assets/TeamAboutUs/Accelrons.jpg'
+import accimg from '../../Assets/TeamAboutUs/Accelrons.JPG'
 
 function Acc() {
   return (

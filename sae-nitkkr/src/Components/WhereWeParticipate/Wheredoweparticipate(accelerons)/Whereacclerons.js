@@ -1,8 +1,9 @@
 import React from "react";
 import "./Whereacclerons.css";
+
 // import { useState } from "react";
-import abc1new from "./abc1new.jpeg";
-import def2 from "./def2.jpeg";
+
+
 function Whereacclerons() {
   let image2;
   let image1;
