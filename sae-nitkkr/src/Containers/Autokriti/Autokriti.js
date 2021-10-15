@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { useEffect } from 'react'
 import NavBar from '../../Components/NavBar/NavBar'
 import FirstDisplayDiv from '../../Components/FirstDisplayDIV/FirstDisplayDIV'
 import AboutUs from '../../Components/AboutUs/AboutUs'
@@ -12,14 +12,19 @@ import FooterWhite from "../../Components/Footer/Footer(white)/FooterWhite";
 
 
 function Autokriti(){
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
+
     return(
         <>
             <NavBar/>
             <FirstDisplayDiv page="Autokriti"/>
-            <AboutUs/>
+            <AboutUs page="Autokriti"/>
             <CheckOurEvents/>
             {/* <Saga/> */}
-            <Testimonials/>
+            <Testimonials/> 
             <BrandAmbassador/>
             <Gallery/>
             <FooterWhite/>

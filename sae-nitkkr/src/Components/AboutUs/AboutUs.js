@@ -1,7 +1,24 @@
 import './AboutUs.css';
 import image from '../../Assets/AboutUs/homeimage.png';
 
-function Home() {
+function Home(props) {
+
+  var content, contentOnlyForHomepage, contentOnlyForAutokriti;
+  var comp1, comp2, comp3, comp4;
+
+  if(props.page === "Home"){
+    content = "SAE NIT Kurukshetra is a collegiate club affiliated under SAE India, which is a wing of SAE International, on a national scale. The club is a platform for budding engineers to work together in arrive at solutions to the problems in the mobility field. It forms a link between naive talents and pioneers of the industry. Valuing the interdisciplinary nature of the automobile sector, under graduate students from various branches strive to innovate better under the guidance of our professors here at NIT Kurukshetra. <br/><br/>We bring our skills to many competitions "
+    contentOnlyForHomepage = "We bring our skills to many competitions";
+    comp1 = "Baja SAE India";
+    comp2 = "ATVC";
+    comp3 = "SUPRA India";
+    comp4 = "Formula Bharat";
+  }
+  else if(props.page === "Autokriti"){
+    content = "There lies a spark behind every source of light. This thought is indeed justified by the radiance of Autokriti, a spark generated in the brains of our super seniors & its flames of passion; we sustain to date. The enthusiasm to enlighten the young mind began with Autokirti 1.0, where 80 heads hunched to overhaul a two-stroke engine of a scooter. Taking one step after the other, we started from Maruti Suzuki in Autokirti 3.0 & reached the Toyota Camry hybrid engine in Season 10, our tryst with destiny, i.e. EV. It has been a long journey indeed, learning, teaching, challenging ourselves & a beautiful one at that. And it is not the end!";
+    contentOnlyForAutokriti = "eAutokriti: Challenges still await us & solutions are yet to be found. But tougher expeditions will be ventured upon, as nothing less than the best can be embraced.";
+  }
+
   return (
   <>
   <div className="AboutUs-boxes">
@@ -9,13 +26,13 @@ function Home() {
       <img src={image} alt="images" className="AboutUs-image"/>
     </div>
     <div className="AboutUs-box2">
-      <div className="AboutUs-box21"><h2>who are</h2><h2 className="AboutUs-head">We</h2></div>
-      <div className="AboutUs-box22">SAE NIT Kurukshetra is a collegiate club affiliated under SAE India, which is a wing of SAE International, on a national scale. The club is a platform for budding engineers to work together in arrive at solutions to the problems in the mobility field. It forms a link between naive talents and pioneers of the industry. Valuing the interdisciplinary nature of the automobile sector, under graduate students from various branches strive to innovate better under the guidance of our professors here at NIT Kurukshetra. <br/><br/>We bring our skills to many competitions </div>
+      <div className="AboutUs-box21"><h2>who are</h2><h2 className="AboutUs-head">We?</h2></div>
+      <div className="AboutUs-box22">{content}<br/><br/>{contentOnlyForHomepage}</div>
       <div className="AboutUs-box23">
-        Baja SAE India <br/>
-        ATVC <br/>
-        SUPRA India <br/>
-        Formual Bharat <br/>
+        {comp1}<br/>
+        {comp2}{contentOnlyForAutokriti} <br/>
+        {comp3} <br/>
+        {comp4}
       </div>
     </div>
   </div>

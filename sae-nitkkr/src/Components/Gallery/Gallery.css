@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+.Gallery-Main_Cotainer{
+  background-color: #000;
+}
+
 .Gallery-photos{
   font-size: 50px;
   font-family: "Montserrat", sans-serif;

@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { useState } from 'react';
 
-
 import './NavBar.css'
 
 function NavBar() {

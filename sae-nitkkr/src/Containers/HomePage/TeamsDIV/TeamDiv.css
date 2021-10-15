@@ -4,21 +4,16 @@
 #large_box
 {
     /* border: 1px solid black; */
-   
- 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
     margin-left: -7px;
     margin-right: -7px;
-  font-size: 61px;
-  color: white;
-  font-weight: 1000;
-  font-family: 'Montserrat', sans-serif;
-   
-   
-    
+    font-size: 61px;
+    color: white;
+    font-weight: 1000;
+    font-family: 'Montserrat', sans-serif;
 }
 .participate
 {
@@ -62,6 +57,7 @@
     background-size: cover;
    text-align: end;
    vertical-align: text-bottom;
+   padding-right: 15px;
    
    
     

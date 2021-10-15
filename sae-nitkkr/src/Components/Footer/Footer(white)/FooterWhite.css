@@ -220,6 +220,12 @@
  {
      cursor: pointer;
  }
+
+ #white_explore_us_content{
+     position: relative;
+     left: -48px;
+ }
+
  #white_checkbox_disclaimer
  {
      font-size: 10px;
@@ -229,6 +235,11 @@
  {
      position: relative;
      left: 10px;
+ }
+
+ #white_linkedin_text a,#white_email_text a{
+     color: #000;
+     text-decoration: none;
  }
  .white_things_to_explore:hover{
      cursor: pointer;

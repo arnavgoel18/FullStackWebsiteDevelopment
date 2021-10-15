@@ -1,5 +1,5 @@
 import React from 'react'
-import accleronspic from '../../Assets/TeamAboutUs/Accelrons.JPG'
+import accleronspic from '../../Assets/TeamAboutUs/Accelerons.jpg'
 import nitroxpic from '../../Assets/TeamAboutUs/Nitrox.jpg'
 import './TeamsAboutUs.css'
 

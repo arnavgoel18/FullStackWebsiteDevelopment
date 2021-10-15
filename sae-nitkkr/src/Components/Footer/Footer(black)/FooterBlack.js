@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./FooterBlack.css";
 function Footer() {
 
@@ -13,12 +14,9 @@ function Footer() {
         </div>
         <hr id="black_line_for_first" />
         <div id="black_explore_us_content" className="black_each_footer_content">
-          <p className="black_things_to_explore">Team Accelerons </p>
-          <p className="black_things_to_explore">Team Nitrox</p>
-          <p className="black_things_to_explore">Autokriti</p>
-          <p className="black_things_to_explore">Support Us</p>
-          <p className="black_things_to_explore">Gallery</p>
-          <p className="black_things_to_explore">Sponsors</p>
+          <Link to="/accelerons"><p className="black_things_to_explore">Team Accelerons </p></Link>
+          <Link to="/nitrox"><p className="black_things_to_explore">Team Nitrox</p></Link>
+          <Link to="/autokriti"><p className="black_things_to_explore">Autokriti</p></Link>
         </div>
       </div>
       <div id="black_footer_box2">
@@ -88,7 +86,7 @@ function Footer() {
               src="https://img.icons8.com/ios-filled/50/ffffff/mail.png"
               alt="contact_image"
             />
-            <span id="black_email_text"> saenitkurukshetra@gmail.com</span>
+            <span id="black_email_text"> <a href="mailto:saenitkurukshetra@gmail.com">saenitkurukshetra@gmail.com</a></span>
           </p>
 
           <p>
@@ -98,7 +96,7 @@ function Footer() {
               src="https://img.icons8.com/ios-glyphs/30/ffffff/linkedin.png"
               alt="contact_image"
             />
-            <span id="black_linkedin_text">linked.com/company/sae-nit-kkr</span>
+            <span id="black_linkedin_text"><a href="https://in.linkedin.com/company/sae-nit-kkr" target="_blank">linked.com/company/sae-nit-kkr</a></span>
           </p>
         </div>
       </div>

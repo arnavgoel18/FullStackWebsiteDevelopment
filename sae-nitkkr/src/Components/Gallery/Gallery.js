@@ -5,7 +5,7 @@ import one2 from '../../Assets/one2.jpg';
 
 function App() {
   return (
-    <div>
+    <div className="Gallery-Main_Cotainer">
       <br/><br/>
       {/* <h1 className="Gallery-photos">PHOTOS</h1> */}
       <Gallery />

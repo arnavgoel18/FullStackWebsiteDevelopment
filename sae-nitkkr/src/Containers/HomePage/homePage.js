@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { useEffect } from 'react';
 import NavBar from '../../Components/NavBar/NavBar'
 import FirstDisplayDIV from '../../Components/FirstDisplayDIV/FirstDisplayDIV';
 import AboutUs from '../../Components/AboutUs/AboutUs';
@@ -10,11 +10,16 @@ import Managers from '../../Containers/HomePage/ProfInchargesAndManagers/Manager
 import Footer from '../../Components/Footer/Footer(black)/FooterBlack';
 
 function HomePage(){
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
+
     return(
         <>
             <NavBar/>
             <FirstDisplayDIV page="Home"/>
-            <AboutUs/>
+            <AboutUs page="Home"/>
             <TeamsDIV/>
             <br/>
             <ExploreUs/>

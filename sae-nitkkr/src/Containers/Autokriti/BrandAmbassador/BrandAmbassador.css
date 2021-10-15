@@ -71,6 +71,7 @@
   position: relative;
   left: 140px;
   top: -45px;
+  color: #fff;
 }
 /* @media (min-width:375px) and (max-width:425px) {
 
@@ -81,7 +82,8 @@
 .BrandAmbassador-box4 {
   font-size: 22px;
   font-weight: bold;
-  width: 140px;
+  width: 160px;
+  height: 50px;
   padding: 5px;
   background: linear-gradient(to right, blue, purple),
     linear-gradient(to right, white, white);
@@ -111,6 +113,9 @@
     margin: 20px;
     margin-left: -90px;
     width: 340px;
+  }
+  .BrandAmbassador-box22{
+    margin-left: 29%;
   }
   .BrandAmbassador-body {
     background-image: url("../../../Assets/BrandAmbassador/Handshake.jpg");

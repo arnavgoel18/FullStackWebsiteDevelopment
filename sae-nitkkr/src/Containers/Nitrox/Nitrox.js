@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { useEffect } from 'react'
 import NavBar from '../../Components/NavBar/NavBar'
 import FirstDisplayDiv from '../../Components/FirstDisplayDIV/FirstDisplayDIV'
 import TeamsAboutUs from '../../Components/TeamsAboutUs/TeamsAboutUs'
@@ -9,6 +9,11 @@ import Gallery from '../../Components/Gallery/Gallery'
 import Footer from '../../Components/Footer/Footer(white)/FooterWhite'
 
 function Nitrox(){
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
+
     return(
         <>
             <NavBar/>

@@ -22,6 +22,8 @@ function BrandAmbassador() {
           <div className="BrandAmbassador-box23">BRAND AMBASSADOR</div>
         </div>
         <br />
+        <br/>
+        <br/>
         <div className="BrandAmbassador-box3">
           Spread a word about us in your college and get amazing perks!
         </div>

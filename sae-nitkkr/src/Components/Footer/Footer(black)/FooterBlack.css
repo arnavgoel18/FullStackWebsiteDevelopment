@@ -24,6 +24,8 @@
 
 .black_things_to_explore
 {
+    color: #fff;
+    text-decoration: none;
     margin-top:10px
 }
 
@@ -189,6 +191,17 @@
      height: 25px;
      width: 200px;
  }
+
+ #black_email_text a{
+    color: #fff;
+    text-decoration: none;
+ }
+
+ #black_linkedin_text a{
+    color: #fff;
+    text-decoration: none;
+ }
+
  #black_joinus
  {
      color: white;

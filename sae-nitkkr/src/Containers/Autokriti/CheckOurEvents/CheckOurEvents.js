@@ -1,7 +1,7 @@
 import "./CheckOurEvents.css";
 import React, {useState} from 'react';
 
-// import images1 from "./images1.jpeg";
+import poster from "../../../Assets/CheckOurEvents/poster.jpeg";
 
 import { FaAngleDoubleDown } from "react-icons/fa";
 
@@ -19,11 +19,13 @@ function CheckEvents() {
         <div  className="CheckOurEvents-events">
           <Session title="Understanding Transmission"
           status="online"
-          date="24th-January-2021"/>
+          date="24th-January-2021"
+          image={poster}/>
 
           <Session title="Understanding Transmission"
           status="online"
-          date="24th-January-2021"/>
+          date="24th-January-2021"
+          image={poster}/>
           
         </div>
         
@@ -42,7 +44,7 @@ function Session(props) {
   return (
     <>
       <div className="CheckOurEvents-card">
-        <img className="CheckOurEvents-image" src="" alt="Avatar" />
+        <img className="CheckOurEvents-image" src={props.image} alt="Avatar" />
         <div className="CheckOurEvents-container">
           <h2>
             <b>{props.title}</b>
