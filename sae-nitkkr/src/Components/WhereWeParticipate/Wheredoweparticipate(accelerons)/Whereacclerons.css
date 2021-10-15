@@ -147,7 +147,7 @@
 {
     /*border: 2px solid black;*/
     width: 64%;
-    height: 209px;
+    height: 300px;
     padding: 5px;
     /* transform: sca
     /* transform: scale(1.2); */
@@ -177,7 +177,7 @@
     /*border: 2px solid black;*/
     width: 64%;
     padding: 5px;
-    height: 209px;
+    height: 300px;
     margin-right: 46px;
     /* transform: sca
     /* transform: scale(1.2); */
@@ -193,7 +193,7 @@
     width: 23%;
     padding: 5px;
     margin-right: -72px;
-    height: 209px;
+    height: 300px;
     margin-left: 109px;
     background-image: url("def1.jpeg");
     background-repeat: no-repeat;
@@ -207,7 +207,7 @@
     /*border: 2px solid black;*/
     width: 23%;
     padding: 5px;
-    height: 209px;
+    height: 300px;
     margin-left: -72px;
     margin-right: 74px;
     background-image: url("def1.jpeg");
@@ -366,7 +366,7 @@
         /*border: 2px solid black;*/
         width: 62%;
         padding: 5px;
-        height: 209px;
+        height: 300px;
         /* transform: sca
         /* transform: scale(1.2); */
         background-image: url("abc1new.jpeg");
@@ -379,7 +379,7 @@
         /*border: 2px solid black;*/
         width: 64%;
         padding: 5px;
-        height: 209px;
+        height: 300px;
         margin-right: 46px;
         /* transform: sca
         /* transform: scale(1.2); */
@@ -395,7 +395,7 @@
         width: 29%;
         padding: 5px;
         margin-right: -72px;
-        height: 209px;
+        height: 300px;
         margin-left: 109px;
         background-image: url("def1.jpeg");
         background-repeat: no-repeat;
@@ -408,7 +408,7 @@
         opacity: 0.45;
         /*border: 2px solid black;*/
         width: 24%;
-        height: 209px;
+        height: 300px;
         padding: 5px;
         margin-left: -72px;
         margin-right: 74px;
