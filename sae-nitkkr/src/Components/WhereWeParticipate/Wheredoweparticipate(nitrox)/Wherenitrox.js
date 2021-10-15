@@ -1,5 +1,8 @@
 import React from "react";
 import "./Wherenitrox.css";
+
+import NitroxBAJA1 from '../../../Assets/WhereWeParticipate/NitroxBAJA1.jpeg'
+
 function Wherenitrox() {
   let image2;
   let image1;
@@ -108,10 +111,7 @@ function Wherenitrox() {
               all the techno freaks across the country <br />
               <br />
               <div id="Nitrox-atvcline">
-                The goal in Baja SAE racing is to <b> design, build</b> and{" "}
-                <b>race</b> off-road vehicles that can withstand the harshest
-                elements of rough terrain. The vehicles used in Baja SAE racing
-                are often similar in appearance to dune buggies.
+              3500+ students. More than a hundred teams. Bests competing against the best to build the best dune buggy each year. And that is Aravalli Team Vehicle Championship (ATVC) for you. So if you are a competitive techno freak, now you know where to come!
               </div>
             </div>
           </div>
