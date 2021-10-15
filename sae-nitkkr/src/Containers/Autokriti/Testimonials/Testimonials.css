@@ -7,7 +7,7 @@
 .Testimonials-body{
   margin-left: 80px;
   margin-right: 80px;
-  height: 100vh;
+  height: 665px;
   padding-top: 5vh;
 }
 .Testimonials-head {
@@ -41,6 +41,8 @@
 
 #Testimonials-nameChangedToBlack{
   color: #000;
+  position: relative;
+  top: -13px;
 }
 
 .Testimonials-card13 {
@@ -98,6 +100,7 @@
   .Testimonials-body{
     margin-left: 20px;
     margin-right: 20px;
+    height: 695px;
   }
   .Testimonials-card2{
     margin-bottom: 4vh;
@@ -113,6 +116,7 @@
   .Testimonials-body {
     margin-left: 20px;
     margin-right: 20px;
+    height: 630px;
   }
 }
 @media (min-width: 1440px) and (max-width: 2560px) {
@@ -125,6 +129,7 @@
   .Testimonials-body {
     margin-left: 150px;
     margin-right: 150px;
+    height: 733px;
   }
 }
 
@@ -140,5 +145,6 @@
 @media only screen and (max-width: 350px) {
   .Testimonials-body {
     margin: auto;
+    height: 864px;
   }
 }
