@@ -1,9 +1,6 @@
 import React from "react";
 import "./Whereacclerons.css";
 
-// import { useState } from "react";
-
-
 function Whereacclerons() {
   let image2;
   let image1;
@@ -13,7 +10,6 @@ function Whereacclerons() {
   let acheck2=0;
   function swap()
   {
-    console.log("navneet");
      image2=document.getElementById("Accelarons-image2");
      image1=document.getElementById("Accelarons-image1");
      if(acheck1==0)
@@ -32,7 +28,6 @@ function Whereacclerons() {
   }
   function swap2()
   {
-    console.log("nishant");
      image22=document.getElementById("Accelarons-image22");
      image11=document.getElementById("Accelarons-image11");
      if(acheck2==0)

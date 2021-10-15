@@ -1,5 +1,6 @@
 import React from 'react'
-import Navbar from '../../Components/NavigationBar/Navbar(big)/Navbar'
+
+import NavBar from '../../Components/NavBar/NavBar'
 import FirstDisplayDiv from '../../Components/FirstDisplayDIV/FirstDisplayDIV'
 import AboutUs from '../../Components/AboutUs/AboutUs'
 import CheckOurEvents from '../../Containers/Autokriti/CheckOurEvents/CheckOurEvents'
@@ -13,13 +14,13 @@ import FooterWhite from "../../Components/Footer/Footer(white)/FooterWhite";
 function Autokriti(){
     return(
         <>
-            <Navbar/>
+            <NavBar/>
             <FirstDisplayDiv page="Autokriti"/>
             <AboutUs/>
             <CheckOurEvents/>
             {/* <Saga/> */}
-            <BrandAmbassador/>
             <Testimonials/>
+            <BrandAmbassador/>
             <Gallery/>
             <FooterWhite/>
         </>

@@ -6,7 +6,8 @@ import one2 from '../../Assets/one2.jpg';
 function App() {
   return (
     <div>
-      <h1 className="Gallery-photos">PHOTOS</h1>
+      <br/><br/>
+      {/* <h1 className="Gallery-photos">PHOTOS</h1> */}
       <Gallery />
     </div>
   );

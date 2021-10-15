@@ -1,5 +1,6 @@
-import Navbar from '../../Components/NavigationBar/Navbar(big)/Navbar';
-import Hamburger from '../../Components/NavigationBar/Navbar(hamsburger)/Menu'
+import React from 'react';
+
+import NavBar from '../../Components/NavBar/NavBar'
 import FirstDisplayDIV from '../../Components/FirstDisplayDIV/FirstDisplayDIV';
 import AboutUs from '../../Components/AboutUs/AboutUs';
 import TeamsDIV from '../../Containers/HomePage/TeamsDIV/Teamdiv';
@@ -11,11 +12,11 @@ import Footer from '../../Components/Footer/Footer(black)/FooterBlack';
 function HomePage(){
     return(
         <>
-            <Navbar/>
-            <Hamburger/>
+            <NavBar/>
             <FirstDisplayDIV page="Home"/>
             <AboutUs/>
             <TeamsDIV/>
+            <br/>
             <ExploreUs/>
             <ProfIncharges/>
             <Managers/>

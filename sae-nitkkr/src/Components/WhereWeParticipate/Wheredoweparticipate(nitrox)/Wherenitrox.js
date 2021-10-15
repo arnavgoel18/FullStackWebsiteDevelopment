@@ -9,7 +9,6 @@ function Wherenitrox() {
   let check2=0;
   function swap()
   {
-    console.log("navneet");
      image2=document.getElementById("Nitrox-image2");
      image1=document.getElementById("Nitrox-image1");
      if (check1==0)
@@ -27,7 +26,6 @@ function Wherenitrox() {
   }
   function swap2()
   {
-    console.log("nishant");
      image22=document.getElementById("Nitrox-image22");
      image11=document.getElementById("Nitrox-image11");
      if(check2==0)

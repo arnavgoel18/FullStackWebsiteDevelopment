@@ -82,17 +82,17 @@
 }
 
 @media screen and (max-width: 1020px){
-    .persons_container{
+    .ProfInchargesandManagers-persons_container{
         flex-direction: column;
         align-items: center;
     }
-    .person{
+    .ProfInchargesandManagers-person{
         margin-bottom: 1vh;
     }
 }
 
 @media screen and (max-width: 450px) {
-    .managers_container{
+    .ProfInchargesandManagers-managers_container{
         display: none;
     }
 }
