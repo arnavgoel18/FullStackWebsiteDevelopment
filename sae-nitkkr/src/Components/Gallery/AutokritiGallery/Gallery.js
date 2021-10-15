@@ -3,7 +3,7 @@ import one1 from "../../../Assets/one1.jpg";
 import one from '../../../Assets/one.JPG';
 import one2 from '../../../Assets/one2.jpg';
 
-import Autokriti1 from '../../../Assets/AutokritiGallery/Autokritigallery_1.jpeg'
+import Autokriti1 from '../../../Assets/AutokritiGallery/Autokritigallery_1.jpg'
 import Autokriti2 from '../../../Assets/AutokritiGallery/Autokritigallery_2.jpg'
 import Autokriti3 from '../../../Assets/AutokritiGallery/Autokritigallery_3.jpg'
 import Autokriti4 from '../../../Assets/AutokritiGallery/Autokritigallery_4.jpg'
