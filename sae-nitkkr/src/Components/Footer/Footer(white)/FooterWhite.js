@@ -68,7 +68,7 @@ function Footerautokriti() {
             src="https://img.icons8.com/ios/50/000000/instagram-new--v1.png"
             alt="insta_image_auto"
           />
-          <a href="https://www.facebook.com/autokriti/"/>
+           <a href="https://www.facebook.com/autokriti/"/>
           <img
             id="white_fb_image_auto"
             src="https://img.icons8.com/ios-filled/50/000000/facebook--v1.png"
