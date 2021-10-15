@@ -220,15 +220,12 @@
  {
      cursor: pointer;
  }
-<<<<<<< Updated upstream
 
  #white_explore_us_content{
      position: relative;
      left: -48px;
  }
 
-=======
->>>>>>> Stashed changes
  #white_checkbox_disclaimer
  {
      font-size: 10px;
@@ -239,14 +236,11 @@
      position: relative;
      left: 10px;
  }
-<<<<<<< Updated upstream
 
  #white_linkedin_text a,#white_email_text a{
      color: #000;
      text-decoration: none;
  }
-=======
->>>>>>> Stashed changes
  .white_things_to_explore:hover{
      cursor: pointer;
  }

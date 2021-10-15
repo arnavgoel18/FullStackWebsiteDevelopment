@@ -191,20 +191,6 @@
      height: 25px;
      width: 200px;
  }
-<<<<<<< Updated upstream
-
- #black_email_text a{
-    color: #fff;
-    text-decoration: none;
- }
-
- #black_linkedin_text a{
-    color: #fff;
-    text-decoration: none;
- }
-
-=======
->>>>>>> Stashed changes
  #black_joinus
  {
      color: white;
@@ -237,6 +223,12 @@
      position: relative;
      left: 10px;
  }
+
+ #black_linkedin_text a,#black_email_text a{
+     color: #fff;
+     text-decoration: none;
+ }
+
  .black_things_to_explore:hover{
      cursor: pointer;
  }
