@@ -1,6 +1,5 @@
 import React from 'react'
 import accimg from '../../Assets/TeamAboutUs/Accelrons.JPG'
-
 import './TeamsAboutUs.css'
 
 function Acc() {
