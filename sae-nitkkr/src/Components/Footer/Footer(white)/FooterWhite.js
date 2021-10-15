@@ -30,11 +30,13 @@ function Footerautokriti() {
       <div id="white_social_content" className="white_each_footer_content">
         <p>
           Team Accelerons
+          <a href="https://instagram.com/accelerons_nitkkr?utm_medium=copy_link"/>
           <img
             id="white_insta_image_acelerons"
             src="https://img.icons8.com/ios/50/000000/instagram-new--v1.png"
             alt="insta_image_acelerons"
           />
+           <a href="https://www.facebook.com/teamaccelerons/"/>
           <img
             id="white_fb_image_acelerons"
             src="https://img.icons8.com/ios-filled/50/000000/facebook--v1.png" 
@@ -44,11 +46,13 @@ function Footerautokriti() {
 
         <p>
           Team Nitrox
-          <img
+          <a href="https://instagram.com/nitroxteam?utm_medium=copy_link"/>
+         <img
             id="white_insta_image_nitrox"
             src="https://img.icons8.com/ios/50/000000/instagram-new--v1.png"
             alt="insta_image_nitrox"
           />
+          <a href="https://www.facebook.com/teamnitrox/"/>
           <img
             id="white_fb_image_nitrox"
             src="https://img.icons8.com/ios-filled/50/000000/facebook--v1.png"
@@ -58,11 +62,13 @@ function Footerautokriti() {
 
         <p>
           Autokriti
+          <a href="https://instagram.com/autokriti?utm_medium=copy_link"/>
           <img
             id="white_insta_image_auto"
             src="https://img.icons8.com/ios/50/000000/instagram-new--v1.png"
             alt="insta_image_auto"
           />
+          <a href="https://www.facebook.com/autokriti/"/>
           <img
             id="white_fb_image_auto"
             src="https://img.icons8.com/ios-filled/50/000000/facebook--v1.png"
