@@ -1,7 +1,5 @@
 import './Gallery.css';
-import one1 from "../../../Assets/one1.jpg";
-import one from '../../../Assets/one.JPG';
-import one2 from '../../../Assets/one2.jpg';
+
 
 import Nitrox1 from '../../../Assets/NitroxGallery/Nitroxgallery_1.jpg'
 import Nitrox2 from '../../../Assets/NitroxGallery/Nitroxgallery_2.JPG'

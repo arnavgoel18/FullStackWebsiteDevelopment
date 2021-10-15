@@ -1,6 +1,11 @@
 import React from "react";
 import "./Whereacclerons.css";
 
+import AcceleronsFB1 from '../../../Assets/WhereWeParticipate/AcceleronsFB1.jpeg'
+import AcceleronsFB2 from '../../../Assets/WhereWeParticipate/AcceleronsFB2.jpeg'
+import AcceleronsSupra1 from '../../../Assets/WhereWeParticipate/AcceleronsSupra1.jpeg'
+import AcceleronsSupra2 from '../../../Assets/WhereWeParticipate/AcceleronsSupra2.jpeg'
+
 function Whereacclerons() {
   let image2;
   let image1;
@@ -14,14 +19,14 @@ function Whereacclerons() {
      image1=document.getElementById("Accelarons-image1");
      if(acheck1==0)
      {
-     image1.style.backgroundImage="url(/static/media/def1.86edba72.jpeg)";
-     image2.style.backgroundImage="url(/static/media/abc1new.79517128.jpeg)";
+     image1.style.backgroundImage="url(/static/media/AcceleronsFB2.a6a8a136.jpeg)";
+     image2.style.backgroundImage="url(/static/media/AcceleronsFB1.eec3ca49.jpeg)";
      acheck1=1;
      }
      else if(acheck1==1)
      {
-      image2.style.backgroundImage="url(/static/media/def1.86edba72.jpeg)";
-      image1.style.backgroundImage="url(/static/media/abc1new.79517128.jpeg)";
+      image2.style.backgroundImage="url(/static/media/AcceleronsFB2.a6a8a136.jpeg)";
+      image1.style.backgroundImage="url(/static/media/AcceleronsFB1.eec3ca49.jpeg)";
       acheck1=0;
      }
      
@@ -32,14 +37,14 @@ function Whereacclerons() {
      image11=document.getElementById("Accelarons-image11");
      if(acheck2==0)
      {
-     image11.style.backgroundImage="url(/static/media/def1.86edba72.jpeg)";
-     image22.style.backgroundImage="url(/static/media/abc1new.79517128.jpeg)";
+     image11.style.backgroundImage="url(/static/media/AcceleronsSupra2.8193467f.jpeg)";
+     image22.style.backgroundImage="url(/static/media/AcceleronsSupra1.79517128.jpeg)";
      acheck2=1;
      }
      else if(acheck2==1)
      {
-     image22.style.backgroundImage="url(/static/media/def1.86edba72.jpeg)";
-     image11.style.backgroundImage="url(/static/media/abc1new.79517128.jpeg)";
+     image22.style.backgroundImage="url(/static/media/AcceleronsSupra2.8193467f.jpeg)";
+     image11.style.backgroundImage="url(/static/media/AcceleronsSupra1.79517128.jpeg)";
      acheck2=0;
      }
 
