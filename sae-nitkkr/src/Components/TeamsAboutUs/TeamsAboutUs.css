@@ -2,6 +2,7 @@
 * {
   padding: 0px;
   font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
 }
 .TeamAboutUs-main_container {
   margin-left: 80px;
@@ -27,6 +28,7 @@
 }
 .TeamAboutUs-text {
   font-size: 17px;
+  padding-right: 5vh;
 }
 .TeamAboutUs-comp {
   font-size: 20px;

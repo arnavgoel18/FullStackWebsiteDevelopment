@@ -8,8 +8,7 @@
    flex-direction: column;
    flex-wrap: wrap; 
    align-content: center;
-    margin-bottom: 10vh;
-    margin-top: 5vh;
+  
 }
 
 #Accelarons-titlecomp1
@@ -147,7 +146,7 @@
 {
     /*border: 2px solid black;*/
     width: 64%;
-    height: 300px;
+    height: 209px;
     padding: 5px;
     /* transform: sca
     /* transform: scale(1.2); */
@@ -177,7 +176,7 @@
     /*border: 2px solid black;*/
     width: 64%;
     padding: 5px;
-    height: 300px;
+    height: 209px;
     margin-right: 46px;
     /* transform: sca
     /* transform: scale(1.2); */
@@ -193,7 +192,7 @@
     width: 23%;
     padding: 5px;
     margin-right: -72px;
-    height: 300px;
+    height: 209px;
     margin-left: 109px;
     background-image: url("def1.jpeg");
     background-repeat: no-repeat;
@@ -207,7 +206,7 @@
     /*border: 2px solid black;*/
     width: 23%;
     padding: 5px;
-    height: 300px;
+    height: 209px;
     margin-left: -72px;
     margin-right: 74px;
     background-image: url("def1.jpeg");
@@ -234,7 +233,7 @@
     #Accelarons-titlecomp1
     {
         /*border: 2px solid black;*/
-        margin-left: 116px;
+        margin-left: 122px;
         font-size: 44px;
     }
     #Accelarons-participate1
@@ -366,7 +365,7 @@
         /*border: 2px solid black;*/
         width: 62%;
         padding: 5px;
-        height: 300px;
+        height: 209px;
         /* transform: sca
         /* transform: scale(1.2); */
         background-image: url("abc1new.jpeg");
@@ -379,7 +378,7 @@
         /*border: 2px solid black;*/
         width: 64%;
         padding: 5px;
-        height: 300px;
+        height: 209px;
         margin-right: 46px;
         /* transform: sca
         /* transform: scale(1.2); */
@@ -395,7 +394,7 @@
         width: 29%;
         padding: 5px;
         margin-right: -72px;
-        height: 300px;
+        height: 209px;
         margin-left: 109px;
         background-image: url("def1.jpeg");
         background-repeat: no-repeat;
@@ -408,7 +407,7 @@
         opacity: 0.45;
         /*border: 2px solid black;*/
         width: 24%;
-        height: 300px;
+        height: 209px;
         padding: 5px;
         margin-left: -72px;
         margin-right: 74px;
@@ -547,7 +546,7 @@
 #Accelarons-titlecomp1
 {
     /*border: 2px solid black;*/
-    margin-left: 0px;
+    margin-left: 30px;
     font-size: 44px;
 }
 }
@@ -563,7 +562,7 @@
     
     #Accelarons-titlecomp1 {
         /*border: 2px solid black;*/
-        margin-left: 3px;
+        margin-left: 28px;
         width: 90%;
         font-size: 30px;
     }
@@ -688,7 +687,7 @@
     }
     #Accelarons-titlecomp1 {
         /*border: 2px solid black;*/
-        margin-left: 3px;
+        margin-left: 41px;
         width: 90%;
         font-size: 30px;
     }
@@ -827,7 +826,7 @@
     
     #Accelarons-titlecomp1 {
         /*border: 2px solid black;*/
-        margin-left: 3px;
+        margin-left: 33px;
         width: 90%;
         font-size: 30px;
     }
@@ -952,7 +951,7 @@
     }
     #Accelarons-titlecomp1 {
         /*border: 2px solid black;*/
-        margin-left: 3px;
+        margin-left: 44px;
         width: 90%;
         font-size: 30px;
     }
@@ -1071,14 +1070,14 @@
 {
     #Accelarons-formula_title {
         border-bottom: 8px solid black;
-        margin-left: 28px;
+        margin-left: 30px;
         font-size: 28px;
         font-weight: 800;
         color: rgb(12, 12, 12);
     }
     #Accelarons-titlecomp1 {
         /*border: 2px solid black;*/
-        margin-left: 3px;
+        margin-left: 22px;
         width: 90%;
         font-size: 30px;
     }
@@ -1178,17 +1177,6 @@
         display: none;
         margin-right: 28px;
         background-image: url("def1.jpeg");
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    #Accelarons-image11 {
-        /*border: 2px solid black;*/
-        width: 86%;
-        height: 240px;
-        margin-top: 10px;
-        padding: 5px;
-        margin-right: 55px;
-        background-image: url("abc1new.jpeg");
         background-repeat: no-repeat;
         background-size: cover;
     }
