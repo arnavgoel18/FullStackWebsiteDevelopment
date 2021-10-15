@@ -6,6 +6,7 @@ import FirstDisplayDiv from '../../Components/FirstDisplayDIV/FirstDisplayDIV'
 import TeamsAboutUs from '../../Components/TeamsAboutUs/TeamsAboutUs'
 import WhereDoWeParticipate from '../../Components/WhereWeParticipate/Wheredoweparticipate(accelerons)/Whereacclerons'
 import Gallery from '../../Components/Gallery/Gallery'
+import AccGaalleery from '../../Components/Gallery/AcceleronsGallery/Gallery'
 // import Saga from '../../Components/Saga/AcceleronsSaga'
 import Footer from '../../Components/Footer/Footer(white)/FooterWhite'
 
@@ -21,7 +22,7 @@ function Accelerons(){
             <FirstDisplayDiv page="Accelerons"/>
             <TeamsAboutUs page="Accelerons"/>
             <WhereDoWeParticipate/>
-            <Gallery/>
+            <AccGaalleery/>
             {/* <Saga/> */}
             <Footer/>
         </>

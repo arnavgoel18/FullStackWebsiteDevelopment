@@ -11,28 +11,25 @@ function Testimonials() {
         <div className="Testimonials-cards13"></div>
         <div className="Testimonials-card2">
           <div className="Testimonials-text"> <br />
-            I just wanted to share a quick note and let you know that you guys
-            do a really good job. I’m glad I decided to work with you.
+            Quite an informative workshop with knowledgeable people. They tauht with a lot of enthusiasm
             <br /> <br /> 
             <div className="Testimonials-byname"><br/>
-              <p id="Testimonials-nameChangedToBlack">-Emilia</p>
+              <p id="Testimonials-nameChangedToBlack">-Sakshi</p>
             </div>
           </div>
         </div>
         <div className="Testimonials-card13">
           <div className="Testimonials-card1">
             <div className="Testimonials-text"> <br />
-              I just wanted to share a quick note and let you know that you guys
-              do a really good job. I’m glad I decided to work with you. <br />{" "}
-              <br /> <div className="Testimonials-byname"><br/>-Emilia</div>
+            A lot of "hands on" experience and clear explanations of car dynamics  <br/><br />{" "}
+              <br/> <div className="Testimonials-byname"><br/>-Anudeep Sethi</div>
             </div>
           </div>
           <div className="Testimonials-card3">
             <div className="Testimonials-text">
               <br />
-              I just wanted to share a quick note and let you know that you guys
-              do a really good job. I’m glad I decided to work with you. <br/>{" "}
-              <br /> <div className="Testimonials-byname"><br/>-Emilia</div>
+              The workshop was fun, especially the display of Porche Cayenne and talented guests of honour.<br/> <br/>{" "}
+              <br/> <div className="Testimonials-byname"><br/>-Abhishek Goel</div>
             </div>
           </div>
         </div>
