@@ -28,16 +28,18 @@ import Accelerons21 from '../../../Assets/AcceleronsGallery/AcceleronsGallery_21
 import Accelerons22 from '../../../Assets/AcceleronsGallery/AcceleronsGallery_22.JPG'
 import Accelerons23 from '../../../Assets/AcceleronsGallery/AcceleronsGallery_23.JPG'
 import Accelerons24 from '../../../Assets/AcceleronsGallery/AcceleronsGallery_24.JPG'
-import Accelerons25 from '../../../Assets/AcceleronsGallery/AcceleronsGallery_25.JPG'
 import Accelerons26 from '../../../Assets/AcceleronsGallery/AcceleronsGallery_26.JPG'
 import Accelerons27 from '../../../Assets/AcceleronsGallery/AcceleronsGallery_27.JPG'
 import Accelerons28 from '../../../Assets/AcceleronsGallery/AcceleronsGallery_28.JPG'
-import Accelerons29 from '../../../Assets/AcceleronsGallery/AcceleronsGallery_29.JPG'
-import Accelerons30 from '../../../Assets/AcceleronsGallery/AcceleronsGallery_30.JPG'
 import Accelerons31 from '../../../Assets/AcceleronsGallery/AcceleronsGallery_31.JPG'
 import Accelerons32 from '../../../Assets/AcceleronsGallery/AcceleronsGallery_32.JPG'
-import Accelerons33 from '../../../Assets/AcceleronsGallery/AcceleronsGallery_33.JPG'
 import Accelerons34 from '../../../Assets/AcceleronsGallery/AcceleronsGallery_34.JPG'
+import Accelerons35 from '../../../Assets/AcceleronsGallery/AcceleronsGallery_35.JPG'
+import Accelerons37 from '../../../Assets/AcceleronsGallery/AcceleronsGallery_37.JPG'
+import Accelerons38 from '../../../Assets/AcceleronsGallery/AcceleronsGallery_38.JPG'
+
+
+
 
 function App() {
   return (
@@ -54,47 +56,47 @@ function Gallery() {
     <>
       <div className="Gallery-row">
         <div className="Gallery-column">
-          <img src={one1} alt="hello" className="image_of_gallery" />
-          <img src={one2} alt="hello" className="image_of_gallery" />
-          <img src={one2} alt="hello" className="image_of_gallery" />
-          <img src={one2} alt="hello" className="image_of_gallery" />
-          <img src={one} alt="hello" className="image_of_gallery" />
-          <img src={one} alt="hello" className="image_of_gallery" />
-          <img src={one1} alt="hello" className="image_of_gallery" />
+          <img src={Accelerons1} alt="hello" className="image_of_gallery" />
+          <img src={Accelerons2} alt="hello" className="image_of_gallery" />
+          <img src={Accelerons3} alt="hello" className="image_of_gallery" />
+          <img src={Accelerons4} alt="hello" className="image_of_gallery" />
+          <img src={Accelerons5} alt="hello" className="image_of_gallery" />
+          <img src={Accelerons6} alt="hello" className="image_of_gallery" />
+          <img src={Accelerons7} alt="hello" className="image_of_gallery" />
         </div>
         <div className="Gallery-column">
-          <img src={one2} alt="hello" className="image_of_gallery" />
-          <img src={one} alt="hello" className="image_of_gallery" />
-          <img src={one} alt="hello" className="image_of_gallery" />
-          <img src={one2} alt="hello" className="image_of_gallery" />
-          <img src={one} alt="hello" className="image_of_gallery" />
-          <img src={one} alt="hello" className="image_of_gallery" />
+          <img src={Accelerons8} alt="hello" className="image_of_gallery" />
+          <img src={Accelerons9} alt="hello" className="image_of_gallery" />
+          <img src={Accelerons10} alt="hello" className="image_of_gallery" />
+          <img src={Accelerons11} alt="hello" className="image_of_gallery" />
+          <img src={Accelerons12} alt="hello" className="image_of_gallery" />
+          <img src={Accelerons13} alt="hello" className="image_of_gallery" />
         </div>
         <div className="Gallery-column">
-          <img src={one1} alt="hello" className="image_of_gallery" />
-          <img src={one2} alt="hello" className="image_of_gallery" />
-          <img src={one} alt="hello" className="image_of_gallery" />
-          <img src={one} alt="hello" className="image_of_gallery" />
-          <img src={one2} alt="hello" className="image_of_gallery" />
-          <img src={one} alt="hello" className="image_of_gallery" />
-          <img src={one1} alt="hello" className="image_of_gallery" />
+          <img src={Accelerons14} alt="hello" className="image_of_gallery" />
+          <img src={Accelerons15} alt="hello" className="image_of_gallery" />
+          <img src={Accelerons16} alt="hello" className="image_of_gallery" />
+          <img src={Accelerons17} alt="hello" className="image_of_gallery" />
+          <img src={Accelerons18} alt="hello" className="image_of_gallery" />
+          <img src={Accelerons19} alt="hello" className="image_of_gallery" />
+          <img src={Accelerons20} alt="hello" className="image_of_gallery" />
         </div>
         <div className="Gallery-column">
-          <img src={one2} className="image_of_gallery"  />
-          <img src={one} className="image_of_gallery" />
-          <img src={one} className="image_of_gallery" />
-          <img src={one2} className="image_of_gallery"  />
-          <img src={one} className="image_of_gallery" />
-          <img src={one} className="image_of_gallery"  />
+          <img src={Accelerons21} className="image_of_gallery"  />
+          <img src={Accelerons22} className="image_of_gallery" />
+          <img src={Accelerons23} className="image_of_gallery" />
+          <img src={Accelerons24} className="image_of_gallery"  />
+          <img src={Accelerons26} className="image_of_gallery" />
+          <img src={Accelerons27} className="image_of_gallery"  />
         </div>
         <div className="Gallery-column">
-          <img src={one1} alt="hello" className="image_of_gallery" />
-          <img src={one2} alt="hello" className="image_of_gallery" />
-          <img src={one} alt="hello" className="image_of_gallery" />
-          <img src={one} alt="hello" className="image_of_gallery" />
-          <img src={one2} alt="hello" className="image_of_gallery" />
-          <img src={one} alt="hello" className="image_of_gallery" />
-          <img src={one1} alt="hello" className="image_of_gallery" />
+          <img src={Accelerons28} alt="hello" className="image_of_gallery" />
+          <img src={Accelerons31} alt="hello" className="image_of_gallery" />
+          <img src={Accelerons32} alt="hello" className="image_of_gallery" />
+          <img src={Accelerons34} alt="hello" className="image_of_gallery" />
+          <img src={Accelerons35} alt="hello" className="image_of_gallery" />
+          <img src={Accelerons37} alt="hello" className="image_of_gallery" />
+          <img src={Accelerons38} alt="hello" className="image_of_gallery" />
         </div>
       </div>
       <br/><br/>
