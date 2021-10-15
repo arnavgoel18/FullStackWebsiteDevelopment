@@ -3,6 +3,11 @@ import one1 from "../../../Assets/one1.jpg";
 import one from '../../../Assets/one.JPG';
 import one2 from '../../../Assets/one2.jpg';
 
+import Autokriti1 from '../../../Assets/AutokritiGallery/Autokritigallery_1.jpg'
+import Autokriti2 from '../../../Assets/AutokritiGallery/Autokritigallery_2.jpg'
+import Autokriti3 from '../../../Assets/AutokritiGallery/Autokritigallery_3.jpg'
+
+
 function App() {
   return (
     <div className="Gallery-Main_Cotainer">
@@ -18,9 +23,9 @@ function Gallery() {
     <>
       <div className="Gallery-row">
         <div className="Gallery-column">
-          <img src={one1} alt="hello" className="image_of_gallery" />
-          <img src={one2} alt="hello" className="image_of_gallery" />
-          <img src={one} alt="hello" className="image_of_gallery" />
+          <img src={Autokriti1} alt="hello" className="image_of_gallery" />
+          <img src={Autokriti2} alt="hello" className="image_of_gallery" />
+          <img src={Autokriti3} alt="hello" className="image_of_gallery" />
           <img src={one} alt="hello" className="image_of_gallery" />
           <img src={one2} alt="hello" className="image_of_gallery" />
           <img src={one} alt="hello" className="image_of_gallery" />
