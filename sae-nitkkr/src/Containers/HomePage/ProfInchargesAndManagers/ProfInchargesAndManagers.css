@@ -4,13 +4,13 @@
     box-sizing: border-box;
 }
 .ProfInchargesandManagers-Managers-Heading{
-    font-size: 35px;
+    font-size: 30px;
     font-family: "Montserrat", sans-serif;
     
     
 }
 .ProfInchargesandManagers-heading{
-    font-size: 35px;
+    font-size: 30px;
     font-family: "Montserrat", sans-serif;
 
 
@@ -32,8 +32,8 @@
 
 .ProfInchargesandManagers-profIncharge_container p{
     font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    font-size: 60px;
+    font-weight: normal;
+    font-size: 30px;
 }
 
 .ProfInchargesandManagers-persons_container{
@@ -74,6 +74,8 @@
 
 .ProfInchargesandManagers-profIncharge_container p{
     font-weight: bolder;
+    font-weight: normal;
+    font-size: 30px;
 }
 
 .ProfInchargesandManagers-persons_container{
