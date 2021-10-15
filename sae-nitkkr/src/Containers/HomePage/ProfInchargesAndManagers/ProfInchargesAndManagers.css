@@ -3,6 +3,21 @@
     padding: 0;
     box-sizing: border-box;
 }
+.ProfInchargesandManagers-Managers-Heading{
+    font-size: 35px;
+    font-family: "Montserrat", sans-serif;
+    
+    
+}
+.ProfInchargesandManagers-heading{
+    font-size: 35px;
+    font-family: "Montserrat", sans-serif;
+
+
+}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 /*PROF INCHARGES*/
 
@@ -17,6 +32,8 @@
 
 .ProfInchargesandManagers-profIncharge_container p{
     font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 60px;
 }
 
 .ProfInchargesandManagers-persons_container{
