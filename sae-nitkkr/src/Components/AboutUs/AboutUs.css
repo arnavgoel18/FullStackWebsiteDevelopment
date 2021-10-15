@@ -30,8 +30,15 @@
 }
 .AboutUs-box1
 {
+    padding-top: 7vh;
     padding-right: 70px;
 }
+
+.AboutUs-box1 img{
+  width: 100%;
+  height: auto;
+}
+
 .AboutUs-box21{
 display: flex;
 flex-direction: row;
