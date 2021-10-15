@@ -3,31 +3,38 @@
   padding: 0px;
   font-family: "Montserrat", sans-serif;
 }
-
 .TeamAboutUs-main_container {
-  margin-left: 80px;
-  margin-right: 80px;
+ margin-left: 80px;
+ margin-right: 80px;
   padding: 10px;
 }
 .TeamAboutUs-heading {
   display: flex;
+  flex-wrap: wrap;
   padding: 20px;
 }
 .TeamAboutUs-weare {
-  font-size: 30px;
+  font-size: 43px;
   margin-right: 5px;
 }
 .TeamAboutUs-boldcolor {
-  font-size: 30px;
+  font-size: 37px;
   font-weight: 900;
   color: rgb(67, 67, 197);
 }
 .TeamAboutUs-bigcontainer {
   display: flex;
 }
+.TeamAboutUs-text
+{
+  font-size: 17px;
+}
+.TeamAboutUs-comp{
+  font-size: 20px;
+}
 .TeamAboutUs-text_container {
   order: 0;
-  width: 610px;
+  width: 90vw;
 }
 
 .TeamAboutUs-text {
@@ -40,8 +47,8 @@
   padding: 10px;
 }
 .TeamAboutUs-image img {
-  height: 320px;
-  width: 470px;
+  height: 60%;
+  width: 80%;
   align-items: flex-end;
   clip-path: polygon(33% 0, 100% 0, 100% 100%, 0 100%, 0 30%);
 }
@@ -51,16 +58,52 @@
     display: block;
   }
   .TeamAboutUs-image {
-    position: relative;
-    left: 80px;
+    position:relative;
+    left:5vw;
   }
-  TeamAboutUs-main_container {
+  .TeamAboutUs-main_container {
     margin-left: 20px;
     margin-right: 20px;
   }
 }
-@media (min-width: 1440px) and (max-width: 2560px) {
-  TeamAboutUs-main_container {
+@media (min-width:768px) and (max-width:1024px)
+{
+  .TeamAboutUs-heading {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-left: -40px;
+}
+.TeamAboutUs-boldcolor {
+  font-size: 46px;
+  font-weight: 900;
+  color: rgb(67, 67, 197);
+}
+  .TeamAboutUs-text_container {
+    order: 0;
+    margin-left: -42px;
+    width: 90vw;
+  }
+  .TeamAboutUs-lowertext
+
+  {
+    margin-left: -28px;
+  }
+}
+@media (min-width: 1500px) and (max-width: 2560px) {
+  .TeamAboutUs-image img {
+    height: 60%;
+    width: 75%;
+    align-items: flex-end;
+    -webkit-clip-path: polygon(33% 0, 100% 0, 100% 100%, 0 100%, 0 30%);
+    clip-path: polygon(33% 0, 100% 0, 100% 100%, 0 100%, 0 30%);
+}
+.TeamAboutUs-boldcolor {
+  font-size: 48px;
+  font-weight: 900;
+  color: rgb(67, 67, 197);
+}
+  .TeamAboutUs-main_container {
     margin-left: 200px;
     margin-right: 200px;
   }
@@ -70,4 +113,63 @@
     margin-left: 150px;
     margin-right: 150px;
   }
+}
+@media (max-width:320px)
+{
+
+}
+@media (min-width:319px) and (max-width:425px)
+{
+  .TeamAboutUs-heading {
+    margin-left: -14px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.TeamAboutUs-text {
+  padding: 20px;
+}
+  .TeamAboutUs-boldcolor {
+    font-size: 31px;
+    font-weight: 900;
+    color: rgb(67, 67, 197);
+  }
+  .TeamAboutUs-text
+  {
+    font-size: 12px;
+    margin-left: -17px;
+  }
+  .TeamAboutUs-comp{
+    font-size: 12px;
+  }
+  .TeamAboutUs-weare {
+    font-size: 31px;
+    margin-right: 5px;
+}
+}
+@media (min-width:1024px) and (max-width:1440px)
+{
+  .TeamAboutUs-text
+  {
+    font-size: 25px;
+  }
+  .TeamAboutUs-comp{
+    font-size: 25px;
+  }
+}
+@media (min-width:1440px) and (max-width:2560px)
+{
+  .TeamAboutUs-text
+  {
+    font-size: 25px;
+  }
+  .TeamAboutUs-comp{
+    font-size: 25px;
+  }
+  .TeamAboutUs-heading {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    font-size: 20px;
+}
 }
