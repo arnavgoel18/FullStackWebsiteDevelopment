@@ -8,6 +8,7 @@ import Nitrox from "./Containers/Nitrox/Nitrox"
 
 
 function App() {
+  document.title = "SAE NIT Kurukshtra";
   return (
     <>
       <Router>
