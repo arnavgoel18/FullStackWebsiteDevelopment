@@ -1,6 +1,7 @@
 import React from 'react'
-import accleronspic from '../../Assets/TeamAboutUs/Accelerons.jpg'
-import nitroxpic from '../../Assets/TeamAboutUs/Nitrox.jpg'
+import accleronspic from '../../Assets/TeamAboutUs/Accelerons.jpeg'
+import nitroxpic from '../../Assets/TeamAboutUs/Nitrox.jpeg'
+
 import './TeamsAboutUs.css'
 
 function Acc(props) {

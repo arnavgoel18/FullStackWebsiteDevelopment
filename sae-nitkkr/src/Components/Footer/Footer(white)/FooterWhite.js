@@ -30,50 +30,50 @@ function Footerautokriti() {
       <div id="white_social_content" className="white_each_footer_content">
         <p>
           Team Accelerons
-          <a href="https://instagram.com/accelerons_nitkkr?utm_medium=copy_link"/>
+          <a href="https://instagram.com/accelerons_nitkkr?utm_medium=copy_link" target="_blank">
           <img
             id="white_insta_image_acelerons"
             src="https://img.icons8.com/ios/50/000000/instagram-new--v1.png"
             alt="insta_image_acelerons"
-          />
-           <a href="https://www.facebook.com/teamaccelerons/"/>
+          /></a>
+           <a href="https://www.facebook.com/teamaccelerons/" target="_blank">
           <img
             id="white_fb_image_acelerons"
             src="https://img.icons8.com/ios-filled/50/000000/facebook--v1.png" 
             alt="fb_image_acelerons"
-          />
+          /></a>
         </p>
 
         <p>
           Team Nitrox
-          <a href="https://instagram.com/nitroxteam?utm_medium=copy_link"/>
+          <a href="https://instagram.com/nitroxteam?utm_medium=copy_link" target="_blank">
          <img
             id="white_insta_image_nitrox"
             src="https://img.icons8.com/ios/50/000000/instagram-new--v1.png"
             alt="insta_image_nitrox"
-          />
-          <a href="https://www.facebook.com/teamnitrox/"/>
+          /></a>
+          <a href="https://www.facebook.com/teamnitrox/" target="_blank">
           <img
             id="white_fb_image_nitrox"
             src="https://img.icons8.com/ios-filled/50/000000/facebook--v1.png"
             alt="fb_image_nitrox"
-          />
+          /></a>
         </p>
 
         <p>
           Autokriti
-          <a href="https://instagram.com/autokriti?utm_medium=copy_link"/>
+          <a href="https://instagram.com/autokriti?utm_medium=copy_link" target="_blank">
           <img
             id="white_insta_image_auto"
             src="https://img.icons8.com/ios/50/000000/instagram-new--v1.png"
             alt="insta_image_auto"
-          />
-           <a href="https://www.facebook.com/autokriti/"/>
+          /></a>
+           <a href="https://www.facebook.com/autokriti/" target="_blank">
           <img
             id="white_fb_image_auto"
             src="https://img.icons8.com/ios-filled/50/000000/facebook--v1.png"
             alt="fb_image_auto"
-          />
+          /></a>
         </p>
       </div>
     </div>

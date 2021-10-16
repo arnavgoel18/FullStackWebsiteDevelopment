@@ -1,6 +1,6 @@
 import PersonCard from './PersonCard';
 import manager1 from '../../../Assets/ProfIncharges/President.jpg';
-import manager2 from '../../../Assets/ProfIncharges/JDSir.jpg';
+import manager2 from '../../../Assets/ProfIncharges/VicePres.jpg';
 import manager3 from '../../../Assets/ProfIncharges/Secy.jpg';
 
 function Managers(){
@@ -11,7 +11,7 @@ function Managers(){
                 
                 <div className = "ProfInchargesandManagers-persons_container">
                     <PersonCard name={"Deepak Yadav"} designation={"President"} url={manager1}/>
-                    <PersonCard name={"Ritik "} designation={"Vice-President"}/>
+                    <PersonCard name={"Ritik "} designation={"Vice-President"} url={manager2}/>
                     <PersonCard name={"Sarthak Mittal"} designation={"Secretary"} url={manager3}/>
                 </div>
             </div>
