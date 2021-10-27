@@ -11,7 +11,7 @@ function Home(props) {
   var picture;
 
   if(props.page === "Home"){
-    content = "SAE NIT Kurukshetra is a collegiate club affiliated under SAE India, which is a wing of SAE International, on a national scale. The club is a platform for budding engineers to work together in arrive at solutions to the problems in the mobility field. It forms a link between naive talents and pioneers of the industry. Valuing the interdisciplinary nature of the automobile sector, under graduate students from various branches strive to innovate better under the guidance of our professors here at NIT Kurukshetra. <br/><br/>We bring our skills to many competitions "
+    content = "SAE NIT Kurukshetra is a collegiate club affiliated under SAE India, which is a wing of SAE International, on a national scale. The club is a platform for budding engineers to work together in arrive at solutions to the problems in the mobility field. It forms a link between naive talents and pioneers of the industry. Valuing the interdisciplinary nature of the automobile sector, under graduate students from various branches strive to innovate better under the guidance of our professors here at NIT Kurukshetra."
     contentOnlyForHomepage = "We bring our skills to many competitions";
     comp1 = "Baja SAE India";
     comp2 = "ATVC";
@@ -33,7 +33,7 @@ function Home(props) {
     </div>
     <div className="AboutUs-box2">
       <div className="AboutUs-box21"><h2>who are</h2><h2 className="AboutUs-head">We?</h2></div>
-      <div className="AboutUs-box22">{content}<br/><br/>{contentOnlyForHomepage}</div>
+      <div className="AboutUs-box22">{content}<br/><br/>  {contentOnlyForHomepage}</div>
       <div className="AboutUs-box23">
         {comp1}<br/>
         {comp2}{contentOnlyForAutokriti} <br/>
