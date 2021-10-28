@@ -15,7 +15,7 @@
   padding: 20px;
 }
 .TeamAboutUs-weare {
-  font-size: 43px;
+  font-size: 27px;
   margin-right: 5px;
 }
 .TeamAboutUs-boldcolor {
@@ -27,7 +27,7 @@
   display: flex;
 }
 .TeamAboutUs-text {
-  font-size: 17px;
+  font-size: 18px;
   padding-right: 5vh;
 }
 .TeamAboutUs-comp {
@@ -63,7 +63,7 @@
     left: 5vw;
   }
   .TeamAboutUs-comp {
-    font-size: 17px;
+    font-size: 18px;
   }
   .TeamAboutUs-main_container {
     margin-left: 20px;
@@ -76,7 +76,7 @@
     margin-left: -27px;
   }
   .TeamAboutUs-comp {
-    font-size: 17px;
+    font-size: 18px;
   }
   .TeamAboutUs-comp {
     border-left: solid rgb(67, 67, 197) 3px;
@@ -98,7 +98,7 @@
     margin-left: -77px;
   }
   .TeamAboutUs-boldcolor {
-    font-size: 46px;
+    font-size: 37px;
     font-weight: 900;
     color: rgb(67, 67, 197);
   }
@@ -121,10 +121,10 @@
     clip-path: polygon(33% 0, 100% 0, 100% 100%, 0 100%, 0 30%);
   }
   .TeamAboutUs-comp {
-    font-size: 17px;
+    font-size: 18px;
   }
   .TeamAboutUs-comp {
-    font-size: 17px;
+    font-size: 18px;
   }
   .TeamAboutUs-image {
     display: flex;
@@ -132,7 +132,7 @@
     right: -223px;
   }
   .TeamAboutUs-boldcolor {
-    font-size: 48px;
+    font-size: 37px;
     font-weight: 900;
     color: rgb(67, 67, 197);
   }
@@ -147,7 +147,7 @@
     margin-right: 150px;
   }
   .TeamAboutUs-comp {
-    font-size: 17px;
+    font-size: 18px;
   }
   .TeamAboutUs-image {
     width: 391px;
@@ -160,7 +160,7 @@
 }
 @media (min-width: 319px) and (max-width: 425px) {
   .TeamAboutUs-comp {
-    font-size: 17px;
+    font-size: 18px;
   }
   .TeamAboutUs-comp {
     border-left: solid rgb(67, 67, 197) 3px;
@@ -196,19 +196,19 @@
 }
 @media (min-width: 1024px) and (max-width: 1440px) {
   .TeamAboutUs-text {
-    font-size: 25px;
+    font-size: 18px;
   }
   .TeamAboutUs-comp {
-    font-size: 25px;
+    font-size: 18px;
   }
 }
 @media (min-width: 1440px) and (max-width: 2560px) {
   .TeamAboutUs-text {
-    font-size: 24px;
+    font-size: 18px;
     margin-left:-115px;
   }
   .TeamAboutUs-comp {
-    font-size: 17px;
+    font-size: 18px;
     margin-left: -96px;
   }
   .TeamAboutUs-heading {
@@ -228,6 +228,6 @@
     padding: 10px;
   }
   .TeamAboutUs-comp {
-    font-size: 17px;
+    font-size: 18px;
   }
 }

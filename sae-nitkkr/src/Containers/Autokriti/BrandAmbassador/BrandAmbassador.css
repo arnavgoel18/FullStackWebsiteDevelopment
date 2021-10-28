@@ -24,7 +24,7 @@
   margin-top: 10vh;
   display: flex;
   flex-direction: row;
-  font-size: 30px;
+  font-size: 27px;
 }
 .BrandAmbassador-box11 {
   display: flex;
@@ -46,7 +46,7 @@
   margin-left: 15px;
 }
 .BrandAmbassador-box2 {
-  font-size: 40px;
+  font-size: 30px;
   margin-top: 10vh;
 }
 .BrandAmbassador-box23 {
@@ -58,7 +58,7 @@
   border-image: linear-gradient(to bottom, blue, purple);
   border-image-slice: 1;
   margin: 20px;
-  font-size: 20px;
+  font-size: 18px;
   width: 380px;
 }
 .BrandAmbassador-box4 {

@@ -14,7 +14,7 @@
 }
 .Testimonials-head {
   margin-top: 50px;
-  font-size: 35px;
+  font-size: 27px;
   font-weight: bold;
   text-align: center;
 }
@@ -38,6 +38,7 @@
   width: 250px;
   text-align: center;
   padding: 10px;
+  font-size: 18px;
 }
 
 #Testimonials-nameChangedToBlack{
