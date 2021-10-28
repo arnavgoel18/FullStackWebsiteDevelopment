@@ -16,11 +16,11 @@
 {
     /*border: 2px solid black;*/
     margin-left: 239px;
-    font-size: 44px;
+    font-size: 37px;
 }
 #Nitrox-participate1
 {
-    font-size: 44px;
+    font-size: 37px;
     font-weight: 800;
     color: rgb(31, 70, 248);
 }
@@ -28,7 +28,7 @@
 {
     border-bottom: 8px solid black;
     margin-left: 240px;
-    font-size: 44px;
+    font-size: 34px;
     font-weight: 800;
     color: rgb(12, 12, 12);
     
@@ -49,7 +49,7 @@
     
     border-bottom: 8px solid black;
     margin-left: 74%;
-    font-size: 44px;
+    font-size: 37px;
     font-weight: 800;
     color: rgb(12, 12, 12);
   
@@ -120,7 +120,7 @@
     width: 32%;
     padding: 5px;
     margin-left: 172px;
-    font-size: 22px;
+    font-size: 18px;
 }
 #Nitrox-atvc_text
 {
@@ -235,11 +235,11 @@
     {
         /*border: 2px solid black;*/
         margin-left: 116px;
-        font-size: 44px;
+        font-size: 37px;
     }
     #Nitrox-participate1
     {
-        font-size: 44px;
+        font-size: 37px;
         font-weight: 800;
         color: rgb(31, 70, 248);
     }
@@ -247,7 +247,7 @@
     {
         border-bottom: 8px solid black;
         margin-left: 129px;
-        font-size: 44px;
+        font-size: 34px;
         font-weight: 800;
         color: rgb(12, 12, 12);
         
@@ -268,7 +268,7 @@
         
         border-bottom: 8px solid black;
         margin-left: 74%;
-        font-size: 44px;
+        font-size: 37px;
         font-weight: 800;
         color: rgb(12, 12, 12);
       
@@ -346,7 +346,7 @@
         width: 32%;
         padding: 5px;
         margin-right: 36px;
-        font-size: 22px;
+        font-size: 18px;
         
        
     }
@@ -425,7 +425,7 @@
         width: 45%;
         padding: 5px;
         margin-right: 25px;
-        font-size: 22px;
+        font-size: 18px;
     }
     #Nitrox-baja_text
     {
@@ -434,13 +434,13 @@
             width: 43%;
             padding: 5px;
             margin-left: 30px;
-            font-size: 22px;
+            font-size: 18px;
         
     }
     #Nitrox-baja_title {
         border-bottom: 8px solid black;
         margin-left: 33px;
-        font-size: 44px;
+        font-size: 32px;
         font-weight: 800;
         color: rgb(12, 12, 12);
     }
@@ -498,7 +498,7 @@
     
     border-bottom: 8px solid black;
     margin-left: 82%;
-    font-size: 33px;
+    font-size: 32px;
     font-weight: 800;
     color: rgb(12, 12, 12);
   
@@ -548,7 +548,7 @@
 {
     /*border: 2px solid black;*/
     margin-left: 0px;
-    font-size: 44px;
+    font-size: 37px;
 }
 }
 @media (min-width:320px) and (max-width:375px)
@@ -556,7 +556,7 @@
     #Nitrox-atvc_title {
         border-bottom: 8px solid black;
         margin-left: 33px;
-        font-size: 44px;
+        font-size: 30px;
         font-weight: 800;
         color: rgb(12, 12, 12);
     }
@@ -568,14 +568,14 @@
         font-size: 30px;
     }
     #Nitrox-participate1 {
-        font-size: 30px;
+        font-size: 34px;
         font-weight: 800;
         color: rgb(31, 70, 248);
     }
     #Nitrox-baja_title {
         border-bottom: 8px solid black;
         margin-left: 40px;
-        font-size: 44px;
+        font-size: 30px;
         font-weight: 800;
         color: rgb(12, 12, 12);
     }
@@ -682,7 +682,7 @@
     #Nitrox-atvc_title {
         border-bottom: 8px solid black;
         margin-left: 43px;
-        font-size: 44px;
+        font-size: 30px;
         font-weight: 800;
         color: rgb(12, 12, 12);
     }
@@ -693,14 +693,14 @@
         font-size: 30px;
     }
     #Nitrox-participate1 {
-        font-size: 30px;
+        font-size: 34px;
         font-weight: 800;
         color: rgb(31, 70, 248);
     }
     #Nitrox-baja_title {
         border-bottom: 8px solid black;
         margin-left: 45px;
-        font-size: 44px;
+        font-size: 30px;
         font-weight: 800;
         color: rgb(12, 12, 12);
     }
@@ -946,7 +946,7 @@
     #Nitrox-atvc_title {
         border-bottom: 8px solid black;
         margin-left: 64px;
-        font-size: 44px;
+        font-size: 30px;
         font-weight: 800;
         color: rgb(12, 12, 12);
     }
@@ -957,14 +957,14 @@
         font-size: 30px;
     }
     #Nitrox-participate1 {
-        font-size: 30px;
+        font-size: 34px;
         font-weight: 800;
         color: rgb(31, 70, 248);
     }
     #Nitrox-baja_title {
         border-bottom: 8px solid black;
         margin-left: 46px;
-        font-size: 44px;
+        font-size: 30px;
         font-weight: 800;
         color: rgb(12, 12, 12);
     }
@@ -1072,7 +1072,7 @@
     #Nitrox-atvc_title {
         border-bottom: 8px solid black;
         margin-left: 28px;
-        font-size: 28px;
+        font-size: 30px;
         font-weight: 800;
         color: rgb(12, 12, 12);
     }
@@ -1083,14 +1083,14 @@
         font-size: 30px;
     }
     #Nitrox-participate1 {
-        font-size: 30px;
+        font-size: 34px;
         font-weight: 800;
         color: rgb(31, 70, 248);
     }
     #Nitrox-baja_title {
         border-bottom: 8px solid black;
         margin-left: 24px;
-        font-size: 44px;
+        font-size: 30px;
         font-weight: 800;
         color: rgb(12, 12, 12);
     }
