@@ -25,10 +25,10 @@ import Autokriti22 from '../../../Assets/AutokritiGallery/Autokritigallery_22.jp
 import Autokriti23 from '../../../Assets/AutokritiGallery/Autokritigallery_23.jpg'
 import Autokriti24 from '../../../Assets/AutokritiGallery/Autokritigallery_24.jpg'
 import Autokriti25 from '../../../Assets/AutokritiGallery/Autokritigallery_25.jpg'
-import Autokriti26 from '../../../Assets/AutokritiGallery/Autokritigallery_26.jpg'
-import Autokriti27 from '../../../Assets/AutokritiGallery/Autokritigallery_27.jpg'
-import Autokriti28 from '../../../Assets/AutokritiGallery/Autokritigallery_28.jpg'
-import Autokriti29 from '../../../Assets/AutokritiGallery/Autokritigallery_29.jpg'
+import Autokriti26 from '../../../Assets/AutokritiGallery/Autokritigallery_26.JPG'
+import Autokriti27 from '../../../Assets/AutokritiGallery/Autokritigallery_27.JPG'
+import Autokriti28 from '../../../Assets/AutokritiGallery/Autokritigallery_28.JPG'
+import Autokriti29 from '../../../Assets/AutokritiGallery/Autokritigallery_29.JPG'
 import Autokriti30 from '../../../Assets/AutokritiGallery/Autokritigallery_30.jpg'
 
 

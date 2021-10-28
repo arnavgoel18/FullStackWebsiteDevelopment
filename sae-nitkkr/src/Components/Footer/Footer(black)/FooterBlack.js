@@ -30,7 +30,7 @@ function Footer() {
         <div id="black_social_content" className="black_each_footer_content">
           <p>
             Team Accelerons
-            <a href="https://instagram.com/accelerons_nitkkr?utm_medium=copy_link" target="_blank"> <img
+            <a href="https://instagram.com/accelerons_nitkkr?utm_medium=copy_link" target="_blank"><img
               id="black_insta_image_acelerons"
               src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png"
               alt="insta_image_acelerons"
