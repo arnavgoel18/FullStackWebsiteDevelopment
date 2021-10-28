@@ -22,7 +22,10 @@ function Accelerons(){
             <TeamsAboutUs page="Accelerons"/>
             <WhereDoWeParticipate/>
             {/* <Saga/> */}
+            <br/>
+            <br/>
             <Gallery/>
+            
             <Footer/>
         </>
     )

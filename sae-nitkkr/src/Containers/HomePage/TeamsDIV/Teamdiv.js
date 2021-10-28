@@ -8,6 +8,7 @@ function Teamdiv() {
       {/* <div id="acctext" className="heading"> TEAM ACCLERONS</div> */}
       TEAM <br/>ACCELERONS
      </div>
+     
      <div id="nitrox" className="participate">
      {/* <div id="acctext" className="heading">TEAM NITROX</div> */}
      TEAM <br/> NITROX

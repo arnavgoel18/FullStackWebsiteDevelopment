@@ -38,7 +38,7 @@
   width: 250px;
   text-align: center;
   padding: 10px;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 #Testimonials-nameChangedToBlack{
@@ -153,7 +153,7 @@
 }
 @media (max-width: 690px) and (min-width: 350px) {
   .Testimonials-body {
-    height: 146vh;
+    height: 180vh;
     /* height: max-content; */
   }
 }
