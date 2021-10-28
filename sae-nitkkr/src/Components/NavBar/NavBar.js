@@ -13,7 +13,7 @@ function NavBar() {
     return(
         <nav className="NavigationBar_Nav-navbar">
             <Link to="/" className="NavigationBar_Nav-navlogo" onClick={()=>setOpen(false)}>
-                SAENITKKR
+                SAENIT KKR
             </Link>
             <ul className={open ? 'NavigationBar_Nav-nav-links active' : 'NavigationBar_Nav-nav-links'}>
                 <li className="NavigationBar_Nav-nav-item">
