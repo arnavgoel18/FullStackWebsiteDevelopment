@@ -33,7 +33,7 @@ function Home(props) {
     </div>
     <div className="AboutUs-box2">
       <div className="AboutUs-box21"><h2>who are</h2><h2 className="AboutUs-head">We?</h2></div>
-      <div className="AboutUs-box22">{content}<br/><br/>{contentOnlyForHomepage}</div>
+      <div className="AboutUs-box22">{content}<br/><br/>  {contentOnlyForHomepage}</div>
       <div className="AboutUs-box23">
         {comp1}<br/>
         {comp2}{contentOnlyForAutokriti} <br/>
