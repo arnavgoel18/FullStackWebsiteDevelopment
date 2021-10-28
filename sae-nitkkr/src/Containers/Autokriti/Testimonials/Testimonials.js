@@ -6,7 +6,7 @@ function Testimonials() {
     <div className="Testimonials-body">
       <div className="Testimonials-vertical"></div> <br />
       <div className="Testimonials-head">TESTIMONIALS</div>
-      <div className="Testimonials-vertical"></div><br/><br/><br/>
+      <div className="Testimonials-vertical"></div><br/>
       <div className="Testimonials-cards">
         <div className="Testimonials-cards13"></div>
         <div className="Testimonials-card2">

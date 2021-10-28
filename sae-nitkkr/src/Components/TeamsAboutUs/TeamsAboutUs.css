@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 * {
   padding: 0px;
   font-family: "Montserrat", sans-serif;
@@ -95,7 +95,7 @@
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
-    margin-left: -110px;
+    margin-left: -77px;
   }
   .TeamAboutUs-boldcolor {
     font-size: 37px;

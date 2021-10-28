@@ -5,12 +5,12 @@
 
 }
 .BrandAmbassador-body {
-  background-image: url("../../../Assets/BrandAmbassador/Handshake.jpeg");
+  background-image: url("../../../Assets/BrandAmbassador/man-woman-handshake-23841014.jpg");
   background-repeat: no-repeat;
   background-position-x: right;
   background-position-y: center;
-  background-color: #000000;
-  height: 100vh;
+  background-color: #000000;  
+  padding-left: 16px;
 }
 .BrandAmbassador-boxes {
   padding-top: 10vh;
@@ -73,10 +73,7 @@
   top: -45px;
   color: #fff;
 }
-/* @media (min-width:375px) and (max-width:425px) {
 
-  
-} */
 @media (min-width:425px) and (max-width:579px)
 {
 .BrandAmbassador-box4 {
@@ -118,7 +115,7 @@
     margin-left: 29%;
   }
   .BrandAmbassador-body {
-    background-image: url("../../../Assets/BrandAmbassador/Handshake.jpeg");
+    background-image: url("../../../Assets/BrandAmbassador/man-woman-handshake-23841014.jpg");
     background-repeat: no-repeat;
     background-position-x: 0px;
     background-position-y: center;
