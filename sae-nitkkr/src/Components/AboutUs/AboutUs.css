@@ -9,12 +9,10 @@
   display: flex;
   flex-direction: row;
   margin-left: 80px;
-  margin-right: 80px;
-  /* margin: auto; */
-  /* border: solid #000000 2px; */
+  margin-right: 80px; 
   padding: 20px ;
   margin-top: 35px;
-}
+  }
 
 .AboutUs-image{
  margin-right: 50px;

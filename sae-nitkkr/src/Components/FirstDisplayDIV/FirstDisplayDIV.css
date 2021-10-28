@@ -5,10 +5,10 @@
 }
 
 .FirstDisplayDIV-main-container{
-    width: 100%;
-    height: 100vh;
+    width: 100vw;
+    height: 90vh;
     min-height: 50vh;
-    max-height: 100vh;
+    /* max-height: 100vh; */
 }
 
 .FirstDisplayDIV-main-container p{
