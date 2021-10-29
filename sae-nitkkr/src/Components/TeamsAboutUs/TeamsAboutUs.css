@@ -32,6 +32,7 @@
 }
 .TeamAboutUs-comp {
   font-size: 20px;
+  /* font-weight: 700; */
 }
 .TeamAboutUs-text_container {
   order: 0;
@@ -43,7 +44,7 @@
 }
 .TeamAboutUs-comp {
   border-left: solid rgb(67, 67, 197) 3px;
-  font-weight: 150;
+  font-weight: 700;
   margin-left: 20px;
   padding: 10px;
 }
@@ -80,7 +81,7 @@
   }
   .TeamAboutUs-comp {
     border-left: solid rgb(67, 67, 197) 3px;
-    font-weight: 150;
+    font-weight: 700;
     margin-left: -8px;
     padding: 10px;
     font-size: 18px;
@@ -164,7 +165,7 @@
   }
   .TeamAboutUs-comp {
     border-left: solid rgb(67, 67, 197) 3px;
-    font-weight: 150;
+    font-weight: 700;
     margin-left: 5px;
     padding: 10px;
   }
@@ -222,7 +223,7 @@
 @media (min-width: 425px) and (max-width: 767px) {
   .TeamAboutUs-comp {
     border-left: solid rgb(67, 67, 197) 3px;
-    font-weight: 150;
+    font-weight: 700;
     font-size: 16px;
     margin-left: 20px;
     padding: 10px;

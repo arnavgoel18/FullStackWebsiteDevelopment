@@ -204,7 +204,8 @@
     background-image: linear-gradient(to bottom right,rgb(31, 182, 228),rgb(26, 22, 224));
     /* background-color: rgb(248, 11, 51); */
     text-align: center;
-    height: 30px;
+    height: 25px;
+    width: 41px;
     border: none;
     
  }

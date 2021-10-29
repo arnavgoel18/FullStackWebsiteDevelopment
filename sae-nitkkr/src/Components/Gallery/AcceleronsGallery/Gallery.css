@@ -9,6 +9,14 @@
 
 .Gallery-Main_Cotainer{
   background-color: #000;
+  width: 103%;
+}
+@media  (min-width: 320px) and (max-width:768px)
+{
+  .Gallery-Main_Cotainer{
+    background-color: #000;
+    width: 103%;
+  }
 }
 
 .Gallery-photos{
