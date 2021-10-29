@@ -6,8 +6,9 @@
 
 .saga-outside-container{
     width: 100%;
-    height: 100vh;
-    border: solid 0.5px #000;
+    margin-left: 5px;
+  
+    /* border: solid 0.5px #000; */
     padding: 10vh;
     display: flex;
     flex-direction: column;
@@ -18,6 +19,8 @@
     height: auto;
     border: solid #000 1px;
     padding: 5vh;
+    font-size: 23px;
+    font-weight: 900;
 }
 
 .heading p{
@@ -32,7 +35,11 @@
 .years{
     text-align: center;
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
+    cursor: pointer;
+    
 }
 
 @media (max-width: 640px){
@@ -46,6 +53,7 @@
     padding: 1vh;
     display: flex;
     flex-direction: row;
+    
 }
 
 /* Vertical Line */
@@ -64,13 +72,18 @@
 /* Content Will Change on clicking the button */
 .main-content{
     display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+
 }
 
 .image{
-    width: 48%;
-    height: 60vh;
-    border: solid #000 .5px;
-    margin-left: 1%;
+    width: 535px;
+    height: 46vh;
+    /* border: solid #000 .5px; */
+    margin-left: 2%;
+    margin-top: 33px;
 }
 
 .image img{
@@ -79,9 +92,9 @@
 }
 
 .text{
-    width: 48%;
+    width: 535px;
     height: 60vh;
-    border: solid #000 .5px;
+    /* border: solid #000 .5px; */
     margin-left: 2%;
     padding: 3%;
 }
@@ -90,20 +103,40 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    font-size: 23px;
 }
 
 .comp1{
     width: 94%;
     height: 45%;
-    border: solid #000 .5px;
+    /* border: solid #000 .5px; */
 }
 .comp2{
     width: 94%;
     height: 45%;
-    border: solid #000 .5px;
+    /* border: solid #000 .5px; */
 }
 
 .text ul{
     margin-top: 3vh;
     margin-left: 4vh;
+}
+
+@media (min-width:320px) and (max-width:768px)
+{
+    .saga-outside-container{
+        width: 100%;
+        margin-left: 5px;
+      
+        /* border: solid 0.5px #000; */
+        padding: 0vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .text{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: 19px;
+    }
 }
