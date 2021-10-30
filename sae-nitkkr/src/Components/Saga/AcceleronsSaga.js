@@ -280,7 +280,7 @@ function Saga(){
                 <p>Our</p> <p id = "legacy">Legacy</p>
             </div>
 
-            <div className = "saga-container" onLoad={()=> changeInfo(2020)}>
+            <div className = "saga-container">
                 <div className="years">
                     <div id="year"><p onClick={() => changeInfo(2020)}>2020</p> <div className="vl"></div></div>
                     <div id="year"><p onClick={() => changeInfo(2019)}>2019</p> <div className="vl"></div></div>
