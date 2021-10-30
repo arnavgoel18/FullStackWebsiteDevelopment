@@ -274,7 +274,7 @@ function Saga(){
         <div className="saga-outside-container">
 
             <div className="heading">
-                <p>Our</p> <p id = "legacy">Legacy</p>
+               <h1> <p>Our</p> <p id = "legacy">Legacy</p></h1>
             </div>
 
             <div className = "saga-container">
