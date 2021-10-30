@@ -18,6 +18,9 @@ function Saga(){
     const [comp1Achievements, setcomp1Achievements] = useState([]);
     const [comp2Achievements, setcomp2Achievements] = useState([]);
 
+    //Display Latest Year First at time of Loading
+
+
     const acceleronsInfo = [
         {
             competition1Name: "Supra",
@@ -153,7 +156,7 @@ function Saga(){
                 achievement3: "AIR7 in Stability",
             }
         }
-    ];
+    ];        
 
     function changeInfo(year){
         if(year === 2013){

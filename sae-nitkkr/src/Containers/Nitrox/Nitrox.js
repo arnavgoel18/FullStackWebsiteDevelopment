@@ -20,9 +20,8 @@ function Nitrox(){
             <FirstDisplayDiv page="Nitrox"/>
             <TeamsAboutUs page="Nitrox"/>
             <WhereDoWeParticipate />
-            
-            <Gallery/>
             <Saga/>
+            <Gallery/>
             <Footer/>
         </>
     )
