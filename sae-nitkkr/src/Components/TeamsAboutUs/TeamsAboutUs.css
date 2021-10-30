@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 * {
   padding: 0px;
   font-family: "Montserrat", sans-serif;
@@ -17,6 +17,7 @@
 .TeamAboutUs-weare {
   font-size: 27px;
   margin-right: 5px;
+  margin-top: 9px;
 }
 .TeamAboutUs-boldcolor {
   font-size: 37px;
@@ -155,7 +156,6 @@
     position: relative;
     left: 11px;
   }
-
 }
 @media (max-width: 320px) {
 }
@@ -193,6 +193,7 @@
   .TeamAboutUs-weare {
     font-size: 31px;
     margin-right: 5px;
+    margin-top: 0px;
   }
 }
 @media (min-width: 1024px) and (max-width: 1440px) {
@@ -206,7 +207,7 @@
 @media (min-width: 1440px) and (max-width: 2560px) {
   .TeamAboutUs-text {
     font-size: 18px;
-    margin-left:-115px;
+    margin-left: -115px;
   }
   .TeamAboutUs-comp {
     font-size: 18px;
