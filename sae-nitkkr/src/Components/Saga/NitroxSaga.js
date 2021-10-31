@@ -161,7 +161,7 @@ function Saga(){
 
     function changeInfo(year){
         if(year === 2011){
-            document.getElementById('carPic').src = Nitrox2011;
+            document.getElementById('nitrox_carPic').src = Nitrox2011;
 
             setcomp1Achievements(comp1Achievements => []);
             setcomp2Achievements(comp2Achievements => []);
@@ -175,7 +175,7 @@ function Saga(){
             setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[1].baja.achievement3]);
         }
         else if(year === 2012){
-            document.getElementById('carPic').src = Nitrox2012;
+            document.getElementById('nitrox_carPic').src = Nitrox2012;
             
             setcomp1Achievements(comp1Achievements => []);
             setcomp2Achievements(comp2Achievements => []);
@@ -189,7 +189,7 @@ function Saga(){
             setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[2].baja.achievement3]);
         }
         if(year === 2013){
-            document.getElementById('carPic').src = Nitrox2013;
+            document.getElementById('nitrox_carPic').src = Nitrox2013;
 
             setcomp1Achievements(comp1Achievements => []);
             setcomp2Achievements(comp2Achievements => []);
@@ -203,7 +203,7 @@ function Saga(){
             setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[3].baja.achievement3]);
         }
         if(year === 2014){
-            document.getElementById('carPic').src = Nitrox2014;
+            document.getElementById('nitrox_carPic').src = Nitrox2014;
 
             setcomp1Achievements(comp1Achievements => []);
             setcomp2Achievements(comp2Achievements => []);
@@ -217,7 +217,7 @@ function Saga(){
             setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[4].baja.achievement3]);
         }
         if(year === 2015){
-            document.getElementById('carPic').src = Nitrox2015;
+            document.getElementById('nitrox_carPic').src = Nitrox2015;
 
             setcomp1Achievements(comp1Achievements => []);
             setcomp2Achievements(comp2Achievements => []);
@@ -231,7 +231,7 @@ function Saga(){
             setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[5].baja.achievement3]);
         }
         if(year === 2016){
-            document.getElementById('carPic').src = Nitrox2016;
+            document.getElementById('nitrox_carPic').src = Nitrox2016;
 
             setcomp1Achievements(comp1Achievements => []);
             setcomp2Achievements(comp2Achievements => []);
@@ -245,7 +245,7 @@ function Saga(){
             setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[6].baja.achievement3]);
         }
         if(year === 2017){
-            document.getElementById('carPic').src = Nitrox2017;
+            document.getElementById('nitrox_carPic').src = Nitrox2017;
 
             setcomp1Achievements(comp1Achievements => []);
             setcomp2Achievements(comp2Achievements => []);
@@ -259,7 +259,7 @@ function Saga(){
             setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[7].baja.achievement3]);
         }
         if(year === 2018){
-            document.getElementById('carPic').src = Nitrox2018;
+            document.getElementById('nitrox_carPic').src = Nitrox2018;
 
             setcomp1Achievements(comp1Achievements => []);
             setcomp2Achievements(comp2Achievements => []);
@@ -273,7 +273,7 @@ function Saga(){
             setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[8].baja.achievement3]);
         }
         if(year === 2019){
-            document.getElementById('carPic').src = Nitrox2019;
+            document.getElementById('nitrox_carPic').src = Nitrox2019;
 
             setcomp1Achievements(comp1Achievements => []);
             setcomp2Achievements(comp2Achievements => []);
@@ -287,7 +287,7 @@ function Saga(){
             setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[9].baja.achievement3]);
         }
         if(year === 2020){
-            document.getElementById('carPic').src = Nitrox2020;
+            document.getElementById('nitrox_carPic').src = Nitrox2020;
 
             setcomp1Achievements(comp1Achievements => []);
             setcomp2Achievements(comp2Achievements => []);
@@ -303,14 +303,14 @@ function Saga(){
     }
 
     return(
-        <div className="saga-outside-container">
+        <div className="nitrox_saga-outside-container">
 
-            <div className="heading">
-                <h1><p>Our</p> <p id = "legacy">Legacy</p></h1>
+            <div className="nitrox_heading">
+                <h1><p>Our</p> <p id = "nitrox_legacy">Legacy</p></h1>
             </div>
 
-            <div className = "saga-container">
-                <div className="years">
+            <div className = "nitrox_saga-container">
+                <div className="nitrox_years">
                     <div id="year"><p onClick={() => changeInfo(2020)}>2020</p> <div className="vl"></div></div>
                     <div id="year"><p onClick={() => changeInfo(2019)}>2019</p> <div className="vl"></div></div>
                     <div id="year"><p onClick={() => changeInfo(2018)}>2018</p> <div className="vl"></div></div>
@@ -322,13 +322,13 @@ function Saga(){
                     <div id="year"><p onClick={() => changeInfo(2012)}>2012</p> <div className="vl"></div></div>
                     <div id="year"><p onClick={() => changeInfo(2011)}>2011</p> <div className="vl"></div></div>
                 </div>
-                <div className="main-content">
-                    <div className="image">
-                        <img id="carPic" src=""></img>
+                <div className="nitrox_main-content">
+                    <div className="nitrox_image">
+                        <img id="nitrox_carPic" src=""></img>
                     </div>
-                    <div className="text">
-                        <div className="comp1">
-                            <h4 id="competition1">{nitroxInfo[0].competition1Name}</h4>
+                    <div className="nitrox_text">
+                        <div className="nitrox_comp1">
+                            <h4 id="nitrox_competition1">{nitroxInfo[0].competition1Name}</h4>
                             <p>
                                 <ul>
                                     {comp1Achievements.map(position => 
@@ -339,8 +339,8 @@ function Saga(){
                                 </ul>
                             </p>
                         </div>
-                        <div className="comp2">
-                            <h4 id="competition1">{nitroxInfo[0].competition2Name}</h4>
+                        <div className="nitrox_comp2">
+                            <h4 id="nitrox_competition1">{nitroxInfo[0].competition2Name}</h4>
                             <p>
                                 <ul>
                                 {comp2Achievements.map(position => 

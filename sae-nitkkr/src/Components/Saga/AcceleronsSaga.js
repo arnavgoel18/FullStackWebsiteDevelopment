@@ -160,7 +160,7 @@ function Saga(){
 
     function changeInfo(year){
         if(year === 2013){
-            document.getElementById('carPic').src = Accelerons2013;
+            document.getElementById('acclerons_carPic').src = Accelerons2013;
 
             setcomp1Achievements(comp1Achievements => []);
             setcomp2Achievements(comp2Achievements => []);
@@ -174,7 +174,7 @@ function Saga(){
             setcomp2Achievements(comp2Achievements => [...comp2Achievements, acceleronsInfo[3].fb.achievement3]);
         }
         else if(year === 2014){
-            document.getElementById('carPic').src = Accelerons2014;
+            document.getElementById('acclerons_carPic').src = Accelerons2014;
 
             setcomp1Achievements(comp1Achievements => []);
             setcomp2Achievements(comp2Achievements => []);
@@ -188,7 +188,7 @@ function Saga(){
             setcomp2Achievements(comp2Achievements => [...comp2Achievements, acceleronsInfo[4].fb.achievement3]);
         }
         else if(year === 2015){
-            document.getElementById('carPic').src = Accelerons2015;
+            document.getElementById('acclerons_carPic').src = Accelerons2015;
 
             setcomp1Achievements(comp1Achievements => []);
             setcomp2Achievements(comp2Achievements => []);
@@ -202,7 +202,7 @@ function Saga(){
             setcomp2Achievements(comp2Achievements => [...comp2Achievements, acceleronsInfo[5].fb.achievement3]);
         }
         else if(year === 2016){
-            document.getElementById('carPic').src = Accelerons2016;
+            document.getElementById('acclerons_carPic').src = Accelerons2016;
 
             setcomp1Achievements(comp1Achievements => []);
             setcomp2Achievements(comp2Achievements => []);
@@ -216,7 +216,7 @@ function Saga(){
             setcomp2Achievements(comp2Achievements => [...comp2Achievements, acceleronsInfo[6].fb.achievement3]);
         }
         else if(year === 2017){
-            document.getElementById('carPic').src = Accelerons2017;
+            document.getElementById('acclerons_carPic').src = Accelerons2017;
 
             setcomp1Achievements(comp1Achievements => []);
             setcomp2Achievements(comp2Achievements => []);
@@ -230,7 +230,7 @@ function Saga(){
             setcomp2Achievements(comp2Achievements => [...comp2Achievements, acceleronsInfo[7].fb.achievement3]);
         }
         else if(year === 2018){
-            document.getElementById('carPic').src = Accelerons2018;
+            document.getElementById('acclerons_carPic').src = Accelerons2018;
 
             setcomp1Achievements(comp1Achievements => []);
             setcomp2Achievements(comp2Achievements => []);
@@ -244,7 +244,7 @@ function Saga(){
             setcomp2Achievements(comp2Achievements => [...comp2Achievements, acceleronsInfo[8].fb.achievement3]);
         }
         else if(year === 2019){
-            document.getElementById('carPic').src = Accelerons2019;
+            document.getElementById('acclerons_carPic').src = Accelerons2019;
 
             setcomp1Achievements(comp1Achievements => []);
             setcomp2Achievements(comp2Achievements => []);
@@ -258,7 +258,7 @@ function Saga(){
             setcomp2Achievements(comp2Achievements => [...comp2Achievements, acceleronsInfo[9].fb.achievement3]);
         }
         else if(year === 2020){
-            document.getElementById('carPic').src = Accelerons2020;
+            document.getElementById('acclerons_carPic').src = Accelerons2020;
 
             setcomp1Achievements(comp1Achievements => []);
             setcomp2Achievements(comp2Achievements => []);
@@ -274,14 +274,14 @@ function Saga(){
     }
 
     return(
-        <div className="saga-outside-container">
+        <div className="acclerons_saga-outside-container">
 
-            <div className="heading">
-               <h1> <p>Our</p> <p id = "legacy">Legacy</p></h1>
+            <div className="acclerons_heading">
+               <h1> <p>Our</p> <p id = "acclerons_legacy">Legacy</p></h1>
             </div>
 
-            <div className = "saga-container">
-                <div className="years">
+            <div className = "acclerons_saga-container">
+                <div className="acclerons_years">
                     <div id="year"><p onClick={() => changeInfo(2020)}>2020</p> <div className="vl"></div></div>
                     <div id="year"><p onClick={() => changeInfo(2019)}>2019</p> <div className="vl"></div></div>
                     <div id="year"><p onClick={() => changeInfo(2018)}>2018</p> <div className="vl"></div></div>
@@ -291,13 +291,13 @@ function Saga(){
                     <div id="year"><p onClick={() => changeInfo(2014)}>2014</p> <div className="vl"></div></div>
                     <div id="year"><p onClick={() => changeInfo(2013)}>2013</p> <div className="vl"></div></div>
                 </div>
-                <div className="main-content">
-                    <div className="image">
-                        <img id="carPic" src=""></img>
+                <div className="acclerons_main-content">
+                    <div className="acclerons_image">
+                        <img id="acclerons_carPic" src=""></img>
                     </div>
-                    <div className="text">
-                        <div className="comp1">
-                            <h4 id="competition1">{acceleronsInfo[0].competition1Name}</h4>
+                    <div className="acclerons_text">
+                        <div className="acclerons_comp1">
+                            <h4 id="acclerons_competition1">{acceleronsInfo[0].competition1Name}</h4>
                             <p>
                                 <ul>
                                     {comp1Achievements.map(position => 
@@ -308,8 +308,8 @@ function Saga(){
                                 </ul>
                             </p>
                         </div>
-                        <div className="comp2">
-                            <h4 id="competition1">{acceleronsInfo[0].competition2Name}</h4>
+                        <div className="acclerons_comp2">
+                            <h4 id="acclerons_competition1">{acceleronsInfo[0].competition2Name}</h4>
                             <p>
                                 <ul>
                                 {comp2Achievements.map(position => 

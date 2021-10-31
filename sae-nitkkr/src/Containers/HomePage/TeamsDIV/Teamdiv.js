@@ -6,9 +6,9 @@ import "./TeamDiv.css";
 function Teamdiv() {
   function lastworkacc()
   {
-  let acc=document.getElementById("acc");
+  // let acc=document.getElementById("acc");
 
-    // console.log("navneet");
+    
     window.location.href='/accelerons'
     
     
@@ -17,10 +17,10 @@ function Teamdiv() {
 function lastworknitrox()
 {
 
-  let nitrox=document.getElementById("nitrox");
+  // let nitrox=document.getElementById("nitrox");
 
   window.location.href='/nitrox'
-    //  console.log("nishant");
+    
  
 }
   // const [open, setOpen] = useState(false);
