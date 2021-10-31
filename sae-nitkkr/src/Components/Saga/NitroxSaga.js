@@ -306,7 +306,7 @@ function Saga(){
         <div className="nitrox_saga-outside-container">
 
             <div className="nitrox_heading">
-                <h1><p>Our</p> <p id = "nitrox_legacy">Legacy</p></h1>
+                <h1><p>our</p> <p id = "nitrox_legacy">LEGACY</p></h1>
             </div>
 
             <div className = "nitrox_saga-container">

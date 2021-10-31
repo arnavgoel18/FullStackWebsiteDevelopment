@@ -22,6 +22,7 @@
 
 .acclerons_heading p{
     display: inline;
+    font-size: 34px;
 }
 
 .legacy{
@@ -83,7 +84,20 @@
     width: 100%;
     height: 100%;
 }
+p#nitrox_legacy{
+    font-size: 37px;
+    color: rgb(67, 67, 197);
+}
 
+.nitrox_heading p{
+    display: inline;
+    font-size: 34px;
+}
+
+p#acclerons_legacy{
+    font-size: 37px;
+    color: rgb(67, 67, 197);
+}
 .acclerons_text{
     width: 535px;
     height: 60vh;
