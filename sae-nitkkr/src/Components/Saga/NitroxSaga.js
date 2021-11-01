@@ -157,6 +157,7 @@ function Saga(){
                 achievement3: "AIR7 in Stability",
             }
         }
+        
     ];    
 
     function changeInfo(year){
@@ -165,7 +166,7 @@ function Saga(){
 
             setcomp1Achievements(comp1Achievements => []);
             setcomp2Achievements(comp2Achievements => []);
-
+            deletepast();
             setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[1].atvc.achievement1]);
             setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[1].atvc.achievement2]);
             setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[1].atvc.achievement3]);
@@ -174,9 +175,9 @@ function Saga(){
             setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[1].baja.achievement2]);
             setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[1].baja.achievement3]);
         }
-        else if(year === 2012){
+         if(year === 2012){
             document.getElementById('nitrox_carPic').src = Nitrox2012;
-            
+            deletepast();
             setcomp1Achievements(comp1Achievements => []);
             setcomp2Achievements(comp2Achievements => []);
 
@@ -190,7 +191,7 @@ function Saga(){
         }
         if(year === 2013){
             document.getElementById('nitrox_carPic').src = Nitrox2013;
-
+            deletepast();
             setcomp1Achievements(comp1Achievements => []);
             setcomp2Achievements(comp2Achievements => []);
 
@@ -204,7 +205,7 @@ function Saga(){
         }
         if(year === 2014){
             document.getElementById('nitrox_carPic').src = Nitrox2014;
-
+            deletepast();
             setcomp1Achievements(comp1Achievements => []);
             setcomp2Achievements(comp2Achievements => []);
 
@@ -218,7 +219,7 @@ function Saga(){
         }
         if(year === 2015){
             document.getElementById('nitrox_carPic').src = Nitrox2015;
-
+            deletepast();
             setcomp1Achievements(comp1Achievements => []);
             setcomp2Achievements(comp2Achievements => []);
 
@@ -232,7 +233,7 @@ function Saga(){
         }
         if(year === 2016){
             document.getElementById('nitrox_carPic').src = Nitrox2016;
-
+            deletepast();
             setcomp1Achievements(comp1Achievements => []);
             setcomp2Achievements(comp2Achievements => []);
 
@@ -246,7 +247,7 @@ function Saga(){
         }
         if(year === 2017){
             document.getElementById('nitrox_carPic').src = Nitrox2017;
-
+            deletepast();
             setcomp1Achievements(comp1Achievements => []);
             setcomp2Achievements(comp2Achievements => []);
 
@@ -259,8 +260,9 @@ function Saga(){
             setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[7].baja.achievement3]);
         }
         if(year === 2018){
+            deletepast();
             document.getElementById('nitrox_carPic').src = Nitrox2018;
-
+            deletepast();
             setcomp1Achievements(comp1Achievements => []);
             setcomp2Achievements(comp2Achievements => []);
 
@@ -274,7 +276,7 @@ function Saga(){
         }
         if(year === 2019){
             document.getElementById('nitrox_carPic').src = Nitrox2019;
-
+            deletepast();
             setcomp1Achievements(comp1Achievements => []);
             setcomp2Achievements(comp2Achievements => []);
 
@@ -288,7 +290,7 @@ function Saga(){
         }
         if(year === 2020){
             document.getElementById('nitrox_carPic').src = Nitrox2020;
-
+            deletepast();
             setcomp1Achievements(comp1Achievements => []);
             setcomp2Achievements(comp2Achievements => []);
 
@@ -300,8 +302,41 @@ function Saga(){
             setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[10].baja.achievement2]);
             setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[10].baja.achievement3]);
         }
+        
+       
     }
+  function deletepast()
+  {
+      
+      
+      let atvc_li1;
+      let atvc_li2;
+      let atvc_li3;
+      let baja_li1;
+      let baja_li2;
+      let baja_li3;
+      atvc_li1=document.getElementById('atvc_li1');
+      atvc_li2=document.getElementById('atvc_li2');
+      atvc_li3=document.getElementById('atvc_li3');
+      baja_li1=document.getElementById('baja_li1');
+      baja_li2=document.getElementById('baja_li2');
+      baja_li3=document.getElementById('baja_li3');
+      if(typeof(atvc_li1) !='undefined' && atvc_li1 !=null)
+      {
+      atvc_li1.remove();
+      atvc_li2.remove();
+      atvc_li3.remove();
+      baja_li1.remove();
+      baja_li2.remove();
+      baja_li3.remove();
+      }
+      
 
+    
+     
+     
+
+  }
     return(
         <div className="nitrox_saga-outside-container">
 
@@ -311,6 +346,7 @@ function Saga(){
 
             <div className = "nitrox_saga-container">
                 <div className="nitrox_years">
+                   
                     <div id="year"><p onClick={() => changeInfo(2020)}>2020</p> <div className="vl"></div></div>
                     <div id="year"><p onClick={() => changeInfo(2019)}>2019</p> <div className="vl"></div></div>
                     <div id="year"><p onClick={() => changeInfo(2018)}>2018</p> <div className="vl"></div></div>
@@ -324,18 +360,26 @@ function Saga(){
                 </div>
                 <div className="nitrox_main-content">
                     <div className="nitrox_image">
-                        <img id="nitrox_carPic" src=""></img>
+                        <img id="nitrox_carPic" src={Nitrox2020}></img>
                     </div>
                     <div className="nitrox_text">
                         <div className="nitrox_comp1">
                             <h4 id="nitrox_competition1">{nitroxInfo[0].competition1Name}</h4>
                             <p>
+                                
                                 <ul>
-                                    {comp1Achievements.map(position => 
+                                <li id="atvc_li1">AIR1 in Desgin</li>
+                                    <li id="atvc_li2">AIR2 in VD</li>
+                                    <li  id="atvc_li3">AIR3 in Stability</li>
+                                 
+                                    {
+                                    comp1Achievements.map(position => 
                                         (
                                             <li>{position}</li>
                                         )
                                     )}
+                                       
+                                    
                                 </ul>
                             </p>
                         </div>
@@ -343,11 +387,18 @@ function Saga(){
                             <h4 id="nitrox_competition1">{nitroxInfo[0].competition2Name}</h4>
                             <p>
                                 <ul>
+                                <li  id="baja_li1">AIR5 in Desgin</li>
+                                    <li  id="baja_li2">AIR6 in VD</li>
+                                    <li  id="baja_li3">AIR7 in Stability</li>
                                 {comp2Achievements.map(position => 
                                         (
+                                            
                                             <li>{position}</li>
                                         )
-                                    )}
+                                        
+                                    )
+                                    }
+                                
                                 </ul>
                             </p>
                         </div>

@@ -34,7 +34,7 @@ function Saga(){
                 achievement3: "AIR3 in Stability",
             },
             fb: {
-                achievement1: "AIR5 in Desgin",
+                achievement1: "AIR5 in Design",
                 achievement2: "AIR6 in VD",
                 achievement3: "AIR7 in Stability",
             }
@@ -42,12 +42,12 @@ function Saga(){
         {
             id: 2012,
             supra: {
-                achievement1: "AIR1 in Desgin",
+                achievement1: "AIR1 in Design",
                 achievement2: "AIR2 in VD",
                 achievement3: "AIR3 in Stability",
             },
             fb: {
-                achievement1: "AIR5 in Desgin",
+                achievement1: "AIR5 in Design",
                 achievement2: "AIR6 in VD",
                 achievement3: "AIR7 in Stability",
             }
@@ -55,12 +55,12 @@ function Saga(){
         {
             id: 2013,
             supra: {
-                achievement1: "AIR1 in Desgin",
+                achievement1: "AIR1 in Design",
                 achievement2: "AIR2 in VD",
                 achievement3: "AIR3 in Stability",
             },
             fb: {
-                achievement1: "AIR5 in Desgin",
+                achievement1: "AIR5 in Design",
                 achievement2: "AIR6 in VD",
                 achievement3: "AIR7 in Stability",
             }
@@ -68,12 +68,12 @@ function Saga(){
         {
             id: 2014,
             supra: {
-                achievement1: "AIR1 in Desgin",
+                achievement1: "AIR1 in Design",
                 achievement2: "AIR2 in VD",
                 achievement3: "AIR3 in Stability",
             },
             fb: {
-                achievement1: "AIR5 in Desgin",
+                achievement1: "AIR5 in Design",
                 achievement2: "AIR6 in VD",
                 achievement3: "AIR7 in Stability",
             }
@@ -81,12 +81,12 @@ function Saga(){
         {
             id: 2015,
             supra: {
-                achievement1: "AIR1 in Desgin",
+                achievement1: "AIR1 in Design",
                 achievement2: "AIR2 in VD",
                 achievement3: "AIR3 in Stability",
             },
             fb: {
-                achievement1: "AIR5 in Desgin",
+                achievement1: "AIR5 in Design",
                 achievement2: "AIR6 in VD",
                 achievement3: "AIR7 in Stability",
             }
@@ -94,12 +94,12 @@ function Saga(){
         {
             id: 2016,
             supra: {
-                achievement1: "AIR1 in Desgin",
+                achievement1: "AIR1 in Design",
                 achievement2: "AIR2 in VD",
                 achievement3: "AIR3 in Stability",
             },
             fb: {
-                achievement1: "AIR5 in Desgin",
+                achievement1: "AIR5 in Design",
                 achievement2: "AIR6 in VD",
                 achievement3: "AIR7 in Stability",
             }
@@ -107,12 +107,12 @@ function Saga(){
         {
             id: 2017,
             supra: {
-                achievement1: "AIR1 in Desgin",
+                achievement1: "AIR1 in Design",
                 achievement2: "AIR2 in VD",
                 achievement3: "AIR3 in Stability",
             },
             fb: {
-                achievement1: "AIR5 in Desgin",
+                achievement1: "AIR5 in Design",
                 achievement2: "AIR6 in VD",
                 achievement3: "AIR7 in Stability",
             }
@@ -120,12 +120,12 @@ function Saga(){
         {
             id: 2018,
             supra: {
-                achievement1: "AIR1 in Desgin",
+                achievement1: "AIR1 in Design",
                 achievement2: "AIR2 in VD",
                 achievement3: "AIR3 in Stability",
             },
             fb: {
-                achievement1: "AIR5 in Desgin",
+                achievement1: "AIR5 in Design",
                 achievement2: "AIR6 in VD",
                 achievement3: "AIR7 in Stability",
             }
@@ -133,12 +133,12 @@ function Saga(){
         {
             id: 2019,
             supra: {
-                achievement1: "AIR1 in Desgin",
+                achievement1: "AIR1 in Design",
                 achievement2: "AIR2 in VD",
                 achievement3: "AIR3 in Stability",
             },
             fb: {
-                achievement1: "AIR5 in Desgin",
+                achievement1: "AIR5 in Design",
                 achievement2: "AIR6 in VD",
                 achievement3: "AIR7 in Stability",
             }
@@ -146,12 +146,12 @@ function Saga(){
         {
             id: 2020,
             supra: {
-                achievement1: "AIR1 in Desgin",
+                achievement1: "AIR1 in Design",
                 achievement2: "AIR2 in VD",
                 achievement3: "AIR3 in Stability",
             },
             fb: {
-                achievement1: "AIR5 in Desgin",
+                achievement1: "AIR5 in Design",
                 achievement2: "AIR6 in VD",
                 achievement3: "AIR7 in Stability",
             }
@@ -161,7 +161,7 @@ function Saga(){
     function changeInfo(year){
         if(year === 2013){
             document.getElementById('acclerons_carPic').src = Accelerons2013;
-
+            deletepastacc();
             setcomp1Achievements(comp1Achievements => []);
             setcomp2Achievements(comp2Achievements => []);
 
@@ -175,7 +175,7 @@ function Saga(){
         }
         else if(year === 2014){
             document.getElementById('acclerons_carPic').src = Accelerons2014;
-
+            deletepastacc();
             setcomp1Achievements(comp1Achievements => []);
             setcomp2Achievements(comp2Achievements => []);
 
@@ -189,7 +189,7 @@ function Saga(){
         }
         else if(year === 2015){
             document.getElementById('acclerons_carPic').src = Accelerons2015;
-
+            deletepastacc();
             setcomp1Achievements(comp1Achievements => []);
             setcomp2Achievements(comp2Achievements => []);
 
@@ -203,7 +203,7 @@ function Saga(){
         }
         else if(year === 2016){
             document.getElementById('acclerons_carPic').src = Accelerons2016;
-
+            deletepastacc();
             setcomp1Achievements(comp1Achievements => []);
             setcomp2Achievements(comp2Achievements => []);
 
@@ -217,7 +217,7 @@ function Saga(){
         }
         else if(year === 2017){
             document.getElementById('acclerons_carPic').src = Accelerons2017;
-
+            deletepastacc();
             setcomp1Achievements(comp1Achievements => []);
             setcomp2Achievements(comp2Achievements => []);
 
@@ -231,7 +231,7 @@ function Saga(){
         }
         else if(year === 2018){
             document.getElementById('acclerons_carPic').src = Accelerons2018;
-
+            deletepastacc();
             setcomp1Achievements(comp1Achievements => []);
             setcomp2Achievements(comp2Achievements => []);
 
@@ -245,10 +245,10 @@ function Saga(){
         }
         else if(year === 2019){
             document.getElementById('acclerons_carPic').src = Accelerons2019;
-
+            deletepastacc();
             setcomp1Achievements(comp1Achievements => []);
             setcomp2Achievements(comp2Achievements => []);
-
+            
             setcomp1Achievements(comp1Achievements => [...comp1Achievements, acceleronsInfo[9].supra.achievement1]);
             setcomp1Achievements(comp1Achievements => [...comp1Achievements, acceleronsInfo[9].supra.achievement2]);
             setcomp1Achievements(comp1Achievements => [...comp1Achievements, acceleronsInfo[9].supra.achievement3]);
@@ -259,7 +259,7 @@ function Saga(){
         }
         else if(year === 2020){
             document.getElementById('acclerons_carPic').src = Accelerons2020;
-
+            deletepastacc();
             setcomp1Achievements(comp1Achievements => []);
             setcomp2Achievements(comp2Achievements => []);
 
@@ -272,6 +272,32 @@ function Saga(){
             setcomp2Achievements(comp2Achievements => [...comp2Achievements, acceleronsInfo[10].fb.achievement3]);
         }
     }
+    function deletepastacc()
+  {
+      
+      
+      let supra_li1;
+      let supra_li2;
+      let supra_li3;
+      let fb_li1;
+      let fb_li2;
+      let fb_li3;
+      supra_li1=document.getElementById('supra_li1');
+      supra_li2=document.getElementById('supra_li2');
+      supra_li3=document.getElementById('supra_li3');
+      fb_li1=document.getElementById('fb_li1');
+      fb_li2=document.getElementById('fb_li2');
+      fb_li3=document.getElementById('fb_li3');
+      if(typeof(supra_li1) !='undefined' && supra_li1 !=null)
+      {
+      supra_li1.remove();
+      supra_li2.remove();
+      supra_li3.remove();
+      fb_li1.remove();
+      fb_li2.remove();
+      fb_li3.remove();
+      }
+  }
 
     return(
         <div className="acclerons_saga-outside-container">
@@ -293,13 +319,16 @@ function Saga(){
                 </div>
                 <div className="acclerons_main-content">
                     <div className="acclerons_image">
-                        <img id="acclerons_carPic" src=""></img>
+                        <img id="acclerons_carPic" src={Accelerons2020}></img>
                     </div>
                     <div className="acclerons_text">
                         <div className="acclerons_comp1">
                             <h4 id="acclerons_competition1">{acceleronsInfo[0].competition1Name}</h4>
                             <p>
                                 <ul>
+                                <li id="supra_li1">AIR1 in Design</li>
+                                    <li id="supra_li2">AIR2 in VD</li>
+                                    <li  id="supra_li3">AIR3 in Stability</li>
                                     {comp1Achievements.map(position => 
                                         (
                                             <li>{position}</li>
@@ -312,6 +341,9 @@ function Saga(){
                             <h4 id="acclerons_competition1">{acceleronsInfo[0].competition2Name}</h4>
                             <p>
                                 <ul>
+                                <li  id="fb_li1">AIR5 in Design</li>
+                                    <li  id="fb_li2">AIR6 in VD</li>
+                                    <li  id="fb_li3">AIR7 in Stability</li>
                                 {comp2Achievements.map(position => 
                                         (
                                             <li>{position}</li>
