@@ -305,10 +305,9 @@ function Saga(){
         
        
     }
-  function deletepast()
-  {
-      
-      
+  
+    function deletepast()
+    {
       let atvc_li1;
       let atvc_li2;
       let atvc_li3;
@@ -321,21 +320,16 @@ function Saga(){
       baja_li1=document.getElementById('baja_li1');
       baja_li2=document.getElementById('baja_li2');
       baja_li3=document.getElementById('baja_li3');
+      
       if(typeof(atvc_li1) !='undefined' && atvc_li1 !=null)
       {
-      atvc_li1.remove();
-      atvc_li2.remove();
-      atvc_li3.remove();
-      baja_li1.remove();
-      baja_li2.remove();
-      baja_li3.remove();
+        atvc_li1.remove();
+        atvc_li2.remove();
+        atvc_li3.remove();
+        baja_li1.remove();
+        baja_li2.remove();
+        baja_li3.remove();
       }
-      
-
-    
-     
-     
-
   }
     return(
         <div className="nitrox_saga-outside-container">
