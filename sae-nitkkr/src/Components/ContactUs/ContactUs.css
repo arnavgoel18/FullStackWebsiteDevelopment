@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* font-size: 1.1rem    ; */
+}
+.whole-body{
+    display: flex;
+    flex-direction:row;
+}
+.details{
+    display: flex;
+    flex-direction: column;
+    width: 45vw;
+    padding: 20px;
+}
+.container{
+    border: 2px solid black;
+    border-radius: 10px;
+    /* min-height: 80vh; */
+    width: 45vw;
+    display: flex;
+    flex-direction: column;
+    text-align:left;
+    gap: 2vh;
+    font-size: 1.2rem;
+    box-shadow: grey  2px 2px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+    input{
+    border: 0;
+    border-bottom: 1.5px solid black;
+    width: 70%; 
+}   
+.heading{
+    text-align: center;
+}
+.button{
+    text-align: center;
+}
+button{
+    border-radius: 18px;
+    background: orange;
+    height: 40px;
+    width: 100px;
+    color: white    ;
+    border: none;
+    font-size: medium;
+}   
+.abc{
+    margin-left: 30px; 
+    display: flex;
+    flex-direction: row;
+}
+
+.tt{
+    position: absolute;
+    left: 150px  ;
+    padding-top: 10px;
+}
+#s1,#s2{
+    background-color: grey;
+    width: 70%;
+}
+@media screen and (max-width:938px){
+    .whole-body{
+        display: flex;
+        flex-direction:column-reverse;
+    }
+    .container{
+        margin: auto;
+        width: 60vw;
+    }
+    #abcd{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}
+@media screen and (min-width:938px){
+    #abcd{
+      margin-bottom: 80px;
+    }
+}
+@media screen and (max-width:425px){
+    .container{
+        width: 80vw;
+    }  
+    .tt{
+        position: absolute;
+        left: 100px  ;
+        padding-top: 10px;
+    } 
+    .abc{
+        margin-left: 0px; 
+        display: flex;
+        flex-direction: row;
+    }
+
+}
