@@ -1,3 +1,4 @@
+import react, {useState} from 'react';
 import './Gallery.css';
 
 import Autokriti1 from '../../../Assets/AutokritiGallery/Autokritigallery_1.jpg'
@@ -34,66 +35,153 @@ import Autokriti30 from '../../../Assets/AutokritiGallery/Autokritigallery_30.jp
 
 
 
-function App() {
-  return (
-    <div className="Gallery-Main_Cotainer">
-      <br/><br/>
-      {/* <h1 className="Gallery-photos">PHOTOS</h1> */}
-      <Gallery />
-    </div>
-  );
-}
+const Gallery = () => {
 
-function Gallery() {
+  let data = [
+      {
+          id: 1,
+          imgSrc: Autokriti1,
+      },
+      {
+          id: 2,
+          imgSrc: Autokriti2,
+      },
+      {
+          id: 3,
+          imgSrc: Autokriti3,
+      },
+      {
+          id: 4,
+          imgSrc: Autokriti4,
+      },
+      {
+          id: 5,
+          imgSrc: Autokriti5,
+      },
+      {
+          id: 6,
+          imgSrc: Autokriti6,
+      },
+      {
+          id: 7,
+          imgSrc: Autokriti7,
+      },
+      {
+          id: 8,
+          imgSrc: Autokriti8,
+      },
+      {
+          id: 9,
+          imgSrc: Autokriti9,
+      },
+      {
+          id: 10,
+          imgSrc: Autokriti10,
+      },
+      {
+          id: 11,
+          imgSrc: Autokriti11,
+      },{
+          id: 12,
+          imgSrc: Autokriti12,
+      },
+      {
+          id: 13,
+          imgSrc: Autokriti13,
+      },
+      {
+          id: 14,
+          imgSrc: Autokriti14,
+      },
+      {
+          id: 15,
+          imgSrc: Autokriti15,
+      },
+      {
+          id: 16,
+          imgSrc: Autokriti16,
+      },
+      {
+          id: 17,
+          imgSrc: Autokriti17,
+      },
+      {
+          id: 18,
+          imgSrc: Autokriti18,
+      },
+      {
+          id: 19,
+          imgSrc: Autokriti19,
+      },
+      {
+          id: 20,
+          imgSrc: Autokriti20,
+      },
+      {
+          id: 21,
+          imgSrc: Autokriti21,
+      },
+      {
+          id: 22,
+          imgSrc: Autokriti22,
+      },
+      {
+          id: 23,
+          imgSrc: Autokriti23,
+      },
+      {
+          id: 24,
+          imgSrc: Autokriti24,
+      },
+      {
+          id: 25,
+          imgSrc: Autokriti25,
+      },
+      {
+          id: 26,
+          imgSrc: Autokriti26,
+      },
+      {
+          id: 27,
+          imgSrc: Autokriti27,
+      },
+      {
+          id: 28,
+          imgSrc: Autokriti28,
+      },
+      {
+          id: 29,
+          imgSrc: Autokriti29,
+      },
+      // {
+      //     id: 30,
+      //     imgSrc: Autokriti30,
+      // },
+  ]
+  const [model, setModel]= useState(false);
+  const [tempimgSrc, setTempImgSrc] = useState('');
+  const getImg =(imgSrc) =>{
+      setTempImgSrc(imgSrc);
+      setModel(true);
+  }
   return (
-    <>
-      <div className="Gallery-row">
-        <div className="Gallery-column">
-          <img src={Autokriti1} alt="hello" className="image_of_gallery" />
-          <img src={Autokriti2} alt="hello" className="image_of_gallery" />
-          <img src={Autokriti3} alt="hello" className="image_of_gallery" />
-          <img src={Autokriti4} alt="hello" className="image_of_gallery" />
-          <img src={Autokriti5} alt="hello" className="image_of_gallery" />
-          <img src={Autokriti6} alt="hello" className="image_of_gallery" />
-          <img src={Autokriti7} alt="hello" className="image_of_gallery" />
-        </div>
-        <div className="Gallery-column">
-          <img src={Autokriti8} alt="hello" className="image_of_gallery" />
-          <img src={Autokriti9} alt="hello" className="image_of_gallery" />
-          <img src={Autokriti10} alt="hello" className="image_of_gallery" />
-          <img src={Autokriti11} alt="hello" className="image_of_gallery" />
-          <img src={Autokriti12} alt="hello" className="image_of_gallery" />
-          <img src={Autokriti13} alt="hello" className="image_of_gallery" />
-        </div>
-        <div className="Gallery-column">
-          <img src={Autokriti14} alt="hello" className="image_of_gallery" />
-          <img src={Autokriti15} alt="hello" className="image_of_gallery" />
-          <img src={Autokriti16} alt="hello" className="image_of_gallery" />
-          <img src={Autokriti17} alt="hello" className="image_of_gallery" />
-          <img src={Autokriti18} alt="hello" className="image_of_gallery" />
-          <img src={Autokriti19} alt="hello" className="image_of_gallery" />
-          <img src={Autokriti20} alt="hello" className="image_of_gallery" />
-        </div>
-        <div className="Gallery-column">
-          <img src={Autokriti21} className="image_of_gallery"  />
-          <img src={Autokriti22} className="image_of_gallery" />
-          <img src={Autokriti23} className="image_of_gallery" />
-          <img src={Autokriti24} className="image_of_gallery"  />
-          <img src={Autokriti25} className="image_of_gallery" />
-          <img src={Autokriti26} className="image_of_gallery"  />
-        </div>
-        <div className="Gallery-column">
-          <img src={Autokriti27} alt="hello" className="image_of_gallery" />
-          <img src={Autokriti28} alt="hello" className="image_of_gallery" />
-          <img src={Autokriti29} alt="hello" className="image_of_gallery" />
-          <img src={Autokriti30} alt="hello" className="image_of_gallery" />
-          <img src={Autokriti3} alt="hello" className="image_of_gallery" />
-          <img src={Autokriti13} alt="hello" className="image_of_gallery" />
-          <img src={Autokriti23} alt="hello" className="image_of_gallery" />
-        </div>
+      <>
+      <div className="galleryContainer">
+      <div className={model? "model open" : "model"}>
+          <img src={tempimgSrc} onClick={()=> setModel(false) } />
+          {/* <CloseIcon  onClick={()=> setModel(false) }/> */}
       </div>
-      <br/><br/>
-    </>
-  );
+      <div className="gallery">
+          {data.map((item, index)=>{
+              return(
+                  <div className="pics" key={index} onClick={()=> getImg(item.imgSrc)}>
+                      <img className="Galleryimg" src={item.imgSrc} style={{width: '100%'}}/>
+                  </div>
+              )
+          })}
+      </div>
+      </div>
+      </>
+  )
 }
-export default App;
+export default Gallery
