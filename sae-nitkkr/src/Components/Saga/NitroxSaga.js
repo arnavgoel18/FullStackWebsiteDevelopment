@@ -340,7 +340,6 @@ function Saga(){
 
             <div className = "nitrox_saga-container">
                 <div className="nitrox_years">
-                   
                     <div id="year"><p onClick={() => changeInfo(2020)}>2020</p> <div className="vl"></div></div>
                     <div id="year"><p onClick={() => changeInfo(2019)}>2019</p> <div className="vl"></div></div>
                     <div id="year"><p onClick={() => changeInfo(2018)}>2018</p> <div className="vl"></div></div>
