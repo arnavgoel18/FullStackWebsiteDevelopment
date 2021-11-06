@@ -8,6 +8,7 @@ import ExploreUs from '../../Containers/HomePage/ExploreUs/ExploreUs';
 import ProfIncharges from '../../Containers/HomePage/ProfInchargesAndManagers/ProfIncharges';
 import Managers from '../../Containers/HomePage/ProfInchargesAndManagers/Managers';
 import Footer from '../../Components/Footer/Footer(black)/FooterBlack';
+// import ContactUs from '../../Components/ContactUs/ContactUs'
 
 function HomePage(){
 
@@ -25,6 +26,7 @@ function HomePage(){
             <ExploreUs/>
             <ProfIncharges/>
             <Managers/>
+            {/* <ContactUs/> */}
             <Footer/>
         </>
     )

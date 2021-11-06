@@ -6,8 +6,10 @@
 .whole-body{
     display: flex;
     flex-direction:row;
+    padding-bottom: 20px;
 }
 .details{
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     width: 45vw;
@@ -17,7 +19,7 @@
     border: 2px solid black;
     border-radius: 10px;
     /* min-height: 80vh; */
-    width: 45vw;
+    width: 50%;
     display: flex;
     flex-direction: column;
     text-align:left;
@@ -28,19 +30,51 @@
     margin-bottom: 20px;
     padding-left: 20px;
 }
-    input{
-    border: 0;
+.field{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.container .field span{
+    position:absolute   ;
+    left: 0%;
+    padding: 5px 0;
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+input,textarea{
+    width: 95%; 
+    padding: 5px 0;
+    /* margin: 10px 0; */
+    font-size: 16px;
+    border: none;
+    outline: none;
     border-bottom: 1.5px solid black;
-    width: 70%; 
+    resize: none;
 }   
+.whole-body .container .field  input:focus ~ span,
+.whole-body .container .field  input:valid ~ span,     
+.whole-body .container .field  textarea:focus ~ span,
+.whole-body .container .field  textarea:valid ~ span
+{
+    color: black;
+    font-size: 12px;
+    transform: translateX(-20px);
+    transform: translateY(-20px);
+}
 .heading{
     text-align: center;
+    padding-top: 50px;
 }
 .button{
     text-align: center;
 }
 button{
-    border-radius: 18px;
+    border-radius: 10px;
     background: orange;
     height: 40px;
     width: 100px;
@@ -49,19 +83,35 @@ button{
     font-size: medium;
 }   
 .abc{
-    margin-left: 30px; 
+    margin-left: 0px; 
     display: flex;
     flex-direction: row;
+    margin-left: 50px;
 }
-
+.icon{
+    height: 40px;
+    width: 40px;
+    margin-left: 10px;
+    padding-top: 8px;
+}
+.iconimgnx{
+    height: 40px;
+    width: 40px;
+    margin-left:-5px;
+}
+.iconimgacc{
+    height: 40px;
+    width: 40px;
+    margin-left:-15px;
+}
 .tt{
     position: absolute;
-    left: 150px  ;
+    left: 160px  ;
     padding-top: 10px;
 }
 #s1,#s2{
     background-color: grey;
-    width: 70%;
+    width: 90%;
 }
 @media screen and (max-width:938px){
     .whole-body{
@@ -88,7 +138,7 @@ button{
     }  
     .tt{
         position: absolute;
-        left: 100px  ;
+        left: 90px  ;
         padding-top: 10px;
     } 
     .abc{
