@@ -14,9 +14,9 @@ function Footerautokriti() {
       </div>
       <hr id="white_line_for_first" />
       <div id="white_explore_us_content" className="each_footer_content">
-        <Link to="/accelerons"></Link><p className="white_things_to_explore">Team Accelerons </p><Link/>
-        <Link to="/nitrox"></Link><p className="white_things_to_explore">Team Nitrox</p><Link/>
-        <Link to="/autokriti"></Link><p className="white_things_to_explore">Autokriti</p><Link/>
+        <Link to="/accelerons"><p className="white_things_to_explore">Team Accelerons </p></Link>
+        <Link to="/nitrox"><p className="white_things_to_explore">Team Nitrox</p></Link>
+        <Link to="/autokriti"><p className="white_things_to_explore">Autokriti</p></Link>
       </div>
     </div>
     <div id="white_footer_box2">

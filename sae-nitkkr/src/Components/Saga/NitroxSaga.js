@@ -4,8 +4,8 @@ import { useState } from 'react';
 import './Saga.css';
 
 // Nitrox Image Files
-import Nitrox2020 from '../../Assets/Saga/Nitrox2019.png';
-import Nitrox2019 from '../../Assets/Saga/Nitrox2019.png';
+import Nitrox2020 from '../../Assets/Saga/Nitrox2019.jpeg';
+import Nitrox2019 from '../../Assets/Saga/Nitrox2019.jpeg';
 import Nitrox2018 from '../../Assets/Saga/Nitrox2018.jpg';
 import Nitrox2017 from '../../Assets/Saga/Nitrox2017.jpg';
 import Nitrox2016 from '../../Assets/Saga/Nitrox2016.jpg';
@@ -30,131 +30,139 @@ function Saga(){
         {
             id: 2011,
             atvc: {
-                achievement1: "AIR1 in Terrain Response",
-                achievement2: "AIR2 in VD",
-                achievement3: "AIR3 in Stability",
+                achievement1: "AIR1 in Terrain Response{}",
+                achievement2: "AIR2 in VD{}",
+                achievement3: "AIR3 in Stability{}",
             },
             baja: {
-                achievement1: "AIR5 in Desgin",
-                achievement2: "AIR6 in VD",
-                achievement3: "AIR7 in Stability",
+                achievement1: "First Time NIT KURUKSHETRA's DREAM ROLLED ON WHEELS",
+                achievement2: "AIR6 in VD{}",
+                achievement3: "AIR7 in Stability{}",
             }
         },
         {
             id: 2012,
             atvc: {
-                achievement1: "AIR1 in Desgin",
-                achievement2: "AIR2 in VD",
-                achievement3: "AIR3 in Stability",
+                achievement1: "AIR1 in Desgin{}",
+                achievement2: "AIR2 in VD{}",
+                achievement3: "AIR3 in Stability{}",
             },
             baja: {
-                achievement1: "AIR5 in Desgin",
-                achievement2: "AIR6 in VD",
-                achievement3: "AIR7 in Stability",
+                achievement1: "First Time VIRTUAL CLEARED Roared On BAJA Tracks in all Events -HILL CLIMB,ENDURANCE,ACCELERATION",
+                achievement2: "AIR6 in VD{}",
+                achievement3: "AIR7 in Stability{}",
             }
         },
         {
             id: 2013,
             atvc: {
-                achievement1: "AIR1 in Desgin",
-                achievement2: "AIR2 in VD",
-                achievement3: "AIR3 in Stability",
+                achievement1: "AIR1 in Desgin{}",
+                achievement2: "AIR2 in VD{}",
+                achievement3: "AIR3 in Stability{}",
             },
             baja: {
-                achievement1: "AIR5 in Desgin",
-                achievement2: "AIR6 in VD",
-                achievement3: "AIR7 in Stability",
+                achievement1: "AIR8 in Endurance",
+                achievement2: "AIR10 Out of 262 TEAMS",
+                achievement3: "AIR7 in Stability{}",
             }
         },
         {
             id: 2014,
             atvc: {
-                achievement1: "AIR1 in Desgin",
-                achievement2: "AIR2 in VD",
-                achievement3: "AIR3 in Stability",
+                achievement1: "AIR1 in Desgin{}",
+                achievement2: "AIR2 in VD{}",
+                achievement3: "AIR3 in Stability{}",
             },
             baja: {
-                achievement1: "AIR5 in Desgin",
-                achievement2: "AIR6 in VD",
-                achievement3: "AIR7 in Stability",
+                achievement1: "AIR20 Out Of 327 TEAMS",
+                achievement2: "Presented the Innovative Idea Of CUTTING BRAKES",
+                achievement3: "AIR7 in Stability{}",
             }
         },
         {
             id: 2015,
             atvc: {
-                achievement1: "AIR1 in Desgin",
-                achievement2: "AIR2 in VD",
-                achievement3: "AIR3 in Stability",
+                achievement1: "AIR1 in Desgin{}",
+                achievement2: "AIR2 in VD{}",
+                achievement3: "AIR3 in Stability{}",
             },
             baja: {
-                achievement1: "AIR5 in Desgin",
-                achievement2: "AIR6 in VD",
-                achievement3: "AIR7 in Stability",
+                achievement1: "AIR3 in Suspension and Traction Event",
+                achievement2: "AIR7 out of 397 TEAMS",
+                achievement3: "AIR7 in Stability{}",
             }
         },
         {
             id: 2016,
             atvc: {
-                achievement1: "AIR1 in Desgin",
-                achievement2: "AIR2 in VD",
-                achievement3: "AIR3 in Stability",
+                achievement1: "AIR2 in Desgin{}",
+                achievement2: "AIR2 in VD{}",
+                achievement3: "AIR3 in Stability{}",
             },
             baja: {
-                achievement1: "AIR5 in Desgin",
-                achievement2: "AIR6 in VD",
-                achievement3: "AIR7 in Stability",
+                achievement1: "AIR2 in Cost Efficienct Category",
+                achievement2: "AIR4 in Hill CLimb",
+                achievement3: "AIR6 in Light Weight Vehicle Category",
             }
         },
         {
             id: 2017,
             atvc: {
-                achievement1: "AIR1 in Desgin",
-                achievement2: "AIR2 in VD",
-                achievement3: "AIR3 in Stability",
+                achievement1: "AIR1 in Desgin{}",
+                achievement2: "AIR2 in VD{}",
+                achievement3: "AIR3 in Stability{}",
             },
             baja: {
-                achievement1: "AIR5 in Desgin",
-                achievement2: "AIR6 in VD",
-                achievement3: "AIR7 in Stability",
+                achievement1: "AIR5 in Desgin{}",
+                achievement2: "AIR6 in VD{}",
+                achievement3: "AIR7 in Stability{}",
             }
         },
         {
             id: 2018,
             atvc: {
-                achievement1: "AIR1 in Desgin",
-                achievement2: "AIR2 in VD",
-                achievement3: "AIR3 in Stability",
+                achievement1: "AIR1 in Desgin{}",
+                achievement2: "AIR2 in VD{}",
+                achievement3: "AIR3 in Stability{}",
             },
             baja: {
-                achievement1: "AIR5 in Desgin",
-                achievement2: "AIR6 in VD",
-                achievement3: "AIR7 in Stability",
+                achievement1: "AIR4 in Endurance Run",
+                achievement2: "AIR5 in Cost Efficient Category",
+                achievement3: "AIR5 in Light Weight Category",
+                achievement4: "AIR5 in Fast Vehicle Category",
             }
         },
         {
             id: 2019,
             atvc: {
-                achievement1: "AIR1 in Desgin",
-                achievement2: "AIR2 in VD",
-                achievement3: "AIR3 in Stability",
+                achievement1: "AIR1 in Build Quality",
+                achievement2: "AIR1 in Light Weight Category",
+                achievement3: "AIR1 in Engineering Design",
+                achievement4: "AIR1 in Innovation",
+                achievement5: "AIR3 in Suspension And Traction",
+                achievement6: "AIR3 in Sledge Pull",
+                achievement7: "AIR3 in Endurance",
+                
+
             },
             baja: {
-                achievement1: "AIR5 in Desgin",
-                achievement2: "AIR6 in VD",
-                achievement3: "AIR7 in Stability",
+                achievement1: "AIR4 in Desgin",
+                achievement2: "AIR7 in Sales",
+                achievement3: "AIR6 in Acceleration",
+                achievement4: "AIR8 in Rock Crawl",
             }
         },
         {
             id: 2020,
             atvc: {
-                achievement1: "AIR1 in Desgin",
-                achievement2: "AIR2 in VD",
-                achievement3: "AIR3 in Stability",
+                achievement1: "AIR1 in Desgin{}",
+                achievement2: "AIR2 in VD{}",
+                achievement3: "AIR3 in Stability{}",
             },
             baja: {
-                achievement1: "AIR5 in Desgin",
-                achievement2: "AIR6 in VD",
-                achievement3: "AIR7 in Stability",
+                achievement1: "AIR5 in Desgin{}",
+                achievement2: "AIR6 in VD{}",
+                achievement3: "AIR7 in Stability{}",
             }
         }
         
@@ -273,6 +281,7 @@ function Saga(){
             setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[8].baja.achievement1]);
             setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[8].baja.achievement2]);
             setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[8].baja.achievement3]);
+            setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[8].baja.achievement4]);
         }
         if(year === 2019){
             document.getElementById('nitrox_carPic').src = Nitrox2019;
@@ -283,10 +292,15 @@ function Saga(){
             setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[9].atvc.achievement1]);
             setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[9].atvc.achievement2]);
             setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[9].atvc.achievement3]);
+            setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[9].atvc.achievement4]);
+            setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[9].atvc.achievement5]);
+            setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[9].atvc.achievement6]);
+            setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[9].atvc.achievement7]);
 
             setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[9].baja.achievement1]);
             setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[9].baja.achievement2]);
             setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[9].baja.achievement3]);
+            setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[9].baja.achievement4]);
         }
         if(year === 2020){
             document.getElementById('nitrox_carPic').src = Nitrox2020;

@@ -246,7 +246,7 @@
     #Nitrox-baja_title
     {
         border-bottom: 8px solid black;
-        margin-left: 129px;
+        margin-left: 150px;
         font-size: 34px;
         font-weight: 800;
         color: rgb(12, 12, 12);
@@ -547,7 +547,7 @@
 #Nitrox-titlecomp1
 {
     /*border: 2px solid black;*/
-    margin-left: 0px;
+    margin-left: 21px;
     font-size: 37px;
 }
 }
@@ -555,7 +555,7 @@
 {
     #Nitrox-atvc_title {
         border-bottom: 8px solid black;
-        margin-left: 33px;
+        margin-left: 43px;
         font-size: 30px;
         font-weight: 800;
         color: rgb(12, 12, 12);
@@ -563,7 +563,7 @@
     
     #Nitrox-titlecomp1 {
         /*border: 2px solid black;*/
-        margin-left: 3px;
+        margin-left: 25px;
         width: 90%;
         font-size: 30px;
     }
@@ -688,7 +688,7 @@
     }
     #Nitrox-titlecomp1 {
         /*border: 2px solid black;*/
-        margin-left: 3px;
+        margin-left: 34px;
         width: 90%;
         font-size: 30px;
     }
@@ -945,14 +945,14 @@
 {
     #Nitrox-atvc_title {
         border-bottom: 8px solid black;
-        margin-left: 64px;
+        margin-left: 30px;
         font-size: 30px;
         font-weight: 800;
         color: rgb(12, 12, 12);
     }
     #Nitrox-titlecomp1 {
         /*border: 2px solid black;*/
-        margin-left: 3px;
+        margin-left: 15px;
         width: 90%;
         font-size: 30px;
     }
@@ -963,7 +963,7 @@
     }
     #Nitrox-baja_title {
         border-bottom: 8px solid black;
-        margin-left: 46px;
+        margin-left: 30px;
         font-size: 30px;
         font-weight: 800;
         color: rgb(12, 12, 12);

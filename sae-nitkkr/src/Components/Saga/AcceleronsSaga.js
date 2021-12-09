@@ -68,9 +68,9 @@ function Saga(){
         {
             id: 2014,
             supra: {
-                achievement1: "AIR1 in Design",
-                achievement2: "AIR2 in VD",
-                achievement3: "AIR3 in Stability",
+                achievement1: "AIR37 in SUPRA SAE INDIA",
+                achievement2: "Engine Incorporated - KAWASAKI NINJA 400R ",
+                achievement3: "AIR3 in Stability{}",
             },
             fb: {
                 achievement1: "AIR5 in Design",
@@ -81,79 +81,81 @@ function Saga(){
         {
             id: 2015,
             supra: {
-                achievement1: "AIR1 in Design",
-                achievement2: "AIR2 in VD",
-                achievement3: "AIR3 in Stability",
+                achievement1: "AIR1 in Design{}",
+                achievement2: "AIR2 in VD{}",
+                achievement3: "AIR3 in Stability{}",
             },
             fb: {
-                achievement1: "AIR5 in Design",
-                achievement2: "AIR6 in VD",
-                achievement3: "AIR7 in Stability",
+                achievement1: "AIR30 in Formula Design Challenge",
+                achievement2: "AIR10 in Cost Event",
+                achievement3: "Installed Pneumatic gear Shifter ",
             }
         },
         {
             id: 2016,
             supra: {
-                achievement1: "AIR1 in Design",
-                achievement2: "AIR2 in VD",
-                achievement3: "AIR3 in Stability",
+                achievement1: "AIR1 in Design{}",
+                achievement2: "AIR2 in VD{}",
+                achievement3: "AIR3 in Stability{}",
             },
             fb: {
-                achievement1: "AIR5 in Design",
-                achievement2: "AIR6 in VD",
-                achievement3: "AIR7 in Stability",
+                achievement1: "AIR25 in Formula Student India",
+                achievement2: "Weight Reduction To 60kgs",
+                achievement3: "Incorporated the Innovative Idea of Cageless Differential",
+                
             }
         },
         {
             id: 2017,
             supra: {
-                achievement1: "AIR1 in Design",
-                achievement2: "AIR2 in VD",
-                achievement3: "AIR3 in Stability",
+                achievement1: "AIR18 In SUPRA SAE INDIA",
+                achievement2: "Empowered With KTM 390cc Engine",
+                achievement3: "Significant Work of This Year- WEIGHT REDUCTION",
             },
             fb: {
-                achievement1: "AIR5 in Design",
-                achievement2: "AIR6 in VD",
-                achievement3: "AIR7 in Stability",
+                achievement1: "AIR5 in Design{}",
+                achievement2: "AIR6 in VD{}",
+                achievement3: "AIR7 in Stability{}",
             }
         },
         {
             id: 2018,
             supra: {
-                achievement1: "AIR1 in Design",
-                achievement2: "AIR2 in VD",
-                achievement3: "AIR3 in Stability",
+                achievement1: "AIR1 in Design{}",
+                achievement2: "AIR2 in VD{}",
+                achievement3: "AIR3 in Stability{}",
             },
             fb: {
-                achievement1: "AIR5 in Design",
-                achievement2: "AIR6 in VD",
-                achievement3: "AIR7 in Stability",
+                achievement1: "AIR1 Among NITs",
+                achievement2: "AIR6 in Endurance Race",
+                achievement3: "AIR12 in Cost Event",
+                achievement4: "AIR16 Among 70 TEAMS"
             }
         },
         {
             id: 2019,
             supra: {
-                achievement1: "AIR1 in Design",
-                achievement2: "AIR2 in VD",
-                achievement3: "AIR3 in Stability",
+                achievement1: "AIR1 in Design{}",
+                achievement2: "AIR2 in VD{}",
+                achievement3: "AIR3 in Stability{}",
             },
             fb: {
-                achievement1: "AIR5 in Design",
-                achievement2: "AIR6 in VD",
-                achievement3: "AIR7 in Stability",
+                achievement1: "AIR5 in Design{}",
+                achievement2: "AIR6 in VD{}",
+                achievement3: "AIR7 in Stability{}",
             }
         },
         {
             id: 2020,
             supra: {
-                achievement1: "AIR1 in Design",
-                achievement2: "AIR2 in VD",
-                achievement3: "AIR3 in Stability",
+                achievement1: "AIR1 in Design{}",
+                achievement2: "AIR2 in VD{}",
+                achievement3: "AIR3 in Stability{}",
             },
             fb: {
-                achievement1: "AIR5 in Design",
-                achievement2: "AIR6 in VD",
-                achievement3: "AIR7 in Stability",
+                achievement1: "AIR5 in Design{}",
+                achievement2: "AIR6 in VD{}",
+                achievement3: "AIR7 in Stability{}",
             }
         }
     ];        
@@ -242,6 +244,7 @@ function Saga(){
             setcomp2Achievements(comp2Achievements => [...comp2Achievements, acceleronsInfo[8].fb.achievement1]);
             setcomp2Achievements(comp2Achievements => [...comp2Achievements, acceleronsInfo[8].fb.achievement2]);
             setcomp2Achievements(comp2Achievements => [...comp2Achievements, acceleronsInfo[8].fb.achievement3]);
+            setcomp2Achievements(comp2Achievements => [...comp2Achievements, acceleronsInfo[8].fb.achievement4]);
         }
         else if(year === 2019){
             document.getElementById('acclerons_carPic').src = Accelerons2019;
