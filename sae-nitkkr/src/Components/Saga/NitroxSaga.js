@@ -24,7 +24,7 @@ function Saga(){
 
     const nitroxInfo = [
         {
-            competition1Name: "ATVC",
+            competition1Name: "KEY UPGRADES",
             competition2Name: "BAJA SAE India",
         },
         {
@@ -43,12 +43,12 @@ function Saga(){
         {
             id: 2012,
             atvc: {
-                achievement1: "AIR1 in Desgin{}",
+                achievement1: "IMPROVED IN SUSPENSION",
                 achievement2: "AIR2 in VD{}",
                 achievement3: "AIR3 in Stability{}",
             },
             baja: {
-                achievement1: "First Time VIRTUAL CLEARED Roared On BAJA Tracks in all Events -HILL CLIMB,ENDURANCE,ACCELERATION",
+                achievement1: "First Time VIRTUAL CLEARED Roared On BAJA Tracks in -Hill Climb,Endurance,Accleration",
                 achievement2: "AIR6 in VD{}",
                 achievement3: "AIR7 in Stability{}",
             }
@@ -56,8 +56,8 @@ function Saga(){
         {
             id: 2013,
             atvc: {
-                achievement1: "AIR1 in Desgin{}",
-                achievement2: "AIR2 in VD{}",
+                achievement1: "Tuned Acceleration",
+                achievement2: "High Top Speed",
                 achievement3: "AIR3 in Stability{}",
             },
             baja: {
@@ -69,20 +69,20 @@ function Saga(){
         {
             id: 2014,
             atvc: {
-                achievement1: "AIR1 in Desgin{}",
+                achievement1: "Presented the Innovative Idea Of CUTTING BRAKES",
                 achievement2: "AIR2 in VD{}",
                 achievement3: "AIR3 in Stability{}",
             },
             baja: {
                 achievement1: "AIR20 Out Of 327 TEAMS",
-                achievement2: "Presented the Innovative Idea Of CUTTING BRAKES",
+                achievement2: "AIR2 in VD{}",
                 achievement3: "AIR7 in Stability{}",
             }
         },
         {
             id: 2015,
             atvc: {
-                achievement1: "AIR1 in Desgin{}",
+                achievement1: "Improved Suspension",
                 achievement2: "AIR2 in VD{}",
                 achievement3: "AIR3 in Stability{}",
             },
@@ -95,39 +95,39 @@ function Saga(){
         {
             id: 2016,
             atvc: {
-                achievement1: "AIR2 in Desgin{}",
-                achievement2: "AIR2 in VD{}",
-                achievement3: "AIR3 in Stability{}",
+                achievement1: "Significant Weight Reduction. ",
+                achievement2: "Most Cost Efficient Car Yet",
+                achievement3: "Self Designed Gear Box",
             },
             baja: {
-                achievement1: "AIR2 in Cost Efficienct Category",
-                achievement2: "AIR4 in Hill CLimb",
-                achievement3: "AIR6 in Light Weight Vehicle Category",
+                achievement1: "AIR2 in Cost Efficiency.",
+                achievement2: "AIR4 in Hill CLimb.",
+                achievement3: "AIR6 in Light Weight Vehicle Category.",
             }
         },
         {
             id: 2017,
             atvc: {
-                achievement1: "AIR1 in Desgin{}",
-                achievement2: "AIR2 in VD{}",
+                achievement1: "Ergonomic Sling Seat Design.",
+                achievement2: "Innovated Safety Belts System.",
                 achievement3: "AIR3 in Stability{}",
             },
             baja: {
-                achievement1: "AIR5 in Desgin{}",
-                achievement2: "AIR6 in VD{}",
+                achievement1: "AIR29 out of 400 TEAMS",
+                achievement2: "AIR7 out of 397 TEAMS",
                 achievement3: "AIR7 in Stability{}",
             }
         },
         {
             id: 2018,
             atvc: {
-                achievement1: "AIR1 in Desgin{}",
-                achievement2: "AIR2 in VD{}",
-                achievement3: "AIR3 in Stability{}",
+                achievement1: "Improved Speed with AIR6(in ATVC) in the same category",
+                achievement2: "Greater Cost Efficiency",
+                achievement3: "Weight Reduction with AIR5(in ATVC) in the same category",
             },
             baja: {
                 achievement1: "AIR4 in Endurance Run",
-                achievement2: "AIR5 in Cost Efficient Category",
+                achievement2: "AIR5 in Cost Efficieny",
                 achievement3: "AIR5 in Light Weight Category",
                 achievement4: "AIR5 in Fast Vehicle Category",
             }
@@ -135,8 +135,8 @@ function Saga(){
         {
             id: 2019,
             atvc: {
-                achievement1: "AIR1 in Build Quality",
-                achievement2: "AIR1 in Light Weight Category",
+                achievement1: "Improved Acceleration",
+                achievement2: "Improved Design",
                 achievement3: "AIR1 in Engineering Design",
                 achievement4: "AIR1 in Innovation",
                 achievement5: "AIR3 in Suspension And Traction",
@@ -146,7 +146,7 @@ function Saga(){
 
             },
             baja: {
-                achievement1: "AIR4 in Desgin",
+                achievement1: "AIR4 in Design",
                 achievement2: "AIR7 in Sales",
                 achievement3: "AIR6 in Acceleration",
                 achievement4: "AIR8 in Rock Crawl",
@@ -175,13 +175,13 @@ function Saga(){
             setcomp1Achievements(comp1Achievements => []);
             setcomp2Achievements(comp2Achievements => []);
             deletepast();
-            setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[1].atvc.achievement1]);
-            setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[1].atvc.achievement2]);
-            setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[1].atvc.achievement3]);
+            // setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[1].atvc.achievement1]);
+            // setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[1].atvc.achievement2]);
+            // setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[1].atvc.achievement3]);
 
             setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[1].baja.achievement1]);
-            setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[1].baja.achievement2]);
-            setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[1].baja.achievement3]);
+            // setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[1].baja.achievement2]);
+            // setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[1].baja.achievement3]);
         }
          if(year === 2012){
             document.getElementById('nitrox_carPic').src = Nitrox2012;
@@ -190,12 +190,12 @@ function Saga(){
             setcomp2Achievements(comp2Achievements => []);
 
             setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[2].atvc.achievement1]);
-            setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[2].atvc.achievement2]);
-            setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[2].atvc.achievement3]);
+            // setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[2].atvc.achievement2]);
+            // setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[2].atvc.achievement3]);
 
             setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[2].baja.achievement1]);
-            setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[2].baja.achievement2]);
-            setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[2].baja.achievement3]);
+            // setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[2].baja.achievement2]);
+            // setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[2].baja.achievement3]);
         }
         if(year === 2013){
             document.getElementById('nitrox_carPic').src = Nitrox2013;
@@ -205,11 +205,11 @@ function Saga(){
 
             setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[3].atvc.achievement1]);
             setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[3].atvc.achievement2]);
-            setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[3].atvc.achievement3]);
+            // setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[3].atvc.achievement3]);
 
             setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[3].baja.achievement1]);
             setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[3].baja.achievement2]);
-            setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[3].baja.achievement3]);
+            // setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[3].baja.achievement3]);
         }
         if(year === 2014){
             document.getElementById('nitrox_carPic').src = Nitrox2014;
@@ -218,12 +218,12 @@ function Saga(){
             setcomp2Achievements(comp2Achievements => []);
 
             setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[4].atvc.achievement1]);
-            setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[4].atvc.achievement2]);
-            setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[4].atvc.achievement3]);
+            // setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[4].atvc.achievement2]);
+            // setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[4].atvc.achievement3]);
 
             setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[4].baja.achievement1]);
-            setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[4].baja.achievement2]);
-            setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[4].baja.achievement3]);
+            // setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[4].baja.achievement2]);
+            // setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[4].baja.achievement3]);
         }
         if(year === 2015){
             document.getElementById('nitrox_carPic').src = Nitrox2015;
@@ -232,12 +232,12 @@ function Saga(){
             setcomp2Achievements(comp2Achievements => []);
 
             setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[5].atvc.achievement1]);
-            setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[5].atvc.achievement2]);
-            setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[5].atvc.achievement3]);
+            // setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[5].atvc.achievement2]);
+            // setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[5].atvc.achievement3]);
 
             setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[5].baja.achievement1]);
             setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[5].baja.achievement2]);
-            setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[5].baja.achievement3]);
+            // setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[5].baja.achievement3]);
         }
         if(year === 2016){
             document.getElementById('nitrox_carPic').src = Nitrox2016;
@@ -261,11 +261,11 @@ function Saga(){
 
             setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[7].atvc.achievement1]);
             setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[7].atvc.achievement2]);
-            setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[7].atvc.achievement3]);
+            // setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[7].atvc.achievement3]);
 
             setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[7].baja.achievement1]);
             setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[7].baja.achievement2]);
-            setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[7].baja.achievement3]);
+            // setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[7].baja.achievement3]);
         }
         if(year === 2018){
             deletepast();
@@ -280,8 +280,8 @@ function Saga(){
 
             setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[8].baja.achievement1]);
             setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[8].baja.achievement2]);
-            setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[8].baja.achievement3]);
-            setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[8].baja.achievement4]);
+            // setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[8].baja.achievement3]);
+            // setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[8].baja.achievement4]);
         }
         if(year === 2019){
             document.getElementById('nitrox_carPic').src = Nitrox2019;
@@ -291,11 +291,11 @@ function Saga(){
 
             setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[9].atvc.achievement1]);
             setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[9].atvc.achievement2]);
-            setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[9].atvc.achievement3]);
-            setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[9].atvc.achievement4]);
-            setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[9].atvc.achievement5]);
-            setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[9].atvc.achievement6]);
-            setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[9].atvc.achievement7]);
+            // setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[9].atvc.achievement3]);
+            // setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[9].atvc.achievement4]);
+            // setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[9].atvc.achievement5]);
+            // setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[9].atvc.achievement6]);
+            // setcomp1Achievements(comp1Achievements => [...comp1Achievements, nitroxInfo[9].atvc.achievement7]);
 
             setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[9].baja.achievement1]);
             setcomp2Achievements(comp2Achievements => [...comp2Achievements, nitroxInfo[9].baja.achievement2]);
@@ -371,7 +371,7 @@ function Saga(){
                     </div>
                     <div className="nitrox_text">
                         <div className="nitrox_comp1">
-                            <h4 id="nitrox_competition1">{nitroxInfo[0].competition1Name}</h4>
+                            <h4 id="nitrox_competition1">{nitroxInfo[0].competition2Name}</h4>
                             <p>
                                 
                                 <ul>
@@ -380,7 +380,7 @@ function Saga(){
                                     <li  id="atvc_li3">AIR3 in Stability</li>
                                  
                                     {
-                                    comp1Achievements.map(position => 
+                                    comp2Achievements.map(position => 
                                         (
                                             <li>{position}</li>
                                         )
@@ -391,13 +391,13 @@ function Saga(){
                             </p>
                         </div>
                         <div className="nitrox_comp2">
-                            <h4 id="nitrox_competition1">{nitroxInfo[0].competition2Name}</h4>
+                            <h4 id="nitrox_competition1">{nitroxInfo[0].competition1Name}</h4>
                             <p>
                                 <ul>
                                 <li  id="baja_li1">AIR5 in Desgin</li>
                                     <li  id="baja_li2">AIR6 in VD</li>
                                     <li  id="baja_li3">AIR7 in Stability</li>
-                                {comp2Achievements.map(position => 
+                                {comp1Achievements.map(position => 
                                         (
                                             
                                             <li>{position}</li>

@@ -55,12 +55,12 @@ function Saga(){
         {
             id: 2013,
             supra: {
-                achievement1: "AIR1 in Design",
-                achievement2: "AIR2 in VD",
-                achievement3: "AIR3 in Stability",
+                achievement1: "Total Weight 310kg",
+                achievement2: "Engine- Kawasaki Ninja 400cc",
+                achievement3: "4 Cylinder Engine",
             },
             fb: {
-                achievement1: "AIR5 in Design",
+                achievement1: "AIR37 out of 400",
                 achievement2: "AIR6 in VD",
                 achievement3: "AIR7 in Stability",
             }
@@ -172,8 +172,8 @@ function Saga(){
             setcomp1Achievements(comp1Achievements => [...comp1Achievements, acceleronsInfo[3].supra.achievement3]);
 
             setcomp2Achievements(comp2Achievements => [...comp2Achievements, acceleronsInfo[3].fb.achievement1]);
-            setcomp2Achievements(comp2Achievements => [...comp2Achievements, acceleronsInfo[3].fb.achievement2]);
-            setcomp2Achievements(comp2Achievements => [...comp2Achievements, acceleronsInfo[3].fb.achievement3]);
+            // setcomp2Achievements(comp2Achievements => [...comp2Achievements, acceleronsInfo[3].fb.achievement2]);
+            // setcomp2Achievements(comp2Achievements => [...comp2Achievements, acceleronsInfo[3].fb.achievement3]);
         }
         else if(year === 2014){
             document.getElementById('acclerons_carPic').src = Accelerons2014;
@@ -326,13 +326,13 @@ function Saga(){
                     </div>
                     <div className="acclerons_text">
                         <div className="acclerons_comp1">
-                            <h4 id="acclerons_competition1">{acceleronsInfo[0].competition1Name}</h4>
+                            <h4 id="acclerons_competition1">{acceleronsInfo[0].competition2Name}</h4>
                             <p>
                                 <ul>
                                 <li id="supra_li1">AIR1 in Design</li>
                                     <li id="supra_li2">AIR2 in VD</li>
                                     <li  id="supra_li3">AIR3 in Stability</li>
-                                    {comp1Achievements.map(position => 
+                                    {comp2Achievements.map(position => 
                                         (
                                             <li>{position}</li>
                                         )
@@ -341,13 +341,13 @@ function Saga(){
                             </p>
                         </div>
                         <div className="acclerons_comp2">
-                            <h4 id="acclerons_competition1">{acceleronsInfo[0].competition2Name}</h4>
+                            <h4 id="acclerons_competition1">{acceleronsInfo[0].competition1Name}</h4>
                             <p>
                                 <ul>
                                 <li  id="fb_li1">AIR5 in Design</li>
                                     <li  id="fb_li2">AIR6 in VD</li>
                                     <li  id="fb_li3">AIR7 in Stability</li>
-                                {comp2Achievements.map(position => 
+                                {comp1Achievements.map(position => 
                                         (
                                             <li>{position}</li>
                                         )
