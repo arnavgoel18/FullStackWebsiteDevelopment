@@ -198,6 +198,7 @@ const Gallery = () => {
   };
   return (
     <>
+    <div className="galleryContainer1">
       <div className="galleryContainer">
         <div className={model ? "model open" : "model"}>
           <img src={tempimgSrc} onClick={() => setModel(false)} />
@@ -220,6 +221,7 @@ const Gallery = () => {
             );
           })}
         </div>
+      </div>
       </div>
     </>
   );
