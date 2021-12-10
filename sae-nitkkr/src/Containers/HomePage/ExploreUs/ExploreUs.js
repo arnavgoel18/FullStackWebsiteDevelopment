@@ -10,7 +10,7 @@ function ExploreUs() {
           <Card text="GALLERY" />
         </div>
         <div className="ExploreUs-box">
-          <Card text="SPONSERS" />
+          <Card text="CONTACT US" />
         </div>
       </div>
     </div>

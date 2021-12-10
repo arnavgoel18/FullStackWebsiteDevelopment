@@ -65,7 +65,8 @@
 }
 .CheckOurEvents-register{
   
-  margin-top: 2px;
+  margin-top: 30px;
+  /* bottom: 5px; */
   font-size: 28px;
   font-weight: 1000;
   text-decoration: none;
@@ -119,7 +120,7 @@
 .CheckOurEvents-register {
   content: " ";
   display: block;
-  border-bottom: 1px solid #000;
+  /* border-bottom: 1px solid #000; */
 }
 .CheckOurEvents-icon {
   transition: transform 0.2s;
