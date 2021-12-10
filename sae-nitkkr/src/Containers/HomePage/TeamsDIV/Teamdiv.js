@@ -27,7 +27,7 @@ function lastworknitrox()
  return(
    <div id="large_box">
      {/* <Link to="/accelerons" onClick={() => setOpen(false)}> */}
-     <div id="acc" className="participate" onClick={lastworkacc} >
+    <div id="acc" className="participate" onClick={lastworkacc} >
       {/* <div id="acctext" className="heading"> TEAM ACCLERONS</div> */}
       TEAM <br/>ACCELERONS
      </div>
