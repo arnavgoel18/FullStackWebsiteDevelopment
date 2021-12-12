@@ -1,7 +1,7 @@
 import React from "react";
 
 import "./FollowusCard.css";
-export default function Followus() {
+export default function FollowusCard() {
   return (
     <>
       <div className="container">
