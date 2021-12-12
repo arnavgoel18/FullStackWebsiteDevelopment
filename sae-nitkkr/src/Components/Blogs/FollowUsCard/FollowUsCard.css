@@ -1,0 +1,94 @@
+@media only screen and (min-width: 1024px) {
+  .container {
+    position: absolute;
+    padding: 5px, 5px;
+    width: 275px;
+    height: 310px;
+    left: 1170px;
+    top: 200px;
+    background: #ffffff;
+    box-shadow: 0px 4px 40px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+  }
+  .follow {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 28px;
+    margin-left: 3px;
+    margin-top: 3px;
+    display: inline;
+    color: #000000;
+  }
+  .line {
+    width: 135px;
+    float: right;
+    height: 1px;
+    left: 1550px;
+    top: 407px;
+  }
+  table {
+    margin: auto;
+    padding: 3px;
+    width: 220px;
+    height: 252px;
+    left: 1249px;
+    top: 484px;
+  }
+  th {
+    text-align: center;
+    width: 50px;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .container {
+    position: absolute;
+    width: 135px;
+    height: 200px;
+    left: 20px;
+    top: 2000px;
+
+    background: #ffffff;
+    box-shadow: 0px 4px 40px 20px rgba(0, 0, 0, 0.25);
+  }
+  .follow {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 20px;
+    margin-left: 3px;
+    margin-top: 3px;
+    display: inline;
+    color: #000000;
+  }
+  .line {
+    width: 32px;
+    float: right;
+    height: 1px;
+    left: 1550px;
+    top: 407px;
+  }
+  table {
+    margin: auto;
+    padding: 2px;
+    width: 70px;
+    height: 120px;
+    left: 1249px;
+    top: 484px;
+  }
+  th {
+    text-align: center;
+    width: fit-content;
+    font-size: 10px;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
