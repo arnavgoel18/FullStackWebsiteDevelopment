@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./Followus.css";
+import "./FollowusCard.css";
 export default function Followus() {
   return (
     <>
