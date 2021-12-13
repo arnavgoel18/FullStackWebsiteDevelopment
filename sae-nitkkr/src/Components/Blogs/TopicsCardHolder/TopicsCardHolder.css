@@ -53,16 +53,21 @@ li {
   display: inline;
 }
 .footer {
-  margin-top: -50px;
+  margin-top: -11px;
   width: 486px;
   height: 51px;
   background: rgba(233, 233, 233, 0.54);
 }
 .footer-list {
-  padding: 20px;
+  padding: 15px;
   font-size: 20px;
 }
-
+.fontawesome:hover{
+  cursor: grab;
+}
+.fontawesome1{
+  float: right;
+}
 @media (min-width: 1440px) and (max-width: 2560px) {
 }
 @media (min-width: 1024px) and (max-width: 1440px) {

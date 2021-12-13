@@ -1,44 +1,55 @@
-import "./TopicsCardHolder.css";
+import "./App.css";
 import React from "react";
 import image from "./images1.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { faCalendar } from "@fortawesome/free-solid-svg-icons";
+import { faShare } from "@fortawesome/free-solid-svg-icons";
 
-function TopicContainer() {
+function App() {
   return (
     <>
       <div className="container">
-        <TopicCard image={image} title1="DAQ and " title2="Multicontrollers" />
-        <TopicCard image={image} />
+        <Topic image={image} title1="DAQ and " title2="Multicontrollers" date="" />
+        {/* <Session
+      image={image}
+      /> */}
       </div>
 
-      <div className="container">
-        <TopicCard image={image} />
-        <TopicCard image={image} />
-      </div>
+      {/* <div className="container">
+      <Session
+      image={image}
+      />
+      <Session
+      image={image}
+      />
+    </div> */}
     </>
   );
 }
 
-function TopicCard(props) {
+function Topic(props) {
   return (
     <>
       <body>
         <div className="card">
           <img className="image" src={props.image} alt="" />
-          <div className="container">
-            <h1 className="title">
-              <b>{props.title1}</b>
-              <br />
-              <b>{props.title2}</b>
-            </h1>
-          </div>
+
+          <h1 className="title">
+            <b>{props.title1}</b>
+            <br />
+            <b>{props.title2}</b>
+          </h1>
+
           <footer className="footer">
-            <ul className="fotter-list">
+            <ul className="footer-list">
               <li>
-                <i className="fa fa-calendar-o" aria-hidden="true"></i>share
+                <FontAwesomeIcon className="fontawesome" icon={faShare} />{" "}
+                &nbsp; share
               </li>
-              <li>
-                <i className="fa fa-calendar-o" aria-hidden="true"></i>
-                {props.date}
+              <li className="fontaweome1">
+                <FontAwesomeIcon className="fontawesome1" icon={faCalendar} />
+                &nbsp; {props.date}
               </li>
             </ul>
           </footer>
@@ -48,4 +59,4 @@ function TopicCard(props) {
   );
 }
 
-export default TopicContainer;
+export default App;
