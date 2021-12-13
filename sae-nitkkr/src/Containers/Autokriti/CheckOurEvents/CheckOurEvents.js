@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 
 import poster from "../../../Assets/CheckOurEvents/poster.jpeg";
 
-import { FaAngleDoubleDown } from "react-icons/fa";
+// import { FaAngleDoubleDown } from "react-icons/fa";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCoffee, faAngleDoubleDown } from "@fortawesome/free-solid-svg-icons";
