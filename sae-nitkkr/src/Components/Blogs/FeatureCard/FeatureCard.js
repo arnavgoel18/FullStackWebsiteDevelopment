@@ -1,6 +1,6 @@
 import React from 'react'
-import "./Feature.css"
-export default function Features() {
+import "./FeatureCard.css"
+export default function FeatureCard() {
     return (
         <div className='feature'>
             feature
