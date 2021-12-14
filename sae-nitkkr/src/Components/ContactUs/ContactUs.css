@@ -16,6 +16,7 @@
     padding: 20px;
 }
 .container{
+    height: 550px;
     border: 2px solid black;
     border-radius: 10px;
     /* min-height: 80vh; */
@@ -129,7 +130,7 @@ button{
 }
 @media screen and (min-width:938px){
     #abcd{
-      margin-bottom: 80px;
+      margin-bottom: 35px;
     }
 }
 @media screen and (max-width:425px){
@@ -138,7 +139,7 @@ button{
     }  
     .tt{
         position: absolute;
-        left: 90px  ;
+        left: 72px  ;
         padding-top: 10px;
     } 
     .abc{
