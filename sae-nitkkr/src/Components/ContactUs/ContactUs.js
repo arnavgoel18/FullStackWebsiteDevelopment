@@ -61,7 +61,7 @@ function ContactUS() {
           </div>
           <div className="field">
             {" "}
-            <input type="email" name="email" id="" required="required" />
+            <input type="email" name="email" alt="email" id="" required="required" />
             <span> Email </span>
           </div>
           <div className="field">
