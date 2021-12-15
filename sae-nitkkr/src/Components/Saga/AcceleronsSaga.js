@@ -23,46 +23,46 @@ function Saga(){
 
     const acceleronsInfo = [
         {
-            competition1Name: "Supra",
-            competition2Name: "Formula Bharat",
+            competition1Name: "SUPRA",
+            competition2Name: "FORMULA BHARAT",
         },
         {
             id: 2011,
             supra: {
-                achievement1: "AIR1 in Terrain Response",
-                achievement2: "AIR2 in VD",
-                achievement3: "AIR3 in Stability",
+                achievement1: "",
+                achievement2: "",
+                achievement3: "",
             },
             fb: {
-                achievement1: "AIR5 in Design",
-                achievement2: "AIR6 in VD",
-                achievement3: "AIR7 in Stability",
+                achievement1: "",
+                achievement2: "",
+                achievement3: "",
             }
         },
         {
             id: 2012,
             supra: {
-                achievement1: "AIR1 in Design",
-                achievement2: "AIR2 in VD",
-                achievement3: "AIR3 in Stability",
+                achievement1: "",
+                achievement2: "",
+                achievement3: "",
             },
             fb: {
-                achievement1: "AIR5 in Design",
-                achievement2: "AIR6 in VD",
-                achievement3: "AIR7 in Stability",
+                achievement1: "",
+                achievement2: "",
+                achievement3: "",
             }
         },
         {
             id: 2013,
             supra: {
-                achievement1: "Total Weight 310kg",
-                achievement2: "Engine- Kawasaki Ninja 400cc",
-                achievement3: "4 Cylinder Engine",
+                achievement1: "",
+                achievement2: "",
+                achievement3: "",
             },
             fb: {
                 achievement1: "AIR37 out of 400",
-                achievement2: "AIR6 in VD",
-                achievement3: "AIR7 in Stability",
+                achievement2: "",
+                achievement3: "",
             }
         },
         {
@@ -121,7 +121,7 @@ function Saga(){
         {
             id: 2018,
             supra: {
-                achievement1: "AIR1 in Design{}",
+                achievement1: "",
                 achievement2: "AIR2 in VD{}",
                 achievement3: "AIR3 in Stability{}",
             },
@@ -135,14 +135,14 @@ function Saga(){
         {
             id: 2019,
             supra: {
-                achievement1: "AIR1 in Design{}",
-                achievement2: "AIR2 in VD{}",
-                achievement3: "AIR3 in Stability{}",
+                achievement1: "AIR23 out of 120",
+                achievement2: "",
+                achievement3: "",
             },
             fb: {
-                achievement1: "AIR5 in Design{}",
-                achievement2: "AIR6 in VD{}",
-                achievement3: "AIR7 in Stability{}",
+                achievement1: "",
+                achievement2: "",
+                achievement3: "",
             }
         },
         {

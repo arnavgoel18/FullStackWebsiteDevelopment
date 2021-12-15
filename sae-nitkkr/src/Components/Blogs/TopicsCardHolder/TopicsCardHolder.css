@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200&display=swap");
+* {
+  font-family: "Montserrat", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  padding: 20px;
+  /* text-align: center; */
+  justify-content: space space-evenly;
+}
+
+.card {
+  width: 486px;
+  height: 650px;
+  left: 93px;
+  top: 266px;
+
+  background: #ffffff;
+  box-shadow: 0px 4px 40px 20px rgba(0, 0, 0, 0.25);
+  margin-right: 200px;
+}
+.image {
+  width: 486px;
+  height: 296px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 35px;
+
+  width: 442.09px;
+  height: 209.68px;
+  left: 114.96px;
+  top: 611.47px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 43px;
+  margin-top: 100px;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+}
+li {
+  display: inline;
+}
+.footer {
+  margin-top: -11px;
+  width: 486px;
+  height: 51px;
+  background: rgba(233, 233, 233, 0.54);
+}
+.footer-list {
+  padding: 15px;
+  font-size: 20px;
+}
+.fontawesome:hover{
+  cursor: grab;
+}
+.fontawesome1{
+  float: right;
+}
+@media (min-width: 1440px) and (max-width: 2560px) {
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+@media (min-width: 425px) and (max-width: 768px) {
+}
+@media (min-width: 375px) and (max-width: 425px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space space-evenly;
+    max-width: 70%;
+  }
+
+  .card {
+    width: 486px;
+    height: 644px;
+
+    background: #ffffff;
+    box-shadow: 0px 4px 40px 20px rgba(0, 0, 0, 0.25);
+    margin-right: 200px;
+  }
+}
+@media (min-width: 120pxpx) and (max-width: 320px) {
+}

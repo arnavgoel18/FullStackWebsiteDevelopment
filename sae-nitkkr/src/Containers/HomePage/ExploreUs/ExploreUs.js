@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
-
+// import react from "react";
+import { Link } from "react-router-dom";
 import "./ExploreUs.css";
 
 function ExploreUs() {
@@ -13,7 +13,7 @@ function ExploreUs() {
           <Card text="GALLERY" />
         </div>
         <div className="ExploreUs-box">
-          <Card text="CONTACT US" />
+          <Link to="/contactus"><Card text="CONTACT US" /></Link>
         </div>
       </div>
     </div>
