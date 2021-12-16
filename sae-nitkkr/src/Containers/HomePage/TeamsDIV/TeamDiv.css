@@ -12,7 +12,8 @@
     margin-right: -7px;
     font-size: 61px;
     color: white;
-    font-weight: 1000;
+    max-width: 100%;
+    font-weight: 900;
     font-family: 'Montserrat', sans-serif;
 }
 .participate
@@ -246,7 +247,7 @@
   .participate
   {
       height: 272px;
-      width: 105%;
+      width: 100%;
     
       
   }
@@ -296,7 +297,7 @@
   .participate
   {
       height: 400px;
-      width: 105%;
+      width: 100%;
     
       
   }
@@ -347,7 +348,7 @@
   .participate
   {
       height: 272px;
-      width: 105%;
+      width: 100%;
     
       
   }
@@ -398,7 +399,7 @@
   .participate
   {
       height: 250px;
-      width: 105%;
+      width: 100%;
     
       
   }
