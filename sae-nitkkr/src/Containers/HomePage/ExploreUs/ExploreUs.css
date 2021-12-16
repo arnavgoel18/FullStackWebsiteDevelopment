@@ -58,6 +58,7 @@
   border-image: linear-gradient(315deg, #f8ceec 0%, #a88beb 74%);
   border-image-slice: 1;
   width: max-content;
+  margin-left: 160px;
 }
 .ExploreUs-box1::before,
 .ExploreUs-box1::after {

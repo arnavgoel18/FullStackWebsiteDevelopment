@@ -5,7 +5,7 @@
   margin: 0;
   box-sizing: border-box;
 }
-.container {
+.TopicsCardHolder-container {
   display: flex;
   flex-direction: row;
   align-content: center;
@@ -14,7 +14,7 @@
   justify-content: space space-evenly;
 }
 
-.card {
+.TopicsCardHolder-card {
   width: 486px;
   height: 650px;
   left: 93px;
@@ -24,12 +24,12 @@
   box-shadow: 0px 4px 40px 20px rgba(0, 0, 0, 0.25);
   margin-right: 200px;
 }
-.image {
+.TopicsCardHolder-image {
   width: 486px;
   height: 296px;
 }
 
-.title {
+.TopicsCardHolder-title {
   font-weight: 700;
   font-size: 35px;
 
@@ -52,20 +52,20 @@
 li {
   display: inline;
 }
-.footer {
+.TopicsCardHolder-footer {
   margin-top: -11px;
   width: 486px;
   height: 51px;
   background: rgba(233, 233, 233, 0.54);
 }
-.footer-list {
+.TopicsCardHolder-footer-list {
   padding: 15px;
   font-size: 20px;
 }
-.fontawesome:hover{
+.TopicsCardHolder-fontawesome:hover{
   cursor: grab;
 }
-.fontawesome1{
+.TopicsCardHolder-fontawesome1{
   float: right;
 }
 @media (min-width: 1440px) and (max-width: 2560px) {
@@ -77,7 +77,7 @@ li {
 @media (min-width: 425px) and (max-width: 768px) {
 }
 @media (min-width: 375px) and (max-width: 425px) {
-  .container {
+  .TopicsCardHolder-container {
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -85,7 +85,7 @@ li {
     max-width: 70%;
   }
 
-  .card {
+  .TopicsCardHolder-card {
     width: 486px;
     height: 644px;
 

@@ -9,7 +9,7 @@ import { faShare } from "@fortawesome/free-solid-svg-icons";
 function App() {
   return (
     <>
-      <div className="container">
+      <div className="TopicsCardHolder-container">
         <Topic image={image} title1="DAQ and " title2="Multicontrollers" date="" />
         {/* <Session
       image={image}
@@ -32,23 +32,23 @@ function Topic(props) {
   return (
     <>
       <body>
-        <div className="card">
-          <img className="image" src={props.image} alt="" />
+        <div className="TopicsCardHolder-card">
+          <img className="TopicsCardHolder-image" src={props.image} alt="" />
 
-          <h1 className="title">
+          <h1 className="TopicsCardHolder-title">
             <b>{props.title1}</b>
             <br />
             <b>{props.title2}</b>
           </h1>
 
-          <footer className="footer">
-            <ul className="footer-list">
+          <footer className="TopicsCardHolder-footer">
+            <ul className="TopicsCardHolder-footer-list">
               <li>
-                <FontAwesomeIcon className="fontawesome" icon={faShare} />{" "}
+                <FontAwesomeIcon className="TopicsCardHolder-fontawesome" icon={faShare} />{" "}
                 &nbsp; share
               </li>
-              <li className="fontaweome1">
-                <FontAwesomeIcon className="fontawesome1" icon={faCalendar} />
+              <li className="TopicsCardHolder-fontaweome1">
+                <FontAwesomeIcon className="TopicsCardHolder-fontawesome1" icon={faCalendar} />
                 &nbsp; {props.date}
               </li>
             </ul>
