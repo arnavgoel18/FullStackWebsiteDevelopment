@@ -8,6 +8,7 @@
    flex-direction: column;
    flex-wrap: wrap; 
    align-content: center;
+   max-width: 100%;
   
 }
 
