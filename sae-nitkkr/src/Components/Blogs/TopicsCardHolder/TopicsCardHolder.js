@@ -1,6 +1,6 @@
-import "./App.css";
+import './TopicsCardHolder.css'
 import React from "react";
-import image from "./images1.png";
+import image from '.topiccardholder1/.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 import { faCalendar } from "@fortawesome/free-solid-svg-icons";

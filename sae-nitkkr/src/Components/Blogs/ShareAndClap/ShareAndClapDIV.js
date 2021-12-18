@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
 
-import "./Clap.css";
+import './ShareAndClapDIV.css'
 
 function Clap() {
     const[frequency,setfrequency]=useState(0);
