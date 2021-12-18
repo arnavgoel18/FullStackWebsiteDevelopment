@@ -143,11 +143,16 @@ function App() {
               To check your understanding, kindly participate in the quiz (link
               below).
             </h3>
+            <br />
             <a href='https://docs.google.com/forms/d/e/1FAIpQLSef8EnVIqOM-H02JyCO51QTi-u8bChOeOVaqlbmkHDt45E7pA/viewform?usp=sf_link'>
-              https://docs.google.com/forms/d/e/1FAIpQLSef8EnVIqOM-H02JyCO51QTi-u8bChOeOVaqlbmkHDt45E7pA/viewform?usp=sf_link
+              <h5>
+                https://docs.google.com/forms/d/e/1FAIpQLSef8EnVIqOM-H02JyCO51QTi-u8bChOeOVaqlbmkHDt45E7pA/viewform?usp=sf_link
+              </h5>
             </a>
+            <br />
             <ol>
               REFERENCES:
+               
               <li>wikipedia.com</li>
               <li>businessinsider.com</li>
             </ol>
@@ -161,7 +166,9 @@ function App() {
         </div>
         <hr />
 
-        <div className='end'>{/* <TopicsCardHolder /> */}</div>
+        <div className='end'>
+          {/* <TopicsCardHolder /> */}
+        </div>
         <div className='footer'></div>
       </div>
     </Router>

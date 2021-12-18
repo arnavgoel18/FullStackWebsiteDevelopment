@@ -17,12 +17,13 @@
   height: 40px;
 }
 .pic {
-  width: 390px;
+  width: 95%;
   height: 272px;
 }
 #image {
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 .bodyhead_extraspace {
   display: flex;
@@ -96,4 +97,8 @@ hr {
 #extra{
   display: flex;
   justify-content: center;
+}
+ol li {
+    list-style: decimal;
+    list-style-position: inside;
 }

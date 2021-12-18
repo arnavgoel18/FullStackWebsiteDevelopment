@@ -9,21 +9,19 @@ import { faShare } from "@fortawesome/free-solid-svg-icons";
 function App() {
   return (
     <>
-      <div className="TopicsCardHolder-container">
+      <div className="TopicsCardHolder-container" style={{paddingleft:"40px"}}>
+        <Topic image={image} title1="DAQ and " title2="Multicontrollers" date="10101010" />
         <Topic image={image} title1="DAQ and " title2="Multicontrollers" date="" />
-        {/* <Session
-      image={image}
-      /> */}
+    
       </div>
 
-      {/* <div className="container">
-      <Session
-      image={image}
-      />
-      <Session
-      image={image}
-      />
-    </div> */}
+      <div className="TopicsCardHolder-container" style={{paddingleft:"40px"}}>
+        <Topic image={image} title1="DAQ and " title2="Multicontrollers" date="" />
+        <Topic image={image} title1="DAQ and " title2="Multicontrollers" date="" />
+    
+      </div>
+
+     
     </>
   );
 }
@@ -32,6 +30,7 @@ function Topic(props) {
   return (
     <>
       <body>
+        <div className="xyz">
         <div className="TopicsCardHolder-card">
           <img className="TopicsCardHolder-image" src={props.image} alt="" />
 
@@ -47,12 +46,14 @@ function Topic(props) {
                 <FontAwesomeIcon className="TopicsCardHolder-fontawesome" icon={faShare} />{" "}
                 &nbsp; share
               </li>
-              <li className="TopicsCardHolder-fontaweome1">
-                <FontAwesomeIcon className="TopicsCardHolder-fontawesome1" icon={faCalendar} />
-                &nbsp; {props.date}
+              <li >
+                <FontAwesomeIcon className="TopicsCardHolder-fontawesome1"  style={{marginleft:"10px"}} icon={faCalendar}  />
+        
               </li>
+              <li style={{float:"right"}}>{props.date}</li>
             </ul>
           </footer>
+        </div>
         </div>
       </body>
     </>
