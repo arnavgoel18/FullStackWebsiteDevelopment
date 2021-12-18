@@ -50,7 +50,7 @@ function Topic(props) {
                 <FontAwesomeIcon className="TopicsCardHolder-fontawesome1"  style={{marginleft:"10px"}} icon={faCalendar}  />
         
               </li>
-              <li style={{float:"right"}}> share</li>
+              <li style={{float:"right"}}>{props.date}</li>
             </ul>
           </footer>
         </div>
