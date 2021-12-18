@@ -19,14 +19,14 @@ function Whereacclerons() {
      image1=document.getElementById("Accelarons-image1");
      if(acheck1==0)
      {
-     image1.style.backgroundImage="url(/static/media/AcceleronsFB2.a6a8a136.jpeg)";
-     image2.style.backgroundImage="url(/static/media/AcceleronsFB1.eec3ca49.jpeg)";
+     image1.style.backgroundImage="url(/static/media/AcceleronsFB2.ec57201a.jpeg)";
+     image2.style.backgroundImage="url(/static/media/AcceleronsFB1.ad0cd75e.jpeg)";
      acheck1=1;
      }
      else if(acheck1==1)
      {
-      image2.style.backgroundImage="url(/static/media/AcceleronsFB2.a6a8a136.jpeg)";
-      image1.style.backgroundImage="url(/static/media/AcceleronsFB1.eec3ca49.jpeg)";
+      image2.style.backgroundImage="url(/static/media/AcceleronsFB2.ec57201a.jpeg)";
+      image1.style.backgroundImage="url(/static/media/AcceleronsFB1.ad0cd75e.jpeg)";
       acheck1=0;
      }
      
@@ -37,14 +37,14 @@ function Whereacclerons() {
      image11=document.getElementById("Accelarons-image11");
      if(acheck2==0)
      {
-     image11.style.backgroundImage="url(/static/media/AcceleronsSupra2.8193467f.jpeg)";
-     image22.style.backgroundImage="url(/static/media/AcceleronsSupra1.79517128.jpeg)";
+     image11.style.backgroundImage="url(/static/media/AcceleronsSupra2.e5728be1.jpeg)";
+     image22.style.backgroundImage="url(/static/media/AcceleronsSupra1.bd637769.jpeg)";
      acheck2=1;
      }
      else if(acheck2==1)
      {
-     image22.style.backgroundImage="url(/static/media/AcceleronsSupra2.8193467f.jpeg)";
-     image11.style.backgroundImage="url(/static/media/AcceleronsSupra1.79517128.jpeg)";
+     image22.style.backgroundImage="url(/static/media/AcceleronsSupra2.e5728be1.jpeg)";
+     image11.style.backgroundImage="url(/static/media/AcceleronsSupra1.bd637769.jpeg)";
      acheck2=0;
      }
 
