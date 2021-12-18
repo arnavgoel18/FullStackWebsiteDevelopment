@@ -1,5 +1,6 @@
 .header {
   display: flex;
+  width: 100%;
 }
 
 .navbar {
@@ -15,7 +16,7 @@
   width: 46px;
   height: 40px;
 }
-#pic {
+.pic {
   width: 390px;
   height: 272px;
 }
@@ -28,7 +29,7 @@
   margin-top: 15px;
 }
 .extraspace {
-  width: 10rem;
+  width: 250px;
   flex-shrink: 0;
 }
 .extraspace.a {
@@ -64,18 +65,35 @@
 #bodyContent {
   flex-grow: 1;
   margin: 1rem;
+  width: 100%;
 }
 hr {
   width: 95%;
 }
 .end {
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 }
 .footer {
   height: 10rem;
   background-color: black;
+  width: 100%;
 }
 
 .right{
   text-align: right;
+}
+
+@media (min-width: 0px) and (max-width: 768px){
+   .extraspace
+    {
+        display:none;
+    }
+   
+}
+#extra{
+  display: flex;
+  justify-content: center;
 }
