@@ -49,6 +49,7 @@
   position: inherit;
   z-index: 9999;
   background-color: transparent;
+  text-decoration: none;
 }
 .ExploreUs-heading {
   font-size: 35px;

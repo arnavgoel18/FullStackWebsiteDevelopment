@@ -44,7 +44,7 @@ function Topic(props) {
             <ul className="TopicsCardHolder-footer-list">
               <li>
                 <FontAwesomeIcon className="TopicsCardHolder-fontawesome" icon={faShare} />{" "}
-                &nbsp; share
+                &nbsp; Share
               </li>
               <li >
                 <FontAwesomeIcon className="TopicsCardHolder-fontawesome1"  style={{marginleft:"10px"}} icon={faCalendar}  />
