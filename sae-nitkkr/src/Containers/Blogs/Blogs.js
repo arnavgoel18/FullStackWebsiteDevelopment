@@ -6,10 +6,9 @@ function Blogs(){
     <>
         <NavBar/>
         <div className="main">
-
+            
         </div>
         <Footer/>
-
     </>
 }
 
