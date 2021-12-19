@@ -10,10 +10,10 @@ function ExploreUs() {
 
       <div className="ExploreUs-Container">
         <div className="ExploreUs-box">
-          <Card text="GALLERY" />
+        <Card text="GALLERY" />
         </div>
         <div className="ExploreUs-box">
-          <Link to="/contactus"><Card text="CONTACT US" /></Link>
+          <Link to="/contactus"  style={{ textDecoration: 'none', color: "black" }}><Card text="CONTACT US" /></Link>
         </div>
       </div>
     </div>
