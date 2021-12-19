@@ -42,6 +42,7 @@
     ]
   },
   "devDependencies": {
+    "http-proxy-middleware": "^2.0.1",
     "webpack-cli": "^4.9.1",
     "webpack-config": "^7.5.0"
   }

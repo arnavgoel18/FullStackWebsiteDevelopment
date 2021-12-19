@@ -82,7 +82,7 @@
       font-family: Montserrat;
       font-style: normal;
       font-weight: bold;
-      font-size: 12px;
+      font-size: 17px;
       line-height: 28px;
       margin-left: 3px;
       margin-top: 2px;
@@ -105,7 +105,11 @@
       top: 484px;
     }
    
-
+    a {
+      text-decoration: none;
+      color: black;
+      font-size: 15px;
+    }
 
   }
   @media (min-width: 120px) and (max-width: 375px) {
@@ -115,10 +119,10 @@
       align-content: center;
       padding-left: 7px;
       padding-right: 7px;
-      padding-top: 7px;
+      padding-top: 12px;
       /* margin-bottom: 20px; */
       width: 200px;
-      height: 205px;
+      height: 225px;
       top:2100px;
       left: 60px;
       background: #ffffff;
@@ -129,10 +133,10 @@
       font-family: Montserrat;
       font-style: normal;
       font-weight: bold;
-      font-size: 12px;
-      line-height: 28px;
+      font-size: 17px;
+      line-height: 25px;
       margin-left: 3px;
-      margin-top: 2px;
+      margin-top: 10px;
       display: inline;
       color: #000000;
     }
@@ -151,7 +155,11 @@
       left: 1249px;
       top: 484px;
     }
-   
+    a {
+      text-decoration: none;
+      color: black;
+      font-size: 15px;
+    }
 
 
   }
@@ -179,7 +187,7 @@
       font-size: 12px;
       line-height: 28px;
       margin-left: 3px;
-      margin-top: 2px;
+      margin-top: 5px;
       display: inline;
       color: #000000;
     }
@@ -198,5 +206,12 @@
       left: 1249px;
       top: 484px;
     }
+   
+    a {
+      text-decoration: none;
+      color: black;
+      font-size: 13px;
+    }
+
 
   }

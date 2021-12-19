@@ -20,14 +20,14 @@ function Wherenitrox() {
      image1=document.getElementById("Nitrox-image1");
      if (check1==0)
      {
-     image1.style.backgroundImage="url(/static/media/NitroxBAJA1.6eac7263.jpeg)";
-     image2.style.backgroundImage="url(/static/media/NitroxBAJA2.011dfc5e.jpeg)";
+     image1.style.backgroundImage="url(/static/media/NitroxBAJA1.85b6668b.jpeg)";
+     image2.style.backgroundImage="url(/static/media/NitroxBAJA2.7ab3514c.jpeg)";
      check1=1;
      }
      else if(check1==1)
      {
-      image2.style.backgroundImage="url(/static/media/NitroxBAJA1.6eac7263.jpeg)";
-      image1.style.backgroundImage="url(/static/media/NitroxBAJA2.011dfc5e.jpeg)";
+      image2.style.backgroundImage="url(/static/media/NitroxBAJA1.85b6668b.jpeg)";
+      image1.style.backgroundImage="url(/static/media/NitroxBAJA2.7ab3514c.jpeg)";
       check1=0;
      }
   }
@@ -37,14 +37,14 @@ function Wherenitrox() {
      image11=document.getElementById("Nitrox-image11");
      if(check2==0)
      {
-     image11.style.backgroundImage="url(/static/media/NitroxATVC2.d3031249.jpeg)";
-     image22.style.backgroundImage="url(/static/media/NitroxATVC1.86edba72.jpeg)";
+     image11.style.backgroundImage="url(/static/media/NitroxATVC2.dd4e92f7.jpeg)";
+     image22.style.backgroundImage="url(/static/media/NitroxATVC1.91bedd24.jpeg)";
      check2=1;
      }
      else if(check2==1)
      {
-      image22.style.backgroundImage="url(/static/media/NitroxATVC2.d3031249.jpeg)";
-      image11.style.backgroundImage="url(/static/media/NitroxATVC1.86edba72.jpeg)";
+      image22.style.backgroundImage="url(/static/media/NitroxATVC2.dd4e92f7.jpeg)";
+      image11.style.backgroundImage="url(/static/media/NitroxATVC1.91bedd24.jpeg)";
       check2=0;
      }
   }
