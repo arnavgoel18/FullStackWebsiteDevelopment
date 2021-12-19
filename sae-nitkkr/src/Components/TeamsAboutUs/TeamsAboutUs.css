@@ -115,9 +115,10 @@
 }
 @media (min-width: 1440px) and (max-width: 2560px) {
   .TeamAboutUs-image img {
-    height: 60%;
-    width: 137%;
-    left: 2000px;
+    /* height: 60%; */
+    width: 40%;
+    position: relative;
+    left: 40%;
 
     -webkit-clip-path: polygon(33% 0, 100% 0, 100% 100%, 0 100%, 0 30%);
     clip-path: polygon(33% 0, 100% 0, 100% 100%, 0 100%, 0 30%);
