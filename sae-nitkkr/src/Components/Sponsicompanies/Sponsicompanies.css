@@ -1,0 +1,183 @@
+#sponsicompanies_bigbox
+{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+#viewmore_div
+{
+    display: none;
+}
+#sponsicompanies_first,
+#sponsicompanies_second,
+#sponsicompanies_third,
+#sponsicompanies_fourth,
+#sponsicompanies_fifth,
+#sponsicompanies_sixth,
+#sponsicompanies_seventh,
+#sponsicompanies_eighth,
+#sponsicompanies_ninth {
+  display: flex;
+  flex-direction: row;
+  /* border: 2px solid black; */
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.ima
+{
+    /* border: 2px solid black; */
+    width:300px;
+}
+.ima:hover
+{
+    cursor: pointer;
+    
+}
+/* #sponsicompanies_second2
+{
+   height: 200px;
+} */
+#Ansys-id
+{
+    margin-top: 40px;
+    
+}
+#Janatics-id
+{
+    height: 150px;
+    margin-top: 40px;
+}
+#NIT_kurukshetra-id
+{
+    height: 250px;
+    width: 300px;
+}
+#pankaj_potentiometer-id
+{
+    height: 250px;
+    width: 300px;
+}
+#skf_sealing-id
+{
+    height: 250px;
+    width: 300px;
+}
+#hero-id
+{
+    height: 250px;
+    width: 300px;
+}
+#honda-id
+{
+    height: 200px;
+    margin-top: 30px;
+    width: 300px;
+}
+#venus-id
+{
+    margin-top: 60px;
+    height: 150px;
+    width: 300px;
+}
+#republic_motors-id
+{
+    height: 250px;
+}
+#forgify-id
+{
+  margin-top: 120px;    
+}
+#polyplastics-id
+{
+ margin-top: 30px;
+
+}
+#Ricardo-id
+{
+    margin-top: -20px;
+    /* height: 250px; */
+}
+#advanced_robotics-id
+{
+    height: 250px;;
+    width:250px;
+}
+#mh-id
+{
+    margin-top: 50px;
+}
+@media (min-width:0px) and (max-width:320px)
+{
+    .ima
+{
+    /* border: 2px solid black; */
+    width:250px;
+    /* border: 2px solid black; */
+}
+#skf_sealing-id
+{
+    height: 250px;
+    width: 280px;
+}
+#NIT_kurukshetra-id
+{
+    height: 150px;
+    width: 150px;
+    margin-left: 50px;
+}
+#hero-id,#honda-id
+{
+    height: 250px;
+    width: 270px;
+}
+#venus-id
+{
+    margin-top: 60px;
+    height: 100px;
+    width: 250px;
+}
+#forgify-id
+{
+  margin-top: 50px;    
+}
+#polyplastics-id
+{
+ margin-top: 5px;
+
+}
+}
+
+@media (min-width:0px) and (max-width:658px)
+{
+  #sponsicompanies_third1,#sponsicompanies_third2,#sponsicompanies_third3,
+  #sponsicompanies_fourth1,#sponsicompanies_fourth2,#sponsicompanies_fourth3,
+  #sponsicompanies_fifth1,#sponsicompanies_fifth2,#sponsicompanies_fifth3,
+  #sponsicompanies_sixth1,#sponsicompanies_sixth2,#sponsicompanies_sixth3,
+  #sponsicompanies_seventh1,#sponsicompanies_seventh2,#sponsicompanies_seventh3,
+  #sponsicompanies_eight1,#sponsicompanies_eight2,#sponsicompanies_eight3,
+  #sponsicompanies_ninth1,#sponsicompanies_ninth2,#sponsicompanies_ninth3
+  {
+     display: none;
+  }
+  #viewmore_div
+  {
+      display: block;
+  }
+  #viewmore_div
+  {
+      display: flex;
+      /* border: 2px solid black; */
+      width: 100%;
+      justify-content: center;
+  }
+  #viewmore_button
+  {
+      color: white;
+      background-color: rgb(226, 71, 10);
+      border: none;
+      font-size: 25px;
+      height: 40px;
+    width: 215px;
+  }
+}

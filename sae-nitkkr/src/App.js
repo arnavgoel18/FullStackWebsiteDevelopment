@@ -6,6 +6,7 @@ import Autokriti from "./Containers/Autokriti/Autokriti";
 import Accelerons from "./Containers/Accelerons/Accelerons";
 import Nitrox from "./Containers/Nitrox/Nitrox"
 import ContactUS from "./Containers/ContactUs/contactus";
+import Sponsors from "./Containers/Sponsors/Sponsors";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/accelerons" exact component={() => <Accelerons />} />
           <Route path="/nitrox" exact component={() => <Nitrox />} />
           <Route path="/contactus" exact component={() => <ContactUS/>} />
+          <Route path="/sponsors" exact component={() => <Sponsors/>}/>
         </Switch>
       </Router>
     </>

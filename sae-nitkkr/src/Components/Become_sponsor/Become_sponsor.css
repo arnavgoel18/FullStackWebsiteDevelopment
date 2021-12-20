@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+#become_sponsor_bigbox
+{
+  /* border: 2px solid black; */
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #EFEFEF;
+  flex-direction: row;
+  justify-content: center;
+}
+#become_sponsor_title
+{
+    /* border: 2px solid rgb(230, 29, 29); */
+    width: 600px;
+  /* border: 1px solid rgb(69, 235, 4); */
+  display: flex;
+  flex-direction: column;
+   font-family: Copperplate Gothic Bold;
+  justify-content: space-evenly;
+    
+}
+#knowmore_button
+{
+    height: 40px;
+    background-color: #EED600;
+    font-weight: 700;
+    border-radius: 5px;
+    border: none;
+    color: black;
+    font-size: 18px;
+    padding-left: 10px;
+    font-family: 'Montserrat', sans-serif;
+    padding-right: 10px;
+    width: 160px;
+}
+#knowmore_button:hover
+{
+    cursor: pointer;
+    opacity: 0.8;
+}
+#spbutton
+{
+    /* border: 2px solid black; */
+    margin-left: 20px;
+    
+    
+
+}
+#sponsor_content
+{
+    font-size:95px;
+    /* border: 2px solid black; */
+    
+    margin-left: 20px;
+    color: rgb(85, 83, 83);
+    text-shadow: 0px 5px 10px;
+    
+}
+#become_sponsor_image
+{
+    /* border: 2px solid black; */
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+#splogo
+{
+    width: 450px;
+}
+
+@media (min-width:0px) and (max-width:375px)
+{
+    #become_sponsor_image
+    {
+        /* border: 2px solid black; */
+        width: 600px;
+        display: none;
+
+        justify-content: flex-end;
+        
+    }
+    #sponsor_content
+{
+    margin-top: 50px;
+    font-size:50px;
+    
+    /* border: 2px solid black; */
+    margin-left: 20px;
+    color: rgb(85, 83, 83);
+    text-shadow: 0px 5px 10px;
+    
+}
+#knowmore_button
+{
+    margin-top: 20px;
+    height: 40px;
+    background-color: #EED600;
+    font-weight: 700;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    padding-left: 10px;
+    font-family: 'Montserrat', sans-serif;
+    padding-right: 10px;
+}
+}
+@media (min-width:375px) and (max-width:426px)
+{
+    #become_sponsor_image
+    {
+        /* border: 2px solid black; */
+        width: 600px;
+        display: none;
+
+        justify-content: flex-end;
+        
+    }
+    #knowmore_button
+{
+    margin-top: 20px;
+    height: 40px;
+    background-color: #EED600;
+    font-weight: 700;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    padding-left: 10px;
+    font-family: 'Montserrat', sans-serif;
+    padding-right: 10px;
+}
+    #sponsor_content
+    {
+        margin-top: 50px;
+        font-size:55px;
+        
+        /* border: 2px solid black; */
+        margin-left: 20px;
+        color: rgb(85, 83, 83);
+        text-shadow: 0px 5px 10px;
+        
+    }
+}
+@media (min-width:426px) and (max-width:540px)
+{
+    #become_sponsor_image
+    {
+        /* border: 2px solid black; */
+        width: 600px;
+        display: none;
+
+        justify-content: flex-end;
+        
+    }
+    #knowmore_button
+{
+    margin-top: 20px;
+    height: 40px;
+    background-color: #EED600;
+    font-weight: 700;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    padding-left: 10px;
+    font-family: 'Montserrat', sans-serif;
+    padding-right: 10px;
+}
+    #sponsor_content
+    {
+        margin-top: 50px;
+        font-size:55px;
+        
+        /* border: 2px solid black; */
+        margin-left: 20px;
+        color: rgb(85, 83, 83);
+        text-shadow: 0px 5px 10px;
+        
+    }
+}
+@media (min-width:540px) and (max-width:768px)
+{
+    #become_sponsor_image
+    {
+        /* border: 2px solid black; */
+        width: 600px;
+        display: none;
+
+        justify-content: flex-end;
+        
+    }
+    #knowmore_button
+{
+    margin-top: 20px;
+    height: 40px;
+    background-color: #EED600;
+    font-weight: 700;
+    border-radius: 5px;
+    border: none;
+    font-size: 22px;
+    padding-left: 10px;
+    font-family: 'Montserrat', sans-serif;
+    padding-right: 10px;
+}
+    #sponsor_content
+    {
+        margin-top: 50px;
+        font-size:77px;
+        
+        /* border: 2px solid black; */
+        margin-left: 20px;
+        color: rgb(85, 83, 83);
+        text-shadow: 0px 5px 10px;
+        
+    }
+}
+@media (min-width:768px) and (max-width:1024px)
+{
+    #become_sponsor_image
+    {
+        /* border: 2px solid black; */
+        width: 100px;
+        display: flex;
+
+        justify-content: flex-end;
+        
+    }
+    #knowmore_button
+{
+    margin-top: 20px;
+    height: 40px;
+    background-color: #EED600;
+    font-weight: 700;
+    border-radius: 5px;
+    border: none;
+    
+    font-size: 22px;
+    padding-left: 10px;
+    font-family: 'Montserrat', sans-serif;
+    padding-right: 10px;
+}
+    #sponsor_content
+    {
+        margin-top: 50px;
+        font-size:55px;
+        
+        /* border: 2px solid black; */
+        margin-left: 2px;
+        color: rgb(85, 83, 83);
+        text-shadow: 0px 5px 10px;
+        
+    }
+    #splogo
+{
+    width: 300px;
+}
+}
+
+@media (min-width:1024px) and (max-width:1440px)
+{
+    #become_sponsor_image
+    {
+        /* border: 2px solid black; */
+        width: 410px;
+        display: flex;
+        margin-right:-100px;
+        justify-content: flex-end;
+        
+    }
+    #knowmore_button
+{
+    margin-top: 20px;
+    height: 40px;
+    background-color: #EED600;
+    font-weight: 700;
+    border-radius: 5px;
+    margin-left:-122px;
+    border: none;
+    
+    font-size: 22px;
+    padding-left: 10px;
+    font-family: 'Montserrat', sans-serif;
+    padding-right: 10px;
+}
+    #sponsor_content
+    {
+        margin-top: 50px;
+        font-size:100px;
+        
+        /* border: 2px solid black; */
+        margin-left:-100px;
+        color: rgb(85, 83, 83);
+        text-shadow: 0px 5px 10px;
+        
+    }
+    #splogo
+{
+    width: 350px;
+}
+}
+
