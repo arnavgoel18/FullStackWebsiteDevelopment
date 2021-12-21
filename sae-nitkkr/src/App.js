@@ -23,9 +23,8 @@ function App() {
           <Route path="/nitrox" exact component={() => <Nitrox />} />
           <Route path="/contactus" exact component={() => <ContactUS/>} />
           <Route path="/sponsors" exact component={() => <Sponsors/>}/>
-          <Route path="/blog_cardview" exact component={() => <Topic2/>}/>
+          <Route path="/blogs" exact component={() => <Topic2/>}/>
           <Route path="/blog_static_blog" exact component={() => <Topic1/>}/>
-
         </Switch>
       </Router>
     </>
