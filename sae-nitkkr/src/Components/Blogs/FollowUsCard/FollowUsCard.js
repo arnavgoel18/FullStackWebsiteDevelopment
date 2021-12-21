@@ -18,7 +18,7 @@ function FollowUsCard() {
             src="https://img.icons8.com/ios/50/000000/instagram-new--v1.png"
             alt="insta_image_auto"
           /></a> </td>
-            <td className='follow_teams'> AutoKriti</td>
+            <td className='follow_teams'> <a href="https://instagram.com/autokriti?utm_medium=copy_link" target="_blank" style={{ textDecoration: 'none', color: "black" }}>  AutoKriti </a></td>
           </tr>
           <tr>
             <td>
@@ -30,7 +30,7 @@ function FollowUsCard() {
             alt="fb_image_auto"
           /></a>
             </td>
-            <td className='follow_teams'> AutoKriti</td>
+            <td className='follow_teams'> <a href="https://www.facebook.com/autokriti/" target="_blank" style={{ textDecoration: 'none', color: "black" }}> AutoKriti </a></td>
           </tr>
           <tr>
             <td>
@@ -42,7 +42,7 @@ function FollowUsCard() {
             alt="insta_image_acelerons"
           /></a>
             </td>
-            <td className='follow_teams'> Accelerons</td>
+            <td className='follow_teams'> <a href="https://instagram.com/accelerons_nitkkr?utm_medium=copy_link" target="_blank" style={{ textDecoration: 'none', color: "black" }}>Accelerons </a></td>
           </tr>
           <tr>
             <td>
@@ -54,7 +54,7 @@ function FollowUsCard() {
             alt="insta_image_nitrox"
           /></a>
             </td>
-            <td className='follow_teams'> Nitrox</td>
+            <td className='follow_teams' ><a href="https://instagram.com/nitroxteam?utm_medium=copy_link" target="_blank" style={{ textDecoration: 'none', color: "black" }}> Nitrox </a></td>
           </tr>
         </table>
       </div>

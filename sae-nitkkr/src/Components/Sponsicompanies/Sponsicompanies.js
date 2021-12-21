@@ -42,18 +42,18 @@ function Sponsicompanies() {
     <div id="sponsicompanies_bigbox">
       <div id="sponsicompanies_first">
         <div id="sponsicompanies_first1">
-          <a href="https://www.unbrako.com/">
+          <a href="https://www.unbrako.com/" target="_blank">
             <img src={unbrako} id="unbrako-id" className="ima" />
           </a>
         </div>
 
         <div id="sponsicompanies_first2">
-          <a href="https://www.bossard.com/in-en/about-us/company/india/">
+          <a href="https://www.bossard.com/in-en/about-us/company/india/" target="_blank">
             <img src={Lps_Bossard} id="Lps_Bossard-id" className="ima" />
           </a>
         </div>
         <div id="sponsicompanies_first3">
-          <a href="https://saigaparts.com/">
+          <a href="https://saigaparts.com/" target="_blank">
             <img src={saiga_parts} id="saiga_parts-id" className="ima" />
           </a>
         </div>
@@ -61,17 +61,17 @@ function Sponsicompanies() {
         {/* <div id="sponsicompanies_second"> */}
 
         <div id="sponsicompanies_second1">
-          <a href="https://www.ansys.com/en-in">
+          <a href="https://www.ansys.com/en-in" target="_blank">
             <img src={Ansys} id="Ansys-id" className="ima" />
           </a>
         </div>
         <div id="sponsicompanies_second2">
-          <a href="https://www.janatics.com/">
+          <a href="https://www.janatics.com/" target="_blank">
             <img src={Janatics} id="Janatics-id" className="ima" />
           </a>
         </div>
         <div id="sponsicompanies_second3">
-          <a href="http://www.nitkkr.ac.in/">
+          <a href="http://www.nitkkr.ac.in/" target="_blank">
             <img
               src={NIT_kurukshetra}
               id="NIT_kurukshetra-id"
@@ -87,7 +87,7 @@ function Sponsicompanies() {
           </button>
         </div>
         <div id="sponsicompanies_third1" className="tobeexpanded">
-          <a href="https://www.indiamart.com/pankaj/">
+          <a href="https://www.indiamart.com/pankaj/" target="_blank"> 
             <img
               src={pankaj_potentiometer}
               id="pankaj_potentiometer-id"
@@ -96,12 +96,12 @@ function Sponsicompanies() {
           </a>
         </div>
         <div id="sponsicompanies_third2" className="tobeexpanded">
-          <a href="https://www.skf.com/in/products/industrial-seals">
+          <a href="https://www.skf.com/in/products/industrial-seals" target="_blank">
             <img src={skf_sealing} id="skf_sealing-id" className="ima" />
           </a>
         </div>
         <div id="sponsicompanies_third3" className="tobeexpanded">
-          <a href="https://www.heromotocorp.com/en-in/">
+          <a href="https://www.heromotocorp.com/en-in/" target="_blank">
             <img src={hero} id="hero-id" className="ima" />
           </a>
           {/* </div> */}
@@ -109,17 +109,17 @@ function Sponsicompanies() {
         {/* <div id="sponsicompanies_fourth"> */}
 
         <div id="sponsicompanies_fourth1" className="tobeexpanded">
-          <a href="https://www.hondacarindia.com/">
+          <a href="https://www.hondacarindia.com/" target="_blank">
             <img src={honda} id="honda-id" className="ima" />
           </a>
         </div>
         <div id="sponsicompanies_fourth2" className="tobeexpanded">
-          <a href="https://www.venus-india.com/">
+          <a href="https://www.venus-india.com/" target="_blank">
             <img src={venus} id="venus-id" className="ima" />
           </a>
         </div>
         <div id="sponsicompanies_fourth3" className="tobeexpanded">
-          <a href="https://www.republicmotors.in/">
+          <a href="https://www.republicmotors.in/" target="_blank"> 
             <img
               src={republic_motors}
               id="republic_motors-id"
@@ -131,17 +131,17 @@ function Sponsicompanies() {
         {/* <div id="sponsicompanies_fifth"> */}
 
         <div id="sponsicompanies_fifth1" className="tobeexpanded">
-          <a href="https://www.facebook.com/forgify/">
+          <a href="https://www.facebook.com/forgify/" target="_blank">
             <img src={forgify} id="forgify-id" className="ima" />
           </a>
         </div>
         <div id="sponsicompanies_fifth2" className="tobeexpanded">
-          <a href="https://www.indiamart.com/instapro-3d/">
+          <a href="https://www.indiamart.com/instapro-3d/" target="_blank">
             <img src={Instapro} id="Instapro-id" className="ima" />
           </a>
         </div>
         <div id="sponsicompanies_fifth3" className="tobeexpanded">
-          <a href="https://www.facebook.com/iarroboticsdehradun/">
+          <a href="https://www.facebook.com/iarroboticsdehradun/" target="_blank">
             <img
               src={advanced_robotics}
               id="advanced_robotics-id"
@@ -153,17 +153,17 @@ function Sponsicompanies() {
         {/* <div id="sponsicompanies_sixth"> */}
 
         <div id="sponsicompanies_sixth1" className="tobeexpanded">
-          <a href="https://www.altair.com/hyperworks/">
+          <a href="https://www.altair.com/hyperworks/" target="_blank">
             <img src={altair} id="altair-id" className="ima" />
           </a>
         </div>
         <div id="sponsicompanies_sixth2" className="tobeexpanded">
-          <a href="https://polyplasticsindia.com/group/yamuna-nagar-unit-1/">
+          <a href="https://polyplasticsindia.com/group/yamuna-nagar-unit-1/" target="_blank">
             <img src={polyplastics} id="polyplastics-id" className="ima" />
           </a>
         </div>
         <div id="sponsicompanies_sixth3" className="tobeexpanded">
-          <a href="https://chanderpur.com/">
+          <a href="https://chanderpur.com/" target="_blank">
           <img src={CPG} id="CPG-id" className="ima" />
           </a>
         </div>
@@ -171,18 +171,18 @@ function Sponsicompanies() {
         {/* <div id="sponsicompanies_seventh"> */}
 
         <div id="sponsicompanies_seventh1" className="tobeexpanded">
-          <a href="https://ricardo.com/">
+          <a href="https://ricardo.com/" target="_blank">
           <img src={Ricardo} id="Ricardo-id" className="ima" />
           </a>
         </div>
         <div id="sponsicompanies_seventh2" className="tobeexpanded">
       
-          <a href="http://164.100.137.199/">
+          <a href="http://164.100.137.199/" target="_blank">
           <img src={Hartron} id="Hartron-id" className="ima" />
           </a>
         </div>
         <div id="sponsicompanies_seventh3" className="tobeexpanded">
-          <a href="">
+          <a href="" target="_blank">
           <img src={mh} id="mh-id" className="ima" />
           </a>
         </div>
@@ -190,17 +190,17 @@ function Sponsicompanies() {
         {/* <div id="sponsicompanies_eighth"> */}
 
         <div id="sponsicompanies_eight1" className="tobeexpanded">
-          <a href="https://www.facebook.com/CMSRSTEELCARTPVTLTD/">
+          <a href="https://www.facebook.com/CMSRSTEELCARTPVTLTD/" target="_blank">
           <img src={cmsr} id="cmsr-id" className="ima" />
           </a>
         </div>
         <div id="sponsicompanies_eight2" className="tobeexpanded">
-          <a href="http://sne.co.in/">
+          <a href="http://sne.co.in/" target="_blank">
           <img src={sne} id="sne-id" className="ima" />
           </a>
         </div>
         <div id="sponsicompanies_eight3" className="tobeexpanded">
-          <a href="https://c3realestatesolutions.com/">
+          <a href="https://c3realestatesolutions.com/" target="_blank">
           <img src={c3} id="c3-id" className="ima" />
           </a>
         </div>
@@ -208,7 +208,7 @@ function Sponsicompanies() {
         {/* <div id="sponsicompanies_ninth"> */}
 
         <div id="sponsicompanies_ninth1" className="tobeexpanded">
-          <a href="">
+          <a href="" target="_blank">
           <img src={Suresh_Metals} id="Suresh_Metals-id" className="ima" />
           </a>
         </div>
