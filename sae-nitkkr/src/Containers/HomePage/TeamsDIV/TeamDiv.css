@@ -8,8 +8,8 @@
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-left: -7px;
-    margin-right: -7px;
+    /* margin-left: -7px;
+    margin-right: -7px; */
     font-size: 61px;
     color: white;
     max-width: 100%;
@@ -77,8 +77,8 @@
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-left: -7px;
-    margin-right: -7px;
+    /* margin-left: -7px;
+    margin-right: -7px; */
   
    
    
@@ -130,8 +130,8 @@
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-left: -7px;
-    margin-right: -7px;
+    /* margin-left: -7px;
+    margin-right: -7px; */
     font-size: 48px;
   
    
@@ -183,8 +183,8 @@
       flex-direction: row;
       justify-content: space-between;
       flex-wrap: wrap;
-      margin-left: -7px;
-      margin-right: -7px;
+      /* margin-left: -7px;
+      margin-right: -7px; */
       font-size: 36px;
     
      
@@ -236,8 +236,8 @@
       flex-direction: row;
       justify-content: space-around;
       flex-wrap: wrap;
-      margin-left: -7px;
-      margin-right: -7px;
+      /* margin-left: -7px;
+      margin-right: -7px; */
       font-size: 28px;
     
      
@@ -288,8 +288,8 @@
       flex-direction: row;
       justify-content: space-around;
       flex-wrap: wrap;
-      margin-left: -7px;
-      margin-right: -7px;
+      /* margin-left: -7px;
+      margin-right: -7px; */
      font-size: 41px;
      
       
@@ -338,8 +338,8 @@
       flex-direction: row;
       justify-content: space-around;
       flex-wrap: wrap;
-      margin-left: -7px;
-      margin-right: -7px;
+      /* margin-left: -7px;
+      margin-right: -7px; */
     font-size: 27px;
      
      
@@ -389,8 +389,8 @@
       flex-direction: row;
       justify-content: space-around;
       flex-wrap: wrap;
-      margin-left: -7px;
-      margin-right: -7px;
+      /* margin-left: -7px;
+      margin-right: -7px; */
       font-size: 25px;
      
      
