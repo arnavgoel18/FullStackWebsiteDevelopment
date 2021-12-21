@@ -17,6 +17,9 @@ function Footer() {
           <Link to="/accelerons"><p className="black_things_to_explore">Team Accelerons </p></Link>
           <Link to="/nitrox"><p className="black_things_to_explore">Team Nitrox</p></Link>
           <Link to="/autokriti"><p className="black_things_to_explore">Autokriti</p></Link>
+          <Link to="/blogsc"><p className="black_things_to_explore">Blogs</p></Link>
+          <Link to="/sponsors"><p className="black_things_to_explore">Sponsers</p></Link>
+
         </div>
       </div>
       <div id="black_footer_box2">
@@ -41,7 +44,7 @@ function Footer() {
               alt="fb_image_acelerons"
             /></a>
           </p>
-
+          
           <p>
             Team Nitrox &nbsp;
             <a href="https://instagram.com/nitroxteam?utm_medium=copy_link" target="_blank">
