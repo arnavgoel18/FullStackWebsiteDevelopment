@@ -1,17 +1,18 @@
 import "./Topic1.css";
-import logo from "./images/logo.png";
-import logo1 from "./images/logo1.png";
-import pic from "./images/pic.png";
-import one from "./images/one.jpg";
-import two from "./images/two.jpg";
-import three from "./images/three.jpg";
-import four from "./images/four.jpg";
-import topiccardpic from "./images/topiccardholder1.png";
-import NavBar from "./components/NavBar.js";
+import logo from "../../../Components/LEFT vs RIGHT/images/logo.png";
+import logo1 from "../../../Components/LEFT vs RIGHT/images/logo1.png";
+import pic from "../../../Components/LEFT vs RIGHT/images/pic.png";
+import one from "../../../Components/LEFT vs RIGHT/images/one.jpg";
+import two from "../../../Components/LEFT vs RIGHT/images/two.jpg";
+import three from "../../../Components/LEFT vs RIGHT/images/three.jpg";
+import four from "../../../Components/LEFT vs RIGHT/images/four.jpg";
+import topiccardpic from "../../../Components/LEFT vs RIGHT/images/topiccardholder1.png";
+import NavBar from "../../../Components/NavBar/NavBar";
 import { BrowserRouter as Router } from "react-router-dom";
-import ShareAndClapDIV from "./components/ShareAndClapDIV.js";
-import TopicsCardHolder from "./components/TopicsCardHolder";
-import PhoneShareAndClap from "./components/PhoneShareAndClap";
+import ShareAndClapDIV from "../../../Components/Blogs/ShareAndClap/ShareAndClapDIV";
+import TopicsCardHolder from "../../../Components/Blogs/TopicsCardHolder/TopicsCardHolder";
+import PhoneShareAndClap from "../../../Components/Blogs/ShareAndClap/PhoneShareAndClap";
+import Footer from "../../../Components/Footer/Footer(black)/FooterBlack";
 function App() {
   return (
     <Router>
@@ -181,7 +182,8 @@ function App() {
             title="DAQ and Multicontrollers"
           />
         </div>
-        <div className="footer"></div>
+        {/* <div className="footer"></div> */}
+        <Footer/>
       </div>
     </Router>
   );

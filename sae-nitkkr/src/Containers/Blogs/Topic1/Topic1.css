@@ -19,6 +19,7 @@
 .pic {
   width: 95%;
   height: 272px;
+  padding-top: 20px;
 }
 #image {
   display: block;

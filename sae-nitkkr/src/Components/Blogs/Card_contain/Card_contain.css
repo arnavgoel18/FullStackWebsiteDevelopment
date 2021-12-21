@@ -1,0 +1,55 @@
+#blog_contain
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+
+}
+#card_contain
+{
+    border: 2px solid rgb(247, 247, 247);
+    width: 900px;
+    /* height: 600px; */
+    background-color:rgb(249, 250, 249) ;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#side_contain
+{
+    background-color: rgb(245, 243, 243);
+    border-left: 2px solid rgb(121, 116, 116);
+    width:300px;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-around; */
+    /* height: 1900px; */
+    flex-direction: column;
+}
+#side_contain_hustle
+{
+    /* border: 2px solid black; */
+    display: flex;
+    /* position: sticky; */
+    top: 5px;
+   /* height: 500px; */
+   
+}
+@media (min-width:630px) and (max-width:1200px)
+{
+    #side_contain
+{
+    background-color: rgb(245, 243, 243);
+    border-left: none;
+    width:700px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    /* height: 1900px; */
+    flex-direction: row;
+}
+}
