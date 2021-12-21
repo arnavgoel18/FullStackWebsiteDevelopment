@@ -41,7 +41,7 @@ return (
                 </div>
             </div>
         </div>
-      <hr/>
+      {/* <hr/> */}
     </div>
     </Router>
     

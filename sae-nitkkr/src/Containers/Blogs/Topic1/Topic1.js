@@ -139,9 +139,9 @@ function App() {
             <br />
             <div className="right">
               {" "}
-              Ford Model T (Image source: auto.howstuffworks.com)
+              Ford Model T(Image source: auto.howstuffworks.com)
             </div>
-            <h3>
+            {/* <h3>
               To check your understanding, kindly participate in the quiz (link
               below).
             </h3>
@@ -156,7 +156,7 @@ function App() {
               REFERENCES:
               <li>wikipedia.com</li>
               <li>businessinsider.com</li>
-            </ol>
+            </ol> */}
           </div>
           <div className="extraspace a">
             <ShareAndClapDIV />

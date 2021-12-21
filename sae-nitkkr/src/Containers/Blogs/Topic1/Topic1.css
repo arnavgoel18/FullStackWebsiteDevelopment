@@ -7,6 +7,7 @@
   display: flex;
   justify-content: right;
   flex-grow: 1;
+  width: 100%;
 }
 #logo {
   width: 350px;
@@ -29,11 +30,13 @@
 .bodyhead_extraspace {
   display: flex;
   margin-top: 15px;
+  margin-left: 20px;
 }
 .extraspace {
  
   width: 250px;
   flex-shrink: 0;
+  margin-bottom: 20px;
 }
 .extraspace.a {
   display: flex;
@@ -57,7 +60,6 @@
 }
 .topicname {
   align-self: center;
-
   flex-grow: 1;
   padding-bottom: 14px;
 }
@@ -78,7 +80,8 @@
   word-wrap:break-word;
 }
 hr {
-  width: 95%;
+  width: 96%;
+  margin-left: 20px;
 }
 .end {
   text-align: center;
@@ -96,7 +99,7 @@ hr {
 }
 
 .right{
-  text-align: right;
+  text-align: center;
 }
 .other_blogs{
    padding-left: 2%;
@@ -126,5 +129,8 @@ hr {
     }
     #image{
       width: 70%;
+    }
+    hr{
+      display: none;
     }
 }

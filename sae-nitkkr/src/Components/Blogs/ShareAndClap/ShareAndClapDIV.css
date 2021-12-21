@@ -17,7 +17,7 @@
     height: 250px;
     /* border: 1px solid black; */
     width: 200px;
-    margin-right: 10px;
+    margin-right: -22px;
     border-radius: 13px;
     box-shadow: 0px 0px 20px ;
 }
@@ -84,20 +84,20 @@
 {
     opacity: 0.9;
 }
-#clap_straight_hand
+/* #clap_straight_hand
 {
     width: 20px;
     margin-top: 8px;
     /* padding-right: 10px; */
-    height: 20px;
-}
+    /* height: 20px;
+} */ 
 #clap_second_clapimage_white
 {
     /* border: 2px solid black; */
     display: flex;
-    margin-left: 50px;
+    margin-left: -30px;
     height: 35px;
-    width:80px;
+    width:30px;
     
 }
 #clap_feed_data
@@ -145,7 +145,7 @@
     border: 1px solid rgb(190, 189, 189);
     padding-left: 12px;
     width: 170px;
-    height: 80px;
+    height: 90px;
     font-size:12px;
 }
 @media (min-width: 0px) and (max-width: 767px){
