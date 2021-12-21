@@ -12,7 +12,7 @@ import Topic1 from './Containers/Blogs/Topic1/Topic1'
 
 
 function App() {
-  document.title = "SAE NIT Kurukshtra";
+  document.title = "SAE NIT Kurukshetra";
   return (
     <>
       <Router>
