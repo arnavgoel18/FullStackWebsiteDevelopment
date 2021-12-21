@@ -1,28 +1,19 @@
-import React, { Component } from 'react'
-import Footer from '../../Components/Footer/Footer(black)/FooterBlack'
-import NavBar from '../../Components/NavBar/NavBar'
-import FeatureCard from './Blogs/FeatureCard';
-import FollowUsCard from './Blogs/FollowUsCard';
-import TopicCardHolder from './Blogs/TopicCardHolder';
+import React from 'react'
+import Navbar from '../../Components/NavBar/NavBar'
+import Footerblack from '../../Components/Footer/Footer(black)/FooterBlack'
+import Card_contain from '../Blogs/Card_contain/Card_contain'
 
-function Blogs(){
-    <>
-        <NavBar/>
-        <div className="main" style={{
-            display:"flex",
-            flexDirection: "column",
-            width:"100vw",
-            height:"100vh",  
-            background: "#FFFFFF",}}>
-           
-            <TopicCardHolder/>
-            <br/>
-            <FollowUsCard/> 
-            <FeatureCard/>
-            <br/><br/>
+function Topic2() {
+  return (
+    <div className="App">
+    <Navbar/>
+    <br/>
+    <Card_contain/>
+        <br/>
+        <br/>
+        <Footerblack/>
+        
         </div>
-        <Footer/>
-    </>
+  )
 }
-
-export default Blogs;
+export default Topic2

@@ -2,11 +2,11 @@ import React from 'react'
 import './Card_contain.css'
 // import Clap from './Clap'
 
-import TopicsCardHolder from '../TopicsCardHolder/TopicsCardHolder'
+import TopicsCardHolder from '../../../Components/Blogs/TopicsCardHolder/TopicsCardHolder'
 import daq from '../../../Assets/TopicsCardHolder/daq.png'
 import brakes from '../../../Assets/TopicsCardHolder/brakes.png'
-import FeatureCard from '../FeatureCard/FeatureCard'
-import FollowUsCard from '../FollowUsCard/FollowUsCard'
+import FeatureCard from '../../../Components/Blogs/FeatureCard/FeatureCard'
+import FollowUsCard from '../../../Components/Blogs/FollowUsCard/FollowUsCard'
 function Card_contain() {
   return (
       <div id="blog_contain">
