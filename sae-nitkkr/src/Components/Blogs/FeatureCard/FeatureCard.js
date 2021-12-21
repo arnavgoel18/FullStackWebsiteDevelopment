@@ -1,16 +1,18 @@
 import React from 'react'
-import "./FeatureCard.css"
-export default function FeatureCard() {
-    return (
-        <div className='feature'>
-            <div className="App">
-          <div className="feature_container">
-            <div className="text"> Want to Feature your own blog ? </div>
-            <div className="button">
-              <button>Learn More</button>
-            </div>
-          </div>
-        </div>
-        </div>
-    )
+import './FeatureCard.css';
+function FeatureCard() {
+  return (
+    <div id="featurecard_bigbox">
+      <div id="featurecard_title">
+        Want to Feature your own blog?
+      </div>
+      <div id="featurecard_button">
+        <button id="learnmore_button">
+          Learn More
+        </button>
+      </div>
+    </div>
+  )
 }
+
+export default FeatureCard

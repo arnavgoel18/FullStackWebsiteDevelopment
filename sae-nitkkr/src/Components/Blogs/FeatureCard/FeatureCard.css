@@ -1,162 +1,82 @@
-/* @media only screen and (min-width: 1024px) {} */
-  .feature {
-    position: absolute;
-    width: 280px;
-    height: 310px;
-    left: 1200px;
-    top: 750px;
-    background: #ffffff;
-    box-shadow: 0px 4px 40px 20px rgba(0, 0, 0, 0.25);
-    border-radius: 2px;
-    align-content: center;
-  }
-  .text {
-    padding: 20px;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 30px;
-    line-height: 43px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-
-    color: #000000;
-  }
-  button {
-    position: relative;
-    top: 25px;
-    background: black;
-    color: white;
-    text-align: center;
-    font-weight: 400;
-    font-size: large;
-    height: 60px;
-    width: 150px;
-    border-radius: 5px;
-    left: 62px;
-  }
-
-
-@media (min-width: 120px) and (max-width: 375px) {
-  .feature {
-   /* display:flex; */
-    width: 200px;
-    height: 200px;
-    left: 60px;
-    /* float :right; */
-   top:2350px;
-    margin-right: 20px;
-
-    background: #fffefe;
-    box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.4);
-  }
-  .text {
-    padding: 5px;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 18px;
-    line-height: 43px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-
-    color: #000000;
-  }
-  button {
-    position: relative;
-    top: 25px;
-    background: black;
-    color: white;
-    text-align: center;
-    font-weight: 200;
-    font-size: large;
-    height: 60px;
-    width: 140px;
-    border-radius: 5px;
-    left: 35px;
-  }
+#featurecard_bigbox
+{
+  border: 2px solid rgb(245, 243, 243);
+  box-shadow: 0px 0px 15px;
+  position:sticky;
+  top: 310px;
+  display: flex;
+  width: 240px;
+  height: 240px;
+  flex-direction: column;
+  margin-top: 20px;
+  justify-content: center;
+  margin-left: 30px;
+  margin-right: 30px;
+  align-items: center;
 }
+#featurecard_title
+{
+  font-size: 22px;
+  display: flex;
+width: 150px;
+font-weight: 700;
+  text-align: center;
+  /* border: 2px solid black; */
 
-@media (min-width: 375px) and (max-width: 425px) {
-  .feature {
-   /* display:flex; */
-    width: 200px;
-    height: 200px;
-    left: 87px;
-    /* float :right; */
-   top:2350px;
-    margin-right: 20px;
-
-    background: #fffefe;
-    box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.4);
-  }
-  .text {
-    padding: 5px;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 18px;
-    line-height: 43px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-
-    color: #000000;
-  }
-  button {
-    position: relative;
-    top: 25px;
-    background: black;
-    color: white;
-    text-align: center;
-    font-weight: 200;
-    font-size: large;
-    height: 60px;
-    width: 140px;
-    border-radius: 5px;
-    left: 30px;
-  }
 }
+#learnmore_button
+{
+  
+  font-size: 20px;
+  margin-top: 50px;
+  font-weight: 700;
+  background-color: black;
+  color: white;
+  width: 130px;
+  border-radius: 5px;
+  height: 50px;
 
-@media (min-width: 425px) and (max-width: 768px) {
-  .feature {
-   /* display:flex; */
-    width: 180px;
-    height: 200px;
-    left: 230px;
-    /* float :right; */
-   top:2650px;
-    margin-right: 20px;
+}
+#learnmore_button:hover
+{
+  cursor: pointer;
+}
+@media (min-width:630px) and (max-width:1200px)
+{
+  #featurecard_bigbox
+{
+  border: 2px solid rgb(245, 243, 243);
+  box-shadow: 0px 0px 15px;
+  
+  display: flex;
+  width: 240px;
+  position: initial;
 
-    background: #fffefe;
-    box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.4);
-  }
-  .text {
-    padding: 5px;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 18px;
-    line-height: 43px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-
-    color: #000000;
-  }
-  button {
-    position: relative;
-    top: 25px;
-    background: black;
-    color: white;
-    text-align: center;
-    font-weight: 200;
-    font-size: large;
-    height: 60px;
-    width: 140px;
-    border-radius: 5px;
-    left: 22px;
-  }
+  height: 280px;
+  flex-direction: column;
+  /* margin-top: 20px; */
+  justify-content: center;
+  margin-left: 30px;
+  margin-right: 30px;
+  align-items: center;
+}
+}
+@media (min-width:0px) and (max-width:630px)
+{
+  #featurecard_bigbox
+{
+  border: 2px solid rgb(245, 243, 243);
+  box-shadow: 0px 0px 15px;
+  position:static;
+  top: 0px;
+  display: flex;
+  width: 240px;
+  height: 240px;
+  flex-direction: column;
+  margin-top: 20px;
+  justify-content: center;
+  margin-left: 30px;
+  margin-right: 30px;
+  align-items: center;
+}
 }

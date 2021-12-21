@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
-import '.PhoneShareAndClap/.css'
+import './PhoneShareAndClap.css'
 function Clapmobile() {
   
     const [frequency,setfrequency]=useState(0);
