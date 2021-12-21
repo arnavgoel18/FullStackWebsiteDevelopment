@@ -17,7 +17,8 @@ function Footer() {
           <Link to="/accelerons"><p className="black_things_to_explore">Team Accelerons </p></Link>
           <Link to="/nitrox"><p className="black_things_to_explore">Team Nitrox</p></Link>
           <Link to="/autokriti"><p className="black_things_to_explore">Autokriti</p></Link>
-          <Link to="/blogs"><p className="black_things_to_explore">Blogs</p></Link>
+          <Link to="/blogsc"><p className="black_things_to_explore">Blogs</p></Link>
+          <Link to="/sponsors"><p className="black_things_to_explore">Sponsers</p></Link>
 
         </div>
       </div>
