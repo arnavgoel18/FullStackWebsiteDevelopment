@@ -17,10 +17,7 @@
   margin-bottom: 30px;
   /* padding-left: 20px; */
 }
-#followus_title
-{
-  margin-left: 20px;
-}
+
 #followus_socialmedia
 {
    display: flex;
@@ -28,8 +25,15 @@
 }
 #followus_title
 {
-  margin-top: 20px;
+  margin-left: 20px;
+  display: inline;
   font-weight: 700;
+}
+.follow-line{
+  width:75px;
+  margin-top: 10px;
+  float:right;
+  
 }
 .follow_teams
 {

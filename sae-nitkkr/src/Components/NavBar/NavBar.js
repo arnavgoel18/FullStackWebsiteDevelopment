@@ -22,7 +22,7 @@ function NavBar() {
                     </Link>
                 </li>
                 <li className="NavigationBar_Nav-nav-item">
-                    <Link to="/blogs" className="NavigationBar_Nav-nav-link" onClick={() => setOpen(false)}>
+                    <Link to="/sponsors" className="NavigationBar_Nav-nav-link" onClick={() => setOpen(false)}>
                         Sponsors
                     </Link>
                 </li>

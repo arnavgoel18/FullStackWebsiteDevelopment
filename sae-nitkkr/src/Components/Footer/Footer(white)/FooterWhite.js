@@ -14,9 +14,12 @@ function Footerautokriti() {
       </div>
       <hr id="white_line_for_first" />
       <div id="white_explore_us_content" className="each_footer_content">
-        <Link to="/accelerons"><p className="white_things_to_explore">Team Accelerons </p></Link>
-        <Link to="/nitrox"><p className="white_things_to_explore">Team Nitrox</p></Link>
-        <Link to="/autokriti"><p className="white_things_to_explore">Autokriti</p></Link>
+        <Link to="/accelerons" style={{ textDecoration: 'none', color: "black" }}><p className="white_things_to_explore">Team Accelerons </p></Link>
+        <Link to="/nitrox" style={{ textDecoration: 'none', color: "black" }}><p className="white_things_to_explore">Team Nitrox</p></Link>
+        <Link to="/autokriti" style={{ textDecoration: 'none', color: "black" }}><p className="white_things_to_explore">Autokriti</p></Link>
+        <Link to="/blogs" style={{ textDecoration: 'none', color: "black" }}><p className="white_things_to_explore">Blogs</p></Link>
+        <Link to="/sponsors" style={{ textDecoration: 'none', color: "black" }}><p className="white_things_to_explore">Sponsors</p></Link>
+        <Link to="/contactus" style={{ textDecoration: 'none', color: "black" }}><p className="white_things_to_explore">Contact Us</p></Link>
       </div>
     </div>
     <div id="white_footer_box2">
@@ -104,6 +107,21 @@ function Footerautokriti() {
           />
           <span id="white_linkedin_text"><a href="https://in.linkedin.com/company/sae-nit-kkr" target="_blank">linked.com/company/sae-nit-kkr</a></span>
         </p>
+
+        <p>
+            {" "}
+            <img
+              className="white_contact_image"
+              src="https://img.icons8.com/material-outlined/24/000000/add-contact-to-company.png"
+              alt="contact_image"
+            />
+            <span id="white_email_text">
+              {" "}
+              <Link to="/contactus">
+                Contact Us
+              </Link>
+            </span>
+          </p>
       </div>
     </div>
     <div id="white_footer_box4">

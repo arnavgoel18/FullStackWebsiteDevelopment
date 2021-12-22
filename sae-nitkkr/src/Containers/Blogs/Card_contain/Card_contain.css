@@ -9,10 +9,10 @@
 }
 #card_contain
 {
-    border: 2px solid rgb(247, 247, 247);
+    border: 2px solid white;
     width: 900px;
     /* height: 600px; */
-    background-color:rgb(249, 250, 249) ;
+    background-color:white ;
     display: flex;
     justify-content: space-around;
     align-content: center;
@@ -21,8 +21,8 @@
 }
 #side_contain
 {
-    background-color: rgb(245, 243, 243);
-    border-left: 2px solid rgb(121, 116, 116);
+   background-color: white;
+    border-left: 2px solid #c4c4c4;
     width:300px;
     display: flex;
     flex-wrap: wrap;

@@ -16,7 +16,9 @@
     padding: 20px;
 }
 .container{
-    border: 2px solid black;
+    box-shadow: 10px 10px 4px 0px #00000040;
+    border: 1px solid #00000021;
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
     border-radius: 10px;
     /* min-height: 80vh; */
     width: 50%;
@@ -25,7 +27,6 @@
     text-align:left;
     gap: 2vh;
     font-size: 1.2rem;
-    box-shadow: grey  2px 2px;
     padding-bottom: 10px;
     margin-bottom: 20px;
     padding-left: 20px;
@@ -35,7 +36,7 @@
     width: 100%;
     margin-top: 10px;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: bold;  
 }
 .container .field span{
     position:absolute   ;
@@ -54,7 +55,8 @@ input,textarea{
     border: none;
     outline: none;
     border-bottom: 1.5px solid black;
-    resize: none;
+    /* resize: none; */
+    /* height: auto; */
 }   
 .whole-body .container .field  input:focus ~ span,
 .whole-body .container .field  input:valid ~ span,     
@@ -74,8 +76,8 @@ input,textarea{
     text-align: center;
 }
 button{
-    border-radius: 10px;
-    background: orange;
+    border-radius: 15px;
+    background: #E9910DFC;
     height: 40px;
     width: 100px;
     color: white    ;
@@ -110,8 +112,11 @@ button{
     padding-top: 10px;
 }
 #s1,#s2{
-    background-color: grey;
+    background: #C4C4C4BD;
     width: 90%;
+    height: 65%;
+    padding: 0.8%;
+    border-radius: 5px;
 }
 @media screen and (max-width:938px){
     .whole-body{
@@ -129,13 +134,23 @@ button{
 }
 @media screen and (min-width:938px){
     #abcd{
-      margin-bottom: 35px;
+      margin-bottom: 90px;
     }
+}
+@media screen and (min-width:425px) and (max-width:768px){
+    .container{
+        width: 70vw;
+    }
+    
 }
 @media screen and (max-width:425px){
     .container{
-        width: 80vw;
+        width: 90vw;
+        padding-left: 7px;
     }  
+    input,textarea{
+        width: 98%; 
+    }
     .tt{
         position: absolute;
         left: 72px  ;

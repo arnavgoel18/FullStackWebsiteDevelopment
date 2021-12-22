@@ -62,7 +62,7 @@ function ContactUS() {
               name="name"
               required="required"
             />{" "}
-            <span> Name </span>
+            <span> Name.. </span>
           </div>
           <div className="field">
             {" "}
@@ -73,15 +73,15 @@ function ContactUS() {
               id=""
               required="required"
             />
-            <span> Email </span>
+            <span> Email Id.. </span>
           </div>
           <div className="field">
-            <input type="number" name="phone" id="" required="required" />
-            <span> Phone </span>
+            <input type="number" name="phone" id="" required="unrequired" />
+            <span> Phone No.(optional)</span>
           </div>
           <div className="field">
-            <input type="text" name="institute" id="" required="required" />
-            <span>Institute </span>{" "}
+            <input type="text" name="institute" id="" required="unrequired" />
+            <span>Institute/Organisations(optional) </span>{" "}
           </div>
           <div className="field">
             {" "}
@@ -89,17 +89,19 @@ function ContactUS() {
               required="required"
               name="message"
               id=""
-              cols="65"
-              rows="6"
+              // cols="65"
+              // rows="6"
             ></textarea>
-            <span> Message </span>
+            <span>Your Message </span>
           </div>
           <div className="field">
-            Reason to contact us{" "}
+            Reason to Contact{" "}
             <select id="s1">
-            <option selected hidden value="">--Select any one--</option>
-              <option name="want_to_write_a_blog" value="option">
-                Want to write a blog
+              <option selected hidden value="">
+                --Select any one--
+              </option>
+              <option name="submit blog" value="option">
+                To submit a blog
               </option>
               <option name="sponsership" value="option">
                 Sponsership
@@ -107,15 +109,20 @@ function ContactUS() {
               <option name="brand_ambassador" value="option">
                 Brand Ambassador
               </option>
-              <option name="fault_in_content_on_website" value="option">
-                Fault in content on Website
+              <option name="content was abusive" value="option">
+                Content was abusive
+              </option>
+              <option name="other" value="option">
+                Other
               </option>
             </select>
           </div>
           <div className="field">
-            Person contacting us is{" "}
+            Person Contacting us is a{" "}
             <select id="s2">
-            <option selected hidden value="">--Select any one--</option>
+              <option selected hidden value="">
+                --Select any one--
+              </option>
               <option name="club_alumni" value="option">
                 Club Alumni
               </option>
@@ -128,11 +135,16 @@ function ContactUS() {
               <option name="professor" value="option">
                 Professor
               </option>
+              <option name="other" value="option">
+                Other
+              </option>
             </select>
           </div>
-          <div className="button"><button> Submit </button></div>
+          <div className="button">
+            <button> Submit </button>
+          </div>
 
-                {/* <div className="abc" id="abcd" ><img src={location} alt="" />
+          {/* <div className="abc" id="abcd" ><img src={location} alt="" />
                     <a className="location" href="https://www.google.com/maps/dir/29.5070878,75.0449986/WRV9%2BW46+Gol+Canteen+(SAE+NITKKR),+NIT,+Thanesar,+Haryana+136119/@29.7293325,74.8076003,8z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x390e3f5100000001:0x7f8e5219d122c23e!2m2!1d76.8178281!2d29.9447794">  <div className="tt"> Gol,NIT Kurukshetra</div></a>
                 </div>
                 <div className="abc"> <img src={mail} alt="" />  <div className="tt"> saenitkurukshetra@gmail.com</div></div>
@@ -162,7 +174,7 @@ function ContactUS() {
                     <option value="option">Proffesor</option>
                 </select></div></div>
                 <div className="button"><button>Submit </button></div> */}
-                </div>
+        </div>
       </div>
     </>
   );
