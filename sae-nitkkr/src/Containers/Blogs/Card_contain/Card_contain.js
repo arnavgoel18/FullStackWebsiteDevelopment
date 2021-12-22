@@ -13,8 +13,8 @@ function Card_contain() {
     <div id="card_contain">
     <TopicsCardHolder
      srcs={daq}
-     title="DAQ and Microcontrollers"
-     date="10/10/2021"
+     title="Left Vs Right"
+     date="09/09/2021"
     /> 
     <TopicsCardHolder
     srcs={brakes}
@@ -31,7 +31,7 @@ function Card_contain() {
     title="Brakes and What Materials to Use"
     date="10/10/2021"
     /> 
-    <TopicsCardHolder
+    {/* <TopicsCardHolder
     srcs={daq}
     title="DAQ and Microcontrollers"
     date="21/10/2021"
@@ -102,7 +102,7 @@ function Card_contain() {
     /> 
     <TopicsCardHolder srcs={brakes}
     title="Brakes and What Materials to Use"
-    date="10/10/2021"/> 
+    date="10/10/2021"/>  */}
     
     </div>
     <div id="side_contain">

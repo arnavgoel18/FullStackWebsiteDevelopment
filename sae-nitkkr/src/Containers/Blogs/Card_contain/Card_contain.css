@@ -12,6 +12,7 @@
     border: 2px solid white;
     width: 900px;
     /* height: 600px; */
+
     background-color:white ;
     display: flex;
     justify-content: space-around;
@@ -23,6 +24,7 @@
 {
    background-color: white;
     border-left: 2px solid #c4c4c4;
+    margin-top: 20px;
     width:300px;
     display: flex;
     flex-wrap: wrap;
@@ -43,7 +45,7 @@
 {
     #side_contain
 {
-    background-color: rgb(245, 243, 243);
+    background-color: white;
     border-left: none;
     width:700px;
     flex-wrap: wrap;

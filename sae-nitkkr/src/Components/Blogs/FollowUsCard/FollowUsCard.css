@@ -9,6 +9,8 @@
   margin-top: 20px;
   margin-left: 30px;
   margin-right: 30px;
+  padding-top: 5px;
+  padding-right: 5px;
   padding-bottom:30px;
   display: flex;
   /* border: 2px solid black; */
@@ -31,7 +33,7 @@
 }
 
 .follow-line{
-  width:87px;
+  width:92px;
   margin-top: 10px;
   float:right;
   
@@ -66,12 +68,18 @@
   margin-top: 20px;
   margin-left: 30px;
   margin-right: 30px;
-  padding-bottom:30px;
+  padding-bottom:25px;
   display: flex;
   /* border: 2px solid black; */
   box-shadow: 0px 0px 10px;
   flex-direction: column;
   margin-bottom: 30px;
   /* padding-left: 20px; */
+}
+.follow-line{
+  width:80px;
+  margin-top: 10px;
+  float:right;
+  
 }
 }

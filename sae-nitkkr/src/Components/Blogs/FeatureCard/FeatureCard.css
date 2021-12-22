@@ -52,7 +52,7 @@ font-weight: 700;
   width: 240px;
   position: initial;
 
-  height: 280px;
+  /* height: 280px; */
   flex-direction: column;
   /* margin-top: 20px; */
   justify-content: center;
