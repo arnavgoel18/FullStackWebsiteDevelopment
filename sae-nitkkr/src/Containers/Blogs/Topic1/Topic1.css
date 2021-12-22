@@ -70,18 +70,20 @@
 .body {
   display: flex;
   margin-top: 20px;
-  margin-right: 20px;
+  margin-right: 1rem;
+  word-wrap: break-word;
 }
 #bodyContent {
   flex-grow: 1;
   margin: 1rem;
-  margin-right: 1rem;
+  padding-right: 1rem;
+  margin-left: 3rem;
   width: 100%;
   word-wrap:break-word;
 }
 hr {
   width: 96%;
-  margin-left: 20px;
+  margin-left: 22px;
 }
 .end {
   text-align: center;
@@ -102,9 +104,8 @@ hr {
   text-align: center;
 }
 .other_blogs{
-   padding-left: 2%;
+   padding-left: 3%;
    padding-top: 1%;
-   
    text-decoration: underline;
 }
 
@@ -133,4 +134,10 @@ hr {
     hr{
       display: none;
     }
+    .other_blogs{
+     display: flex;
+     justify-content: center;
+     margin-top: 3vh;
+    }
+   
 }
