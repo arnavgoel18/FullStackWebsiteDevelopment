@@ -33,6 +33,7 @@
 }
 
 .follow-line{
+  display: flex;
   width:92px;
   margin-top: 10px;
   float:right;
@@ -76,10 +77,5 @@
   margin-bottom: 30px;
   /* padding-left: 20px; */
 }
-.follow-line{
-  width:80px;
-  margin-top: 10px;
-  float:right;
-  
-}
+
 }
