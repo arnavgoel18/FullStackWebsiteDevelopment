@@ -148,6 +148,11 @@
     height: 90px;
     font-size:12px;
 }
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
 @media (min-width: 0px) and (max-width: 767px){
     #clap_bigbox
     {

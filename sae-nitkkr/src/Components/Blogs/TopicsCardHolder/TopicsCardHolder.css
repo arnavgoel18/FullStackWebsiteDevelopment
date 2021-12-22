@@ -2,12 +2,12 @@
 {
     margin-top: 50px;
     /* border: 2px solid black; */
-    height: 370px;
+    height: 350px;
     display: flex;
     flex-direction: column;
     
     margin-bottom: 50px;
-    width: 300px;
+    width: 280px;
     display: flex;
 }
 #card-image,#card-title,#card-actions

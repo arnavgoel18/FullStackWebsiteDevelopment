@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Route, Link, BrowserRouter as Router } from "react-router-dom";
+// import ContactUS from "../../../Containers/ContactUs/contactus.js";
 
 import "./ShareAndClapDIV.css";
 
@@ -52,7 +53,7 @@ function Clap() {
           <div id="clap_third">
             <div id="clap_third_report_title">
               <h1 id="clap_report_an_issue">
-                <b>Report an Issue</b>{" "}
+               <Link to="/contactus" target="_blank">Report an Issue</Link>
               </h1>
             </div>
           </div>
@@ -64,6 +65,7 @@ function Clap() {
           </div>
         </div>
       </div>
+        {/* <Route path="/contactus" exact component={() => <ContactUS/>} /> */}
     </Router>
   );
 }

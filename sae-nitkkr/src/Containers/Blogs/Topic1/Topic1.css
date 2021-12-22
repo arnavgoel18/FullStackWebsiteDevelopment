@@ -61,7 +61,9 @@
 .topicname {
   align-self: center;
   flex-grow: 1;
-  padding-bottom: 14px;
+  margin-bottom: 14px;
+  font-size: 2rem;
+  font-weight: bolder;
 }
 .topicname span {
   border-bottom: 2px solid black;
@@ -129,7 +131,7 @@ hr {
       word-wrap:break-word;
     }
     #image{
-      width: 70%;
+      width: 90%;
     }
     hr{
       display: none;
