@@ -25,12 +25,14 @@
     background-color: #EED600;
     font-weight: 700;
     border-radius: 5px;
+    
     border: none;
     color: black;
     font-size: 18px;
     padding-left: 10px;
     font-family: 'Montserrat', sans-serif;
     padding-right: 10px;
+    margin-bottom: 20px;
     width: 160px;
 }
 #knowmore_button:hover
@@ -98,6 +100,7 @@
     background-color: #EED600;
     font-weight: 700;
     border-radius: 5px;
+    margin-bottom: 20px;
     border: none;
     font-size: 18px;
     padding-left: 10px;

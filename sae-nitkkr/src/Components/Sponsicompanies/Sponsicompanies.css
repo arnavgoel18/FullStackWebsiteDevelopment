@@ -22,12 +22,14 @@
   flex-direction: row;
   /* border: 2px solid black; */
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+ 
 }
 .ima
 {
     /* border: 2px solid black; */
     width:300px;
+    margin:10px;
 }
 .ima:hover
 {
@@ -178,6 +180,7 @@
       border: none;
       font-size: 25px;
       height: 40px;
+      margin-bottom: 20px;
     width: 215px;
   }
 }
