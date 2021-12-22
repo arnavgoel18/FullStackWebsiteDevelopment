@@ -16,7 +16,7 @@ function ExploreUs() {
           <Link to="/contactus"  style={{ textDecoration: 'none', color: "black" }}><Card text="CONTACT US" /></Link>
         </div>
         <div className="ExploreUs-box">
-          <Link to="/sponsors"  style={{ textDecoration: 'none', color: "black" }}><Card text="BLOGS" /></Link>
+          <Link to="/blogs"  style={{ textDecoration: 'none', color: "black" }}><Card text="BLOGS" /></Link>
         </div>
       </div>
     </div>
