@@ -16,10 +16,10 @@ function Sponsors() {
     <div>
       <NavBar/>
       <Become_sponsor/>
-      <br/>
+      
       <Sponsicompanies/>
       <Become_sponsor/>
-      <br/>
+     
       <Footer/>
     </div>
   )
