@@ -17,6 +17,9 @@ function Footerautokriti() {
         <Link to="/accelerons"><p className="white_things_to_explore">Team Accelerons </p></Link>
         <Link to="/nitrox"><p className="white_things_to_explore">Team Nitrox</p></Link>
         <Link to="/autokriti"><p className="white_things_to_explore">Autokriti</p></Link>
+        <Link to="/blogs"><p className="white_things_to_explore">Blogs</p></Link>
+        <Link to="/sponsors"><p className="white_things_to_explore">Sponsors</p></Link>
+        <Link to="/contactus"><p className="white_things_to_explore">Contact Us</p></Link>
       </div>
     </div>
     <div id="white_footer_box2">
@@ -104,6 +107,21 @@ function Footerautokriti() {
           />
           <span id="white_linkedin_text"><a href="https://in.linkedin.com/company/sae-nit-kkr" target="_blank">linked.com/company/sae-nit-kkr</a></span>
         </p>
+
+        <p>
+            {" "}
+            <img
+              className="white_contact_image"
+              src="https://img.icons8.com/material-outlined/24/000000/add-contact-to-company.png"
+              alt="contact_image"
+            />
+            <span id="white_email_text">
+              {" "}
+              <Link to="/contactus">
+                Contact Us
+              </Link>
+            </span>
+          </p>
       </div>
     </div>
     <div id="white_footer_box4">
