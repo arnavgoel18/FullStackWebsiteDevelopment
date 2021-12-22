@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Route, Link, BrowserRouter as Router } from "react-router-dom";
+import { RWebShare } from "react-web-share";
 // import ContactUS from "../../../Containers/ContactUs/contactus.js";
 
 import "./ShareAndClapDIV.css";
@@ -16,13 +17,25 @@ function Clap() {
         <div id="clap_bigbox">
           <div id="clap_first">
             <div id="clap_first_shareimage">
-              <Link to="/home">
+              <RWebShare
+                data={{
+                  text: "You are sharing link of your favourite blog.",
+                  url: "http://www.google.com",
+                  title: "Blog Title aaega yha",
+                }}
+                sites="facebook"
+                onClick={() => console.log("shared successfully!")}
+              >
                 <img
                   id="clap_embed_shareimage"
                   alt="clap_embed_shareimage"
                   src="https://img.icons8.com/ios-filled/50/000000/forward-arrow.png"
-                />{" "}
-              </Link>
+                />
+              </RWebShare>
+
+              {/* <Link to="/home">
+                
+              </Link> */}
             </div>
             <div id="clap_first_sharetitle">
               <h1 id="clap_sharepost">
@@ -53,7 +66,9 @@ function Clap() {
           <div id="clap_third">
             <div id="clap_third_report_title">
               <h1 id="clap_report_an_issue">
-               <Link to="/contactus" target="_blank">Report an Issue</Link>
+                <Link to="/contactus" target="_blank">
+                  Report an Issue
+                </Link>
               </h1>
             </div>
           </div>
@@ -65,7 +80,7 @@ function Clap() {
           </div>
         </div>
       </div>
-        {/* <Route path="/contactus" exact component={() => <ContactUS/>} /> */}
+      {/* <Route path="/contactus" exact component={() => <ContactUS/>} /> */}
     </Router>
   );
 }

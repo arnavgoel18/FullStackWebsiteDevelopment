@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
+import { RWebShare } from "react-web-share";
 import './PhoneShareAndClap.css'
 function Clapmobile() {
   
@@ -32,12 +33,28 @@ return (
                 </div>
                 <div id="clapmobile_second_claptext">Clap</div>
                 <div id="clapmobile_second_share">
-
+{/* 
                 <Link to='/home'><img
               id="clapmobile_embed_shareimage"
               alt="clapmobile_embed_shareimage"
               src="https://img.icons8.com/ios-filled/50/000000/forward-arrow.png"
-            /> </Link>
+            /> </Link> */}
+
+<RWebShare
+                data={{
+                  text: "You are sharing link of your favourite blog.",
+                  url: "http://www.google.com",
+                  title: "Blog Title aaega yha",
+                }}
+                sites="facebook"
+                onClick={() => console.log("shared successfully!")}
+              >
+                <img
+              id="clapmobile_embed_shareimage"
+              alt="clapmobile_embed_shareimage"
+              src="https://img.icons8.com/ios-filled/50/000000/forward-arrow.png"
+            />
+              </RWebShare>
                 </div>
             </div>
         </div>
