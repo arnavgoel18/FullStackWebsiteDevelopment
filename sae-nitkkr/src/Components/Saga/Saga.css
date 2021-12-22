@@ -131,7 +131,7 @@ p#acclerons_legacy{
 {
     .acclerons_saga-outside-container{
         width: 100%;
-        margin-left: 5px;
+        margin-left: -4px;
         padding: 0vh;
         display: flex;
         flex-direction: column;
@@ -265,7 +265,7 @@ p#acclerons_legacy{
 {
     .nitrox_saga-outside-container{
         width: 100%;
-        margin-left: 5px;
+        margin-left: -4px;
         padding: 0vh;
         display: flex;
         flex-direction: column;

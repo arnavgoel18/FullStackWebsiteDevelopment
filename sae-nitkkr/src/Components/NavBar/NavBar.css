@@ -42,6 +42,7 @@
 
 .NavigationBar_Nav-navlogo{
     color: #fff;
+    margin-left: -17px;
     font-weight: bold;
     text-decoration: none;
 }
@@ -70,7 +71,7 @@
     cursor: pointer;
 }
 
-@media only screen and (max-width:500px){
+@media only screen and (max-width:680px){
     .NavigationBar_Nav-navbar{
         position: relative;
     }
@@ -80,13 +81,14 @@
         position: absolute;
         text-align: center;
         width: 100%;
-        top: 80px;
+        top: 50px;
         left: -100%;
         transition: 0.5s all;
     }
     .NavigationBar_Nav-nav-links.active{
         background: #000;
         left: 0;
+        top: 50px;
     }
     .NavigationBar_Nav-nav-item{
         padding: 10px 0;

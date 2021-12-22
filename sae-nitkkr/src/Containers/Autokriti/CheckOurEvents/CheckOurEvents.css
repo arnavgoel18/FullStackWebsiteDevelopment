@@ -202,7 +202,7 @@ image {
 }
 @media (min-width: 320px) and (max-width: 375px) {
   .CheckOurEvents-heading {
-    margin-left: 20px;
+    margin-left: 10px;
     font-size: 25px;
   }
   .CheckOurEvents-showmore {
