@@ -29,11 +29,16 @@
   display: inline;
   font-weight: 700;
 }
+
 .follow-line{
-  width:75px;
+  width:87px;
   margin-top: 10px;
   float:right;
   
+}
+#follow_table
+{border:1px solid #c4c4c4;
+  border-collapse: collapse;
 }
 .follow_teams
 {
