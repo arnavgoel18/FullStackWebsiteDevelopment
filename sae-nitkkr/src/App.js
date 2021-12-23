@@ -26,6 +26,7 @@ function App() {
           <Route path="/sponsors" exact component={() => <Sponsors/>}/>
           <Route path="/blogs" exact component={() => <Blogs/>}/>
           <Route path="/blogs/leftvsright" exact component={() => <Topic1/>}/>
+          <Route path="/blogs/guidetovd" exact component={() => <Topic2/>}/>
         </Switch>
       </Router>
     </>
