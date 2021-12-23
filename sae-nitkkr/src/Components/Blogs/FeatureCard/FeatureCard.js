@@ -9,7 +9,7 @@ function FeatureCard() {
         Want to Feature your own blog?
       </div>
       <div id="featurecard_button">
-        <Link to="/contactus">
+        <Link to="/contactus" target="_blank">
           <button id="learnmore_button">
             Learn More
           </button>
