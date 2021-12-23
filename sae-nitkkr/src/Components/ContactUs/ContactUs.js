@@ -105,7 +105,7 @@ function ContactUS() {
                 To submit a blog
               </option>
               <option name="sponsership" value="option">
-                Sponsership
+                Sponsorship
               </option>
               <option name="brand_ambassador" value="option">
                 Brand Ambassador
