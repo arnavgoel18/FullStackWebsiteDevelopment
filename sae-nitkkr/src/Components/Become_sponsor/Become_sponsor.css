@@ -267,7 +267,7 @@
         /* border: 2px solid black; */
         width: 410px;
         display: flex;
-        margin-right:-100px;
+        margin-right:0px;
         justify-content: flex-end;
         
     }
@@ -278,7 +278,7 @@
     background-color: #EED600;
     font-weight: 700;
     border-radius: 5px;
-    margin-left:-122px;
+    margin-left:25px;
     border: none;
     
     font-size: 22px;
@@ -289,10 +289,10 @@
     #sponsor_content
     {
         margin-top: 50px;
-        font-size:100px;
+        font-size:90px;
         
         /* border: 2px solid black; */
-        margin-left:-100px;
+        margin-left:30px;
         color: rgb(85, 83, 83);
         text-shadow: 0px 5px 10px;
         
