@@ -1,11 +1,15 @@
 import React, { Component } from 'react'
 import { useEffect } from 'react'
+
 import ContactUS from '../../Components/ContactUs/ContactUs'
 import NavBar from '../../Components/NavBar/NavBar'
 import Footer from '../../Components/Footer/Footer(black)/FooterBlack'
 
-function contact(){
+function Contact(){
   
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
   
     return(
         
@@ -17,4 +21,4 @@ function contact(){
     )
 }
 
-export default contact
+export default Contact

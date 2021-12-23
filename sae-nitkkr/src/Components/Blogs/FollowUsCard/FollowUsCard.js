@@ -5,7 +5,7 @@ function FollowUsCard() {
     <div id="followuscard_bigbox" >
       <div id="followus_title">
         FOLLOW US
-    <span><hr className='follow-line'></hr></span>
+        <hr className='follow-line'></hr>
         <br/>
         <br/>
       </div>
