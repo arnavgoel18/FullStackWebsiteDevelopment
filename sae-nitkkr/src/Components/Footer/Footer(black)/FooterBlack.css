@@ -50,7 +50,7 @@
 
 #black_line_for_first{
    position: relative;
-   left: -30px;
+   left: -40px;
    top: 0px;
    width: 140px;
   background-image:linear-gradient(to bottom right,rgb(31, 182, 228),rgb(26, 22, 224));
@@ -71,7 +71,7 @@
 #black_line_for_second{
     position: relative;
     /* top: -19px; */
-    left: -65px;
+    left: -75px;
     width: 75px;
      background-image:  linear-gradient(to bottom right,rgb(31, 182, 228),rgb(26, 22, 224));
      height: 3px;
@@ -81,7 +81,7 @@
  #black_line_for_third{
     position: relative;
     /* top: -19px; */
-    left: -60px;
+    left: -70px;
     width: 130px;
      background-image: linear-gradient(to bottom right,rgb(31, 182, 228),rgb(26, 22, 224));
      height: 3px;
@@ -91,7 +91,7 @@
  #black_line_for_fourth{
     position: relative;
     /* top: -19px; */
-    
+    left: -10px;
     width: 250px;
    background-image: linear-gradient(to bottom right,rgb(31, 182, 228),rgb(26, 22, 224));
      height: 3px;

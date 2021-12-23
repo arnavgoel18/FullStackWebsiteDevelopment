@@ -1,18 +1,21 @@
-import "./Topic1.css";
-import logo from "../../../Components/LEFT vs RIGHT/images/logo.png";
+import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import { Route, Link} from "react-router-dom";
+
 import logo1 from "../../../Components/LEFT vs RIGHT/images/logo1.png";
-import pic from "../../../Components/LEFT vs RIGHT/images/pic.png";
 import one from "../../../Components/LEFT vs RIGHT/images/one.jpg";
 import two from "../../../Components/LEFT vs RIGHT/images/two.jpg";
 import three from "../../../Components/LEFT vs RIGHT/images/three.jpg";
 import four from "../../../Components/LEFT vs RIGHT/images/four.jpg";
 import topiccardpic from "../../../Components/LEFT vs RIGHT/images/topiccardholder1.png";
+
+import "./Topic1.css";
 import NavBar from "../../../Components/NavBar/NavBar";
-import { BrowserRouter as Router } from "react-router-dom";
 import ShareAndClapDIV from "../../../Components/Blogs/ShareAndClap/ShareAndClapDIV";
 import TopicsCardHolder from "../../../Components/Blogs/TopicsCardHolder/TopicsCardHolder";
 import PhoneShareAndClap from "../../../Components/Blogs/ShareAndClap/PhoneShareAndClap";
 import Footer from "../../../Components/Footer/Footer(black)/FooterBlack";
+
 function App() {
   return (
     <Router>
@@ -81,7 +84,7 @@ function App() {
             <h3>
               Why is there such a disparity in selecting the side of the
               traffic?
-            </h3>
+            </h3><br></br>
             To answer this question, let us move backwards along the arrow of
             time. First we shall probe into the matter for LHT. The practice of
             LHT got its impetus from the soldiers of ancient times. Right-handed
@@ -141,22 +144,6 @@ function App() {
               {" "}
               Ford Model T(Image source: auto.howstuffworks.com)
             </div>
-            {/* <h3>
-              To check your understanding, kindly participate in the quiz (link
-              below).
-            </h3>
-            <br />
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSef8EnVIqOM-H02JyCO51QTi-u8bChOeOVaqlbmkHDt45E7pA/viewform?usp=sf_link">
-              <h5 className="link">
-                https://docs.google.com/forms/d/e/1FAIpQLSef8EnVIqOM-H02JyCO51QTi-u8bChOeOVaqlbmkHDt45E7pA/viewform?usp=sf_link
-              </h5>
-            </a>
-            <br />
-            <ol>
-              REFERENCES:
-              <li>wikipedia.com</li>
-              <li>businessinsider.com</li>
-            </ol> */}
           </div>
           <div className="extraspace a">
             <ShareAndClapDIV />

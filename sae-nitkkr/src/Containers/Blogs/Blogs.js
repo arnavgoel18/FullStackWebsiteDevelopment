@@ -6,14 +6,13 @@ import Card_contain from '../Blogs/Card_contain/Card_contain'
 function Topic2() {
   return (
     <div className="App">
-    <Navbar/>
-    <br/>
-    <Card_contain/>
-        <br/>
-        <br/>
-        <Footerblack/>
-        
-        </div>
+      <Navbar/>
+      <br/>
+      <Card_contain/>
+      <br/><br/>
+      <Footerblack/>  
+    </div>
   )
 }
+
 export default Topic2
