@@ -3,7 +3,7 @@ import Navbar from '../../Components/NavBar/NavBar'
 import Footerblack from '../../Components/Footer/Footer(black)/FooterBlack'
 import Card_contain from '../Blogs/Card_contain/Card_contain'
 
-function Topic2() {
+function Blogs() {
   return (
     <div className="App">
       <Navbar/>
@@ -15,4 +15,4 @@ function Topic2() {
   )
 }
 
-export default Topic2
+export default Blogs
