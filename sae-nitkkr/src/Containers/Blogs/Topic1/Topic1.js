@@ -18,7 +18,6 @@ import Footer from "../../../Components/Footer/Footer(black)/FooterBlack";
 
 function App() {
   return (
-    <Router>
       <div>
         <div className="header">
           <NavBar />
@@ -172,7 +171,6 @@ function App() {
         {/* <div className="footer"></div> */}
         <Footer/>
       </div>
-    </Router>
   );
 }
 
