@@ -9,6 +9,7 @@ import ContactUS from "./Containers/ContactUs/contactus";
 import Sponsors from "./Containers/Sponsors/Sponsors";
 import Blogs from './Containers/Blogs/Blogs'
 import Topic1 from './Containers/Blogs/Topic1/Topic1'
+import Topic2 from './Containers/Blogs/Topic2/Topic2'
 
 
 function App() {
