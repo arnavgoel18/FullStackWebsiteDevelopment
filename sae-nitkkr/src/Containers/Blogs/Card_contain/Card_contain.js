@@ -27,7 +27,6 @@ function Card_contain() {
           date="20/12/2021"
           />
         </Link> 
-        
         {/* <Link to="/blogs/daqandmicrocontrollers">
           <TopicsCardHolder
           srcs={daq}
