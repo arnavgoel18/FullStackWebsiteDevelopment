@@ -11,6 +11,7 @@ import Blogs from './Containers/Blogs/Blogs'
 import Topic1 from './Containers/Blogs/Topic1/Topic1'
 import Topic2 from './Containers/Blogs/Topic2/Topic2'
 
+
 function App() {
   document.title = "SAE NIT Kurukshetra";
   return (

@@ -23,7 +23,6 @@ function Clap() {
                   url: "http://www.google.com",
                   title: "Blog Title aaega yha",
                 }}
-                sites="facebook"
                 onClick={() => console.log("shared successfully!")}
               >
                 <img
