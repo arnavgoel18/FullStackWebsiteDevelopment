@@ -20,20 +20,21 @@ function Card_contain() {
           date="09/09/2021"
           />
         </Link>
-        <Link> 
+        <Link to="/blogs/guidetovd"> 
           <TopicsCardHolder
           srcs={brakes}
           title="Beginer's Guide to Vehicle Dynamics"
           date="20/12/2021"
           />
         </Link> 
-        <Link>
+        
+        {/* <Link to="/blogs/daqandmicrocontrollers">
           <TopicsCardHolder
           srcs={daq}
           title="DAQ and Microcontrollers"
           date="21/12/2021"
           /> 
-        </Link>    
+        </Link>     */}
       </div>
       <div id="side_contain">
         {/* <div id="side_contain_hustle"> */}

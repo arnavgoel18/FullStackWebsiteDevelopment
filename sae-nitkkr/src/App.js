@@ -9,7 +9,7 @@ import ContactUS from "./Containers/ContactUs/contactus";
 import Sponsors from "./Containers/Sponsors/Sponsors";
 import Blogs from './Containers/Blogs/Blogs'
 import Topic1 from './Containers/Blogs/Topic1/Topic1'
-
+import Topic2 from './Containers/Blogs/Topic2/Topic2'
 
 function App() {
   document.title = "SAE NIT Kurukshetra";
@@ -25,6 +25,7 @@ function App() {
           <Route path="/sponsors" exact component={() => <Sponsors/>}/>
           <Route path="/blogs" exact component={() => <Blogs/>}/>
           <Route path="/blogs/leftvsright" exact component={() => <Topic1/>}/>
+          <Route path="/blogs/guidetovd" exact component={() => <Topic2/>}/>
         </Switch>
       </Router>
     </>
