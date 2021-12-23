@@ -30,8 +30,7 @@ function App() {
         <div className="topicname">
           <span>
             {" "}
-            &nbsp;&nbsp;&nbsp;&nbsp; A BEGINNER'S GUIDE TO VEHICLE DYNAMICS IN
-            EASY WORDS &emsp;
+            &nbsp;&nbsp;&nbsp;&nbsp; A BEGINNER'S GUIDE TO VEHICLE DYNAMICS &emsp;
           </span>
           {/* &nbsp; for spaces to count similar type code for  &ensp -2spaces; &emsp; -4spaces */}
         </div>
