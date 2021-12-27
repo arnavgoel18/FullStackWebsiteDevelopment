@@ -16,6 +16,11 @@ function NavBar() {
                 SAENITKKR
             </Link>
             <ul className={open ? 'NavigationBar_Nav-nav-links active' : 'NavigationBar_Nav-nav-links'}>
+            <li className="NavigationBar_Nav-nav-item">
+                    <Link to="/" className="NavigationBar_Nav-nav-link" onClick={() => setOpen(false)}>
+                        Home
+                    </Link>
+                </li>
                 <li className="NavigationBar_Nav-nav-item">
                     <Link to="/blogs" className="NavigationBar_Nav-nav-link" onClick={() => setOpen(false)}>
                         Blogs

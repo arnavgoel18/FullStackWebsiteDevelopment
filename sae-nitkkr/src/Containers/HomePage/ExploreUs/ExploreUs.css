@@ -28,10 +28,8 @@
   display: flex;
   flex-wrap: wrap;
   margin: 15px 5px;
-  
 }
 .ExploreUs-box1 {
-
   width: 250px;
   height: 250px;
   justify-content: center;
@@ -41,6 +39,7 @@
   position: relative;
   cursor: pointer;
   transition: all 0.4s;
+  padding: 0 2px;
 }
 .ExploreUs-box1:hover {
   color: white;
