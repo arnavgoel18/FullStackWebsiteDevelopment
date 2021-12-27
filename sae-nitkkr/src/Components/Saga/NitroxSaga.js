@@ -30,7 +30,7 @@ function Saga(){
         {
             id: 2011,
             atvc: {
-                achievement1: "",
+                achievement1: "Did Not Participate",
                 achievement2: "",
                 achievement3: "",
             },
@@ -43,7 +43,7 @@ function Saga(){
         {
             id: 2012,
             atvc: {
-                achievement1: "",
+                achievement1: "Did Not Participate",
                 achievement2: "",
                 achievement3: "",
             },
@@ -56,7 +56,7 @@ function Saga(){
         {
             id: 2013,
             atvc: {
-                achievement1: "",
+                achievement1: "Did Not Participate",
                 achievement2: "",
                 achievement3: "",
             },
@@ -69,7 +69,7 @@ function Saga(){
         {
             id: 2014,
             atvc: {
-                achievement1: "",
+                achievement1: "Did Not Participate",
                 achievement2: "",
                 achievement3: "",
             },
@@ -95,7 +95,7 @@ function Saga(){
         {
             id: 2016,
             atvc: {
-                achievement1: "",
+                achievement1: "Did Not Participate",
                 achievement2: "",
                 achievement3: "",
             },
@@ -108,7 +108,7 @@ function Saga(){
         {
             id: 2017,
             atvc: {
-                achievement1: "",
+                achievement1: "Did Not Participate",
                 achievement2: "",
                 achievement3: "",
             },
@@ -142,8 +142,6 @@ function Saga(){
                 achievement5: "AIR3 in Suspension And Traction",
                 achievement6: "AIR3 in Sledge Pull",
                 achievement7: "AIR3 in Endurance",
-                
-
             },
             baja: {
                 achievement1: "AIR4 in Design",
@@ -354,7 +352,6 @@ function Saga(){
 
             <div className = "nitrox_saga-container">
                 <div className="nitrox_years">
-                    <div id="year"><p onClick={() => changeInfo(2020)}>2020</p> <div className="vl"></div></div>
                     <div id="year"><p onClick={() => changeInfo(2019)}>2019</p> <div className="vl"></div></div>
                     <div id="year"><p onClick={() => changeInfo(2018)}>2018</p> <div className="vl"></div></div>
                     <div id="year"><p onClick={() => changeInfo(2017)}>2017</p> <div className="vl"></div></div>

@@ -21,7 +21,7 @@ function Accelerons(){
             <FirstDisplayDiv page="Accelerons"/>
             <TeamsAboutUs page="Accelerons"/>
             <WhereDoWeParticipate/>
-            <Saga/>
+            {/* <Saga/> */}
             <br/>
             <br/>
             <Gallery/>

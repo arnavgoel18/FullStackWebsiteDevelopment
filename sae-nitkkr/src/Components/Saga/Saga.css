@@ -36,13 +36,14 @@
     display: flex;
     justify-content: center;
     cursor: pointer;
-    overflow: scroll;
+    overflow: none;
 }
 
 @media (max-width: 600px){
     .acclerons_years{
         overflow-x: scroll;
         justify-content: left;
+        margin: 0 20px;
     }
 }
 
@@ -183,13 +184,14 @@ p#acclerons_legacy{
     display: flex;
     justify-content: center;
     cursor: pointer;
-    overflow: scroll;
+    overflow: none;
 }
 
 @media (max-width: 600px){
     .nitrox_years{
         overflow-x: scroll;
         justify-content: left;
+        margin: 0 20px;
     }
 }
 
