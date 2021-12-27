@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.TeamLeads-Managers-Heading{
+    font-size: 30px;
+    font-family: "Montserrat", sans-serif;
+    
+    
+}
+.TeamLeads-heading{
+    font-size: 30px;
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+/*PROF INCHARGES*/
+
+.TeamLeads-profIncharge_container{
+    width: 100%; 
+    height: auto;
+    background-color: #000;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    padding: 4vh;
+    border-bottom: solid 5px #fff;
+}
+
+.TeamLeads-profIncharge_container p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    font-size: 30px;
+}
+
+.TeamLeads-persons_container{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10vh;
+    color: #fff;
+}
+
+.TeamLeads-person{
+    width: auto;
+}
+
+.TeamLeads-circle{
+    width: 20vh;
+    height: 20vh;
+    border-radius: 50%;
+    border: solid black 1px;
+    margin-bottom: 1vh;
+    overflow: hidden;
+}
+
+.TeamLeads-circle img{
+    height: inherit;
+    width: inherit;
+}
+
+/*MANAGERS*/
+
+.TeamLeads-managers_container{
+    margin-top: 0px;
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    text-align: center;
+    padding: 4vh;
+}
+
+.TeamLeads-profIncharge_container p{
+    font-weight: bolder;
+    font-weight: normal;
+    font-size: 30px;
+}
+
+.TeamLeads-persons_container{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10vh;
+}
+
+.TeamLeads-person{
+    width: auto;
+}
+
+.TeamLeads-circle{
+    width: 20vh;
+    height: 20vh;
+    border-radius: 50%;
+    border: solid black 1px;
+    margin-bottom: 1vh;
+}
+
+@media screen and (max-width: 1020px){
+    .TeamLeads-persons_container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .TeamLeads-person{
+        margin-bottom: 1vh;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .TeamLeads-managers_container{
+        display: none;
+    }
+}
