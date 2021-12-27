@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Route, Link} from "react-router-dom";
 
@@ -17,6 +17,11 @@ import PhoneShareAndClap from "../../../Components/Blogs/ShareAndClap/PhoneShare
 import Footer from "../../../Components/Footer/Footer(black)/FooterBlack";
 
 function App() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
       <div>
         <div className="header">
@@ -155,18 +160,11 @@ function App() {
 
         <h2 className="other_blogs">Other Blogs</h2>
         <div className="end">
+          <Link to="/blogs/guidetovd">
           <TopicsCardHolder
             srcs={topiccardpic}
-            title="DAQ and Multicontrollers"
-          />
-          <TopicsCardHolder
-            srcs={topiccardpic}
-            title="DAQ and Multicontrollers"
-          />
-          <TopicsCardHolder
-            srcs={topiccardpic}
-            title="DAQ and Multicontrollers"
-          />
+            title="Beginer's Guide to Vehicle Dynamics"
+          /></Link>
         </div>
         {/* <div className="footer"></div> */}
         <Footer/>
