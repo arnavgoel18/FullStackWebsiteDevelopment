@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import PersonCard from '../../Containers/HomePage/ProfInchargesAndManagers/PersonCard'
 
 /* Import Images */
-import nitroxCap from '../../Assets/ProfIncharges/angra.jpg'
+import nitroxCap from '../../Assets/ProfIncharges/nitroxCap.png'
 import nitroxVicecap from '../../Assets/ProfIncharges/VicePres.jpg'
-import acceleronsCap from '../../Assets/ProfIncharges/angra.jpg'
+import acceleronsCap from '../../Assets/ProfIncharges/acceleronsCap.png'
 import acceleronsVicecap from '../../Assets/ProfIncharges/acceleronsViceCap.png'
 
 import './TeamLeads.css'
@@ -18,8 +18,8 @@ function TeamLeads(props){
                     <p className="TeamLeads-heading">Team Leads</p>
                     
                     <div className = "TeamLeads-persons_container">
-                        <PersonCard name={"Ritik Yadav"} designation={"Team Captain"} url={nitroxCap}/>
-                        <PersonCard name={"Udit Tripathi"} designation={"Team Vice Captain"} url={nitroxVicecap}/>
+                        <PersonCard name={"Udit Tripathi"} designation={"Team Captain"} url={nitroxCap}/>
+                        <PersonCard name={"Ritik Yadav"} designation={"Team Vice Captain"} url={nitroxVicecap}/>
                     </div>
                 </div>
             </>
