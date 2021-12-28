@@ -3,10 +3,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 250px;
+    height: 280px;
     /* margin:20px 20px 20px 20px; */
     padding:35px 35px 35px 35px;
-    width: 280px;
+    width: 350px;
 }
 .roleupperPart{
     display: flex;
@@ -15,7 +15,7 @@
 }
 .rolenumber{
     color: #00E0FF;
-    font-family: Montserrat;
+    font-family:" Montserrat";
     font-style: normal;
     font-weight: bold;
     font-size: 19px;
@@ -26,7 +26,7 @@
     margin-top: 0px;
     width: fit-content;
     padding-left: 1rem;
-    font-family: Montserrat;
+    font-family:" Montserrat";
     font-style: normal;
     font-weight: 900;
     font-size: 1.9rem;
@@ -34,12 +34,13 @@
 }
 .roleContent{
     color: #FFFFFF;
-    font-family: Montserrat;
+    font-family:" Montserrat";
     font-style: normal;
     font-weight: 200;
     font-size: 17px;
     line-height: 21px;
-    margin-left: 34px;
+    margin-left: 40px;
+    margin-top: 0.7rem;
 }
 
 @media (min-width: 0px) and (max-width: 229px){
