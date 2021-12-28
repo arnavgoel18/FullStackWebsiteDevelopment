@@ -139,8 +139,8 @@ export default function FormDIV() {
             ></textarea>
             
           </div>
-        <div className="button" id="#button-submit">
-          <button> Submit </button>
+         <div className="form-button">
+          <button id="amb-button">  Submit </button>
         </div>
         </div>
         
