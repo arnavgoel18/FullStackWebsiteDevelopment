@@ -102,10 +102,10 @@ input,textarea{
     text-align: center;
     padding-top: 50px;
 }
-#button-submit{
+.form-button{
     text-align: center;
 }
-#button-submit{
+#amb-button{
     border-radius: 15px;
     background: #E9910DFC;
     height: 40px;
