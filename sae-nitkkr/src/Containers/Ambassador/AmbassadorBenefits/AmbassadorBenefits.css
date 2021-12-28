@@ -1,51 +1,35 @@
-.benefitsBody{
-    background-color:#2E37DF;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 250px;
-    /* margin:20px 20px 20px 20px; */
-    padding:35px 35px 35px 35px;
-    width: 280px;
+.mainBoxBenefit{
+    background-color:#2E37DF ;
 }
-.upperPart{
+.benefitsTitle{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 27px;
+    line-height: 33px;
+    color: #FFFFFF;
+    display: flex;
+    justify-content:left;
+    padding-left: 10rem;
+    padding-top: 1rem;
+}
+.ambassadorBenefits{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-}
-.number{
-    color: #00E0FF;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 19px;
-    line-height: 23px;
-}
-.benefitHeading{
-    color: #00FF85;
-    margin-top: 0px;
-    width: fit-content;
-    padding-left: 1rem;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 1.9rem;
-    line-height: 32px;
-}
-.benefitContent{
-    color: #FFFFFF;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 200;
-    font-size: 17px;
-    line-height: 21px;
-    margin-left: 34px;
+    flex-wrap: wrap;
+    justify-content: left ;
+    background-color:#2E37DF;
+    padding-left: 7.5rem;
 }
 
-@media (min-width: 0px) and (max-width: 229px){
-    .benefitsBody{
-       width: fit-content;
-       height: fit-content;
+@media (min-width: 0px) and (max-width: 793px){
+    .benefitsTitle{
+       padding-left: 0%;
+       text-align: center;
+       justify-content: center;
     }
-    
+    .ambassadorBenefits{
+        padding-left: 0%;
+        justify-content: space-evenly;
+    }
 }
