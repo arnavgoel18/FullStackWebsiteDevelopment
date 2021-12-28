@@ -1,11 +1,13 @@
 import React from "react";
 import "./FormDIV.css";
+// import db from "../../../Firestore";
+// import { collection, getDocs, Timestamp, doc, setDoc } from 'firebase/firestore';
 
 export default function FormDIV() {
   return (
     <>
       
-      <div className="Form-body">
+      <div className="Form-body" id="amb_form">
         <div className="Form-container">
           <br />
           <div className="field">
@@ -14,24 +16,25 @@ export default function FormDIV() {
               type="text"
               alt="Name"
               name="name"
+              id="amb_name"
               required="required"
             />{" "}
             <span> Full Name </span>
           </div>
           <div className="field">
-            <input type="text" name="institute" id="" required="unrequired" />
+            <input type="text" name="institute" id="amb_college" required="unrequired" />
             <span>College Name </span>{" "}
           </div>
           <div className="field">
-            <input type="text" name="Branch" id="" required="unrequired" />
+            <input type="text" name="Branch" id="amb_branch" required="unrequired" />
             <span>Branch</span>{" "}
           </div>
           <div className="field">
-            <input type="text" name="semester" id="" required="unrequired" />
+            <input type="text" name="semester" id="amb_semester" required="unrequired" />
             <span>Current Semester </span>{" "}
           </div>
           <div className="field">
-            <input type="number" name="phone" id="" required="unrequired" />
+            <input type="number" name="phone" id="amb_phone" required="unrequired" />
             <span> Phone No.(optional)</span>
           </div>
           <div className="field">
@@ -40,7 +43,7 @@ export default function FormDIV() {
               type="email"
               name="email"
               alt="email"
-              id=""
+              id="amb_email"
               required="required"
             />
             <span> Email Id.. </span>
@@ -53,19 +56,19 @@ export default function FormDIV() {
               <option selected hidden value="">
                 --Select any one--
               </option>
-              <option name="submit blog" value="option">
+              <option name="submit blog" value="To submit a blog">
                 To submit a blog
               </option>
-              <option name="sponsership" value="option">
+              <option name="sponsership" value="Sponsorship">
                 Sponsorship
               </option>
-              <option name="brand_ambassador" value="option">
+              <option name="brand_ambassador" value="Brand Ambassador">
                 Brand Ambassador
               </option>
-              <option name="content was abusive" value="option">
+              <option name="content was abusive" value="Content was abusive">
                 Content was abusive
               </option>
-              <option name="other" value="option">
+              <option name="other" value="Other">
                 Other
               </option>
             </select>
@@ -76,19 +79,19 @@ export default function FormDIV() {
               <option selected hidden value="">
                 --Select any one--
               </option>
-              <option name="club_alumni" value="option">
+              <option name="club_alumni" value="Club Alumni">
                 Club Alumni
               </option>
-              <option name="companyrepresentative" value="option">
+              <option name="companyrepresentative" value="Company Representative">
                 Company Representative
               </option>
-              <option name="student" value="option">
+              <option name="student" value="Student">
                 Student
               </option>
-              <option name="professor" value="option">
+              <option name="professor" value="Professor">
                 Professor
               </option>
-              <option name="other" value="option">
+              <option name="other" value="Other">
                 Other
               </option>
             </select>
@@ -104,7 +107,7 @@ export default function FormDIV() {
             <textarea
               required="required"
               name="message"
-              id=""
+              id="text1"
               placeholder="Type your answer here"
               // cols="65"
               rows="3"
@@ -119,7 +122,7 @@ export default function FormDIV() {
             <textarea
               required="required"
               name="message"
-              id=""
+              id="text2"
               placeholder="Type your answer here"
               // cols="65"
               rows="3"
@@ -132,7 +135,7 @@ export default function FormDIV() {
             <textarea
               required="required"
               name="message"
-              id=""
+              id="text3"
              placeholder="Type your answer here"
               // cols="65"
               rows="3"
@@ -140,11 +143,39 @@ export default function FormDIV() {
             
           </div>
          <div className="form-button">
-          <button id="amb-button">  Submit </button>
+          <button id="amb-button" onClick={setInfo}>  Submit </button>
         </div>
         </div>
         
       </div>
     </>
   );
+}
+
+//save to database
+async function setInfo(){
+  var name = document.getElementById("amb_name");
+  var college = document.getElementById("amb_college");
+  var branch = document.getElementById("amb_branch");
+  var semester = document.getElementById("amb_semester");
+  var phone = document.getElementById("amb_phone");
+  var email = document.getElementById("amb_email");
+  var s1 = document.getElementById("s1");
+  var s2 = document.getElementById("s2");
+  
+  const docdata = {
+    name: name.value,
+    college: college.value,
+    branch: branch.value,
+    semester: semester.value,
+    phone: phone.value,
+    email: email.value,
+    s1: s1.value,
+    s2: s2.value
+  };
+  
+  var timestamp = String(new Date().getTime());
+  // await setDoc(doc(db, "studentAmbassador", timestamp), docdata);
+  // console.log(docdata);
+  
 }

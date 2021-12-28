@@ -8,7 +8,7 @@ function RedirectToForm() {
           Sign up to become Campus Ambassador
       </div>
       <div id="redirect_form_button">
-          <a href="#black_footer">
+          <a href="#amb_form">
           <button id="redirect_signup">
               Sign Up
           </button>
