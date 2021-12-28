@@ -4,7 +4,7 @@ import "./AmbassadorBenefits.css";
 
 function AmbassadorBenefits() {
     return (
-        <div className="mainBoxBenefit">
+        <div id="mainBoxBenefit">
         <div className='benefitsTitle'>Benefits of being <br /> an Ambassador for <br /> e - Autokriti</div>
         <div className="ambassadorBenefits">
               <AmbassadorBenefitsCard

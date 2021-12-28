@@ -75,7 +75,7 @@ input,textarea{
 .button{
     text-align: center;
 }
-button{
+#contact_button{
     border-radius: 15px;
     background: #E9910DFC;
     height: 40px;

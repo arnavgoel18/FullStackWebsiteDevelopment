@@ -14,12 +14,12 @@ function Ambassador(){
         <>
             <NavBar/>
             {/* <AmbassadorLander/> */}
-            {/* <RedirectToInfo/> */}
+            <RedirectToInfo/>
             {/* <Form/> */}
             <AmbassadorBenefits/>
-            {/* <RedirectToForm/> */}
+            <RedirectToForm/>
             <AmbassadorRoles/>
-            {/* <RedirectToForm/> */}
+            <RedirectToForm/>
             <Footer/>
         </>
     )
