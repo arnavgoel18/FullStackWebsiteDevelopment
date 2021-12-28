@@ -10,27 +10,25 @@
     color: #FFFFFF;
     display: flex;
     justify-content:left;
-    padding-left: 10rem;
+    padding-left: 7.5rem;
     padding-top: 1rem;
 }
 .ambassadorBenefits{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: left ;
+    justify-content:left ;
     background-color:#2E37DF;
-    padding-left: 7.5rem;
+    padding-left: 4.7rem;
     margin-top: 1rem;
 }
 
-@media (min-width: 0px) and (max-width: 822px){
+@media (min-width: 0px) and (max-width: 919px){
     .benefitsTitle{
-       padding-left: 0%;
-       text-align: center;
-       justify-content: center;
+        padding-left: 4rem;
     }
     .ambassadorBenefits{
-        padding-left: 0%;
         justify-content: space-evenly;
+        padding-left: 1rem;
     }
 }
