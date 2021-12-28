@@ -88,3 +88,16 @@
         height: 100%;
     }
 }
+
+@media (min-width:535px) and (max-width: 650px)
+{
+.FirstDisplayDIV-main-container {
+    height: 50vh;
+}
+}
+@media (min-width:650px) and (max-width: 775px)
+{
+.FirstDisplayDIV-main-container {
+    height: 60vh;
+}
+}
