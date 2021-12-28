@@ -102,15 +102,15 @@ input,textarea{
     text-align: center;
     padding-top: 50px;
 }
-.button{
+#button-submit{
     text-align: center;
 }
-button{
+#button-submit{
     border-radius: 15px;
     background: #E9910DFC;
     height: 40px;
     width: 100px;
-    color: white    ;
+    color: white;
     border: none;
     font-size: medium;
 }   
