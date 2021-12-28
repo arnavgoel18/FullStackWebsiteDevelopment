@@ -2,7 +2,7 @@
     background-color:#2E37DF ;
 }
 .benefitsTitle{
-    font-family: Montserrat;
+    font-family:" Montserrat";
     font-style: normal;
     font-weight: normal;
     font-size: 27px;
@@ -20,9 +20,10 @@
     justify-content: left ;
     background-color:#2E37DF;
     padding-left: 7.5rem;
+    margin-top: 1rem;
 }
 
-@media (min-width: 0px) and (max-width: 793px){
+@media (min-width: 0px) and (max-width: 822px){
     .benefitsTitle{
        padding-left: 0%;
        text-align: center;
