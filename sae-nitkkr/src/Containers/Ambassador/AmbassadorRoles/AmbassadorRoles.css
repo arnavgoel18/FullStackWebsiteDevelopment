@@ -17,14 +17,19 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: left;
     background-color:#9810EB;
+    padding-left: 4.7rem;
+    margin-top: 1rem;
 }
 
-@media (min-width: 0px) and (max-width: 444px){
+@media (min-width: 0px) and (max-width: 919px){
     .rolesTitle{
-       padding-left: 0%;
-       text-align: center;
-       justify-content: center;
+       padding-left: 4rem;
+       
+    }
+    .ambassadorRoles{
+        justify-content: space-evenly;
+        padding-left: 1rem;
     }
 }

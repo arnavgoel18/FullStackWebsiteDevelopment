@@ -4,7 +4,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     height: 280px;
-    /* margin:20px 20px 20px 20px; */
+    margin-right: 4.5rem;
     padding:35px 35px 35px 35px;
     width: 350px;
 }
@@ -43,10 +43,17 @@
     margin-top: 0.7rem;
 }
 
+@media (min-width: 0px) and (max-width: 859px){
+    .roleBody{
+       margin-right: 0rem;
+    }
+    
+}
 @media (min-width: 0px) and (max-width: 229px){
     .roleBody{
        width: fit-content;
        height: fit-content;
+       margin-right: 0rem;
     }
     
 }
