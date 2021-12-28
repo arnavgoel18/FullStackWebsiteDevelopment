@@ -107,7 +107,7 @@ export default function FormDIV() {
               id=""
               placeholder="Type your answer here"
               // cols="65"
-              // rows="6"
+              rows="3"
             ></textarea>
             
           </div>
@@ -122,7 +122,7 @@ export default function FormDIV() {
               id=""
               placeholder="Type your answer here"
               // cols="65"
-              // rows="6"
+              rows="3"
             ></textarea>
             
           </div>
@@ -135,7 +135,7 @@ export default function FormDIV() {
               id=""
              placeholder="Type your answer here"
               // cols="65"
-              // rows="6"
+              rows="3"
             ></textarea>
             
           </div>
