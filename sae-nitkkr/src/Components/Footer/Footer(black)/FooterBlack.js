@@ -29,7 +29,7 @@ function Footer() {
             <p className="black_things_to_explore">Blogs</p>
           </Link>
           <Link to="/sponsors">
-            <p className="black_things_to_explore">Sponsers</p>
+            <p className="black_things_to_explore">Sponsors</p>
           </Link>
           <Link to="/contactus">
             <p className="black_things_to_explore">Contact Us</p>
