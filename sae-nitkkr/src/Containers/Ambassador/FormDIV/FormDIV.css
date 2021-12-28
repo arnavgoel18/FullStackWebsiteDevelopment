@@ -115,14 +115,13 @@ input,textarea{
     font-size: medium;
 }   
 
-
-
 #s1,#s2{
     background: #C4C4C4BD;
     width: 90%;
     height: 65%;
     padding: 0.8%;
     border-radius: 5px;
+    margin-top: 2%;
 }
 @media screen and (max-width:938px){
     .Form-body{
