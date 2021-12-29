@@ -70,21 +70,12 @@ function DisplayCard(props) {
         <div className="ttable-row">
           <div className="ttable-cell ffirst-cell">
             <p>
-              Why do you think you can be a Campus Ambassador Why do you think
-              you can be a Campus Ambassador ?
+              Why do you think you can be a Campus Ambassador?
             </p>
           </div>
           <div className="ttable-cell">
             <p>
-              Why do you think you can be a Campus Ambassador Why do you think
-              you can be a Campus Ambassador ?Why do you think you can be a
-              Campus Ambassador Why do you think you can be a Campus Ambassador
-              ?Why do you think you can be a Campus Ambassador Why do you think
-              you can be a Campus Ambassador ?Why do you think you can be a
-              Campus Ambassador Why do you think you can be a Campus Ambassador
-              ?Why do you think you can be a Campus Ambassador Why do you think
-              you can be a Campus Ambassador ?Why do you think you can be a
-              Campus Ambassador Why do you think you can be a Campus Ambassador{" "}
+              {/* props to be added hereeeee------------- */}
             </p>
           </div>
         </div>

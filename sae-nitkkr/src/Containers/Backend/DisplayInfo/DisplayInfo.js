@@ -9,35 +9,35 @@ import {
   setDoc,
 } from "firebase/firestore";
 
-//function to get data form database;
-
-
-
+//function to get data form database
 function DisplayInfo() {
-    const [navneet, setnavneet] = useState([])
+    const [forreload, setForreload] = useState([])
+
+    var [result, setResult] = useState([]);
+
     async function getInfo() {
         const studentAmbassador = collection(db, "studentAmbassador");
         const amb_doc = await getDocs(studentAmbassador);
         const detailList = amb_doc.docs.map((doc) =>  doc.data());
-       
-        // setnavneet(detailList);
-       
+
+        setResult(detailList);
+
+        dispSomeInfo();
+        
         return detailList;
     }
+
+    function dispSomeInfo(){
+      console.log(result);
+    }
+
     useEffect(() => {
-        // getInfo();
-        setnavneet([...navneet,getInfo()])
-        console.log(navneet);
+        setForreload([...forreload,getInfo()])
       }, [])
-      
-//    const detailList = getInfo();
-//   detailList.then(function (result) {
-//      console.log(result);
-//   });
 
   return (
     <div className="displayDiv">
-      {/* {result.map((detail, index) => {
+      {result.map((detail, index) => {
         return (
           <DisplayCard
             key={index}
@@ -45,7 +45,7 @@ function DisplayInfo() {
             ClgName={detail.collegeName}
             Branch={detail.branch}
             CurrentSem={detail.semester}
-            Phoneno=""
+            Phoneno={detail.Phoneno}
             Emailid=""
             ans1=""
             ans2=""
@@ -53,8 +53,7 @@ function DisplayInfo() {
             ans4=""
           />
         );
-      })} */}
-      {/* {getInfo} */}
+      })}
     </div>
   );
 }
