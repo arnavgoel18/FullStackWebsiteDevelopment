@@ -3,8 +3,6 @@ import './AmbassadorLander.css'
 function BecomeOurAmbassador() {
   return (
     <div id='Main'>
-      <div className='Topborder'></div>
-
       <div className='Ambassadortext'>
         <div id='Text'>
           <h1>Become our Ambassador</h1>
