@@ -32,7 +32,7 @@ function checkCredentials(e){
 
   if(userName == "SAE" && password == "123"){
      e.preventDefault();
-    window.location.href='/admin/DisplayInfo';
+    window.location.href='/admin/displayInfo';
   }
   else{
     window.alert("Wrong Password or Username");
