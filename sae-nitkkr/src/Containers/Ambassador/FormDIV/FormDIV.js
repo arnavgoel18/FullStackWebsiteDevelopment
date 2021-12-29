@@ -130,19 +130,6 @@ export default function FormDIV() {
         <br />
         <br />
         <div className="Form-container">
-        <div className="question">
-           If you answered “other” for the question - “Why do you think you can be a campus Ambassador?”, write your reason for giving that answer, here.</div>   
-        <div className="field">
-            {" "}
-            <textarea
-              required="required"
-              name="message"
-              id="text1"
-              placeholder="Type your answer here"
-              // cols="65"
-              rows="3"
-            ></textarea>
-          </div>
           <div className="question">
             What are your top 3 qualities related to being a Campus Ambassador?
             *
@@ -168,6 +155,19 @@ export default function FormDIV() {
               required="required"
               name="message"
               id="text3"
+              placeholder="Type your answer here"
+              // cols="65"
+              rows="3"
+            ></textarea>
+          </div>
+          <div className="question">
+           How did you find out about this ambassador program?</div>   
+        <div className="field">
+            {" "}
+            <textarea
+              required="required"
+              name="message"
+              id="text1"
               placeholder="Type your answer here"
               // cols="65"
               rows="3"
