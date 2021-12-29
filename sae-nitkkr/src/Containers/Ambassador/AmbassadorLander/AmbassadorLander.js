@@ -1,4 +1,4 @@
-import './BecomeOurAmbassador.css'
+import './AmbassadorLander.css'
 
 function BecomeOurAmbassador() {
   return (

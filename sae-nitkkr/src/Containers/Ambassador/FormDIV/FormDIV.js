@@ -95,7 +95,7 @@ export default function FormDIV() {
         <br/><br/>
         <div className="Form-container">
         <div className="question">
-           If you answered “other” for the question - “Why do you think you can be a campus Ambassador?”, write your reason for other here.</div>   
+           If you answered “other” for the question - “Why do you think you can be a campus Ambassador?”, write your reason for giving that answer, here.</div>   
         <div className="field">
             {" "}
             <textarea
