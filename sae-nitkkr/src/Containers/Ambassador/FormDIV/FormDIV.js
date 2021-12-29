@@ -54,7 +54,12 @@ export default function FormDIV() {
             <span>Current Semester </span>{" "}
           </div>
           <div className="field">
-            <input type="number" name="phone" id="amb_phone" required="required" />
+            <input
+              type="number"
+              name="phone"
+              id="amb_phone"
+              required="required"
+            />
             <span> Phone No. * </span>
           </div>
           <div className="field">
@@ -180,7 +185,6 @@ export default function FormDIV() {
   );
 }
 
-
 //submit f(); working: onClick submit button;
 function submit() {
   var studentName = document.getElementById("amb_name");
@@ -226,10 +230,13 @@ function validateForm(docdata) {
     docdata.longAns3 == ""
   ) {
     alert("Please fill up the required fields.");
-  } else if(docdata.phone.length != 10){
+  } else if (docdata.phone.length != 10) {
     alert("phone number should be of length 10.");
-  }
-  else {
+  } else if (
+    !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(docdata.email)
+  ) {
+    alert("Please enter a valid email address.");
+  } else {
     setInfo(docdata);
   }
 }
