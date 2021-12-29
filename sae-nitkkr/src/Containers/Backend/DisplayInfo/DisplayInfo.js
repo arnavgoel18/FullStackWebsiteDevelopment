@@ -45,12 +45,13 @@ function DisplayInfo() {
             ClgName={detail.collegeName}
             Branch={detail.branch}
             CurrentSem={detail.semester}
-            Phoneno={detail.Phoneno}
-            Emailid=""
-            ans1=""
-            ans2=""
-            ans3=""
-            ans4=""
+            Phoneno={detail.phone}
+            Emailid={detail.email}
+            s1={detail.s1}
+            s2={detail.s2}
+            ans1={detail.longAnswer1}
+            ans2={detail.longAnswer2}
+            ans3={detail.longAnswer3}
           />
         );
       })}
