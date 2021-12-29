@@ -26,12 +26,13 @@ function Login() {
   );
 }
 
-function checkCredentials(){
+function checkCredentials(e){
   const userName = document.getElementById("LoginPage-username").value;
   const password = document.getElementById("LoginPage-password").value;
 
   if(userName == "SAE" && password == "123"){
-    window.alert("Logged In!")
+     e.preventDefault();
+    window.location.href='/admin/DisplayInfo';
   }
   else{
     window.alert("Wrong Password or Username");
