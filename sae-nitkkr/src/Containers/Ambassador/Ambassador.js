@@ -12,7 +12,7 @@ function Ambassador(){
     return(
         <>
             <NavBar/>
-            {/* <AmbassadorLander/> */}
+            <AmbassadorLander/>
             <RedirectToInfo/>
             <FormDIV/>
             <AmbassadorBenefits/>
