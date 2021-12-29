@@ -25,7 +25,7 @@ function ContactUS() {
         <div className="details">
           <div className="abc" id="abcd">
             <div className="icon">
-              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <i className="fa fa-map-marker" aria-hidden="true"></i>
             </div>
             <a
               className="location"
@@ -38,7 +38,7 @@ function ContactUS() {
           <div className="abc">
             <div className="icon">
               {" "}
-              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <i className="fa fa-envelope" aria-hidden="true"></i>
             </div>
             <div className="tt"> saenitkurukshetra@gmail.com</div>
           </div>
@@ -73,7 +73,7 @@ function ContactUS() {
               id="cont_name"
               required="required"
             />{" "}
-            <span> Name.. </span>
+            <span> Name * </span>
           </div>
           <div className="field">
             {" "}
@@ -84,11 +84,11 @@ function ContactUS() {
               id="cont_email"
               required="required"
             />
-            <span> Email Id.. </span>
+            <span> Email Id * </span>
           </div>
           <div className="field">
             <input type="number" name="phone" id="cont_phone" required="required" />
-            <span> Phone No.(optional)</span>
+            <span> Phone No. *</span>
           </div>
           <div className="field">
             <input type="text" name="institute" id="cont_organisation" required="unrequired" />
@@ -103,10 +103,10 @@ function ContactUS() {
               // cols="65"
               // rows="6"
             ></textarea>
-            <span>Your Message </span>
+            <span>Your Message * </span>
           </div>
           <div className="field">
-            Reason to Contact{" "}
+            Reason to Contact *{" "}
             <select id="s1">
               <option selected hidden value="">
                 --Select any one--
@@ -129,7 +129,7 @@ function ContactUS() {
             </select>
           </div>
           <div className="field">
-            Person Contacting us is a{" "}
+            Person Contacting us is a *{" "}
             <select id="s2">
               <option selected hidden value="">
                 --Select any one--
@@ -166,7 +166,7 @@ function submit(){
   var EmailId = document.getElementById("cont_email");
   var PhoneNo = document.getElementById("cont_phone");
   var Organisation = document.getElementById("cont_organisation");
-  var Message = document.getElementById("cont_messsage");
+  var Message = document.getElementById("cont_message");
   var s1 = document.getElementById("s1");
   var s2 = document.getElementById("s2");
 
@@ -177,10 +177,31 @@ function submit(){
     Organisation: Organisation.value,
     Message: Message.value,
     s1: s1.value,
-    s2: s2.value
-  }
+    s2: s2.value,
+  };
 
-  setInfo(contactUsData)
+  validateForm(contactUsData);
+}
+
+function validateForm(contactUsData) {
+  if (
+    contactUsData.Name == "" ||
+    contactUsData.EmailId == "" ||
+    contactUsData.PhoneNo == "" ||
+    contactUsData.Message == "" ||
+    contactUsData.s1 == "" ||
+    contactUsData.s2 == "" 
+  ) {
+    alert("Please fill up the required fields.");
+  } else if (contactUsData.PhoneNo.length != 10) {
+    alert("phone number should be of length 10.");
+  } else if (
+    !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(contactUsData.EmailId)
+  ) {
+    alert("Please enter a valid email address.");
+  } else {
+    setInfo(contactUsData);
+  }
 }
 
 async function setInfo(contactUsData) {
