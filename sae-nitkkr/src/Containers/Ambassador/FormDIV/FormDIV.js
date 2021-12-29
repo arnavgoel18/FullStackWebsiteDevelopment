@@ -84,7 +84,7 @@ export default function FormDIV() {
                 name="submit blog"
                 value="I am good in Marketing & promotions"
               >
-                I am good in Marketing & promotions
+                I am good at Marketing & promotion
               </option>
               <option
                 name="sponsership"
@@ -130,11 +130,9 @@ export default function FormDIV() {
         <br />
         <br />
         <div className="Form-container">
-          <div className="question">
-            If you answered “other” for the question - “Why do you think you can
-            be a campus Ambassador?”, write your reason for other here.
-          </div>
-          <div className="field">
+        <div className="question">
+           If you answered “other” for the question - “Why do you think you can be a campus Ambassador?”, write your reason for giving that answer, here.</div>   
+        <div className="field">
             {" "}
             <textarea
               required="required"

@@ -21,6 +21,7 @@
     background-color:#2E37DF;
     padding-left: 4.7rem;
     margin-top: 1rem;
+    overflow: hidden;
 }
 
 @media (min-width: 0px) and (max-width: 919px){

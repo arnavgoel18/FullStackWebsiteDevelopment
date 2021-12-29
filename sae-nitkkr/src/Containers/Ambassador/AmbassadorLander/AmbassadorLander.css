@@ -1,20 +1,19 @@
 * {
   font-family: Montserrat;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-#Main {
-  position: relative;
-}
-
-.Topborder {
-  height: 2rem;
-  background-color: black;
+#AmbLander-Main {
+  width: 100%;
+  overflow: hidden;
 }
 
 h2 {
   width: 150px;
 }
-.Ambassadortext {
+.AmbLander-Ambassadortext {
   position: relative;
   background-color: #ece3e3;
   z-index: -2;
@@ -32,47 +31,79 @@ h2 {
 .Bottomborder a {
   color: #eea311;
 }
-#Text {
-  width: 40rem;
+#AmbLander-Text {
+  width: 50rem;
   background-color: white;
   padding: 1.5rem 2.5rem;
   opacity: 0.9;
+  min-height: 60vh;
 }
-#Text h1 {
+#AmbLander-Text h1 {
   font-size: 3.5rem;
   padding: 0.3rem 4rem;
 }
 
-.Circle {
+.AmbLander-Circle {
   position: absolute;
-  top: 17%;
-  right: 9.5rem;
-  height: 300px;
-  width: 300px;
+  top: 7.3%;
+  right: 30%;
+  margin: 0 auto;
+  height: 400px;
+  width: 400px;
   background: #eea311;
   border-radius: 50%;
   opacity: 0.9;
   z-index: -1;
 }
-.Circletext {
+.AmbLander-Circletext {
   position: absolute;
-  top: 120px;
-  left: 180px;
+  top: 170px;
+  left: 239px;
   font-size: 3rem;
   white-space: nowrap;
   color: white;
 }
-#Body {
+#AmbLander-Body {
   font-size: 1.3rem;
-
+  margin-top: 3rem;
   padding: 0.3rem 4rem;
 }
 
 @media (max-width: 656px) {
-  #Text {
+  #AmbLander-Text {
     display: flex;
     flex-direction: column;
     width: 100%;
     padding: 0.5rem 0.5rem;
+  }
+  #AmbLander-Body{
+    font-size: 1.1rem;
+  }
+  #AmbLander-Text h1{
+    font-size: 3.3rem;
+  }
+}
+
+@media (max-width: 425px) {
+  #AmbLander-Text{
+    padding: 0.5rem 0.1rem;
+  }
+  #AmbLander-Text h1{
+    padding: 0.3rem 2rem;
+  }
+  #AmbLander-Body{
+    padding: 0.3rem 2rem;
+  }
+}
+
+@media (max-width: 382px){
+  #AmbLander-Text h1{
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 344px){
+  #AmbLander-Text h1{
+    font-size: 2.5rem;
   }
 }
