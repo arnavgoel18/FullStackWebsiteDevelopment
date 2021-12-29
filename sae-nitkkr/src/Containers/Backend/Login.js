@@ -10,7 +10,7 @@ function Login() {
       </div>
       <div className="LoginPage-container">
         <h2 className="LoginPage-form-title">Login</h2>
-        <form action="">
+        <form>
           <div className='LoginPage-field'>
             <label htmlFor="username">Username</label>
             <input type="text" name="username" id="LoginPage-username"></input>
@@ -19,11 +19,23 @@ function Login() {
             <label htmlFor="password">Password</label>
             <input type="password" name="password" id="LoginPage-password"></input>
           </div>
-          <button type="submit">Login</button>
+          <button type="submit" onClick={checkCredentials}>Login</button>
         </form>
       </div>
     </div>
   );
+}
+
+function checkCredentials(){
+  const userName = document.getElementById("LoginPage-username").value;
+  const password = document.getElementById("LoginPage-password").value;
+
+  if(userName == "SAE" && password == "123"){
+    window.alert("Logged In!")
+  }
+  else{
+    window.alert("Wrong Password or Username");
+  }
 }
 
 export default Login;
