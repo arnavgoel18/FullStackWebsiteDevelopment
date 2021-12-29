@@ -154,7 +154,6 @@ function ContactUS() {
           <div className="button">
             <button id="contact_button" onClick={submit}> Submit </button>
           </div>
-
         </div>
       </div>
     </>
