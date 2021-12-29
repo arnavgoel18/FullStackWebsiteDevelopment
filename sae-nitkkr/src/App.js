@@ -11,6 +11,7 @@ import Blogs from './Containers/Blogs/Blogs'
 import Topic1 from './Containers/Blogs/Topic1/Topic1'
 import Topic2 from './Containers/Blogs/Topic2/Topic2'
 import Ambassador from "./Containers/Ambassador/Ambassador";
+import Login from "./Containers/Backend/Login";
 
 function App() {
   document.title = "SAE NIT Kurukshetra";
@@ -28,6 +29,7 @@ function App() {
           <Route path="/blogs/leftvsright" exact component={() => <Topic1/>}/>
           <Route path="/blogs/guidetovd" exact component={() => <Topic2/>}/>
           <Route path="/ambassador" exact component={() => <Ambassador/>}/>
+          <Route path="/admin/login" exact component={() => <Login/>}/>
         </Switch>
       </Router>
     </>
