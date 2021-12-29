@@ -159,38 +159,36 @@ function ContactUS() {
       </div>
     </>
   );
-
-  function submit(){
-    var Name = document.getElementById("cont_name");
-    var EmailId = document.getElementById("cont_email");
-    var PhoneNo = document.getElementById("cont_phone");
-    var Organisation = document.getElementById("cont_organisation");
-    var Message = document.getElementById("cont_messsage");
-    var s1 = document.getElementById("s1");
-    var s2 = document.getElementById("s2");
-  
-    const contactUsData = {
-      Name: Name.value,
-      EmailId: EmailId.value,
-      PhoneNo: PhoneNo.value,
-      Organisation: Organisation.value,
-      Message: Message.value,
-      s1: s1.value,
-      s2: s2.value
-    }
-
-    setInfo(contactUsData)
-  }
-
-  async function setInfo(contactUsData) {
-    var timestamp = String(new Date().getTime());
-    await setDoc(doc(db, "contactUs", timestamp), contactUsData);
-    alert("Congratulations! Your information has been saved successfully.");
-    window.location.reload();
-  }
-
 }
 
+function submit(){
+  var Name = document.getElementById("cont_name");
+  var EmailId = document.getElementById("cont_email");
+  var PhoneNo = document.getElementById("cont_phone");
+  var Organisation = document.getElementById("cont_organisation");
+  var Message = document.getElementById("cont_messsage");
+  var s1 = document.getElementById("s1");
+  var s2 = document.getElementById("s2");
+
+  const contactUsData = {
+    Name: Name.value,
+    EmailId: EmailId.value,
+    PhoneNo: PhoneNo.value,
+    Organisation: Organisation.value,
+    Message: Message.value,
+    s1: s1.value,
+    s2: s2.value
+  }
+
+  setInfo(contactUsData)
+}
+
+async function setInfo(contactUsData) {
+  var timestamp = String(new Date().getTime());
+  await setDoc(doc(db, "contactUs", timestamp), contactUsData);
+  alert("Congratulations! Your information has been saved successfully.");
+  window.location.reload();
+}
 
 
 
