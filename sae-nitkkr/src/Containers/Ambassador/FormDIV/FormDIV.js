@@ -54,7 +54,7 @@ export default function FormDIV() {
             <span>Current Semester </span>{" "}
           </div>
           <div className="field">
-            <input type="tel" name="phone" id="amb_phone" required="required" />
+            <input type="number" name="phone" id="amb_phone" required="required" />
             <span> Phone No. * </span>
           </div>
           <div className="field">
