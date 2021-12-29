@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./DisplayCard.css";
-function DisplayCard() {
+function DisplayCard(props) {
   return (
     <>
       <div className="table-box">
@@ -63,7 +63,7 @@ function DisplayCard() {
             <p>Email id</p>
           </div>
           <div className="table-cell">
-            <p>{props.Email - id}</p>
+            <p>{props.Emailid}</p>
           </div>
         </div>
 
@@ -94,7 +94,7 @@ function DisplayCard() {
             <p>Have you ever been a Campus Ambassador ?</p>
           </div>
           <div className="table-cell">
-            <p>{prop.ans1}</p>
+            <p>{props.ans1}</p>
           </div>
         </div>
 
@@ -103,7 +103,7 @@ function DisplayCard() {
             <p>How did you find out about this ambassador program?</p>
           </div>
           <div className="table-cell">
-            <p>{prop.ans2}</p>
+            <p>{props.ans2}</p>
           </div>
         </div>
 
@@ -115,19 +115,19 @@ function DisplayCard() {
             </p>
           </div>
           <div className="table-cell">
-            <p>{prop.ans3}</p>
+            <p>{props.ans3}</p>
           </div>
         </div>
 
         <div className="table-row">
-          <div class="table-cell first-cell">
+          <div className="table-cell first-cell">
             <p>
               What two channels do you think are the most effective for engaging
               with our target audience (18-22 Yrs) *
             </p>
           </div>
           <div className="table-cell">
-            <p>{prop.ans4}</p>
+            <p>{props.ans4}</p>
           </div>
         </div>
       </div>
