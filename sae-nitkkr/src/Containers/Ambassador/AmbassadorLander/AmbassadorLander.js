@@ -2,11 +2,11 @@ import './AmbassadorLander.css'
 
 function BecomeOurAmbassador() {
   return (
-    <div id='Main'>
-      <div className='Ambassadortext'>
-        <div id='Text'>
+    <div id='AmbLander-Main'>
+      <div className='AmbLander-Ambassadortext'>
+        <div id='AmbLander-Text'>
           <h1>Become our Ambassador</h1>
-          <div id='Body'>
+          <div id='AmbLander-Body'>
             We hope to welcome you to our SAE Family as an esteemed ambassdor to
             our organisation. Becoming the ambassador can give you exclusive
             rights to our courses, workshops and other benefits. You will help
@@ -17,8 +17,8 @@ function BecomeOurAmbassador() {
           </div>
         </div>
 
-        <div className='Circle'>
-          <div className='Circletext'>
+        <div className='AmbLander-Circle'>
+          <div className='AmbLander-Circletext'>
             <b>e-Autokriti</b>
           </div>
         </div>
