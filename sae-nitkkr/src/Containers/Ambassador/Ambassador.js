@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, useEffect} from 'react'
 import NavBar from '../../Components/NavBar/NavBar'
 import AmbassadorLander from './AmbassadorLander/AmbassadorLander'
 import AmbassadorBenefits from './AmbassadorBenefits/AmbassadorBenefits'
@@ -9,6 +9,11 @@ import Footer from '../../Components/Footer/Footer(black)/FooterBlack'
 import FormDIV from './FormDIV/FormDIV'
 
 function Ambassador(){
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
+
     return(
         <>
             <NavBar/>

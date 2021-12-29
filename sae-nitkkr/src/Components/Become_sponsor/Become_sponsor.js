@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import Sponsorlogo from '../../Assets/Sponsors Image/Sponsorlogo.png'
 
@@ -15,9 +16,11 @@ function Become_sponsor() {
 
          </div>
          <div id="spbutton">
-            <button id="knowmore_button">
+            <Link to="/contactus">
+              <button id="knowmore_button">
                 Know More
-            </button>
+              </button>
+            </Link>
         </div>
       </div>
       <div id="become_sponsor_image">

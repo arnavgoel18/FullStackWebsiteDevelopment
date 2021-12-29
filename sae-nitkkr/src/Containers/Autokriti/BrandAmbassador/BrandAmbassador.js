@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./BrandAmbassador.css";
 
 function BrandAmbassador() {
@@ -30,7 +31,9 @@ function BrandAmbassador() {
         <br />
         <br />
         <br />
-        <button className="BrandAmbassador-box4">JOIN US</button>
+        <Link to="/ambassador">
+          <button className="BrandAmbassador-box4">JOIN US</button>
+        </Link>
       </div>
     </div>
   );

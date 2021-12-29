@@ -1,4 +1,4 @@
-.benefitsBody{
+.AmbassadorBenefitsCard-benefitsBody{
     background-color:#2E37DF;
     display: flex;
     flex-direction: column;
@@ -9,12 +9,12 @@
     width: 350px;
     font-family:" Montserrat";
 }
-.upperPart{
+.AmbassadorBenefitsCard-upperPart{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
-.number{
+.AmbassadorBenefitsCard-number{
     color: #00E0FF;
     font-family: " Montserrat";
     font-style: normal;
@@ -22,7 +22,7 @@
     font-size: 19px;
     line-height: 23px;
 }
-.benefitHeading{
+.AmbassadorBenefitsCard-benefitHeading{
     color: #00FF85;
     margin-top: 0px;
     width: fit-content;
@@ -33,7 +33,7 @@
     font-size: 1.9rem;
     line-height: 32px;
 }
-.benefitContent{
+.AmbassadorBenefitsCard-benefitContent{
     color: #FFFFFF;
     font-family: " Montserrat";
     font-style: normal;
@@ -45,13 +45,13 @@
 }
 
 @media (min-width: 0px) and (max-width: 859px){
-    .benefitsBody{
+    .AmbassadorBenefitsCard-benefitsBody{
        margin-right: 0rem;
     }
     
 }
 @media (min-width: 0px) and (max-width: 229px){
-    .benefitsBody{
+    .AmbassadorBenefitsCard-benefitsBody{
        width: fit-content;
        height: fit-content;
        margin-right: 0rem;

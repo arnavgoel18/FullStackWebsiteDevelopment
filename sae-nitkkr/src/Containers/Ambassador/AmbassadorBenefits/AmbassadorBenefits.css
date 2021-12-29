@@ -1,7 +1,7 @@
-#mainBoxBenefit{
+#AmbassadorBenefits-mainBoxBenefit{
     background-color:#2E37DF ;
 }
-.benefitsTitle{
+.AmbassadorBenefits-benefitsTitle{
     font-family:" Montserrat";
     font-style: normal;
     font-weight: normal;
@@ -13,7 +13,7 @@
     padding-left: 7.5rem;
     padding-top: 1rem;
 }
-.ambassadorBenefits{
+.AmbassadorBenefits-ambassadorBenefits{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -25,10 +25,10 @@
 }
 
 @media (min-width: 0px) and (max-width: 919px){
-    .benefitsTitle{
+    .AmbassadorBenefits-benefitsTitle{
         padding-left: 4rem;
     }
-    .ambassadorBenefits{
+    .AmbassadorBenefits-ambassadorBenefits{
         justify-content: space-evenly;
         padding-left: 1rem;
     }

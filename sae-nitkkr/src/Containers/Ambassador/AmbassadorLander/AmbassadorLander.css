@@ -10,27 +10,12 @@
   overflow: hidden;
 }
 
-h2 {
-  width: 150px;
-}
 .AmbLander-Ambassadortext {
   position: relative;
   background-color: #ece3e3;
   z-index: -2;
 }
-.Bottomborder {
-  width: 100%;
-  background-color: #3b3b3b;
-  padding: 0.3rem 0.3rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-}
 
-.Bottomborder a {
-  color: #eea311;
-}
 #AmbLander-Text {
   width: 50rem;
   background-color: white;
