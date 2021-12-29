@@ -240,11 +240,38 @@ function validateForm(docdata) {
     setInfo(docdata);
   }
 }
+function deletedata()
+{var studentName = document.getElementById("amb_name");
+var collegeName = document.getElementById("amb_college");
+var branch = document.getElementById("amb_branch");
+var semester = document.getElementById("amb_semester");
+var phone = document.getElementById("amb_phone");
+var email = document.getElementById("amb_email");
+var s1 = document.getElementById("s1");
+var s2 = document.getElementById("s2");
+var longAns1 = document.getElementById("text1");
+var longAns2 = document.getElementById("text2");
+var longAns3 = document.getElementById("text3");
+  studentName.value=null;
+  collegeName.value=null;
+  branch.value=null;
+  semester.value=null;
+  phone.value=null;
+  email.value=null;
+  s1.value="--Select any One--";
+  s2.value="--Select any One--";
+  longAns1.value=null;
+  longAns2.value=null;
+  longAns3.value=null;
+
+
+}
 
 //save to database
 async function setInfo(docdata) {
   var timestamp = String(new Date().getTime());
   await setDoc(doc(db, "studentAmbassador", timestamp), docdata);
   alert("Congratulations! Your information saved successfully.");
-  window.location.reload();
+  deletedata();
+  // window.location.reload();
 }
