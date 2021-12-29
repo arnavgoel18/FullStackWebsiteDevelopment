@@ -14,10 +14,10 @@ function CheckEvents() {
     <>
       <div className="CheckOurEvents-main_container">
         <h2 className="CheckOurEvents-heading">
-          check out the <b className="CheckOurEvents-subheading"> EVENTS </b>
+          check out our <b className="CheckOurEvents-subheading"> EVENTS </b>
         </h2>
         <div  className="CheckOurEvents-events">
-          <Session title="Understanding Transmission"
+          {/* <Session title="Understanding Transmission"
           status="online"
           date="24th-January-2021"
           image={poster}/>
@@ -25,13 +25,12 @@ function CheckEvents() {
           <Session title="Understanding Transmission"
           status="online"
           date="24th-January-2021"
-          image={poster}/>
+          image={poster}/> */}
           
         </div>
-        
         <div className="CheckOurEvents-showmore">
           <p className="CheckOurEvents-heading1">
-            SOME MORE <b className="CheckOurEvents-subheading1"> EVENTS </b>
+            NO EVENTS <b className="CheckOurEvents-subheading1"> AS OF NOW </b>
             <FontAwesomeIcon id="CheckOurEvents-button1" className="CheckOurEvents-icon" icon={faAngleDoubleDown} />{" "}
           </p>
         </div>
