@@ -30,7 +30,7 @@ function checkCredentials(e){
   const userName = document.getElementById("LoginPage-username").value;
   const password = document.getElementById("LoginPage-password").value;
 
-  if(userName == "SAE" && password == "123"){
+  if(userName == "saeoperator" && password == "wearesaenitkkr"){
      e.preventDefault();
     window.location.href='/admin/displayInfo';
   }

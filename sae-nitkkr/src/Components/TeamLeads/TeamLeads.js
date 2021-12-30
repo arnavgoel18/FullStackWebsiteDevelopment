@@ -33,7 +33,7 @@ function TeamLeads(props){
                     <p className="TeamLeads-heading">Team Leads</p>
                     
                     <div className = "TeamLeads-persons_container">
-                        <PersonCard name={"Aakash Singh Bhisht"} designation={"Team Captain"} url={acceleronsCap}/>
+                        <PersonCard name={"Aakash Singh Bisht"} designation={"Team Captain"} url={acceleronsCap}/>
                         <PersonCard name={"Amit Rawat"} designation={"Team Vice Captain"} url={acceleronsVicecap}/>
                     </div>
                 </div>
