@@ -8,7 +8,7 @@ export default function AfterLoginPage() {
     <div>
       <div className="LoginPage-header">
         <i className="fa fa-user fa-lg" aria-hidden="true"></i>
-        <button type="submit">Sign Out</button>
+        <Link to="/admin/login"><button type="submit">Sign Out</button></Link>
       </div>
       <div className="allCards">
       <Link to="/admin/displayBlogs">

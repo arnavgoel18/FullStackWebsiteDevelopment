@@ -34,7 +34,7 @@ function App() {
           <Route path="/blogs/guidetovd" exact component={() => <Topic2/>}/>
           <Route path="/ambassador" exact component={() => <Ambassador/>}/>
           <Route path="/admin/login" exact component={() => <Login/>}/>
-          <Route path="/admin/afterLogin" exact component={() => <AfterLoginPage/>}/>
+          <Route path="/admin/actions" exact component={() => <AfterLoginPage/>}/>
           <Route path="/admin/displayInfo" exact component={() => <DisplayInfo/>}/>
           <Route path="/admin/displayBlogs" exact component={() => <DisplayBlogs/>}/>
           <Route path="/admin/displayBlogs/editor" exact component={() => <QuillEditor/>}/>
