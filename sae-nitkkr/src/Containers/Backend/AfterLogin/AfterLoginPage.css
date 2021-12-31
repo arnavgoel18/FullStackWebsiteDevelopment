@@ -1,11 +1,8 @@
 .allCards{
     width: 100%;
-    height: 1000%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content:left;
-    justify-items:center;
     align-items: center;
-    text-align: center;
 }

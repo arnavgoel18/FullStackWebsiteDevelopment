@@ -1,4 +1,5 @@
 import React, { useState, useEffect} from "react";
+
 import DisplayCard from "./DisplayCard";
 import db from "../../../Firebase.js";
 import {
@@ -10,7 +11,7 @@ import {
 } from "firebase/firestore";
 
 //function to get data form database
-function DisplayInfo() {
+function DisplayAmbassador() {
     const [forreload, setForreload] = useState([])
 
     var [result, setResult] = useState([]);
@@ -59,4 +60,4 @@ function DisplayInfo() {
   );
 }
 
-export default DisplayInfo;
+export default DisplayAmbassador;
