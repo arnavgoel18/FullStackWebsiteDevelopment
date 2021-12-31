@@ -3,23 +3,22 @@ import "./Login.css";
 
 function Login() {
   return (
-    <div className="LoginPage-loginBody">
-      <div className="LoginPage-header">
-        <i class="fa fa-user fa-lg" aria-hidden="true"></i>
-        <button type="submit">Sign Out</button>
-      </div>
-      <div className="LoginPage-container">
-        <h2 className="LoginPage-form-title">Login</h2>
+    <div id="LoginPage-loginBody">
+     
+      <div id="LoginPage-container">
+        <p id="LoginPage-form-title">Login</p>
         <form>
-          <div className='LoginPage-field'>
-            <label htmlFor="username">Username</label>
-            <input type="text" name="username" id="LoginPage-username"></input>
-          </div>
-          <div className='LoginPage-field'>
-            <label htmlFor="password">Password</label>
+          <div id='LoginPage-field_userid'>
+            <label htmlFor="username" id="login_username">Username</label>
+             <input type="text" name="username" id="LoginPage-username"></input>
+           </div>
+           <div id='LoginPage-field_password'>
+            <label htmlFor="password" id="login_password">Password</label>
             <input type="password" name="password" id="LoginPage-password"></input>
           </div>
-          <button type="submit" onClick={checkCredentials}>Login</button>
+          <div id="login_submit">
+          <button type="submit" onClick={checkCredentials} id="submit_button">Login</button>
+          </div>
         </form>
       </div>
     </div>
