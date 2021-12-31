@@ -4,7 +4,15 @@ import EditorToolbar, { modules, formats } from "./EditorToolbar";
 import "react-quill/dist/quill.snow.css";
 import "./TextEditor.css";
 import { useHistory } from "react-router-dom";
-// import axios from 'axios';
+import db from "../../../../Firebase";
+import {
+  collection,
+  getDocs,
+  Timestamp,
+  doc,
+  setDoc,
+} from "firebase/firestore";
+
 
 function Add() {
   let history = useHistory();
@@ -27,20 +35,35 @@ function Add() {
   } 
   const [isError, setError] = useState(null);
   const addDetails = async (event) => {
-    // try {
-    //   event.preventDefault();
-    //   event.persist();
-    //   axios.post(`http://localhost:8080/addArticle`, {
-    //     title: userInfo.title,
-    //     information: userInfo.information,
-    //   })
-    //   .then(res => {
-    //     if(res.data.success === true){
-    //       history.push('/');
-    //     }
-    //   })
-    // } catch (error) { throw error;}    
+     try {
+      event.preventDefault();
+       event.persist();
+       var timestamp = String(new Date().getTime());
+       const current = new Date();
+  const date = `${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`;
+       await setDoc(doc(db, "blogs", timestamp),
+       {
+         title: userInfo.title,
+         information: userInfo.information,
+         date: date,
+         timestamp: timestamp,
+       })
+        .then(res => {
+      alert("Your blog has been successfully added.")
+      setuserInfo({
+        title: '',
+        information: '',
+      })
+        })
+     } catch (error) { throw error;}    
   } 
+
+  function discardChanges(){
+    setuserInfo({
+      title: '',
+      information: '',
+    })
+  }
 
 return ( 
 <>
@@ -64,6 +87,7 @@ return (
               placeholder={"Write something awesome..."}
               modules={modules('t1')}
               formats={formats}
+              id="quillInfo"
             />
             </div>
             
@@ -78,11 +102,11 @@ return (
             </div>
             
             
-            {isError !== null && <div className="errors"> {isError} </div>}
-            <div class="buttons">
-            <button type="button" class="btn btn-black">Back To All</button>
-            <button type="button" class="btn btn-red">Discard Changes</button>
-            <button type="button" class="btn btn-green">Save Changes</button>
+            
+            <div className="buttons">
+            <button type="button" className="btn btn-black" onClick={backToAll}>Back To All</button>
+            <button type="button" className="btn btn-red" onClick={discardChanges}>Discard Changes</button>
+            <button type="submit" className="btn btn-green">Save Changes</button>
             </div>
             
           </div> 
@@ -96,3 +120,8 @@ return (
 
 
 export default Add
+
+function backToAll(e){
+  e.preventDefault();
+    window.location.href='/admin/displayBlogs';
+}

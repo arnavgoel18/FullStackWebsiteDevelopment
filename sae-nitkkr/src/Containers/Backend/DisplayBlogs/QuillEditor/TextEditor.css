@@ -58,7 +58,7 @@ input:focus{
     flex-direction: row;
     justify-content:space-between;
     margin: 70px 55px 50px 55px;
-    
+
 }
 .btn-black{
     padding: 10px 30px;
@@ -67,6 +67,7 @@ input:focus{
     color: white;
     border: none;
     border-radius: 5px;
+    cursor:pointer;
 }
 .btn-red{
     padding: 10px 20px;
@@ -75,6 +76,7 @@ input:focus{
     color: white;
     border: none;
     border-radius: 5px;
+    cursor:pointer;
 }
 .btn-green{
     padding: 10px 25px;
@@ -83,5 +85,17 @@ input:focus{
     color: white;
     border: none;
     border-radius: 5px;
+    cursor:pointer;
 }
-
+.btn-green:active {
+    background-color: #3e8e41;
+    transform: translateY(1px);
+}
+.btn-red:active {
+    background-color: red;
+    transform: translateY(1px);
+}
+.btn-black:active {
+    background-color: black;
+    transform: translateY(1px);
+}
