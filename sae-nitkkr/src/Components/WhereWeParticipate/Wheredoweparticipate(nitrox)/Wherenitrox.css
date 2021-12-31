@@ -1,40 +1,37 @@
 #Nitrox-participate
 {
-    margin-left: -8px;
-    margin-right: -8px;
-    font-family: 'Montserrat', sans-serif;
-    /*border: 2px solid black;*/
+font-family: 'Montserrat', sans-serif;
    display: flex;
    flex-direction: column;
    flex-wrap: wrap; 
    align-content: center;
-    margin-top: 5vh;
-    margin-bottom: 10vh;
-    max-width: 100%;
+   width: 70%;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 40px;
+   margin-bottom: 60px;
 }
 
 #Nitrox-titlecomp1
 {
-    /*border: 2px solid black;*/
-    margin-left: 239px;
-    font-size: 37px;
+   font-weight: bold;
+    font-size: 27px;
 }
 #Nitrox-participate1
 {
     font-size: 37px;
     font-weight: 800;
-    color: rgb(31, 70, 248);
+   color: rgb(243, 8, 47);
 }
 #Nitrox-baja_title
 {
     border-bottom: 8px solid black;
-    margin-left: 240px;
-    font-size: 34px;
+    font-size: 32px;
     font-weight: 800;
     color: rgb(12, 12, 12);
     
 }
-#cNitrox-ar1
+#Nitrox-car1
 {
     width: 100%;
 }
@@ -45,26 +42,19 @@
 
 #Nitrox-atvc_title
 {
-   
-    
-    
     border-bottom: 8px solid black;
-    margin-left: 74%;
-    font-size: 37px;
+    float:right;
+    font-size: 32px;
     font-weight: 800;
     color: rgb(12, 12, 12);
-  
-    
-    
 }
 #Nitrox-atvc_image
 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-content: center;
-    /*border: 2px solid black;*/
     width: 42%;
     padding: 5px;
 }
@@ -77,61 +67,55 @@
 {
     width: 100%;
 }
-.Nitrox-content1
+.content1
 {
-    /*border: 2px solid black;*/
     padding:10px;
 }
 #Nitrox-baja_content
 {
-    /*border: 2px solid black;*/
-   display: flex;
-  flex-direction: row;
-   flex-wrap: wrap; 
-   justify-content: space-evenly;
-   font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    font-size: 18px;
 }
 #Nitrox-atvc_content
 {
-    /*border: 2px solid black;*/
    display: flex;
-  flex-direction: row;
-  
-   flex-wrap: wrap; 
-   justify-content: space-evenly;
+  flex-direction: row; 
+   flex-wrap: wrap;  
+   justify-content: space-between;
    font-size: 18px;
+   margin-top: 40px;
+   width:100%;
 }
-
+#Nitrox-atvc{
+    margin-top: 40px;
+}
 #Nitrox-bajaline
 {
-    
     border: none;
-    border-left: 5px solid rgb(31, 70, 248);
+   border-left: 5px solid red;
     padding-left: 10px;
 }
 #Nitrox-atvcline
 {
     border: none;
-    border-right: 5px solid rgb(31, 70, 248);
+    border-right: 5px solid red;
     padding-right: 10px;
 }
 #Nitrox-baja_text
 {
-    /*border: 2px solid black;*/
-    width: 32%;
+    margin-top:30px;
+    width: 40%;
     padding: 5px;
-    margin-left: 172px;
     font-size: 18px;
 }
 #Nitrox-atvc_text
 {
-    /*border: 2px solid black;*/
-    width: 32%;
+    width: 40%;
     padding: 5px;
-    margin-right: 172px;
     font-size: 18px;
-    
-   
 }
 #Nitrox-baja_image
 {
@@ -140,9 +124,17 @@
     align-content: center;
     flex-wrap: wrap;
     justify-content: flex-end;
-    /*border: 2px solid black;*/
     width: 42%;
     padding: 5px;
+}
+#Nitrox-image1
+{
+    width: 80%;
+    height: 275px;
+    padding: 5px;
+    background-image: url("../../../Assets/WhereWeParticipate/NitroxATVC1.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 #Nitrox-image1:hover
 {
@@ -160,45 +152,21 @@
 {
     cursor: pointer;
 }
-#Nitrox-image1
-{
-    /*border: 2px solid black;*/
-    width: 64%;
-    height: 209px;
-    padding: 5px;
-    /* transform: sca
-    /* transform: scale(1.2); */
-    background-image: url("../../../Assets/WhereWeParticipate/NitroxBAJA1.jpeg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    background-position-y: bottom;
-}
 #Nitrox-image11
 {
-    
-    /*border: 2px solid black;*/
-    width: 64%;
+    width: 80%;
     padding: 5px;
-    height: 209px;
-    margin-right: 46px;
-    /* transform: sca
-    /* transform: scale(1.2); */
-    background-image: url("../../../Assets/WhereWeParticipate/NitroxATVC1.jpeg");
+    height: 275px;
+    background-image: url("../../../Assets/WhereWeParticipate/NitroxBAJA1.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
-   
 }
 #Nitrox-image2
 {
-    
-    /*border: 2px solid black;*/
-    width: 23%;
+    width: 20%;
     padding: 5px;
-    margin-right: -72px;
-    height: 209px;
-    margin-left: 109px;
-    background-image: url("../../../Assets/WhereWeParticipate/NitroxBAJA2.jpeg");
+    height: 275px;
+    background-image: url("../../../Assets/WhereWeParticipate/NitroxATVC2.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 0.45;
@@ -207,13 +175,10 @@
 #Nitrox-image22
 {
     opacity: 0.45;
-    /*border: 2px solid black;*/
-    width: 23%;
+    width: 20%;
     padding: 5px;
-    height: 209px;
-    margin-left: -72px;
-    margin-right: 74px;
-    background-image: url("../../../Assets/WhereWeParticipate/NitroxATVC2.jpeg");
+    height: 275px;
+    background-image: url("../../../Assets/WhereWeParticipate/NitroxBAJA2.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     
@@ -223,976 +188,90 @@
 {
     #Nitrox-participate
     {
-        margin-left: -8px;
-        margin-right: -8px;
         font-family: 'Montserrat', sans-serif;
-        /*border: 2px solid black;*/
        display: flex;
        flex-direction: column;
-       flex-wrap: wrap; 
+       /* flex-wrap: wrap;  */
        align-content: center;
       
     }
     
-    #Nitrox-titlecomp1
-    {
-        /*border: 2px solid black;*/
-        margin-left: 116px;
-        font-size: 37px;
-    }
-    #Nitrox-participate1
-    {
-        font-size: 37px;
-        font-weight: 800;
-        color: rgb(31, 70, 248);
-    }
     #Nitrox-baja_title
     {
         border-bottom: 8px solid black;
-        margin-left: 150px;
-        font-size: 34px;
+        font-size: 32px;
         font-weight: 800;
         color: rgb(12, 12, 12);
         
     }
-    #Nitrox-car1
-    {
-        width: 100%;
-    }
-    #Nitrox-car2
-    {
-        width: 100%;
-    }
-    
     #Nitrox-atvc_title
     {
-       
-        
-        
         border-bottom: 8px solid black;
-        margin-left: 74%;
-        font-size: 37px;
-        font-weight: 800;
-        color: rgb(12, 12, 12);
-      
-        
-        
-    }
-    #Nitrox-atvc_image
-    {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        /*border: 2px solid black;*/
-        width: 42%;
-        padding: 5px;
-        align-content: center;
-    }
-    
-    #Nitrox-car3
-    {
-        width: 100%;
-    }
-    #Nitrox-car4
-    {
-        width: 100%;
-    }
-    .Nitrox-content1
-    {
-        /*border: 2px solid black;*/
-        padding:10px;
-    }
-    #Nitrox-baja_content
-    {
-        /*border: 2px solid black;*/
-       display: flex;
-      flex-direction: row;
-       flex-wrap: wrap; 
-       justify-content: space-evenly;
-       font-size: 18px;
-    }
-    #Nitrox-atvc_content
-    {
-        /*border: 2px solid black;*/
-       display: flex;
-      flex-direction: row;
-       flex-wrap: wrap; 
-       justify-content: space-evenly;
-       font-size: 18px;
-    }
-    
-    #Nitrox-bajaline
-    {
-        
-        border: none;
-        border-left: 5px solid rgb(31, 70, 248);
-        padding-left: 10px;
-    }
-    #Nitrox-atvcline
-    {
-        border: none;
-        border-right: 5px solid rgb(31, 70, 248);
-        padding-right: 10px;
-    }
-    #Nitrox-baja_text
-    {
-        /*border: 2px solid black;*/
-        width: 32%;
-        padding: 5px;
-        margin-left: 60px;
-        font-size: 18px;
-    }
-    #Nitrox-atvc_text
-    {
-        /*border: 2px solid black;*/
-        width: 32%;
-        padding: 5px;
-        margin-right: 36px;
-        font-size: 18px;
-        
-       
-    }
-    #Nitrox-baja_image
-    {
-        display: flex;
-        align-content: center;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        /*border: 2px solid black;*/
-        width: 42%;
-        padding: 5px;
-    }
-    #Nitrox-image1
-    {
-        /*border: 2px solid black;*/
-        width: 62%;
-        padding: 5px;
-        height: 209px;
-        /* transform: sca
-        /* transform: scale(1.2); */
-        background-image: url("../../../Assets/WhereWeParticipate/NitroxBAJA1.jpeg");
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    #Nitrox-image11
-    {
-        
-        /*border: 2px solid black;*/
-        width: 64%;
-        padding: 5px;
-        height: 209px;
-        margin-right: 46px;
-        /* transform: sca
-        /* transform: scale(1.2); */
-        background-image: url("../../../Assets/WhereWeParticipate/NitroxATVC1.jpeg");
-        background-repeat: no-repeat;
-        background-size: cover;
-       
-    }
-    #Nitrox-image2
-    {
-        
-        /*border: 2px solid black;*/
-        width: 23%;
-        padding: 5px;
-        margin-right: -72px;
-        height: 209px;
-        margin-left: 109px;
-        background-image: url("../../../Assets/WhereWeParticipate/NitroxBAJA2.jpeg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        opacity: 0.45;
-    
-    }
-    #Nitrox-image22
-    {
-        opacity: 0.45;
-        /*border: 2px solid black;*/
-        width: 20%;
-        height: 209px;
-        padding: 5px;
-        margin-left: -72px;
-        margin-right: 74px;
-        background-image: url("../../../Assets/WhereWeParticipate/NitroxATVC2.jpeg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        
-    }
-}
-@media (min-width:768px) and (max-width:1024px)
-{
-    #Nitrox-atvc_text {
-        /*border: 2px solid black;*/
-        width: 45%;
-        padding: 5px;
-        margin-right: 25px;
-        font-size: 18px;
-    }
-    #Nitrox-baja_text
-    {
-        
-            /*border: 2px solid black;*/
-            width: 43%;
-            padding: 5px;
-            margin-left: 30px;
-            font-size: 18px;
-        
-    }
-    #Nitrox-baja_title {
-        border-bottom: 8px solid black;
-        margin-left: 33px;
+        margin-left: 57%;
         font-size: 32px;
         font-weight: 800;
         color: rgb(12, 12, 12);
     }
-    #Nitrox-image1 {
-        /*border: 2px solid black;*/
-        width: 94%;
-        padding: 5px;
-        background-image: url("../../../Assets/WhereWeParticipate/NitroxBAJA1.jpeg");
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
     
-    #Nitrox-image11 {
-        /*border: 2px solid black;*/
-        width: 94%;
-        padding: 5px;
-        margin-top: -119px;
-        margin-right: 0px;
-        background-image: url("../../../Assets/WhereWeParticipate/NitroxATVC1.jpeg");
-        background-repeat: no-repeat;
-        background-size: cover;
+    #Nitrox-baja_text,  #Nitrox-atvc_text
+    {
+        width: 46%;
     }
-   
-    #Nitrox-image22 {
-        /*border: 2px solid black;*/
+    #Nitrox-baja_image, #Nitrox-atvc_image{
+        width: 50%;
+    }
+}
+@media (min-width:768px) and (max-width:1024px)
+{
+    #Nitrox-baja_text, #Nitrox-atvc_text{
         width: 100%;
-        padding: 5px;
-        margin-left: 0px;
-        display: none;
-        margin-right: 0px;
-        background-image: url("../../../Assets/WhereWeParticipate/NitroxATVC2.jpeg");
-        background-repeat: no-repeat;
-        background-size: cover;
     }
-    
+    #Nitrox-baja_image, #Nitrox-atvc_image{
+        min-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+        justify-content: center;
+    }
+    #Nitrox-atvc_content{
+        flex-direction: column-reverse;
+    }
+    #Nitrox-atvc_title{
+        float:left;
+    }
+    #Nitrox-image2, #Nitrox-image22{
+        display: none;
+    }
+}
 
-#Nitrox-image2
+@media only screen and (max-width:768px)
 {
-    /*border: 2px solid black;*/
-    width: 94%;
-    padding: 5px;
-    margin-right: 0px;
-    display: none;
-    margin-top: 10px;
-    margin-left: 0px;
-    background-image: url("../../../Assets/WhereWeParticipate/NitroxBAJA2.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
-
-}
-#Nitrox-atvc_title
-{
-   
-    
-    
-    border-bottom: 8px solid black;
-    margin-left: 82%;
-    font-size: 32px;
-    font-weight: 800;
-    color: rgb(12, 12, 12);
-  
-    
-    
-}
-#Nitrox-baja_image
-{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    /*border: 2px solid black;*/
-    width: 42%;
-    padding: 5px;
-    height: 485px;
-}
-#Nitrox-atvc_image {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    /*border: 2px solid black;*/
-    width: 42%;
-    height: 478px;
-    padding: 5px;
-}
-#Nitrox-baja_content
-{
-    /*border: 2px solid black;*/
-   display: flex;
-  flex-direction: row;
-   flex-wrap: wrap; 
-   justify-content: space-between;
-   font-size: 18px;
-}
-#Nitrox-atvc_content
-{
-    /*border: 2px solid black;*/
-   display: flex;
-  flex-direction: row;
-   flex-wrap: wrap; 
-   justify-content: space-between;
-   font-size: 18px;
-}
-#Nitrox-titlecomp1
-{
-    /*border: 2px solid black;*/
-    margin-left: 21px;
-    font-size: 37px;
-}
-}
-@media (min-width:320px) and (max-width:375px)
-{
-    #Nitrox-atvc_title {
-        border-bottom: 8px solid black;
-        margin-left: 43px;
-        font-size: 30px;
-        font-weight: 800;
-        color: rgb(12, 12, 12);
+    #Nitrox-participate{
+        width:90%;
     }
-    
-    #Nitrox-titlecomp1 {
-        /*border: 2px solid black;*/
-        margin-left: 25px;
-        width: 90%;
-        font-size: 30px;
-    }
-    #Nitrox-participate1 {
-        font-size: 34px;
-        font-weight: 800;
-        color: rgb(31, 70, 248);
-    }
-    #Nitrox-baja_title {
-        border-bottom: 8px solid black;
-        margin-left: 40px;
-        font-size: 30px;
-        font-weight: 800;
-        color: rgb(12, 12, 12);
-    }
-    #Nitrox-baja_content {
-        /*border: 2px solid black;*/
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-       
-        justify-content: space-evenly;
-        font-size: 18px;
-    }
-    #Nitrox-baja_text {
-        /*border: 2px solid black;*/
-        width: 77%;
-        padding: 5px;
-        margin-left: 0px;
-        
+    #Nitrox-baja_text, #Nitrox-atvc_text{
+        width: 80%;
         font-size: 16px;
     }
-    #Nitrox-baja_image {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+    #Nitrox-baja_image, #Nitrox-atvc_image{
+        /* min-width: 400px; */
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+        width: 300px;
         justify-content: center;
-        /*border: 2px solid black;*/
-        width: 77%;
+    }
+    #Nitrox-image1, #Nitrox-image2, #Nitrox-image11, #Nitrox-image22{
         height: 200px;
-        padding: 5px;
     }
-    #Nitrox-atvc_image {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        /* justify-content: center; */
-        /*border: 2px solid black;*/
-        width: 78%;
-        height: 200px;
-        padding: 5px;
-    }
-    #Nitrox-image1 {
-        /*border: 2px solid black;*/
-        width: 91%;
-        height: 163px;
-        padding: 5px;
-        background-image: url("../../../Assets/WhereWeParticipate/NitroxBAJA1.jpeg");
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    #Nitrox-image2 {
-        /*border: 2px solid black;*/
-        width: 83%;
-        padding: 5px;
-        margin-right: 0px;
-        margin-top: 5px;
-        margin-left: 0px;
-        display: none;
-        background-repeat: no-repeat;
-        background-size: cover;
-        opacity: 0.45;
-    }
-    #Nitrox-atvc_text {
-        /*border: 2px solid black;*/
-        width: 77%;
-        padding: 5px;
-        margin-right: -4px;
-        font-size: 16px;
-    }
-    #Nitrox-atvc_content {
-        /*border: 2px solid black;*/
-        display: flex;
+    #Nitrox-atvc_content{
         flex-direction: column-reverse;
-        flex-wrap: wrap;
-        
-        align-content: center;
-        font-size: 18px;
     }
-    #Nitrox-image22 {
-        opacity: 0.45;
-        /*border: 2px solid black;*/
-        width: 84%;
-        padding: 5px;
-        margin-left: -70px;
+    #Nitrox-atvc_title{
+        float:left;
+    }
+    #Nitrox-image2, #Nitrox-image22{
         display: none;
-        margin-right: 34px;
-        background-image: url("../../../Assets/WhereWeParticipate/NitroxATVC2.jpeg");
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    #Nitrox-image11 {
-        /*border: 2px solid black;*/
-        width: 91%;
-        height: 128px;
-        padding: 5px;
-        margin-top: 5px;
-        margin-right: 9px;
-        background-image: url("../../../Assets/WhereWeParticipate/NitroxATVC1.jpeg");
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-}
-@media (min-width:375px) and (max-width:425px)
-{
-    #Nitrox-atvc_title {
-        border-bottom: 8px solid black;
-        margin-left: 43px;
-        font-size: 30px;
-        font-weight: 800;
-        color: rgb(12, 12, 12);
-    }
-    #Nitrox-titlecomp1 {
-        /*border: 2px solid black;*/
-        margin-left: 34px;
-        width: 90%;
-        font-size: 30px;
-    }
-    #Nitrox-participate1 {
-        font-size: 34px;
-        font-weight: 800;
-        color: rgb(31, 70, 248);
-    }
-    #Nitrox-baja_title {
-        border-bottom: 8px solid black;
-        margin-left: 45px;
-        font-size: 30px;
-        font-weight: 800;
-        color: rgb(12, 12, 12);
-    }
-    #Nitrox-baja_content {
-        /*border: 2px solid black;*/
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-       
-        justify-content: space-evenly;
-        font-size: 18px;
-    }
-    #Nitrox-baja_text {
-        /*border: 2px solid black;*/
-        width: 77%;
-        padding: 5px;
-        margin-left: 0px;
-        
-        font-size: 16px;
-    }
-    #Nitrox-baja_image {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        /*border: 2px solid black;*/
-        width: 77%;
-        height: 208px;
-        padding: 5px;
-    }
-    #Nitrox-atvc_image {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        /* justify-content: center; */
-        /*border: 2px solid black;*/
-        width: 78%;
-        height: 208px;
-        padding: 5px;
-    }
-    #Nitrox-image1 {
-        /*border: 2px solid black;*/
-        width: 77%;
-        height: 135px;
-        padding: 5px;
-        background-image: url("../../../Assets/WhereWeParticipate/NitroxBAJA1.jpeg");
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    #Nitrox-image2 {
-        /*border: 2px solid black;*/
-        width: 77%;
-        margin-top: 5px;
-        padding: 5px;
-        display: none;
-        margin-right: 0px;
-        margin-left: 0px;
-        background-repeat: no-repeat;
-        background-size: cover;
-        opacity: 0.45;
-    }
-    #Nitrox-atvc_text {
-        /*border: 2px solid black;*/
-        width: 77%;
-        padding: 5px;
-        margin-right: -4px;
-        font-size: 16px;
-    }
-    #Nitrox-atvc_content {
-        /*border: 2px solid black;*/
-        display: flex;
-        flex-direction: column-reverse;
-        align-content: center;
-        flex-wrap: wrap;
-        
-        justify-content: space-evenly;
-        font-size: 18px;
-    }
-    #Nitrox-image11 {
-        /*border: 2px solid black;*/
-        width: 77%;
-        padding: 5px;
-        height: 135px;
-        margin-top: 5px;
-        margin-right: 40px;
-        background-image: url("../../../Assets/WhereWeParticipate/NitroxATVC1.jpeg");
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    #Nitrox-image22 {
-        opacity: 0.45;
-        /*border: 2px solid black;*/
-        width: 77%;
-        padding: 5px;
-        
-        margin-left: -70px;
-        display: none;
-        margin-right: 25px;
-        background-image: url("../../../Assets/WhereWeParticipate/NitroxATVC2.jpeg");
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-}
-  
-@media (min-width:100px) and (max-width:319px)
-{
-    
-    #Nitrox-atvc_title {
-        border-bottom: 6px solid black;
-        margin-left: 31px;
-        font-size: 20px;
-        font-weight: 800;
-        color: rgb(12, 12, 12);
-    }
-    #Nitrox-image11 {
-        /*border: 2px solid black;*/
-        width: 84%;
-        padding: 5px;
-        margin-right: 20px;
-        background-image: url("../../../Assets/WhereWeParticipate/NitroxATVC1.jpeg");
-        background-repeat: no-repeat;
-        background-size: cover;
     }
     
-    #Nitrox-titlecomp1 {
-        /*border: 2px solid black;*/
-        margin-left: 3px;
-        width: 90%;
-        font-size: 30px;
-    }
-    #Nitrox-participate1 {
-        font-size: 30px;
-        font-weight: 800;
-        color: rgb(31, 70, 248);
-    }
-    #Nitrox-baja_title {
-        border-bottom: 6px solid black;
-        margin-left: 56px;
-        font-size: 35px;
-        font-weight: 800;
-        color: rgb(12, 12, 12);
-    }
-    #Nitrox-baja_content {
-        /*border: 2px solid black;*/
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-       
-        justify-content: space-evenly;
-        font-size: 18px;
-    }
-    #Nitrox-baja_text {
-        /*border: 2px solid black;*/
-        width: 77%;
-        padding: 5px;
-        margin-left: 0px;
-        
-        font-size: 15px;
-    }
-    #Nitrox-baja_image {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        /*border: 2px solid black;*/
-        width: 77%;
-        height: 175px;
-        padding: 5px;
-    }
-    #Nitrox-atvc_image {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        /* justify-content: center; */
-        /*border: 2px solid black;*/
-        width: 78%;
-        height: 175px;
-        padding: 5px;
-    }
-    #Nitrox-image1 {
-        /*border: 2px solid black;*/
-        width: 83%;
-        padding: 5px;
-        height: 114px;
-        background-image: url("../../../Assets/WhereWeParticipate/NitroxBAJA1.jpeg");
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    #Nitrox-image2 {
-        /*border: 2px solid black;*/
-        width: 83%;
-        padding: 5px;
-        margin-right: 0px;
-        margin-top: 5px;
-        display: none;
-        margin-left: 0px;
-        background-repeat: no-repeat;
-        background-size: cover;
-        opacity: 0.45;
-    }
-    #Nitrox-atvc_text {
-        /*border: 2px solid black;*/
-        width: 77%;
-        padding: 5px;
-        margin-right: -4px;
-        font-size: 15px;
-    }
-    #Nitrox-atvc_content {
-        /*border: 2px solid black;*/
-        display: flex;
-        flex-direction: column-reverse;
-        flex-wrap: wrap;
-        
-        align-content: center;
-        font-size: 18px;
-    }
-    #Nitrox-image22 {
-        opacity: 0.45;
-        /*border: 2px solid black;*/
-        width: 83%;
-        padding: 5px;
-        margin-left: -70px;
-        display: none;
-        margin-right: 31px;
-        background-image: url("../../../Assets/WhereWeParticipate/NitroxATVC2.jpeg");
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    #Nitrox-image11 {
-        /*border: 2px solid black;*/
-        width: 83%;
-        padding: 5px;
-        margin-top: 5px;
-        height: 101px;
-        margin-right: 36px;
-        background-image: url("../../../Assets/WhereWeParticipate/NitroxATVC1.jpeg");
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-}
-@media (min-width:425px) and (max-width:485px)
-{
-    #Nitrox-atvc_title {
-        border-bottom: 8px solid black;
-        margin-left: 30px;
-        font-size: 30px;
-        font-weight: 800;
-        color: rgb(12, 12, 12);
-    }
-    #Nitrox-titlecomp1 {
-        /*border: 2px solid black;*/
-        margin-left: 15px;
-        width: 90%;
-        font-size: 30px;
-    }
-    #Nitrox-participate1 {
-        font-size: 34px;
-        font-weight: 800;
-        color: rgb(31, 70, 248);
-    }
-    #Nitrox-baja_title {
-        border-bottom: 8px solid black;
-        margin-left: 30px;
-        font-size: 30px;
-        font-weight: 800;
-        color: rgb(12, 12, 12);
-    }
-    #Nitrox-baja_content {
-        /*border: 2px solid black;*/
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-       
-        justify-content: space-evenly;
-        font-size: 18px;
-    }
-    #Nitrox-baja_text {
-        /*border: 2px solid black;*/
-        width: 90%;
-        padding: 5px;
-        margin-left: 0px;
-        
-        font-size: 16px;
-    }
-    #Nitrox-baja_image {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        /*border: 2px solid black;*/
-        width: 90%;
-        height: 275px;
-        padding: 5px;
-    }
-    #Nitrox-atvc_image {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        /* justify-content: center; */
-        /*border: 2px solid black;*/
-        width: 90%;
-        height: 275px;
-        padding: 5px;
-    }
-    #Nitrox-image1 {
-        /*border: 2px solid black;*/
-        width: 80%;
-        height: 175px;
-        padding: 5px;
-        background-image: url("../../../Assets/WhereWeParticipate/NitroxBAJA1.jpeg");
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    #Nitrox-image2 {
-        /*border: 2px solid black;*/
-        width: 80%;
-        padding: 5px;
-        margin-top: 10px;
-        display: none;
-        margin-right: 0px;
-        margin-left: 0px;
-        background-repeat: no-repeat;
-        background-size: cover;
-        opacity: 0.45;
-    }
-    #Nitrox-atvc_text {
-        /*border: 2px solid black;*/
-        width: 90%;
-        padding: 5px;
-        margin-right: -4px;
-        font-size: 16px;
-    }
-    #Nitrox-atvc_content {
-        /*border: 2px solid black;*/
-        display: flex;
-        flex-direction: column-reverse;
-        flex-wrap: wrap;
-        
-        align-content: center;
-        font-size: 18px;
-    }
-    
-    #Nitrox-image22 {
-        opacity: 0.45;
-        /*border: 2px solid black;*/
-        width: 80%;
-        padding: 5px;
-        display: none;
-        margin-left: -70px;
-        margin-right: 28px;
-        background-image: url("../../../Assets/WhereWeParticipate/NitroxATVC2.jpeg");
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    #Nitrox-image11 {
-        /*border: 2px solid black;*/
-        width: 80%;
-        margin-top: 10px;
-        height: 175px;
-        padding: 5px;
-        margin-right: 29px;
-        background-image: url("../../../Assets/WhereWeParticipate/NitroxATVC1.jpeg");
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-}
-@media (min-width:485px) and (max-width:768px)
-{
-    #Nitrox-atvc_title {
-        border-bottom: 8px solid black;
-        margin-left: 28px;
-        font-size: 30px;
-        font-weight: 800;
-        color: rgb(12, 12, 12);
-    }
-    #Nitrox-titlecomp1 {
-        /*border: 2px solid black;*/
-        margin-left: 3px;
-        width: 90%;
-        font-size: 30px;
-    }
-    #Nitrox-participate1 {
-        font-size: 34px;
-        font-weight: 800;
-        color: rgb(31, 70, 248);
-    }
-    #Nitrox-baja_title {
-        border-bottom: 8px solid black;
-        margin-left: 24px;
-        font-size: 30px;
-        font-weight: 800;
-        color: rgb(12, 12, 12);
-    }
-    #Nitrox-baja_content {
-        /*border: 2px solid black;*/
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-       
-        justify-content: space-evenly;
-        font-size: 18px;
-    }
-    #Nitrox-baja_text {
-        /*border: 2px solid black;*/
-        width: 90%;
-        padding: 5px;
-        margin-left: 0px;
-        
-        font-size: 15px;
-    }
-    #Nitrox-baja_image {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        /*border: 2px solid black;*/
-        width: 90%;
-        height: 288px;
-        padding: 5px;
-    }
-    #Nitrox-atvc_image {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        /* justify-content: center; */
-        /*border: 2px solid black;*/
-        width: 90%;
-        height: 288px;
-        padding: 5px;
-    }
-    #Nitrox-image1 {
-        /*border: 2px solid black;*/
-        width: 53%;
-        height: 240px;
-        padding: 5px;
-        background-image: url("../../../Assets/WhereWeParticipate/NitroxBAJA1.jpeg");
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    #Nitrox-image2 {
-        /*border: 2px solid black;*/
-        width: 80%;
-        padding: 5px;
-        margin-top: 10px;
-        margin-right: 0px;
-        display: none;
-        margin-left: 0px;
-        background-repeat: no-repeat;
-        background-size: cover;
-        opacity: 0.45;
-    }
-    #Nitrox-atvc_text {
-        /*border: 2px solid black;*/
-        width: 90%;
-        padding: 5px;
-        margin-right: -4px;
-        font-size: 15px;
-    }
-    #Nitrox-atvc_content {
-        /*border: 2px solid black;*/
-        display: flex;
-        flex-direction: column-reverse;
-        flex-wrap: wrap;
-        
-        align-content: center;
-        font-size: 18px;
-    }
-    
-    #Nitrox-image22 {
-        opacity: 0.45;
-        /*border: 2px solid black;*/
-        width: 80%;
-        padding: 5px;
-        margin-left: -70px;
-        display: none;
-        margin-right: 28px;
-        background-image: url("../../../Assets/WhereWeParticipate/NitroxATVC2.jpeg");
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    #Nitrox-image11 {
-        /*border: 2px solid black;*/
-        width: 86%;
-        height: 240px;
-        margin-top: 10px;
-        padding: 5px;
-        margin-right: 55px;
-        background-image: url("../../../Assets/WhereWeParticipate/NitroxATVC1.jpeg");
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
 }

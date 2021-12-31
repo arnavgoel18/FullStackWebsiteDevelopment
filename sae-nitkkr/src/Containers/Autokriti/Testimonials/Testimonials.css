@@ -24,6 +24,7 @@
 }
 .cards{
   margin: auto;
+  padding-bottom:40px;
 }
 .text{
   border: 2px solid black;
@@ -57,7 +58,7 @@
 @media screen and (min-width: 760px) {
   .card23{
     position: relative;
-    top: -40px;
+    top: 10px;
   }
 }
 @media screen and (max-width: 660px) {

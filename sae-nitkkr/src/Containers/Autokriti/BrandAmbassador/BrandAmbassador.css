@@ -66,6 +66,7 @@
   font-weight: bold;
   width: 140px;
   padding: 5px;
+  cursor: pointer;
   background: linear-gradient(to right, blue, purple),
     linear-gradient(to right, white, white);
   position: relative;

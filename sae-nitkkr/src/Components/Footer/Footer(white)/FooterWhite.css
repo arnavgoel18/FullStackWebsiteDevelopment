@@ -248,15 +248,3 @@
  .white_things_to_explore:hover{
      cursor: pointer;
  }
-
- @media (min-width: 425px) and (max-width: 768px){
-#white_footer_box1 {
-    margin-left: 100px;
-}
-}
-
-@media (min-width: 375px) and (max-width: 425px){
-    #white_footer_box1 {
-        margin-left: 20px;
-    }
-    }

@@ -104,6 +104,7 @@
         align-items: center;
     }
     .TeamLeads-person{
+        margin-top: 30px;
         margin-bottom: 1vh;
     }
 }

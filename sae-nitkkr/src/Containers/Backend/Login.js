@@ -5,7 +5,7 @@ function Login() {
   return (
     <div className="LoginPage-loginBody">
       <div className="LoginPage-header">
-        <i className="fa fa-user fa-lg" aria-hidden="true"></i>
+        <i class="fa fa-user fa-lg" aria-hidden="true"></i>
         <button type="submit">Sign Out</button>
       </div>
       <div className="LoginPage-container">
@@ -32,7 +32,7 @@ function checkCredentials(e){
 
   if(userName == "saeoperator" && password == "wearesaenitkkr"){
      e.preventDefault();
-    window.location.href='/admin/afterLogin';
+    window.location.href='/admin/displayInfo';
   }
   else{
     window.alert("Wrong Password or Username");
