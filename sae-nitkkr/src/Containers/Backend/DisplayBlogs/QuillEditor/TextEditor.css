@@ -1,0 +1,87 @@
+*{
+    margin: 0 0;
+    padding: 0 0;
+}
+input{
+    margin: 25px 25px;
+    font-size: large;
+    font-weight: bold;  
+    border: none; 
+}
+::placeholder{
+    color: black;
+}
+input:focus{
+   outline: none;
+}
+.editor{
+    background-color: rgb(214, 213, 213);
+    margin: 25px 25px;
+    padding: 5px 5px;
+    padding-bottom: 12px;   
+}
+.ql-toolbar {
+    background-color: rgb(243, 243, 243);
+    border-radius: 5px ;
+}
+.ql-container{
+    background-color: white;
+    border-radius: 5px ;
+    height: 200px;
+}
+.ql-editor{
+    background: #FFFDFD;
+}
+
+.ql-bubble{   
+   height: auto;
+}
+.ql-hidden{
+    display: none;
+}
+.preview_heading{
+    margin: 25px 25px;
+    margin-bottom: 0px;
+    font-size: 18px;
+}
+.blog_preview{
+    border: 1px solid #000000;
+    background: #FFFDFD;
+    padding: 20px 27px;
+    height: auto;
+    margin: 25px 25px;
+    margin-top: 0px;
+   
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    margin: 70px 55px 50px 55px;
+    
+}
+.btn-black{
+    padding: 10px 30px;
+    font-size: large;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+.btn-red{
+    padding: 10px 20px;
+    font-size: large;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+.btn-green{
+    padding: 10px 25px;
+    font-size: large;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
