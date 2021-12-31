@@ -12,7 +12,7 @@ import Topic1 from './Containers/Blogs/Topic1/Topic1'
 import Topic2 from './Containers/Blogs/Topic2/Topic2'
 import Ambassador from "./Containers/Ambassador/Ambassador";
 import Login from "./Containers/Backend/Login";
-import AfterLoginPage from "./Containers/Backend/AfterLoginPage"
+import AfterLoginPage from "./Containers/Backend/AfterLogin/AfterLoginPage"
 import DisplayInfo from "./Containers/Backend/DisplayInfo/DisplayInfo";
 import DisplayBlogs from "./Containers/Backend/DisplayBlogs/AllBlogsPage"
 import QuillEditor from "./Containers/Backend/DisplayBlogs/QuillEditor/Add"

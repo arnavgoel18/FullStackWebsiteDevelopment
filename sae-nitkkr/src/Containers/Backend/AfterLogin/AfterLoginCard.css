@@ -1,0 +1,11 @@
+.afterLoginCard{
+    width: 20rem;
+    height: 5rem;
+    text-align: center;
+    vertical-align:middle;
+    margin: 50px 70px 0px 70px;
+    font-family: " Montserrat";
+    font-size: 26px;
+    line-height: 5rem;
+    color: #FFFFFF;
+}
