@@ -52,7 +52,7 @@ return (
          
           <div className="form-row">
             <div className="form-group col-md-12">
-              <input type="text" name="title" value={userInfo.title} onChange={onChangeValue}  className="form-control" placeholder="(Whatever the topic will be)" required />
+              <input id="quillTitle" type="text" name="title" value={userInfo.title} onChange={onChangeValue}  className="form-control" placeholder="(Whatever the topic will be)" required />
             </div>
            
             <div className="form-group col-md-12 editor">

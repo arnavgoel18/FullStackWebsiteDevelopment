@@ -14,26 +14,26 @@ export default function AfterLoginPage() {
       <Link to="/admin/displayBlogs">
       <AfterLoginCard
         name="Website Blogs"
-        color="yellow"
+        id="yellow"
       />
       </Link>
       <Link to="/admin/displayInfo">
       <AfterLoginCard
         name="Ambassador Response"
-        color="orange"
+        id="orange"
       />
       </Link>
       <AfterLoginCard
         name="Contact Us responses"
-        color="yellow"
+        id="orange"
       />
       <AfterLoginCard
         name="SignUp Details"
-        color="orange"
+        id="yellow"
       />
       <AfterLoginCard
         name="Quiz Responses Recorded"
-        color="yellow"
+        id="yellow"
       />
       </div>
     </div>
