@@ -6,3 +6,19 @@
     justify-content:left;
     align-items: center;
 }
+#signout
+{
+    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    margin-left: 20px;
+    width:150px;
+    border: none;
+    border-radius: 3px;
+    background-color: rgb(245, 63, 8);
+
+}
+#signout:hover
+{
+    cursor: pointer;
+}
