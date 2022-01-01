@@ -21,7 +21,7 @@ function DisplayInfo() {
     
     setDetail(detailList[index])
     
-    console.log(detailList)
+    console.log(detailList);
 
     return detailList
   }
@@ -30,14 +30,15 @@ function DisplayInfo() {
     setIndex(++index);
     console.log(index);
   }
-
+  
   function decrement() {
     setIndex(--index);
     console.log(index);
   }
   
-   useEffect(() => {
-     setForreload([...forreload, getInfo()])
+  //use effect to get info 
+  useEffect(() => {
+    setForreload([...forreload, getInfo()])
    }, [])
 
   return (
