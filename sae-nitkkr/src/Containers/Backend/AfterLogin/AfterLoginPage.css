@@ -8,19 +8,34 @@
     justify-content:left;
     align-items: center;
 }
+
+.LoginPage-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 20px;
+}
+
 #signout
 {
-    margin-top: 20px;
     font-family: 'Montserrat', sans-serif;
-    font-size: 25px;
-    margin-left: 20px;
+    font-size: 20px;
+    line-height: 25px;
     width:150px;
     border: none;
     border-radius: 3px;
-    background-color: rgb(245, 63, 8);
-
+    background-color: #bbb;
 }
+
 #signout:hover
 {
     cursor: pointer;
+}
+
+#AfterLogin-backBtn{
+    float: right;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    line-height: 25px;
+    width:150px;
+    display: none;
 }

@@ -35,3 +35,11 @@
     justify-content: space-evenly;
     font-size: 25px;
 }
+
+#AllBlogs-backBtn{
+    float: right;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    line-height: 25px;
+    width:150px;
+}

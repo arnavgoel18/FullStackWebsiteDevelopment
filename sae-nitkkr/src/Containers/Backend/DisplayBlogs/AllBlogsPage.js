@@ -43,6 +43,9 @@ export default function AllBlogsPage() {
   return (
     <div>
       <div className="LoginPage-header">
+
+        <Link to="/admin/actions"><button id="AllBlogs-backBtn">Back</button></Link>
+
         {/* <i className="fa fa-user fa-lg" aria-hidden="true"></i> */}
         <button type="submit" id="signout"
         onClick={(e)=>{
