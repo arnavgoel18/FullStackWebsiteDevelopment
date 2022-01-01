@@ -1,85 +1,97 @@
-import React, { useState, useEffect} from "react";
-import { Redirect } from "react-router-dom";
-import DisplayCard from "./DisplayCard";
-import db from "../../../Firebase.js";
-import {
-  collection,
-  getDocs,
-  Timestamp,
-  doc,
-  setDoc,
-} from "firebase/firestore";
+import React, { useState, useEffect } from 'react'
+import DisplayCard from './DisplayCard'
+import db from '../../../Firebase.js'
+import { collection, getDocs, Timestamp, doc, setDoc } from 'firebase/firestore'
 
 //function to get data form database
-function DisplayAmbassador() {
-    const [forreload, setForreload] = useState([])
+function DisplayInfo() {
+  var counter=0
+  var [index, setIndex] = useState(0)
+  var detailList=[]
+ 
 
-    var [result, setResult] = useState([]);
+  const [forreload, setForreload] = useState([])
+  var [detail, setDetail] = useState({})
 
-    async function getInfo() {
-        const studentAmbassador = collection(db, "studentAmbassador");
-        const amb_doc = await getDocs(studentAmbassador);
-        const detailList = amb_doc.docs.map((doc) =>  doc.data());
+  async function getInfo() {
 
-        setResult(detailList);
-
-        dispSomeInfo();
-        
-        return detailList;
-    }
-
-    function dispSomeInfo(){
-      console.log(result);
-    }
-
-    useEffect(() => {
-        setForreload([...forreload,getInfo()])
-      }, [])
-      const token=localStorage.getItem("token");
-
-      let loggedin=true;
-      if(token==null)
-      {
-        loggedin=false;
-      }
+    const studentAmbassador = collection(db, 'studentAmbassador')
+    var amb_doc = await getDocs(studentAmbassador)
+    detailList = amb_doc.docs.map((doc) => doc.data())
     
+    exporting(detailList)
     
-      if(loggedin==false)
-      {
-        return <Redirect to="/admin/login"/>
-      }
-      else{
-      return (
-        
-        <div className="displayDiv">
-            <button type="submit" id="signout"
-        onClick={(e)=>{
-          
-          localStorage.removeItem("token")
-          window.location.href="/admin/login"}}
-        >Sign Out</button>
-          {result.map((detail, index) => {
-            return (
-              <DisplayCard
-                key={index}
-                FullName={detail.studentName}
-                ClgName={detail.collegeName}
-                Branch={detail.branch}
-                CurrentSem={detail.semester}
-                Phoneno={detail.phone}
-                Emailid={detail.email}
-                s1={detail.s1}
-                s2={detail.s2}
-                ans1={detail.longAnswer1}
-                ans2={detail.longAnswer2}
-                ans3={detail.longAnswer3}
-              />
-            );
-          })}
+    console.log(detailList)
+
+    
+    // dispSomeInfo(detailList);
+    
+
+    return detailList
+  }
+ 
+  function exporting(e)
+  {
+   setDetail(e[index])
+   console.log(detail)
+  }
+
+  // function dispSomeInfo(x){
+
+  // }
+
+  
+function increment(e) {
+   counter++
+  setIndex(counter)
+  //console.log(index)
+  setDetail(detailList[index])
+ //console.log(detailList.length)
+  //console.log(detail)
+  e.preventDefault()
+}
+
+function decrement(e) {
+  counter--
+  setIndex(counter)
+  //console.log(index)
+  setDetail(detailList[index])
+  //console.log(detail)
+  e.preventDefault()
+}
+
+
+  
+   useEffect(() => {
+     setForreload([...forreload, getInfo()])
+   }, [])
+
+  return (
+    <div className='displayDiv'>
+      <div>
+        <div>
+          <button onClick={decrement}>-</button>
+          <div>{index}</div>
+          <button onClick={increment}>+</button>
         </div>
-      );
-    }
-    }
-    
+        
+        {/* <DisplayCard
+              key={index}
+              FullName={detail.studentName}
+              ClgName={detail.collegeName}
+              Branch={detail.branch}
+              CurrentSem={detail.semester}
+              Phoneno={detail.phone}
+              Emailid={detail.email}
+              s1={detail.s1}
+              s2={detail.s2}
+              ans1={detail.longAnswer1}
+              ans2={detail.longAnswer2}
+              ans3={detail.longAnswer3}
+            /> */}
+      </div>
+    </div>
+  )
+}
 
-export default DisplayAmbassador;
+export default DisplayInfo
