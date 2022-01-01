@@ -1,45 +1,63 @@
-import React, { useState, useEffect} from "react";
-
-import DisplayCard from "./DisplayCard";
-import db from "../../../Firebase.js";
-import {
-  collection,
-  getDocs,
-  Timestamp,
-  doc,
-  setDoc,
-} from "firebase/firestore";
+import React, { useState, useEffect } from 'react'
+import { Redirect } from "react-router-dom";
+import DisplayCard from './DisplayCard'
+import db from '../../../Firebase.js'
+import { collection, getDocs, Timestamp, doc, setDoc } from 'firebase/firestore'
 
 //function to get data form database
-function DisplayAmbassador() {
-    const [forreload, setForreload] = useState([])
+function DisplayInfo() {
+  var [index, setIndex] = useState(0)
+  var detailList=[]
 
-    var [result, setResult] = useState([]);
+  var [detail, setDetail] = useState({})
 
-    async function getInfo() {
-        const studentAmbassador = collection(db, "studentAmbassador");
-        const amb_doc = await getDocs(studentAmbassador);
-        const detailList = amb_doc.docs.map((doc) =>  doc.data());
+  //Get Information from Firebase into detailList array
+  async function getInfo() {
 
-        setResult(detailList);
+    const studentAmbassador = collection(db, 'studentAmbassador')
+    var amb_doc = await getDocs(studentAmbassador)
+    detailList = amb_doc.docs.map((doc) => doc.data())
+    
+    setDetail(detailList[index])
+    
+    return detailList
+  }
+   
+  function increment() {
+    setIndex(++index);
+    console.log(index);
+  }
+  
+  function decrement() {
+    setIndex(--index);
+    console.log(index);
+  }
 
-        dispSomeInfo();
-        
-        return detailList;
-    }
+  window.addEventListener('load', getInfo());
 
-    function dispSomeInfo(){
-      console.log(result);
-    }
+  const token=localStorage.getItem("token");
 
-    useEffect(() => {
-        setForreload([...forreload,getInfo()])
-      }, [])
+  let loggedin=true;
+  if(token==null)
+  {
+    loggedin=false;
+  }
+
+
+  if(loggedin==false)
+  {
+    return <Redirect to="/admin/login"/>
+  }
+  else{
 
   return (
-    <div className="displayDiv">
-      {result.map((detail, index) => {
-        return (
+    <div className='displayDiv'>
+      <div>
+        <div>
+          <button onClick={decrement}>-</button>
+          <div>{index+1}</div>
+          <button onClick={increment}>+</button>
+        </div>
           <DisplayCard
             key={index}
             FullName={detail.studentName}
@@ -54,10 +72,10 @@ function DisplayAmbassador() {
             ans2={detail.longAnswer2}
             ans3={detail.longAnswer3}
           />
-        );
-      })}
+      </div>
     </div>
-  );
+  )
+  }
 }
 
-export default DisplayAmbassador;
+export default DisplayInfo

@@ -1,57 +1,151 @@
-.LoginPage-header{
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+#LoginPage-container
+{
+    margin-top: 17.5%;
+    height: 300px;
+    width: 300px;
+    /* border:2px solid black; */
+    box-shadow: 0px 0px 15px;
+    font-family: 'Montserrat', sans-serif;
+    display:flex;
+    flex-direction: column;
+    /* align-content: center; */
+   justify-content: space-evenly;
+   
+}
+#LoginPage-loginBody
+{
+    
+    display: flex;
+    /* border: 2px solid black; */
+    font-family: 'Montserrat', sans-serif;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#LoginPage-form-title
+{
+    /* margin-top: 8px; */
+    /* border: 2px solid black; */
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    flex-direction: row;
+    justify-content: center;
+}       
+#LoginPage-field
+{
+    font-family: 'Montserrat', sans-serif;
+    /* border: 2px solid black; */
+  
+}
+#login_username
+{
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 10px;
+    margin-top: 10px;
+    /* border: 2px solid black; */
+    font-size: 20px;
+}
+#LoginPage-field_userid
+{
+    font-family: 'Montserrat', sans-serif;
+    /* border: 2px solid black; */
+    height: 70px;
+    margin-bottom: 20px;
+
     display: flex;
     flex-direction: column;
-    float: right;
-    align-items: flex-end;
-    margin: 10px 10px;
+    justify-content: space-between;
+    
 }
-.LoginPage-header button{
-    visibility: hidden;
-    float: right;
-    background-color: rgb(204, 200, 200);
-    font-size: 15px;
+#login_password
+{
+
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 10px;
+    margin-top: 20px;
+    border: 2px solid grey;
+    /* border: 2px solid black; */
     border: none;
-    padding: 5px 30px;
-    margin: 10px 0px;
-    cursor: pointer;
+    font-size: 20px;
 }
-i:hover + button{
-    visibility: visible;
+#LoginPage-username
+{
+    background-color: rgb(208, 230, 238);
+    font-family: 'Montserrat', sans-serif;
+    /* border: 2px solid black; */
+    border-bottom: none;
+    margin-left: 10px;
+    margin-right: 200px;
 }
-i:not(:hover) + button{
-    visibility: hidden;
-    transition: visibility 4s;
+#LoginPage-password
+{
+    background-color: rgb(208, 230, 238);
+    font-family: 'Montserrat', sans-serif;
+    /* border: 2px solid black; */
+    margin-top: 5px;
+    border-bottom: none;
+    margin-left: 10px;
 }
-.LoginPage-container{
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   height: 44vh;
-   width: 25vw;
-   text-align: center;
-   border-radius: 5px;
-   box-shadow:0px 0px 10px 5px  rgb(204, 200, 200);
+#LoginPage-field_password
+{
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 12px;
+    /* border: 2px solid black; */
 }
-.LoginPage-loginBody input{
-   margin: 25px 0 0 10px;
-   background-color: rgb(204, 200, 200);
-   border: none;
-   font-size: 15px;
-   padding: 4px 4px;
+#login_submit
+{
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+    /* border: 2px solid black; */
 }
-.LoginPage-loginBody input:focus{
-    outline: none;
-}
-#LoginPage-password{
-    margin-left: 13px;
-}
-.LoginPage-container form button{
-    margin: 50px;
-    background-color: rgb(250, 103, 50);
-    padding: 4px 70px;
-    font-size: 18px;
+#submit_button
+{
+    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    width:220px;
     border: none;
     border-radius: 3px;
+    background-color: rgb(245, 63, 8);
+}
+#submit_button:hover{
     cursor: pointer;
+}
+@media (min-width:0px) and (max-width:426px)
+{
+    #LoginPage-container
+    {margin-top: 150px;
+        height: 300px;
+        width: 280px;
+        /* border:2px solid black; */
+        box-shadow: 0px 0px 15px;
+        font-family: 'Montserrat', sans-serif;
+        display:flex;
+        flex-direction: column;
+        /* align-content: center; */
+       justify-content: space-evenly;
+       
+    }
+    #LoginPage-username {
+        font-family: 'Montserrat', sans-serif;
+        /* border: 2px solid black; */
+        border-bottom: none;
+        margin-left: 10px;
+        
+        width: 260px;
+        margin-right: 200px;
+    }
+    #LoginPage-password {
+        font-family: 'Montserrat', sans-serif;
+        /* border: 2px solid black; */
+        margin-top: 5px;
+        width: 260px;
+        border-bottom: none;
+        margin-left: 10px;
+    }
 }

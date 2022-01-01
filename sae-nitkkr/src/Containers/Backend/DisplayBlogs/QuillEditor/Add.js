@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
 import ReactQuill from "react-quill";
 import EditorToolbar, { modules, formats } from "./EditorToolbar";
+import { Redirect } from "react-router-dom";
 import "react-quill/dist/quill.snow.css";
 import "./TextEditor.css";
 import { useHistory } from "react-router-dom";
@@ -77,7 +78,7 @@ function Add() {
 
       if (timestamp == "null") {
         var newTimestamp = String(new Date().getTime());
-        var coverPhotoUrl;
+
         const storage = getStorage();
         const coverPhotoRef = ref(storage, `${newTimestamp}`);
 
@@ -136,90 +137,99 @@ function Add() {
     }
   }
 
-  return (
-    <>
-      <div className="App">
-        <div className="quillContainer">
-          <div className="row">
-            <form onSubmit={addDetails} className="update__forms">
-              <div className="form-row">
-                <div className="form-group col-md-12">
-                  <input
-                    id="quillTitle"
-                    type="text"
-                    name="title"
-                    value={userInfo.title}
-                    onChange={onChangeValue}
-                    className="form-control"
-                    placeholder="Enter Topic Here"
-                    required
-                  />
-                  <div className="coverPic">
-                    <label htmlFor="coverPhoto" id="coverlabel">
-                      Choose Cover Pic:
-                    </label>
+  const token = localStorage.getItem("token");
+  let loggedin = true;
+  if (token == null) {
+    loggedin = false;
+  }
+  if (loggedin == false) {
+    return <Redirect to="/admin/login" />;
+  } else {
+    return (
+      <div>
+        <div className="App">
+          <div className="quillContainer">
+            <div className="row">
+              <form onSubmit={addDetails} className="update__forms">
+                <div className="form-row">
+                  <div className="form-group col-md-12">
                     <input
-                      id="quillFile"
-                      type="file"
-                      name="coverPhoto"
-                      // value={userInfo.coverPhoto}
-                      onChange={(e) => onCoverPhoto(e)}
+                      id="quillTitle"
+                      type="text"
+                      name="title"
+                      value={userInfo.title}
+                      onChange={onChangeValue}
                       className="form-control"
-                      placeholder="Upload file..."
+                      placeholder="Enter Topic Here"
                       required
                     />
+                    <div className="coverPic">
+                      <label htmlFor="coverPhoto" id="coverlabel">
+                        Choose Cover Pic:
+                      </label>
+                      <input
+                        id="quillFile"
+                        type="file"
+                        name="coverPhoto"
+                        // value={userInfo.coverPhoto}
+                        onChange={(e) => onCoverPhoto(e)}
+                        className="form-control"
+                        placeholder="Upload file..."
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div className="form-group col-md-12 editor">
+                    <EditorToolbar toolbarId={"t1"} />
+                    <ReactQuill
+                      theme="snow"
+                      value={userInfo.information}
+                      onChange={oninformation}
+                      placeholder={"Write something awesome..."}
+                      modules={modules("t1")}
+                      formats={formats}
+                      id="quillInfo"
+                    />
+                  </div>
+
+                  <div className="preview_heading">Preview</div>
+                  <div className="blog_preview">
+                    <ReactQuill
+                      theme="bubble"
+                      value={userInfo.information}
+                      readOnly={true}
+                      formats={formats}
+                    />
+                  </div>
+
+                  <div className="buttons">
+                    <button
+                      type="button"
+                      className="btn btn-black"
+                      onClick={backToAll}
+                    >
+                      Back To All
+                    </button>
+                    <button
+                      type="button"
+                      className="btn btn-red"
+                      onClick={discardChanges}
+                    >
+                      Discard Changes
+                    </button>
+                    <button type="submit" className="btn btn-green">
+                      Save Changes
+                    </button>
                   </div>
                 </div>
-
-                <div className="form-group col-md-12 editor">
-                  <EditorToolbar toolbarId={"t1"} />
-                  <ReactQuill
-                    theme="snow"
-                    value={userInfo.information}
-                    onChange={oninformation}
-                    placeholder={"Write something awesome..."}
-                    modules={modules("t1")}
-                    formats={formats}
-                    id="quillInfo"
-                  />
-                </div>
-
-                <div className="preview_heading">Preview</div>
-                <div className="blog_preview">
-                  <ReactQuill
-                    theme="bubble"
-                    value={userInfo.information}
-                    readOnly={true}
-                    formats={formats}
-                  />
-                </div>
-
-                <div className="buttons">
-                  <button
-                    type="button"
-                    className="btn btn-black"
-                    onClick={backToAll}
-                  >
-                    Back To All
-                  </button>
-                  <button
-                    type="button"
-                    className="btn btn-red"
-                    onClick={discardChanges}
-                  >
-                    Discard Changes
-                  </button>
-                  <button type="submit" className="btn btn-green">
-                    Save Changes
-                  </button>
-                </div>
-              </div>
-            </form>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-    </>
-  );
+    );
+  }
 }
 
 export default Add;
