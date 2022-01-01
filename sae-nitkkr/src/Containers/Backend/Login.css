@@ -1,151 +1,365 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
-#LoginPage-container
-{
-    margin-top: 17.5%;
-    height: 300px;
-    width: 300px;
-    /* border:2px solid black; */
-    box-shadow: 0px 0px 15px;
-    font-family: 'Montserrat', sans-serif;
-    display:flex;
-    flex-direction: column;
-    /* align-content: center; */
-   justify-content: space-evenly;
-   
-}
-#LoginPage-loginBody
-{
-    
-    display: flex;
-    /* border: 2px solid black; */
-    font-family: 'Montserrat', sans-serif;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-#LoginPage-form-title
-{
-    /* margin-top: 8px; */
-    /* border: 2px solid black; */
-    display: flex;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 30px;
-    flex-direction: row;
-    justify-content: center;
-}       
-#LoginPage-field
-{
-    font-family: 'Montserrat', sans-serif;
-    /* border: 2px solid black; */
-  
-}
-#login_username
-{
-    font-family: 'Montserrat', sans-serif;
-    margin-left: 10px;
-    margin-top: 10px;
-    /* border: 2px solid black; */
-    font-size: 20px;
-}
-#LoginPage-field_userid
-{
-    font-family: 'Montserrat', sans-serif;
-    /* border: 2px solid black; */
-    height: 70px;
-    margin-bottom: 20px;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    
-}
-#login_password
-{
-
-    font-family: 'Montserrat', sans-serif;
-    margin-left: 10px;
-    margin-top: 20px;
-    border: 2px solid grey;
-    /* border: 2px solid black; */
-    border: none;
-    font-size: 20px;
-}
-#LoginPage-username
-{
-    background-color: rgb(208, 230, 238);
-    font-family: 'Montserrat', sans-serif;
-    /* border: 2px solid black; */
-    border-bottom: none;
-    margin-left: 10px;
-    margin-right: 200px;
-}
-#LoginPage-password
-{
-    background-color: rgb(208, 230, 238);
-    font-family: 'Montserrat', sans-serif;
-    /* border: 2px solid black; */
-    margin-top: 5px;
-    border-bottom: none;
-    margin-left: 10px;
-}
-#LoginPage-field_password
-{
-    font-family: 'Montserrat', sans-serif;
-    margin-top: 12px;
-    /* border: 2px solid black; */
-}
-#login_submit
-{
-    font-family: 'Montserrat', sans-serif;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 20px;
-    /* border: 2px solid black; */
-}
-#submit_button
-{
-    margin-top: 20px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 25px;
-    width:220px;
-    border: none;
-    border-radius: 3px;
-    background-color: rgb(245, 63, 8);
-}
-#submit_button:hover{
-    cursor: pointer;
-}
-@media (min-width:0px) and (max-width:426px)
-{
-    #LoginPage-container
-    {margin-top: 150px;
-        height: 300px;
-        width: 280px;
-        /* border:2px solid black; */
-        box-shadow: 0px 0px 15px;
-        font-family: 'Montserrat', sans-serif;
-        display:flex;
-        flex-direction: column;
-        /* align-content: center; */
-       justify-content: space-evenly;
-       
-    }
-    #LoginPage-username {
-        font-family: 'Montserrat', sans-serif;
-        /* border: 2px solid black; */
-        border-bottom: none;
-        margin-left: 10px;
+        *
+        {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Montserrat', sans-serif;
+        }
         
-        width: 260px;
-        margin-right: 200px;
-    }
-    #LoginPage-password {
-        font-family: 'Montserrat', sans-serif;
-        /* border: 2px solid black; */
-        margin-top: 5px;
-        width: 260px;
-        border-bottom: none;
-        margin-left: 10px;
-    }
-}
+        #logincontainer
+        {
+            /* background-image: linear-gradient(to bottom right,rgb(255, 0, 43),rgb(61, 1, 56)); */
+            /* background-color: blueviolet; */
+            height:100vh;
+            width: 100%;
+            /* height:max-content;
+            width: max-content; */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center ;
+            align-content: center;
+        }
+       #loginbox
+       {
+           background-color: white;
+           height: 500px;
+           width: 800px;
+           border-radius: 25px;
+           box-shadow: 0px 0px 20px ;
+           display: flex;
+           flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-content: center;
+       }
+       #loginlogo
+       {
+           height: 250px;
+           width: 200px;
+           background-color: tomato;
+       }
+       #h2comp1
+       {
+        font-family: 'Montserrat', sans-serif; text-align: center;font-weight: 900;
+       }
+       #loginmain
+       {
+        height: 250px;
+           width: 400px;
+           /* background-color:rgb(204, 204, 231); */
+       }
+       #login_man-sitting
+       {
+           height: 250px;
+           width: 250px;
+       }
+       #loginbut
+        {
+            position: relative;
+            height: 35px;
+            width: 250px;
+            border-radius: 20px;
+           
+
+            /* position: relative; */
+            /* height: 50px;
+            width: 120px; */
+            /* border-radius: 6px;
+            margin-right: 100px; */
+            background-color: rgb(255, 94, 0);
+            font-size: 15px;
+            letter-spacing: 1.2px;
+            color:rgb(247, 246, 248);
+            position: relative;
+            /* left: px; */
+            font-weight: bold;
+            border:none;
+            outline: none;
+            cursor: pointer;
+        }
+        #loginmain
+        {
+            display: flex;
+           flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-content: center;
+            outline: none;
+            
+        }
+        
+        input#loginadmin
+        {
+            background-image:url("https://img.icons8.com/ios-glyphs/30/000000/new-post.png");
+            background-position:15px;
+            font-family: 'Montserrat', 'sans-serif'; padding-left: 50px;
+            background-repeat: no-repeat;
+            background-size: 20px;
+            width: 250px;
+            /* color: grey; */
+            z-index: 1;
+          /* padding-left:25px; */
+        }
+        input#loginpass
+        {
+            background-image: url("https://img.icons8.com/ios-glyphs/30/000000/lock--v1.png");
+            background-position:15px;
+            background-repeat: no-repeat;
+            font-family: 'Montserrat', 'sans-serif'; padding-left: 50px;
+            background-size: 20px;
+            width: 250px;
+            z-index: 1;
+          /* padding-left:25px; */
+        }
+        .con
+        {
+            height: 35px;
+            width: 200px;
+            border-radius: 20px;
+            background-color: lightgrey;
+            border:none;
+            outline: none;
+        }
+        a{
+            color: black;
+            text-decoration: none;
+        }
+        @media (min-width:768px) and (max-width:1024px)
+        {
+            #loginbox
+       {
+           background-color: white;
+           height:520px;
+           width: 500px;
+           border-radius: 25px;
+           box-shadow: 0px 0px 20px ;
+           display: flex;
+           flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-content: center;
+       }
+       #loginbut
+        {
+            position: relative;
+            height: 35px;
+            width: px;
+            border-radius: 20px;
+           
+
+           
+            background-color: rgb(255, 94, 0);
+            font-size: 15px;
+            letter-spacing: 1.2px;
+            color:rgb(247, 246, 248);
+            position: relative;
+            /* left: px; */
+            font-weight: bold;
+            border:none;
+            outline: none;
+            cursor: pointer;
+        }
+        #loginmain
+        {
+            display: flex;
+           flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-content: center;
+            outline: none;
+            
+        }
+        #loginlogo
+       {
+           height: 250px;
+           width: 200px;
+           background-color: tomato;
+       }
+       #login_man-sitting
+       {
+           height: 250px;
+           width: 250px;
+       }
+        }
+        @media (min-width:425px) and (max-width:768px)
+        {
+            #loginbox
+       {
+           background-color: white;
+           height:400px;
+           width: 365px;
+           border-radius: 25px;
+           box-shadow: 0px 0px 20px ;
+           display: flex;
+           flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-content: center;
+       }
+       #loginbut
+        {
+            position: relative;
+            height: 35px;
+            width: px;
+            border-radius: 20px;
+           
+
+           
+            background-color: rgb(255, 94, 0);
+            font-size: 15px;
+            letter-spacing: 1.2px;
+            color:rgb(247, 246, 248);
+            position: relative;
+            /* left: px; */
+            font-weight: bold;
+            border:none;
+            outline: none;
+            cursor: pointer;
+        }
+        #loginmain
+        {
+            display: flex;
+           flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-content: center;
+            outline: none;
+            
+        }
+        #loginlogo
+       {
+           height: 120px;
+           width: 120px;
+           background-color: tomato;
+       }
+       #login_man-sitting
+       {
+           height: 120px;
+           width: 120px;
+       }
+        }
+        @media (min-width:375px) and (max-width:425px)
+        {
+            #loginbox
+       {
+           background-color: white;
+           height:350px;
+           width: 300px;
+           border-radius: 25px;
+           box-shadow: 0px 0px 20px ;
+           display: flex;
+           flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-content: center;
+       }
+       #loginbut
+        {
+            position: relative;
+            height: 35px;
+            width: px;
+            border-radius: 20px;
+           
+
+           
+            background-color: rgb(255, 94, 0);
+            font-size: 15px;
+            letter-spacing: 1.2px;
+            color:rgb(247, 246, 248);
+            position: relative;
+            /* left: px; */
+            font-weight: bold;
+            border:none;
+            outline: none;
+            cursor: pointer;
+        }
+        #loginmain
+        {
+            display: flex;
+           flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-content: center;
+            outline: none;
+            
+        }
+        #loginlogo
+       {
+           height: 80px;
+           width: 80px;
+           background-color: tomato;
+       }
+       #login_man-sitting
+       {
+           height: 80px;
+           width: 80px;
+       }
+        }
+        @media (min-width:320px) and (max-width:375px)
+        {
+            #loginbox
+       {
+           background-color: white;
+           height:300px;
+           width: 300px;
+           border-radius: 25px;
+           box-shadow: 0px 0px 20px ;
+           display: flex;
+           flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-content: center;
+       }
+       #loginbut
+        {
+            /* position: relative; */
+            height: 35px;
+            width: 250px;
+            border-radius: 20px;
+           
+
+           
+            background-color: rgb(255, 94, 0);
+            font-size: 15px;
+            letter-spacing: 1.2px;
+            color:rgb(247, 246, 248);
+            /* position: relative; */
+            /* left: px; */
+            font-weight: bold;
+            border:none;
+            outline: none;
+            cursor: pointer;
+        }
+        #loginmain
+        {
+            display: flex;
+           flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-content: center;
+            outline: none;
+            
+        }
+        #loginlogo
+       {
+           height: 50px;
+           width: 30px;
+           background-color: tomato;
+       }
+       #login_man-sitting
+       {
+           height: 50px;
+           width: 50px;
+       }
+       .con
+        {
+            height: 35px;
+            width: 200px;
+            border-radius: 20px;
+            background-color: lightgrey;
+            border:none;
+            outline: none;
+        }
+        }
+        

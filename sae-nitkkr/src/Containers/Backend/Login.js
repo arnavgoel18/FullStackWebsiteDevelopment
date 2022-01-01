@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import { Redirect } from 'react-router-dom';
 import "./Login.css";
+import man_sitting from '../../Assets/LoginPageLogos/man_sitting.jpg'
 
 function Login() {
   const[userid,setuserid]=useState();
@@ -14,9 +15,9 @@ function Login() {
       localStorage.setItem("token","shivaji");
        e.preventDefault();
        setloggedin(true);
-       console.log(userid);
-       console.log(password);
-       console.log(loggedin);
+      //  console.log(userid);
+      //  console.log(password);
+      //  console.log(loggedin);
        
      
     }
@@ -45,30 +46,26 @@ function Login() {
   else{
   return (
     
-    <div id="LoginPage-loginBody">
-     
-      <div id="LoginPage-container">
-        <p id="LoginPage-form-title">Login</p>
-        <form>
-          <div id='LoginPage-field_userid'>
-            <label htmlFor="username" id="login_username">Username</label>
-             <input type="text" name="username" id="LoginPage-username" onChange={(e)=>
+     <div id="logincontainer">
+        
+        <div id="loginbox">
+            <div id="loginlogo"> <img id="login_man-sitting"src={man_sitting} alt=""/></div>
+            <div id="loginmain">
+              <div id="logincompo1"> <h2 id="h2comp1">Login For SAE ADMIN</h2> </div>
+              <br/>
+              <div id="logincompo2"> <input type="text" id="loginadmin" class="con"  placeholder= "Admin"  onChange={(e)=>
             {
               setuserid(e.target.value)
-            }}></input>
-           </div>
-           <div id='LoginPage-field_password'>
-            <label htmlFor="password" id="login_password">Password</label>
-            <input type="password" name="password" id="LoginPage-password" onChange={(e)=>
+            }}/></div>
+              <div id="logincompo3"> <input type="password" id="loginpass" class="con" placeholder="Password" onChange={(e)=>
             {
                setpassword(e.target.value)
-            }}></input>
-          </div>
-          <div id="login_submit">
-          <button type="submit" onClick={checkCredentials} id="submit_button">Login</button>
-          </div>
-        </form>
-      </div>
+            }}/></div>
+              <br/>
+              <div id="logincompo4"><button id="loginbut" onClick={checkCredentials}>LOGIN</button></div>
+              {/* <!-- <div id="logincompo5"> <a href="google.com"> <h5 style="font-family: 'Montserrat', sans-serif; text-align: center;">Forgot <span style="font-family: 'Montserrat', sans-serif;">Username/Password</span></h5></div></a> --> */}
+            </div>
+        </div>
     </div>
   );
           }
