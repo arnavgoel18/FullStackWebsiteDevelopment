@@ -250,7 +250,7 @@ font-family: 'Montserrat', sans-serif;
         width:90%;
     }
     #Nitrox-baja_text, #Nitrox-atvc_text{
-        width: 80%;
+        width: 100%;
         font-size: 16px;
     }
     #Nitrox-baja_image, #Nitrox-atvc_image{
@@ -263,6 +263,8 @@ font-family: 'Montserrat', sans-serif;
     }
     #Nitrox-image1, #Nitrox-image2, #Nitrox-image11, #Nitrox-image22{
         height: 200px;
+        width: 100%;
+        background-position: center;
     }
     #Nitrox-atvc_content{
         flex-direction: column-reverse;
