@@ -2,7 +2,7 @@
     margin: 0 0;
     padding: 0 0;
 }
-.App{
+.AppQuill{
     width: 70%;
     display: block;
     margin: auto;
@@ -127,7 +127,7 @@ input:focus{
 }
 
 @media screen and (max-width:768px){
-    .App{
+    .AppQuill{
         width: 90%;
         display: block;
         margin: auto;

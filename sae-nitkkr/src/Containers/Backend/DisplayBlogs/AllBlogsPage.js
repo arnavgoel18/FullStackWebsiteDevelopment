@@ -82,7 +82,7 @@ export default function AllBlogsPage() {
           blogResult.map((detail, index) => {
           return (
             <div key={index}>
-              <Link to="">
+              <Link to="/blogs?timestamp=">
                 <TopicCardHolder
                   title={detail.title}
                   srcs={detail.coverPhotoUrl}

@@ -147,7 +147,7 @@ function Add() {
   } else {
     return (
       <div>
-        <div className="App">
+        <div className="AppQuill">
           <div className="quillContainer">
             <div className="row">
               <form onSubmit={addDetails} className="update__forms">

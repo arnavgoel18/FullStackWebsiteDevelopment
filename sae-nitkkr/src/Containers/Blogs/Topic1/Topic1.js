@@ -15,6 +15,16 @@ import ShareAndClapDIV from "../../../Components/Blogs/ShareAndClap/ShareAndClap
 import TopicsCardHolder from "../../../Components/Blogs/TopicsCardHolder/TopicsCardHolder";
 import PhoneShareAndClap from "../../../Components/Blogs/ShareAndClap/PhoneShareAndClap";
 import Footer from "../../../Components/Footer/Footer(black)/FooterBlack";
+import {
+  collection,
+  getDocs,
+  doc,
+  setDoc,
+  updateDoc,
+  storage,
+  snapshot,
+} from "firebase/firestore";
+import db from "../../../Firebase";
 
 function App() {
 
