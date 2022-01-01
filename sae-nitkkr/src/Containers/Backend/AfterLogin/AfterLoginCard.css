@@ -1,13 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 .afterLoginCard{
     width: 15rem;
     height: 3rem;
     margin: 50px 70px 0px 70px;
-    font-family: " Montserrat";
+
     font-size: 20px;
     font-weight: normal;
     text-align: center;
     line-height: 3rem;
     color: #FFFFFF;
+}
+.afterLoginCard:hover{
+ cursor: pointer;
 }
 
 #yellow{
