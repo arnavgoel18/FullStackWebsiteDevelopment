@@ -1,6 +1,7 @@
 .backendBlogPanel{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     margin-top: 25px;
 }
@@ -34,4 +35,35 @@
     flex-direction: row;
     justify-content: space-evenly;
     font-size: 25px;
+    cursor: pointer;
+}
+.icon{
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 5px 2px 5px 9px;
+}
+
+@media screen and (max-width:768px){
+    .backendBlogPanel{
+        margin-left: 4rem;
+        width: 40%;
+        flex-direction: column;
+    }
+    #addNewBlog{
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
+        height: fit-content;
+        width: 100%;
+        padding: 5px 10px 5px 10px;
+    }
+    .card_contain{
+        flex-direction: column;
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:460px){
+    .backendBlogPanel{
+        width: 70%;
+    }
 }
