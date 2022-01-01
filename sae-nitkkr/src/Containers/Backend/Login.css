@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 #LoginPage-container
-{margin-top: 150px;
+{
+    margin-top: 17.5%;
     height: 300px;
     width: 300px;
     /* border:2px solid black; */
