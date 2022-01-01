@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
 import ReactQuill from "react-quill";
 import EditorToolbar, { modules, formats } from "./EditorToolbar";
+import { Redirect } from "react-router-dom";
 import "react-quill/dist/quill.snow.css";
 import "./TextEditor.css";
 import { useHistory } from "react-router-dom";
@@ -64,7 +65,21 @@ function Add() {
       information: '',
     })
   }
+  const token=localStorage.getItem("token");
 
+  let loggedin=true;
+  if(token==null)
+  {
+    loggedin=false;
+  }
+
+
+  if(loggedin==false)
+  {
+    return <Redirect to="/admin/login"/>
+  }
+  else
+{
 return ( 
 <>
 
@@ -117,7 +132,7 @@ return (
 </>
 )
 }
-
+}
 
 export default Add
 
