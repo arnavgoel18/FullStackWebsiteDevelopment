@@ -5,7 +5,7 @@ import { RWebShare } from "react-web-share";
 
 import "./ShareAndClapDIV.css";
 
-function Clap() {
+function Clap(props) {
   const [frequency, setfrequency] = useState(0);
   function clap_increase() {
     let k = frequency;
@@ -20,8 +20,8 @@ function Clap() {
               <RWebShare
                 data={{
                   text: "You are sharing link of your favourite blog.",
-                  url: "http://www.google.com",
-                  title: "Blog Title aaega yha",
+                  url: `${props.shareUrl}`,
+                  title: `${props.title}`,
                 }}
                 onClick={() => console.log("shared successfully!")}
               >

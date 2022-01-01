@@ -17,10 +17,9 @@ function TopicsCardHolder(props) {
             <RWebShare
               data={{
                 text: "You are sharing link of your favourite blog.",
-                url: "http://www.google.com",
-                title: "Blog Title aaega yha",
+                url: `${props.shareUrl}`,
+                title: `${props.title}`,
               }}
-              sites="facebook"
               onClick={() => console.log("shared successfully!")}
             >
               <img

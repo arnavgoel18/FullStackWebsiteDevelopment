@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./AllBlogsPage.css";
-import { Redirect } from 'react-router-dom';
+import { Redirect } from "react-router-dom";
 import TopicCardHolder from "../../../Components/Blogs/TopicsCardHolder/TopicsCardHolder";
 import db from "../../../Firebase";
 import { getStorage, ref, deleteObject } from "firebase/storage";
@@ -30,7 +30,7 @@ export default function AllBlogsPage() {
   useEffect(() => {
     setForreload([...forreload, getBlogInfo()]);
   }, []);
-  const token=localStorage.getItem("token");
+  const token = localStorage.getItem("token");
 
   function deleteBlog(timestamp) {
     var result = window.confirm("Want to delete?");
@@ -42,32 +42,33 @@ export default function AllBlogsPage() {
     setForreload([...forreload, getBlogInfo()]);
   }
 
-  let loggedin=true;
-  if(token==null)
-  {
-    loggedin=false;
+  let loggedin = true;
+  if (token == null) {
+    loggedin = false;
   }
 
-
-  if(loggedin==false)
-  {
-    return <Redirect to="/admin/login"/>
+  if (loggedin == false) {
+    return <Redirect to="/admin/login" />;
   }
 
- 
   return (
     <div>
       <div className="LoginPage-header">
-
-        <Link to="/admin/actions"><button id="AllBlogs-backBtn">Back</button></Link>
+        <Link to="/admin/actions">
+          <button id="AllBlogs-backBtn">Back</button>
+        </Link>
 
         {/* <i className="fa fa-user fa-lg" aria-hidden="true"></i> */}
-        <button type="submit" id="signout"
-        onClick={(e)=>{
-          
-          localStorage.removeItem("token")
-          window.location.href="/admin/login"}}
-        >Sign Out</button>
+        <button
+          type="submit"
+          id="signout"
+          onClick={(e) => {
+            localStorage.removeItem("token");
+            window.location.href = "/admin/login";
+          }}
+        >
+          Sign Out
+        </button>
       </div>
       <div className="backendBlogPanel">
         <h4 id="totalHeading">Total no. of blogs: {blogResult.length}</h4>
@@ -78,15 +79,15 @@ export default function AllBlogsPage() {
       </div>
 
       <div className="card_contain">
-        {
-          blogResult.map((detail, index) => {
+        {blogResult.map((detail, index) => {
           return (
             <div key={index}>
-              <Link to="/blogs?timestamp=">
+              <Link to={"/blogs/leftvsright?timestamp=" + detail.timestamp}>
                 <TopicCardHolder
                   title={detail.title}
                   srcs={detail.coverPhotoUrl}
                   date={detail.modifiedDate}
+                  shareUrl={"/blogs/leftvsright?timestamp=" + detail.timestamp}
                 />
               </Link>
               <div className="blogIcons">
