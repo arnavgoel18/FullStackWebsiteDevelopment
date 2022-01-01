@@ -2,11 +2,37 @@
     margin: 0 0;
     padding: 0 0;
 }
+.AppQuill{
+    width: 70%;
+    display: block;
+    margin: auto;
+}
 #quillTitle{
     margin: 25px 25px;
     font-size: large;
     font-weight: bold;  
-    border: none; 
+    width: fit-content;
+    padding: 5px 5px 5px 5px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+#quillFile{
+    margin-left: 10px;
+    font-weight: bold;  
+    width: fit-content;
+    padding: 5px 5px 5px 5px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+.coverPic{
+    display: flex;
+    flex-direction: row;
+}
+#coverlabel{
+    font-weight: bold;
+    display: flex;
+    margin-left: 25px;
+
 }
 ::placeholder{
     color: black;
@@ -27,7 +53,7 @@ input:focus{
 .ql-container{
     background-color: white;
     border-radius: 5px ;
-    height: 200px;
+    height: 800px;
 }
 .ql-editor{
     background: #FFFDFD;
@@ -98,4 +124,23 @@ input:focus{
 .btn-black:active {
     background-color: black;
     transform: translateY(1px);
+}
+
+@media screen and (max-width:768px){
+    .AppQuill{
+        width: 90%;
+        display: block;
+        margin: auto;
+    }
+    .buttons{
+        width: 50%;
+        display: block;
+        margin: auto;
+    }
+    .btn{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    
 }

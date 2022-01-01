@@ -3,6 +3,7 @@ import "./AllBlogsPage.css";
 import { Redirect } from 'react-router-dom';
 import TopicCardHolder from "../../../Components/Blogs/TopicsCardHolder/TopicsCardHolder";
 import db from "../../../Firebase";
+import { getStorage, ref, deleteObject } from "firebase/storage";
 import {
   collection,
   getDocs,
@@ -11,10 +12,12 @@ import {
   setDoc,
 } from "firebase/firestore";
 import { Link } from "react-router-dom";
+// import { RWebShare } from "react-web-share";
 
 export default function AllBlogsPage() {
   const [forreload, setForreload] = useState([]);
   var [blogResult, setResult] = useState([]);
+  const storage = getStorage();
 
   async function getBlogInfo() {
     const blogs = collection(db, "blogs");
@@ -29,6 +32,16 @@ export default function AllBlogsPage() {
   }, []);
   const token=localStorage.getItem("token");
 
+  function deleteBlog(timestamp) {
+    var result = window.confirm("Want to delete?");
+    if (result) {
+      deleteDoc(doc(db, "blogs", timestamp));
+      const desertRef = ref(storage, `${timestamp}`);
+      deleteObject(desertRef);
+    }
+    setForreload([...forreload, getBlogInfo()]);
+  }
+
   let loggedin=true;
   if(token==null)
   {
@@ -40,6 +53,8 @@ export default function AllBlogsPage() {
   {
     return <Redirect to="/admin/login"/>
   }
+
+ 
   return (
     <div>
       <div className="LoginPage-header">
@@ -63,24 +78,28 @@ export default function AllBlogsPage() {
       </div>
 
       <div className="card_contain">
-        {blogResult.map((detail, index) => {
+        {
+          blogResult.map((detail, index) => {
           return (
-            <div>
-              <Link to="">
+            <div key={index}>
+              <Link to="/blogs?timestamp=">
                 <TopicCardHolder
-                  key={index}
                   title={detail.title}
-                  srcs=""
-                  date={detail.date}
+                  srcs={detail.coverPhotoUrl}
+                  date={detail.modifiedDate}
                 />
               </Link>
               <div className="blogIcons">
                 <i
-                  className="fa fa-trash"
+                  className="fa fa-trash icon"
                   aria-hidden="true"
                   onClick={() => deleteBlog(detail.timestamp)}
                 ></i>
-                <i className="fa fa-pencil" aria-hidden="true"></i>
+                <i
+                  className="fa fa-pencil icon"
+                  aria-hidden="true"
+                  onClick={() => editBlog(detail.timestamp)}
+                ></i>
               </div>
             </div>
           );
@@ -92,12 +111,9 @@ export default function AllBlogsPage() {
 
 function goToEditor(e) {
   e.preventDefault();
-  window.location.href = "/admin/displayBlogs/editor";
+  window.location.href = `/admin/displayBlogs/editor?timestamp=null`;
 }
 
-function deleteBlog(timestamp) {
-   var result = window.confirm("Want to delete?");
-   if (result) {
-     deleteDoc(doc(db, "blogs", timestamp));
-   }
+function editBlog(timestamp) {
+  window.location.href = "/admin/displayBlogs/editor?timestamp=" + timestamp;
 }
