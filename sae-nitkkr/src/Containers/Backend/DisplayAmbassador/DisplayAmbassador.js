@@ -8,7 +8,7 @@ import { collection, getDocs, Timestamp, doc, setDoc } from 'firebase/firestore'
 function DisplayInfo() {
   var [index, setIndex] = useState(0)
   var detailList=[]
-  
+
   var [detail, setDetail] = useState({})
 
   //Get Information from Firebase into detailList array
@@ -55,7 +55,7 @@ function DisplayInfo() {
       <div>
         <div>
           <button onClick={decrement}>-</button>
-          <div>{index}</div>
+          <div>{index+1}</div>
           <button onClick={increment}>+</button>
         </div>
           <DisplayCard
