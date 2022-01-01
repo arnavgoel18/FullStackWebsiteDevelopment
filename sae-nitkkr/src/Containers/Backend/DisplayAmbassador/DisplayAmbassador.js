@@ -5,62 +5,36 @@ import { collection, getDocs, Timestamp, doc, setDoc } from 'firebase/firestore'
 
 //function to get data form database
 function DisplayInfo() {
-  var counter=0
   var [index, setIndex] = useState(0)
   var detailList=[]
- 
+  
 
   const [forreload, setForreload] = useState([])
   var [detail, setDetail] = useState({})
 
+  //Get Information from Firebase into detailList array
   async function getInfo() {
 
     const studentAmbassador = collection(db, 'studentAmbassador')
     var amb_doc = await getDocs(studentAmbassador)
     detailList = amb_doc.docs.map((doc) => doc.data())
     
-    exporting(detailList)
+    setDetail(detailList[index])
     
     console.log(detailList)
 
-    
-    // dispSomeInfo(detailList);
-    
-
     return detailList
   }
- 
-  function exporting(e)
-  {
-   setDetail(e[index])
-   console.log(detail)
+   
+  function increment() {
+    setIndex(++index);
+    console.log(index);
   }
 
-  // function dispSomeInfo(x){
-
-  // }
-
-  
-function increment(e) {
-   counter++
-  setIndex(counter)
-  //console.log(index)
-  setDetail(detailList[index])
- //console.log(detailList.length)
-  //console.log(detail)
-  e.preventDefault()
-}
-
-function decrement(e) {
-  counter--
-  setIndex(counter)
-  //console.log(index)
-  setDetail(detailList[index])
-  //console.log(detail)
-  e.preventDefault()
-}
-
-
+  function decrement() {
+    setIndex(--index);
+    console.log(index);
+  }
   
    useEffect(() => {
      setForreload([...forreload, getInfo()])
@@ -75,7 +49,7 @@ function decrement(e) {
           <button onClick={increment}>+</button>
         </div>
         
-        {/* <DisplayCard
+        <DisplayCard
               key={index}
               FullName={detail.studentName}
               ClgName={detail.collegeName}
@@ -88,7 +62,7 @@ function decrement(e) {
               ans1={detail.longAnswer1}
               ans2={detail.longAnswer2}
               ans3={detail.longAnswer3}
-            /> */}
+            />
       </div>
     </div>
   )
