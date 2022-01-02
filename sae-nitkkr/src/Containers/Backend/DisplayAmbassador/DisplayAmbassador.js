@@ -3,6 +3,7 @@ import { Redirect } from "react-router-dom";
 import DisplayCard from './DisplayCard'
 import db from '../../../Firebase.js'
 import { collection, getDocs, Timestamp, doc, setDoc } from 'firebase/firestore'
+import PageHeader from '../../../Components/Backend/PageHeader/PageHeader';
 
 var flag=false
 //function to get data form database
@@ -70,6 +71,8 @@ function DisplayInfo() {
   else{
 
   return (
+    <>
+    <PageHeader heading="Ambassador Responses"/>
     <div className='displayDiv'>
       <div>
         <div>
@@ -93,6 +96,7 @@ function DisplayInfo() {
           />
       </div>
     </div>
+    </>
   )
   }
 }
