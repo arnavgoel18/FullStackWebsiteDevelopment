@@ -269,9 +269,13 @@ var longAns3 = document.getElementById("text3");
 
 //save to database
 async function setInfo(docdata) {
+  document.getElementById('amb-button').disabled = true
+  document.getElementById('amb-button').style.backgroundColor = 'gray'
   var timestamp = String(new Date().getTime());
   await setDoc(doc(db, "studentAmbassador", timestamp), docdata);
   alert("Congratulations! Your information saved successfully.");
   deletedata();
+  document.getElementById('amb-button').disabled = false
+  document.getElementById('amb-button').style.backgroundColor = '#E9910DFC'
   // window.location.reload();
 }
