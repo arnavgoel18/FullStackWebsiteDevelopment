@@ -146,7 +146,7 @@ export default function FormDIV() {
             ></textarea>
           </div>
           <div className="question">
-            What two channels do you think are the most effective for engaging
+            What two channels (eg. Social Media) do you think are the most effective for engaging
             with our target audience (18-22 Yrs) *{" "}
           </div>
           <div className="field">
