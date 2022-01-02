@@ -149,7 +149,9 @@ function Add() {
         information: "",
         coverPhoto: "",
       });
-      
+      setTimeout(() => {
+        document.getElementById('quillTitle').value="";
+      }, 300);
     }
   }
 
