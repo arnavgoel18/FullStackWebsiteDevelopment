@@ -29,6 +29,7 @@ function Add() {
   });
 
   async function getBlogInfo() {
+    console.log("THIS");
     const blogs = collection(db, "blogs");
     const blogs_doc = await getDocs(blogs);
     const blogList = blogs_doc.docs.map((doc) => doc.data());
@@ -218,7 +219,7 @@ function Add() {
                     >
                       Discard Changes
                     </button>
-                    <button type="submit" className="btn btn-green">
+                    <button type="submit" className="btn btn-green" >
                       Save Changes
                     </button>
                   </div>

@@ -4,36 +4,45 @@ import DisplayCard from './DisplayCard'
 import db from '../../../Firebase.js'
 import { collection, getDocs, Timestamp, doc, setDoc } from 'firebase/firestore'
 
+var flag=false
 //function to get data form database
 function DisplayInfo() {
   var [index, setIndex] = useState(0)
   var detailList=[]
+  var [tester, setTester] = useState(true);
 
   var [detail, setDetail] = useState({})
 
   //Get Information from Firebase into detailList array
   async function getInfo() {
-
+    // console.log("ambassador info")
     const studentAmbassador = collection(db, 'studentAmbassador')
     var amb_doc = await getDocs(studentAmbassador)
     detailList = amb_doc.docs.map((doc) => doc.data())
+
     
     setDetail(detailList[index])
     
     return detailList
   }
-   
+  
+  if(tester == true){
+    // console.log("RAN");
+    window.addEventListener('load', getInfo());
+    setTester(false);
+  }
+
   function increment() {
     setIndex(++index);
+    getInfo();
     console.log(index);
   }
   
   function decrement() {
     setIndex(--index);
+    getInfo();
     console.log(index);
   }
-
-  window.addEventListener('load', getInfo());
 
   const token=localStorage.getItem("token");
 
