@@ -36,11 +36,19 @@ function Add() {
 
     blogList.map((detail, index) => {
       if (detail.timestamp == timestamp) {
+        
         setuserInfo({
           title: detail.title,
           information: detail.information,
           coverPhoto: detail.coverPhotoUrl,
         });
+        setuserInfo({
+          title: detail.title,
+          information: detail.information,
+          coverPhoto: detail.coverPhotoUrl
+        });
+       
+      
       }
     });
   }
@@ -99,6 +107,7 @@ function Add() {
                 information: "",
                 coverPhoto: "",
               });
+            
             });
           });
         });
@@ -114,6 +123,11 @@ function Add() {
             coverPhotoUrl: url,
           }).then((res) => {
             alert("Your blog has been successfully modified.");
+            setuserInfo({
+              title: "",
+              information: "",
+              coverPhoto: "",
+            });
             setuserInfo({
               title: "",
               information: "",
@@ -135,6 +149,7 @@ function Add() {
         information: "",
         coverPhoto: "",
       });
+      
     }
   }
 
