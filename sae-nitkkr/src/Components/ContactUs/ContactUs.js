@@ -204,6 +204,8 @@ function validateForm(contactUsData) {
 }
 
 async function setInfo(contactUsData) {
+  document.getElementById('contact_button').disabled = true
+  document.getElementById('contact_button').style.backgroundColor="gray"
   var timestamp = String(new Date().getTime());
   await setDoc(doc(db, "contactUs", timestamp), contactUsData);
   alert("Congratulations! Your information has been saved successfully.");
