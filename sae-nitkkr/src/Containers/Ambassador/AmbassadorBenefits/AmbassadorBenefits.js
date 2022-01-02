@@ -9,7 +9,7 @@ function AmbassadorBenefits() {
             <div className="AmbassadorBenefits-ambassadorBenefits">
                 <AmbassadorBenefitsCard
                     number="01."
-                    heading="Performence Based Monetory Incentives"
+                    heading="Performence Based Monetary Incentives"
                     content="You willl get monetory benfits based on the number of students who enroll in the workshops with your referall code."
                 />
                 <AmbassadorBenefitsCard

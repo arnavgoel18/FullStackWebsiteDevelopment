@@ -12,6 +12,7 @@ function DisplayInfo() {
   var [tester, setTester] = useState(true);
 
   var [detail, setDetail] = useState({})
+  var [detailListLength, setDetailListLength] = useState(0);
 
   //Get Information from Firebase into detailList array
   async function getInfo() {
@@ -22,6 +23,7 @@ function DisplayInfo() {
 
     
     setDetail(detailList[index])
+    setDetailListLength(detailList.length);
     
     return detailList
   }
@@ -31,17 +33,25 @@ function DisplayInfo() {
     window.addEventListener('load', getInfo());
     setTester(false);
   }
-
+  
   function increment() {
-    setIndex(++index);
-    getInfo();
-    console.log(index);
+    if(index < detailListLength - 1){
+      setIndex(++index);
+      getInfo();
+    }
+    else{
+      window.alert("MAXIMUM RESPONSES REACHED");
+    }
   }
   
   function decrement() {
-    setIndex(--index);
-    getInfo();
-    console.log(index);
+    if(index == 0){
+      window.alert("MINIMUM LIMIT REACHED");
+    }
+    else{
+      setIndex(--index);
+      getInfo();
+    }
   }
 
   const token=localStorage.getItem("token");
