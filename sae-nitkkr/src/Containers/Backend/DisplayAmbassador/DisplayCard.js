@@ -93,7 +93,7 @@ function DisplayCard(props) {
             </p>
           </div>
           <div className="ttable-cell">
-            <p>{props.ans1}</p>
+            <p>{props.ans2}</p>
           </div>
         </div>
 
@@ -105,7 +105,7 @@ function DisplayCard(props) {
             </p>
           </div>
           <div className="ttable-cell">
-            <p>{props.ans2}</p>
+            <p>{props.ans3}</p>
           </div>
         </div>
 
@@ -114,7 +114,7 @@ function DisplayCard(props) {
             <p>How did you find out about this ambassador program? *</p>
           </div>
           <div className="ttable-cell">
-            <p>{props.ans3}</p>
+            <p>{props.ans1}</p>
           </div>
         </div>
       </div>
