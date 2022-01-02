@@ -163,15 +163,38 @@ export default function FormDIV() {
           <div className="question">
            How did you find out about this ambassador program?</div>   
         <div className="field">
-            {" "}
-            <textarea
-              required="required"
-              name="message"
-              id="text1"
-              placeholder="Type your answer here"
-              // cols="65"
-              rows="3"
-            ></textarea>
+        <select id="s3">
+              <option selected hidden value="">
+                --Select any one--
+              </option>
+              <option
+                name="submit blog"
+                value="Instagram"
+              >
+                Instagram
+              </option>
+              <option
+                name="sponsership"
+                value="Facebook"
+              >
+                Facebook
+              </option>
+              <option name="brand_ambassador" value="LinkedIn">
+                LinkedIn
+              </option>
+              <option name="website" value="D2C">
+                D2C
+              </option>
+              <option name="other" value="Word of Mouth">
+                Word of Mouth
+              </option>
+              <option name="other" value="Website">
+                Website
+              </option>
+              <option name="other" value="Other">
+                Other
+              </option>
+            </select>
           </div>
           <div className="form-button">
             <button id="amb-button" type="submit" onClick={submit}>
