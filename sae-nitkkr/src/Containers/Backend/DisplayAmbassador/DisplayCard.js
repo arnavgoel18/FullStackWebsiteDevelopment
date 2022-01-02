@@ -114,7 +114,7 @@ function DisplayCard(props) {
             <p>How did you find out about this ambassador program? *</p>
           </div>
           <div className="ttable-cell">
-            <p>{props.ans1}</p>
+            <p>{props.s3}</p>
           </div>
         </div>
       </div>

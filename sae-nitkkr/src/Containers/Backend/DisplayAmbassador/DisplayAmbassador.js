@@ -4,6 +4,8 @@ import DisplayCard from './DisplayCard'
 import db from '../../../Firebase.js'
 import { collection, getDocs, Timestamp, doc, setDoc } from 'firebase/firestore'
 import { Link } from "react-router-dom";
+import PageHeader from '../../../Components/Backend/PageHeader/PageHeader';
+
 var flag=false
 //function to get data form database
 function DisplayInfo() {
@@ -70,6 +72,8 @@ function DisplayInfo() {
   else{
 
   return (
+    <>
+    <PageHeader heading="Ambassador Responses"/>
     <div className='displayDiv'>
        <div className="LoginPage-header">
         <Link to="/admin/actions">
@@ -109,12 +113,13 @@ function DisplayInfo() {
             Emailid={detail.email}
             s1={detail.s1}
             s2={detail.s2}
-            ans1={detail.longAnswer1}
+            s3={detail.s3}
             ans2={detail.longAnswer2}
             ans3={detail.longAnswer3}
           />
       </div>
     </div>
+    </>
   )
   }
 }
