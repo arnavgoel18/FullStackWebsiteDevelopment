@@ -5,6 +5,21 @@
     justify-content: space-evenly;
     margin-top: 25px;
 }
+#AllBlogs-backBtn{
+   
+    width: 171.06px;
+    height: 49px;
+    color: white;
+    background: #000000;
+    border-radius: 10px;
+    }
+    #blog-signout{
+        width: 171.06px;
+    height: 49px;
+    float: right;
+    background: #F4970A;
+    border-radius: 10px;
+    }
 #addNewBlog{
     background-color: #098716;
     height: 2.5rem;
@@ -67,11 +82,24 @@
         width: 70%;
     }
 }
-
-#AllBlogs-backBtn{
+@media only screen and (max-width: 400px) 
+{
+    #AllBlogs-backBtn{
+  
+    width: 121.06px;
+    height: 49px;
+    left: 32px;
+  
+    color: white;
+    background: #000000;
+    border-radius: 10px;
+    }
+    #blog-signout{
+        
+    width: 121.06px;
+    height: 49px;
     float: right;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-    line-height: 25px;
-    width:150px;
+    background: #F4970A;
+    border-radius: 10px;
+    }
 }

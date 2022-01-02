@@ -3,7 +3,7 @@ import { Redirect } from "react-router-dom";
 import DisplayCard from './DisplayCard'
 import db from '../../../Firebase.js'
 import { collection, getDocs, Timestamp, doc, setDoc } from 'firebase/firestore'
-
+import { Link } from "react-router-dom";
 var flag=false
 //function to get data form database
 function DisplayInfo() {
@@ -71,12 +71,34 @@ function DisplayInfo() {
 
   return (
     <div className='displayDiv'>
-      <div>
-        <div>
-          <button onClick={decrement}>-</button>
+       <div className="LoginPage-header">
+        <Link to="/admin/actions">
+          <button id="ambassador-backBtn">Back</button>
+        </Link>
+
+        {/* <i className="fa fa-user fa-lg" aria-hidden="true"></i> */}
+        <button
+          type="submit"
+          id="amb-signout"
+          onClick={(e) => {
+            localStorage.removeItem("token");
+            window.location.href = "/admin/login";
+          }}
+        >
+          Sign Out
+        </button>
+       
+      </div>
+      <div className='response-num-div'>
+        <div className='response-num'>Response Number</div>
+        <div className='response-num-btn'>
+          <button id="decrement" onClick={decrement}>-</button>
           <div>{index+1}</div>
-          <button onClick={increment}>+</button>
+          <button id="increment" onClick={increment}>+</button>
         </div>
+      </div>
+      <div>
+        
           <DisplayCard
             key={index}
             FullName={detail.studentName}

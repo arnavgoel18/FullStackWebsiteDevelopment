@@ -61,7 +61,7 @@ export default function AllBlogsPage() {
         {/* <i className="fa fa-user fa-lg" aria-hidden="true"></i> */}
         <button
           type="submit"
-          id="signout"
+          id="blog-signout"
           onClick={(e) => {
             localStorage.removeItem("token");
             window.location.href = "/admin/login";

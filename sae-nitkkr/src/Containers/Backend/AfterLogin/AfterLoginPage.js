@@ -27,7 +27,7 @@ export default function AfterLoginPage() {
           <Link to="/admin/actions"><button id="AfterLogin-backBtn">Back</button></Link>
           
           {/* <i className="fa fa-user fa-lg" aria-hidden="true"></i> */}
-          <button id="signout" onClick={(e)=>{
+          <button id="action-signout" onClick={(e)=>{
             
             localStorage.removeItem("token")
             window.location.href="/admin/login"}}>Sign Out</button>
