@@ -2,7 +2,7 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  //SAE
+  //SAE (DO NOT USE THIS FOR TESTING - ONLY DEPLOYEMENT)
   // apiKey: "AIzaSyAw99i_BGoXy4tM-tyM-zpFRXH6uZhHD0U",
   // authDomain: "autokriti-ambassadors-2022.firebaseapp.com",
   // projectId: "autokriti-ambassadors-2022",
@@ -11,13 +11,22 @@ const firebaseConfig = {
   // appId: "1:1064644738570:web:fc0e1fe0cdbd62e5c829f3"
 
   //(Kisa hai yeh?)
-  apiKey: "AIzaSyAfJTGsx3HsGeJlkIeSTf_VsrlgEw2pfrY",
-  authDomain: "sae-website-127b1.firebaseapp.com",
-  projectId: "sae-website-127b1",
-  storageBucket: "sae-website-127b1.appspot.com",
-  messagingSenderId: "636129718123",
-  appId: "1:636129718123:web:555343dd6f0255ecbe262e",
-  measurementId: "G-BHECE0F8CX"
+  // apiKey: "AIzaSyAfJTGsx3HsGeJlkIeSTf_VsrlgEw2pfrY",
+  // authDomain: "sae-website-127b1.firebaseapp.com",
+  // projectId: "sae-website-127b1",
+  // storageBucket: "sae-website-127b1.appspot.com",
+  // messagingSenderId: "636129718123",
+  // appId: "1:636129718123:web:555343dd6f0255ecbe262e",
+  // measurementId: "G-BHECE0F8CX"
+
+  //SAE TESTER
+  apiKey: "AIzaSyAfGWoUlOwoP5PHuRy4FP9Ic1w1YxY2uFA",
+  authDomain: "saenitkkrforms.firebaseapp.com",
+  projectId: "saenitkkrforms",
+  storageBucket: "saenitkkrforms.appspot.com",
+  messagingSenderId: "248727434698",
+  appId: "1:248727434698:web:0f5498ae740f9ff9738b33",
+  measurementId: "G-PXQ86P5ZPQ"
 
   //Arnav
   // apiKey: "AIzaSyAfGWoUlOwoP5PHuRy4FP9Ic1w1YxY2uFA",

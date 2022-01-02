@@ -218,7 +218,7 @@ function submit() {
   var email = document.getElementById("amb_email");
   var s1 = document.getElementById("s1");
   var s2 = document.getElementById("s2");
-  var longAns1 = document.getElementById("text1");
+  var s3 = document.getElementById("s3");
   var longAns2 = document.getElementById("text2");
   var longAns3 = document.getElementById("text3");
 
@@ -231,7 +231,7 @@ function submit() {
     email: email.value,
     s1: s1.value,
     s2: s2.value,
-    longAnswer1: longAns1.value,
+    s3: s3.value,
     longAnswer2: longAns2.value,
     longAnswer3: longAns3.value,
   };
@@ -249,6 +249,7 @@ function validateForm(docdata) {
     docdata.email == "" ||
     docdata.s1 == "" ||
     docdata.s2 == "" ||
+    docdata.s3 == "" ||
     docdata.longAns2 == "" ||
     docdata.longAns3 == ""
   ) {
@@ -272,7 +273,7 @@ var phone = document.getElementById("amb_phone");
 var email = document.getElementById("amb_email");
 var s1 = document.getElementById("s1");
 var s2 = document.getElementById("s2");
-var longAns1 = document.getElementById("text1");
+var s3 = document.getElementById("s3");
 var longAns2 = document.getElementById("text2");
 var longAns3 = document.getElementById("text3");
   studentName.value=null;
@@ -283,11 +284,9 @@ var longAns3 = document.getElementById("text3");
   email.value=null;
   s1.value="--Select any One--";
   s2.value="--Select any One--";
-  longAns1.value=null;
+  s3.value="--Select any One--";
   longAns2.value=null;
   longAns3.value=null;
-
-
 }
 
 //save to database
