@@ -10,7 +10,7 @@ const firebaseConfig = {
   // messagingSenderId: "1064644738570",
   // appId: "1:1064644738570:web:fc0e1fe0cdbd62e5c829f3"
 
-  //(Kisa hai yeh?)
+  //(Kisa hai yeh?) = kritika
   // apiKey: "AIzaSyAfJTGsx3HsGeJlkIeSTf_VsrlgEw2pfrY",
   // authDomain: "sae-website-127b1.firebaseapp.com",
   // projectId: "sae-website-127b1",

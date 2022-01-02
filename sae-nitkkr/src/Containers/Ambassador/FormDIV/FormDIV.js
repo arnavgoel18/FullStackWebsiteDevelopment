@@ -161,7 +161,7 @@ export default function FormDIV() {
             ></textarea>
           </div>
           <div className="question">
-           How did you find out about this ambassador program?</div>   
+           How did you find out about this ambassador program? *</div>   
         <div className="field">
         <select id="s3">
               <option selected hidden value="">

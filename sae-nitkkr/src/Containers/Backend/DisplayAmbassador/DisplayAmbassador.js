@@ -87,7 +87,7 @@ function DisplayInfo() {
             Emailid={detail.email}
             s1={detail.s1}
             s2={detail.s2}
-            ans1={detail.longAnswer1}
+            s3={detail.s3}
             ans2={detail.longAnswer2}
             ans3={detail.longAnswer3}
           />
