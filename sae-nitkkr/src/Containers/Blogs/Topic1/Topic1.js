@@ -95,7 +95,7 @@ function App() {
           if(index<3){
           return (
             <div key={index}>
-              <Link to={"/blogs/leftvsright?timestamp=" + other.timestamp} target={"_blank"}>
+              <Link to={"/blogs/leftvsright?timestamp=" + other.timestamp} target={"_parent"}>
                 <TopicsCardHolder
                   title={other.title}
                   srcs={other.coverPhotoUrl}
