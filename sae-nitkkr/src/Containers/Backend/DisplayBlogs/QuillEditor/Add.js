@@ -107,6 +107,11 @@ function Add() {
                 information: "",
                 coverPhoto: "",
               });
+              setuserInfo({
+                title: "",
+                information: "",
+                coverPhoto: "",
+              });
             
             });
           });

@@ -11,20 +11,33 @@ import ShareAndClapDIV from "../../../Components/Blogs/ShareAndClap/ShareAndClap
 import TopicsCardHolder from "../../../Components/Blogs/TopicsCardHolder/TopicsCardHolder";
 import PhoneShareAndClap from "../../../Components/Blogs/ShareAndClap/PhoneShareAndClap";
 import Footer from "../../../Components/Footer/Footer(black)/FooterBlack";
-import { getDoc, doc } from "firebase/firestore";
+import { getDocs, collection, doc } from "firebase/firestore";
 import db from "../../../Firebase";
 
 function App() {
   const params = new URL(document.location).searchParams;
   const timestamp = params.get("timestamp");
 
+  var otherBlogmerged = [];
   const [forreload, setForreload] = useState([]);
   const [detail, setDetail] = useState({});
+  var [otherBlog, setOtherBlog] = useState([]);
 
   async function getBlogInfo() {
-    const blog = doc(db, "blogs", timestamp);
-    const blogDisplay = await getDoc(blog);
-    setDetail(blogDisplay.data());
+    const blogs = collection(db, "blogs");
+    const blogs_doc = await getDocs(blogs);
+    const blogList = blogs_doc.docs.map((doc) => doc.data());
+
+    blogList.map((blogDetail, index) => {
+      if (blogDetail.timestamp == timestamp) {
+        setDetail(blogDetail);
+      }
+      if(blogDetail.timestamp != timestamp) {
+        otherBlogmerged.push(blogDetail);
+      }
+    });
+    
+    setOtherBlog(otherBlogmerged);
   }
 
   useEffect(() => {
@@ -78,14 +91,24 @@ function App() {
 
       <h2 className="other_blogs">Other Blogs</h2>
       <div className="end">
-        <Link to="/blogs/guidetovd">
-          <TopicsCardHolder
-            srcs={topiccardpic}
-            title="Beginer's Guide to Vehicle Dynamics"
-          />
-        </Link>
+        {otherBlog.map((other, index) => {
+          if(index<3){
+          return (
+            <div key={index}>
+              <Link to={"/blogs/leftvsright?timestamp=" + other.timestamp} target={"_blank"}>
+                <TopicsCardHolder
+                  title={other.title}
+                  srcs={other.coverPhotoUrl}
+                  date={other.modifiedDate}
+                  shareUrl={"/blogs/leftvsright?timestamp=" + other.timestamp}
+                />
+              </Link>
+            </div>
+          );
+          }
+        })}
       </div>
-      {/* <div className="footer"></div> */}
+
       <Footer />
     </div>
   );
