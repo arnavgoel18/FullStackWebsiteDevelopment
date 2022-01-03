@@ -78,6 +78,7 @@ function App() {
           <ShareAndClapDIV
             shareUrl={"/blogs/leftvsright?timestamp=" + detail.timestamp}
             title={detail.title}
+            database={detail.title}
           />
         </div>
       </div>
@@ -85,6 +86,7 @@ function App() {
         <PhoneShareAndClap
           shareUrl={"/blogs/leftvsright?timestamp=" + detail.timestamp}
           title={detail.title}
+          database={detail.title}
         />
       </div>
       <hr />

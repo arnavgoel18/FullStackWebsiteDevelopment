@@ -1,12 +1,81 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { Route, Link, BrowserRouter as Router } from "react-router-dom";
 import { RWebShare } from "react-web-share";
 import "./PhoneShareAndClap.css";
+import db from "../../../Firebase.js";
+// import ContactUS from "../../../Containers/ContactUs/contactus.js";
+import {
+  collection,
+  getDocs,
+  Timestamp,
+  doc,
+  setDoc,
+} from "firebase/firestore";
 function Clapmobile(props) {
-  const [frequency, setfrequency] = useState(0);
+  var [clapResult, setResult] = useState([]);
+  var [frequency, setfrequency] = useState(0);
+  var [IPvalue,setIPvalue]=useState("");
+  async function getclapInfo() {
+
+    const clap = collection(db, `${props.database}`);
+    const clap_doc =  await getDocs(clap);
+    const clapList = clap_doc.docs.map((doc) => doc.data());
+    setfrequency(clapList.length); 
+    setResult(clapList);
+    // console.log(clapResult);
+        
+    // console.log(clapList.length);
+    
+  }
+  const getip = async () => {
+    const url = `https://geolocation-db.com/json/8dd79c70-0801-11ec-a29f-e381a788c2c0`;
+    const response= await fetch(url);
+   
+    var unique="";
+     unique= await response.json();
+    setIPvalue(unique.IPv4);
+  };
+  function setInfo(clap_data) {
+    // console.log("set info called");
+   var timestamp = String(new Date().getTime());
+  
+    setDoc(doc(db,`${props.database}`,timestamp), clap_data);
+    
+  
+     document.getElementById("clapmobile_first_white").style.opacity="0.2";
+     
+
+ }
+ useEffect(() => {
+  // console.log('first traversal');
+  getclapInfo();
+}, [props.database]);
+
+var clap_data={
+  IP_Address: "100",
+  UserName:"website"
+ }
+
   function clap_increase() {
-    let k = frequency;
-    setfrequency(k + 1);
+       // getip();
+     
+       let check=0; 
+       clapResult.map((Element)=>
+         {
+           
+             if(Element.IP_Address=="10")
+             {
+               check=check+1;
+             }
+         })
+         // if(check==0)
+         
+           setInfo(clap_data);
+           getclapInfo();
+           setTimeout(() => {
+             document.getElementById("clapmobile_first_white").style.opacity="1";
+            }, 550);
+   
   }
   return (
     <Router>
