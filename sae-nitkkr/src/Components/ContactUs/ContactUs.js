@@ -202,6 +202,27 @@ function validateForm(contactUsData) {
     setInfo(contactUsData);
   }
 }
+function deletedata()
+{var Name = document.getElementById("cont_name");
+  var EmailId = document.getElementById("cont_email");
+  var PhoneNo = document.getElementById("cont_phone");
+  var Organisation = document.getElementById("cont_organisation");
+  var Message = document.getElementById("cont_message");
+  var s1 = document.getElementById("s1");
+  var s2 = document.getElementById("s2");
+  Name.value=null;
+  EmailId.value=null;
+  PhoneNo.value=null;
+  Organisation.value=null;
+  Message.value=null;
+  s1.value="--Select any One--";
+  s2.value="--Select any One--";
+}
+
+
+
+
+
 
 async function setInfo(contactUsData) {
   document.getElementById('contact_button').disabled = true
@@ -209,7 +230,8 @@ async function setInfo(contactUsData) {
   var timestamp = String(new Date().getTime());
   await setDoc(doc(db, "contactUs", timestamp), contactUsData);
   alert("Congratulations! Your information has been saved successfully.");
-  window.location.reload();
+deletedata();
+  // window.location.reload();
 }
 
 
