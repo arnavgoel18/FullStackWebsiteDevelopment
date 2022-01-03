@@ -92,7 +92,7 @@ function DisplayInfo() {
 
     //define the heading for each row of the data
     var csv =
-      "StudentName,Collegename,Branch,Semester,PhoneNo,EmailId,S1,S2,LongAns1,LongAns2,S3";
+      "StudentName,Collegename,Branch,Semester,PhoneNo,EmailId,Why do you think you can be a Campus Ambassador? *,Have you ever been a Campus Ambassador? *,What are your top 3 qualities related to being a Campus Ambassador? *,What two channels do you think are the most effective for engaging with our target audience (18-22 Yrs)? *,How did you find out about this ambassador program? *";
     csv += "\n";
 
     //merge the data with CSV
