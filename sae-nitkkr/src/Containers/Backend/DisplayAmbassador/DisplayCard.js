@@ -6,7 +6,7 @@ function DisplayCard(props) {
       <div className="ttable-box">
         <div className="ttable-row ttable-head">
           <div className="ttable-cell ffirst-cell">
-            <p>Ambassador Name</p>
+            <p>{props.docId}</p>
           </div>
           <div className="ttable-cell">
             <p>Responses</p>

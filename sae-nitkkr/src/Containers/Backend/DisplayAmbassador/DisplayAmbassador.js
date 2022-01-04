@@ -19,21 +19,24 @@ var flag = false;
 function DisplayInfo() {
   var [index, setIndex] = useState(0);
   var detailList = [];
+  var detailListId = [];
   var cvsFileData = [];
   var mergedCsvData = [];
 
   var [tester, setTester] = useState(true);
 
   var [detail, setDetail] = useState({});
+  var [detailId, setDetailId] = useState(0);
   var [CsvDetail, setCsvDetail] = useState({});
   var [detailListLength, setDetailListLength] = useState(0);
 
   //Get Information from Firebase into detailList array
   async function getInfo() {
-    // console.log("ambassador info")
+    //console.log("ambassador info")
     const studentAmbassador = collection(db, "studentAmbassador");
     var amb_doc = await getDocs(studentAmbassador);
     detailList = amb_doc.docs.map((doc) => doc.data());
+    detailListId = amb_doc.docs.map((doc) => doc.id);
 
     amb_doc.forEach((doc) => {
       cvsFileData = [
@@ -54,6 +57,7 @@ function DisplayInfo() {
     });
 
     setDetail(detailList[index]);
+    setDetailId(detailListId[index]);
     setDetailListLength(detailList.length);
     setCsvDetail(mergedCsvData);
 
@@ -169,6 +173,7 @@ function DisplayInfo() {
           <div>
             <DisplayCard
               key={index}
+              docId={detailId}
               FullName={detail.studentName}
               ClgName={detail.collegeName}
               Branch={detail.branch}

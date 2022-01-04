@@ -46,10 +46,12 @@ export default function AfterLoginPage() {
               id="orange"
               />
           </Link>
+          <Link to="/admin/contactUsInfo">
           <AfterLoginCard
             name="Contact Us responses"
             id="orange"
             />
+          </Link>
           <AfterLoginCard
             name="SignUp Details"
             id="yellow"
