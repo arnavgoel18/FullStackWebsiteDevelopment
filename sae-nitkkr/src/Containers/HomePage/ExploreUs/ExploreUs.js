@@ -59,7 +59,7 @@ function ExploreUs() {
     <div className="counter-counter">
     <img src="https://img.icons8.com/emoji/48/ffffff/racing-car.png" className="counter-icon"/>
         <h3 data-target="16" className="count">16</h3>
-        <h6>Card designed</h6>
+        <h6>Cars designed</h6>
     </div>
     </div>
 </div>
