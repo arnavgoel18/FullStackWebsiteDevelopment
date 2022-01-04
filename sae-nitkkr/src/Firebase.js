@@ -38,8 +38,35 @@ const firebaseConfig = {
   // measurementId: "G-PXQ86P5ZPQ"
 };
 
+
+//SECOND & THIRD DATABASE TESTING CODE
+// const secondaryAppConfig = {
+//   apiKey: "AIzaSyB4Jc4WaodayF72BuXcQCLAkA9lgv_hmT0",
+//   authDomain: "sae-task.firebaseapp.com",
+//   projectId: "sae-task",
+//   storageBucket: "sae-task.appspot.com",
+//   messagingSenderId: "512382391053",
+//   appId: "1:512382391053:web:8418ffe15ed0715cfd1644",
+//   measurementId: "G-RK7TYZL6VQ"
+// }
+// const terAppConfig = {
+//   apiKey: "AIzaSyAfJTGsx3HsGeJlkIeSTf_VsrlgEw2pfrY",
+//    authDomain: "sae-website-127b1.firebaseapp.com",
+//    projectId: "sae-website-127b1",
+//    storageBucket: "sae-website-127b1.appspot.com",
+//    messagingSenderId: "636129718123",
+//    appId: "1:636129718123:web:555343dd6f0255ecbe262e",
+//    measurementId: "G-BHECE0F8CX"
+// }
+
 const firebaseApp = initializeApp(firebaseConfig);
+// const secondaryApp = initializeApp(secondaryAppConfig, "secondary");
+// const thirdApp = initializeApp(terAppConfig, "ternary");
 
 const db = getFirestore(firebaseApp);
+// const db1 = getFirestore(secondaryApp);
+// const db2 = getFirestore(thirdApp);
 
 export default db;
+// export {db1, db2};
+
