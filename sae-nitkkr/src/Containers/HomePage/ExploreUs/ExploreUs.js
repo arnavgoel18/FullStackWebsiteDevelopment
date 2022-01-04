@@ -4,28 +4,8 @@ import "./ExploreUs.css";
 import $ from "jquery";
 import jQuery from 'jquery'
 
-// $('.count').each(function () {
-//     $(this).prop('Counter', 0).animate({
-//         Counter: $(this).text()
-//     }, {
-//         duration: 3000,
-//         easing: 'swing',
-//         step: function (now) {
-//             $(this).text(Math.ceil(now));
-//         }
-//     });
-// });
-
-// jQuery(document).ready(function ($) {
-
-//     setInterval(function () {
-//         updateValue();
-//     }, 6000);
-
-// });
 var animateDone = 0
 $(window).scroll(function(){
-    // This is then function used to detect if the element is scrolled into view
     function elementScrolled(elem)
     {
       var docViewTop = $(window).scrollTop();
