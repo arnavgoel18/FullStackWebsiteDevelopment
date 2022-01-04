@@ -18,13 +18,13 @@ import mail from "../../Assets/ContactUs/msg.jpg";
 function ContactUS() {
   return (
     <>
-      <h1 className="heading">CONTACT US</h1>
+      <h1 className="heading">CONTACT <span className="style">US</span></h1>
       <br />
       <br />
       <div className="whole-body">
         <div className="details">
           <div className="abc" id="abcd">
-            <div className="icon">
+            <div>
               <i className="fa fa-map-marker" aria-hidden="true"></i>
             </div>
             <a
@@ -33,12 +33,15 @@ function ContactUS() {
             >
               {" "}
               <div className="tt"> Gol,NIT Kurukshetra</div>
+              
             </a>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1371.9914590955484!2d76.81686969579629!3d29.944863529234286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390e3f5100000001%3A0x348464dd40cfcf28!2sGol%20Canteen!5e0!3m2!1sen!2sin!4v1641211248086!5m2!1sen!2sin" height={150} width={300} allowfullscreen="" loading="lazy"></iframe>
           </div>
-          <div className="abc">
-            <div className="icon">
+     
+          <div className="abc" id="space">
+            <div>
               {" "}
-              <i className="fa fa-envelope" aria-hidden="true"></i>
+              <i className="fa fa-envelope" id="env" aria-hidden="true"></i>
             </div>
             <div className="tt"> saenitkurukshetra@gmail.com</div>
           </div>
@@ -47,7 +50,7 @@ function ContactUS() {
           <div className="abc">
             {" "}
             <div className="iconimgnx">
-              <img src={nx} alt="" />{" "}
+              <img src={nx} alt="" className="dif" />{" "}
             </div>{" "}
             <div className="tt"> teamnitrox@gmail.com</div>
           </div>
@@ -56,7 +59,7 @@ function ContactUS() {
           <div className="abc">
             <div className="iconimgacc">
               {" "}
-              <img src={ac} alt="" />
+              <img src={ac} alt="" className="dif"/>
             </div>{" "}
             <div className="tt"> teamaccelerons@gmail.com</div>
           </div>
@@ -195,7 +198,7 @@ function validateForm(contactUsData) {
   } else if (contactUsData.PhoneNo.length != 10) {
     alert("phone number should be of length 10.");
   } else if (
-    !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(contactUsData.EmailId)
+    !/^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/.test(contactUsData.EmailId)
   ) {
     alert("Please enter a valid email address.");
   } else {

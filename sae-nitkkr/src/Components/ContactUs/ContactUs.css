@@ -1,45 +1,63 @@
-*{
+* {
     margin: 0;
     padding: 0;
     /* font-size: 1.1rem    ; */
 }
-.whole-body{
+
+.whole-body {
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     padding-bottom: 20px;
+    justify-content: space-between;
 }
-.details{
+
+.details {
     margin-top: 30px;
     display: flex;
     flex-direction: column;
     width: 45vw;
     padding: 20px;
 }
-.container{
+
+.abc iframe {
+    margin-top: 60px;
+    margin-left: 26px;
+    border: none;
+}
+
+#space {
+    margin-top: -65px;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
     box-shadow: 10px 10px 4px 0px #00000040;
     border: 1px solid #00000021;
     /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
     border-radius: 10px;
     /* min-height: 80vh; */
-    width: 50%;
+    width: 500px;
     display: flex;
     flex-direction: column;
-    text-align:left;
+    text-align: left;
     gap: 2vh;
     font-size: 1.2rem;
     padding-bottom: 10px;
     margin-bottom: 20px;
     padding-left: 20px;
 }
-.field{
+
+.field {
     position: relative;
     width: 100%;
     margin-top: 10px;
     font-size: 16px;
-    font-weight: bold;  
+    font-weight: bold;
 }
-.container .field span{
-    position:absolute   ;
+
+.container .field span {
+    position: absolute;
     left: 0%;
     padding: 5px 0;
     font-size: 16px;
@@ -47,8 +65,10 @@
     transition: 0.5s;
     color: #666;
 }
-input,textarea{
-    width: 95%; 
+
+input,
+textarea {
+    width: 95%;
     padding: 5px 0;
     /* margin: 10px 0; */
     font-size: 16px;
@@ -57,109 +77,167 @@ input,textarea{
     border-bottom: 1.5px solid black;
     /* resize: none; */
     /* height: auto; */
-}   
-.whole-body .container .field  input:focus ~ span,
-.whole-body .container .field  input:valid ~ span,     
-.whole-body .container .field  textarea:focus ~ span,
-.whole-body .container .field  textarea:valid ~ span
-{
+}
+
+.whole-body .container .field input:focus~span,
+.whole-body .container .field input:valid~span,
+.whole-body .container .field textarea:focus~span,
+.whole-body .container .field textarea:valid~span {
     color: black;
     font-size: 12px;
     transform: translateX(-20px);
     transform: translateY(-20px);
 }
-.heading{
+
+.heading {
     text-align: center;
     padding-top: 50px;
 }
-.button{
+
+.button {
     text-align: center;
 }
-#contact_button{
+
+#contact_button {
     border-radius: 15px;
     background: #E9910DFC;
     height: 40px;
     width: 100px;
-    color: white    ;
+    color: white;
     border: none;
     font-size: medium;
-}   
-.abc{
-    margin-left: 0px; 
+}
+
+.abc {
+    margin-left: 0px;
     display: flex;
     flex-direction: row;
     margin-left: 50px;
 }
-.icon{
+
+.icon {
     height: 40px;
     width: 40px;
     margin-left: 10px;
     padding-top: 8px;
 }
-.iconimgnx{
+
+.fa {
+    font-size: 30px;
+    margin-top: 5px;
+}
+
+.iconimgnx {
     height: 40px;
     width: 40px;
-    margin-left:-5px;
+    margin-left: -5px;
 }
-.iconimgacc{
+
+.iconimgacc {
     height: 40px;
     width: 40px;
-    margin-left:-15px;
+    margin-left: -15px;
 }
-.tt{
+
+.tt {
+    font-weight: bold;
     position: absolute;
-    left: 160px  ;
+    left: 160px;
     padding-top: 10px;
 }
-#s1,#s2{
+
+#s1,
+#s2 {
     background: #C4C4C4BD;
     width: 90%;
     height: 65%;
     padding: 0.8%;
     border-radius: 5px;
 }
-@media screen and (max-width:938px){
-    .whole-body{
+
+.style {
+    color: rgb(109, 109, 255);
+    font-weight: bolder;
+}
+
+@media screen and (max-width:938px) {
+    .whole-body {
         display: flex;
-        flex-direction:column-reverse;
+        flex-direction: column-reverse;
     }
-    .container{
-        margin: auto;
-        width: 60vw;
-    }
-    #abcd{
+    #abcd {
         margin-top: 30px;
         margin-bottom: 30px;
     }
-}
-@media screen and (min-width:938px){
-    #abcd{
-      margin-bottom: 90px;
+    #space {
+        margin-top: -15px;
+    }
+    iframe {
+        margin-top: 20px;
+    }
+    .tt {
+        margin-left: 150px;
+    }
+    .details {
+        margin-left: 140px;
+        /* margin-right: auto; */
     }
 }
-@media screen and (min-width:425px) and (max-width:768px){
-    .container{
-        width: 70vw;
+
+@media screen and (min-width:938px) {
+    #abcd {
+        margin-bottom: 90px;
     }
-    
 }
-@media screen and (max-width:425px){
-    .container{
-        width: 90vw;
+
+@media screen and (min-width:425px) and (max-width:768px) {
+    .container {
+        width: 400px;
+    }
+    .tt {
+        margin-left: 90px;
+    }
+    .details {
+        margin-left: 80px;
+    }
+}
+
+@media screen and (min-width: 425px) and (max-width: 583px) {
+    .tt {
+        margin-left: 20px;
+    }
+    .details {
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .container {
+        width: 100%;
         padding-left: 7px;
-    }  
-    input,textarea{
-        width: 98%; 
+        margin-left: 10px;
     }
-    .tt{
+    input,
+    textarea {
+        width: 98%;
+    }
+    .tt {
         position: absolute;
-        left: 72px  ;
+        left: 72px;
         padding-top: 10px;
-    } 
-    .abc{
-        margin-left: 0px; 
+    }
+    .tt {
+        margin-left: 60px;
+    }
+    .details {
+        margin-left: 50px;
+    }
+    .abc {
+        margin-left: 0px;
         display: flex;
         flex-direction: row;
     }
-
+    iframe {
+        width: 100%;
+    }
 }
