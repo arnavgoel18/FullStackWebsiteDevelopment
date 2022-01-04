@@ -57,7 +57,7 @@ export default function AfterLoginPage() {
             id="yellow"
             />
           <AfterLoginCard
-            name="Quiz Responses Recorded"
+            name="Quiz"
             id="yellow"
             />
         </div>
