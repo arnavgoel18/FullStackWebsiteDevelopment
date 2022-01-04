@@ -7,147 +7,59 @@
   /* box-sizing: border-box; */
   /* height: max-content; */
 }
-
-#ExploreUs-root{
-  background-color: #000;
-  height: max-content;
-  width: 100%;
-}
-
-.ExploreUs-Container{
-  justify-content: space-evenly;
+.counter-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: black;
+  padding: 40px;
   display: flex;
   flex-wrap: wrap;
-  padding-bottom: 4vh;
-  padding-top: 3vh;
-  /* margin-top: 50px; */
+ 
 }
-.ExploreUs-box {
-  border: white, 1px;
-  justify-content: space-between;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 15px 5px;
-}
-.ExploreUs-box1 {
+
+.counter-counter {
+  text-align: center;
+  
   width: 250px;
   height: 250px;
   justify-content: center;
+  position: relative;
   display: flex;
   text-align: center;
   flex-direction: column;
-  position: relative;
-  cursor: pointer;
-  transition: all 0.4s;
-  padding: 0 2px;
-}
-.ExploreUs-box1:hover {
-  color: white;
-}
-.ExploreUs-text {
-  position: inherit;
-  z-index: 9999;
-  background-color: transparent;
-  text-decoration: none;
-}
-.ExploreUs-heading {
-  font-size: 35px;
-  color: white;
-  padding-top: 60px;
-  border-bottom: 2px solid transparent;
-  border-image: linear-gradient(315deg, #f8ceec 0%, #a88beb 74%);
-  border-image-slice: 1;
-  width: max-content;
-  margin-left: 160px;
-}
-.ExploreUs-box1::before,
-.ExploreUs-box1::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgb(243, 243, 243);
-  z-index: 1111;
-  border-radius: 10px;
-  transition: all 0.4s;
-}
-.ExploreUs-box1::after {
- 
-  transform: translate(10%, 10%) scale(0.3);
-  border-radius: 110%;
-  transition: all 0.4s;
-}
-.ExploreUs-box1:hover::after {
- 
   background-image: linear-gradient(315deg, #f8ceec 0%, #a88beb 74%);
-
-  transform: translate(0) scale(1);
-  border-radius: 0;
-  border-radius: 10px;
+  margin-bottom: 25px;
 }
 
-.ExploreUs-lines {
-  display: flex;
-  justify-content: space-evenly;
+.counter-counter h3 {
+  padding: 0.5rem 0;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color:white;
 }
-.ExploreUs-sourabh {
-  position: relative;
-  height: 100vh;
-  width: 2px;
-  background: #ffff;
+
+.counter-counter h6 {
+  font-size: 20px;
+  padding-bottom: 1rem;
+  color: white;
 }
-@media (min-width: 1440px) and (max-width: 2560px) {
-  .eExploreUs-heading {
-    margin-left: 157px;
-  }
+
+.counter-icon {
+  width: 40px;
+  height: 40px;
+  align-self: center;
 }
-@media (min-width: 1024px) and (max-width: 1440px) {
-  .ExploreUs-heading{
-    margin-left: 95px;
-    padding-top: 25px;
-  }
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-  .ExploreUs-heading{
-    margin-left: 165px;
-  }
-}
-@media (min-width: 425px) and (max-width: 768px) {
-  .ExploreUs-heading {
-    margin-left: 90px;
-  }
-}
-@media (min-width: 375px) and (max-width: 425px) {
-  .ExploreUs-heading{
-    margin-left: 60px;
-  }
-}
-@media (min-width: 320px) and (max-width: 375px) {
-  .ExploreUs-heading{
-    margin-left: 30px;
-  }
-}
-@media (min-width: 120pxpx) and (max-width: 320px) {
-  .ExploreUs-heading{
-    margin-left: 30px;
-  }
-}
+
+
 
 @media (min-width: 150px) and (max-width: 425px) {
-  .ExploreUs-box {
+ 
+  .counter-container{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    
-  }
-
-  .ExploreUs-box {
-    flex: 0 1 calc(25% - 1em);
-  }
-  .ExploreUs-heading {
-    text-align: center;
+    justify-content: space-evenly;
   }
 }
 
