@@ -17,6 +17,11 @@
     flex-direction: column;
     width: 45vw;
     padding: 20px;
+    margin-left: 120px;
+}
+
+.tt {
+    margin-left: 130px;
 }
 
 .abc iframe {
@@ -176,10 +181,10 @@ textarea {
         margin-top: 20px;
     }
     .tt {
-        margin-left: 150px;
+        margin-left: 170px;
     }
     .details {
-        margin-left: 140px;
+        margin-left: 160px;
         /* margin-right: auto; */
     }
 }
