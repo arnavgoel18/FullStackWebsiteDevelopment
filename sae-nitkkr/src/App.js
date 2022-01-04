@@ -18,7 +18,7 @@ import AdminActions from "./Containers/Backend/AfterLogin/AfterLoginPage"
 import DisplayAmb from "./Containers/Backend/DisplayAmbassador/DisplayAmbassador"
 import DisplayContact from './Containers/Backend/DisplayContact/DisplayContact'
 import DisplaySignUpSheet from './Containers/Backend/DisplaySignUpSheet/DisplaySignUpSheet'
-import DisplayTestResponses from './Containers/Backend/DisplayTestResponses/DisplayTestResponses'
+import DisplayQuizResponses from './Containers/Backend/DisplayQuizResponses/DisplayQuizResponses'
 
 import DisplayBlogs from "./Containers/Backend/DisplayBlogs/AllBlogsPage"
 import QuillEditor from "./Containers/Backend/DisplayBlogs/QuillEditor/Add"
@@ -45,7 +45,7 @@ function App() {
           <Route path="/admin/ambassadorInfo" exact component={() => <DisplayAmb/>}/>
           <Route path="admin/contactUsInfo" exact component={() => <DisplayContact/>}/>
           <Route path="admin/signUpSheet" exact component={() => <DisplaySignUpSheet/>}/>
-          <Route path="admin/quizResponses" exact component={() => <DisplayTestResponses/>}/>
+          <Route path="admin/quizResponses" exact component={() => <DisplayQuizResponses/>}/>
 
 
           <Route path="/admin/displayBlogs" exact component={() => <DisplayBlogs/>}/>
