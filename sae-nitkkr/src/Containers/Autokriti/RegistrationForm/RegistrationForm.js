@@ -11,6 +11,8 @@ import { send, init } from 'emailjs-com'
 
 import './RegistrationForm.css'
 
+var timestamp
+
 function RegistrationForm() {
   function submit() {
     var Name = document.getElementById('reg_name')
@@ -18,6 +20,8 @@ function RegistrationForm() {
     var Clg = document.getElementById('reg_college')
     var Sem = document.getElementById('reg_sem')
     var phone = document.getElementById('reg_pn')
+    
+  
 
     const contactUsData = {
       Name: Name.value,
@@ -38,6 +42,9 @@ function RegistrationForm() {
       contactUsData.pno == ''
     ) {
       alert('Please fill up the required fields.')
+    }
+    else if (contactUsData.pno.length!=10) {
+      alert('Please enter a valid phone number')
     } else if (
       !/^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/.test(contactUsData.EmailId)
     ) {
@@ -45,22 +52,26 @@ function RegistrationForm() {
     } else {
       setInfo(contactUsData)
     }
+    
+    
   }
 
   async function setInfo(contactUsData) {
-    document.getElementById('button').disabled = true
-    document.getElementById('button').style.backgroundColor = 'gray'
+    // console.log("enter")
+    document.getElementById('reg_button').disabled = true
+    document.getElementById('reg_button').style.backgroundColor = 'gray'
     timestamp = String(new Date().getTime())
 
     //db
     await setDoc(doc(db, 'registration', timestamp), contactUsData)
 
     deletedata()
+    
     // window.location.reload();
     sendEmail(contactUsData)
     alert('Congratulations! Your information has been saved successfully.')
-    document.getElementById('button').disabled = false
-    document.getElementById('button').style.backgroundColor = 'green'
+    document.getElementById('reg_button').disabled = false
+    document.getElementById('reg_button').style.backgroundColor = 'green'
   }
   function deletedata() {
     var Name = document.getElementById('reg_name')
