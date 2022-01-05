@@ -43,7 +43,7 @@ function App() {
           <Route path="/admin/login" exact component={() => <Login/>}/>
           <Route path="/admin/actions" exact component={() => <AdminActions/>}/>
           <Route path="/admin/ambassadorInfo" exact component={() => <DisplayAmb/>}/>
-          <Route path="admin/contactUsInfo" exact component={() => <DisplayContact/>}/>
+          <Route path="/admin/contactUsInfo" exact component={() => <DisplayContact/>}/>
           <Route path="admin/signUpSheet" exact component={() => <DisplaySignUpSheet/>}/>
           <Route path="admin/quizResponses" exact component={() => <DisplayQuizResponses/>}/>
 
