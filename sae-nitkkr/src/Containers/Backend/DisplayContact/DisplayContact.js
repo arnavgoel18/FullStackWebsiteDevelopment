@@ -37,17 +37,13 @@ function DisplayContactInfo() {
 
     amb_doc.forEach((doc) => {
       cvsFileData = [
-        [doc.data().studentName],
-        [doc.data().collegeName],
-        [doc.data().branch],
-        [doc.data().semester],
-        [doc.data().phone],
-        [doc.data().email],
+        [doc.data().Name],
+        [doc.data().EmailId],
+        [doc.data().PhoneNo],
+        [doc.data().Organisation],
+        [doc.data().Message],
         [doc.data().s1],
         [doc.data().s2],
-        [doc.data().longAnswer2],
-        [doc.data().longAnswer3],
-        [doc.data().s3],
       ];
 
       mergedCsvData.push(cvsFileData);
