@@ -49,17 +49,6 @@ export default function AfterLoginPage() {
           <Link to="admin/quizResponses">
             <AfterLoginCard name="Quiz Responses Recorded" id="yellow" />
           </Link>
-<<<<<<< HEAD
-=======
-          <AfterLoginCard
-            name="SignUp Details"
-            id="yellow"
-            />
-          <AfterLoginCard
-            name="Quiz"
-            id="yellow"
-            />
->>>>>>> 36094c550936fa89142dc1b0fbf05e1a4d5f52e7
         </div>
       </div>
     );
