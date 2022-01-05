@@ -22,7 +22,7 @@ import DisplayQuizResponses from './Containers/Backend/DisplayQuizResponses/Disp
 
 import DisplayBlogs from "./Containers/Backend/DisplayBlogs/AllBlogsPage"
 import QuillEditor from "./Containers/Backend/DisplayBlogs/QuillEditor/Add"
-import RegistrationForm from "./Containers/Autokriti/RegistrationForm/RegistrationForm";
+//import RegistrationForm from "./Containers/Autokriti/RegistrationForm/RegistrationForm";
 function App() {
   document.title = "SAE NIT Kurukshetra";
   return (
@@ -47,7 +47,7 @@ function App() {
           <Route path="admin/signUpSheet" exact component={() => <DisplaySignUpSheet/>}/>
           <Route path="admin/quizResponses" exact component={() => <DisplayQuizResponses/>}/>
 
-          <Route path="/registrationform" exact component={() => <RegistrationForm/>}/>
+          {/* <Route path="/registrationform" exact component={() => <RegistrationForm/>}/> */}
 
           <Route path="/admin/displayBlogs" exact component={() => <DisplayBlogs/>}/>
           <Route path="/admin/displayBlogs/editor" exact component={() => <QuillEditor/>}/>
