@@ -8,10 +8,10 @@ var animateDone = 0
 $(window).scroll(function(){
     function elementScrolled(elem)
     {
-      var docViewTop = $(window).scrollTop();
-      var docViewBottom = docViewTop + $(window).height();
-      var elemTop = $(elem).offset().top;
-      return ((elemTop <= docViewBottom) && (elemTop >= docViewTop));
+        var docViewTop = $(window).scrollTop();
+        var docViewBottom = docViewTop + $(window).height();
+        var elemTop = $(elem).offset().top;
+        return ((elemTop <= docViewBottom) && (elemTop >= docViewTop));
     }
     
     function updateValue() {
@@ -39,11 +39,17 @@ $(window).scroll(function(){
     }
 
     // This is where we use the function to detect if ".box2" is scrolled into view, and when it is add the class ".animated" to the <p> child element
-    if(elementScrolled('.counter-body')) { 
-        if(animateDone == 0){ 
-            console.log("animate done!");
-            updateValue();
-            animateDone = 2
+    $.fn.exists = function () {
+        return this.length !== 0;
+    }
+    
+    if($(".counter-body").exists()){
+        if(elementScrolled('.counter-body')) { 
+            if(animateDone == 0){ 
+                console.log("animate done!");
+                updateValue();
+                animateDone = 2
+            }
         }
     }
   });
