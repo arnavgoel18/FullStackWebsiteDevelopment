@@ -9,6 +9,7 @@
 }
 
 #ambassador-backBtn{ 
+    cursor: pointer;
     width: 171.06px;
     height: 49px;
     color: white;
@@ -50,6 +51,7 @@
     justify-content: space-evenly;
 }
 #amb-signout{
+    cursor: pointer;
     width: 171.06px;
     height: 49px;
     float: right;

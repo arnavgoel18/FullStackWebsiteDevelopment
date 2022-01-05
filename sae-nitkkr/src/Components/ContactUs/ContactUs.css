@@ -110,6 +110,7 @@ textarea {
     width: 100px;
     color: white;
     border: none;
+    cursor: pointer;
     font-size: medium;
 }
 
