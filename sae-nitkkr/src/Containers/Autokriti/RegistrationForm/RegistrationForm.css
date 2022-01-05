@@ -1,0 +1,174 @@
+
+html{
+    font-size: 62.5%;
+  }
+  body{
+    margin:0;
+  
+    
+   
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  .reg-center{
+   
+    margin-top: 7rem;
+    margin-left: 40rem;
+    background: rgb(246, 250, 250);
+    height: 46rem;
+    width: 35rem;
+    border-radius: 2rem;
+    overflow: hidden;
+    box-shadow:.4rem .4rem .4rem .4rem rgb(165, 163, 163);
+    padding:1rem;
+    padding-top:1rem;
+    padding-bottom:1rem;
+    /* border: 2px solid black; */
+    
+  }
+  #center{
+    margin-left:6rem;
+    
+    font-size: 2.5rem;
+    /* border: 2px solid black; */
+  }
+  #one{
+    margin-left:1rem;
+    width:20rem;
+    /* border: 2px solid black; */
+    border-radius:2rem;
+    height:3rem;
+    background:rgb(218, 216, 216);
+    border:none;
+    padding-left:1rem;
+    
+  
+  }
+  #two{
+    margin-left:1rem;
+    width:20rem;
+    border-radius:2rem;
+    border: 2px solid black;
+    height:3rem;
+    background:rgb(218, 216, 216);
+    border:none;
+    padding-left:1rem;
+  
+    
+  }
+  #three{
+    margin-left:2.3rem;
+    /* border: 2px solid black; */
+    width:20rem;
+    border-radius:2rem;
+    height:3rem;
+    background:rgb(218, 216, 216);
+    border:none;
+    padding-left:1rem;
+    
+  }
+  #four{
+    margin-left:2.3rem;
+    width:20rem;
+    border-radius:2rem;
+    /* border: 2px solid black; */
+    height:3rem;
+    background:rgb(218, 216, 216);
+    border:none;
+    padding-left:1rem;
+    margin-bottom: 1rem;
+    
+  }
+  #five{
+    margin-left:1rem;
+    width:20rem;
+    border-radius:2rem;
+    /* border: 2px solid black; */
+    height:3rem;
+    background:rgb(218, 216, 216);
+    border:none;
+    padding-left:1rem;
+    margin-bottom: 1rem;
+  }
+  
+  
+  #user{
+    width:5rem;
+    height:5rem;
+    margin-left:15rem;
+    /* border: 2px solid black; */
+    margin-top:1rem;
+    border-radius: 1rem;
+  
+  }
+  #hat{
+    width:5rem;
+    height:5rem;
+    margin-left:.2rem;
+    /* border: 2px solid black; */
+  }
+  #mail{
+    width:3.5rem;
+    height:3.5rem;
+    margin-left:.2rem;
+    /* border: 2px solid black; */
+  }
+  #name{
+    width:5rem;
+    height:5rem;
+    margin-left:.2rem;
+    /* border: 2px solid black; */
+  }
+  #semesterr{
+    width:3.5rem;
+    height:3.5rem;
+    /* border: 2px solid black; */
+    margin-left:.6rem;
+  }
+  #phone{
+    width:5rem;
+    height:5rem;
+    /* border: 2px solid black; */
+    margin-left:.2rem;
+  }
+  
+  #submit{
+    margin-left:12rem;
+    margin-top:1rem;
+    background: green;
+    border-radius:1rem;
+    border:none;
+    color:white;
+    width:12rem;
+    height:5rem;
+    font-size:2rem;
+  }
+  .txt-area
+  {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 325px;
+  }
+  @media (max-width:998px)
+  {
+    html{
+        font-size:55%;
+    }
+  }
+  @media (max-width:768px)
+  {
+    html{
+        font-size:45%;
+    }
+  }
+  #hat1,#name1,#sem1,#mail1,#phone1{
+    /* border:.2rem solid black; */
+    display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  
+  
