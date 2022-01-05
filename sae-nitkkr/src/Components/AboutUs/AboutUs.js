@@ -20,8 +20,8 @@ function Home(props) {
     picture = HomeAboutUs;
   }
   else if(props.page === "Autokriti"){
-    content = "There lies a spark behind every source of light. This thought is indeed justified by the radiance of Autokriti, a spark generated in the brains of our super seniors & its flames of passion; we sustain to date. The enthusiasm to enlighten the young mind began with Autokirti 1.0, where 80 heads hunched to overhaul a two-stroke engine of a scooter. Taking one step after the other, we started from Maruti Suzuki in Autokirti 3.0 & reached the Toyota Camry hybrid engine in Season 10, our tryst with destiny, i.e. EV. It has been a long journey indeed, learning, teaching, challenging ourselves & a beautiful one at that. And it is not the end!";
-    contentOnlyForAutokriti = "eAutokriti: Challenges still await us & solutions are yet to be found. But tougher expeditions will be ventured upon, as nothing less than the best can be embraced.";
+    content = "Autokriti is north India's largest automobile workshop which began in 2010. Every year loads of students gets enrolled to gain firsthand knowledge of industrial vehicles. The last held physical autokriti in 2019 saw a participation of 700+ candidates. It involves overhauling of a star engine, which varied from a 2 stroke engine of a scooter in Autokriti 1 to 3.6L turbocharged V6 Porsche Cayenne in season 11.0; always in cahoots with technology. And not just the gearheads, but geeks from all branches of technology find here the stuffs of their interest.";
+    contentOnlyForAutokriti = "E- Autokriti is a digital edition of Autokriti, where this legacy of imparting knowledge continues amid the current covid crisis. And with many new surprises awaiting e-autokriti 2.0, we are expecting an even greater engagement.";
     picture = AutokritiAboutUs;
   }
 
