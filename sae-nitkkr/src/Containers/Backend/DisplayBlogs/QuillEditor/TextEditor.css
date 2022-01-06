@@ -17,6 +17,7 @@
     border-radius: 4px;
 }
 #quillFile{
+    cursor: pointer;
     margin-left: 10px;
     font-weight: bold;  
     width: fit-content;

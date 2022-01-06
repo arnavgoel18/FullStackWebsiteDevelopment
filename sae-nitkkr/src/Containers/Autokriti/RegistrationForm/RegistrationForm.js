@@ -1,65 +1,143 @@
+import db from "../../../Firebase";
+import {
+  doc,
+  setDoc,
+} from "firebase/firestore";
+import { send, init } from "emailjs-com";
 
-import user from '../../../Assets/RegistrationFormImages/user.jpg';
-import name from '../../../Assets/RegistrationFormImages/name.jpg';
-import semester from '../../../Assets/RegistrationFormImages/semesterr.jpg';
-import hat from '../../../Assets/RegistrationFormImages/hat.png';
-import mail from '../../../Assets/RegistrationFormImages/mail.jpg';
-import phone from '../../../Assets/RegistrationFormImages/phone.jpg';
+import "./RegistrationForm.css";
 
-import './RegistrationForm.css';
+var timestamp;
 
 function RegistrationForm() {
+  function submit() {
+    var Name = document.getElementById("reg_name");
+    var EmailId = document.getElementById("reg_mail");
+    var Clg = document.getElementById("reg_college");
+    var Sem = document.getElementById("reg_sem");
+    var phone = document.getElementById("reg_pn");
+
+    const contactUsData = {
+      Name: Name.value,
+      EmailId: EmailId.value,
+      College: Clg.value,
+      Semester: Sem.value,
+      pno: phone.value,
+    };
+
+    validateForm(contactUsData);
+  }
+  function validateForm(contactUsData) {
+    if (
+      contactUsData.Name == "" ||
+      contactUsData.EmailId == "" ||
+      contactUsData.College == "" ||
+      contactUsData.Semester == "" ||
+      contactUsData.pno == ""
+    ) {
+      alert("Please fill up the required fields.");
+    } else if (contactUsData.pno.length != 10) {
+      alert("Please enter a valid phone number");
+    } else if (
+      !/^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/.test(contactUsData.EmailId)
+    ) {
+      alert("Please enter a valid email address.");
+    } else {
+      setInfo(contactUsData);
+    }
+  }
+
+  async function setInfo(contactUsData) {
+    // console.log("enter")
+    document.getElementById("reg_button").disabled = true;
+    document.getElementById("reg_button").style.backgroundColor = "gray";
+    timestamp = String(new Date().getTime());
+
+    //db
+    await setDoc(doc(db, "registration", timestamp), contactUsData);
+
+    deletedata();
+
+    // window.location.reload();
+    sendEmail(contactUsData);
+    alert("Congratulations! Your information has been saved successfully.");
+    document.getElementById("reg_button").disabled = false;
+    document.getElementById("reg_button").style.backgroundColor = "green";
+  }
+  function deletedata() {
+    var Name = document.getElementById("reg_name");
+    var EmailId = document.getElementById("reg_mail");
+    var Clg = document.getElementById("reg_college");
+    var Sem = document.getElementById("reg_sem");
+    var Phone = document.getElementById("reg_pn");
+
+    Name.value = null;
+    EmailId.value = null;
+    Clg.value = null;
+    Sem.value = null;
+    Phone.value = null;
+  }
+
+  const sendEmail = (data) => {
+    //console.log("enter")
+    init("user_qet4RKd7C7UreliHN5dhq"); //user id
+    const toSend = {
+      name: data.Name,
+      sem: data.Semester,
+      email: data.EmailId,
+      clg: data.College,
+      referenceId: timestamp,
+      pno: data.Phone,
+    };
+    // console.log(toSend)
+    //(serviceid,templateid,sendingdata)
+    send("service_r8xht0n", "template_eqh6a2c", toSend).then(
+      (result) => {
+        //console.log('exit')
+        console.log(result.text);
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
+  };
+  // referenceId
   return (
     <div className="reg-center">
-      <img id="user" src={user} alt="" />
-      <h1 id="center">SIGN UP FOR QUIZ</h1>
-      <form action="" className="txt-area">
-        <div id="name1">
-            <div id="reg_image_name">
-          <img id="name" src={name} alt="" />
-          </div>
-          <div id="red_title_name">
-          <input id="one" type="text" placeholder="Name" />
-          </div>
-        </div>
-        <div id="hat1">
-        <div id="reg_image_hat">
-            <img id="hat" src={hat} alt="" />
-            </div>
-            <div id="red_title_college">
-          <input id="two" type="text" placeholder="College" />
-          </div>
-        </div>
-        <br />
-        <div id="sem1">
-        <div id="reg_image_semester">
-          <img id="semesterr" src={semester} alt="" />
-          </div>
-          <div id="red_title_semester">
-          <input id="three" type="number" placeholder="Semester" />
-          </div>
-        </div>
-        <br />
-        <div id="mail1">
-        <div id="reg_image_semester">
-          <img id="mail" src={mail} alt="" />
-          </div>
-          <div id="red_title_mail">
-          <input id="four" type="text" placeholder="Mail" />
-          </div>
-        </div>
-        <div id="phone1">
-        <div id="reg_image_phone">
-          <img id="phone" src={phone} alt="" />
-          </div>
-          <div id="red_title_phone">
-          <input id="five" type="number" placeholder="Phone Number" />
-          </div>
+      <div className="reg-heading">
+        <i className="fa fa-user-circle-o reg-signUp-sign" aria-hidden="true"></i>
+        <h1 id="center">SIGN UP FOR QUIZ</h1>
+      </div>
+      <form action="" className="reg-form">
+        <div className="reg-input-div" id="reg-div-name">
+          <i className="fa fa-user" aria-hidden="true"></i>
+          <input id="reg_name" type="text" placeholder="Name" />
         </div>
 
-        <button id="submit">Submit</button>
+        <div className="reg-input-div">
+          <i className="fa fa-graduation-cap" aria-hidden="true"></i>
+          <input id="reg_college" type="text" placeholder="College" />
+        </div>
+
+        <div className="reg-input-div">
+          <i className="fa fa-calendar" aria-hidden="true"></i>
+          <input id="reg_sem" type="number" placeholder="Semester" />
+        </div>
+
+        <div className="reg-input-div">
+          <i className="fa fa-envelope" aria-hidden="true"></i>
+          <input id="reg_mail" type="email" placeholder="Mail" />
+        </div>
+
+        <div className="reg-input-div">
+          <i className="fa fa-phone" aria-hidden="true"></i>
+          <input id="reg_pn" type="number" placeholder="Phone Number" />
+        </div>
+
+        <button id="reg_button" onClick={submit}>
+          Submit
+        </button>
       </form>
-
     </div>
   );
 }
