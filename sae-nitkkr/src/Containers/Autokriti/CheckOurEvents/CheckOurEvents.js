@@ -14,7 +14,7 @@ function CheckEvents() {
     <>
       <div className="CheckOurEvents-main_container">
         <h2 className="CheckOurEvents-heading">
-          check out our <b className="CheckOurEvents-subheading"> EVENTS </b>
+          Check out our <b className="CheckOurEvents-subheading"> EVENTS </b>
         </h2>
         <div  className="CheckOurEvents-events">
           {/* <Session title="Understanding Transmission"
