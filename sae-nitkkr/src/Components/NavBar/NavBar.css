@@ -70,6 +70,25 @@
     font-size: 2rem;
     cursor: pointer;
 }
+.Navigation-new{
+    font-size: 12px;
+    position: relative;
+    top: -20%;
+   color: yellow;
+   text-shadow: 0 0 1px #FFFFFF;
+   animation-name: example;
+   animation-iteration-count: infinite;
+    animation-duration: 4s;
+}
+
+@keyframes example {
+    0%   {color:yellow;}
+    25%  {color:#00FFFF;}
+    50%  {color:#FF7171;}
+    75%  {color:Magenta;}
+    100% {color:yellow;}
+  }
+  
 
 @media only screen and (max-width:680px){
     .NavigationBar_Nav-navbar{
