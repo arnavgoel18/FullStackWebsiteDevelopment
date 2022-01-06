@@ -3,7 +3,8 @@
   padding: 0px;
   box-sizing: border-box;
 
-}
+} 
+/*
 .BrandAmbassador-body {
   background-image: url("../../../Assets/BrandAmbassador/man-woman-handshake-23841014.jpeg");
   background-repeat: no-repeat;
@@ -164,4 +165,132 @@ position: relative;
 left: 170px;
 top: -80px;
 }
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu");
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+.BrandAmbassador-container {
+  display: flex;
+  /* flex-wrap: wrap; */
+  height: 550px;
+  width: 75%;
+  /* background-color: #efefef; */
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid black;
+}
+.BrandAmbassador-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+
+}
+.BrandAmbassador-title {
+  margin: 40px auto;
+
+  font-family: "Ubuntu", sans-serif;
+  font-size: 70px;
+  font-weight: bold;
+  color: #121212;
+  text-align: center;
+  letter-spacing: 5px;
+  text-shadow: -1px 1px 0 #41ba45, 1px 1px 0 #c63d2b, 1px -1px 0 #42afac,
+    -1px -1px 0 #c6c23f;
+}
+
+.BrandAmbassador-title1{
+  font-family: 'Anton', sans-serif;
+  margin: 40px 45px;
+  font-size: 19px;
+  border-left: 5px solid #f08388 ;
+  padding: 10px;
+}
+.BrandAmbassador-image {
+  width: 100%;
+  height: 100%;
+
+  /* display: flex; */
+}
+.BrandAmbassador-button {
+  background-color: #f08388;
+  font-weight: 700;
+  border-radius: 5px;
+  
+  border: none;
+  color: black;
+  font-size: 18px;
+  padding-left: 10px;
+  font-family: 'Montserrat', sans-serif;
+  padding-right: 10px;
+  /* margin-bottom: 20px; */
+  width: 275px;
+  height: 55px;
+  /* margin-left: 165px; */
+  margin: 40px 45px;
+
+}
+
+.BrandAmbassador-button:hover {
+  
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+
+@media (min-width:320px) and (max-width:768px){
+  .BrandAmbassador-container {
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* height: 550px; */
+    /* width: 75%; */
+    /* background-color: #efefef; */
+    /* flex-direction: row-reverse; */
+    /* justify-content: center; */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .BrandAmbassador-title {
+    /* margin: 40px auto; */
+    font-family: "Ubuntu", sans-serif;
+    font-size: 45px;
+    font-weight: bold;
+    color: #121212;
+    text-align: center;
+    letter-spacing: 5px;
+    text-shadow: -1px 1px 0 #41ba45, 1px 1px 0 #c63d2b, 1px -1px 0 #42afac,
+      -1px -1px 0 #c6c23f;
+  }
+
+  .BrandAmbassador-image {
+    width: 130%;
+    height: 100%;
+  
+    display: none;
+  }
+
+  .BrandAmbassador-button {
+    background-color: #f08388;
+    font-weight: 700;
+    border-radius: 5px;
+    
+    border: none;
+    color: black;
+    font-size: 18px;
+    padding-left: 10px;
+    font-family: 'Montserrat', sans-serif;
+    padding-right: 10px;
+    /* margin-bottom: 20px; */
+    width: 275px;
+    height: 55px;
+    margin-left: auto;
+    margin-right: auto;
+  
+  }
+  
 }
