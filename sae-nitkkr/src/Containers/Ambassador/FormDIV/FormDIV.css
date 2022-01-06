@@ -106,6 +106,7 @@ input,textarea{
     text-align: center;
 }
 #amb-button{
+    cursor: pointer;
     border-radius: 15px;
     background: #E9910DFC;
     height: 40px;
