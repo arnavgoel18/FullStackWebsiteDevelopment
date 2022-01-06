@@ -176,14 +176,16 @@ top: -80px;
   height: 550px;
   width: 75%;
   /* background-color: #efefef; */
+  /* border: 2px solid black; */
   flex-direction: row;
   justify-content: space-between;
   margin-left: auto;
   margin-right: auto;
-  border: 2px solid black;
+  /* border: 2px solid black; */
 }
 .BrandAmbassador-text {
   display: flex;
+  /* border: 2px solid black; */
   flex-direction: column;
   justify-content: center;
   
@@ -193,9 +195,10 @@ top: -80px;
   margin: 40px auto;
 
   font-family: "Ubuntu", sans-serif;
-  font-size: 70px;
+  font-size: 55px;
   font-weight: bold;
   color: #121212;
+  /* border: 2px solid black; */
   text-align: center;
   letter-spacing: 5px;
   text-shadow: -1px 1px 0 #41ba45, 1px 1px 0 #c63d2b, 1px -1px 0 #42afac,
@@ -205,11 +208,13 @@ top: -80px;
 .BrandAmbassador-title1{
   font-family: 'Anton', sans-serif;
   margin: 40px 45px;
-  font-size: 19px;
+  font-size: 27px;
+  /* border: 2px solid black; */
   border-left: 5px solid #f08388 ;
   padding: 10px;
 }
 .BrandAmbassador-image {
+  /* border: 2px solid black; */
   width: 100%;
   height: 100%;
 
@@ -219,10 +224,11 @@ top: -80px;
   background-color: #f08388;
   font-weight: 700;
   border-radius: 5px;
+  /* border: 2px solid black; */
   
   border: none;
   color: black;
-  font-size: 18px;
+  font-size: 30px;
   padding-left: 10px;
   font-family: 'Montserrat', sans-serif;
   padding-right: 10px;
@@ -230,7 +236,7 @@ top: -80px;
   width: 275px;
   height: 55px;
   /* margin-left: 165px; */
-  margin: 40px 45px;
+  /* margin: 40px 45px; */
 
 }
 
@@ -239,46 +245,58 @@ top: -80px;
   cursor: pointer;
   opacity: 0.5;
 }
+#ambassdor_btn
+{
+  /* border: 2px solid black; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 
 
-@media (min-width:320px) and (max-width:768px){
+@media (min-width:955px) and (max-width:1304px){
   .BrandAmbassador-container {
     display: flex;
     /* flex-wrap: wrap; */
-    /* height: 550px; */
-    /* width: 75%; */
+    height: 440px;
+    width: 80%;
     /* background-color: #efefef; */
-    /* flex-direction: row-reverse; */
-    /* justify-content: center; */
+    /* border: 2px solid black; */
+    flex-direction: row;
+    justify-content: space-between;
     margin-left: auto;
     margin-right: auto;
+    /* border: 2px solid black; */
   }
-
-
   .BrandAmbassador-title {
     /* margin: 40px auto; */
+    
     font-family: "Ubuntu", sans-serif;
     font-size: 45px;
     font-weight: bold;
     color: #121212;
+    /* border: 2px solid black; */
     text-align: center;
     letter-spacing: 5px;
     text-shadow: -1px 1px 0 #41ba45, 1px 1px 0 #c63d2b, 1px -1px 0 #42afac,
       -1px -1px 0 #c6c23f;
   }
-
-  .BrandAmbassador-image {
-    width: 130%;
-    height: 100%;
   
-    display: none;
+  .BrandAmbassador-title1{
+    font-family: 'Anton', sans-serif;
+    /* margin: 40px 45px; */
+    margin-top: 0px;
+    font-size: 19px;
+    /* border: 2px solid black; */
+    border-left: 5px solid #f08388 ;
+    padding: 10px;
   }
-
   .BrandAmbassador-button {
     background-color: #f08388;
     font-weight: 700;
     border-radius: 5px;
-    
+    /* border: 2px solid black; */
+    margin-top: -20px;
     border: none;
     color: black;
     font-size: 18px;
@@ -288,9 +306,336 @@ top: -80px;
     /* margin-bottom: 20px; */
     width: 275px;
     height: 55px;
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-left: 165px; */
+    /* margin: 40px 45px; */
   
   }
+  #ambassdor_btn
+  {
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+@media (min-width:665px) and (max-width:955px){
+  .BrandAmbassador-container {
+    display: flex;
+    /* flex-wrap: wrap; */
+    height: 346px;
+    width: 90%;
+    /* background-color: #efefef; */
+    /* border: 2px solid black; */
+    flex-direction: row;
+    justify-content:space-evenly;
+    margin-left: auto;
+    margin-right: auto;
+    /* border: 2px solid black; */
+  }
+  .BrandAmbassador-title {
+    /* margin: 40px auto; */
+    margin-top: 22px;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 38px;
+    font-weight: bold;
+    color: #121212;
+    /* border: 2px solid black; */
+    text-align: center;
+    letter-spacing: 5px;
+    text-shadow: -1px 1px 0 #41ba45, 1px 1px 0 #c63d2b, 1px -1px 0 #42afac,
+      -1px -1px 0 #c6c23f;
+  }
   
+  .BrandAmbassador-title1{
+    font-family: 'Anton', sans-serif;
+    /* margin: 40px 45px; */
+    margin-top: -12px;
+    margin-bottom: 0px;
+    font-size: 19px;
+    /* border: 2px solid black; */
+    border-left: 5px solid #f08388 ;
+    padding: 10px;
+  }
+  .BrandAmbassador-button {
+    background-color: #f08388;
+    font-weight: 700;
+    border-radius: 5px;
+    /* border: 2px solid black; */
+    margin-top: -20px;
+    border: none;
+    color: black;
+    font-size: 18px;
+    padding-left: 10px;
+    font-family: 'Montserrat', sans-serif;
+    padding-right: 10px;
+    /* margin-bottom: 20px; */
+    width: 159px;
+    height: 43px;
+    /* margin-left: 165px; */
+    /* margin: 40px 45px; */
+  
+  }
+  #ambassdor_btn
+  {
+    margin-top: 22px;
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+@media (min-width:484px) and (max-width:665px){
+  .BrandAmbassador-container {
+    display: flex;
+    /* flex-wrap: wrap; */
+    height: 381px;
+    width: 80%;
+    /* background-color: #efefef; */
+    background-image: url("../../../Assets/BrandAmbassador/BrandAmbassador.jpeg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    border: 0px solid black;
+    flex-direction: row;
+    justify-content:space-evenly;
+    margin-left: auto;
+    margin-right: auto;
+    /* border: 0px solid black; */
+  }
+  .BrandAmbassador-text {
+    display: flex;
+    /* border: 0px solid black; */
+    flex-direction: column;
+    justify-content: center;
+}
+  .BrandAmbassador-title {
+    /* margin: 40px auto; */
+    margin-top: 22px;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 38px;
+    font-weight: bold;
+    color: #121212;
+    /* border: 0px solid black; */
+    text-align: center;
+    letter-spacing: 5px;
+    text-shadow: -1px 1px 0 #41ba45, 1px 1px 0 #c63d2b, 1px -1px 0 #42afac,
+      -1px -1px 0 #c6c23f;
+  }
+  
+  .BrandAmbassador-title1{
+    font-family: 'Anton', sans-serif;
+    /* margin: 40px 45px; */
+    margin-top: -12px;
+    margin-bottom: 0px;
+    font-size: 19px;
+    /* border: 0px solid black; */
+    border-left: 5px solid #f08388 ;
+    padding: 10px;
+  }
+  .BrandAmbassador-button {
+    background-color: #f08388;
+    font-weight: 700;
+    border-radius: 5px;
+    /* border: 0px solid black; */
+    margin-top: -20px;
+    border: none;
+    color: black;
+    font-size: 18px;
+    padding-left: 10px;
+    font-family: 'Montserrat', sans-serif;
+    padding-right: 10px;
+    /* margin-bottom: 20px; */
+    width: 159px;
+    height: 43px;
+    /* margin-left: 165px; */
+    /* margin: 40px 45px; */
+  
+  }
+  #ambassdor_btn
+  {
+    margin-top: 22px;
+    /* border: 0px solid black; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  #brand_amb_image
+  {
+    display: none;
+  }
+}
+@media (min-width:200px) and (max-width:484px){
+  .BrandAmbassador-container {
+    display: flex;
+    /* flex-wrap: wrap; */
+    height: 381px;
+    width: 80%;
+    /* background-color: #efefef; */
+    background-image: url("../../../Assets/BrandAmbassador/BrandAmbassador.jpeg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    /* border: 0px solid black; */
+    flex-direction: row;
+    justify-content:space-evenly;
+    margin-left: auto;
+    margin-right: auto;
+    border: 0px solid black;
+  }
+  .BrandAmbassador-text {
+    display: flex;
+    /* border: 0px solid black; */
+    flex-direction: column;
+    justify-content: center;
+}
+  .BrandAmbassador-title {
+    /* margin: 40px auto; */
+    margin-top: 22px;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 31px;
+    font-weight: bold;
+    color: #121212;
+    /* border: 0px solid black; */
+    text-align: center;
+    letter-spacing: 5px;
+    text-shadow: -1px 1px 0 #41ba45, 1px 1px 0 #c63d2b, 1px -1px 0 #42afac,
+      -1px -1px 0 #c6c23f;
+  }
+  
+  .BrandAmbassador-title1{
+    font-family: 'Anton', sans-serif;
+    /* margin: 40px 45px; */
+    margin-top: -12px;
+    margin-bottom: 0px;
+    font-size: 19px;
+    /* border: 0px solid black; */
+    border-left: 5px solid #f08388 ;
+    padding: 10px;
+  }
+  .BrandAmbassador-button {
+    background-color: #f08388;
+    font-weight: 700;
+    border-radius: 5px;
+    /* border: 0px solid black; */
+    margin-top: -20px;
+    border: none;
+    color: black;
+    font-size: 18px;
+    padding-left: 10px;
+    font-family: 'Montserrat', sans-serif;
+    padding-right: 10px;
+    /* margin-bottom: 20px; */
+    width: 159px;
+    height: 43px;
+    /* margin-left: 165px; */
+    /* margin: 40px 45px; */
+  
+  }
+  #ambassdor_btn
+  {
+    margin-top: 22px;
+    /* border: 0px solid black; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  #brand_amb_image
+  {
+    display: none;
+  }
+}
+@media (min-width:437px) and (max-width:482px){
+  .BrandAmbassador-title {
+    /* margin: 40px auto; */
+    margin-top: 22px;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #121212;
+    /* border: 0px solid black; */
+    text-align: center;
+    letter-spacing: 5px;
+    text-shadow: -1px 1px 0 #41ba45, 1px 1px 0 #c63d2b, 1px -1px 0 #42afac,
+      -1px -1px 0 #c6c23f;
+  }
+}
+@media (min-width:300px) and (max-width:434px){
+  .BrandAmbassador-container {
+    display: flex;
+    /* flex-wrap: wrap; */
+    height: 381px;
+    width: 87%;
+    /* background-color: #efefef; */
+    background-image: url("../../../Assets/BrandAmbassador/BrandAmbassador.jpeg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    /* border: 0px solid black; */
+    flex-direction: row;
+    justify-content:space-evenly;
+    margin-left: auto;
+    margin-right: auto;
+    /* border: 0px solid black; */
+  }
+  .BrandAmbassador-text {
+    display: flex;
+    /* border: 0px solid black; */
+    flex-direction: column;
+    justify-content: center;
+}
+  .BrandAmbassador-title {
+    /* margin: 40px auto; */
+    margin-top: 22px;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: #121212;
+    /* border: 0px solid black; */
+    text-align: center;
+    letter-spacing: 5px;
+    text-shadow: -1px 1px 0 #41ba45, 1px 1px 0 #c63d2b, 1px -1px 0 #42afac,
+      -1px -1px 0 #c6c23f;
+  }
+  
+  .BrandAmbassador-title1{
+    font-family: 'Anton', sans-serif;
+    /* margin: 40px 45px; */
+    margin-top: -12px;
+    margin-bottom: 0px;
+    font-size: 12px;
+    /* border: 0px solid black; */
+    border-left: 5px solid #f08388 ;
+    padding: 10px;
+  }
+  .BrandAmbassador-button {
+    background-color: #f08388;
+    font-weight: 700;
+    border-radius: 5px;
+    /* border: 0px solid black; */
+    margin-top: -20px;
+    border: none;
+    color: black;
+    font-size: 18px;
+    padding-left: 10px;
+    font-family: 'Montserrat', sans-serif;
+    padding-right: 10px;
+    /* margin-bottom: 20px; */
+    width: 159px;
+    height: 35px;
+    /* margin-left: 165px; */
+    /* margin: 40px 45px; */
+  
+  }
+  #ambassdor_btn
+  {
+    margin-top: 22px;
+    /* border: 0px solid black; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  #brand_amb_image
+  {
+    display: none;
+  }
 }

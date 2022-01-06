@@ -41,11 +41,13 @@ function BrandAmbassador() {
       <div className="BrandAmbassador-text">
           <div className="BrandAmbassador-title">BECOME <br/> OUR BRAND AMBASSADOR</div>
           <div className="BrandAmbassador-title1">Spread a word about us in your college and get amazing perks!</div>
+          <div id="ambassdor_btn">
           <Link to="/ambassador">
           <button className="BrandAmbassador-button">JOIN US</button>
           </Link>
+          </div>
       </div>
-      <div >
+      <div id="brand_amb_image">
           <img  className="BrandAmbassador-image" src={xyz} />
       </div>
     </div>
