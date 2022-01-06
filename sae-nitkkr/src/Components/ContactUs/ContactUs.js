@@ -235,6 +235,8 @@ async function setInfo(contactUsData) {
   alert("Congratulations! Your information has been saved successfully.");
 deletedata();
   // window.location.reload();
+  document.getElementById('contact_button').disabled = false
+  document.getElementById('contact_button').style.backgroundColor = '#E9910DFC'
 }
 
 
