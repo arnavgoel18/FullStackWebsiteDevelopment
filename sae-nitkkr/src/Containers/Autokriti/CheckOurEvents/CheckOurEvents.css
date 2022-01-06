@@ -8,8 +8,9 @@
 
 
 .CheckOurEvents-main_container{
-  background-color: #000;
+  background-color: rgb(252, 246, 246);
   padding-bottom: 5vh;
+  width: 100%;
   padding-top: 5vh;
 }
 
@@ -47,13 +48,13 @@
 }
 
 .CheckOurEvents-heading {
-  color: white;
+  color: black;
   margin-bottom: 40px;
   margin-left: 190px;
   font-size: 30px;
 }
 .CheckOurEvents-heading1 {
-  color: white;
+  color: black;
   margin-top: 40px;
   margin-left: 190px;
   font-size: 30px;
@@ -224,7 +225,7 @@ image {
 }
 @media (min-width: 120pxpx) and (max-width: 320px) {
   .CheckOurEvents-heading {
-    margin-left: 40px;
+    /* margin-left: 40px; */
     font-size: 30px;
   }
   .CheckOurEvents-showmore {
