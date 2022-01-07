@@ -21,6 +21,9 @@
     background: #F4970A;
     border-radius: 10px;
     }
+    .fa-customize{
+        font-size: large;
+    }
 #addNewBlog{
     background-color: #098716;
     height: 2.5rem;
