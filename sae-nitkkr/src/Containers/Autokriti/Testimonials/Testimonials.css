@@ -5,8 +5,9 @@
   font-family: "Montserrat", sans-serif;
 }
 .Testimonials-body{
-  padding-top: 5vh;
-
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: rgb(248 249 249);
 }
 .Testimonials-head {
   margin-top: 50px;
