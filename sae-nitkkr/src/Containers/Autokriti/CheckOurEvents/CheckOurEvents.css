@@ -6,7 +6,18 @@
   box-sizing: border-box;
 }
 
-
+#event-register
+{
+    
+        cursor: pointer;     
+        width: 121.06px;
+        height: 49px;
+        align-self: center;
+        background: #F4970A;
+        border-radius: 10px;
+      margin-bottom: 10px;
+    
+}
 .CheckOurEvents-main_container{
   background-color: rgb(248 249 249);
   padding-bottom: 5vh;
@@ -66,7 +77,7 @@
 }
 .CheckOurEvents-register{
   
-  margin-top: 30px;
+  margin-top: 17px;
   /* bottom: 5px; */
   font-size: 28px;
   font-weight: 1000;
