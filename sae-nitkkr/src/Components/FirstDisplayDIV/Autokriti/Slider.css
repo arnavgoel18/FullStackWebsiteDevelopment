@@ -2,6 +2,7 @@
   /* max-width: 700px; */
   height: 630px;
   /* margin: 100px auto 0; */
+  /* z-index: -5; */
   border: 2px solid black;
   position: relative;
   overflow: hidden;
@@ -12,6 +13,21 @@
     margin: 100px 10px 0;
   }
 } */
+#autokriti_heading
+{
+  display: flex;
+  justify-content: center;
+  top: 330px;
+  position: relative;
+  /* z-index: 5; */
+  background-color:black;
+  font-size: 76px;
+}
+#auto_image
+{
+  opacity: 0.2;
+  height: 140px;
+}
 .slide {
   width: 100%;
   height: 100%;
@@ -31,6 +47,7 @@
 .btn-slide {
   width: 60px;
   height: 60px;
+  z-index: 5;
   border-radius: 50%;
   opacity: 0.3;
   background: #f1f1f1;
@@ -80,6 +97,21 @@
 
 @media (min-width:319px) and (max-width:375px)
 {
+  #autokriti_heading
+{
+  display: flex;
+  justify-content: center;
+  top: 90px;
+  position: relative;
+  /* z-index: 5; */
+  background-color:black;
+  
+}
+#auto_image
+{
+  opacity: 0.2;
+  height: 40px;
+}
   .container-slider {
     /* max-width: 700px; */
     height: 219px;
@@ -117,6 +149,21 @@
 }
 @media (min-width:375px) and (max-width:425px)
 {
+  #autokriti_heading
+{
+  display: flex;
+  justify-content: center;
+  top: 90px;
+  position: relative;
+  /* z-index: 5; */
+  background-color:black;
+  font-size: 76px;
+}
+#auto_image
+{
+  opacity: 0.2;
+  height: 50px;
+}
   .container-slider {
     /* max-width: 700px; */
     height: 246px;
