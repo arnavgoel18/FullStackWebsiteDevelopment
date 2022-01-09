@@ -9,13 +9,17 @@
 #event-register
 {
     
-        cursor: pointer;     
-        width: 121.06px;
-        height: 49px;
-        align-self: center;
-        background: #F4970A;
-        border-radius: 10px;
-      margin-bottom: 10px;
+  cursor: pointer;     
+  width: 121.06px;
+  height: 49px;
+  align-self: center;
+  background: rgb(175, 174, 174);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  border: none;
+  font-weight: bold;
+
     
 }
 .CheckOurEvents-main_container{
@@ -27,9 +31,9 @@
 
 .CheckOurEvents-card {
   background: #000;
-  width: 320px;
+  width: 280px;
   height: 380px;
-  box-shadow: 0 4px 8px 0 linear-gradient(to right, #74ebd5 0%, #9face6 100%);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transition: 0.3s;
   border-radius: 15px;
   background-color: white;

@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import './Slider.css'
 import BtnSlider from './BtnSlider'
 // import dataSlider from './dataSlider'
-import auto from './auto.jpg'
+import auto1 from './auto1.png'
 
 export default function Slider() {
 
@@ -18,7 +18,7 @@ export default function Slider() {
     }
     setTimeout(() => {
         nextSlide();
-    }, 3000);
+    }, 4000);
 
     const dataSlider = [
         {
@@ -92,7 +92,7 @@ export default function Slider() {
             </div>
             <div id="autokriti_heading">
                 <img
-                src={auto} id="auto_image"/>
+                src={auto1} id="auto_image"/>
             </div>
         </div>
     )

@@ -20,12 +20,12 @@
   top: 330px;
   position: relative;
   /* z-index: 5; */
-  background-color:black;
+  /* background-color:black; */
   font-size: 76px;
 }
 #auto_image
 {
-  opacity: 0.2;
+  opacity: 1;
   height: 140px;
 }
 .slide {

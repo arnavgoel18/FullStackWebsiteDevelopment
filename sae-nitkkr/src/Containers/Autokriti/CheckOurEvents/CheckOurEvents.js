@@ -61,7 +61,7 @@ function Session(props) {
             id="event-register"
             
           >
-           Register
+           UPCOMING
   
           </button>
           </a>
