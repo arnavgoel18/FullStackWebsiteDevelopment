@@ -2,7 +2,7 @@ import "./CheckOurEvents.css";
 import React, {useState} from 'react';
 
 import poster from "../../../Assets/CheckOurEvents/poster.jpeg";
-
+import Quiz from "../../../Assets/CheckOurEvents/quiz.jpg";
 // import { FaAngleDoubleDown } from "react-icons/fa";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -14,25 +14,24 @@ function CheckEvents() {
     <>
       <div className="CheckOurEvents-main_container">
         <h2 className="CheckOurEvents-heading">
-          Check out our <b className="CheckOurEvents-subheading"> EVENTS </b>
-        </h2>
+          Check out our <b className="CheckOurEvents-subheading"> EVENTS </b></h2>
         <div  className="CheckOurEvents-events">
-          {/* <Session title="Understanding Transmission"
-          status="online"
-          date="24th-January-2021"
-          image={poster}/>
+          <Session title="Quiz"
+          status="Venue- Google meet"
+          date="Date-24th-January-2021"
+          image={Quiz}/>
 
-          <Session title="Understanding Transmission"
+          {/* <Session title="Understanding Transmission"
           status="online"
           date="24th-January-2021"
           image={poster}/> */}
           
         </div>
         <div className="CheckOurEvents-showmore">
-          <p className="CheckOurEvents-heading1">
-            NO EVENTS <b className="CheckOurEvents-subheading1"> AS OF NOW </b>
+          {/* <p className="CheckOurEvents-heading1">
+            NO EVENTS <b className="CheckOurEvents-subheading1"> AS OF NOW </b> 
             <FontAwesomeIcon id="CheckOurEvents-button1" className="CheckOurEvents-icon" icon={faAngleDoubleDown} />{" "}
-          </p>
+          </p>*/}
         </div>
       </div>
     </>
@@ -49,14 +48,22 @@ function Session(props) {
             <b>{props.title}</b>
           </h2>
           <p>
+          <br />
             {props.status}
             <br />
-           {props.date}
+            <br />
+           {props.date}  <br />
           </p>
 
-          <div className="CheckOurEvents-register"></div>
+          {/* <div className="CheckOurEvents-register"></div> */}
           <a className="CheckOurEvents-register" href="">
-            <b>REGISTER</b>
+          <button
+            id="event-register"
+            
+          >
+           UPCOMING
+  
+          </button>
           </a>
         </div>
       </div>

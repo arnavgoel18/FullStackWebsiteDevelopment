@@ -6,6 +6,7 @@ import AboutUs from '../../Components/AboutUs/AboutUs'
 import CheckOurEvents from '../../Containers/Autokriti/CheckOurEvents/CheckOurEvents'
 // import Saga from '../../Components/Saga/AcceleronsSaga'
 import BrandAmbassador from './BrandAmbassador/BrandAmbassador'
+import AutokritiFirst from '../../Components/FirstDisplayDIV/Autokriti/Slider'
 import Testimonials from './Testimonials/Testimonials'
 import Gallery from '../../Components/Gallery/AutokritiGallery/Gallery'
 import FooterWhite from "../../Components/Footer/Footer(white)/FooterWhite";
@@ -20,12 +21,13 @@ function Autokriti(){
     return(
         <>
             <NavBar/>
-            <FirstDisplayDiv page="Autokriti"/>
+            <AutokritiFirst/>
+            {/* <FirstDisplayDiv page="Autokriti"/> */}
             <AboutUs page="Autokriti"/>
             <CheckOurEvents/>
             {/* <Saga/> */}
-            <Testimonials/> 
             <BrandAmbassador/>
+            <Testimonials/> 
             <Gallery/>
             <FooterWhite/>
         </>

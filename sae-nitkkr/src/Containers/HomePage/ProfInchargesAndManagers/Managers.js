@@ -12,7 +12,7 @@ function Managers(){
                 <div className = "ProfInchargesandManagers-persons_container">
                     <PersonCard name={"Deepak Yadav"} designation={"President"} url={manager1}/>
                     <PersonCard name={"Ritik "} designation={"Vice-President"} url={manager2}/>
-                    <PersonCard name={"Sarthak Mittal"} designation={"Secretary"} url={manager3}/>
+                    <PersonCard name={"Sarthak Srivastava"} designation={"Secretary"} url={manager3}/>
                 </div>
             </div>
         </>

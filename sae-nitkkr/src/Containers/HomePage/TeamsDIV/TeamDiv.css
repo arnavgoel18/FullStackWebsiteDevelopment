@@ -52,7 +52,7 @@
    align-items: flex-end;
    justify-content: flex-end;
     background-image: url("def1.jpeg");
-    clip-path: polygon(46% 0%, 100% 0, 100% 100%, 7% 100%);
+    clip-path: polygon(44% 0%, 100% 0, 100% 100%, 5% 100%);
     background-repeat: no-repeat;
     background-size: cover;
    text-align: end;
@@ -108,7 +108,7 @@
 {
    
     background-image: url("def1.jpeg");
-    clip-path: polygon(46% 0%, 100% 0, 100% 100%, 7% 100%);
+    clip-path: polygon(44% 0%, 100% 0, 100% 100%, 5% 100%);
     background-repeat: no-repeat;
     background-size: cover;
     
@@ -162,7 +162,7 @@
 {
    
     background-image: url("def1.jpeg");
-    clip-path: polygon(46% 0%, 100% 0, 100% 100%, 7% 100%);
+    clip-path: polygon(44% 0%, 100% 0, 100% 100%, 5% 100%);
     background-repeat: no-repeat;
     background-size: cover;
     
@@ -214,7 +214,7 @@
   {
      
       background-image: url("def1.jpeg");
-      clip-path: polygon(46% 0%, 100% 0, 100% 100%, 7% 100%);
+      clip-path: polygon(44% 0%, 100% 0, 100% 100%, 5% 100%);
       background-repeat: no-repeat;
       background-size: cover;
       

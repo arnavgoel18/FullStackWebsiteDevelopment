@@ -136,7 +136,10 @@ function DisplayInfo() {
         <div className="displayDiv">
           <div className="LoginPage-header">
             <Link to="/admin/actions">
-              <button id="ambassador-backBtn">Back</button>
+              <button id="ambassador-backBtn">
+               
+          <i className="fa fa-arrow-left fa-customize fa-fw"></i>
+                Back</button>
             </Link>
 
             {/* <i className="fa fa-user fa-lg" aria-hidden="true"></i> */}
@@ -149,6 +152,8 @@ function DisplayInfo() {
               }}
             >
               Sign Out
+              
+          <i className="fa fa-sign-out fa-customize fa-fw"></i>
             </button>
           </div>
           <div className="response-num-div">
