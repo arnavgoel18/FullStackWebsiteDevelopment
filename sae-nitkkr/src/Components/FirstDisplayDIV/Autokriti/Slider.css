@@ -17,7 +17,7 @@
 {
   display: flex;
   justify-content: center;
-  top: 330px;
+  top: 230px;
   position: relative;
   /* z-index: 5; */
   /* background-color:black; */
@@ -101,7 +101,7 @@
 {
   display: flex;
   justify-content: center;
-  top: 120px;
+  top: 100px;
   position: relative;
   /* z-index: 5; */
   /* background-color:black; */
@@ -114,7 +114,7 @@
 }
   .container-slider {
     /* max-width: 700px; */
-    height: 219px;
+    height: 40vh;
     /* margin: 100px auto 0; */
     border: 2px solid black;
     position: relative;
@@ -153,7 +153,7 @@
 {
   display: flex;
   justify-content: center;
-  top: 120px;
+  top: 90px;
   position: relative;
   /* z-index: 5; */
   /* background-color:black; */
@@ -166,7 +166,7 @@
 }
   .container-slider {
     /* max-width: 700px; */
-    height: 246px;
+    height: 40vh;
     /* margin: 100px auto 0; */
     border: 2px solid black;
     position: relative;
@@ -205,7 +205,7 @@
   {
     display: flex;
     justify-content: center;
-    top: 120px;
+    top: 80px;
     position: relative;
     /* z-index: 5; */
     /* background-color:black; */
@@ -218,7 +218,7 @@
   }
   .container-slider {
     /* max-width: 700px; */
-    height: 262px;
+    height: 40vh;
     /* margin: 100px auto 0; */
     border: 2px solid black;
     position: relative;
@@ -270,7 +270,7 @@
   }
   .container-slider {
     /* max-width: 700px; */
-    height: 343px;
+    height: 60vh;
     /* margin: 100px auto 0; */
     border: 2px solid black;
     position: relative;
@@ -322,7 +322,7 @@
   }
   .container-slider {
     /* max-width: 700px; */
-    height: 443px;
+    height: 60vh;
     /* margin: 100px auto 0; */
     border: 2px solid black;
     position: relative;
