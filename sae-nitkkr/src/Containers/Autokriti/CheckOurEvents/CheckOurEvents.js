@@ -56,7 +56,7 @@ function Session(props) {
           </p>
 
           {/* <div className="CheckOurEvents-register"></div> */}
-          <a className="CheckOurEvents-register" href="">
+          <a className="CheckOurEvents-register">
           <button
             id="event-register"
             
