@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import HomePage from './Containers/HomePage/homePage'
 import Autokriti from "./Containers/Autokriti/Autokriti";
+import Ambassador from "./Containers/Ambassador/Ambassador";
 import Accelerons from "./Containers/Accelerons/Accelerons";
 import Nitrox from "./Containers/Nitrox/Nitrox"
 
@@ -32,6 +33,7 @@ function App() {
         <Switch>
           <Route path="/" exact component={() => <HomePage />} />
           <Route path="/autokriti" exact component={() => <Autokriti />} />
+          <Route path="/ambassador" exact component={() => <Ambassador />} />
           <Route path="/accelerons" exact component={() => <Accelerons />} />
           <Route path="/nitrox" exact component={() => <Nitrox />} />
           <Route path="/contactus" exact component={() => <ContactUS/>} />
