@@ -67,7 +67,7 @@ export default function Slider() {
                     
                     <div
                     key={element.id}
-                    className={slideIndex === index + 1 ? "slide active-anim" : "slide"}
+                    className={slideIndex === index + 1 ? "slide active-anim" : "slide "}
                     >
                         <img 
                         src={ `Imgs/Autokriti${index + 1}.jpeg`} 

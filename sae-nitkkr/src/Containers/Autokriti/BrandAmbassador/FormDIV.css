@@ -103,7 +103,7 @@ input,textarea{
 {
     text-align: center;
 }
-#form-next{
+.amb-next-back{
     cursor: pointer;
     border-radius: 15px;
     background: #E9910DFC;
