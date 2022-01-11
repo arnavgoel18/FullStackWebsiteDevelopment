@@ -4,7 +4,7 @@ import React, { PropTypes } from 'react';
 class Ambassador extends React.Component {
 
     render () {
-        return <Redirect to='/autokriti#ambassador'/>;
+        return <Redirect to='/autokriti?ambassador'/>;
   }
 }
 

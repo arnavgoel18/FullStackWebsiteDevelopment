@@ -9,7 +9,7 @@ import $ from 'jquery';
 export default function Ap() {
   
   $(document).ready(function () {
-    if(window.location.href.includes('#ambassador')){
+    if(window.location.href.includes('?ambassador')){
       $('html, body').animate({
         scrollTop: $('#ambassador').offset().top
       }, 'slow');
