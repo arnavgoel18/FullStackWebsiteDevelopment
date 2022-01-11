@@ -1,37 +1,32 @@
 import "./CheckOurEvents.css";
-import React, {useState} from 'react';
-
-import poster from "../../../Assets/CheckOurEvents/poster.jpeg";
+import React, { useState } from 'react';
 import Quiz from "../../../Assets/CheckOurEvents/quiz.jpg";
-// import { FaAngleDoubleDown } from "react-icons/fa";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCoffee, faAngleDoubleDown } from "@fortawesome/free-solid-svg-icons";
-
 
 function CheckEvents() {
   return (
     <>
-      <div className="CheckOurEvents-main_container">
-        <h2 className="CheckOurEvents-heading">
-          Check out our <b className="CheckOurEvents-subheading"> EVENTS </b></h2>
-        <div  className="CheckOurEvents-events">
-          <Session title="Quiz"
-          status="Venue- Google meet"
-          date="Date-24th-January-2021"
-          image={Quiz}/>
+      <div className="CheckOurEvents-main">
+        <div className="CheckOurEvents-main_container">
+          <h2 className="CheckOurEvents-heading">
+            Check out our <b className="CheckOurEvents-subheading"> EVENTS </b></h2>
+          <div className="CheckOurEvents-events">
+            <Session title="Quiz"
+              status="Venue- D2C"
+              date="Date-16th-January-2021"
+              image={Quiz} />
 
-          {/* <Session title="Understanding Transmission"
+            {/* <Session title="Understanding Transmission"
           status="online"
           date="24th-January-2021"
           image={poster}/> */}
-          
-        </div>
-        <div className="CheckOurEvents-showmore">
-          {/* <p className="CheckOurEvents-heading1">
+
+          </div>
+          <div className="CheckOurEvents-showmore">
+            {/* <p className="CheckOurEvents-heading1">
             NO EVENTS <b className="CheckOurEvents-subheading1"> AS OF NOW </b> 
             <FontAwesomeIcon id="CheckOurEvents-button1" className="CheckOurEvents-icon" icon={faAngleDoubleDown} />{" "}
           </p>*/}
+          </div>
         </div>
       </div>
     </>
@@ -48,22 +43,20 @@ function Session(props) {
             <b>{props.title}</b>
           </h2>
           <p>
-          <br />
             {props.status}
             <br />
-            <br />
-           {props.date}  <br />
+            {props.date}  
           </p>
 
           {/* <div className="CheckOurEvents-register"></div> */}
           <a className="CheckOurEvents-register">
-          <button
-            id="event-register"
-            
-          >
-           UPCOMING
-  
-          </button>
+            <button
+              id="event-register"
+
+            >
+              UPCOMING
+
+            </button>
           </a>
         </div>
       </div>

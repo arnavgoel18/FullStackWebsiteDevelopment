@@ -8,6 +8,7 @@
   padding-top: 50px;
   padding-bottom: 50px;
   background-color: rgb(248 249 249);
+  box-shadow: 10px 10px 5px -5px gray;
 }
 .Testimonials-head {
   margin-top: 50px;

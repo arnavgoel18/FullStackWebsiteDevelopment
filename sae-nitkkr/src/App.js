@@ -8,7 +8,6 @@ import Nitrox from "./Containers/Nitrox/Nitrox"
 
 import ContactUS from "./Containers/ContactUs/contactus";
 import Sponsors from "./Containers/Sponsors/Sponsors";
-import Ambassador from "./Containers/Ambassador/Ambassador";
 
 import Blogs from './Containers/Blogs/Blogs'
 import Topic1 from './Containers/Blogs/Topic1/Topic1'
@@ -37,7 +36,6 @@ function App() {
           <Route path="/nitrox" exact component={() => <Nitrox />} />
           <Route path="/contactus" exact component={() => <ContactUS/>} />
           <Route path="/sponsors" exact component={() => <Sponsors/>}/>
-          <Route path="/ambassador" exact component={() => <Ambassador/>}/>
 
           <Route path="/blogs" exact component={() => <Blogs/>}/>
           <Route path="/blogs/leftvsright" exact component={() => <Topic1/>}/>

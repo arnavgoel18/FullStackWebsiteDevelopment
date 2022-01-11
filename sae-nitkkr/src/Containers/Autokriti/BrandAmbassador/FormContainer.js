@@ -1,20 +1,18 @@
-import React from "react";
+import React, { useState } from 'react'
 import "./FormDIV.css";
-import db from "../../../Firebase.js";
-import {
-  collection,
-  getDocs,
-  Timestamp,
-  doc,
-  setDoc,
-} from "firebase/firestore";
 
-export default function FormDIV() {
+export default function FormContainer() {
+  function showNext(){
+    document.querySelector('.autokriti-form-body-forms').classList.add('logged')
+  }
+  function showPrev(){
+    document.querySelector('.autokriti-form-body-forms').classList.remove('logged')
+  }
   return (
-    <>
-      <div className="Form-body" id="form_body">
-        <div className="Form-container">
-          <br />
+
+    <div className="autokriti-form-body" id="form_body">
+      <div className='autokriti-form-body-forms'>
+        <div className="Form-container form1">
           <div className="field">
             {" "}
             <input
@@ -126,10 +124,12 @@ export default function FormDIV() {
               </option>
             </select>
           </div>
+          <div className="next-button">
+            <button id="form-next" onClick={showNext}>next</button>
+          </div>
         </div>
-        <br />
-        <br />
-        <div className="Form-container">
+
+        <div className="Form-container form2">
           <div className="question">
             What are your top 3 qualities related to being a Campus Ambassador?
             *
@@ -161,9 +161,9 @@ export default function FormDIV() {
             ></textarea>
           </div>
           <div className="question">
-           How did you find out about this ambassador program? *</div>   
-        <div className="field">
-        <select id="s3">
+            How did you find out about this ambassador program? *</div>
+          <div className="field">
+            <select id="s3">
               <option selected hidden value="">
                 --Select any one--
               </option>
@@ -196,108 +196,16 @@ export default function FormDIV() {
               </option>
             </select>
           </div>
-          <div className="form-button">
-            <button id="amb-button" type="submit" onClick={submit}>
-              {" "}
-              Submit{" "}
-            </button>
+          <div className='autokriti-form-buttons'>
+            <div className="next-button">
+              <button id="form-next" onClick={showPrev}>back</button>
+            </div>
+            <div className="next-button">
+              <button id="form-next" >submit</button>
+            </div>
           </div>
         </div>
       </div>
-    </>
-  );
-}
-
-//submit f(); working: onClick submit button;
-function submit() {
-  var studentName = document.getElementById("amb_name");
-  var collegeName = document.getElementById("amb_college");
-  var branch = document.getElementById("amb_branch");
-  var semester = document.getElementById("amb_semester");
-  var phone = document.getElementById("amb_phone");
-  var email = document.getElementById("amb_email");
-  var s1 = document.getElementById("s1");
-  var s2 = document.getElementById("s2");
-  var s3 = document.getElementById("s3");
-  var longAns2 = document.getElementById("text2");
-  var longAns3 = document.getElementById("text3");
-
-  const docdata = {
-    studentName: studentName.value,
-    collegeName: collegeName.value,
-    branch: branch.value,
-    semester: semester.value,
-    phone: phone.value,
-    email: email.value,
-    s1: s1.value,
-    s2: s2.value,
-    s3: s3.value,
-    longAnswer2: longAns2.value,
-    longAnswer3: longAns3.value,
-  };
-
-  validateForm(docdata);
-}
-
-//form validation
-function validateForm(docdata) {
-  if (
-    docdata.studentName == "" ||
-    docdata.collegeName == "" ||
-    docdata.branch == "" ||
-    docdata.phone == "" ||
-    docdata.email == "" ||
-    docdata.s1 == "" ||
-    docdata.s2 == "" ||
-    docdata.s3 == "" ||
-    docdata.longAns2 == "" ||
-    docdata.longAns3 == ""
-  ) {
-    alert("Please fill up the required fields.");
-  } else if (docdata.phone.length != 10) {
-    alert("phone number should be of length 10.");
-  } else if (
-    !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(docdata.email)
-  ) {
-    alert("Please enter a valid email address.");
-  } else {
-    setInfo(docdata);
-  }
-}
-function deletedata()
-{var studentName = document.getElementById("amb_name");
-var collegeName = document.getElementById("amb_college");
-var branch = document.getElementById("amb_branch");
-var semester = document.getElementById("amb_semester");
-var phone = document.getElementById("amb_phone");
-var email = document.getElementById("amb_email");
-var s1 = document.getElementById("s1");
-var s2 = document.getElementById("s2");
-var s3 = document.getElementById("s3");
-var longAns2 = document.getElementById("text2");
-var longAns3 = document.getElementById("text3");
-  studentName.value=null;
-  collegeName.value=null;
-  branch.value=null;
-  semester.value=null;
-  phone.value=null;
-  email.value=null;
-  s1.value="--Select any One--";
-  s2.value="--Select any One--";
-  s3.value="--Select any One--";
-  longAns2.value=null;
-  longAns3.value=null;
-}
-
-//save to database
-async function setInfo(docdata) {
-  document.getElementById('amb-button').disabled = true
-  document.getElementById('amb-button').style.backgroundColor = 'gray'
-  var timestamp = String(new Date().getTime());
-  await setDoc(doc(db, "studentAmbassador", timestamp), docdata);
-  alert("Congratulations! Your information saved successfully.");
-  deletedata();
-  document.getElementById('amb-button').disabled = false
-  document.getElementById('amb-button').style.backgroundColor = '#E9910DFC'
-  // window.location.reload();
+    </div>
+  )
 }
