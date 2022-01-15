@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./AllBlogsPage.css";
 import { Redirect } from "react-router-dom";
 import TopicCardHolder from "../../../Components/Blogs/TopicsCardHolder/TopicsCardHolder";
-import db from "../../../Firebase";
+import {db1} from "../../../Firebase";
 import { getStorage, ref, deleteObject } from "firebase/storage";
 import {
   collection,
@@ -20,7 +20,7 @@ export default function AllBlogsPage() {
   const storage = getStorage();
 
   async function getBlogInfo() {
-    const blogs = collection(db, "blogs");
+    const blogs = collection(db1, "blogs");
     const blogs_doc = await getDocs(blogs);
     const blogList = blogs_doc.docs.map((doc) => doc.data());
     setResult(blogList);
@@ -35,7 +35,7 @@ export default function AllBlogsPage() {
   function deleteBlog(timestamp) {
     var result = window.confirm("Want to delete?");
     if (result) {
-      deleteDoc(doc(db, "blogs", timestamp));
+      deleteDoc(doc(db1, "blogs", timestamp));
       const desertRef = ref(storage, `${timestamp}`);
       deleteObject(desertRef);
     }

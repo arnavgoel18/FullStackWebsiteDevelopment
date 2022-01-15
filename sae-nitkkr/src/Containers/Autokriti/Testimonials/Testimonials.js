@@ -1,38 +1,60 @@
-import React from "react";
+import { useState } from "react";
 import "./Testimonials.css";
+import Slider from "react-slick";
+import testimonial1 from "../../../Assets/testimonials/testimonial1.png";
+import testimonial2 from "../../../Assets/testimonials/testimonial2.png";
+import testimonial3 from "../../../Assets/testimonials/testimonial3.png";
+import testimonial4 from "../../../Assets/testimonials/testimonial4.png";
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
+const images = [testimonial1,testimonial2,testimonial3,testimonial4,];
 function Testimonials() {
-  return (
-    <div className="Testimonials-body">
-      <div className="Testimonials-vertical"></div> <br />
-      <div className="Testimonials-head">TESTIMONIALS</div>
-      <div className="Testimonials-vertical"></div><br /> <br /> <br /> <br />
-      <div className="cards">
-        <div className="card1">
-          <div className="text">Quite an informative workshop with knowledgeable people. They tauht with a lot of enthusiasm
-            <br /> <br />
-            <div className="name">-Sakshi</div>
-          </div>
-
+ 
+    const NextArrow = ({ onClick }) => {
+      return (
+        <div className="arrow next" onClick={onClick}>
+          <FaArrowRight />
         </div>
-        <div className="card23">
-          <div className="card2">
-            <div className="text">A lot of "hands on" experience and clear explanations of car dynamics
-              <br /> <br />
-              <div className="name">-Anudeep Sethi</div>
+      );
+    };
+  
+    const PrevArrow = ({ onClick }) => {
+      return (
+        <div className="arrow prev" onClick={onClick}>
+          <FaArrowLeft />
+        </div>
+      );
+    };
+  
+    const [imageIndex, setImageIndex] = useState(0);
+  
+    const settings = {
+      infinite: true,
+      lazyLoad: true,
+      speed: 300,
+      slidesToShow: 3,
+      centerMode: true,
+      centerPadding: 0,
+      autoplay:true,
+      nextArrow: <NextArrow />,
+      prevArrow: <PrevArrow />,
+      beforeChange: (current, next) => setImageIndex(next),
+    };
+  
+    return (
+      <div className="testimonial">
+        <Slider {...settings}>
+          {images.map((img, idx) => (
+            <div className={idx === imageIndex ?  "testimonial_slide testimonial_activeSlide"
+            : "testimonial_slide"
+            }>
+              <img src={img} alt={img} />
             </div>
-
-          </div>
-          <div className="card3">
-            <div className="text">The workshop was fun, especially the display of Porche Cayenne and talented guests of honour.
-              <br /> <br />
-              <div className="name">-Abhishek Goel</div>
-            </div>
-
-          </div></div>
-      </div>
-    </div>
-  );
+          ))}
+          
+           
+        </Slider>
+      </div>);
 }
 
 export default Testimonials;

@@ -109,3 +109,22 @@
   color: #ffff;
   cursor: pointer;
 }
+#autokriti-hide{
+  display: none;
+}
+#autokriti-hide-btn{
+      cursor: pointer;
+    /* background-color: rgb(226, 71, 10); */
+    border: none;
+    font-size: 25px;
+    height: 40px;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 215px;
+}
+#autokriti-hide-btn:hover{
+  font-size: 40px;
+}

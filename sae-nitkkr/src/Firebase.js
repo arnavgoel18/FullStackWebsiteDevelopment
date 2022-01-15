@@ -39,16 +39,16 @@ const firebaseConfig = {
 };
 
 
-//SECOND & THIRD DATABASE TESTING CODE
-// const secondaryAppConfig = {
-//   apiKey: "AIzaSyB4Jc4WaodayF72BuXcQCLAkA9lgv_hmT0",
-//   authDomain: "sae-task.firebaseapp.com",
-//   projectId: "sae-task",
-//   storageBucket: "sae-task.appspot.com",
-//   messagingSenderId: "512382391053",
-//   appId: "1:512382391053:web:8418ffe15ed0715cfd1644",
-//   measurementId: "G-RK7TYZL6VQ"
-// }
+//SECOND DATABASE ONLY FOR BLOGS
+ const secondaryAppConfig = {
+  apiKey: "AIzaSyCk_GyQ6-ytYYfv6Hvt9SXtC51z8AM6000",
+  authDomain: "sae-blogs.firebaseapp.com",
+  projectId: "sae-blogs",
+  storageBucket: "sae-blogs.appspot.com",
+  messagingSenderId: "637915670174",
+  appId: "1:637915670174:web:66c2cac789acfd3a81fd8f"
+ }
+
 // const terAppConfig = {
 //   apiKey: "AIzaSyAfJTGsx3HsGeJlkIeSTf_VsrlgEw2pfrY",
 //    authDomain: "sae-website-127b1.firebaseapp.com",
@@ -60,13 +60,13 @@ const firebaseConfig = {
 // }
 
 const firebaseApp = initializeApp(firebaseConfig);
-// const secondaryApp = initializeApp(secondaryAppConfig, "secondary");
+const secondaryApp = initializeApp(secondaryAppConfig, "secondary");
 // const thirdApp = initializeApp(terAppConfig, "ternary");
 
 const db = getFirestore(firebaseApp);
-// const db1 = getFirestore(secondaryApp);
+ const db1 = getFirestore(secondaryApp);
 // const db2 = getFirestore(thirdApp);
 
 export default db;
-// export {db1, db2};
+ export {db1};
 

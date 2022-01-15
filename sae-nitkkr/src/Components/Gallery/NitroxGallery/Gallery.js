@@ -65,11 +65,12 @@ const Gallery = () => {
     },
     {
       id: 9,
-      imgSrc: Nitrox12,
-    },
+      imgSrc: Nitrox13,
+    },];
+    let data1=[
     {
       id: 10,
-      imgSrc: Nitrox13,
+      imgSrc: Nitrox12,
     },
     {
       id: 11,
@@ -149,7 +150,7 @@ const Gallery = () => {
     {
       id: 30,
       imgSrc: Nitrox78,
-    },
+    }
     
   ];
   const [model, setModel] = useState(false);
@@ -166,7 +167,7 @@ const Gallery = () => {
           <img src={tempimgSrc} onClick={() => setModel(false)} />
           {/* <CloseIcon  onClick={()=> setModel(false) }/> */}
         </div>
-        <div className="gallery">
+        <div className="gallery" id='nitrox-show'>
           {data.map((item, index) => {
             return (
               <div
@@ -183,9 +184,55 @@ const Gallery = () => {
             );
           })}
         </div>
+       <div  id="nitrox-hide-btn" style={{color:'red'}} onClick={HideNitroxGalley} ><i class="fa fa-angle-down" aria-hidden="true"></i></div>
+        <div className="gallery" id="nitrox-hide">
+
+        {data.map((item, index) => {
+            return (
+              <div
+                className="pics"
+                key={index}
+                onClick={() => getImg(item.imgSrc)}
+              >
+                <img
+                  className="Galleryimg"
+                  src={item.imgSrc}
+                  style={{ width: "100%" }}
+                />
+              </div>
+            );
+          })}
+
+
+          {data1.map((item, index) => {
+            return (
+              <div
+                className="pics"
+                key={index}
+                onClick={() => getImg(item.imgSrc)}
+              >
+                <img
+                  className="Galleryimg"
+                  src={item.imgSrc}
+                  style={{ width: "100%" }}
+                />
+              </div>
+            );
+          })}
+        </div>
+
       </div>
       </div>
     </>
   );
 };
 export default Gallery;
+
+function HideNitroxGalley() {
+  var hidegal = document.getElementById("nitrox-hide");
+  var showgal = document.getElementById("nitrox-show");
+  hidegal.style.display="block";
+  showgal.style.display="none";
+  let removeviewmore = document.getElementById("nitrox-hide-btn");
+  removeviewmore.style.display = "none";
+}

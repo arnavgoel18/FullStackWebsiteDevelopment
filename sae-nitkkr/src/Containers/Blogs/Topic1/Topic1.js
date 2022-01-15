@@ -12,7 +12,7 @@ import TopicsCardHolder from "../../../Components/Blogs/TopicsCardHolder/TopicsC
 import PhoneShareAndClap from "../../../Components/Blogs/ShareAndClap/PhoneShareAndClap";
 import Footer from "../../../Components/Footer/Footer(black)/FooterBlack";
 import { getDocs, collection, doc } from "firebase/firestore";
-import db from "../../../Firebase";
+import {db1} from "../../../Firebase";
 
 function App() {
   const params = new URL(document.location).searchParams;
@@ -24,7 +24,7 @@ function App() {
   var [otherBlog, setOtherBlog] = useState([]);
 
   async function getBlogInfo() {
-    const blogs = collection(db, "blogs");
+    const blogs = collection(db1, "blogs");
     const blogs_doc = await getDocs(blogs);
     const blogList = blogs_doc.docs.map((doc) => doc.data());
 
