@@ -25,6 +25,7 @@ import QuillEditor from "./Containers/Backend/DisplayBlogs/QuillEditor/Add"
 import RegistrationForm from "./Containers/Autokriti/RegistrationForm/RegistrationForm";
 import Quizsignup from "./Components/QuizSignup/Quizsignup";
 
+
 //import RegistrationForm from "./Containers/Autokriti/RegistrationForm/RegistrationForm";
 function App() {
   document.title = "SAE NIT Kurukshetra";
