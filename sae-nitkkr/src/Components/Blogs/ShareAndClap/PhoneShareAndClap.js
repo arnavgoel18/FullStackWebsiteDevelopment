@@ -2,7 +2,7 @@ import React, { useState,useEffect } from "react";
 import { Route, Link, BrowserRouter as Router } from "react-router-dom";
 import { RWebShare } from "react-web-share";
 import "./PhoneShareAndClap.css";
-import db from "../../../Firebase.js";
+import {db1} from "../../../Firebase.js";
 // import ContactUS from "../../../Containers/ContactUs/contactus.js";
 import {
   collection,
@@ -17,7 +17,7 @@ function Clapmobile(props) {
   var [IPvalue,setIPvalue]=useState("");
   async function getclapInfo() {
 
-    const clap = collection(db, `${props.database}`);
+    const clap = collection(db1, `${props.database}`);
     const clap_doc =  await getDocs(clap);
     const clapList = clap_doc.docs.map((doc) => doc.data());
     setfrequency(clapList.length); 
@@ -39,7 +39,7 @@ function Clapmobile(props) {
     // console.log("set info called");
    var timestamp = String(new Date().getTime());
   
-    setDoc(doc(db,`${props.database}`,timestamp), clap_data);
+    setDoc(doc(db1,`${props.database}`,timestamp), clap_data);
     
   
      document.getElementById("clapmobile_first_white").style.opacity="0.2";
