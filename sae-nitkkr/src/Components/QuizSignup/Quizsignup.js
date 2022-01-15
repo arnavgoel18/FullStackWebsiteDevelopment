@@ -1,10 +1,10 @@
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./Quizsignup.css";
 
 function Quizsignup() {
   return (
     <>
-      <p className="payform-heading">REGISTER FOR <a>QUIZ</a></p>
+      <p className="payform-heading">REGISTER FOR QUIZ</p>
       <div className="payform-container">
         <div className="payform-form">
           <div className="field">
