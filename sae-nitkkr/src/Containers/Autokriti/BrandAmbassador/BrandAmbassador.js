@@ -3,9 +3,19 @@ import Roles from "./Roles";
 import FormContainer from './FormContainer'
 import Benifits from "./Benifits";
 import './BrandAmbassador.css'
+import $ from 'jquery';
 
 
 export default function Ap() {
+  
+  $(document).ready(function () {
+    if(window.location.href.includes('?ambassador')){
+      $('html, body').animate({
+        scrollTop: $('#ambassador').offset().top
+      }, 'slow');
+    }
+});
+
   function showForm(e){
     document.querySelector('.AmbassadorBody').classList.add('trig')
   }
@@ -13,11 +23,11 @@ export default function Ap() {
     document.querySelector('.AmbassadorBody').classList.remove('trig')
   }
   return (<>
-    <div className="Ambassador-container">
+    <div className="Ambassador-container" id="ambassador">
       <div className="Ambassador-title">
         Become an Ambassador
       </div>
-      <div className="AmbassadorBody">
+      <div className="AmbassadorBody" >
         <div className="leftportion">
           <div className="ambassador-buttons">
             <button class="button-4 button-41" role="button" onClick={ShowBenifit} >Benefits</button>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Route, Link, BrowserRouter as Router } from "react-router-dom";
 import { RWebShare } from "react-web-share";
-import db from "../../../Firebase.js";
+import {db1} from "../../../Firebase.js";
 // import ContactUS from "../../../Containers/ContactUs/contactus.js";
 import {
   collection,
@@ -20,7 +20,7 @@ function Clap(props) {
 
    async function getclapInfo() {
 
-    const clap = collection(db, `${props.database}`);
+    const clap = collection(db1, `${props.database}`);
     const clap_doc =  await getDocs(clap);
     const clapList = clap_doc.docs.map((doc) => doc.data());
     setfrequency(clapList.length); 
@@ -43,7 +43,7 @@ function Clap(props) {
     //  console.log("set info called");
     var timestamp = String(new Date().getTime());
    
-     setDoc(doc(db,`${props.database}`,timestamp), clap_data);
+     setDoc(doc(db1,`${props.database}`,timestamp), clap_data);
      
    
       document.getElementById("clap_second_clapimage_white").style.opacity="0.2";
