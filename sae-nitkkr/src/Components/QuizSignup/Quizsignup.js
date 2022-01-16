@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-// import logo from "./logo.svg";
 import { FaInfoCircle} from "react-icons/fa";
 
 import "./Quizsignup.css";
 
  function Quizsignup() {
+ 
   const [userData, setUserData] = useState({
     name: "",
     email: "",
@@ -13,8 +13,8 @@ import "./Quizsignup.css";
     branch: "",
     semester: "",
      referal: "", 
-     });
-
+     transaction:""
+     });   
   let name, value;
   const postUserData = (event) => {
     name = event.target.name;
@@ -22,11 +22,32 @@ import "./Quizsignup.css";
 
     setUserData({ ...userData, [name]: value });
   };
-
+  const routeChange = async (event) =>{ 
+    event.preventDefault();
+      const { name, email, phone, college, branch, semester,referal } = userData;
+    if (name && email && phone && college && branch && semester && referal){
+      
+      if(document.getElementById('agree').checked) {   window.open("");
+      document.getElementById('payform-button2').disabled=false;
+      document.getElementById('transaction').disabled=false;
+      return true;
+       }
+        else { alert('Please tick on agree to the Terms and Conditions and Privacy Policy'); return false; }
+    
+    }
+      else {
+        alert("Please fill the data");
+      
+    }
+  };
   // connect with firebase
   const SubmitData = async (ev) => {
     ev.preventDefault();
-    const { name, email, phone, college, branch, semester,referal,transactionId } = userData;
+    const { name, email, phone, college, branch, semester,referal,transaction } = userData;
+    if(transaction.length == 0){
+      alert("Please pay the fees and fill TransactinId")
+    }
+    else{
       const res = fetch(
         "https://tryingquiz-default-rtdb.firebaseio.com/userDataRecords.json",
         {
@@ -35,30 +56,22 @@ import "./Quizsignup.css";
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            name, email, phone, college, branch, semester,referal,transactionId
+            name, email, phone, college, branch, semester,referal,transaction,
           }),
         }
       );
 
       if (res) {
         setUserData({
-          name: "", email:"", phone:"", college:"", branch:"", semester:"",referal:"",transactionId:""
+          name: "", email:"", phone:"", college:"", branch:"", semester:"",referal:"",transaction:""
         });
         alert("Data Stored");
       } 
 
+
+    }
   };
-  const EnableButton = async (event) => {
-    event.preventDefault();
-    const { name, email, phone, college, branch, semester,referal } = userData;
-  if (name && email && phone && college && branch && semester && referal){
-    document.getElementById('payform-button2').disabled=false;
-    document.getElementById('transaction').disabled=false;}
-    else {
-      alert("Please fill the data");
-    
-  }
-}
+ 
 
   return (
     <>
@@ -159,15 +172,15 @@ import "./Quizsignup.css";
               value={userData.referal}
               onChange={postUserData}
             />
-            &nbsp; &nbsp;
+            {/* &nbsp; &nbsp;
             <img
               src="https://img.icons8.com/ios/20/000000/info--v4.png"
               style={{ margin: "-6px" }}
-            />
+            /> */}
           </div>
           <br />
           <br />
-          <button onClick={EnableButton}  className="payform-button">₹ &nbsp; Pay Now</button>
+          <button onClick={routeChange}  className="payform-button">₹ &nbsp; Pay Now</button>
 
           <div className="field">
             {" "}
@@ -177,15 +190,16 @@ import "./Quizsignup.css";
             id="transaction"
               className="payform-input"
               type=""
-              name="transactionId"
+              name="transaction"
               alt=""
               disabled={true}
-              required=""
+              required=""value={userData.transaction}
+              onChange={postUserData}
             />
           </div>
           <br />
 
-          <button disabled={true} onClick={SubmitData}  id="payform-button2" className="payform-button2">Confirm Registration</button>
+          <button  onClick={SubmitData}  id="payform-button2" className="payform-button2">Confirm Registration</button>
         </div>
         <div className="payform-infocontain">
           <div className="payform-info">
@@ -208,7 +222,7 @@ import "./Quizsignup.css";
           </div>
           <br />
           <div className="payform-checkbox">
-            <input type="checkbox" id="" name="" value="" />
+            <input type="checkbox" id="agree" name="" value="" />
             <label for=""> I have read and understood the instructions</label>
             <br />
             <br />
