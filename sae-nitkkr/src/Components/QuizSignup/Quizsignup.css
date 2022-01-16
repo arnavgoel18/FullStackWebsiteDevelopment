@@ -94,7 +94,7 @@
 }
 
 .payform-button2 {
-  background-color: #299204;
+  background-color: grey;
   font-family: sans-serif;
   font-weight: 700;
   color: white;
@@ -104,8 +104,11 @@
   border-radius: 5px;
   font-size: 16px;
 }
+.payform-button2:enabled{
+  background-color: #299204;
+}
  
-.payform-button, .payform-button2:hover{
+.payform-button, .payform-button2:enabled:hover{
   cursor: pointer;
 }
 

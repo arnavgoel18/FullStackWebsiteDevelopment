@@ -2,25 +2,33 @@
 @import "slick-carousel/slick/slick-theme.css";
 
 .testimonial {
-  width: 90%;
+  width: 70%;
   margin: 2rem auto;
   height: 370px;
 }
-
+.testimonial-title{
+  margin-top:40px;
+  margin-bottom: 50px;
+  padding:10px;
+  font-size: 25px;
+  font-weight: bold;
+  color:white;
+  background-color: #24292E;
+  width:fit-content;
+}
 .testimonial_slide img {
   width: 100%;
   margin: 0 auto;
 }
 
 .testimonial_slide {
-
-  transform: scale(0.2);
+  transform: scale(0.5);
   transition: transform 300ms;
   opacity: 0.5;
 }
 
 .testimonial_activeSlide {
-  transform: scale(1.1);
+  transform: scale(1.3);
   opacity: 1;
 }
 
@@ -51,4 +59,10 @@
 .prev {
   left: 3%;
   top: 50%;
+}
+
+@media only screen and (max-width:1024px){
+  .testimonial{
+    width:95%;
+  }
 }

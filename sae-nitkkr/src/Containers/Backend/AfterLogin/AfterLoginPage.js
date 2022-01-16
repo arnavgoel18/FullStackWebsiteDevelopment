@@ -77,6 +77,14 @@ export default function AfterLoginPage() {
           </div>
             <AfterLoginCard name="Quiz Responses Recorded" id="yellow" />
           </Link>
+          <Link to="/admin/finalAmbassador">
+          <div className="iconimagediv">
+            
+          <img src="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/000000/external-announcement-news-kiranshastry-lineal-kiranshastry-2.png"className="iconimage"/>
+           
+          </div>
+            <AfterLoginCard name="Selected Ambassadors" id="orange" />
+          </Link>
         </div>
       </div>
     );
