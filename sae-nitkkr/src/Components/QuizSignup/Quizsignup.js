@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-// import logo from "./logo.svg";
 import { FaInfoCircle} from "react-icons/fa";
 
 import "./Quizsignup.css";
 
  function Quizsignup() {
+ 
   const [userData, setUserData] = useState({
     name: "",
     email: "",
@@ -13,8 +13,7 @@ import "./Quizsignup.css";
     branch: "",
     semester: "",
      referal: "", 
-     });
-
+     });   
   let name, value;
   const postUserData = (event) => {
     name = event.target.name;
@@ -22,7 +21,29 @@ import "./Quizsignup.css";
 
     setUserData({ ...userData, [name]: value });
   };
-
+  const routeChange = () =>{ 
+    
+      const { name, email, phone, college, branch, semester,referal } = userData;
+    if (name && email && phone && college && branch && semester && referal){
+      
+      if(document.getElementById('agree').checked) {   window.open("");
+      document.getElementById('payform-button2').disabled=false;
+      document.getElementById('transaction').disabled=false;
+      return true;
+       }
+        else { alert('Please tick on agree to the Terms and Conditions and Privacy Policy'); return false; }
+    
+    }
+      else {
+        alert("Please fill the data");
+      
+    }
+    
+   
+  
+  
+    
+  }
   // connect with firebase
   const SubmitData = async (ev) => {
     ev.preventDefault();
@@ -48,17 +69,7 @@ import "./Quizsignup.css";
       } 
 
   };
-  const EnableButton = async (event) => {
-    event.preventDefault();
-    const { name, email, phone, college, branch, semester,referal } = userData;
-  if (name && email && phone && college && branch && semester && referal){
-    document.getElementById('payform-button2').disabled=false;
-    document.getElementById('transaction').disabled=false;}
-    else {
-      alert("Please fill the data");
-    
-  }
-}
+ 
 
   return (
     <>
@@ -159,15 +170,15 @@ import "./Quizsignup.css";
               value={userData.referal}
               onChange={postUserData}
             />
-            &nbsp; &nbsp;
+            {/* &nbsp; &nbsp;
             <img
               src="https://img.icons8.com/ios/20/000000/info--v4.png"
               style={{ margin: "-6px" }}
-            />
+            /> */}
           </div>
           <br />
           <br />
-          <button onClick={EnableButton}  className="payform-button">₹ &nbsp; Pay Now</button>
+          <button onClick={routeChange}  className="payform-button">₹ &nbsp; Pay Now</button>
 
           <div className="field">
             {" "}
@@ -208,7 +219,7 @@ import "./Quizsignup.css";
           </div>
           <br />
           <div className="payform-checkbox">
-            <input type="checkbox" id="" name="" value="" />
+            <input type="checkbox" id="agree" name="" value="" />
             <label for=""> I have read and understood the instructions</label>
             <br />
             <br />
