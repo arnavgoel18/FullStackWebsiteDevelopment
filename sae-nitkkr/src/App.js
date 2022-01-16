@@ -16,6 +16,7 @@ import Topic1 from './Containers/Blogs/Topic1/Topic1'
 import Login from "./Containers/Backend/Login";
 import AdminActions from "./Containers/Backend/AfterLogin/AfterLoginPage"
 import DisplayAmb from "./Containers/Backend/DisplayAmbassador/DisplayAmbassador"
+import DisplayFinalAmbassador from "./Containers/Backend/DisplayFinalAmbassador/DisplayFinalAmbassador"
 import DisplayContact from './Containers/Backend/DisplayContact/DisplayContact'
 import DisplaySignUpSheet from './Containers/Backend/DisplaySignUpSheet/DisplaySignUpSheet'
 import DisplayQuizResponses from './Containers/Backend/DisplayQuizResponses/DisplayQuizResponses'
@@ -49,6 +50,7 @@ function App() {
           <Route path="/admin/actions" exact component={() => <AdminActions/>}/>
           <Route path="/admin/ambassadorInfo" exact component={() => <DisplayAmb/>}/>
           <Route path="/admin/contactUsInfo" exact component={() => <DisplayContact/>}/>
+          <Route path="/admin/finalAmbassador" exact component={() => <DisplayFinalAmbassador/>}/>
           <Route path="admin/signUpSheet" exact component={() => <DisplaySignUpSheet/>}/>
           <Route path="admin/quizResponses" exact component={() => <DisplayQuizResponses/>}/>
 
