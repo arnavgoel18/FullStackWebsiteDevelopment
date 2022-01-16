@@ -189,7 +189,8 @@ import "./Quizsignup.css";
         </div>
         <div className="payform-infocontain">
           <div className="payform-info">
-          <FaInfoCircle /> &nbsp; 
+          <FaInfoCircle /> &nbsp;
+          Instructions 
             <p>
               * Make sure your email id is correct as you will be getting
               confirmation on that email
