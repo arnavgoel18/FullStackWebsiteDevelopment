@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 // import logo from "./logo.svg";
+import { FaInfoCircle} from "react-icons/fa";
+
 import "./Quizsignup.css";
 
  function Quizsignup() {
@@ -157,11 +159,11 @@ import "./Quizsignup.css";
               value={userData.referal}
               onChange={postUserData}
             />
-            &nbsp; &nbsp;
+            {/* &nbsp; &nbsp;
             <img
               src="https://img.icons8.com/ios/20/000000/info--v4.png"
               style={{ margin: "-6px" }}
-            />
+            /> */}
           </div>
           <br />
           <br />
@@ -187,6 +189,8 @@ import "./Quizsignup.css";
         </div>
         <div className="payform-infocontain">
           <div className="payform-info">
+          <FaInfoCircle /> &nbsp;
+          Instructions 
             <p>
               * Make sure your email id is correct as you will be getting
               confirmation on that email

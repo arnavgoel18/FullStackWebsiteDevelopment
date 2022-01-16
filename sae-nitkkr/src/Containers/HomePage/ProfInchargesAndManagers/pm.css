@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+  padding: 50px;
+  text-align: center;
+}
+.container_pm{
+    overflow: hidden;
+    margin: 0px auto;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.3);
+    background: linear-gradient(45deg, #7b00e0, #ae31d9);
+    height: 200px;
+    width: 200px;
+}
+.container_pm:hover{
+  height: 330px;
+  width: 210px;
+  border-radius: 20px;
+  box-shadow: 0px 1px 35px 0px rgba(0,0,0,0.3);
+}
+.container_pm .wrapper img{
+  position: relative;
+  z-index: 20;
+  border-radius: 50%;
+  display: block;
+  height: 190px;
+  width: 190px;
+  border: 5px solid #fff;
+  object-fit: cover;
+  margin: 5px auto;
+  transition: all 0.3s ease;
+}
+.container_pm:hover .wrapper img.active{
+  /* height: 470px;
+  width: 350px; */
+  margin: 0px auto;
+  border: none;
+  border-radius: 5px;
+}
+.wrapper .name{
+  color: #fff;
+  margin-top: -5px;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 12px;
+  line-height: 20px;
+}
+.wrapper .designation{
+  color: #fff;
+  font-size: 17px;
+  line-height: 0px;
+  margin: 10px 0;
+}
+
+.container_pm .icons{
+  position: relative;
+  margin-top: 0px;
+  margin-left: -170px;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+
+}
+.container_pm .icons.active{
+  display: none;
+ 
+}
+.container_pm .icons li{
+  height: 40px;
+  width: 40px;
+  margin: 5px 0;
+  opacity: 0;
+  margin-left: -100px;
+  transition: all 0.5s ease;
+}
+.container_pm:hover .icons li{
+  opacity: 1;
+  margin-left: 5px;
+}
+.container_pm:hover .icons li:nth-child(2){
+  transition-delay: 0.2s;
+}
+.container_pm:hover .icons li:nth-child(3){
+  transition-delay: 0.4s;
+}
+.container_pm .icons li a{
+  color: #7b00e0;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  background: #fff;
+  display: block;
+  line-height: 40px;
+  transition: all 0.3s;
+}
+.container_pm .icons li a:hover{
+  transform: scale(0.9);
+}
+
+@media screen and (max-width: 1020px){
+    .container_pm{
+        width: 105px;
+        height: 105px;
+        overflow: hidden;
+        margin: 5px auto;
+        border-radius: 50%;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.3);
+        background: linear-gradient(45deg, #7b00e0, #ae31d9);
+    }
+    .container_pm:hover{
+        height: 189px;
+        width: 140px;
+        display: flex;
+        justify-content: space-evenly;
+        border-radius: 5px;
+        box-shadow: 0px 1px 15px 0px rgba(0,0,0,0.3);
+      }
+      .container_pm .wrapper img{
+        position: relative;
+        z-index: 20;
+        border-radius: 50%;
+        display: block;
+        height: 98px;
+        width: 98px;
+        border: 2px solid #fff;
+        object-fit: cover;
+        margin: 4px auto;
+        transition: all 0.3s ease;
+      }
+      .container_pm:hover .wrapper img.active{
+        height: 175px;
+        width: 125px;
+        margin: 0px auto;
+        border: none;
+        border-radius:5px;
+      }
+      .wrapper .name{
+        color: #fff;
+        font-size: 13px;
+        font-weight: 300;
+        padding: 5px;
+        line-height: 19px;
+      }
+      .wrapper .designation{
+        color: #fff;
+        font-size: 13px;
+        line-height: 1px;
+        margin: 5px 0;
+      }
+      
+     
+      .container_pm .icons{
+        position: relative;
+        left: 10px;
+        margin-top: 150px;
+        margin-left: -150px;
+        list-style: none;
+         display: flex;
+        justify-content: space-evenly; 
+        width: 100%; 
+      }
+    
+      .container_pm .icons li{
+        height: 25px;
+        width: 25px;
+        margin: 1px 0;
+        opacity: 0;
+        margin-left: -53px;
+        transition: all 0.5s ease;
+      }
+
+      .container_pm .icons li a{
+        color: #7b00e0;
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        background: #fff;
+        display: block;
+        line-height: 25px;
+        transition: all 0.3s;
+      }
+      
+}
