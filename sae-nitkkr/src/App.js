@@ -24,6 +24,7 @@ import DisplayQuizResponses from './Containers/Backend/DisplayQuizResponses/Disp
 import DisplayBlogs from "./Containers/Backend/DisplayBlogs/AllBlogsPage"
 import QuillEditor from "./Containers/Backend/DisplayBlogs/QuillEditor/Add"
 import RegistrationForm from "./Containers/Autokriti/RegistrationForm/RegistrationForm";
+import Quizsignup from "./Components/QuizSignup/Quizsignup";
 
 
 //import RegistrationForm from "./Containers/Autokriti/RegistrationForm/RegistrationForm";
@@ -43,6 +44,7 @@ function App() {
 
           <Route path="/blogs" exact component={() => <Blogs/>}/>
           <Route path="/blogs/leftvsright" exact component={() => <Topic1/>}/>
+          <Route path="/Quizsignup" exact component={() => <Quizsignup/>}/>
           
           <Route path="/admin/login" exact component={() => <Login/>}/>
           <Route path="/admin/actions" exact component={() => <AdminActions/>}/>
