@@ -61,7 +61,60 @@ function ExploreUs() {
             <div className="counter-heading">
                 Each One Counts
             </div>
+            
             <div className="counter-container">
+            <div class="bubbles">
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    
                 <div className="counter-counter">
                     <img src="https://img.icons8.com/ios-glyphs/30/ffffff/user-group-man-woman.png" className="counter-icon" />
                     <h3 data-value="117" className="count">117</h3>
@@ -76,6 +129,7 @@ function ExploreUs() {
                 <img src="https://img.icons8.com/external-inipagistudio-lineal-color-inipagistudio/64/000000/external-gear-toolkit-inipagistudio-lineal-color-inipagistudio.png" className="counter-icon" />
                     <h3 data-target="16" className="count">16</h3>
                     <h6>Vehicles designed</h6>
+                    </div>
                 </div>
             </div>
         </div>

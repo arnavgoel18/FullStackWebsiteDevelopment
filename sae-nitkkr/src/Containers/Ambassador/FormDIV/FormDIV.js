@@ -126,6 +126,7 @@ export default function FormDIV() {
               </option>
             </select>
           </div>
+          <button className="next-button" onClick={next}  >Next</button>
         </div>
         <br />
         <br />
@@ -206,6 +207,9 @@ export default function FormDIV() {
       </div>
     </>
   );
+}
+function next(){
+  console.log("Keshav")
 }
 
 //submit f(); working: onClick submit button;

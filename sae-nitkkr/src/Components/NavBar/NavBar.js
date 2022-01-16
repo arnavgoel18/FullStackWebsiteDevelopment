@@ -43,7 +43,8 @@ function NavBar() {
                 </li>
                 <li className="NavigationBar_Nav-nav-item">
                     <Link to="/sponsors" className="NavigationBar_Nav-nav-link" onClick={() => setOpen(false)}>
-                        Quiz <sup className='Navigation-new'> New!</sup>
+                        Sponsors
+                        {/* Quiz <sup className='Navigation-new'> New!</sup> */}
                         {/* <img src="http://www.nitp.ac.in/php/images/new.gif" border="0" alt="new" className='Navigation-new'/> */}
                     </Link>
                 </li>

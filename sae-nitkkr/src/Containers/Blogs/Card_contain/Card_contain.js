@@ -6,7 +6,7 @@ import TopicCardHolder from "../../../Components/Blogs/TopicsCardHolder/TopicsCa
 import FeatureCard from "../../../Components/Blogs/FeatureCard/FeatureCard";
 import FollowUsCard from "../../../Components/Blogs/FollowUsCard/FollowUsCard";
 import { Link } from "react-router-dom";
-import db from "../../../Firebase";
+import {db1} from "../../../Firebase";
 import { collection, getDocs } from "firebase/firestore";
 
 
@@ -16,7 +16,7 @@ function Card_contain() {
   // const storage = getStorage();
 
   async function getBlogInfo() {
-    const blogs = collection(db, "blogs");
+    const blogs = collection(db1, "blogs");
     const blogs_doc = await getDocs(blogs);
     const blogList = blogs_doc.docs.map((doc) => doc.data());
     setResult(blogList);

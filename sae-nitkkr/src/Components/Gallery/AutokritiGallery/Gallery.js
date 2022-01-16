@@ -73,7 +73,8 @@ const Gallery = () => {
       {
           id: 9,
           imgSrc: Autokriti9,
-      },
+      }];
+      let data1=[
       {
           id: 10,
           imgSrc: Autokriti10,
@@ -156,8 +157,8 @@ const Gallery = () => {
       // {
       //     id: 30,
       //     imgSrc: Autokriti30,
-      // },
-  ]
+      // }
+  ];
   const [model, setModel]= useState(false);
   const [tempimgSrc, setTempImgSrc] = useState('');
   const getImg =(imgSrc) =>{
@@ -165,23 +166,77 @@ const Gallery = () => {
       setModel(true);
   }
   return (
-      <>
+    <>
       <div className="galleryContainer">
-      <div className={model? "model open" : "model"}>
-          <img src={tempimgSrc} onClick={()=> setModel(false) } />
+        <div className={model ? "model open" : "model"}>
+          <img src={tempimgSrc} onClick={() => setModel(false)} />
           {/* <CloseIcon  onClick={()=> setModel(false) }/> */}
-      </div>
-      <div className="gallery">
-          {data.map((item, index)=>{
-              return(
-                  <div className="pics" key={index} onClick={()=> getImg(item.imgSrc)}>
-                      <img className="Galleryimg" src={item.imgSrc} style={{width: '100%'}}/>
-                  </div>
-              )
+        </div>
+        <div className="gallery" id='autokriti-show'>
+          {data.map((item, index) => {
+            return (
+              <div
+                className="pics"
+                key={index}
+                onClick={() => getImg(item.imgSrc)}
+              >
+                <img
+                  className="Galleryimg"
+                  src={item.imgSrc}
+                  style={{ width: "100%" }}
+                />
+              </div>
+            );
           })}
+        </div>
+       <div  id="autokriti-hide-btn" style={{color:'red'}} onClick={HideAutokritiGalley} ><i class="fa fa-angle-down" aria-hidden="true"></i></div>
+        <div className="gallery" id="autokriti-hide">
+
+        {data.map((item, index) => {
+            return (
+              <div
+                className="pics"
+                key={index}
+                onClick={() => getImg(item.imgSrc)}
+              >
+                <img
+                  className="Galleryimg"
+                  src={item.imgSrc}
+                  style={{ width: "100%" }}
+                />
+              </div>
+            );
+          })}
+
+
+          {data1.map((item, index) => {
+            return (
+              <div
+                className="pics"
+                key={index}
+                onClick={() => getImg(item.imgSrc)}
+              >
+                <img
+                  className="Galleryimg"
+                  src={item.imgSrc}
+                  style={{ width: "100%" }}
+                />
+              </div>
+            );
+          })}
+        </div>
+
       </div>
-      </div>
-      </>
-  )
-}
-export default Gallery
+    </>
+  );
+};
+export default Gallery;
+
+function HideAutokritiGalley() {
+    var hidegal = document.getElementById("autokriti-hide");
+    var showgal = document.getElementById("autokriti-show");
+    hidegal.style.display="block";
+    showgal.style.display="none";
+    let removeviewmore = document.getElementById("autokriti-hide-btn");
+    removeviewmore.style.display = "none";
+  }

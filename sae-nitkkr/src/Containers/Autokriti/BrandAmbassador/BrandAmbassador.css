@@ -1,167 +1,201 @@
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-
+.Ambassador-container{
+  width:70%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 10px 5px -5px gray;
 }
-.BrandAmbassador-body {
-  background-image: url("../../../Assets/BrandAmbassador/man-woman-handshake-23841014.jpeg");
-  background-repeat: no-repeat;
-  background-position-x: right;
-  background-position-y: center;
-  background-color: #000000;  
-  padding-left: 16px;
-}
-.BrandAmbassador-boxes {
-  padding-top: 10vh;
-  padding-left: 1vh;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  width: 500px;
-}
-.BrandAmbassador-box1 {
-  margin-top: 10vh;
-  display: flex;
-  flex-direction: row;
-  font-size: 27px;
-}
-.BrandAmbassador-box11 {
-  display: flex;
-}
-.BrandAmbassador-box112 {
-  margin-left: 10px;
-}
-.BrandAmbassador-box12 {
+.Ambassador-title{
+  margin-top:40px;
+  padding:10px;
+  font-size: 25px;
   font-weight: bold;
-  background: -webkit-linear-gradient(right, blue, purple);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: flex;
+  color:white;
+  background-color: #24292E;
+  width:fit-content;
 }
-.BrandAmbassador-box121 {
-  margin-left: 10px;
+.AmbassadorBody{
+    display: flex;
+    justify-content: space-between;
+  }
+.leftportion{
+  width: 45%;
+  height: 600px;
 }
-.BrandAmbassador-box122 {
-  margin-left: 15px;
+.rightportion{
+    width: 50%;
 }
-.BrandAmbassador-box2 {
-  font-size: 30px;
-  margin-top: 10vh;
-}
-.BrandAmbassador-box23 {
-  font-weight: bold;
-}
-.BrandAmbassador-box3 {
-  padding-left: 1vh;
-  border-left: 5px solid transparent;
-  border-image: linear-gradient(to bottom, blue, purple);
-  border-image-slice: 1;
-  margin: 20px;
-  font-size: 18px;
-  width: 380px;
-}
-.BrandAmbassador-box4 {
-  font-size: 22px;
-  font-weight: bold;
-  width: 140px;
-  padding: 5px;
+.rightportion-back{
+  padding:10px;
+  background-color: red;
+  color:white;
   cursor: pointer;
-  background: linear-gradient(to right, blue, purple),
-    linear-gradient(to right, white, white);
-  position: relative;
-  left: 140px;
-  top: -45px;
-  color: #fff;
-}
-
-@media (min-width:425px) and (max-width:579px)
-{
-.BrandAmbassador-box4 {
-  font-size: 22px;
+  width:60px;
+  border-radius: 5px;
   font-weight: bold;
-  width: 160px;
-  height: 50px;
-  padding: 5px;
-  background: linear-gradient(to right, blue, purple),
-    linear-gradient(to right, white, white);
+  margin-top:15px;
+  display: none;
+} 
+.ambassador-buttons{
+    display: flex;
+    flex-direction: row;
+    padding-top:30px;
+    border-bottom: 2px solid #c5d7e9;
+}
+.button-4 {
+  appearance: none;
+  width: 50%;
+  background-color: #c5d7e9;
+  border:none;
+  color: #24292E;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  padding: 6px 16px;
   position: relative;
-  left: 140px;
-  top: -66px;
-}
+  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
-@media (min-width: 628px) and (max-width: 767px) {
-  .BrandAmbassador-boxes {
-    margin: 60px;
-  }
+.button-4:hover {
+  background-color: #F3F4F6;
+  text-decoration: none;
+  transition-duration: 0.1s;
 }
-@media (width: 768px) {
-  .BrandAmbassador-body {
-    background-position-x: 18px;
-  }
+
+.button-4:active {
+  background-color: #EDEFF2;
+  box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+  transition: none 0s;
 }
-@media (min-width: 580px) and (max-width: 628px) {
-  .BrandAmbassador-boxes {
-    margin: 40px;
-  }
+
+.button-42{
+  background-color: white;
 }
-@media (min-width: 30px) and (max-width: 580px) {
-  .BrandAmbassador-boxes {
-    margin: 20px;
-    margin-left: -102px;
-    width: 340px;
+.leftportion-joinus{
+  width:80px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:40px;
+  background-color: green;
+  padding:10px;
+  border-radius: 5px;
+  color:white;
+  display: none;
+  cursor: pointer;
+}
+@media only screen and (max-width:400px){
+  .Ambassador-container{
+    width:95%;
   }
-  .BrandAmbassador-box22{
-    margin-left: 29%;
+  .AmbassadorBody{
+    display: block;
+    overflow:hidden;
+    position:relative;
+    height:650px;
   }
-  .BrandAmbassador-body {
-    background-image: url("../../../Assets/BrandAmbassador/man-woman-handshake-23841014.jpeg");
-    background-repeat: no-repeat;
-    background-position-x: 0px;
-    background-position-y: center;
+  .leftportion, .rightportion{
+    width:100%;
+    position:absolute;
+    transition: all 0.5s ease;
   }
-  .BrandAmbassador-box1 {
-    flex-direction: column;
+  .rightportion{
+    transform: translateX(100%);
   }
-  .BrandAmbassador-box111
+
+  .trig .rightportion
   {
-    margin-left: 90px;
+      transform: translateX(0%);
   }
-  .BrandAmbassador-box122 {
-    margin-left: 6px;
-    font-size: 20px;
-    
-}
-.BrandAmbassador-box3 {
-  padding-left: 63px;
-  border-left: 5px solid transparent;
-  border-image: linear-gradient(to bottom, blue, purple);
-  border-image-slice: 1;
-  margin: 20px;
-  font-size: 20px;
-  width: 380px;
-}
-.BrandAmbassador-box23 {
-  margin-left: 93px;
-}
-.BrandAmbassador-box121 {
-margin-left: 81px;
-font-size: 20px;
-}
-.BrandAmbassador-box21{
-margin-left: 94px;
-}
 
-.BrandAmbassador-box4 {
-font-size: 22px;
-font-weight: bold;
-width: 140px;
-padding: 5px;
-background: linear-gradient(to right, blue, purple),
-  linear-gradient(to right, white, white);
-position: relative;
-left: 170px;
-top: -80px;
+  .trig .leftportion
+  {
+    transform: translateX(-100%);
+  }
+  .leftportion-joinus{
+    display: block;
+  }
+  .rightportion-back{
+    display: block;
+  }
 }
+@media (min-width:400px) and (max-width:550px){
+  .Ambassador-container{
+    width:90%;
+  }
+  .AmbassadorBody{
+    display: block;
+    overflow:hidden;
+    position:relative;
+    height:650px;
+  }
+  .leftportion, .rightportion{
+    width:100%;
+    position:absolute;
+    transition: all 0.5s ease;
+  }
+  .rightportion{
+    transform: translateX(100%);
+  }
+
+  .trig .rightportion
+  {
+      transform: translateX(0%);
+  }
+
+  .trig .leftportion
+  {
+    transform: translateX(-100%);
+  }
+  .leftportion-joinus{
+    display: block;
+  }
+  .rightportion-back{
+    display: block;
+  }
+}
+@media (min-width:550px) and (max-width:850px){
+  .Ambassador-container{
+    width:90%;
+  }
+  .AmbassadorBody{
+    display: block;
+    overflow:hidden;
+    position:relative;
+    height:650px;
+  }
+  .leftportion-joinus{
+    display: block;
+  }
+  .rightportion-back{
+    display: block;
+  }
+  .leftportion, .rightportion{
+    width:100%;
+    position:absolute;
+    transition: all 0.5s ease;
+  }
+  .rightportion{
+    transform: translateX(100%);
+  }
+
+  .trig .rightportion
+  {
+      transform: translateX(0%);
+  }
+
+  .trig .leftportion
+  {
+    transform: translateX(-100%);
+  }
+}
+@media (min-width:850px) and (max-width:1024px)  {
+  .Ambassador-container{
+    width:95%;
+  }
 }

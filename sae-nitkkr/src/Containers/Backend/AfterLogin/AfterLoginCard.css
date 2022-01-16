@@ -10,6 +10,19 @@
     line-height: 3rem;
     color: #FFFFFF;
 }
+.iconimagediv{
+    display: flex;
+    justify-content: center;
+    width: 15rem;
+    margin: 50px 70px -50px 70px;
+
+}
+.iconimage{
+    
+    width: 5rem;
+    height: 5rem;
+    
+}
 .afterLoginCard:hover{
  cursor: pointer;
 }

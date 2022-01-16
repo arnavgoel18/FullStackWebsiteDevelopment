@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.autokriti-form-body{
+    padding-top: 15px;
+    background-color: white;
+}
+.autokriti-form-body .form1, .autokriti-form-body .form2{
+    position:absolute;
+    width:100%;    
+    transition: all 0.5s ease;
+}
+
+.autokriti-form-body-forms{
+    overflow:hidden;
+    position:relative;
+    width:400px;
+    height:620px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.autokriti-form-body .form2
+{
+    padding-bottom:30px;
+    transform: translateX(505px);
+}
+
+.logged .form2
+{
+    transform: translateX(0px);
+}
+
+.logged .form1
+{
+   transform: translateX(-505px);
+}
+.autokriti-form-buttons{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.Form-container{
+    border: 1px solid #00000021;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align:left;
+    gap: 10px;
+    font-size: 1.2rem;
+    padding-top:20px;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin:auto;
+    align-self: center;
+}
+.Form-container .field{
+    font-size: 14px;
+}
+.Form-container .field span{
+    position:absolute   ;
+    left: 0%;
+    padding: 5px 0;
+    font-size: 14px;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+.autokriti-form-body .question{
+    font-size:14px;
+    padding-top:20px;
+    font-weight: bold;
+}
+input,textarea{
+    width: 95%; 
+    padding: 5px 0;
+    font-size: 16px;
+    resize: none;
+    border: none;
+    outline: none;
+    border-bottom: 1.5px solid black;
+}   
+.autokriti-form-body .Form-container .field  input:focus ~ span,
+.autokriti-form-body .Form-container .field  input:valid ~ span,     
+.autokriti-form-body .Form-container .field  textarea:focus ~ span,
+.autokriti-form-body .Form-container .field  textarea:valid ~ span
+{
+    color: black;
+    font-size: 12px;
+    transform: translateX(-20px);
+    transform: translateY(-20px);
+}
+.heading{
+    text-align: center;
+    padding-top: 50px;
+}
+.form-button{
+    text-align: center;
+}
+.next-button
+{
+    text-align: center;
+}
+.amb-next-back{
+    cursor: pointer;
+    border-radius: 15px;
+    background: #E9910DFC;
+    height: 40px;
+    width: 100px;
+    color: white;
+    border: none;
+    font-size: medium;
+}
+#amb-button{
+    cursor: pointer;
+    border-radius: 15px;
+    background: #E9910DFC;
+    height: 40px;
+    width: 100px;
+    color: white;
+    border: none;
+    font-size: medium;
+}   
+
+#s1,#s2,#s3{
+    width: 90%;
+    height: 65%;
+    padding: 0.8%;
+    border-radius: 5px;
+    margin-top: 2%;
+}
+@media only screen and (max-width:370px){
+    .autokriti-form-body-forms{
+        width:300px;
+    }
+    .Form-container .field{
+        font-size: 14px;
+    }
+    .Form-container .field span{
+        position:absolute   ;
+        left: 0%;
+        padding: 5px 0;
+        font-size: 14px;
+        pointer-events: none;
+        transition: 0.5s;
+        color: #666;
+    }
+    .autokriti-form-body .question{
+        font-size:14px;
+        padding-top:20px;
+        font-weight: bold;
+    }
+}
+@media (min-width:370px) and (max-width:500px){
+    .autokriti-form-body-forms{
+        width:330px;
+    }
+    .Form-container .field{
+        font-size: 14px;
+    }
+    .Form-container .field span{
+        position:absolute   ;
+        left: 0%;
+        padding: 5px 0;
+        font-size: 14px;
+        pointer-events: none;
+        transition: 0.5s;
+        color: #666;
+    }
+    .autokriti-form-body .question{
+        font-size:14px;
+        padding-top:20px;
+        font-weight: bold;
+    }
+}
+
+

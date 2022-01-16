@@ -72,7 +72,8 @@ const Gallery = () => {
     {
       id: 9,
       imgSrc: Accelerons9,
-    },
+    }];
+    let data1=[
     {
       id: 10,
       imgSrc: Accelerons10,
@@ -185,10 +186,10 @@ const Gallery = () => {
       id: 37,
       imgSrc: Accelerons37,
     },
-    // {
-    //   id: 38,
-    //   imgSrc: Accelerons38,
-    // },
+    {
+      id: 38,
+      imgSrc: Accelerons38,
+    },
   ];
   const [model, setModel] = useState(false);
   const [tempimgSrc, setTempImgSrc] = useState("");
@@ -204,7 +205,7 @@ const Gallery = () => {
           <img src={tempimgSrc} onClick={() => setModel(false)} />
           {/* <CloseIcon  onClick={()=> setModel(false) }/> */}
         </div>
-        <div className="gallery">
+        <div className="gallery" id='accelerons-show'>
           {data.map((item, index) => {
             return (
               <div
@@ -221,9 +222,55 @@ const Gallery = () => {
             );
           })}
         </div>
+       <div  id="accelerons-hide-btn" style={{color:'red'}} onClick={HideAcceleronsGalley} ><i class="fa fa-angle-down" aria-hidden="true"></i></div>
+        <div className="gallery" id="accelerons-hide">
+
+        {data.map((item, index) => {
+            return (
+              <div
+                className="pics"
+                key={index}
+                onClick={() => getImg(item.imgSrc)}
+              >
+                <img
+                  className="Galleryimg"
+                  src={item.imgSrc}
+                  style={{ width: "100%" }}
+                />
+              </div>
+            );
+          })}
+
+
+          {data1.map((item, index) => {
+            return (
+              <div
+                className="pics"
+                key={index}
+                onClick={() => getImg(item.imgSrc)}
+              >
+                <img
+                  className="Galleryimg"
+                  src={item.imgSrc}
+                  style={{ width: "100%" }}
+                />
+              </div>
+            );
+          })}
+        </div>
+
       </div>
       </div>
     </>
   );
 };
 export default Gallery;
+
+function HideAcceleronsGalley() {
+  var hidegal = document.getElementById("accelerons-hide");
+  var showgal = document.getElementById("accelerons-show");
+  hidegal.style.display="block";
+  showgal.style.display="none";
+  let removeviewmore = document.getElementById("accelerons-hide-btn");
+  removeviewmore.style.display = "none";
+}

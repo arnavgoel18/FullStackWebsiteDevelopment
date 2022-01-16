@@ -5,24 +5,40 @@
   margin: 0;
   box-sizing: border-box;
 }
-
+.CheckOurEvents-main{
+  background-color: rgb(248 249 249);
+  box-shadow: 10px 10px 5px -5px gray;
+}
+#event-register
+{
+  cursor: pointer;     
+  width: 121.06px;
+  height: 49px;
+  align-self: center;
+  background: rgb(175, 174, 174);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  border: none;
+  font-weight: bold;
+}
 
 .CheckOurEvents-main_container{
-  background-color: rgb(252, 246, 246);
-  padding-bottom: 5vh;
-  width: 100%;
-  padding-top: 5vh;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top:40px;
+  padding-bottom:40px;
 }
 
 .CheckOurEvents-card {
   background: #000;
-  width: 320px;
-  height: 380px;
-  box-shadow: 0 4px 8px 0 linear-gradient(to right, #74ebd5 0%, #9face6 100%);
+  width: 250px;
+  height: 350px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transition: 0.3s;
   border-radius: 15px;
   background-color: white;
-  margin-bottom: 60px;
 }
 .CheckOurEvents-image {
   width: 100%;
@@ -40,6 +56,13 @@
   text-align: center;
   justify-content: center;
 }
+.CheckOurEvents-container p{
+  line-height: 1.5;
+}
+.CheckOurEvents-container h2{
+  padding-top:10px;
+  padding-bottom: 10px;
+}
 .CheckOurEvents-heading {
   background-color: transparent;
 }
@@ -50,7 +73,6 @@
 .CheckOurEvents-heading {
   color: black;
   margin-bottom: 40px;
-  margin-left: 190px;
   font-size: 30px;
 }
 .CheckOurEvents-heading1 {
@@ -65,54 +87,37 @@
   justify-content: space-evenly;
 }
 .CheckOurEvents-register{
-  
-  margin-top: 30px;
-  /* bottom: 5px; */
+  margin-top: 17px;
   font-size: 28px;
   font-weight: 1000;
   text-decoration: none;
 }
 .CheckOurEvents-subheading {
-
   background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
-
-  
   background-size: 100%;
   background-repeat: repeat;
-
-  
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 1000;
 }
 
 .CheckOurEvents-subheading1 {
-  
   background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
-
- 
   background-size: 100%;
   background-repeat: repeat;
-
-  
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
-  
 }
 
 .extraeffect {
   background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
-
-  
   background-size: 100%;
   background-repeat: repeat;
-
-  
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
@@ -121,124 +126,31 @@
 .CheckOurEvents-register {
   content: " ";
   display: block;
-  /* border-bottom: 1px solid #000; */
 }
-.CheckOurEvents-icon {
-  transition: transform 0.2s;
-}
-.CheckOurEvents-icon:hover {
-  transform: scale(2);
-  cursor: pointer;
-}
-image {
-  width: 20%;
-  height: 20%;
-  float: right;
-}
-.CheckOurEvents-showmore{
- 
-  text-align: right;
-  
-  margin-top: 30px;
-  font-size: 28px;
-  font-weight: 800;
-}
-
-@media (min-width: 1440px) and (max-width: 2560px) {
-  .CheckOurEvents-heading {
-    margin-left: 278px;
-  }
-  .CheckOurEvents-showmore {
-    margin-right: 280px;
-  }
-}
-@media (min-width: 1024px) and (max-width: 1440px) {
-  .CheckOurEvents-heading {
-    margin-left: 130px;
-  }
-  .CheckOurEvents-showmore {
-    margin-right: 200px;
-  }
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-  .CheckOurEvents-heading {
-    margin-left: 130px;
-  }
-  .CheckOurEvents-showmore {
-    margin-right: 200px;
-  }
-}
-@media (min-width: 425px) and (max-width: 768px) {
-  .CheckOurEvents-heading {
-    margin-left: 40px;
-  }
-  .CheckOurEvents-showmore {
-    margin-right: 60px;
-  }
-  .CheckOurEvents-events {
-    display: flex;
-    flex-direction: column;
-    align-content: space-evenly;
-    flex-wrap: wrap;
-    margin-top: 20px;
-  }
-}
-@media (min-width: 375px) and (max-width: 425px) {
-  .CheckOurEvents-heading {
-    margin-left: 50px;
-    font-size: 25px;
-  }
-  .CheckOurEvents-showmore {
-    margin-right: 30px;
-  }
-  .CheckOurEvents-subheading {
-    font-size: 30px;
-  }
-  .CheckOurEvents-events {
-    display: flex;
-    flex-direction: column;
-    align-content: space-evenly;
-    flex-wrap: wrap;
-  }
-}
-@media (min-width: 320px) and (max-width: 375px) {
-  .CheckOurEvents-heading {
-    margin-left: 10px;
-    font-size: 25px;
-  }
-  .CheckOurEvents-showmore {
-    margin-right: 60px;
-    font-size: 10px;
-  }
-  .CheckOurEvents-subheading {
-    font-size: 30px;
-  }
-  .CheckOurEvents-events {
-    display: flex;
-    flex-direction: column;
-    align-content: space-evenly;
-    flex-wrap: wrap;
+@media only screen and (max-width:769px){
+  .CheckOurEvents-main_container{
+    width:95%;
   }
   .CheckOurEvents-card {
-    width: 300px;
+    width:230px;
+    height:320px;
   }
-}
-@media (min-width: 120pxpx) and (max-width: 320px) {
-  .CheckOurEvents-heading {
-    /* margin-left: 40px; */
+  .CheckOurEvents-image {
+    height:140px;
+  }
+  .CheckOurEvents-container h2{
+    padding-top:5px;
+    padding-bottom: 5px;
+  }
+  .CheckOurEvents-heading{
+    font-size: 25px;
+  }
+  .CheckOurEvents-subheading{
     font-size: 30px;
   }
-  .CheckOurEvents-showmore {
-    margin-right: 0px;
-    font-size: 10px;
-  }
-  .CheckOurEvents-events {
-    display: flex;
-    flex-direction: column;
-    align-content: space-evenly;
-    flex-wrap: wrap;
-  }
-  .CheckOurEvents-card {
-    width: 310px;
-  }
+}
+@media (min-width:769px) and (max-width:1024px){
+  .CheckOurEvents-main_container{
+      width:95%;
+    }
 }

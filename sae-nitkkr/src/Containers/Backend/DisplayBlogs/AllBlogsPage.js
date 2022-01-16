@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./AllBlogsPage.css";
 import { Redirect } from "react-router-dom";
 import TopicCardHolder from "../../../Components/Blogs/TopicsCardHolder/TopicsCardHolder";
-import db from "../../../Firebase";
+import {db1} from "../../../Firebase";
 import { getStorage, ref, deleteObject } from "firebase/storage";
 import {
   collection,
@@ -20,7 +20,7 @@ export default function AllBlogsPage() {
   const storage = getStorage();
 
   async function getBlogInfo() {
-    const blogs = collection(db, "blogs");
+    const blogs = collection(db1, "blogs");
     const blogs_doc = await getDocs(blogs);
     const blogList = blogs_doc.docs.map((doc) => doc.data());
     setResult(blogList);
@@ -35,7 +35,7 @@ export default function AllBlogsPage() {
   function deleteBlog(timestamp) {
     var result = window.confirm("Want to delete?");
     if (result) {
-      deleteDoc(doc(db, "blogs", timestamp));
+      deleteDoc(doc(db1, "blogs", timestamp));
       const desertRef = ref(storage, `${timestamp}`);
       deleteObject(desertRef);
     }
@@ -55,7 +55,8 @@ export default function AllBlogsPage() {
     <div>
       <div className="LoginPage-header">
         <Link to="/admin/actions">
-          <button id="AllBlogs-backBtn">Back</button>
+          <button id="AllBlogs-backBtn">
+          <i className="fa fa-arrow-left fa-customize fa-fw"></i>Back</button>
         </Link>
 
         {/* <i className="fa fa-user fa-lg" aria-hidden="true"></i> */}
@@ -68,13 +69,15 @@ export default function AllBlogsPage() {
           }}
         >
           Sign Out
+          <i className="fa fa-sign-out fa-customize fa-fw"></i>
         </button>
       </div>
       <div className="backendBlogPanel">
         <h4 id="totalHeading">Total no. of blogs: {blogResult.length}</h4>
-        <button id="addNewBlog">View Blog Request</button>
+        <button id="addNewBlog">
+        <i className="fa fa-eye  fa-fw"></i>View Blog Request</button>
         <button id="addNewBlog" type="button" onClick={goToEditor}>
-          Add new blog
+        <i className="fa fa-plus fa-customize fa-fw"></i> Add new blog
         </button>
       </div>
 

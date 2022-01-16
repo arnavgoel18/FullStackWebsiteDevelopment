@@ -129,7 +129,10 @@ function DisplayContactInfo() {
         <div className="displayDiv">
           <div className="LoginPage-header">
             <Link to="/admin/actions">
-              <button id="contact-backBtn">Back</button>
+              <button id="contact-backBtn">
+                
+          <i className="fa fa-arrow-left fa-customize fa-fw"></i>
+          Back</button>
             </Link>
 
             {/* <i className="fa fa-user fa-lg" aria-hidden="true"></i> */}
@@ -141,7 +144,9 @@ function DisplayContactInfo() {
                 window.location.href = "/admin/login";
               }}
             >
-              Sign Out
+              Sign out
+          <i className="fa fa-sign-out fa-customize fa-fw"></i>
+              
             </button>
           </div>
           <div className="response-num-div">

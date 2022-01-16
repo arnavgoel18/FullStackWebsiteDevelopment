@@ -5,7 +5,7 @@ import { Redirect } from "react-router-dom";
 import "react-quill/dist/quill.snow.css";
 import "./TextEditor.css";
 import { useHistory } from "react-router-dom";
-import db from "../../../../Firebase";
+import {db1} from "../../../../Firebase";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import {
   collection,
@@ -30,7 +30,7 @@ function Add() {
 
   async function getBlogInfo() {
     console.log("THIS");
-    const blogs = collection(db, "blogs");
+    const blogs = collection(db1, "blogs");
     const blogs_doc = await getDocs(blogs);
     const blogList = blogs_doc.docs.map((doc) => doc.data());
 
@@ -93,7 +93,7 @@ function Add() {
 
         uploadBytes(coverPhotoRef, userInfo.coverPhoto).then((res) => {
           getDownloadURL(coverPhotoRef).then((url) => {
-            setDoc(doc(db, "blogs", newTimestamp), {
+            setDoc(doc(db1, "blogs", newTimestamp), {
               title: userInfo.title,
               information: userInfo.information,
               createdDate: date,
@@ -121,7 +121,7 @@ function Add() {
         const coverPhotoRef = ref(storage, `${timestamp}`);
         uploadBytes(coverPhotoRef, userInfo.coverPhoto);
         getDownloadURL(coverPhotoRef).then((url) => {
-          updateDoc(doc(db, "blogs", timestamp), {
+          updateDoc(doc(db1, "blogs", timestamp), {
             title: userInfo.title,
             information: userInfo.information,
             modifiedDate: date,
