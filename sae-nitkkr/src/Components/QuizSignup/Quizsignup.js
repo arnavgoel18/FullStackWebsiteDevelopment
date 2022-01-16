@@ -2,7 +2,14 @@ import React, { useState } from "react";
 import { FaInfoCircle} from "react-icons/fa";
 
 import "./Quizsignup.css";
-
+import db from "../../Firebase.js";
+import {
+  collection,
+  getDocs,
+  Timestamp,
+  doc,
+  setDoc,
+} from "firebase/firestore";
  function Quizsignup() {
  
   const [userData, setUserData] = useState({
@@ -41,36 +48,36 @@ import "./Quizsignup.css";
     }
   };
   // connect with firebase
-  const SubmitData = async (ev) => {
-    ev.preventDefault();
-    const { name, email, phone, college, branch, semester,referal,transaction } = userData;
-    if(transaction.length == 0){
-      alert("Please pay the fees and fill TransactinId")
-    }
-    else{
-      const res = fetch(
-        "https://tryingquiz-default-rtdb.firebaseio.com/userDataRecords.json",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            name, email, phone, college, branch, semester,referal,transaction,
-          }),
-        }
-      );
+  // const SubmitData = async (ev) => {
+  //   ev.preventDefault();
+  //   const { name, email, phone, college, branch, semester,referal,transaction } = userData;
+  //   if(transaction.length == 0){
+  //     alert("Please pay the fees and fill TransactinId")
+  //   }
+  //   else{
+  //     const res = fetch(
+  //       "https://tryingquiz-default-rtdb.firebaseio.com/userDataRecords.json",
+  //       {
+  //         method: "POST",
+  //         headers: {
+  //           "Content-Type": "application/json",
+  //         },
+  //         body: JSON.stringify({
+  //           name, email, phone, college, branch, semester,referal,transaction,
+  //         }),
+  //       }
+  //     );
 
-      if (res) {
-        setUserData({
-          name: "", email:"", phone:"", college:"", branch:"", semester:"",referal:"",transaction:""
-        });
-        alert("Data Stored");
-      } 
+  //     if (res) {
+  //       setUserData({
+  //         name: "", email:"", phone:"", college:"", branch:"", semester:"",referal:"",transaction:""
+  //       });
+  //       alert("Data Stored");
+  //     } 
 
 
-    }
-  };
+  //   }
+  // };
  
 
   return (
@@ -100,7 +107,7 @@ import "./Quizsignup.css";
               className="payform-input"
               type="Email"
               name="email"
-              id="amb_college"
+              id="amb_email"
               required="required"
               value={userData.email}
               onChange={postUserData}
@@ -114,6 +121,7 @@ import "./Quizsignup.css";
               type="number"
               name="phone"
               required="required"
+              id="amb_phone"
               value={userData.phone}
               onChange={postUserData}
             />
@@ -126,6 +134,7 @@ import "./Quizsignup.css";
               type="text"
               required="unrequired"
               name="college"
+              id="amb_college"
               value={userData.college}
               onChange={postUserData}
             />{" "}
@@ -138,6 +147,7 @@ import "./Quizsignup.css";
               type="name"
               name="branch"
               required="unrequired"
+              id="amb_branch"
               value={userData.branch}
               onChange={postUserData}
             />
@@ -151,7 +161,7 @@ import "./Quizsignup.css";
               type="email"
               name="semester"
               alt="semester"
-              id=""
+              id="amb_semester"
               required="unrequired"
               value={userData.semester}
               onChange={postUserData}
@@ -167,7 +177,7 @@ import "./Quizsignup.css";
               type="email"
               name="referal"
               alt=""
-              id=""
+              id="referal_code"
               required="unrequired"
               value={userData.referal}
               onChange={postUserData}
@@ -192,6 +202,7 @@ import "./Quizsignup.css";
               type=""
               name="transaction"
               alt=""
+              id="transaction"
               disabled={true}
               required=""value={userData.transaction}
               onChange={postUserData}
@@ -199,7 +210,7 @@ import "./Quizsignup.css";
           </div>
           <br />
 
-          <button  onClick={SubmitData}  id="payform-button2" className="payform-button2">Confirm Registration</button>
+          <button  onClick={submit}  id="payform-button2" className="payform-button2">Confirm Registration</button>
         </div>
         <div className="payform-infocontain">
           <div className="payform-info">
@@ -233,6 +244,81 @@ import "./Quizsignup.css";
       </div>
     </>
   );
+}
+function submit() {
+  var studentName = document.getElementById("amb_name");
+  var collegeName = document.getElementById("amb_college");
+  var branch = document.getElementById("amb_branch");
+  var semester = document.getElementById("amb_semester");
+  var phone = document.getElementById("amb_phone");
+  var email = document.getElementById("amb_email");
+  var referalcode=document.getElementById("referal_code");
+  var transaction=document.getElementById("transaction");
+  const docdata = {
+    studentName: studentName.value,
+    collegeName: collegeName.value,
+    branch: branch.value,
+    semester: semester.value,
+    phone: phone.value,
+    email: email.value,
+    referalcode:referalcode.value,
+    transaction:transaction.value
+  };
+
+  validateForm(docdata);
+}
+
+//form validation
+function validateForm(docdata) {
+  if (
+    docdata.studentName == "" ||
+    docdata.collegeName == "" ||
+    docdata.branch == "" ||
+    docdata.phone == "" ||
+    docdata.email == "" ||
+    docdata.referalcode==""
+  ) {
+    alert("Please fill up the required fields.");
+  } else if (docdata.phone.length != 10) {
+    alert("phone number should be of length 10.");
+  } else if (
+    !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(docdata.email)
+  ) {
+    alert("Please enter a valid email address.");
+  } else {
+    setInfo(docdata);
+  }
+}
+function deletedata()
+{var studentName = document.getElementById("amb_name");
+var collegeName = document.getElementById("amb_college");
+var branch = document.getElementById("amb_branch");
+var semester = document.getElementById("amb_semester");
+var phone = document.getElementById("amb_phone");
+var email = document.getElementById("amb_email");
+var referalcode=document.getElementById("referal_code");
+var transaction=document.getElementById("transaction");
+  studentName.value=null;
+  collegeName.value=null;
+  branch.value=null;
+  semester.value=null;
+  phone.value=null;
+  email.value=null;
+referalcode.value=null;
+transaction.value=null;
+}
+
+//save to database
+async function setInfo(docdata) {
+  document.getElementById('payform-button2').disabled = true
+  document.getElementById('payform-button2').style.backgroundColor = 'gray'
+  var timestamp = String(new Date().getTime());
+  await setDoc(doc(db, "quizsignup", timestamp), docdata);
+  alert("Congratulations! Your information saved successfully.");
+  deletedata();
+  document.getElementById('payform-button2').disabled = false
+  document.getElementById('payform-button2').style.backgroundColor = '#E9910DFC'
+  // window.location.reload();
 }
 
 export default Quizsignup;
