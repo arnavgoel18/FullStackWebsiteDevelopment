@@ -1,7 +1,13 @@
-// import logo from "./logo.svg";
+import React from 'react';
 import "./Quizsignup.css";
 
 function Quizsignup() {
+
+  const routeChange = () =>{ 
+    if(document.getElementById('agree').checked) { return true; } else { alert('Please tick on agree to the Terms and Conditions and Privacy Policy'); return false; }
+    window.open("");
+  }
+
   return (
     <>
       <p className="payform-heading">REGISTER FOR QUIZ</p>
@@ -73,7 +79,7 @@ function Quizsignup() {
           </div>
           <br />
           <br />
-          <button className="payform-button">₹ &nbsp; Pay Now</button>
+          <button className="payform-button" onClick={routeChange}>₹ &nbsp; Pay Now</button>
 
           <div className="field">
             {" "}
@@ -104,7 +110,7 @@ function Quizsignup() {
           </div>
           <br/>
           <div className="payform-checkbox">
-          <input type="checkbox" id="" name="" value="" />
+          <input type="checkbox" id="agree" name="" value="" required="required" />
           <label for=""> I have read and understood the instructions</label>
           <br/>
           <br/>
