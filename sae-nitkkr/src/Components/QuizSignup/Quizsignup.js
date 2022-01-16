@@ -159,11 +159,11 @@ import "./Quizsignup.css";
               value={userData.referal}
               onChange={postUserData}
             />
-            {/* &nbsp; &nbsp;
+            &nbsp; &nbsp;
             <img
               src="https://img.icons8.com/ios/20/000000/info--v4.png"
               style={{ margin: "-6px" }}
-            /> */}
+            />
           </div>
           <br />
           <br />
