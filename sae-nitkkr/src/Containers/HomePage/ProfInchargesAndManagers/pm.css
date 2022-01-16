@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 
 =======
 >>>>>>> 8920c188008d9678a8c6650b098bb90cf0ccdc4c
+=======
+
+
+>>>>>>> Stashed changes
 .container_pm{
     overflow: hidden;
     margin: 0px auto;
@@ -41,7 +46,7 @@
 .wrapper .name{
   color: #fff;
   margin-top: -5px;
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 500;
   padding: 12px;
   line-height: 20px;
@@ -99,88 +104,89 @@
   transform: scale(0.9);
 }
 
-@media screen and (max-width: 1020px){
-    .container_pm{
-        width: 105px;
-        height: 105px;
-        overflow: hidden;
-        margin: 5px auto;
-        border-radius: 50%;
-        transition: all 0.3s ease-in-out;
-        box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.3);
-        background: linear-gradient(45deg, #7b00e0, #ae31d9);
-    }
-    .container_pm:hover{
-        height: 189px;
-        width: 140px;
-        display: flex;
-        justify-content: space-evenly;
-        border-radius: 5px;
-        box-shadow: 0px 1px 15px 0px rgba(0,0,0,0.3);
-      }
-      .container_pm .wrapper img{
-        position: relative;
-        z-index: 20;
-        border-radius: 50%;
-        display: block;
-        height: 98px;
-        width: 98px;
-        border: 2px solid #fff;
-        object-fit: cover;
-        margin: 4px auto;
-        transition: all 0.3s ease;
-      }
-      .container_pm:hover .wrapper img.active{
-        height: 175px;
-        width: 125px;
-        margin: 0px auto;
-        border: none;
-        border-radius:5px;
-      }
-      .wrapper .name{
-        color: #fff;
-        font-size: 13px;
-        font-weight: 300;
-        padding: 5px;
-        line-height: 19px;
-      }
-      .wrapper .designation{
-        color: #fff;
-        font-size: 13px;
-        line-height: 1px;
-        margin: 5px 0;
-      }
-      
-     
-      .container_pm .icons{
-        position: relative;
-        left: 10px;
-        margin-top: 150px;
-        margin-left: -150px;
-        list-style: none;
-         display: flex;
-        justify-content: space-evenly; 
-        width: 100%; 
-      }
-    
-      .container_pm .icons li{
-        height: 25px;
-        width: 25px;
-        margin: 1px 0;
-        opacity: 0;
-        margin-left: -53px;
-        transition: all 0.5s ease;
-      }
 
-      .container_pm .icons li a{
-        color: #7b00e0;
-        height: 100%;
-        width: 100%;
-        border-radius: 50%;
-        background: #fff;
-        display: block;
-        line-height: 25px;
-        transition: all 0.3s;
-      }
-      
+
+@media (min-width:425px) and (max-width: 768px){
+    .container_pm{
+      height: 174px;
+    width: 174px;
+    /* margin: 18px; */
+    }
+
+    .container_pm .wrapper img{
+      height: 165px;
+    width: 165px;
+    }
+
+    .container_pm:hover {
+      height: 300px;
+      width: 210px;
+    }
+  
+}
+@media (min-width:456px) and (max-width: 666px){
+  .container_pm{
+    height: 184px;
+  width: 184px;
+  }
+
+  .container_pm .wrapper img{
+    height: 175px;
+  width: 175px;
+  }
+}
+@media (min-width:398px) and (max-width: 425px){
+  .container_pm{
+    height: 160px;
+  width: 160px;
+  margin: 12px auto;
+  }
+
+  .container_pm:hover {
+    height: 280px;
+    width: 210px;
+  }
+
+  .container_pm .wrapper img{
+    height: 150px;
+  width: 150px;
+  }
+
+}
+
+@media (min-width:375px) and (max-width: 398px){
+
+  .container_pm{
+    height: 145px;
+  width: 145px;
+  margin: 12px auto;
+  }
+
+  .container_pm:hover {
+    height: 270px;
+    width: 210px;
+  }
+
+  .container_pm .wrapper img{
+    height: 135px;
+  width: 135px;
+  }
+}
+
+@media (min-width:320px) and (max-width: 375px){
+  .container_pm{
+    height: 128px;
+  width: 128px;
+  margin: 12px auto;
+  }
+
+  .container_pm:hover {
+    height: 255px;
+    width: 210px;
+  }
+
+  .container_pm .wrapper img{
+    height: 118px;
+  width: 118px;
+  }
 }
