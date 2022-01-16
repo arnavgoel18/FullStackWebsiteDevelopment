@@ -43,6 +43,9 @@ function Testimonials() {
   
     return (
       <div className="testimonial">
+        <div className="testimonial-title">
+          Testimonials
+        </div>
         <Slider {...settings}>
           {images.map((img, idx) => (
             <div className={idx === imageIndex ?  "testimonial_slide testimonial_activeSlide"
