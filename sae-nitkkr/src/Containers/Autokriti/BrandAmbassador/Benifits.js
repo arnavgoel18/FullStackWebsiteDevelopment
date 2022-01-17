@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import './Benifits.css';
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 function Benifits() {
   var imgNames = ['monetaryIncentives', 'workshopsCommissions', 'marketingManagamenet', 'freeAccess', 'communicationSkills']
@@ -31,20 +32,46 @@ function Benifits() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setSlideIndex((preValue) => {
-        if (preValue < imgNames.length - 1) return preValue + 1
-        else return 0
+        if (preValue < imgNames.length - 1){
+           return preValue + 1
+          }
+        else{
+          return 0}
       })
-    }, 5000);
+    }, 4000);
 
     return () => clearTimeout(timer)
   })
+
+  function leftarrow(){
+    if(slideIndex>0){
+    setSlideIndex(slideIndex-1);
+    }
+    else{
+      setSlideIndex(imgNames.length-1);
+    }
+  }
+
+  function rightarrow(){
+    if(slideIndex<imgNames.length -1){
+    setSlideIndex(slideIndex+1);
+    }
+    else{
+      setSlideIndex(0);
+    }
+  }
+
   return (
     <div className='BenifitsBody'>
       <div className="foto">
         <div className="benifitheading">Benefits of being an Ambassador for e - Autokriti </div>
         <img src={`Imgs/${imgNames[slideIndex]}.jpg`}  alt="not found" />
       </div>
+      <div className='amb-carousel-arrow'>
+      <FaArrowLeft className='amb-arrow' onClick={leftarrow}/>
       <h3>{imgSubtitles[slideIndex].heading}</h3>
+      <FaArrowRight className='amb-arrow' onClick={rightarrow}/>
+      </div>
       <p>{imgSubtitles[slideIndex].data}</p>
     </div>
   );

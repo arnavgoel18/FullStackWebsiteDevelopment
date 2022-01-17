@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "react-carousel": "^4.3.0",
+    "react-slick": "^0.28.1",
     "react-table": "^7.7.0"
   }
 }
