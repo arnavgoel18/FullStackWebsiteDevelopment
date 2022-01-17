@@ -31,6 +31,7 @@
     font-weight: 900;
     font-size: 20px;
     line-height: 1.2;
+    text-align: center;
 }
 
 .BenifitsBody p{
@@ -42,7 +43,7 @@
     padding-left:20px;
     line-height: 1.2;
     margin-top: 0.2rem;
-    height: fit-content;
+    text-align: center;
 }
 .BenifitsBody img{
     width:20rem;
