@@ -61,7 +61,7 @@
 }
 .Form-container .field span{
     position:absolute   ;
-    left: 0%;
+    left: 5%;
     padding: 5px 0;
     font-size: 14px;
     pointer-events: none;

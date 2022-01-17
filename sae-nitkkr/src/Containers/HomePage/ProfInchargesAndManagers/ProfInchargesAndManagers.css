@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 .ProfInchargesandManagers-Managers-Heading{
-    width: 50%;
+    width: 35%;
     font-size: 22px;
     font-family: "Montserrat", sans-serif;
     padding-top:15px;
@@ -17,7 +17,7 @@
     /* width:400px; */
 }
 .ProfInchargesandManagers-heading{
-    width: 50%;
+    width: 35%;
     font-size: 22px;
     font-family: "Montserrat", sans-serif;
     padding-top:15px;
@@ -105,3 +105,12 @@
 }
 
 
+@media screen and (max-width: 460px){
+    .ProfInchargesandManagers-heading{
+        width: 70%;
+    }
+
+    .ProfInchargesandManagers-Managers-Heading{
+        width: 70%;
+    }
+}

@@ -15,7 +15,7 @@ function Benifits() {
       data: 'Get a chance to earn up to 10% commision on the base fare for workshops and webinars.',
     },
     {
-      heading: '3. Marketing and Management',
+      heading: '3. Marketing and Management Opportunity',
       data: 'Regular free training workshops & session on marketing and management for Campus Ambassadors.',
     },
     {
@@ -23,7 +23,7 @@ function Benifits() {
       data: 'Free access to the concerned course(s) on completing a total of 5 or more entries for a single course',
     },
     {
-      heading: '5. Learn Communication Skills',
+      heading: '5. Improve Communication Skills',
       data: 'This program will allow you to improve your communication skills and your management skills.',
     }
   ]
