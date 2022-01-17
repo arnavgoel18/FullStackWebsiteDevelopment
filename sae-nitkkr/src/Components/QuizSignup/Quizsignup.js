@@ -10,6 +10,8 @@ import {
   doc,
   setDoc,
 } from "firebase/firestore";
+import NavBar from "../NavBar/NavBar";
+import Footer from "../Footer/Footer(black)/FooterBlack";
 function Quizsignup() {
   function i_information_visible()
   {
@@ -90,6 +92,8 @@ function Quizsignup() {
 
   return (
     <>
+    <NavBar/>
+    <br/>
       <p className="payform-heading">REGISTER FOR QUIZ</p>
       <div className="payform-container">
         <div method="POST" className="payform-form">
@@ -247,16 +251,16 @@ function Quizsignup() {
         </div>
         <div className="payform-infocontain">
           <div className="payform-info">
-            <FaInfoCircle /> &nbsp; Instructions
-            <p>
+            <FaInfoCircle /> &nbsp; <span id="quiz_registration">Instructions</span>
+            <p className="instruction_para">
               * Make sure your email id is correct as you will be getting
               confirmation on that email
             </p>
-            <p>
+            <p className="instruction_para">
               * After clicking on Pay, <b>NOTE TRANSACTION ID </b>you get from
               RazorPay and add it to Transaction ID Field
             </p>
-            <p>
+            <p className="instruction_para">
               * Transaction ID Field will be <b>activated</b> when payment is
               made.
             </p>
@@ -265,7 +269,7 @@ function Quizsignup() {
           <div className="payform-checkbox">
             <input type="checkbox" id="agree" name="" value="" />
             <div id="read_content">
-            <label for=""> I have read and understood the instructions</label>
+            I have read and understood the instructions
             </div>
             <br />
             <br />
@@ -274,6 +278,8 @@ function Quizsignup() {
           <br />
         </div>
       </div>
+      <br/>
+      <Footer/>
     </>
   );
 }

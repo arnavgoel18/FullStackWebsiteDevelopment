@@ -5,10 +5,21 @@
   flex-direction: row;
   justify-content: space-around;
 }
+.instruction_para
+{
+  /* margin-bottom: 5px; */
+  margin-top: 20px;
+}
+#quiz_registration
+{
+  font-size: 28px;
+  
+  /* border: 2px solid black; */
+}
 #read_content
 {
   /* border: 2px solid black; */
-  margin-right: 30%;
+ width: 312%;
 }
 .payform-form {
   width: 340px;
@@ -23,7 +34,8 @@
 }
 
 .payform-info {
-  width: 275px;
+  width: 302px;
+
   height: max-content;
   border: none;
   border-radius: 20px;
@@ -35,6 +47,7 @@
 .payform-heading{
     text-align: center;
     font-weight: 700;
+    margin-bottom: 20px;
     
 }
 #referal_check
@@ -172,16 +185,41 @@
 }
 
 .payform-checkbox{
-  margin: 0 auto ;
+  /* margin: 0 auto ; */
+  border: 2px solid black;
   display: flex;
   align-items: center;
 }
-@media (min-width:320px) and (max-width:1030px)
+#read-content
+{
+  width: 312px;
+  margin-left: -22px;
+}
+@media (min-width:320px) and (max-width:425px)
+{
+#referal_check {
+  display: flex;
+  flex-direction: row;
+  /* border: 2px solid black; */
+  width: 102%;
+}
+#pay_button {
+  width: 102%;
+}
+
+
+}
+@media (min-width:425px) and (max-width:1030px)
 {
   #pay_button
-{
-  width: 112%;
+  {
+    width: 112%;
+  }
 }
+@media (min-width:320px) and (max-width:1030px)
+{
+
+ 
 #i_button_content
 {
   
@@ -191,6 +229,7 @@
 }
 }
 @media (min-width:320px) and (max-width:720px){
+  
   .payform-container {
     display: flex;
     flex-direction: column-reverse;
