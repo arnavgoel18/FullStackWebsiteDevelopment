@@ -116,7 +116,6 @@
 }
 #nitrox-hide-btn{
       cursor: pointer;
-    /* background-color: rgb(226, 71, 10); */
     border: none;
     font-size: 25px;
     height: 40px;
@@ -125,8 +124,24 @@
     text-align: center;
     margin-top: 10px;
     margin-bottom: 20px;
+    /* transform: translateY(10px); */
     width: 215px;
-}
-#nitrox-hide-btn:hover{
-  font-size: 40px;
-}
+    animation: rotate 1s linear infinite;
+  }
+
+  /* Here we define our animation with the name "rotate" */
+  @keyframes rotate {
+    from {
+      transform: translateY(0px);
+    }
+    
+    to {
+      transform: translateY(20px);
+    }
+  }
+  #viewless-btn{
+    cursor: pointer;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 15px;
+  }

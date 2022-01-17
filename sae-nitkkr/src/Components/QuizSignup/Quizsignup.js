@@ -32,7 +32,7 @@ import {
   const routeChange = async (event) =>{ 
     event.preventDefault();
       const { name, email, phone, college, branch, semester,referal } = userData;
-    if (name && email && phone && college && branch && semester && referal){
+    if (name && email && phone && college && branch && semester ){
       
       if(document.getElementById('agree').checked) {   window.open("");
       document.getElementById('payform-button2').disabled=false;
