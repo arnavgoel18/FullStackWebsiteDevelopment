@@ -64,7 +64,7 @@ function Benifits() {
   return (
     <div className='BenifitsBody'>
       <div className="foto">
-        <div className="benifitheading">Benefits of being an Ambassador for e - Autokriti </div>
+        <div className="benifitheading">Benefits of being an Ambassador</div>
         <img src={`Imgs/${imgNames[slideIndex]}.jpg`}  alt="not found" />
       </div>
       <div className='amb-carousel-arrow'>

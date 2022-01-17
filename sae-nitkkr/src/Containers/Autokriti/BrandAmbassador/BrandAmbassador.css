@@ -120,7 +120,7 @@
   .leftportion-joinus{
     display: block;
     position: relative;
-    top: 30px;
+    top: 5%;
   }
   .rightportion-back{
     display: block;
@@ -156,6 +156,8 @@
   }
   .leftportion-joinus{
     display: block;
+    position: relative;
+    top: 5%;
   }
   .rightportion-back{
     display: block;

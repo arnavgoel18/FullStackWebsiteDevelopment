@@ -39,25 +39,26 @@ function Compo() {
        </div>
        <div className='innnerbox1_1_popup'>
          <ul>
-        <li className='list_popup'> <h3>Quiz Registrations</h3></li>
-        <h5>Guys,what are you waiting for!!!</h5>
-        <br/>
-       
-        <li className='list_popup'> <h3>Become Our Brand Ambassador</h3></li>
-        <h5>Become a part of our project.</h5>
-        <br/>
-        <li className='list_popup'> <h3>Quiz Registrations</h3></li>
-        <h5>Guys,what are you waiting for!!!</h5>
-        <br/>
-        <li className='list_popup'> <h3>Become Our Brand Ambassador</h3></li>
-        <h5>Become a part of our project.</h5>
-        <br/>
-        <li className='list_popup'> <h3>Quiz Registrations</h3></li>
-        <h5>Guys,what are you waiting for!!!</h5>
-        <br/>
-        <li className='list_popup'> <h3>Become Our Brand Ambassador</h3></li>
-        <h5>Become a part of our project.</h5>
-        <br/>
+          <li className='list_popup'> <h3>Quiz Registrations</h3></li>
+          <h5>Guys,what are you waiting for!!!</h5>
+          <br/>
+        
+          <li className='list_popup'> <h3>Become Our Brand Ambassador</h3></li>
+          <h5>Become a part of our project.</h5>
+          <br/>
+
+          {/* <li className='list_popup'> <h3>Quiz Registrations</h3></li>
+          <h5>Guys,what are you waiting for!!!</h5>
+          <br/>
+          <li className='list_popup'> <h3>Become Our Brand Ambassador</h3></li>
+          <h5>Become a part of our project.</h5>
+          <br/>
+          <li className='list_popup'> <h3>Quiz Registrations</h3></li>
+          <h5>Guys,what are you waiting for!!!</h5>
+          <br/>
+          <li className='list_popup'> <h3>Become Our Brand Ambassador</h3></li>
+          <h5>Become a part of our project.</h5>
+          <br/> */}
         </ul>
         </div>
        </Popup>
