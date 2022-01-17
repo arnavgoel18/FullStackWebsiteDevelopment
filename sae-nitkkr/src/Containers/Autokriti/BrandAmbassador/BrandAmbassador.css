@@ -119,6 +119,8 @@
   }
   .leftportion-joinus{
     display: block;
+    position: relative;
+    top: 30px;
   }
   .rightportion-back{
     display: block;
