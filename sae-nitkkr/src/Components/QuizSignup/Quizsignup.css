@@ -19,6 +19,7 @@
 #read_content
 {
   /* border: 2px solid black; */
+  margin-left: -22px;
  width: 312%;
 }
 .payform-form {
@@ -186,15 +187,15 @@
 
 .payform-checkbox{
   /* margin: 0 auto ; */
-  border: 2px solid black;
+  /* border: 2px solid black; */
   display: flex;
   align-items: center;
 }
-#read-content
+/* #read-content
 {
   width: 312px;
   margin-left: -22px;
-}
+} */
 @media (min-width:320px) and (max-width:425px)
 {
 #referal_check {
