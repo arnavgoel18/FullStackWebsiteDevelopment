@@ -30,7 +30,6 @@
 .payform-checkbox
 {
   display: flex;
-
   /* border: 2px solid black; */
 }
 
@@ -287,5 +286,12 @@
     Line-height :18.29px;
     /* margin: 0 20px; */
     font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 720px){
+  .payform-checkbox{
+    position: relative;
+    left: -20px;
   }
 }
