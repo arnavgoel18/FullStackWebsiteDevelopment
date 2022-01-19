@@ -222,8 +222,8 @@
         padding-left: 7px;
         margin-left: 10px;
     }
-    input,
-    textarea {
+    .ContactUs_container input,
+    .ContactUs_container textarea {
         width: 98%;
     }
     .ContactUs_tt {

@@ -314,7 +314,7 @@ function validateForm(docdata) {
     docdata.branch == "" ||
     docdata.phone == "" ||
     docdata.email == "" ||
-    docdata.referalcode == ""
+    docdata.transaction == ""
   ) {
     alert("Please fill up the required fields.");
   } else if (docdata.phone.length != 10) {
