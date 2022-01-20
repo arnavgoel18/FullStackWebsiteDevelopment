@@ -11,8 +11,8 @@ function CheckEvents() {
             Check out our <b className="CheckOurEvents-subheading"> EVENTS </b></h2>
           <div className="CheckOurEvents-events">
             <Session title="Quiz"
-              status="Venue- D2C"
-              date="Date-16th-January-2021"
+              status="Venue: D2C"
+              date="Date: 22-January-2021"
               image={Quiz} />
 
             {/* <Session title="Understanding Transmission"

@@ -31,6 +31,7 @@
     font-weight: 900;
     font-size: 20px;
     line-height: 1.2;
+    text-align: center;
 }
 
 .BenifitsBody p{
@@ -41,10 +42,21 @@
     font-size: 17px;
     padding-left:20px;
     line-height: 1.2;
-    margin-top: 0.2rem
+    margin-top: 0.2rem;
+    text-align: center;
 }
 .BenifitsBody img{
     width:20rem;
+}
+.amb-carousel-arrow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+.amb-arrow{
+    margin: 5px 20px 5px 20px;
+    font-size: 1.5rem;
 }
 
 @media only screen and (max-width:400px){

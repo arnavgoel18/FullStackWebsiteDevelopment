@@ -6,6 +6,8 @@
   box-sizing: border-box;
 }
 .CheckOurEvents-main{
+  width: 90%;
+  margin: 0 auto;
   background-color: rgb(248 249 249);
   box-shadow: 10px 10px 5px -5px gray;
 }

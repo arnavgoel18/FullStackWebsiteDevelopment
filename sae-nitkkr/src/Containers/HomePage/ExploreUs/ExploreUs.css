@@ -4,23 +4,6 @@
   font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
-  /* box-sizing: border-box; */
-  /* height: max-content; */
-}
-.counter-heading{
-  font-size: 30px;
-  font-family: "Montserrat", sans-serif;
-  padding-top:15px;
-  margin-top: 30px;
-  padding-bottom:15px;
-  margin-bottom: 30px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: rgb(39, 38, 38);
-  color:white;
-  font-weight: bold;
-  width:400px;
-  text-align: center;
 }
 .counter-body{
   padding-top:30px;
@@ -63,29 +46,9 @@
   padding-bottom: 1rem;
   color: white;
 }
-
-.counter-icon {
-  width: 40px;
-  height: 40px;
-  align-self: center;
-}
-
-
-
-@media screen and (max-width: 500px) {
- 
-  .counter-heading{
-      font-size: 22px;
-      font-family: "Montserrat", sans-serif;
-      padding-top:15px;
-      padding-bottom:15px;
-      margin-left: auto;
-      margin-right: auto;
-      background-color: rgb(39, 38, 38);
-      color:white;
-      font-weight: bold;
-      width:250px;
-  }
+.counter-counter .fas{
+  color:white;
+  font-size: 40px;
 }
 @media (min-width: 150px) and (max-width: 425px) {
  

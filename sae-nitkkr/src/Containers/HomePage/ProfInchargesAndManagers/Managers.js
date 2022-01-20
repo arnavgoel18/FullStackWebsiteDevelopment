@@ -10,9 +10,9 @@ function Managers(){
                 <p className="ProfInchargesandManagers-Managers-Heading">Team Managers</p>
                 
                 <div className = "ProfInchargesandManagers-persons_container">
-                    <PersonCard name={"Deepak Yadav"} designation={"President"} url={manager1}/>
-                    <PersonCard name={"Ritik "} designation={"Vice-President"} url={manager2}/>
-                    <PersonCard name={"Sarthak Srivastava"} designation={"Secretary"} url={manager3}/>
+                    <PersonCard name={"Deepak Yadav"} designation={"President"} page={"manager"} url={manager1}/>
+                    <PersonCard name={"Ritik "} designation={"Vice-President"} page={"manager"} url={manager2}/>
+                    <PersonCard name={"Sarthak Srivastava"} designation={"Secretary"} page={"manager"} url={manager3}/>
                 </div>
             </div>
         </>

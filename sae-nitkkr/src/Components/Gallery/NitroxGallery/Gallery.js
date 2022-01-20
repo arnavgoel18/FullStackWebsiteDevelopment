@@ -184,7 +184,7 @@ const Gallery = () => {
             );
           })}
         </div>
-       <div  id="nitrox-hide-btn" style={{color:'red'}} onClick={HideNitroxGalley} ><i class="fa fa-angle-down" aria-hidden="true"></i></div>
+       <div  id="nitrox-hide-btn" style={{color:'red'}} onClick={ShowNitroxGalley} ><i class="fa fa-angle-down" aria-hidden="true"></i></div>
         <div className="gallery" id="nitrox-hide">
 
         {data.map((item, index) => {
@@ -217,22 +217,38 @@ const Gallery = () => {
                   style={{ width: "100%" }}
                 />
               </div>
+              
             );
+            
           })}
+        
         </div>
-
       </div>
+      <div  id="viewless-btn" style={{color:'red',display:'none'}} onClick={ViewLess} ><i class="fa fa-angle-up" aria-hidden="true"></i></div>
       </div>
     </>
   );
 };
 export default Gallery;
 
-function HideNitroxGalley() {
+function ShowNitroxGalley() {
   var hidegal = document.getElementById("nitrox-hide");
   var showgal = document.getElementById("nitrox-show");
   hidegal.style.display="block";
   showgal.style.display="none";
-  let removeviewmore = document.getElementById("nitrox-hide-btn");
+  var removeviewmore = document.getElementById("nitrox-hide-btn");
+  var viewless = document.getElementById("viewless-btn");
   removeviewmore.style.display = "none";
+  viewless.style.display = "block";
+}
+
+function ViewLess(){
+  var hidegal = document.getElementById("nitrox-hide");
+  var showgal = document.getElementById("nitrox-show");
+  hidegal.style.display="none";
+  showgal.style.display="block";
+  var viewless = document.getElementById("viewless-btn");
+  var removeviewmore = document.getElementById("nitrox-hide-btn");
+  removeviewmore.style.display = "block";
+  viewless.style.display = "none";
 }

@@ -123,8 +123,25 @@
     text-align: center;
     margin-top: 10px;
     margin-bottom: 20px;
-    width: 215px;
-}
+    animation: rotate 1s linear infinite;
+  }
+
+  /* Here we define our animation with the name "rotate" */
+  @keyframes rotate {
+    from {
+      transform: translateY(0px);
+    }
+    
+    to {
+      transform: translateY(20px);
+    }
+  }
 #autokriti-hide-btn:hover{
   font-size: 40px;
+}
+#viewless-btn{
+  cursor: pointer;
+  text-align: center;
+  margin: auto;
+  padding-bottom: 15px;
 }

@@ -260,6 +260,8 @@ const Gallery = () => {
         </div>
 
       </div>
+      <div  id="viewless-btn" style={{color:'red',display:'none'}} onClick={ViewLess} ><i class="fa fa-angle-up" aria-hidden="true"></i></div>
+
       </div>
     </>
   );
@@ -272,5 +274,17 @@ function HideAcceleronsGalley() {
   hidegal.style.display="block";
   showgal.style.display="none";
   let removeviewmore = document.getElementById("accelerons-hide-btn");
+  var viewless = document.getElementById("viewless-btn")
   removeviewmore.style.display = "none";
+  viewless.style.display = "block";
+}
+function ViewLess(){
+  var hidegal = document.getElementById("accelerons-hide");
+  var showgal = document.getElementById("accelerons-show");
+  hidegal.style.display="none";
+  showgal.style.display="block";
+  var viewless = document.getElementById("viewless-btn");
+  var removeviewmore = document.getElementById("accelerons-hide-btn");
+  removeviewmore.style.display = "block";
+  viewless.style.display = "none";
 }
