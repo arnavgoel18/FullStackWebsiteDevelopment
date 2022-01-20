@@ -17,7 +17,11 @@ import {
   snapshot,
 } from "firebase/firestore";
 
+
+
+
 function Add() {
+
   const params = new URL(document.location).searchParams;
   const timestamp = params.get("timestamp");
 
