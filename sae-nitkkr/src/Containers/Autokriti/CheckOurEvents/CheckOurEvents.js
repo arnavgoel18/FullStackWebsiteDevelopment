@@ -49,12 +49,14 @@ function Session(props) {
           </p>
 
           {/* <div className="CheckOurEvents-register"></div> */}
-          <a className="CheckOurEvents-register">
+          <a className="CheckOurEvents-register"
+          href="https://dare2compete.com/p/quiz-on-wheelsautomotive-quiz-national-institute-of-technology-nit-kurukshetra-256604?lb=rt7C3ad/"
+          target="_blank">
             <button
               id="event-register"
 
             >
-              UPCOMING
+              Register Now
 
             </button>
           </a>
