@@ -12,7 +12,7 @@ function CheckEvents() {
           <div className="CheckOurEvents-events">
             <Session title="Quiz"
               status="Venue: D2C"
-              date="Date: 22-January-2021"
+              date="Date: 29-January-2021"
               image={Quiz} />
 
             {/* <Session title="Understanding Transmission"
@@ -49,12 +49,14 @@ function Session(props) {
           </p>
 
           {/* <div className="CheckOurEvents-register"></div> */}
-          <a className="CheckOurEvents-register">
+          <a className="CheckOurEvents-register"
+          href="https://dare2compete.com/p/quiz-on-wheelsautomotive-quiz-national-institute-of-technology-nit-kurukshetra-256604?lb=rt7C3ad/"
+          target="_blank">
             <button
               id="event-register"
 
             >
-              UPCOMING
+              Register Now
 
             </button>
           </a>
