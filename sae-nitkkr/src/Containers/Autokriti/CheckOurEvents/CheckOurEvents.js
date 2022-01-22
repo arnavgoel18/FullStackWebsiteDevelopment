@@ -12,7 +12,7 @@ function CheckEvents() {
           <div className="CheckOurEvents-events">
             <Session title="Quiz"
               status="Venue: D2C"
-              date="Date: 22-January-2021"
+              date="Date: 29-January-2021"
               image={Quiz} />
 
             {/* <Session title="Understanding Transmission"
