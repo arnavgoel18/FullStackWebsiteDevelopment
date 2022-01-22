@@ -49,7 +49,7 @@ const firebaseConfig = {
 //   appId: "1:637915670174:web:66c2cac789acfd3a81fd8f"
 //  }
 
-// const terAppConfig = {
+const terAppConfig = {
   apiKey: "AIzaSyAfJTGsx3HsGeJlkIeSTf_VsrlgEw2pfrY",
    authDomain: "sae-website-127b1.firebaseapp.com",
    projectId: "sae-website-127b1",
