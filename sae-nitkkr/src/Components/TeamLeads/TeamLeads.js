@@ -30,7 +30,7 @@ function TeamLeads(props) {
             </div>
 
             <div>
-              <a href="">{" "}
+              <a href="mailto:udittripathi05946@gmail.com">{" "}
               <FaEnvelope className="team-icons" /> </a>
               <Link to="https://www.linkedin.com/in/udit-tripathi-265104174"> <FaLinkedin className="team-icons" />{" "}
               </Link>
@@ -50,7 +50,7 @@ function TeamLeads(props) {
             </div>
 
             <div>
-              <a href="">{" "}
+              <a href="mailto:ritikyadav542000@gmail.com">{" "}
               <FaEnvelope className="team-icons" /> </a>
               <Link to="https://www.linkedin.com/in/ritik-yadav6097"> <FaLinkedin className="team-icons" />{" "}
               </Link>
@@ -80,7 +80,7 @@ function TeamLeads(props) {
             </div>
 
             <div>
-              <a href="">{" "}
+              <a href="mailto:aakashbisht098@gmail.com">{" "}
               <FaEnvelope className="team-icons" /> </a>
               <Link to="https://www.linkedin.com/in/aakash-singh-bisht-aaa3b0176"> <FaLinkedin className="team-icons" />{" "}
               </Link>
