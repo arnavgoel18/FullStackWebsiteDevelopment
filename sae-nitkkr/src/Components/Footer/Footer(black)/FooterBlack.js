@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./FooterBlack.css";
+import Coming from '../../../Assets/Coming Soon/Coming.png'
 function Footer() {
   return (
     <div id="black_footer">
@@ -179,12 +180,14 @@ function Footer() {
           </h1>
         </div>
         <hr id="black_line_for_fourth" />
+        
         <div
           id="black_newsletter_content"
           className="black_each_footer_content"
-        >
-          <br />
-          <input
+         >
+         
+          <img id="coming_soon"src={Coming}/>
+          {/* <input
             id="black_getting_mail"
             type="text"
             placeholder="Enter your email..."
@@ -200,7 +203,7 @@ function Footer() {
           />
           <span id="black_checkbox_disclaimer">
             Yes,I'd like to hear about updates on my mail
-          </span>
+          </span> */}
         </div>
       </div>
     </div>
