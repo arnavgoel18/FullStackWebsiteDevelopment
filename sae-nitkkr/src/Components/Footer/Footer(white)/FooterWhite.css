@@ -42,7 +42,28 @@
 {
     width:350px;
 } */
-
+#coming_soon
+{
+    margin-top: -15px;
+  height: 100%;
+  animation: updown 2s ease infinite ;
+  width: 100%;
+}
+@keyframes updown {
+    0% {
+        transform: translateY(-5%);
+      }
+    
+      50% {
+        transform: translateY(5%);
+      }
+    
+      100% {
+        transform: translateY(-5%);
+      }
+    
+    
+}
 #white_line_for_first{
    position: relative;
    left: -40px;

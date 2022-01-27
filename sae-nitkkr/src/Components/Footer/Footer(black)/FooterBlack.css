@@ -23,7 +23,29 @@
 }
 
 
-
+#coming_soon
+{
+    margin-top: -15px;
+  height: 100%;
+  width: 100%;
+  animation: updown 2s ease infinite ;
+  
+}
+@keyframes updown {
+    0% {
+        transform: translateY(-5%);
+      }
+    
+      50% {
+        transform: translateY(5%);
+      }
+    
+      100% {
+        transform: translateY(-5%);
+      }
+    
+    
+}
 .black_things_to_explore
 {
     color: #fff;
