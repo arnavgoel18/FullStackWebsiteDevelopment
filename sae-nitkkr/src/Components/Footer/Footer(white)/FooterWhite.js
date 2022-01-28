@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import "./FooterWhite.css";
-
+import Coming from '../../../Assets/Coming Soon/Coming.png'
 function Footerautokriti() {
   return (
     <div id="white_footer">
@@ -132,8 +132,11 @@ function Footerautokriti() {
         </h1>
       </div>
       <hr id="white_line_for_fourth" />
+      
+    
       <div id="white_newsletter_content" className="white_each_footer_content">
-        <br />
+      <img id="coming_soon"src={Coming}/>
+        {/* <br />
         <input
           id="white_getting_mail"
           type="text"
@@ -145,7 +148,7 @@ function Footerautokriti() {
         <input type="checkbox" id="white_select" name="select" value="got_it" />
         <span id="white_checkbox_disclaimer">
           Yes,I'd like to hear about updates on my mail
-        </span>
+        </span> */}
       </div>
     </div>
   </div>

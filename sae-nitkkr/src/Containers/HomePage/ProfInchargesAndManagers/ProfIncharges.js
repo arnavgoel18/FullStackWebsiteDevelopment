@@ -13,7 +13,7 @@ function ProfIncharges() {
                 <p className="ProfInchargesandManagers-heading">Professor Incharges</p>
 
                 <div className="ProfInchargesandManagers-persons_container">
-                    <PersonCard name={"Dr. Vinod Mittal"} designation={"Professor"} page = {"professor incharge"} url={prof1}/ >
+                    <PersonCard name={"Dr. Vinod Mittal"} designation={"Professor"} page = {"professor incharge"} url={prof1}/>
                     <PersonCard name={"Dr. Jaideep Gupta"} designation={"Professor"} page = {"professor incharge"} url={prof2}/>
                     <PersonCard name={"Dr. Surjeet Angra"} designation={"Professor"} page = {"professor incharge"} url={prof3}/>
                 </div>

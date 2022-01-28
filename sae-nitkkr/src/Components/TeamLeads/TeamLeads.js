@@ -1,46 +1,163 @@
-import React, { Component } from 'react'
-import PersonCard from '../../Containers/HomePage/ProfInchargesAndManagers/PersonCard'
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import { FaEnvelope, FaLinkedin } from "react-icons/fa";
 
 /* Import Images */
-import nitroxCap from '../../Assets/ProfIncharges/nitroxCap.png'
-import nitroxVicecap from '../../Assets/ProfIncharges/VicePres.jpg'
-import acceleronsCap from '../../Assets/ProfIncharges/acceleronsCap.png'
-import acceleronsVicecap from '../../Assets/ProfIncharges/acceleronsViceCap.png'
+import nitroxCap from "../../Assets/ProfIncharges/nitroxCap.png";
+import nitroxVicecap from "../../Assets/ProfIncharges/VicePres.jpg";
+import acceleronsCap from "../../Assets/ProfIncharges/acceleronsCap.png";
+import acceleronsVicecap from "../../Assets/ProfIncharges/acceleronsViceCap.png";
+import "./TeamLeads.css";
 
-import './TeamLeads.css'
-
-function TeamLeads(props){
-    if(props.page == "Nitrox"){
-        return(
-            <>
-                {/*Professor Incharges*/}
-                <div className = "TeamLeads-profIncharge_container">
-                    <p className="TeamLeads-heading">Team Leads</p>
-                    
-                    <div className = "TeamLeads-persons_container">
-                        <PersonCard name={"Udit Tripathi"} designation={"Team Captain"} url={nitroxCap}/>
-                        <PersonCard name={"Ritik Yadav"} designation={"Team Vice Captain"} url={nitroxVicecap}/>
-                    </div>
+function TeamLeads(props) {
+  if (props.page == "Nitrox") {
+    return (
+      <>
+        <div class="area">
+          <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <div className="TeamLeads_div">
+            <div className="teamLeadHeading">Our Team Lead</div>
+            <div className="teamFlexBox">
+              <div className="teamMemberCard">
+                <div>
+                  <img
+                    src={nitroxCap}
+                    alt="Team Member Image"
+                    className="teamMemberPic"
+                  />
+                  <div className="teamDetail">
+                    <div className="teamMemberName">Udit Tripathi</div>
+                    <div className="teamMemberPosition">Team Captain</div>
+                  </div>
                 </div>
-            </>
-        )
-    }
-    else if(props.page == "Accelerons"){
-        return(
-            <>
-                {/*Professor Incharges*/}
-                <div className = "TeamLeads-profIncharge_container">
-                    <p className="TeamLeads-heading">Team Leads</p>
-                    
-                    <div className = "TeamLeads-persons_container">
-                        <PersonCard name={"Aakash Singh Bisht"} designation={"Team Captain"} url={acceleronsCap}/>
-                        <PersonCard name={"Amit Rawat"} designation={"Team Vice Captain"} url={acceleronsVicecap}/>
-                    </div>
-                </div>
-            </>
-        )
-    }
 
+                <div>
+                  <a href="mailto:udittripathi05946@gmail.com">
+                    {" "}
+                    <FaEnvelope className="team-icons" />{" "}
+                  </a>
+                  <Link to="https://www.linkedin.com/in/udit-tripathi-265104174">
+                    {" "}
+                    <FaLinkedin className="team-icons" />{" "}
+                  </Link>
+                </div>
+              </div>
+              <div className="teamMemberCard">
+                <div>
+                  <img
+                    src={nitroxVicecap}
+                    alt="Team Member Image"
+                    className="teamMemberPic"
+                  />
+                  <div className="teamDetail">
+                    <div className="teamMemberName">Ritik Yadav</div>
+                    <div className="teamMemberPosition">Team Vice Captain</div>
+                  </div>
+                </div>
+
+                <div>
+                  <a href="mailto:ritikyadav542000@gmail.com">
+                    {" "}
+                    <FaEnvelope className="team-icons" />{" "}
+                  </a>
+                  <Link to="https://www.linkedin.com/in/ritik-yadav6097">
+                    {" "}
+                    <FaLinkedin className="team-icons" />{" "}
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </>
+    );
+  } else if (props.page == "Accelerons") {
+    return (
+      <>
+        <div class="area">
+          <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+
+          <div className="TeamLeads_div">
+            <div className="teamLeadHeading">Our Team Lead</div>
+            <div className="teamFlexBox">
+              <div className="teamMemberCard">
+                <div>
+                  <img
+                    src={acceleronsCap}
+                    alt="Team Member Image"
+                    className="teamMemberPic"
+                  />
+                  <div className="teamDetail">
+                    <div className="teamMemberName">Aakash Singh Bisht</div>
+                    <div className="teamMemberPosition">Team Captain</div>
+                  </div>
+                </div>
+
+                <div>
+                  <a href="mailto:aakashbisht098@gmail.com">
+                    {" "}
+                    <FaEnvelope className="team-icons" />{" "}
+                  </a>
+                  <Link to="https://www.linkedin.com/in/aakash-singh-bisht-aaa3b0176">
+                    {" "}
+                    <FaLinkedin className="team-icons" />{" "}
+                  </Link>
+                </div>
+              </div>
+              <div className="teamMemberCard">
+                <div>
+                  <img
+                    src={acceleronsVicecap}
+                    alt="Team Member Image"
+                    className="teamMemberPic"
+                  />
+                  <div className="teamDetail">
+                    <div className="teamMemberName">Amit Rawat</div>
+                    <div className="teamMemberPosition">Team Vice Captain</div>
+                  </div>
+                </div>
+
+                <div>
+                  <a href="mailto:amitsrawat2000@gmail.com">
+                    {" "}
+                    <FaEnvelope className="team-icons" />{" "}
+                  </a>
+                  <Link to="https://www.linkedin.com/in/amit-rawat-a628b01a1">
+                    {" "}
+                    <FaLinkedin className="team-icons" />{" "}
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </>
+    );
+  }
 }
 
-export default TeamLeads
+export default TeamLeads;
