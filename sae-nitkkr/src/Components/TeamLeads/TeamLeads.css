@@ -1,33 +1,138 @@
+.area{
+    background:#505050;   
+    color: white;
+    text-align: center;
+    width: 70%;
+    height: 320px;
+    margin: auto;  
+}
+.circles{
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    overflow: hidden;
+    text-align: center;
+}
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    
+}
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+.circles li:nth-child(2){
+    left: 10%;
+    width: 100px;
+    height: 100px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 4s;
+}
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+.circles li:nth-child(6){
+    left: 10%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 100px;
+    height: 100px;
+    animation-delay: 7s;
+}
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 30s;
+}
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 15s;
+}
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+.circles li:nth-child(11){
+    left: 85%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 4s;
+    animation-duration: 11s;
+}
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
+
+/* apna code */
 .TeamLeads_div{
-    background-image: url("../../Assets/bg-gif.gif");
     color: white;
     text-align: center;
     width: 70%;
     height: fit-content;
-    padding-bottom: 1.3rem;
     margin: auto;
-    padding-top: 1rem;  
+    padding-top: 1rem; 
+    position: absolute; 
+    text-align: center; 
 }
 .teamLeadHeading{
     overflow: hidden; 
     font-size: 3rem;
     font-family: " monospace";
-    border-right: .15em solid white;
-    white-space: nowrap; 
     margin: 0 auto; 
     padding-bottom: 25px;
     letter-spacing: .05em;
-    animation: 
-        typing 3.5s steps(40, end) infinite,
-        blink-caret .2s step-end infinite;
-}
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-}
-
-@keyframes blink-caret {
-    from, to { border-color: transparent}
 }
 .teamFlexBox{
     display: flex;
@@ -46,6 +151,7 @@
     height: 10rem;
     border-radius: 50%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: ease-in-out 0.5s;
 }
 .teamDetail{
     visibility: hidden;
@@ -57,10 +163,11 @@
     width: 9rem;
     text-align: center;
     font-size: 1rem;
+    transition: ease-in-out 0.3s;
 }
 .teamMemberName{
     font-weight: bold;
-    font-size: 1.2rem;
+    padding-bottom: 5px;
 }
 .team-icons{
     visibility: hidden;
@@ -69,6 +176,7 @@
     text-decoration: none;
     cursor: pointer;
     margin: 10px 10px;
+    transition: ease-in-out 0.3s;
 }
 .teamMemberCard:hover .teamDetail{
     visibility: visible;
@@ -79,19 +187,23 @@
 .teamMemberCard:hover .teamMemberPic{
     filter: brightness(50%);
     transform: scale(1.1);
+    transition: ease-in-out 0.5s;
 }
-/* a:-webkit-any-link{
-    text-decoration: none;
-} */
 
 @media only screen and (max-width: 1024px) {
-    .TeamLeads_div{
+    .TeamLeads_div {
+        width: 100%;
+    }
+    .area{
         width: 100%;
     }
 }
-@media only screen and (max-width: 412px) {
+@media only screen and (max-width: 447px) {
     .teamLeadHeading{
         font-size: 40px;
-        padding: 0 30px 15px 30px;
+        padding: 10px 5px 20px 5px;
+    }
+    .area{
+        height: 560px;
     }
 }
