@@ -2,7 +2,7 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  // //SAE (DO NOT USE THIS FOR TESTING - ONLY DEPLOYEMENT)
+  //SAE (DO NOT USE THIS FOR TESTING - ONLY DEPLOYEMENT)
   // apiKey: "AIzaSyAw99i_BGoXy4tM-tyM-zpFRXH6uZhHD0U",
   // authDomain: "autokriti-ambassadors-2022.firebaseapp.com",
   // projectId: "autokriti-ambassadors-2022",
@@ -39,7 +39,7 @@ const firebaseConfig = {
 };
 
 
-//SECOND DATABASE ONLY FOR BLOGS
+//SECOND DATABASE ONLY FOR BLOGS (DEPLOYMENT)
 //  const secondaryAppConfig = {
 //   apiKey: "AIzaSyCk_GyQ6-ytYYfv6Hvt9SXtC51z8AM6000",
 //   authDomain: "sae-blogs.firebaseapp.com",
@@ -49,6 +49,7 @@ const firebaseConfig = {
 //   appId: "1:637915670174:web:66c2cac789acfd3a81fd8f"
 //  }
 
+//TESTER
 const secondaryAppConfig = {
   apiKey: "AIzaSyAfJTGsx3HsGeJlkIeSTf_VsrlgEw2pfrY",
    authDomain: "sae-website-127b1.firebaseapp.com",
