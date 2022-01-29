@@ -2,6 +2,7 @@ import "./CheckOurEvents.css";
 import React, { useState } from 'react';
 import Quiz from "../../../Assets/CheckOurEvents/quiz.jpg";
 import Autokriti2 from '../../../Assets/CheckOurEvents/Autokriti2.png';
+import DesignEvent from '../../../Assets/CheckOurEvents/DesignEvent.png';
 
 function CheckEvents() {
   return (
@@ -19,6 +20,10 @@ function CheckEvents() {
               status="Venue: TBC"
               date="Date: Coming Soon"
               image={Autokriti2}/>
+              <Session title="Design Event"
+              status="Venue: Online"
+              date="1 Week to Go"
+              image={DesignEvent}/>
 
             {/* <Session title="Understanding Transmission"
           status="online"
