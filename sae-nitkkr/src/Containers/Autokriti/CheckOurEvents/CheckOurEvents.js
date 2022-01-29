@@ -1,6 +1,7 @@
 import "./CheckOurEvents.css";
 import React, { useState } from 'react';
 import Quiz from "../../../Assets/CheckOurEvents/quiz.jpg";
+import Autokriti2 from '../../../Assets/CheckOurEvents/Autokriti2.png';
 
 function CheckEvents() {
   return (
@@ -14,10 +15,10 @@ function CheckEvents() {
               status="Venue: D2C"
               date="Date: 29-January-2022"
               image={Quiz} />
-              {/* <Session title="Vehicle Design Competition"
-              status=""
-              date="Date: 7-Febuary-2022"
-              image={DesignEvent}/> */}
+              <Session title="Autokriti 2.0"
+              status="Venue: TBC"
+              date="Date: Coming Soon"
+              image={Autokriti2}/>
 
             {/* <Session title="Understanding Transmission"
           status="online"
