@@ -10,6 +10,7 @@
   margin: 0 auto;
   background-color: rgb(248 249 249);
   box-shadow: 10px 10px 5px -5px gray;
+
 }
 #event-register
 {
@@ -27,11 +28,14 @@
 }
 
 .CheckOurEvents-main_container{
-  width: 70%;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
   padding-top:40px;
   padding-bottom:40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .CheckOurEvents-card {
@@ -42,6 +46,7 @@
   transition: 0.3s;
   border-radius: 15px;
   background-color: white;
+  margin: 5px;
 }
 .CheckOurEvents-image {
   width: 100%;
@@ -89,7 +94,7 @@
 .CheckOurEvents-events {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 .CheckOurEvents-register{
   margin-top: 17px;
@@ -139,6 +144,7 @@
   .CheckOurEvents-card {
     width:230px;
     height:320px;
+    margin-bottom: 25px;
   }
   .CheckOurEvents-image {
     height:140px;
@@ -153,9 +159,18 @@
   .CheckOurEvents-subheading{
     font-size: 30px;
   }
+  .CheckOurEvents-events {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: 
+    center;
+  }
 }
 @media (min-width:769px) and (max-width:1024px){
   .CheckOurEvents-main_container{
       width:95%;
+      display: flex;
+  justify-content: space-evenly;
     }
 }
