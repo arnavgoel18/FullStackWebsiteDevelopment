@@ -94,7 +94,7 @@ function Quizsignup() {
     <>
     <NavBar/>
     <br/>
-      <p className="payform-heading">REGISTERATION FORM</p>
+      <p className="payform-heading">REGISTRATION FORM</p>
       <div className="payform-container">
         <div method="POST" className="payform-form">
           <div className="field">
