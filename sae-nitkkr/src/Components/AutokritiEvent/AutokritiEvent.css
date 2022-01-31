@@ -1,0 +1,250 @@
+.AutokritiEvent {
+  background-color: rgb(12, 124, 89);
+  background-image: linear-gradient(
+    90deg,
+    rgba(12, 124, 89, 1) 0%,
+    rgba(25, 140, 129, 1) 5%,
+    rgba(25, 140, 129, 1) 14%,
+    rgba(33, 121, 134, 1) 23%,
+    rgba(47, 120, 142, 1) 33%,
+    rgba(43, 109, 140, 1) 44%,
+    rgba(49, 108, 141, 1) 53%,
+    rgba(54, 107, 142, 1) 62%,
+    rgba(57, 68, 118, 1) 78%,
+    rgba(73, 73, 135, 1) 89%,
+    rgba(76, 68, 139, 1) 97%,
+    rgba(80, 62, 139, 1) 100%
+  );
+  height: 500px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.AutoKritiEvent-text1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: "Raleway";
+  font-size: 2.5rem;
+  /* padding-top: 6%;
+    padding-left: 35%; */
+  height: max-content;
+  width: max-content;
+
+  /* border: 1px solid white; */
+}
+
+.AutoKritiEvent-text2 {
+  /* display: block; */
+  color: white;
+  font-size: 60px;
+  font-weight: 1000;
+  letter-spacing: 9px;
+  /*  Animation decalaration   */
+  animation-name: moveInleft;
+  animation-duration: 2s;
+}
+
+.AutoKritiEvent-text3 {
+  /* display: block; */
+  color: white;
+  font-size: 60px;
+  font-weight: 1000;
+  letter-spacing: 9px;
+
+  animation-name: moveInRight;
+  animation-duration: 2s;
+}
+
+@keyframes moveInleft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  80% {
+    transform: translateX(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(10px);
+  }
+}
+
+.AutokritiEvent-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.AutokritiEvent-button1 {
+  height: 50px;
+  background-color: #ee9106;
+  font-weight: 700;
+  /* border-radius: 5px; */
+
+  border: none;
+  color: white;
+  font-size: 18px;
+  padding-left: 10px;
+  font-family: "Montserrat", sans-serif;
+  padding-right: 10px;
+  margin-bottom: 20px;
+  width: 260px;
+  transition: all .2s ease-in-out;
+  margin-right: 8px;
+}
+
+.AutokritiEvent-button2 {
+  height: 50px;
+  background-color: none;
+  font-weight: 700;
+  /* border-radius: 5px; */
+
+  border: none;
+  /* color: white; */
+  font-size: 18px;
+  padding-left: 10px;
+  font-family: "Montserrat", sans-serif;
+  padding-right: 10px;
+  margin-bottom: 20px;
+  width: 260px;
+  transition: all .2s ease-in-out;
+
+}
+
+.AutokritiEvent-button1:hover,.AutokritiEvent-button2:hover{
+    transform: scale(1.1);
+}
+
+
+
+@media (min-width:540px) and (max-width:768px){
+
+    .AutoKritiEvent-text2 {
+        /* display: block; */
+        color: white;
+        font-size: 40px;
+        font-weight: 1000;
+        letter-spacing: 9px;
+        /*  Animation decalaration   */
+        animation-name: moveInleft;
+        animation-duration: 2s;
+      }
+      
+      .AutoKritiEvent-text3 {
+        /* display: block; */
+        color: white;
+        font-size: 40px;
+        font-weight: 1000;
+        letter-spacing: 9px;
+      
+        animation-name: moveInRight;
+        animation-duration: 2s;
+      }
+
+}
+
+
+@media (min-width:375px) and (max-width:540px){
+    .AutokritiEvent {
+       
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+      }
+
+    .AutoKritiEvent-text2 {
+        /* display: block; */
+        color: white;
+        font-size: 30px;
+        font-weight: 900;
+        letter-spacing: 9px;
+        /*  Animation decalaration   */
+        animation-name: moveInleft;
+        animation-duration: 3s;
+      }
+      
+      .AutoKritiEvent-text3 {
+        /* display: block; */
+        color: white;
+        font-size: 30px;
+        font-weight: 900;
+        letter-spacing: 9px;
+      
+        animation-name: moveInRight;
+        animation-duration: 3s;
+      }
+
+      .AutokritiEvent-button {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+}
+
+
+@media (min-width:320px) and (max-width:375px){
+    .AutokritiEvent {
+       
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+      }
+
+    .AutoKritiEvent-text2 {
+        /* display: block; */
+        color: white;
+        font-size: 25px;
+        font-weight: 900;
+        /* letter-spacing: 9px; */
+        /*  Animation decalaration   */
+        animation-name: moveInleft;
+        animation-duration: 3s;
+      }
+      
+      .AutoKritiEvent-text3 {
+        /* display: block; */
+        color: white;
+        font-size: 25px;
+        font-weight: 900;
+        /* letter-spacing: 9px; */
+      
+        animation-name: moveInRight;
+        animation-duration: 3s;
+      }
+
+      .AutokritiEvent-button {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+}
