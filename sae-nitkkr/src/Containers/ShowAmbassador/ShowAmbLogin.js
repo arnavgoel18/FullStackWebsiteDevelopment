@@ -38,7 +38,7 @@ function Login() {
 
   function checkCredentials(e){
   
-    if(ambInfoName.includes(userid) && ambInfoReferalCode.includes(password)){
+    if(ambInfoReferalCode.includes(userid) && ambInfoName.includes(password)){
       localStorage.setItem("token","shivaji");
        e.preventDefault();
        setloggedin(true);     

@@ -15,7 +15,7 @@ import {
 
 export default function ShowAmbassador() {
   const params = new URL(document.location).searchParams;
-  const password = params.get("password");
+  const password = params.get("username");
 
   var [tester, setTester] = useState(true);
 
@@ -34,7 +34,22 @@ export default function ShowAmbassador() {
     const stuInfo_doc = await getDocs(stuInfo);
     stuData = stuInfo_doc.docs.map((doc) => doc.data());
     setStuData(stuData);
-    // console.log(stuData, typeof(stuData));
+  }
+
+  var temp = {}
+  autData.map((value,i)=>{
+    if(isNaN(temp[value.referalcode])) temp[value.referalcode] = 0;
+    temp[value.referalcode]++;
+  })
+
+  var highLen = (temp.length > stuData.length)? temp.length : stuData.length;
+
+  for(var i=0; i<highLen; i++){
+     stuData[i].numberReferrals = temp[stuData[i].referralCode];
+     if(temp[stuData[i].referralCode] == undefined)
+     {
+       stuData[i].numberReferrals = 0;
+     }
   }
 
   stuData.sort((a, b) => b.numberReferrals - a.numberReferrals);
@@ -68,7 +83,7 @@ export default function ShowAmbassador() {
               stuData.map((studata, i)=>{
                 if(studata.referralCode == password){
                   return(
-                    <span>
+                    <span key={i}>
                     {studata.studentName}
                     </span>
                   );
