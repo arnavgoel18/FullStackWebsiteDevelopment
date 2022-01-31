@@ -51,7 +51,7 @@ function Quizsignup() {
         return true;
       } else {
         alert(
-          "Please tick on agree to the Terms and Conditions and Privacy Policy"
+          "Please tick the checkbox under instructions to proceed"
         );
         return false;
       }
