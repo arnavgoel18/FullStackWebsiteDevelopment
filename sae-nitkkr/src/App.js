@@ -26,6 +26,7 @@ import QuillEditor from "./Containers/Backend/DisplayBlogs/QuillEditor/Add"
 import RegistrationForm from "./Containers/Autokriti/RegistrationForm/RegistrationForm";
 import Quizsignup from "./Components/QuizSignup/Quizsignup";
 import ShowAmbassador from "./Containers/ShowAmbassador/ShowAmbassador";
+import ShowAmbLogin from "./Containers/ShowAmbassador/ShowAmbLogin"; 
 
 //import RegistrationForm from "./Containers/Autokriti/RegistrationForm/RegistrationForm";
 
@@ -58,7 +59,8 @@ function App() {
           <Route path="/admin/displayBlogs/editor" exact component={() => <QuillEditor/>}/>
           <Route path="/registrationForm" exact component={()=><RegistrationForm/>}/>
           <Route path="/autokriti/register" exact component={() => <Quizsignup/>}/>
-          <Route path="/showAmbassador" exact component={()=><ShowAmbassador/>}/>
+          <Route path="/ShowAmbassador" exact component={()=><ShowAmbassador/>}/>
+          <Route path="/Ambassador/login" exact component={()=><ShowAmbLogin/>}/>
         </Switch>
       </Router>
     </>
