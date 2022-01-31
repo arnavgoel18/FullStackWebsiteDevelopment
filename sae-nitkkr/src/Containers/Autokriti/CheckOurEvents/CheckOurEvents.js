@@ -20,11 +20,13 @@ function CheckEvents() {
               <Session title="Autokriti 2.0"
               status="Venue: TBC"
               date="Date: Coming Soon"
-              image={Autokriti2}/>
+              image={Autokriti2}
+              url=""/>
               <Session title="Design Event"
               status="Venue: Online"
               date="1 Week to Go"
-              image={DesignEvent}/>
+              image={DesignEvent}
+              url=""/>
 
             {/* <Session title="Understanding Transmission"
           status="online"
