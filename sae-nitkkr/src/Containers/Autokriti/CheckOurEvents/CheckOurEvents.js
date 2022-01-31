@@ -15,7 +15,8 @@ function CheckEvents() {
             <Session title="Quiz"
               status="Venue: D2C"
               date="Date: 29-January-2022"
-              image={Quiz} />
+              image={Quiz} 
+              url="https://dare2compete.com/p/quiz-on-wheelsautomotive-quiz-national-institute-of-technology-nit-kurukshetra-256604?lb=rt7C3ad/"/>
               <Session title="Autokriti 2.0"
               status="Venue: TBC"
               date="Date: Coming Soon"
@@ -60,7 +61,7 @@ function Session(props) {
 
           {/* <div className="CheckOurEvents-register"></div> */}
           <a className="CheckOurEvents-register"
-          href="https://dare2compete.com/p/quiz-on-wheelsautomotive-quiz-national-institute-of-technology-nit-kurukshetra-256604?lb=rt7C3ad/"
+          href={props.url}
           target="_blank">
             <button
               id="event-register"
