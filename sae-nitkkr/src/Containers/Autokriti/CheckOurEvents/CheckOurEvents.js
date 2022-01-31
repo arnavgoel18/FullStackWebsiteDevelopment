@@ -17,14 +17,15 @@ function CheckEvents() {
               date="Date: 29-January-2022"
               image={Quiz} 
               url="https://dare2compete.com/p/quiz-on-wheelsautomotive-quiz-national-institute-of-technology-nit-kurukshetra-256604?lb=rt7C3ad/"/>
-              <Session title="Autokriti 2.0"
+              {/* <Session title="Autokriti 2.0"
               status="Venue: TBC"
               date="Date: Coming Soon"
-              image={Autokriti2}/>
+              image={Autokriti2}/> */}
               <Session title="Design Event"
               status="Venue: Online"
               date="1 Week to Go"
-              image={DesignEvent}/>
+              image={DesignEvent}
+              url="https://www.saenitkurukshetra.in/autokriti/register"/>
 
             {/* <Session title="Understanding Transmission"
           status="online"

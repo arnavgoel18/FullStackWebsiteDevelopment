@@ -94,7 +94,7 @@
 .CheckOurEvents-events {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 .CheckOurEvents-register{
   margin-top: 17px;
