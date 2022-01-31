@@ -3,7 +3,6 @@ import { Redirect } from 'react-router-dom';
 import "../Backend/Login.css";
 import man_sitting from '../../Assets/LoginPageLogos/man_sitting.jpg'
 import db from "../../Firebase";
-import { getStorage, ref, deleteObject } from "firebase/storage";
 import {
   collection,
   getDocs,
