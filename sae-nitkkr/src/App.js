@@ -57,7 +57,7 @@ function App() {
 
           <Route path="/admin/displayBlogs" exact component={() => <DisplayBlogs/>}/>
           <Route path="/admin/displayBlogs/editor" exact component={() => <QuillEditor/>}/>
-          <Route path="/RegistrationForm" exact component={()=><RegistrationForm/>}/>
+          <Route path="/registrationForm" exact component={()=><RegistrationForm/>}/>
           <Route path="/autokriti/register" exact component={() => <Quizsignup/>}/>
           <Route path="/ShowAmbassador" exact component={()=><ShowAmbassador/>}/>
           <Route path="/Ambassador/login" exact component={()=><ShowAmbLogin/>}/>
