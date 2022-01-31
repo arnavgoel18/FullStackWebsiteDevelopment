@@ -20,7 +20,7 @@ function Login() {
     async function getAmbInfo() {
         const ambInfo = collection(db, "finalStudentAmbassador");
         const ambInfo_doc = await getDocs(ambInfo);
-        ambInfoName = ambInfo_doc.docs.map((doc) => doc.data().studentName);
+        ambInfoName = ambInfo_doc.docs.map((doc) => doc.data().phone);
         ambInfoReferalCode = ambInfo_doc.docs.map((doc) => doc.data().referralCode);
         setAmbInfoName(ambInfoName);
         setAmbInfoReferalCode(ambInfoReferalCode);
