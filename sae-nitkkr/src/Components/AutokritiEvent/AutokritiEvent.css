@@ -23,6 +23,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 20px;
+  margin-bottom: 1.5em;
 }
 
 .AutoKritiEvent-text1 {
@@ -31,21 +32,30 @@
   justify-content: center;
   color: white;
   font-family: "Raleway";
-  font-size: 2.5rem;
-  /* padding-top: 6%;
-    padding-left: 35%; */
+  font-size: 1.5rem;
+  padding: 10px 25px;
   height: max-content;
   width: max-content;
-
-  /* border: 1px solid white; */
+  border: 2px solid black;
+  transform: skew(-20deg);
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
 }
 
 .AutoKritiEvent-text2 {
   /* display: block; */
   color: white;
   font-size: 60px;
-  font-weight: 1000;
-  letter-spacing: 9px;
+  font-weight: 600;
+  letter-spacing: 7px;
   /*  Animation decalaration   */
   animation-name: moveInleft;
   animation-duration: 2s;
@@ -55,7 +65,7 @@
   /* display: block; */
   color: white;
   font-size: 60px;
-  font-weight: 1000;
+  font-weight: 600;
   letter-spacing: 9px;
 
   animation-name: moveInRight;
@@ -102,7 +112,6 @@
 .AutokritiEvent-button1 {
   height: 50px;
   background-color: #ee9106;
-  font-weight: 700;
   /* border-radius: 5px; */
 
   border: none;
@@ -119,11 +128,10 @@
 
 .AutokritiEvent-button2 {
   height: 50px;
-  background-color: none;
+  background-color: rgba(255, 0, 0, 0.0);
+  border: solid 2px #fff;  
   font-weight: 700;
-  /* border-radius: 5px; */
-
-  border: none;
+  color: #fff;
   /* color: white; */
   font-size: 18px;
   padding-left: 10px;
@@ -136,9 +144,9 @@
 }
 
 .AutokritiEvent-button1:hover,.AutokritiEvent-button2:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
+    cursor: pointer;
 }
-
 
 
 @media (min-width:540px) and (max-width:768px){
@@ -168,9 +176,9 @@
 }
 
 
-@media (min-width:375px) and (max-width:540px){
+@media (min-width:415px) and (max-width:540px){
     .AutokritiEvent {
-       
+       width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -209,7 +217,7 @@
 }
 
 
-@media (min-width:320px) and (max-width:375px){
+@media (min-width:318px) and (max-width:415px){
     .AutokritiEvent {
        
         display: flex;
@@ -222,7 +230,7 @@
     .AutoKritiEvent-text2 {
         /* display: block; */
         color: white;
-        font-size: 25px;
+        font-size: 20px;
         font-weight: 900;
         /* letter-spacing: 9px; */
         /*  Animation decalaration   */
@@ -233,12 +241,16 @@
       .AutoKritiEvent-text3 {
         /* display: block; */
         color: white;
-        font-size: 25px;
+        font-size: 20px;
         font-weight: 900;
         /* letter-spacing: 9px; */
       
         animation-name: moveInRight;
         animation-duration: 3s;
+      }
+      
+      .AutoKritiEvent-text1{
+        font-size: 1rem;
       }
 
       .AutokritiEvent-button {
