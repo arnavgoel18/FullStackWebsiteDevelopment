@@ -44,7 +44,6 @@ function App() {
 
           <Route path="/blogs" exact component={() => <Blogs/>}/>
           <Route path="/blogs/leftvsright" exact component={() => <Topic1/>}/>
-          <Route path="/Quizsignup" exact component={() => <Quizsignup/>}/>
           
           <Route path="/admin/login" exact component={() => <Login/>}/>
           <Route path="/admin/actions" exact component={() => <AdminActions/>}/>
@@ -54,11 +53,10 @@ function App() {
           <Route path="admin/signUpSheet" exact component={() => <DisplaySignUpSheet/>}/>
           <Route path="admin/quizResponses" exact component={() => <DisplayQuizResponses/>}/>
 
-          {/* <Route path="/registrationform" exact component={() => <RegistrationForm/>}/> */}
-
           <Route path="/admin/displayBlogs" exact component={() => <DisplayBlogs/>}/>
           <Route path="/admin/displayBlogs/editor" exact component={() => <QuillEditor/>}/>
-          <Route path="/RegistrationForm" exact component={()=><RegistrationForm/>}/>
+          <Route path="/registrationForm" exact component={()=><RegistrationForm/>}/>
+          <Route path="/autokriti/register" exact component={() => <Quizsignup/>}/>
         </Switch>
       </Router>
     </>
