@@ -5,22 +5,20 @@ function AutokritiEvent() {
   return (
     <>
       <div className="AutokritiEvent">
-        <div className="AutoKritiEvent-text1">Sat, 12Feb Onwards</div>
+        <div className="AutoKritiEvent-text1">Sat, 12 - Feb Onwards</div>
         <div>
         <div className="AutoKritiEvent-text2" style={{marginBottom: "20px"}}>
-          <i>e-Autokriti 2.0 </i>
+          e-Autokriti 2.0
         </div>
         <div className="AutoKritiEvent-text3">
-          <i>
             {" "}
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Is
             Here!!{" "}
-          </i>
         </div>
         </div>
         <div className="AutokritiEvent-button">
           <div className="AutokritiEvent-button">
-            <button className="AutokritiEvent-button1"><i>Register Here </i></button>
+            <button className="AutokritiEvent-button1">Register Here</button>
             <button className="AutokritiEvent-button2">What is it ?</button>
           </div>
           {/* <div >

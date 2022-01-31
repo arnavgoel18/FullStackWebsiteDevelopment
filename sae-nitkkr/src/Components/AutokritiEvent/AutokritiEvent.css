@@ -23,6 +23,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 20px;
+  margin-bottom: 1.5em;
 }
 
 .AutoKritiEvent-text1 {
@@ -31,13 +32,12 @@
   justify-content: center;
   color: white;
   font-family: "Raleway";
-  font-size: 1.9rem;
+  font-size: 1.5rem;
   padding: 10px 25px;
   height: max-content;
   width: max-content;
   border: 2px solid black;
   transform: skew(-20deg);
-  text-transform: none;
   animation: fadeInAnimation ease 3s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
@@ -54,7 +54,7 @@
   /* display: block; */
   color: white;
   font-size: 60px;
-  font-weight: 1000;
+  font-weight: 600;
   letter-spacing: 7px;
   /*  Animation decalaration   */
   animation-name: moveInleft;
@@ -65,7 +65,7 @@
   /* display: block; */
   color: white;
   font-size: 60px;
-  font-weight: 1000;
+  font-weight: 600;
   letter-spacing: 9px;
 
   animation-name: moveInRight;
@@ -112,7 +112,6 @@
 .AutokritiEvent-button1 {
   height: 50px;
   background-color: #ee9106;
-  font-weight: 700;
   /* border-radius: 5px; */
 
   border: none;
@@ -129,11 +128,10 @@
 
 .AutokritiEvent-button2 {
   height: 50px;
-  background-color: none;
+  background-color: rgba(255, 0, 0, 0.0);
+  border: solid 2px #fff;  
   font-weight: 700;
-  /* border-radius: 5px; */
-
-  border: none;
+  color: #fff;
   /* color: white; */
   font-size: 18px;
   padding-left: 10px;
@@ -146,10 +144,9 @@
 }
 
 .AutokritiEvent-button1:hover,.AutokritiEvent-button2:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
     cursor: pointer;
 }
-
 
 
 @media (min-width:540px) and (max-width:768px){
