@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&display=swap');
+#autokriti_acc_card
+{
+    /* border: 10px solid rgb(247, 5, 5); */
+    width: 37%;
+    margin:20px;
+   /* margin-bottom: 10px; */
+    
+}
+#acc_card_title
+{
+    /* border: 2px solid black; */
+    border:none;
+    background-color:rgb(167, 164, 164);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 3px;
+    padding:5px ;
+    padding-left: 10px;
+    
+}
+#acc_card_title_sentence
+{
+    /* border: 2px solid black; */
+    font-size: 20px;
+}
+#acc_card_title_sign
+{
+    cursor: pointer;
+    
+}
+#down_arrow
+{
+    height: 20px;
+}
+#acc_card_description
+{
+    box-shadow: 0px 0px 2px grey;
+    background-color: white;
+    padding: 5px;
+    /* font-style: italic; */
+    font-weight:400;
+    font-size: 20px;
+    transform: translateY(0px);
+}
+
+@media (min-width:300px) and (max-width:630px)
+{
+    #autokriti_acc_card
+    {
+        /* border: 10px solid rgb(247, 5, 5); */
+        width: 100%;
+        margin:0px;
+        margin-bottom: 10px;
+     
+        
+    }
+    #acc_card_title_sentence
+{
+    
+    font-size: 16px;
+}
+
+#acc_card_description
+{
+   
+    font-size: 16px;
+}
+}
+@media (min-width:630px) and (max-width:969px)
+{
+    #autokriti_acc_card
+{
+    /* border: 10px solid rgb(247, 5, 5); */
+    width: 90%;
+    margin:20px;
+   /* margin-bottom: 10px; */
+    
+}
+    #acc_card_title_sentence
+    {
+        
+        font-size: 18px;
+    }
+    
+    #acc_card_description
+    {
+       
+        font-size: 18px;
+    }
+}
+@media (min-width:969px) and (max-width:1024px)
+{
+    #autokriti_acc_card
+{
+    /* border: 10px solid rgb(247, 5, 5); */
+    width: 90%;
+    margin:20px;
+   /* margin-bottom: 10px; */
+    
+}
+    #acc_card_title_sentence
+    {
+        
+        font-size: 18px;
+    }
+    
+    #acc_card_description
+    {
+       
+        font-size: 18px;
+    }
+}
+@media (min-width:1024px) and (max-width:1440px)
+{
+    #autokriti_acc_card
+{
+    /* border: 10px solid rgb(247, 5, 5); */
+    width: 43%;
+    margin:20px;
+   /* margin-bottom: 10px; */
+    
+}
+   
+}
