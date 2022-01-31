@@ -21,7 +21,7 @@ function Nitrox(){
             <FirstDisplayDiv page="Nitrox"/>
             <TeamsAboutUs page="Nitrox"/>
             <WhereDoWeParticipate />
-            <TeamLeads page="Nitrox"/>
+            {/* <TeamLeads page="Nitrox"/> */}
             {/* <Saga/> */}
             <Gallery/>
             <Footer/>

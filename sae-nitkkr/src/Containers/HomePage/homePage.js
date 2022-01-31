@@ -26,7 +26,7 @@ function HomePage(){
             <TeamsDIV/>
             <br/>
             <ExploreUs/>
-            <ProfIncharges/>
+            {/* <ProfIncharges/> */}
             <Managers/>
             {/* <ContactUs/> */}
             <Footer/>
