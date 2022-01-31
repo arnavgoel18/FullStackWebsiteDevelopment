@@ -13,7 +13,7 @@ function AutokritiEvent() {
         <div className="AutoKritiEvent-text3">
           <i>
             {" "}
-            &nbsp;&nbsp;&nbsp;&nbsp; Is
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Is
             Here!!{" "}
           </i>
         </div>
