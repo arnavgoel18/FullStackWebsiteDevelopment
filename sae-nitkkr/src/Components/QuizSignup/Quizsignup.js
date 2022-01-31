@@ -351,7 +351,7 @@ async function setInfo(docdata) {
   document.getElementById("payform-button2").disabled = true;
   document.getElementById("payform-button2").style.backgroundColor = "gray";
   var timestamp = String(new Date().getTime());
-  await setDoc(doc(db, "quizsignup", timestamp), docdata);
+  await setDoc(doc(db, "autokritiRegistration", timestamp), docdata);
   alert("Congratulations! Your information saved successfully.");
   deletedata();
   document.getElementById("payform-button2").disabled = false;
