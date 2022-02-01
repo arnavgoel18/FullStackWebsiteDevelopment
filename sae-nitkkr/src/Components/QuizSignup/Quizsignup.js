@@ -190,41 +190,40 @@ function Quizsignup() {
             <br />
            
             <div id="referal_check">
-            <input
-              className="payform-input"
-              type="email"
-              name="referal"
-              alt=""
-              id="referal_code"
-              required="unrequired"
-              value={userData.referal}
-              onChange={postUserData}
-            />
-               <img id="ref_image"src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/32/000000/external-information-camping-dreamstale-lineal-dreamstale.png" 
+              <input
+                className="payform-input"
+                type="email"
+                name="referal"
+                alt=""
+                id="referal_code"
+                required="unrequired"
+                value={userData.referal}
+                onChange={postUserData}
+              />
+              <img id="ref_image"src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/32/000000/external-information-camping-dreamstale-lineal-dreamstale.png" 
                 onMouseOver={i_information_visible}
                 onMouseOut={i_information_nonvisible}
-               />
-    
-               </div>
+              />
+            </div>
                
-               {/* &nbsp; &nbsp;
-            <img
-              src="https://img.icons8.com/ios/20/000000/info--v4.png"
-              style={{ margin: "-6px" }}
-            /> */}
+            {/* &nbsp; &nbsp;
+              <img
+                src="https://img.icons8.com/ios/20/000000/info--v4.png"
+                style={{ margin: "-6px" }}
+              /> */
+            }
             
           </div>
-          {/* <br />
-          <br /> */}
+
           <div id="pay_button">
-            <div id="paynow">
-          <button onClick={routeChange} className="payform-button">
-            ₹ &nbsp; Pay Now
-          </button></div>
-          <div id="i_button_content">
-              <h4>Enter Referal Code only if you are applying through an Ambassador</h4>
-            </div>
-           </div>
+              <div id="paynow">
+                <button onClick={routeChange} className="payform-button">₹ &nbsp; Pay Now</button>
+              </div>
+              <div id="i_button_content">
+                <h4>Enter Referal Code only if you are applying through an Ambassador</h4>
+              </div>
+          </div>
+          
           <div className="field">
             {" "}
             <span className="payform-label"> Payment ID </span>
@@ -242,6 +241,7 @@ function Quizsignup() {
               onChange={postUserData}
             />
           </div>
+
           <br />
 
           <button
@@ -252,6 +252,7 @@ function Quizsignup() {
             Confirm Registration
           </button>
         </div>
+
         <div className="payform-infocontain">
           <div className="payform-info">
             <FaInfoCircle /> &nbsp; <span id="quiz_registration">Instructions</span>
@@ -274,20 +275,27 @@ function Quizsignup() {
               * Referal IDs are case-sensitive
             </p>
           </div>
+
           <br />
+
           <div className="payform-checkbox">
             <input type="checkbox" id="agree" name="" value="" />
             <div id="read_content">
-            I have read and understood the instructions
+              I have read and understood the instructions
             </div>
+
             <br />
             <br />
           </div>
+
           <br />
           <br />
+
         </div>
       </div>
+
       <br/>
+      
       <Footer/>
     </>
   );
