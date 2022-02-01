@@ -10,6 +10,7 @@ import {
   doc,
   setDoc,
 } from "firebase/firestore";
+
 import { onValue } from "firebase/database";
 import { Link } from "react-router-dom";
 import PageHeader from "../../../Components/Backend/PageHeader/PageHeader";
@@ -32,7 +33,7 @@ function DisplayInfo() {
 
   //Get Information from Firebase into detailList array
   async function getInfo() {
-    //console.log("ambassador info")
+    
     const studentAmbassador = collection(db, "studentAmbassador");
     var amb_doc = await getDocs(studentAmbassador);
     detailList = amb_doc.docs.map((doc) => doc.data());

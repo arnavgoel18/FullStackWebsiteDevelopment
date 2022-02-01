@@ -21,11 +21,13 @@ function Quizsignup() {
     let k=document.getElementById('i_button_content');
     k.style.visibility="visible"
   }
+  
   function i_information_nonvisible()
   {
     let k=document.getElementById('i_button_content');
     k.style.visibility="hidden"
   }
+
   const [userData, setUserData] = useState({
     name: "",
     email: "",
@@ -36,29 +38,67 @@ function Quizsignup() {
     referal: "",
     transaction: "",
   });
+
   let name, value;
+
   const postUserData = (event) => {
     name = event.target.name;
     value = event.target.value;
 
     setUserData({ ...userData, [name]: value });
   };
+
+  var [stuData, setStuData] = useState([]);
+
   const routeChange = async (event) => {
     event.preventDefault();
     const { name, email, phone, college, branch, semester, referal } = userData;
-    if (name && email && phone && college && branch && semester) {
+
+    
+    async function getFinalAmbInfo() {
+      const stuInfo = collection(db, "finalStudentAmbassador");
+      const stuInfo_doc = await getDocs(stuInfo);
+      stuData = stuInfo_doc.docs.map((doc) => doc.data().referralCode);
+      setStuData(stuData);
+    }
+    
+    getFinalAmbInfo();
+    
+    if (name && email && phone && college && branch && semester) {//if all fields are entered
       if (document.getElementById("agree").checked) {
-        window.open("https://rzp.io/l/e87mGYT");
+        if(referal){
+          var valid = false;
+          for(var i = 0;i < stuData.length;i++){
+            if(referal == stuData[i]){
+              valid = true;
+              break;
+            }
+          }
+
+          if(valid){
+            window.open("https://rzp.io/l/uIZPhx2y");//discount
+          }
+          else{
+            window.open("https://rzp.io/l/e87mGYT");//no discount
+          }
+        }
+        else{
+          window.open("https://rzp.io/l/e87mGYT");//no discount
+        }
+
         document.getElementById("payform-button2").disabled = false;
         document.getElementById("transaction").disabled = false;
+        
         return true;
-      } else {
+      } 
+      else {
         alert(
           "Please tick the checkbox under instructions to proceed"
         );
         return false;
       }
-    } else {
+    } 
+    else {
       alert("Please fill the data");
     }
   };
@@ -300,6 +340,7 @@ function Quizsignup() {
     </>
   );
 }
+
 function submit() {
   var studentName = document.getElementById("amb_name");
   var collegeName = document.getElementById("amb_college");
@@ -346,6 +387,7 @@ function validateForm(docdata) {
     setInfo(docdata);
   }
 }
+
 function deletedata() {
   var studentName = document.getElementById("amb_name");
   var collegeName = document.getElementById("amb_college");
