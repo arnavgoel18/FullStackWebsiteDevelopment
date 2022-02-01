@@ -11,7 +11,7 @@ import {
 
 export default function ShowAmbassador() {
   const params = new URL(document.location).searchParams;
-  const password = params.get("username");
+  const username = localStorage.getItem("username");
 
   var [tester, setTester] = useState(true);
 
@@ -25,7 +25,7 @@ export default function ShowAmbassador() {
     const autInfo_doc = await getDocs(autInfo);
     autData = autInfo_doc.docs.map((doc) => doc.data());
     setAutData(autData);
-    setOwnreferrals(autData.filter(x => x.referalcode === password))
+    setOwnreferrals(autData.filter(x => x.referalcode === username))
   }
 
   async function getFinalAmbInfo() {
@@ -59,6 +59,7 @@ export default function ShowAmbassador() {
   }
 
   const token = localStorage.getItem("token");
+  
   let loggedin = true;
   if (token == null) {
     loggedin = false;
@@ -73,7 +74,7 @@ export default function ShowAmbassador() {
           <div className="ambassador-profile-name">
             {
               stuData.map((studata, i) => {
-                if (studata.referralCode == password) {
+                if (studata.referralCode == username) {
                   return (
                     <span key={i} style={{ color: "white" }}>
                       {studata.studentName}
@@ -86,6 +87,8 @@ export default function ShowAmbassador() {
           <div className="general-logout"
             onClick={(e) => {
               localStorage.removeItem("token");
+              localStorage.removeItem("username");
+              localStorage.removeItem("password");
               window.location.href = "/Ambassador/login";
             }} style={{ cursor: "pointer" }}>
             Logout
@@ -97,7 +100,7 @@ export default function ShowAmbassador() {
             <div className="amb_yourRef">your referral count: {ownReferrals.length}</div>
             <div className="showAmbDiv">
               {autData.map((data, i) => {
-                if (data.referalcode == password) {
+                if (data.referalcode == username) {
                   return (
                     <div className="ambFlex" key={i}>
                       <div className="showPersonAmb">{data.studentName}</div>
