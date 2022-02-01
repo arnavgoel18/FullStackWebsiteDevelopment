@@ -3,8 +3,18 @@ import { useContext } from "react";
 import "./AutokritiCheckEvent.css";
 import Autokritiacc_card from "../Autokritiacc_card/Autokritiacc_card";
 import CheckContext from "../Context/CheckContext";
+import $ from 'jquery';
 
-function AutokritiCheckEvent() {
+export default function AutokritiCheckEvent() {
+
+  $(document).ready(function () {
+    if(window.location.href.includes('?acc_container')){
+      $('html, body').animate({
+        scrollTop: $('#acc_container').offset().top
+      }, 'slow');
+    }
+});
+
   let variable = useContext(CheckContext);
 
   useEffect(() => {
@@ -82,4 +92,3 @@ function AutokritiCheckEvent() {
   );
 }
 
-export default AutokritiCheckEvent;
