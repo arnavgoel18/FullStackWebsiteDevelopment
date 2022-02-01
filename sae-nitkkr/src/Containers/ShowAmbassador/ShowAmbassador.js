@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./ShowAmbassador.css";
 import { Link, Redirect } from "react-router-dom";
-import { FaLockOpen } from "react-icons/fa";
+import { VscSignOut } from "react-icons/vsc";
 import NavBar from "../../Components/NavBar/NavBar";
 import Footer from "../../Components/Footer/Footer(black)/FooterBlack";
 import db from "../../Firebase";
@@ -72,11 +72,13 @@ export default function ShowAmbassador() {
       <>
         <NavBar />
         <div className="amb_panel">
-          <FaLockOpen
+          <VscSignOut
             onClick={(e) => {
               localStorage.removeItem("token");
               window.location.href = "/Ambassador/login";
             }}
+
+            style={{fontSize:'35px', cursor: 'pointer'} }
           />
           
             {
@@ -94,7 +96,7 @@ export default function ShowAmbassador() {
         </div>
         <span className="amb_yourRef">Your Referrals</span>
 
-        <div className="ambFlex">
+        <div className="ambFlexMain">
           <div className="showAmbDiv">
             {autData.map((data, i) => {
               if (data.referalcode == password) {
