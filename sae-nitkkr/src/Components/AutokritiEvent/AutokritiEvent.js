@@ -27,7 +27,7 @@ function AutokritiEvent() {
             <Link to="/autokriti/register" target="_blank">
               <button className="AutokritiEvent-button1">Register Here</button>
             </Link>
-            <Link to="/autokriti?AutokritEvent">
+            <Link to="/autokriti?acc_container">
               <button className="AutokritiEvent-button2">Event Details</button>
             </Link>
           </div>
