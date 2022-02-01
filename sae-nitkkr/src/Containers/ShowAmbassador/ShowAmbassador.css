@@ -14,9 +14,9 @@
     border: 2px solid black;
     margin: 1rem 0rem 1.5rem 3rem;
     padding: 0.5rem 0 0.5rem 0.5rem;
-    width: 65vw;
+    width: 67vw;
     height: fit-content;
-    max-height: 91vh;
+    max-height: 83.5vh;
     overflow-y: scroll;
 }
 .showPersonAmb, .showPersonAmbCollege, .ambLeaderName, .ambLeaderRefer{
@@ -40,18 +40,21 @@
 .ambFlex{
     display: flex;
 }
+.ambFlexMain{
+    display: flex;
+}
 .amb_leaderboard{
     border: 2px solid black;
     margin: 0 3rem 1.5rem 3rem;
-    width: 35vw;
-    max-height: 53.5vh;
+    width: 33vw;
+    max-height: 42.5vh;
     overflow-y: scroll;
     padding: 0.5rem 0 0.3rem 0;
 }
 .amb_leader_heading{
     padding: 1rem 3rem 0.5rem 3rem;
     margin:1rem 0 0 3rem;
-    width: 35vw;
+    width: 33vw;
     text-align: center;
     border-top: 2px solid black;
     border-left: 2px solid black;
@@ -81,4 +84,35 @@
 ::-webkit-scrollbar-thumb {
     background: #CDCDCD;
     border-radius: 10px
+}
+
+@media (min-width:0px) and (max-width:800px)
+{
+    .ambFlexMain{
+        flex-direction: column;
+    }
+    .showAmbDiv{
+        width: 90vw;
+        margin: auto;
+        margin-bottom: 1.5rem;
+        margin-top: 1rem;
+    }
+    .amb_leaderboard{
+        width: 90vw;
+        margin: auto;
+        margin-bottom: 1.5rem;
+    }
+    .amb_leader_heading{
+        width: 90vw;
+        margin: auto;
+        font-size: 1rem ;
+        padding: 1rem 1rem 1rem 1rem;
+    }
+    .amb_yourRef{
+       margin-left: 5vw;
+    }
+    .amb_panel{
+        margin-right: 5vw;
+        margin-left: 5vw;
+    }
 }

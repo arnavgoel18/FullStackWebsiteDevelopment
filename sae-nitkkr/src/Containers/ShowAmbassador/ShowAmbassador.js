@@ -94,7 +94,7 @@ export default function ShowAmbassador() {
         </div>
         <span className="amb_yourRef">Your Referrals</span>
 
-        <div className="ambFlex">
+        <div className="ambFlexMain">
           <div className="showAmbDiv">
             {autData.map((data, i) => {
               if (data.referalcode == password) {
