@@ -19,9 +19,13 @@ font-family: 'Montserrat', sans-serif;
 }
 #Nitrox-participate1
 {
-    font-size: 37px;
+    font-size: 27px;
     font-weight: 800;
-   color: rgb(243, 8, 47);
+   /* color: rgb(243, 8, 47);
+    */
+    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 #Nitrox-baja_title
 {
