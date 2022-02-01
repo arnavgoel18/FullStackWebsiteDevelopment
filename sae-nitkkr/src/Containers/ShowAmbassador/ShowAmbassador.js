@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./ShowAmbassador.css";
 import { Link, Redirect } from "react-router-dom";
-import { FaLockOpen } from "react-icons/fa";
+import { MdOutlineLogout } from "react-icons/md";
 import NavBar from "../../Components/NavBar/NavBar";
 import Footer from "../../Components/Footer/Footer(black)/FooterBlack";
 import db from "../../Firebase";
@@ -72,11 +72,11 @@ export default function ShowAmbassador() {
       <>
         <NavBar />
         <div className="amb_panel">
-          <FaLockOpen
+          <MdOutlineLogout
             onClick={(e) => {
               localStorage.removeItem("token");
               window.location.href = "/Ambassador/login";
-            }}
+            }} style={{cursor: "pointer"}}
           />
           
             {
