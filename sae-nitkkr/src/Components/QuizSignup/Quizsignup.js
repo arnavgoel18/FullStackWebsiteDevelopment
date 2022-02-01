@@ -21,11 +21,13 @@ function Quizsignup() {
     let k=document.getElementById('i_button_content');
     k.style.visibility="visible"
   }
+  
   function i_information_nonvisible()
   {
     let k=document.getElementById('i_button_content');
     k.style.visibility="hidden"
   }
+
   const [userData, setUserData] = useState({
     name: "",
     email: "",
@@ -36,29 +38,67 @@ function Quizsignup() {
     referal: "",
     transaction: "",
   });
+
   let name, value;
+
   const postUserData = (event) => {
     name = event.target.name;
     value = event.target.value;
 
     setUserData({ ...userData, [name]: value });
   };
+
+  var [stuData, setStuData] = useState([]);
+
   const routeChange = async (event) => {
     event.preventDefault();
     const { name, email, phone, college, branch, semester, referal } = userData;
-    if (name && email && phone && college && branch && semester) {
+
+    
+    async function getFinalAmbInfo() {
+      const stuInfo = collection(db, "finalStudentAmbassador");
+      const stuInfo_doc = await getDocs(stuInfo);
+      stuData = stuInfo_doc.docs.map((doc) => doc.data().referralCode);
+      setStuData(stuData);
+    }
+    
+    getFinalAmbInfo();
+    
+    if (name && email && phone && college && branch && semester) {//if all fields are entered
       if (document.getElementById("agree").checked) {
-        window.open("https://rzp.io/l/e87mGYT");
+        if(referal){
+          var valid = false;
+          for(var i = 0;i < stuData.length;i++){
+            if(referal == stuData[i]){
+              valid = true;
+              break;
+            }
+          }
+
+          if(valid){
+            window.open("https://rzp.io/l/uIZPhx2y");//discount
+          }
+          else{
+            window.open("https://rzp.io/l/e87mGYT");//no discount
+          }
+        }
+        else{
+          window.open("https://rzp.io/l/e87mGYT");//no discount
+        }
+
         document.getElementById("payform-button2").disabled = false;
         document.getElementById("transaction").disabled = false;
+        
         return true;
-      } else {
+      } 
+      else {
         alert(
           "Please tick the checkbox under instructions to proceed"
         );
         return false;
       }
-    } else {
+    } 
+    else {
       alert("Please fill the data");
     }
   };
@@ -190,41 +230,40 @@ function Quizsignup() {
             <br />
            
             <div id="referal_check">
-            <input
-              className="payform-input"
-              type="email"
-              name="referal"
-              alt=""
-              id="referal_code"
-              required="unrequired"
-              value={userData.referal}
-              onChange={postUserData}
-            />
-               <img id="ref_image"src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/32/000000/external-information-camping-dreamstale-lineal-dreamstale.png" 
+              <input
+                className="payform-input"
+                type="email"
+                name="referal"
+                alt=""
+                id="referal_code"
+                required="unrequired"
+                value={userData.referal}
+                onChange={postUserData}
+              />
+              <img id="ref_image"src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/32/000000/external-information-camping-dreamstale-lineal-dreamstale.png" 
                 onMouseOver={i_information_visible}
                 onMouseOut={i_information_nonvisible}
-               />
-    
-               </div>
+              />
+            </div>
                
-               {/* &nbsp; &nbsp;
-            <img
-              src="https://img.icons8.com/ios/20/000000/info--v4.png"
-              style={{ margin: "-6px" }}
-            /> */}
+            {/* &nbsp; &nbsp;
+              <img
+                src="https://img.icons8.com/ios/20/000000/info--v4.png"
+                style={{ margin: "-6px" }}
+              /> */
+            }
             
           </div>
-          {/* <br />
-          <br /> */}
+
           <div id="pay_button">
-            <div id="paynow">
-          <button onClick={routeChange} className="payform-button">
-            ₹ &nbsp; Pay Now
-          </button></div>
-          <div id="i_button_content">
-              <h4>Enter Referal Code only if you are applying through an Ambassador</h4>
-            </div>
-           </div>
+              <div id="paynow">
+                <button onClick={routeChange} className="payform-button">₹ &nbsp; Pay Now</button>
+              </div>
+              <div id="i_button_content">
+                <h4>Enter Referal Code only if you are applying through an Ambassador</h4>
+              </div>
+          </div>
+          
           <div className="field">
             {" "}
             <span className="payform-label"> Payment ID </span>
@@ -242,6 +281,7 @@ function Quizsignup() {
               onChange={postUserData}
             />
           </div>
+
           <br />
 
           <button
@@ -252,6 +292,7 @@ function Quizsignup() {
             Confirm Registration
           </button>
         </div>
+
         <div className="payform-infocontain">
           <div className="payform-info">
             <FaInfoCircle /> &nbsp; <span id="quiz_registration">Instructions</span>
@@ -274,24 +315,32 @@ function Quizsignup() {
               * Referal IDs are case-sensitive
             </p>
           </div>
+
           <br />
+
           <div className="payform-checkbox">
             <input type="checkbox" id="agree" name="" value="" />
             <div id="read_content">
-            I have read and understood the instructions
+              I have read and understood the instructions
             </div>
+
             <br />
             <br />
           </div>
+
           <br />
           <br />
+
         </div>
       </div>
+
       <br/>
+      
       <Footer/>
     </>
   );
 }
+
 function submit() {
   var studentName = document.getElementById("amb_name");
   var collegeName = document.getElementById("amb_college");
@@ -338,6 +387,7 @@ function validateForm(docdata) {
     setInfo(docdata);
   }
 }
+
 function deletedata() {
   var studentName = document.getElementById("amb_name");
   var collegeName = document.getElementById("amb_college");
