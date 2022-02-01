@@ -40,6 +40,7 @@ function AutokritiCheckEvent() {
                   visibility={element.show}
                   title={element.title}
                   description={element.description}
+                  color="#000"
                 />
               );
             })}

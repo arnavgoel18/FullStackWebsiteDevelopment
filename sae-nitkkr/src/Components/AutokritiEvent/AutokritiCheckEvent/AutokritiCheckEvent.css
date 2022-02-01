@@ -31,7 +31,7 @@
 }
 #acc_second
 {
-    background-color: rgb(185, 234, 250);
+    background-color: #E8FCFD;
     border-radius: 12px;
     height:max-content;
     font-family: 'Montserrat', sans-serif;
@@ -57,7 +57,7 @@
 #acc_third
 {
     /* border: 2px solid black; */
- height: max-content;
+    height: max-content;
     margin-bottom: 10px;
     margin-top: 10px;
     /* padding-right: 200px; */
@@ -80,7 +80,7 @@
 {
     
   
-    background-color: rgb(185, 234, 250);
+    background-color: #E8FCFD;
     border-radius: 12px;
     height:max-content;
     font-family: 'Montserrat', sans-serif;
