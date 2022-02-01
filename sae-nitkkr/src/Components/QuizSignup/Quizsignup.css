@@ -80,8 +80,20 @@
 {
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: center;
 }
+
+#pricing{
+   text-align: center;
+    vertical-align: middle;
+    width: 5em;
+    display: flex;
+    justify-content: center;
+    top: -10px;
+    position: relative;
+}
+
 #i_button_content
 {
   /* position:absolute; */
@@ -292,3 +304,4 @@
     left: -20px;
   }
 }
+

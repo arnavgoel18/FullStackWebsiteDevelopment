@@ -237,7 +237,7 @@ function Quizsignup() {
           <div className="field">
             {" "}
             <span className="payform-label"> Referal Code(optional code) </span>
-         
+              
             <br />
            
             <div id="referal_check">
@@ -269,6 +269,7 @@ function Quizsignup() {
           <div id="pay_button">
               <div id="paynow">
                 <button onClick={routeChange} className="payform-button">₹ &nbsp; Pay Now</button>
+                <div id="pricing">699</div>
               </div>
               <div id="i_button_content">
                 <h4>Enter Referal Code only if you are applying through an Ambassador</h4>

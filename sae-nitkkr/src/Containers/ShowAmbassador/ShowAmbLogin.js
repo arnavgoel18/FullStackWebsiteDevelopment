@@ -7,6 +7,8 @@ import {
   collection,
   getDocs,
 } from "firebase/firestore";
+import Footer from '../../Components/Footer/Footer(black)/FooterBlack';
+import NavBar from '../../Components/NavBar/NavBar';
 
 function Login() {
     var [tester, setTester] = useState(true);
@@ -67,7 +69,9 @@ function Login() {
   }
   else{
   return (
-     <div id="logincontainer">
+    <>
+      <NavBar/>
+      <div id="logincontainer">
         <div id="loginbox">
             <div id="loginlogo"> <img id="login_man-sitting"src={man_sitting} alt=""/></div>
             <div id="loginmain">
@@ -87,11 +91,11 @@ function Login() {
         </div>
         
     </div>
+    <Footer/>
+    </>
   );
           }
 }
-
-
 
 export default Login;
 
