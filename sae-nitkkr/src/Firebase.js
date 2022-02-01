@@ -39,26 +39,26 @@ const firebaseConfig = {
 };
 
 
-//SECOND DATABASE ONLY FOR BLOGS (DEPLOYMENT)
-//  const secondaryAppConfig = {
-//   apiKey: "AIzaSyCk_GyQ6-ytYYfv6Hvt9SXtC51z8AM6000",
-//   authDomain: "sae-blogs.firebaseapp.com",
-//   projectId: "sae-blogs",
-//   storageBucket: "sae-blogs.appspot.com",
-//   messagingSenderId: "637915670174",
-//   appId: "1:637915670174:web:66c2cac789acfd3a81fd8f"
-//  }
+// SECOND DATABASE ONLY FOR BLOGS (DEPLOYMENT)
+ const secondaryAppConfig = {
+  apiKey: "AIzaSyCk_GyQ6-ytYYfv6Hvt9SXtC51z8AM6000",
+  authDomain: "sae-blogs.firebaseapp.com",
+  projectId: "sae-blogs",
+  storageBucket: "sae-blogs.appspot.com",
+  messagingSenderId: "637915670174",
+  appId: "1:637915670174:web:66c2cac789acfd3a81fd8f"
+ }
 
 //TESTER
-const secondaryAppConfig = {
-  apiKey: "AIzaSyAfJTGsx3HsGeJlkIeSTf_VsrlgEw2pfrY",
-   authDomain: "sae-website-127b1.firebaseapp.com",
-   projectId: "sae-website-127b1",
-   storageBucket: "sae-website-127b1.appspot.com",
-   messagingSenderId: "636129718123",
-   appId: "1:636129718123:web:555343dd6f0255ecbe262e",
-   measurementId: "G-BHECE0F8CX"
-}
+// const secondaryAppConfig = {
+//   apiKey: "AIzaSyAfJTGsx3HsGeJlkIeSTf_VsrlgEw2pfrY",
+//    authDomain: "sae-website-127b1.firebaseapp.com",
+//    projectId: "sae-website-127b1",
+//    storageBucket: "sae-website-127b1.appspot.com",
+//    messagingSenderId: "636129718123",
+//    appId: "1:636129718123:web:555343dd6f0255ecbe262e",
+//    measurementId: "G-BHECE0F8CX"
+// }
 
 const firebaseApp = initializeApp(firebaseConfig);
 const secondaryApp = initializeApp(secondaryAppConfig, "secondary");
