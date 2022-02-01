@@ -45,7 +45,7 @@ function Quizsignup() {
     const { name, email, phone, college, branch, semester, referal } = userData;
     if (name && email && phone && college && branch && semester) {
       if (document.getElementById("agree").checked) {
-        window.open("");
+        window.open("https://rzp.io/l/e87mGYT");
         document.getElementById("payform-button2").disabled = false;
         document.getElementById("transaction").disabled = false;
         return true;

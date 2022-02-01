@@ -17,7 +17,7 @@ function Home(props) {
   var picture;
 
   if(props.page === "Home"){
-    content = "SAE NIT Kurukshetra is a collegiate club affiliated under SAE India, which is a wing of SAE International, on a national scale. The club is a platform for budding engineers to work together in arrive at solutions to the problems in the mobility field. It forms a link between naive talents and pioneers of the industry. Valuing the interdisciplinary nature of the automobile sector, under graduate students from various branches strive to innovate better under the guidance of our professors here at NIT Kurukshetra. We bring our skills to many competitions "
+    content = "SAE NIT Kurukshetra is a collegiate club affiliated with SAE India, which is a wing of SAE International, on a national scale. The club is a platform for budding engineers to work together to arrive at solutions to the problems in the mobility field. It forms a link between naive talents and pioneers of the industry. Valuing the interdisciplinary nature of the automobile sector, undergraduate students from various branches strive to innovate better under the guidance of our professors here at NIT Kurukshetra. We bring our skills to many competitions    "
     contentOnlyForHomepage = "We bring our skills to many competitions";
     comp1 = "Baja SAE India";
     comp2 = "ATVC";

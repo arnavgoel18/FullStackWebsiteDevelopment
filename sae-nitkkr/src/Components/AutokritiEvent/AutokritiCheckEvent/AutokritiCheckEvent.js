@@ -28,15 +28,7 @@ function AutokritiCheckEvent() {
           </h2>
         </div>
         <div id="acc_second" className="acc_component">
-          Knowledge could be gained via two ways- by the path of prolong
-          experimentation and trial and error orfrom a mentor who could show you
-          a circumscribed path to enlightenment.Isn't it better to learn the
-          pros & cons of a process from someone who has already traversed that
-          path and have them to oversee our mistakes. So here we are, SAE NIT
-          Kurukshetra present e-Autokriti 2.0, where we would lay before you the
-          technical know-how unfurled through years of experimentation &
-          implementation. It will assure you a well acknowledged welcome in
-          automotive world & also a direction for further exploration.
+          Knowledge could be gained in two ways- by the path of prolonged experimentation and trial and error or by a mentor who could show you a circumscribed path to enlightenment. Isn't it better to learn the pros & cons of a process from someone who has already traversed that path and have them oversee our mistakes? So here we are, SAE NIT Kurukshetra present e-Autokriti 2.0, where we would lay before you the technical know-how unfurled through years of experimentation & implementation. It will assure you a well-acknowledged welcome in the automotive world & also a direction for further exploration.
         </div>
         <div id="acc_third" className="acc_component">
           <div id="acc_card_container">
