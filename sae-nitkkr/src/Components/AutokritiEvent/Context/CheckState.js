@@ -2,13 +2,13 @@ import { useState } from "react";
 
 import CheckContext from "./CheckContext";
 function CheckState(props) {
-  const [visibility, setvisibility] = useState("no");
+  const [visibility, setvisibility] = useState(false);
 
   const dataarray = [
     {
       id: "1",
       title: "Session #1",
-      show: "no",
+      show: false,
       arrownature: "down",
       description:
         "This 5 days workshop begins with an overview of vehicle, followed by the power-flow through drivetrain,steering system&braking system.By the end of the day,you'll have deep insight of how your vehicle works",
@@ -16,7 +16,7 @@ function CheckState(props) {
     {
       id: "2",
       title: "Session #2",
-      show: "no",
+      show: false,
       arrownature: "down",
       description:
         "This 5 days workshop begins with an overview of vehicle, followed by the power-flow through drivetrain,steering system&braking system.By the end of the day,you'll have deep insight of how your vehicle works",
@@ -24,7 +24,7 @@ function CheckState(props) {
     {
       id: "3",
       title: "Modelling Session 1",
-      show: "no",
+      show: false,
       arrownature: "down",
       description:
         "This 5 days workshop begins with an overview of vehicle, followed by the power-flow through drivetrain,steering system&braking system.By the end of the day,you'll have deep insight of how your vehicle works",
@@ -32,7 +32,7 @@ function CheckState(props) {
     {
       id: "4",
       title: "Modelling Session 2",
-      show: "no",
+      show: false,
       arrownature: "down",
       description:
         "This 5 days workshop begins with an overview of vehicle, followed by the power-flow through drivetrain,steering system&braking system.By the end of the day,you'll have deep insight of how your vehicle works",
@@ -41,12 +41,13 @@ function CheckState(props) {
     {
       id: "5",
       title: "Project",
-      show: "no",
+      show: false,
       arrownature: "down",
       description:
         "This 5 days workshop begins with an overview of vehicle, followed by the power-flow through drivetrain,steering system&braking system.By the end of the day,you'll have deep insight of how your vehicle works",
     },
   ];
+
   const [backupdata, setbackupdata] = useState(dataarray);
   const [arrow, setarrow] = useState("down");
   // let arrownature="down";

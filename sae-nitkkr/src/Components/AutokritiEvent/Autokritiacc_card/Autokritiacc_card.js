@@ -11,13 +11,13 @@ function Autokritiacc_card(props) {
       <div id="acc_card_title">
         <div id="acc_card_title_sentence">{props.title}</div>
         <div id="acc_card_title_sign">
-          {props.visibility == "no" ? (
+          {props.visibility == false ? (
             <>
               <img
                 id="down_arrow"
                 src="https://img.icons8.com/external-those-icons-fill-those-icons/24/000000/external-down-arrows-those-icons-fill-those-icons-7.png"
                 onClick={() => {
-                  k.setvisibility("yes");
+                  k.setvisibility(true);
                   k.show(props.id);
                 }}
               />
@@ -27,14 +27,14 @@ function Autokritiacc_card(props) {
               id="down_arrow"
               src="https://img.icons8.com/external-those-icons-fill-those-icons/24/000000/external-up-arrows-those-icons-fill-those-icons-6.png"
               onClick={() => {
-                k.setvisibility("no");
+                k.setvisibility(false);
                 k.notshow(props.id);
               }}
             />
           )}
         </div>
       </div>
-      {props.visibility == "yes" ? (
+      {props.visibility == true ? (
         <div id="acc_card_description">{props.description}</div>
       ) : (
         ""

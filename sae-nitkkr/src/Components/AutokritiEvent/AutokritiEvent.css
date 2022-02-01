@@ -57,8 +57,8 @@
   font-weight: 600;
   letter-spacing: 7px;
   /*  Animation decalaration   */
-  animation-name: moveInleft;
-  animation-duration: 2s;
+  /* animation-name: moveInleft;
+  animation-duration: 4s; */
 }
 
 .AutoKritiEvent-text3 {
@@ -68,8 +68,8 @@
   font-weight: 600;
   letter-spacing: 9px;
 
-  animation-name: moveInRight;
-  animation-duration: 2s;
+  /* animation-name: moveInRight;
+  animation-duration: 2s; */
 }
 
 @keyframes moveInleft {
@@ -158,8 +158,8 @@
         font-weight: 1000;
         letter-spacing: 9px;
         /*  Animation decalaration   */
-        animation-name: moveInleft;
-        animation-duration: 2s;
+        /* animation-name: moveInleft; */
+        /* animation-duration: 2s; */
       }
       
       .AutoKritiEvent-text3 {
@@ -169,8 +169,8 @@
         font-weight: 1000;
         letter-spacing: 9px;
       
-        animation-name: moveInRight;
-        animation-duration: 2s;
+        /* animation-name: moveInRight;
+        animation-duration: 2s; */
       }
 
 }
@@ -193,8 +193,8 @@
         font-weight: 900;
         letter-spacing: 9px;
         /*  Animation decalaration   */
-        animation-name: moveInleft;
-        animation-duration: 3s;
+        /* animation-name: moveInleft;
+        animation-duration: 3s; */
       }
       
       .AutoKritiEvent-text3 {
@@ -204,8 +204,8 @@
         font-weight: 900;
         letter-spacing: 9px;
       
-        animation-name: moveInRight;
-        animation-duration: 3s;
+        /* animation-name: moveInRight;
+        animation-duration: 3s; */
       }
 
       .AutokritiEvent-button {
@@ -234,8 +234,8 @@
         font-weight: 900;
         /* letter-spacing: 9px; */
         /*  Animation decalaration   */
-        animation-name: moveInleft;
-        animation-duration: 3s;
+        /* animation-name: moveInleft;
+        animation-duration: 3s; */
       }
       
       .AutoKritiEvent-text3 {
@@ -245,8 +245,8 @@
         font-weight: 900;
         /* letter-spacing: 9px; */
       
-        animation-name: moveInRight;
-        animation-duration: 3s;
+        /* animation-name: moveInRight;
+        animation-duration: 3s; */
       }
       
       .AutoKritiEvent-text1{

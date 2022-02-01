@@ -12,11 +12,11 @@ function AutokritiCheckEvent() {
   }, []);
   //  console.log(variable.dataarray);
   return (
-    <div id="acc_container">
+    <div id="acc_container" >
       <div id="acc_insidecontainer">
         <div id="acc_first" className="acc_component">
           <h2 className="CheckOurEvents-heading">
-            Check out our <b className="CheckOurEvents-subheading"> EVENTS </b>
+            <b className="CheckOurEvents-subheading">e</b> - Autorkriti 2.0 <b className="CheckOurEvents-subheading"> Journey </b>
           </h2>
         </div>
         <div id="acc_second" className="acc_component">
