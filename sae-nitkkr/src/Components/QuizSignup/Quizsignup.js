@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaInfoCircle } from "react-icons/fa";
 
 import "./Quizsignup.css";
+
 import db from "../../Firebase.js";
 import {
   collection,
@@ -10,8 +11,10 @@ import {
   doc,
   setDoc,
 } from "firebase/firestore";
+
 import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer(black)/FooterBlack";
+
 function Quizsignup() {
   function i_information_visible()
   {
@@ -219,7 +222,7 @@ function Quizsignup() {
             ₹ &nbsp; Pay Now
           </button></div>
           <div id="i_button_content">
-              <h4>Referal Code Must be correct Code Must be correct</h4>
+              <h4>Enter Referal Code only if you are applying through an Ambassador</h4>
             </div>
            </div>
           <div className="field">
@@ -258,11 +261,17 @@ function Quizsignup() {
             </p>
             <p className="instruction_para">
               * After clicking on Pay, <b>NOTE PAYMENT_ID </b>you get from
-              RazorPay and add it to Payment_ID Field
+              RazorPay and add it to Payment_ID Field.
+            </p>
+            <p className="instruction_para">
+              * Your Registration is incomplete without the valid Payment_Id entered
             </p>
             <p className="instruction_para">
               * Payment_Id Field will be <b>activated</b> when payment is
               made.
+            </p>
+            <p className="instruction_para">
+              * Referal IDs are case-sensitive
             </p>
           </div>
           <br />
@@ -292,7 +301,9 @@ function submit() {
   var email = document.getElementById("amb_email");
   var referalcode = document.getElementById("referal_code");
   var transaction = document.getElementById("transaction");
+  var dateOfSubmission = new Date().toLocaleString() + "";
   const docdata = {
+    dateOfSubmission: dateOfSubmission,
     studentName: studentName.value,
     collegeName: collegeName.value,
     branch: branch.value,
