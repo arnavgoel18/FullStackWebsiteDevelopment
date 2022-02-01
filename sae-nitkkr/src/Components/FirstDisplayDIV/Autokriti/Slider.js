@@ -1,25 +1,11 @@
-import React, {useState} from 'react'
+import React from 'react'
+import { useState, useEffect } from 'react';
 import './Slider.css'
 import BtnSlider from './BtnSlider'
 // import dataSlider from './dataSlider'
 import auto1 from './auto1.png'
 
 export default function Slider() {
-
-    const [slideIndex, setSlideIndex] = useState(1)
-
-    const nextSlide = () => {
-        if(slideIndex !== dataSlider.length){
-            setSlideIndex(slideIndex + 1)
-        } 
-        else if (slideIndex === dataSlider.length){
-            setSlideIndex(1)
-        }
-    }
-    setTimeout(() => {
-        nextSlide();
-    }, 4000);
-
     const dataSlider = [
         {
           id: 1,
@@ -60,6 +46,33 @@ export default function Slider() {
         setSlideIndex(index)
     }
 
+    const [slideIndex, setSlideIndex] = useState(1)
+
+    const nextSlide = () => {
+        if(slideIndex !== dataSlider.length){
+            setSlideIndex(slideIndex + 1)
+        } 
+        else if (slideIndex === dataSlider.length){
+            setSlideIndex(1)
+        }
+    }
+    useEffect(() => {
+        const timer = setTimeout(() => {
+          setSlideIndex((preValue) => {
+            if (preValue < dataSlider.length ){
+               return preValue + 1
+              }
+            else{
+              return 1;}
+          })
+        }, 4000);
+        return () => clearTimeout(timer)
+    })
+    // setTimeout(() => {
+    //     nextSlide();
+    // }, 4000);
+
+    
     return (
         <div className="container-slider">
             {dataSlider.map((element, index) => {
