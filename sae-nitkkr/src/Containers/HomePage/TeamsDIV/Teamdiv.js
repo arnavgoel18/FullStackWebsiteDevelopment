@@ -1,9 +1,14 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import "./TeamDiv.css";
+import Aos from"aos";
+import"aos/dist/aos.css";
 
 function Teamdiv() {
+  useEffect(()=>{
+    Aos.init({duration:3000});
+  },[])
 
   const [open, setOpen] = useState(false);
 
@@ -20,10 +25,14 @@ function Teamdiv() {
  
   return(
    <div id="large_box">
-      <div id="acc" className="participate" onClick={lastworkacc} >
+      <div data-aos="fade-right"
+      data-aos-duration="200"
+      data-aos-offset="300" id="acc" className="participate" onClick={lastworkacc} >
         TEAM <br/>ACCELERONS
       </div>
-        <div id="nitrox" className="participate" onClick={lastworknitrox} >
+        <div data-aos="fade-left"
+        data-aos-duration="200"
+      data-aos-offset="300" id="nitrox" className="participate" onClick={lastworknitrox} >
       TEAM <br/> NITROX
       </div>
     </div>
