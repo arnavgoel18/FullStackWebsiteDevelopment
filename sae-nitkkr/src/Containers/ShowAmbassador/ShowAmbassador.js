@@ -1,13 +1,18 @@
 import React, { useState, useEffect } from "react";
-import "./ShowAmbassador.css";
 import { Redirect } from "react-router-dom";
+
+import "./ShowAmbassador.css";
+
 import NavBar from "../../Components/NavBar/NavBar";
 import Footer from "../../Components/Footer/Footer(black)/FooterBlack";
+
 import db from "../../Firebase";
 import {
   collection,
   getDocs,
 } from "firebase/firestore";
+
+import {MdLogout} from 'react-icons/md'
 
 export default function ShowAmbassador() {
   const params = new URL(document.location).searchParams;
@@ -20,7 +25,6 @@ export default function ShowAmbassador() {
   const [ownReferrals, setOwnreferrals] = useState([])
 
   async function getAmbRefInfo() {
-    console.log("aad")
     const autInfo = collection(db, "autokritiRegistration");
     const autInfo_doc = await getDocs(autInfo);
     autData = autInfo_doc.docs.map((doc) => doc.data());
@@ -84,20 +88,20 @@ export default function ShowAmbassador() {
               })
             }
           </div>
-          <div className="general-logout"
+          <div className="general-logout" title="logout"
             onClick={(e) => {
               localStorage.removeItem("token");
               localStorage.removeItem("username");
               localStorage.removeItem("password");
               window.location.href = "/Ambassador/login";
             }} style={{ cursor: "pointer" }}>
-            Logout
+            <MdLogout/>
           </div>
         </div>
 
         <div className="ambFlexMain">
           <div className="ambassador-own-referrals-div">
-            <div className="amb_yourRef">your referral count: {ownReferrals.length}</div>
+            <div className="amb_yourRef">Your Referal Count: {ownReferrals.length}</div>
             <div className="showAmbDiv">
               {autData.map((data, i) => {
                 if (data.referalcode == username) {
@@ -118,12 +122,23 @@ export default function ShowAmbassador() {
             <div className="amb_leader_heading">Leaderboard</div>
             <div className="amb_leaderboard">
               {stuData.map((studata, i) => {
-                return (
-                  <div className="ambFlex" key={i}>
-                    <div className="ambLeaderName">{studata.studentName}</div>
-                    <div className="ambLeaderRefer">{studata.numberReferrals}</div>
-                  </div>
-                );
+                if(i < 3){
+                  return (
+                    <div className="ambFlex" key={i}>
+                      <div className="ambLeaderName" style={{background: '#33A129', color: '#fff'}}>{studata.studentName}</div>
+                      <div className="ambLeaderRefer" style={{background: '#33A129', color: '#fff'}}>{studata.numberReferrals}</div>
+                    </div>
+                  );
+                } 
+                else{
+                  return (
+                    <div className="ambFlex" key={i}>
+                      <div className="ambLeaderName" style={{background: '#C4C4C4'}}>{studata.studentName}</div>
+                      <div className="ambLeaderRefer" style={{background: '#C4C4C4'}}>{studata.numberReferrals}</div>
+                    </div>
+                  );
+                }
+                
               })}
             </div>
           </div>

@@ -1,10 +1,13 @@
 import React from "react";
+import {Link} from 'react-router-dom';
+
 import Roles from "./Roles";
+
 import FormContainer from './FormContainer'
 import Benifits from "./Benifits";
 import './BrandAmbassador.css'
-import $ from 'jquery';
 
+import $ from 'jquery';
 
 export default function Ap() {
   
@@ -45,6 +48,11 @@ export default function Ap() {
           </div>
           <FormContainer />
         </div>
+      </div>
+      <div className="ambassador-login-chance">
+        <Link to="/ambassador/login">
+          <div className="ambassador-login_btn">View Ambassador Progress</div>
+        </Link>
       </div>
     </div>
   </>);
