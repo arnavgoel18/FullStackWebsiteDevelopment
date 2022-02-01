@@ -27,13 +27,14 @@ import RegistrationForm from "./Containers/Autokriti/RegistrationForm/Registrati
 import Quizsignup from "./Components/QuizSignup/Quizsignup";
 import ShowAmbassador from "./Containers/ShowAmbassador/ShowAmbassador";
 import ShowAmbLogin from "./Containers/ShowAmbassador/ShowAmbLogin"; 
-
+import CheckState from './Components/AutokritiEvent/Context/CheckState';
 //import RegistrationForm from "./Containers/Autokriti/RegistrationForm/RegistrationForm";
 
 function App() {
   document.title = "SAE NIT Kurukshetra";
   return (
     <>
+    <CheckState>
       <Router>
         <Switch>
           <Route path="/" exact component={() => <HomePage />} />
@@ -63,6 +64,7 @@ function App() {
           <Route path="/Ambassador/login" exact component={()=><ShowAmbLogin/>}/>
         </Switch>
       </Router>
+      </CheckState>
     </>
   );
 }

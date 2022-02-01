@@ -1,46 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useContext } from "react";
 import "./AutokritiCheckEvent.css";
 import Autokritiacc_card from "../Autokritiacc_card/Autokritiacc_card";
+import CheckContext from "../Context/CheckContext";
+
 function AutokritiCheckEvent() {
-  const dataarray = [
-    {
-      id: "1",
-      title: "Session #1",
-      description:
-        "This 5 days workshop begins with an overview of vehicle, followed by the power-flow through drivetrain,steering system&braking system.By the end of the day,you'll have deep insight of how your vehicle works"
-    },
-    {
-        id: "2",
-        title: "Session #2",
-        description:
-          "This 5 days workshop begins with an overview of vehicle, followed by the power-flow through drivetrain,steering system&braking system.By the end of the day,you'll have deep insight of how your vehicle works"
-    },
-    {
-        id: "3",
-        title: "Modelling Session 1",
-        description:
-          "This 5 days workshop begins with an overview of vehicle, followed by the power-flow through drivetrain,steering system&braking system.By the end of the day,you'll have deep insight of how your vehicle works"
-    },
-    {
-        id: "4",
-        title: "Modelling Session 2",
-        description:
-          "This 5 days workshop begins with an overview of vehicle, followed by the power-flow through drivetrain,steering system&braking system.By the end of the day,you'll have deep insight of how your vehicle works"
-    },
-    
-    {
-        id: "5",
-        title: "Project",
-        description:
-          "This 5 days workshop begins with an overview of vehicle, followed by the power-flow through drivetrain,steering system&braking system.By the end of the day,you'll have deep insight of how your vehicle works"
-    },
-  ];
+  let variable = useContext(CheckContext);
+
+  useEffect(() => {
+    variable.getalldata();
+  }, []);
+  //  console.log(variable.dataarray);
   return (
     <div id="acc_container">
       <div id="acc_insidecontainer">
         <div id="acc_first" className="acc_component">
-          <h2 className="AutokritiCheckOurEvents-heading">
-            Check out our <b className="AutokritiCheckOurEvents-subheading"> EVENTS </b>
+          <h2 className="CheckOurEvents-heading">
+            Check out our <b className="CheckOurEvents-subheading"> EVENTS </b>
           </h2>
         </div>
         <div id="acc_second" className="acc_component">
@@ -55,15 +31,27 @@ function AutokritiCheckEvent() {
           automotive world & also a direction for further exploration.
         </div>
         <div id="acc_third" className="acc_component">
-            <div id="acc_card_container">
-                {dataarray.map((element)=>
-                {
-                return(
-                    <Autokritiacc_card id={element.id} title={element.title} description={element.description}/>
-                )
-                })}
-            
-            </div>
+          <div id="acc_card_container">
+            {variable.backupdata.map((element) => {
+              return (
+                <Autokritiacc_card
+                  arrow={element.arrownature}
+                  id={element.id}
+                  visibility={element.show}
+                  title={element.title}
+                  description={element.description}
+                />
+              );
+            })}
+
+            {/* <Autokritiacc_card/>
+           
+            <Autokritiacc_card/>
+          
+            <Autokritiacc_card/>
+        
+            <Autokritiacc_card/> */}
+          </div>
           {/* Knowledge could be gained via two ways- by the path of prolong
           experimentation and trial and error orfrom a mentor who could show you
           a circumscribed path to enlightenment.Isn't it better to learn the
