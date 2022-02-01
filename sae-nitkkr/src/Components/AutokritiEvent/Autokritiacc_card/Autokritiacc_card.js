@@ -11,7 +11,7 @@ function Autokritiacc_card(props) {
 
   return (
     <div id="autokriti_acc_card">
-      <div id="acc_card_title" background={props.color}>
+      <div id="acc_card_title" >
         <div id="acc_card_title_sentence">{props.title}</div>
         <div id="acc_card_title_sign">
           {props.visibility == false ? (

@@ -3,18 +3,8 @@ import { useContext } from "react";
 import "./AutokritiCheckEvent.css";
 import Autokritiacc_card from "../Autokritiacc_card/Autokritiacc_card";
 import CheckContext from "../Context/CheckContext";
-import $ from 'jquery';
 
-export default function AutokritiCheckEvent() {
-
-  $(document).ready(function () {
-    if(window.location.href.includes('?acc_container')){
-      $('html, body').animate({
-        scrollTop: $('#acc_container').offset().top
-      }, 'slow');
-    }
-});
-
+function AutokritiCheckEvent() {
   let variable = useContext(CheckContext);
 
   useEffect(() => {
@@ -50,7 +40,6 @@ export default function AutokritiCheckEvent() {
                   visibility={element.show}
                   title={element.title}
                   description={element.description}
-                  color="#000"
                 />
               );
             })}
@@ -93,3 +82,4 @@ export default function AutokritiCheckEvent() {
   );
 }
 
+export default AutokritiCheckEvent;
