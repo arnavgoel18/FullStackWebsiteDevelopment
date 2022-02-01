@@ -1,10 +1,13 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import "./Autokritiacc_card.css";
 
 import CheckContext from "../Context/CheckContext";
 
 function Autokritiacc_card(props) {
   let k = useContext(CheckContext);
+  useEffect(() => {
+    k.setvisibility(true);
+  }, [props.visibility]);
 
   return (
     <div id="autokriti_acc_card">

@@ -28,42 +28,44 @@ import Quizsignup from "./Components/QuizSignup/Quizsignup";
 import ShowAmbassador from "./Containers/ShowAmbassador/ShowAmbassador";
 import ShowAmbLogin from "./Containers/ShowAmbassador/ShowAmbLogin"; 
 import CheckState from './Components/AutokritiEvent/Context/CheckState';
+
 //import RegistrationForm from "./Containers/Autokriti/RegistrationForm/RegistrationForm";
 
 function App() {
   document.title = "SAE NIT Kurukshetra";
   return (
     <>
-    <CheckState>
-      <Router>
-        <Switch>
-          <Route path="/" exact component={() => <HomePage />} />
-          <Route path="/autokriti" exact component={() => <Autokriti />} />
-          <Route path="/ambassador" exact component={() => <Ambassador />} />
-          <Route path="/accelerons" exact component={() => <Accelerons />} />
-          <Route path="/nitrox" exact component={() => <Nitrox />} />
-          <Route path="/contactus" exact component={() => <ContactUS/>} />
-          <Route path="/sponsors" exact component={() => <Sponsors/>}/>
+      <CheckState>
+        <Router>
+          <Switch>
+            <Route path="/" exact component={() => <HomePage />} />
+            <Route path="/autokriti" exact component={() => <Autokriti />} />
+            <Route path="/ambassador" exact component={() => <Ambassador />} />
+            <Route path="/accelerons" exact component={() => <Accelerons />} />
+            <Route path="/nitrox" exact component={() => <Nitrox />} />
+            <Route path="/contactus" exact component={() => <ContactUS/>} />
+            <Route path="/sponsors" exact component={() => <Sponsors/>}/>
 
-          <Route path="/blogs" exact component={() => <Blogs/>}/>
-          <Route path="/blogs/leftvsright" exact component={() => <Topic1/>}/>
-          
-          <Route path="/admin/login" exact component={() => <Login/>}/>
-          <Route path="/admin/actions" exact component={() => <AdminActions/>}/>
-          <Route path="/admin/ambassadorInfo" exact component={() => <DisplayAmb/>}/>
-          <Route path="/admin/contactUsInfo" exact component={() => <DisplayContact/>}/>
-          <Route path="/admin/finalAmbassador" exact component={() => <DisplayFinalAmbassador/>}/>
-          <Route path="admin/signUpSheet" exact component={() => <DisplaySignUpSheet/>}/>
-          <Route path="admin/quizResponses" exact component={() => <DisplayQuizResponses/>}/>
+            <Route path="/blogs" exact component={() => <Blogs/>}/>
+            <Route path="/blogs/leftvsright" exact component={() => <Topic1/>}/>
+            
+            <Route path="/admin/login" exact component={() => <Login/>}/>
+            <Route path="/admin/actions" exact component={() => <AdminActions/>}/>
+            <Route path="/admin/ambassadorInfo" exact component={() => <DisplayAmb/>}/>
+            <Route path="/admin/contactUsInfo" exact component={() => <DisplayContact/>}/>
+            <Route path="/admin/finalAmbassador" exact component={() => <DisplayFinalAmbassador/>}/>
+            <Route path="admin/signUpSheet" exact component={() => <DisplaySignUpSheet/>}/>
+            <Route path="admin/quizResponses" exact component={() => <DisplayQuizResponses/>}/>
 
-          <Route path="/admin/displayBlogs" exact component={() => <DisplayBlogs/>}/>
-          <Route path="/admin/displayBlogs/editor" exact component={() => <QuillEditor/>}/>
-          <Route path="/registrationForm" exact component={()=><RegistrationForm/>}/>
-          <Route path="/autokriti/register" exact component={() => <Quizsignup/>}/>
-          <Route path="/ShowAmbassador" exact component={()=><ShowAmbassador/>}/>
-          <Route path="/Ambassador/login" exact component={()=><ShowAmbLogin/>}/>
-        </Switch>
-      </Router>
+            <Route path="/admin/displayBlogs" exact component={() => <DisplayBlogs/>}/>
+            <Route path="/admin/displayBlogs/editor" exact component={() => <QuillEditor/>}/>
+            <Route path="/registrationForm" exact component={()=><RegistrationForm/>}/>
+            <Route path="/autokriti/register" exact component={() => <Quizsignup/>}/>
+
+            <Route path="/ShowAmbassador" exact component={()=><ShowAmbassador/>}/>
+            <Route path="/Ambassador/login" exact component={()=><ShowAmbLogin/>}/>
+          </Switch>
+        </Router>
       </CheckState>
     </>
   );
