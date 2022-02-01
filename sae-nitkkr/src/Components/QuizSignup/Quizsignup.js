@@ -224,7 +224,7 @@ function Quizsignup() {
            </div>
           <div className="field">
             {" "}
-            <span className="payform-label"> Transaction ID </span>
+            <span className="payform-label"> Payment ID </span>
             <br />
             <input
               id="transaction"
@@ -257,11 +257,11 @@ function Quizsignup() {
               confirmation on that email
             </p>
             <p className="instruction_para">
-              * After clicking on Pay, <b>NOTE TRANSACTION ID </b>you get from
-              RazorPay and add it to Transaction ID Field
+              * After clicking on Pay, <b>NOTE PAYMENT_ID </b>you get from
+              RazorPay and add it to Payment_ID Field
             </p>
             <p className="instruction_para">
-              * Transaction ID Field will be <b>activated</b> when payment is
+              * Payment_Id Field will be <b>activated</b> when payment is
               made.
             </p>
           </div>
