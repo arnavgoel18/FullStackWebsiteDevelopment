@@ -10,6 +10,7 @@ import {
   Timestamp,
   doc,
   setDoc,
+  updateDoc,
 } from "firebase/firestore";
 
 import NavBar from "../NavBar/NavBar";
@@ -49,6 +50,8 @@ function Quizsignup() {
   };
 
   var [stuData, setStuData] = useState([]);
+  var [refData, setRefData] = useState([]);
+  var [docIdData, setDocIdData] = useState([]);
 
   const routeChange = async (event) => {
     event.preventDefault();
@@ -59,17 +62,25 @@ function Quizsignup() {
       const stuInfo = collection(db, "finalStudentAmbassador");
       const stuInfo_doc = await getDocs(stuInfo);
       stuData = stuInfo_doc.docs.map((doc) => doc.data().referralCode);
+      refData = stuInfo_doc.docs.map((doc) => doc.data().numberReferrals);
+      docIdData = stuInfo_doc.docs.map((doc) => doc.id);
       setStuData(stuData);
+      setRefData(refData);
+      setDocIdData(docIdData);
+      console.log(docIdData);
+      console.log("Check");
+      console.log(refData);
     }
     
     getFinalAmbInfo();
-    
+
     if (name && email && phone && college && branch && semester) {//if all fields are entered
       if (document.getElementById("agree").checked) {
         if(referal){
           var valid = false;
           for(var i = 0;i < stuData.length;i++){
             if(referal == stuData[i]){
+
               valid = true;
               break;
             }
@@ -339,86 +350,103 @@ function Quizsignup() {
       <Footer/>
     </>
   );
-}
 
-function submit() {
-  var studentName = document.getElementById("amb_name");
-  var collegeName = document.getElementById("amb_college");
-  var branch = document.getElementById("amb_branch");
-  var semester = document.getElementById("amb_semester");
-  var phone = document.getElementById("amb_phone");
-  var email = document.getElementById("amb_email");
-  var referalcode = document.getElementById("referal_code");
-  var transaction = document.getElementById("transaction");
-  var dateOfSubmission = new Date().toLocaleString() + "";
-  const docdata = {
-    dateOfSubmission: dateOfSubmission,
-    studentName: studentName.value,
-    collegeName: collegeName.value,
-    branch: branch.value,
-    semester: semester.value,
-    phone: phone.value,
-    email: email.value,
-    referalcode: referalcode.value,
-    transaction: transaction.value,
-  };
+  function submit() {
+    var studentName = document.getElementById("amb_name");
+    var collegeName = document.getElementById("amb_college");
+    var branch = document.getElementById("amb_branch");
+    var semester = document.getElementById("amb_semester");
+    var phone = document.getElementById("amb_phone");
+    var email = document.getElementById("amb_email");
+    var referalcode = document.getElementById("referal_code");
+    var transaction = document.getElementById("transaction");
+    var dateOfSubmission = new Date().toLocaleString() + "";
+    
+    const docdata = {
+      dateOfSubmission: dateOfSubmission,
+      studentName: studentName.value,
+      collegeName: collegeName.value,
+      branch: branch.value,
+      semester: semester.value,
+      phone: phone.value,
+      email: email.value,
+      referalcode: referalcode.value,
+      transaction: transaction.value,
+    };
+  
+    validateForm(docdata);
+  }
+  
+  //form validation
+  function validateForm(docdata) {
+    if (
+      docdata.studentName == "" ||
+      docdata.collegeName == "" ||
+      docdata.branch == "" ||
+      docdata.phone == "" ||
+      docdata.email == "" ||
+      docdata.transaction == ""
+    ) {
+      alert("Please fill up the required fields.");
+    } else if (docdata.phone.length != 10) {
+      alert("phone number should be of length 10.");
+    } else if (
+      !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(docdata.email)
+    ) {
+      alert("Please enter a valid email address.");
+    } else {
+      setInfo(docdata);
+    }
+  }
+  
+  function deletedata() {
+    var studentName = document.getElementById("amb_name");
+    var collegeName = document.getElementById("amb_college");
+    var branch = document.getElementById("amb_branch");
+    var semester = document.getElementById("amb_semester");
+    var phone = document.getElementById("amb_phone");
+    var email = document.getElementById("amb_email");
+    var referalcode = document.getElementById("referal_code");
+    var transaction = document.getElementById("transaction");
+    studentName.value = null;
+    collegeName.value = null;
+    branch.value = null;
+    semester.value = null;
+    phone.value = null;
+    email.value = null;
+    referalcode.value = null;
+    transaction.value = null;
+  }
+  
+  //save to database
+  async function setInfo(docdata) {
+    document.getElementById("payform-button2").disabled = true;
+    document.getElementById("payform-button2").style.backgroundColor = "gray";
+    
+    //check if referal code is present
+    for(var i = 0;i < stuData.length;i++){
+      if(docdata.referalcode == stuData[i]){
+        refData[i] += 1;
+        await updateDoc(doc(db, "finalStudentAmbassador", docIdData[i]), {
+          numberReferrals: refData[i]
+        });
+      }
+    }
 
-  validateForm(docdata);
-}
-
-//form validation
-function validateForm(docdata) {
-  if (
-    docdata.studentName == "" ||
-    docdata.collegeName == "" ||
-    docdata.branch == "" ||
-    docdata.phone == "" ||
-    docdata.email == "" ||
-    docdata.transaction == ""
-  ) {
-    alert("Please fill up the required fields.");
-  } else if (docdata.phone.length != 10) {
-    alert("phone number should be of length 10.");
-  } else if (
-    !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(docdata.email)
-  ) {
-    alert("Please enter a valid email address.");
-  } else {
-    setInfo(docdata);
+  
+    var timestamp = String(new Date().getTime());
+    await setDoc(doc(db, "autokritiRegistration", timestamp), docdata);
+    
+    alert("Congratulations! Your information saved successfully.");
+    deletedata();
+  
+    document.getElementById("payform-button2").disabled = false;
+    document.getElementById("payform-button2").style.backgroundColor =
+      "#E9910DFC";
+    // window.location.reload();
   }
 }
 
-function deletedata() {
-  var studentName = document.getElementById("amb_name");
-  var collegeName = document.getElementById("amb_college");
-  var branch = document.getElementById("amb_branch");
-  var semester = document.getElementById("amb_semester");
-  var phone = document.getElementById("amb_phone");
-  var email = document.getElementById("amb_email");
-  var referalcode = document.getElementById("referal_code");
-  var transaction = document.getElementById("transaction");
-  studentName.value = null;
-  collegeName.value = null;
-  branch.value = null;
-  semester.value = null;
-  phone.value = null;
-  email.value = null;
-  referalcode.value = null;
-  transaction.value = null;
-}
 
-//save to database
-async function setInfo(docdata) {
-  document.getElementById("payform-button2").disabled = true;
-  document.getElementById("payform-button2").style.backgroundColor = "gray";
-  var timestamp = String(new Date().getTime());
-  await setDoc(doc(db, "autokritiRegistration", timestamp), docdata);
-  alert("Congratulations! Your information saved successfully.");
-  deletedata();
-  document.getElementById("payform-button2").disabled = false;
-  document.getElementById("payform-button2").style.backgroundColor =
-    "#E9910DFC";
-  // window.location.reload();
-}
 
 export default Quizsignup;
