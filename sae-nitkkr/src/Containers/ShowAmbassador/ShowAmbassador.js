@@ -130,13 +130,18 @@ export default function ShowAmbassador() {
                     </div>
                   );
                 } 
-                else{
+                else if(i < 5){
                   return (
                     <div className="ambFlex" key={i}>
                       <div className="ambLeaderName" style={{background: '#C4C4C4'}}>{studata.studentName}</div>
                       <div className="ambLeaderRefer" style={{background: '#C4C4C4'}}>{studata.numberReferrals}</div>
                     </div>
                   );
+                }
+                else{
+                  return(
+                    <></>
+                  )
                 }
                 
               })}
