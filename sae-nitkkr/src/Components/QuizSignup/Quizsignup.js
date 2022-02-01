@@ -45,13 +45,13 @@ function Quizsignup() {
     const { name, email, phone, college, branch, semester, referal } = userData;
     if (name && email && phone && college && branch && semester) {
       if (document.getElementById("agree").checked) {
-        window.open("");
+        window.open("https://rzp.io/l/e87mGYT");
         document.getElementById("payform-button2").disabled = false;
         document.getElementById("transaction").disabled = false;
         return true;
       } else {
         alert(
-          "Please tick on agree to the Terms and Conditions and Privacy Policy"
+          "Please tick the checkbox under instructions to proceed"
         );
         return false;
       }
@@ -94,7 +94,7 @@ function Quizsignup() {
     <>
     <NavBar/>
     <br/>
-      <p className="payform-heading">REGISTER FOR QUIZ</p>
+      <p className="payform-heading">REGISTRATION FORM</p>
       <div className="payform-container">
         <div method="POST" className="payform-form">
           <div className="field">
@@ -351,7 +351,7 @@ async function setInfo(docdata) {
   document.getElementById("payform-button2").disabled = true;
   document.getElementById("payform-button2").style.backgroundColor = "gray";
   var timestamp = String(new Date().getTime());
-  await setDoc(doc(db, "quizsignup", timestamp), docdata);
+  await setDoc(doc(db, "autokritiRegistration", timestamp), docdata);
   alert("Congratulations! Your information saved successfully.");
   deletedata();
   document.getElementById("payform-button2").disabled = false;

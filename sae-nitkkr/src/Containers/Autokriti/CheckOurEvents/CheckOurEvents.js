@@ -1,6 +1,8 @@
 import "./CheckOurEvents.css";
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import Quiz from "../../../Assets/CheckOurEvents/quiz.jpg";
+import Autokriti2 from "../../../Assets/CheckOurEvents/Autokriti2.png";
+import DesignEvent from "../../../Assets/CheckOurEvents/DesignEvent.png";
 
 function CheckEvents() {
   return (
@@ -8,22 +10,32 @@ function CheckEvents() {
       <div className="CheckOurEvents-main">
         <div className="CheckOurEvents-main_container">
           <h2 className="CheckOurEvents-heading">
-            Check out our <b className="CheckOurEvents-subheading"> EVENTS </b></h2>
+            Check out our <b className="CheckOurEvents-subheading"> EVENTS </b>
+          </h2>
           <div className="CheckOurEvents-events">
-            <Session title="Quiz"
+            <Session
+              title="Quiz"
               status="Venue: D2C"
               date="Date: 29-January-2022"
-              image={Quiz} />
-              {/* <Session title="Vehicle Design Competition"
-              status=""
-              date="Date: 7-Febuary-2022"
-              image={DesignEvent}/> */}
+              image={Quiz}
+              url="https://dare2compete.com/p/quiz-on-wheelsautomotive-quiz-national-institute-of-technology-nit-kurukshetra-256604?lb=rt7C3ad/"
+            />
+            {/* <Session title="Autokriti 2.0"
+              status="Venue: TBC"
+              date="Date: Coming Soon"
+              image={Autokriti2}/> */}
+            <Session
+              title="Design Event"
+              status="Venue: Online"
+              date="1 Week to Go"
+              image={DesignEvent}
+              url="/autokriti/register"
+            />
 
             {/* <Session title="Understanding Transmission"
           status="online"
           date="24th-January-2021"
           image={poster}/> */}
-
           </div>
           <div className="CheckOurEvents-showmore">
             {/* <p className="CheckOurEvents-heading1">
@@ -49,20 +61,16 @@ function Session(props) {
           <p>
             {props.status}
             <br />
-            {props.date}  
+            {props.date}
           </p>
 
           {/* <div className="CheckOurEvents-register"></div> */}
-          <a className="CheckOurEvents-register"
-          href="https://dare2compete.com/p/quiz-on-wheelsautomotive-quiz-national-institute-of-technology-nit-kurukshetra-256604?lb=rt7C3ad/"
-          target="_blank">
-            <button
-              id="event-register"
-
-            >
-              Register Now
-
-            </button>
+          <a
+            className="CheckOurEvents-register"
+            href={props.url}
+            target="_blank"
+          >
+            <button id="event-register">Register Now</button>
           </a>
         </div>
       </div>
@@ -70,4 +78,4 @@ function Session(props) {
   );
 }
 
-export default CheckEvents
+export default CheckEvents;
