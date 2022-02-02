@@ -29,6 +29,8 @@ import ShowAmbassador from "./Containers/ShowAmbassador/ShowAmbassador";
 import ShowAmbLogin from "./Containers/ShowAmbassador/ShowAmbLogin"; 
 import CheckState from './Components/AutokritiEvent/Context/CheckState';
 
+import Autokriti2 from './Containers/Autokriti/Autokriti2/Autorkriti2'
+
 //import RegistrationForm from "./Containers/Autokriti/RegistrationForm/RegistrationForm";
 
 function App() {
@@ -64,6 +66,8 @@ function App() {
 
             <Route path="/ShowAmbassador" exact component={()=><ShowAmbassador/>}/>
             <Route path="/Ambassador/login" exact component={()=><ShowAmbLogin/>}/>
+
+            <Route path="/e-Autokriti2.0" exact component={()=><Autokriti2/>}/>
           </Switch>
         </Router>
       </CheckState>

@@ -14,24 +14,19 @@ function CheckEvents() {
           </h2>
           <div className="CheckOurEvents-events">
             <Session
-              title="Quiz"
-              status="Venue: D2C"
-              date="Date: 29-January-2022"
-              image={Quiz}
-              url="https://dare2compete.com/p/quiz-on-wheelsautomotive-quiz-national-institute-of-technology-nit-kurukshetra-256604?lb=rt7C3ad/"
-            />
-            {/* <Session title="Autokriti 2.0"
-              status="Venue: TBC"
-              date="Date: Coming Soon"
-              image={Autokriti2}/> */}
-            <Session
               title="Autokriti 2.0"
               status="Venue: Online"
               date="Starts 12th Feb On Weekends"
               image={Au2Poster}
               url="/autokriti/register"
             />
-
+            <Session
+              title="Quiz"
+              status="Venue: D2C"
+              date="Date: 29-January-2022"
+              image={Quiz}
+              url="https://dare2compete.com/p/quiz-on-wheelsautomotive-quiz-national-institute-of-technology-nit-kurukshetra-256604?lb=rt7C3ad/"
+            />
             {/* <Session title="Understanding Transmission"
           status="online"
           date="24th-January-2021"
