@@ -16,8 +16,8 @@ function VerticalTimeline(){
                     boxShadow: '0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)',
                     }}
                 >
-                    <h3 style={{ color: '#61b8ff', marginBottom: '15px' }}>Day 1</h3>
-                    <h4 style={{ color: '#61b8ff', marginBottom: '15px' }}>Introduction</h4>
+                    <h3 style={{ color: 'blue', marginBottom: '15px' }}>Day 1</h3>
+                    <h4 style={{ color: 'blue', marginBottom: '15px' }}>Introduction</h4>
                     <p>
                         Starting with the various components composing an automobile’s transmission, Day 1 involves- <br/><br/>
                         1. Relation between power, torque and rpm. <br/><br/>
@@ -38,8 +38,8 @@ function VerticalTimeline(){
                     boxShadow: '0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)',
                     }}
                 >
-                    <h3 style={{ color: '#61b8ff', marginBottom: '15px' }}>Day 2</h3>
-                    <h4 style={{ color: '#61b8ff', marginBottom: '15px' }}>Mechanical Fundamentals</h4>
+                    <h3 style={{ color: 'blue', marginBottom: '15px' }}>Day 2</h3>
+                    <h4 style={{ color: 'blue', marginBottom: '15px' }}>Fundamentals</h4>
                     <p>
                         Once we are thorough with the functioning of different units of a drivetrain, we'll move to the designing part. And the first step towards designing is the knowledge of what numbers we wish achieve from our machine i.e., Max Torque, power and rpm
                         No. of gears, etc. 
@@ -58,8 +58,8 @@ function VerticalTimeline(){
                     boxShadow: '0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)',
                     }}
                 >
-                    <h3 style={{ color: '#61b8ff', marginBottom: '15px'}}>Day 3</h3>
-                    <h4 style={{ color: '#61b8ff', marginBottom: '15px'}}>Modelling Fundamentals Part 1</h4>
+                    <h3 style={{ color: 'blue', marginBottom: '15px'}}>Day 3</h3>
+                    <h4 style={{ color: 'blue', marginBottom: '15px'}}>Modelling Fundamentals Part 1</h4>
                     <p>
                         With all the required data in hand, the next step is modelling of the parts. So, the succeeding session is entirely dedicated to CAD in SolidWorks. We’d go from basics of SolidWorks to 3D modelling and assembly of the components from previous session.
                     </p>
@@ -75,8 +75,8 @@ function VerticalTimeline(){
                     boxShadow: '0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)',
                     }}
                 >
-                    <h3 style={{ color: '#61b8ff', marginBottom: '15px'}}>Day 4</h3>
-                    <h4 style={{ color: '#61b8ff', marginBottom: '15px'}}>Modelling Fundamentals Part 2</h4>
+                    <h3 style={{ color: 'blue', marginBottom: '15px'}}>Day 4</h3>
+                    <h4 style={{ color: 'blue', marginBottom: '15px'}}>Modelling Fundamentals Part 2</h4>
                     <p>
                         Ensuing it will be a session on Ansys, encompassing the structural analysis of designed components. From meshing to material selection and selecting boundary conditions, the session will be hugely insightful. An another software added to your skillset!
                     </p>
@@ -92,8 +92,8 @@ function VerticalTimeline(){
                     boxShadow: '0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)',
                     }}
                 >
-                    <h3 style={{ color: '#61b8ff', marginBottom: '15px'}}>Day 4 Continued...</h3>
-                    <h4 style={{ color: '#61b8ff', marginBottom: '15px'}}>Modelling Fundamentals Part 2</h4>
+                    <h3 style={{ color: 'blue', marginBottom: '15px'}}>Day 4</h3>
+                    <h4 style={{ color: 'blue', marginBottom: '15px'}}>Modelling Fundamentals Part 2</h4>
                     <p>
                         And finally, you’ll get a hands on experience through a project involving implementing the learning from all 4 days. Wouldn’t it be exciting? When all is said and done, you’ll be in your own right to judge how a mechanism can be designed.
                     </p>
