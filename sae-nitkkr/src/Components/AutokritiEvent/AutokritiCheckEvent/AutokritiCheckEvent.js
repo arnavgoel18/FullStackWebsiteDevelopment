@@ -44,7 +44,14 @@ function AutokritiCheckEvent() {
           </h2>
         </div>
         <div id="acc_second" className="acc_component">
-          Knowledge could be gained in two ways- by the path of prolonged experimentation and trial and error or by a mentor who could show you a circumscribed path to enlightenment. Isn't it better to learn the pros & cons of a process from someone who has already traversed that path and have them oversee our mistakes? So here we are, SAE NIT Kurukshetra present e-Autokriti 2.0, where we would lay before you the technical know-how unfurled through years of experimentation & implementation. It will assure you a well-acknowledged welcome in the automotive world & also a direction for further exploration.
+        Knowledge could be gained via two ways- by the path of prolong experimentation and trial & error or from a mentor who could show you a circumscribed path to learning. Isn’t latter the better option? 
+        <br/><br/>
+        SAE NIT Kurukshetra, with its subsidiaries- Team Nitrox and Team Accelerons, is already deep into the technical bog of vehicle designing and manufacturing. And this is what makes Autokriti North India’s largest automobile workshop. The huge participation in previous years is the impetus behind our consistent effort to bring meticulous content for you each year. 
+        <br/><br/>
+        And so here we are with e-Autokriti 2.0, where we would lay before you the technical know-how unfurled through years of research & implementations. 
+        <br/><br/>
+        It’s a five day workshop which will give you an overall idea of working and designing of vehicle’s powertrain. 
+
         </div>
         <div id="acc_third" className="acc_component">
           <div id="acc_card_container" >
@@ -63,10 +70,10 @@ function AutokritiCheckEvent() {
          
         </div>
         <div id="acc_fourth" className="acc_component" >
-          This won't be the end,rather it's a start of something interesting,
-          And this workshop will give direction to your interest in automotive
-          industry. Thus join us for e-Autokriti 2.0, for as there's a point
-          where we begin; let this one be yours.
+        So it’s a start of something interesting. And this workshop will give direction to your interest in automotive industry. Thus join us for e- Autokriti 2.0, for as there’s a point where we begin; let this one be yours. 
+        <br/><br/>
+        📌 Certificates signed by professors of NIT Kurukshetra will be provided
+
         </div>
       </div>
       {/* <div className="acc_container_main">

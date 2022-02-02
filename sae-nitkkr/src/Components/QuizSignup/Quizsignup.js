@@ -268,7 +268,7 @@ function Quizsignup() {
                 <button onClick={routeChange} className="payform-button">₹ &nbsp; Pay Now</button>
               </div>
               <div id="i_button_content">
-                <h4>Enter Referal Code only if you are applying through an Ambassador</h4>
+                <h4>Enter only if you are applying through an ambassador (max. 10% off)</h4>
               </div>
           </div>
 
