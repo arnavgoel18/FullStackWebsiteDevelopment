@@ -33,14 +33,12 @@
 }
 #acc_second
 {
-    background-color: #E8FCFD;
+    /* background-color: #E8FCFD; */
     border-radius: 12px;
     height:max-content;
     font-family: 'Montserrat', sans-serif;
-    /* font-style: italic; */
     color: black;
     font-weight:500 ;
-    /* font-style: oblique; */
     font-size: 20px;
     padding-top: 8px;
     padding-bottom: 8px;
@@ -48,6 +46,7 @@
     padding-right: 10px;
     margin-left: 3%;
     margin-right: 3%;
+    box-shadow: 5px 5px 15px grey;
 }
 #acc_first
 {
@@ -80,9 +79,8 @@
 }
 #acc_fourth
 {
-    
-  
-    background-color: #E8FCFD;
+    box-shadow: 5px 5px 15px grey;
+    /* background-color: #E8FCFD; */
     border-radius: 12px;
     height:max-content;
     font-family: 'Montserrat', sans-serif;
