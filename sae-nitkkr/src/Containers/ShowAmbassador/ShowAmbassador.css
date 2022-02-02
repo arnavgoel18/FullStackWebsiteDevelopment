@@ -43,12 +43,13 @@
     overflow-y: scroll;
 }
 .showPersonAmb, .showPersonAmbCollege, .ambLeaderName, .ambLeaderRefer{
-    background-color: #CDCDCD;
+    background-color: #1a6b99;
     width:100%;
     margin: 0 0 0.3rem 0;
-    padding: 1rem 1rem 1rem 1rem;
+    padding: 10px;
     font-size: 1rem;
     font-weight:600;
+    color:white;
     text-align: center;
     
 }

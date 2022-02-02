@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaInfoCircle } from "react-icons/fa";
 
 import "./Quizsignup.css";
@@ -16,6 +16,7 @@ import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer(black)/FooterBlack";
 
 function Quizsignup() {
+  var [stuData, setStuData] = useState([]);
   function i_information_visible()
   {
     let k=document.getElementById('i_button_content');
@@ -44,25 +45,46 @@ function Quizsignup() {
   const postUserData = (event) => {
     name = event.target.name;
     value = event.target.value;
-
-    setUserData({ ...userData, [name]: value });
+    var valid = false;
+    if(name === 'referal') {
+      for(var i = 0;i < stuData.length;i++){
+        if(value == stuData[i]){
+          valid = true;
+          break;
+        }
+      }
+      if(valid === true){
+        document.querySelector('.referral_code_verified').style.display = 'inline'
+        event.target.setAttribute('readonly', 'true')
+        event.target.style.boxShadow = 'none'
+        event.target.style.border = 'none'
+        document.getElementById('original_price').style.textDecoration = 'line-through'
+        document.getElementById('original_price').style.color = 'red'
+        document.getElementById('discounted_price').style.color = 'blue'
+        document.getElementById('discounted_price').style.display = 'block'
+      }
+      else document.querySelector('.referral_code_verified').style.display = 'none'
+    }
+    setUserData({ ...userData, [name]: value });    
   };
 
-  var [stuData, setStuData] = useState([]);
 
+  async function getFinalAmbInfo() {
+    const stuInfo = collection(db, "finalStudentAmbassador");
+    const stuInfo_doc = await getDocs(stuInfo);
+    stuData = stuInfo_doc.docs.map((doc) => doc.data().referralCode);
+    
+    setStuData(stuData);
+  }
+
+  useEffect(()=>{
+    if(stuData.length === 0){
+      getFinalAmbInfo()
+    }
+  })
   const routeChange = async (event) => {
     event.preventDefault();
     const { name, email, phone, college, branch, semester, referal } = userData;
-
-    
-    async function getFinalAmbInfo() {
-      const stuInfo = collection(db, "finalStudentAmbassador");
-      const stuInfo_doc = await getDocs(stuInfo);
-      stuData = stuInfo_doc.docs.map((doc) => doc.data().referralCode);
-      setStuData(stuData);
-    }
-    
-    getFinalAmbInfo();
     
     if (name && email && phone && college && branch && semester) {//if all fields are entered
       if (document.getElementById("agree").checked) {
@@ -102,36 +124,6 @@ function Quizsignup() {
       alert("Please fill the data");
     }
   };
-  // connect with firebase
-  // const SubmitData = async (ev) => {
-  //   ev.preventDefault();
-  //   const { name, email, phone, college, branch, semester,referal,transaction } = userData;
-  //   if(transaction.length == 0){
-  //     alert("Please pay the fees and fill TransactinId")
-  //   }
-  //   else{
-  //     const res = fetch(
-  //       "https://tryingquiz-default-rtdb.firebaseio.com/userDataRecords.json",
-  //       {
-  //         method: "POST",
-  //         headers: {
-  //           "Content-Type": "application/json",
-  //         },
-  //         body: JSON.stringify({
-  //           name, email, phone, college, branch, semester,referal,transaction,
-  //         }),
-  //       }
-  //     );
-
-  //     if (res) {
-  //       setUserData({
-  //         name: "", email:"", phone:"", college:"", branch:"", semester:"",referal:"",transaction:""
-  //       });
-  //       alert("Data Stored");
-  //     }
-
-  //   }
-  // };
 
   return (
     <>
@@ -225,7 +217,9 @@ function Quizsignup() {
 
           <div className="field">
             {" "}
-            <span className="payform-label"> Referal Code(optional code) </span>
+            <span className="payform-label"> Referal Code(optional code) 
+            <img className='referral_code_verified' src="https://img.icons8.com/color/48/000000/checked-2--v1.png"/>
+            </span>
          
             <br />
            
@@ -244,17 +238,14 @@ function Quizsignup() {
                 onMouseOver={i_information_visible}
                 onMouseOut={i_information_nonvisible}
               />
-            </div>
-               
-            {/* &nbsp; &nbsp;
-              <img
-                src="https://img.icons8.com/ios/20/000000/info--v4.png"
-                style={{ margin: "-6px" }}
-              /> */
-            }
-            
+            </div>  
           </div>
 
+          <div id="pay_price">
+            <div id='pay_price_title'>Price: &nbsp;</div>
+            <div id='original_price'>&#8377; 699</div>
+            <div id='discounted_price'>&#8377; 629</div>
+          </div>
           <div id="pay_button">
               <div id="paynow">
                 <button onClick={routeChange} className="payform-button">₹ &nbsp; Pay Now</button>
@@ -263,7 +254,7 @@ function Quizsignup() {
                 <h4>Enter Referal Code only if you are applying through an Ambassador</h4>
               </div>
           </div>
-          
+
           <div className="field">
             {" "}
             <span className="payform-label"> Payment ID </span>

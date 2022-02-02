@@ -20,7 +20,7 @@ export default function ShowAmbassador() {
   const [ownReferrals, setOwnreferrals] = useState([])
 
   async function getAmbRefInfo() {
-    console.log("aad")
+    
     const autInfo = collection(db, "autokritiRegistration");
     const autInfo_doc = await getDocs(autInfo);
     autData = autInfo_doc.docs.map((doc) => doc.data());

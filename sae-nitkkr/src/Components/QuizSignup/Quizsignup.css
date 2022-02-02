@@ -182,16 +182,30 @@
 }
 
 .payform-checkbox{
-  /* margin: 0 auto ; */
-  /* border: 2px solid black; */
   display: flex;
   align-items: center;
 }
-/* #read-content
-{
-  width: 312px;
-  margin-left: -22px;
-} */
+.referral_code_verified{
+  height:30px;
+  display: none;
+}
+#pay_price{
+  display: flex;
+  margin-top: 20px;
+}
+
+#original_price{
+  margin-right: 10px;
+  color:blue;
+  font-weight: bold;
+}
+#discounted_price{
+  display: none;
+}
+#pay_price_title{
+  color:blue;
+  font-weight: bold;
+}
 @media (min-width:320px) and (max-width:425px)
 {
 #referal_check {
