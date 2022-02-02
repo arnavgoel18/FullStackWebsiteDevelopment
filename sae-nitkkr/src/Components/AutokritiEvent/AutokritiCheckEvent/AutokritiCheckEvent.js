@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { useContext } from "react";
-// import "./test.css";
 import "./AutokritiCheckEvent.css";
 import Autokritiacc_card from "../Autokritiacc_card/Autokritiacc_card";
 import CheckContext from "../Context/CheckContext"; import $ from 'jquery';
@@ -20,6 +19,22 @@ function AutokritiCheckEvent() {
     variable.getalldata();
   }, []);
 
+  function showRoadmap(e) {
+    $(e.target).animate({
+      width: '10%'
+    }, 500, 'swing');
+    $('.navigation-bar-right').animate({
+      width: '90%'
+    }, 500, 'linear');
+  }
+  function hideRoadmap(e) {
+    $(e.target).animate({
+      width: '10%'
+    }, 500, 'swing');
+    $('.navigation-bar-left').animate({
+      width: '90%'
+    }, 500, 'linear');
+  }
   return (
     <div id="acc_container" >
       <div id="acc_insidecontainer">
@@ -63,14 +78,24 @@ function AutokritiCheckEvent() {
       </div>
       {/* <div className="acc_container_main">
         <div className="acc_container_right_main">
-          <div className="acc_container_right_main_part1">
-            <div className="acc_container_right_main_part1_text">
-              Here we are, SAE NIT Kurukshetra presents e-Autokriti 2.0, where we would lay before you the technical know-how unfurled through years of experimentation & implementation. It will assure you a well-acknowledged welcome in the automotive world & also a direction for further exploration.
-            </div>
-            <div className="acc_container_right_main_part1_register">
-              <div className="acc_container_right_main_part1_register_btn">
-                <a href='https://www.saenitkurukshetra.in/autokriti/register'>Register Here</a>
+          <div className="acc_container_right_main_part">
+            <div className="acc_container_right_main_part1">
+              <div className="acc_container_right_main_part1_text">
+                Here we are, SAE NIT Kurukshetra presents e-Autokriti 2.0, where we would lay before you the technical know-how unfurled through years of experimentation & implementation. It will assure you a well-acknowledged welcome in the automotive world & also a direction for further exploration.
               </div>
+              <div className="acc_container_right_main_part1_register">
+                <div className="acc_container_right_main_part1_register_btn">
+                  <a href='https://www.saenitkurukshetra.in/autokriti/register'>Register Here</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="navigation_bar">
+            <div className="navigation-bar-left" onClick={showRoadmap} title="What is E-Autokriti?">
+
+            </div>
+            <div className="navigation-bar-right" onClick={hideRoadmap} title="View Roadmap">
 
             </div>
           </div>
