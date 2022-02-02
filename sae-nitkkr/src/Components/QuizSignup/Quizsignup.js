@@ -69,6 +69,9 @@ function Quizsignup() {
     setUserData({ ...userData, [name]: value });    
   };
 
+  var [stuData, setStuData] = useState([]);
+  var [refData, setRefData] = useState([]);
+  var [docIdData, setDocIdData] = useState([]);
 
   async function getFinalAmbInfo() {
     const stuInfo = collection(db, "finalStudentAmbassador");
@@ -86,7 +89,21 @@ function Quizsignup() {
   const routeChange = async (event) => {
     event.preventDefault();
     const { name, email, phone, college, branch, semester, referal } = userData;
+
     
+    async function getFinalAmbInfo() {
+      const stuInfo = collection(db, "finalStudentAmbassador");
+      const stuInfo_doc = await getDocs(stuInfo);
+      stuData = stuInfo_doc.docs.map((doc) => doc.data().referralCode);
+      refData = stuInfo_doc.docs.map((doc) => doc.data().numberReferrals);
+      docIdData = stuInfo_doc.docs.map((doc) => doc.id);
+      setStuData(stuData);
+      setRefData(refData);
+      setDocIdData(docIdData);
+    }
+    
+    getFinalAmbInfo();
+
     if (name && email && phone && college && branch && semester) {//if all fields are entered
       if (document.getElementById("agree").checked) {
         if(referal){
@@ -219,10 +236,8 @@ function Quizsignup() {
 
           <div className="field">
             {" "}
-            <span className="payform-label"> Referal Code(optional code) 
+            <span className="payform-label"> Referal Code(optional code) </span>
             <img className='referral_code_verified' src="https://img.icons8.com/color/48/000000/checked-2--v1.png"/>
-            </span>
-         
             <br />
            
             <div id="referal_check">
@@ -251,7 +266,6 @@ function Quizsignup() {
           <div id="pay_button">
               <div id="paynow">
                 <button onClick={routeChange} className="payform-button">₹ &nbsp; Pay Now</button>
-                <div id="pricing">699</div>
               </div>
               <div id="i_button_content">
                 <h4>Enter Referal Code only if you are applying through an Ambassador</h4>
@@ -426,7 +440,10 @@ function Quizsignup() {
     document.getElementById("payform-button2").disabled = false;
     document.getElementById("payform-button2").style.backgroundColor =
       "#E9910DFC";
+    // window.location.reload();
   }
 }
+
+
 
 export default Quizsignup;
