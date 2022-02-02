@@ -4,6 +4,11 @@
     /* border: 2px solid black; */
     height: max-content;
     display: flex;
+    width:70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+    margin-bottom: 70px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
@@ -12,17 +17,11 @@
 
 #acc_insidecontainer
 {
-    /* border: 2px solid black; */
-    box-shadow: 5px 5px 10px grey;
-    margin: 5%;
     height:max-content;
-    width: 95%;
     background-color: rgb(248 249 249);
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    
-
 }
 .acc_component
 {
@@ -117,6 +116,17 @@
   }
   @media (min-width:300px) and (max-width:530px)
 {
+    #acc_container
+    {
+        width:95%;
+        margin-left: auto;
+        margin-right: auto;
+        height: max-content;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
     #acc_first
 {
    
@@ -149,4 +159,18 @@
     width: 100%;
    
 }
+}
+
+@media (min-width:530px) and (max-width:1024px){
+    #acc_container
+    {
+        width:95%;
+        margin-left: auto;
+        margin-right: auto;
+        height: max-content;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }

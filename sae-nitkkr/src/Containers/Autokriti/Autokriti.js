@@ -27,9 +27,9 @@ function Autokriti(){
             {/* <PopUs/> */}
             {/* <FirstDisplayDiv page="Autokriti"/> */}
             <AboutUs page="Autokriti"/>
-            {/* <AutokritiEvent/> */}
+            <AutokritiEvent/>
             <CheckOurEvents/>
-            <AutokritiCheckEvent/>
+        
             {/* <Saga/> */}
             <BrandAmbassador/>
             {/* <Testimonials/>  */}
