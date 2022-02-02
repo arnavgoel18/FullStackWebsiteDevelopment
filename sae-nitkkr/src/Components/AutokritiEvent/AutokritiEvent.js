@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./AutokritiEvent.css";
 import $ from 'jquery';
 
@@ -38,9 +39,11 @@ function AutokritiEvent() {
                 Here we are, SAE NIT Kurukshetra presents e-Autokriti 2.0, where we would lay before you the technical know-how unfurled through years of experimentation & implementation. It will assure you a well-acknowledged welcome in the automotive world & also a direction for further exploration.
               </div>
               <div className="acc_container_right_main_part1_register">
+                <Link to="/e-Autokriti2.0">
                 <div className="acc_container_right_main_part1_register_btn">
-                  <a href='https://www.saenitkurukshetra.in/autokriti/register'>Register Here</a>
+                  <a>Register Here</a>
                 </div>
+                </Link>
               </div>
             </div>
           </div>
@@ -64,7 +67,7 @@ function AutokritiEvent() {
             </div>
           </div>
           <div className="acc_container_left_main_part2">
-
+          
           </div>
         </div>
       </div>

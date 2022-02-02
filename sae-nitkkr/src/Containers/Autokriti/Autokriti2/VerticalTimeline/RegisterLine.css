@@ -1,0 +1,21 @@
+.register_line-container{
+    width: 90%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+    box-shadow: 10px 10px 10px -5px grey;
+    margin: 1em auto;
+}
+
+.register_line-btn{
+    width: auto;
+    padding: 0.7em;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    background-color: lightcoral;
+    cursor: pointer;
+}  

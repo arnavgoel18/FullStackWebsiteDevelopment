@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, useEffect } from 'react'
 import {Link} from 'react-router-dom'
 import './Autokriti2.css'
 
@@ -7,8 +7,14 @@ import Footer from '../../../Components/Footer/Footer(black)/FooterBlack'
 
 import Au2Poster from '../../../Assets/CheckOurEvents/Au2Poster.jpg'
 import VerticalTimeline from './VerticalTimeline/VerticalTimeline'
+import RegisterLine from './VerticalTimeline/RegisterLine'
 
 function Autorkriti2(){
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
+
     return(
         <>
             <NavBar/>
@@ -35,6 +41,7 @@ function Autorkriti2(){
                 </div>
             </div>
             <VerticalTimeline/>
+            <RegisterLine/>
             <Footer/>
         </>
     )
