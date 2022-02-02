@@ -14,6 +14,9 @@ function Autorkriti2(){
             <NavBar/>
             <div className="about_autokriti-container">
                 <div className="about_autokriti-left">
+                    <h2 className="about_autokrit-left-heading">
+                        what you'll learn in <b className="about_autokrit-left-subheading">  e - Autokriti 2.0 ?</b>
+                    </h2>
                     <p>
                         Knowledge could be gained via two ways- by the path of prolong experimentation and trial & error or from a mentor who could show you a circumscribed path to learning. Isn’t latter the better option? 
                         <br/><br/>
@@ -24,7 +27,7 @@ function Autorkriti2(){
                         It’s a five day workshop which will give you an overall idea of working and designing of vehicle’s powertrain. 
                     </p>
                     <Link to="/autokriti/register">
-                        <button>Register</button>
+                        <button>Register Here!</button>
                     </Link>
                 </div>
                 <div className="about_autokriti-right">

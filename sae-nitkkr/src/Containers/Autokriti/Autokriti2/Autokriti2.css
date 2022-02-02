@@ -1,14 +1,15 @@
 .about_autokriti-container{
-    width: 100%;
+    width: 89%;
     height: auto;
     padding: 2em;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    margin: 10px auto ;
+    box-shadow: 10px 10px 15px -3px grey;
 }
 
 .about_autokriti-left{
-    /* border: solid 1px green; */
     padding: 4em;
     display: flex;
     flex-direction: column;
@@ -16,9 +17,29 @@
     align-items: center;
 }
 
+.about_autokrit-left-heading{
+    color: black;
+    margin-bottom: 20px;
+    font-size: 30px;  
+    width: 100%;
+    position: relative;
+}
+
+.about_autokrit-left-subheading {
+    background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    font-size: 40px;
+    font-weight: 1000;
+  }
+
 .about_autokriti-left button{
     height: 5vh;
-    width: 20vh;
+    width: auto;
     font-size: 20px;
     color: #fff;
     padding: 1rem 3rem;
