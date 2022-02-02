@@ -160,6 +160,7 @@ function DisplayContactInfo() {
                 +
               </button>
             </div>
+            <div className="total-responses">Total-responses={detailListLength}</div>
             <a className="downloadCsv">
               <i
                 onClick={downloadCsv}
