@@ -1,262 +1,222 @@
-.AutokritiEvent {
-  background-color: rgb(12, 124, 89);
-  background-image: linear-gradient(
-    90deg,
-    rgba(12, 124, 89, 1) 0%,
-    rgba(25, 140, 129, 1) 5%,
-    rgba(25, 140, 129, 1) 14%,
-    rgba(33, 121, 134, 1) 23%,
-    rgba(47, 120, 142, 1) 33%,
-    rgba(43, 109, 140, 1) 44%,
-    rgba(49, 108, 141, 1) 53%,
-    rgba(54, 107, 142, 1) 62%,
-    rgba(57, 68, 118, 1) 78%,
-    rgba(73, 73, 135, 1) 89%,
-    rgba(76, 68, 139, 1) 97%,
-    rgba(80, 62, 139, 1) 100%
-  );
-  height: 500px;
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-  margin-bottom: 1.5em;
+
+/* .................My styling............. */
+#acc_main_container
+{
+    width:70%;
+    margin-left:auto;
+    margin-right: auto;
+    height:450px;
+    margin-top: 100px;
+    padding-top: 25px;
+    margin-bottom:100px;
+    box-shadow: 10px 10px 15px -3px grey
+}
+.acc_container_main{
+    width:700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.acc_container_left_main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 250px;
+    width:40%;
+    margin-top: -320px;
+    margin-left: -5%;
+    z-index:15;
+    border-radius: 30px;
+    background-color: rgb(147, 172, 252);
+    background-image: linear-gradient(to right top, #d7dbdc, #b9d6df, #98d0e4, #73caea, #3dc3f2);
+}
+.acc_container_right_main{
+    background-color: rgb(232, 235, 235);
+    height:400px;
+    background-image: linear-gradient(to right top, #f2f2f2, #dddddd, #c9c9c9, #b5b5b5, #a1a1a1);
+    width:95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius:50px;
+    margin-left:auto;
 }
 
-.AutoKritiEvent-text1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-family: "Raleway";
-  font-size: 1.5rem;
-  padding: 10px 25px;
-  height: max-content;
-  width: max-content;
-  border: 2px solid black;
-  transform: skew(-20deg);
-  animation: fadeInAnimation ease 3s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}@keyframes fadeInAnimation {
-  0% {
-      opacity: 0;
-  }
-  100% {
-      opacity: 1;
-  }
+.acc_container_left_main_part1{
+    padding:20px;
+    text-align: center;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color:rgb(55, 55, 167);
 }
-
-.AutoKritiEvent-text2 {
-  /* display: block; */
-  color: white;
-  font-size: 60px;
-  font-weight: 600;
-  letter-spacing: 7px;
-  /*  Animation decalaration   */
-  /* animation-name: moveInleft;
-  animation-duration: 4s; */
+.acc_container_left_main_part1_timing{
+    
+    font-weight: normal;
+    font-size: 18px;
+    margin-top: 20px;
+    transform: skew(-20deg);
+    background-color: rgb(95, 38, 148);
+    padding: 5px;
+    color:white;
+    width:fit-content;
+    margin-left: auto;
+    margin-right: auto;
 }
-
-.AutoKritiEvent-text3 {
-  /* display: block; */
-  color: white;
-  font-size: 60px;
-  font-weight: 600;
-  letter-spacing: 9px;
-
-  /* animation-name: moveInRight;
-  animation-duration: 2s; */
+.acc_container_right_main_part{
+    display: flex;
+    width:65%;
+    margin-left: auto;
+    flex-direction: row;
 }
-
-@keyframes moveInleft {
-  0% {
-    opacity: 0;
-    transform: translateX(-100px);
-  }
-
-  80% {
-    transform: translateX(10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0);
-  }
-}
-
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(100px);
-  }
-
-  80% {
-    transform: translateX(-20px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(10px);
-  }
-}
-
-.AutokritiEvent-button {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-
-.AutokritiEvent-button1 {
-  height: 50px;
-  background-color: #ee9106;
-  /* border-radius: 5px; */
-
-  border: none;
-  color: white;
-  font-size: 18px;
-  padding-left: 10px;
-  font-family: "Montserrat", sans-serif;
-  padding-right: 10px;
-  margin-bottom: 20px;
-  width: 260px;
-  transition: all .2s ease-in-out;
-  margin-right: 8px;
-}
-
-.AutokritiEvent-button2 {
-  height: 50px;
-  background-color: rgba(255, 0, 0, 0.0);
-  border: solid 2px #fff;  
-  font-weight: 700;
-  color: #fff;
-  /* color: white; */
-  font-size: 18px;
-  padding-left: 10px;
-  font-family: "Montserrat", sans-serif;
-  padding-right: 10px;
-  margin-bottom: 20px;
-  width: 260px;
-  transition: all .2s ease-in-out;
+.acc_container_right_main_part1{
+    display: flex;
+    height: inherit;
+    flex-direction: column;
+    justify-content: flex-end;
 
 }
-
-.AutokritiEvent-button1:hover,.AutokritiEvent-button2:hover{
-    transform: scale(1.05);
+.acc_container_right_main_part1_text, .acc_container_right_main_part1_register{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+}
+.acc_container_right_main_part1_text{
+    line-height: 1.4;
+    padding-right:0px;
+    margin-right: 10px;
+    padding-top: 10px;
+    color:rgb(12, 12, 94);
+}
+.acc_container_right_main_part1_register_btn{
+    width:fit-content;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    background-color: #EEA311;
+    font-size: 20px;
+    font-weight: bold;
     cursor: pointer;
 }
-
-
-@media (min-width:540px) and (max-width:768px){
-
-    .AutoKritiEvent-text2 {
-        /* display: block; */
-        color: white;
-        font-size: 40px;
-        font-weight: 1000;
-        letter-spacing: 9px;
-        /*  Animation decalaration   */
-        /* animation-name: moveInleft; */
-        /* animation-duration: 2s; */
-      }
-      
-      .AutoKritiEvent-text3 {
-        /* display: block; */
-        color: white;
-        font-size: 40px;
-        font-weight: 1000;
-        letter-spacing: 9px;
-      
-        /* animation-name: moveInRight;
-        animation-duration: 2s; */
-      }
+.acc_container_right_main_part1_register_btn a{
+    color:white;
+}
+.navigation_bar{
+    width:fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    width:200px;
+}
+.navigation-bar-left{
+    margin-right: 10px;
+    width:10%;
+}
+.navigation-bar-right{
+    margin-right: 10px;
+    width:90%;
+}
+.navigation-bar-left, .navigation-bar-right{
+    padding:5px;
+    background-color: blue;
+    border-radius:10px;
+    color:white;
+    overflow: hidden;
+    text-align: center;
+    height:15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+@media (min-width:0px) and (max-width:500px){
+    #acc_main_container
+    {
+        width:95%;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-top: 150px;
+        justify-content: center;
+    }
+    .acc_container_left_main{
+        margin-left: auto;
+        margin-right: auto;
+        height:200px;
+        margin-top: -530px;
+        width:220px;
+    }
+    .navigation_bar{
+        margin-top: 10px;
+    }
+    .acc_container_right_main{
+        width:95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .acc_container_left_main_part1{
+        font-size: 22px;
+    }
+    .acc_container_right_main_part{
+        width:100%;
+        padding:10px;
+    }
+    .acc_container_right_main_part1_text{
+        margin-right: 0px;
+        font-size: 14px;
+    }
+    .acc_container_left_main_part1_timing{
+        font-size: 16px;
+    }
+    .acc_container_main{
+        width:100%;
+    }
 
 }
-
-
-@media (min-width:415px) and (max-width:540px){
-    .AutokritiEvent {
-       width: 100%;
-        display: flex;
+@media (min-width:500px) and (max-width:800px){
+    #acc_main_container
+    {
+        width:95%;
         flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        padding: 20px;
-      }
-
-    .AutoKritiEvent-text2 {
-        /* display: block; */
-        color: white;
-        font-size: 30px;
-        font-weight: 900;
-        letter-spacing: 9px;
-        /*  Animation decalaration   */
-        /* animation-name: moveInleft;
-        animation-duration: 3s; */
-      }
-      
-      .AutoKritiEvent-text3 {
-        /* display: block; */
-        color: white;
-        font-size: 30px;
-        font-weight: 900;
-        letter-spacing: 9px;
-      
-        /* animation-name: moveInRight;
-        animation-duration: 3s; */
-      }
-
-      .AutokritiEvent-button {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-      }
-
+        flex-wrap: wrap;
+        margin-top: 150px;
+        justify-content: center;
+    }
+    .acc_container_left_main{
+        margin-left: auto;
+        margin-right: auto;
+        height:200px;
+        margin-top: -500px;
+        width:220px;
+    }
+    .acc_container_right_main{
+        width:95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .acc_container_left_main_part1{
+        font-size: 22px;
+    }
+    .acc_container_right_main_part{
+        width:100%;
+        padding:10px;
+    }
+    .acc_container_right_main_part1_text{
+        margin-right: 0px;
+        font-size: 14px;
+    }
+    .acc_container_left_main_part1_timing{
+        font-size: 16px;
+    }
+    .acc_container_main{
+        width:100%;
+    }
+    .navigation_bar{
+        margin-top: 50px;
+    }
 }
-
-
-@media (min-width:318px) and (max-width:415px){
-    .AutokritiEvent {
-       
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        padding: 20px;
-      }
-
-    .AutoKritiEvent-text2 {
-        /* display: block; */
-        color: white;
-        font-size: 20px;
-        font-weight: 900;
-        /* letter-spacing: 9px; */
-        /*  Animation decalaration   */
-        /* animation-name: moveInleft;
-        animation-duration: 3s; */
-      }
-      
-      .AutoKritiEvent-text3 {
-        /* display: block; */
-        color: white;
-        font-size: 20px;
-        font-weight: 900;
-        /* letter-spacing: 9px; */
-      
-        /* animation-name: moveInRight;
-        animation-duration: 3s; */
-      }
-      
-      .AutoKritiEvent-text1{
-        font-size: 1rem;
-      }
-
-      .AutokritiEvent-button {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-      }
-
+@media (min-width:800px) and (max-width:1024px){
+    #acc_main_container
+    {
+        width:95%;
+    }
 }
