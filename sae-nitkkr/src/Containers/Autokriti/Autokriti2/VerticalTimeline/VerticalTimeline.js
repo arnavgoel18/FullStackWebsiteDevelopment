@@ -92,8 +92,8 @@ function VerticalTimeline(){
                     boxShadow: '0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)',
                     }}
                 >
-                    <h3 style={{ color: 'blue', marginBottom: '15px'}}>Day 4</h3>
-                    <h4 style={{ color: 'blue', marginBottom: '15px'}}>Modelling Fundamentals Part 2</h4>
+                    <h3 style={{ color: 'blue', marginBottom: '15px'}}>Day 4 Continued...</h3>
+                    <h4 style={{ color: 'blue', marginBottom: '15px'}}>Project</h4>
                     <p>
                         And finally, you’ll get a hands on experience through a project involving implementing the learning from all 4 days. Wouldn’t it be exciting? When all is said and done, you’ll be in your own right to judge how a mechanism can be designed.
                     </p>
