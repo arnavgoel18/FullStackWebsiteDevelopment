@@ -17,8 +17,10 @@
 }
 
 .about_autokriti-left button{
-    height: 3vh;
-    width: 10vh;
+    height: 5vh;
+    width: 20vh;
+    font-size: 20px;
+    color: #fff;
     padding: 1rem 3rem;
     margin-top: 4em;
     display: flex;
@@ -39,7 +41,7 @@
 }
 
 .about_autokriti-right img{
-    height: 100%;
+
     width: 100%;
 }
 
