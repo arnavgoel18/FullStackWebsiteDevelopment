@@ -2,7 +2,7 @@ import "./CheckOurEvents.css";
 import React, { useState } from "react";
 import Quiz from "../../../Assets/CheckOurEvents/quiz.jpg";
 import Autokriti2 from "../../../Assets/CheckOurEvents/Autokriti2.png";
-import DesignEvent from "../../../Assets/CheckOurEvents/DesignEvent.png";
+import Au2Poster from "../../../Assets/CheckOurEvents/Au2Poster.jpg";
 
 function CheckEvents() {
   return (
@@ -25,10 +25,10 @@ function CheckEvents() {
               date="Date: Coming Soon"
               image={Autokriti2}/> */}
             <Session
-              title="Design Event"
+              title="Autokriti 2.0"
               status="Venue: Online"
-              date="1 Week to Go"
-              image={DesignEvent}
+              date="Starts 12th Feb On Weekends"
+              image={Au2Poster}
               url="/autokriti/register"
             />
 
@@ -58,10 +58,11 @@ function Session(props) {
           <h2>
             <b>{props.title}</b>
           </h2>
-          <p>
+          <p style={{fontSize: '16px'}}>
             {props.status}
             <br />
             {props.date}
+            <br/>
           </p>
 
           {/* <div className="CheckOurEvents-register"></div> */}
