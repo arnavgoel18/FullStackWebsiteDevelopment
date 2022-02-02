@@ -7,6 +7,7 @@ import Autokriti from '../../Containers/Autokriti/Autokriti';
 
 import Aos from"aos";
 import"aos/dist/aos.css";
+
 function Home(props) {
     useEffect(()=>{
       Aos.init({duration:3000});

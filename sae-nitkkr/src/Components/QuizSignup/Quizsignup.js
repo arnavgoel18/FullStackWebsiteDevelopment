@@ -17,6 +17,11 @@ import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer(black)/FooterBlack";
 
 function Quizsignup() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   var [stuData, setStuData] = useState([]);
   function i_information_visible()
   {
