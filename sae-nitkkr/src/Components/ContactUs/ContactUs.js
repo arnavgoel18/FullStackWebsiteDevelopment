@@ -10,10 +10,10 @@ import {
   setDoc,
 } from "firebase/firestore";
 
-import location from "../../Assets/ContactUs/lc.jpg";
-import nx from "../../Assets/ContactUs/nx.jpg";
-import ac from "../../Assets/ContactUs/ac.jpg";
-import mail from "../../Assets/ContactUs/msg.jpg";
+import location from "../../Assets/ContactUs/lc.webp";
+import nx from "../../Assets/ContactUs/nx.webp";
+import ac from "../../Assets/ContactUs/ac.webp";
+import mail from "../../Assets/ContactUs/msg.webp";
 
 function ContactUS() {
   return (
