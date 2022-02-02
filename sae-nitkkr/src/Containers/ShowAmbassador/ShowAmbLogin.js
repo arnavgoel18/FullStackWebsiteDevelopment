@@ -7,6 +7,8 @@ import {
   collection,
   getDocs,
 } from "firebase/firestore";
+import Footer from '../../Components/Footer/Footer(black)/FooterBlack';
+import NavBar from '../../Components/NavBar/NavBar';
 
 function Login() {
     var [tester, setTester] = useState(true);
@@ -28,8 +30,8 @@ function Login() {
       }
     
 
-  const[userid,setuserid]=useState();
-  const[password,setpassword]=useState();
+  var [userid,setuserid]=useState();
+  var [password,setpassword]=useState();
   const[loggedin,setloggedin]=useState(false);
   
 
@@ -55,6 +57,8 @@ function Login() {
   }
   if(loggedinsecond==true)
   {
+    userid = localStorage.getItem("username");
+    password = localStorage.getItem("password");
     return <Redirect to={"/ShowAmbassador?username="+ userid +"&password=" + password}/>
   }
   else if(loggedin==true)
@@ -63,7 +67,9 @@ function Login() {
   }
   else{
   return (
-     <div id="logincontainer">
+    <>
+      <NavBar/>
+      <div id="logincontainer">
         <div id="loginbox">
             <div id="loginlogo"> <img id="login_man-sitting"src={man_sitting} alt=""/></div>
             <div id="loginmain">
@@ -83,11 +89,11 @@ function Login() {
         </div>
         
     </div>
+    <Footer/>
+    </>
   );
           }
 }
-
-
 
 export default Login;
 

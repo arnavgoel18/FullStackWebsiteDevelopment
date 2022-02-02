@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-around;
     width:250px;
-    background-color: rgb(49, 49, 114);
+    background-color: #EEA311;
     margin-right: auto;
     padding:15px;
     margin-bottom: 50px;
@@ -15,10 +15,7 @@
     padding-left:10px;
     padding-right:10px;
 }
-.general-logout:hover{
-    color:red;
-    background-color:rgb(39, 39, 114);
-}
+
 .ambassador-profile-name{
     font-weight: bold;
     font-size: 20px;
@@ -30,12 +27,16 @@
     font-size:18px;
     padding:10px;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(39, 39, 124);
+    background-color: #EEA311;
+    /* border-top-right-radius: 10px;
+    border-top-left-radius: 10px; */
+    border: solid 2px #000;
     color:white;
     font-weight: bold;
 }
 .showAmbDiv{
-    border: 2px solid rgb(39, 39, 124);
+    border: solid 2px #000;
+    border-top: none;
     padding: 0.5rem 0 0.5rem 0.5rem;
     width: 400px;
     height: fit-content;
@@ -84,7 +85,7 @@
 .amb_leader_heading{
     padding: 1rem 3rem 0.5rem 3rem;
     text-align: center;
-    background-color:rgb(39, 39, 114);
+    background-color: #EEA311;
     color:white;
     border-top: 2px solid rgb(39, 39, 124);
     border-left: 2px solid rgb(39, 39, 124);
