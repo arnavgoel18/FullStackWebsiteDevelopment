@@ -6,11 +6,11 @@
   box-sizing: border-box;
 }
 .CheckOurEvents-main{
-  width: 90%;
+  width: 70%;
   margin: 0 auto;
   background-color: rgb(248 249 249);
-  box-shadow: 10px 10px 5px -5px gray;
-
+  box-shadow: 0px 0px 10px -3px grey;
+  margin-bottom:100px;
 }
 #event-register
 {
@@ -138,7 +138,7 @@
   display: block;
 }
 @media only screen and (max-width:769px){
-  .CheckOurEvents-main_container{
+  .CheckOurEvents-main{
     width:95%;
   }
   .CheckOurEvents-card {
@@ -168,9 +168,11 @@
   }
 }
 @media (min-width:769px) and (max-width:1024px){
+  .CheckOurEvents-main{
+    width:90%;
+  }
   .CheckOurEvents-main_container{
-      width:95%;
       display: flex;
-  justify-content: space-evenly;
+      justify-content: space-evenly;
     }
 }

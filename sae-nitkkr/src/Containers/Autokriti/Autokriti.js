@@ -29,7 +29,7 @@ function Autokriti(){
             <AboutUs page="Autokriti"/>
             <AutokritiEvent/>
             <CheckOurEvents/>
-            <AutokritiCheckEvent/>
+        
             {/* <Saga/> */}
             <BrandAmbassador/>
             {/* <Testimonials/>  */}

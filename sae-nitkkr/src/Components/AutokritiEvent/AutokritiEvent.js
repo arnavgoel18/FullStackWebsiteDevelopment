@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { useContext } from "react";
 import "./AutokritiEvent.css";
 import $ from 'jquery';
 
