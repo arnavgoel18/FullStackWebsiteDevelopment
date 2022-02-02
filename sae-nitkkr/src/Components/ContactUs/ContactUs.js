@@ -5,9 +5,10 @@ import db from "../../Firebase.js";
 import {
   collection,
   getDocs,
-  Timestamp,
+  timestamp,
   doc,
   setDoc,
+  serverTimestamp,
 } from "firebase/firestore";
 
 import location from "../../Assets/ContactUs/lc.webp";
@@ -171,6 +172,7 @@ function submit(){
   var Message = document.getElementById("ContactUs_cont_message");
   var s1 = document.getElementById("ContactUs_s1");
   var s2 = document.getElementById("ContactUs_s2");
+  
 
   const contactUsData = {
     Name: Name.value,
@@ -180,6 +182,7 @@ function submit(){
     Message: Message.value,
     s1: s1.value,
     s2: s2.value,
+    timestamp: serverTimestamp(),
   };
 
   validateForm(contactUsData);
