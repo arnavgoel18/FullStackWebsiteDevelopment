@@ -20,6 +20,12 @@ function AutokritiCheckEvent() {
   }, []);
   //  console.log(variable.dataarray);
   return (
+    <div id="acc_container_op">
+      <div id="acc_card">
+        <div id="acc_front">
+               e-AutoKriti 2.0<br/> Is Here!!
+        </div>
+
     <div id="acc_container" >
       <div id="acc_insidecontainer">
         <div id="acc_first" className="acc_component">
@@ -78,6 +84,8 @@ function AutokritiCheckEvent() {
           where we begin; let this one be yours.
         </div>
       </div>
+    </div>
+    </div>
     </div>
   );
 }

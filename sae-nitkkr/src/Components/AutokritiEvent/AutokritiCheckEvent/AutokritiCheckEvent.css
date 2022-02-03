@@ -1,4 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&display=swap');
+
+
+/*FOR FLIP EFFECT*/
+
+
+#acc_container_op:hover #acc_card{
+    transform: rotateY(180deg);
+}
+#acc_container_op{
+    perspective: 10000px;
+}
+
+#acc_card{
+     height:max-content;
+    width: 90%;
+    margin: 5%;
+    position: relative;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+    box-shadow: 5px 5px 10px grey;
+} 
+
+
+#acc_front{ 
+    height: 100%;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    position: absolute;
+    background:linear-gradient(#08aeea,#2af598);
+    z-index: 2;
+    backface-visibility: hidden;
+}  
+/*FOR SLIDE EFFECT*/
+
 #acc_container
 {
     /* border: 2px solid black; */
@@ -7,6 +44,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+      z-index: 1;
+     transform: rotateY(180deg);  
 }
 #acc_insidecontainer
 {
@@ -80,7 +119,7 @@
 {
     
   
-    background-color: #E8FCFD;
+    background-color: #86d5da;
     border-radius: 12px;
     height:max-content;
     font-family: 'Montserrat', sans-serif;
