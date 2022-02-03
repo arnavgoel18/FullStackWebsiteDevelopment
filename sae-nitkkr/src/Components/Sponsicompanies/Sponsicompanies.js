@@ -1,5 +1,7 @@
+//Contains all the companies and their representation for sponsors
 import React from "react";
 import "./Sponsicompanies.css";
+
 import advanced_robotics from "../../Assets/Sponsors Image/advanced_robotics.png";
 import altair from "../../Assets/Sponsors Image/altair.png";
 import Ansys from "../../Assets/Sponsors Image/Ansys.png";

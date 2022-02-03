@@ -27,19 +27,25 @@ function Teamdiv() {
   
    <div id="large_box">
    {/* <Link to="/accelerons"> */}
-      <div data-aos="fade-right"
-      data-aos-duration="200"
-      data-aos-offset="300" id="acc" className="participate" 
+      <div 
+      // data-aos="fade-right"
+      data-aos="zoom-in-right"
+      data-aos-duration="400"
+      data-aos-once="true"
+      data-aos-offset="100" id="acc" className="participate" 
       onClick={lastworkacc}
        >
         TEAM <br/>ACCELERONS
       </div>
       {/* </Link> */}
       {/* <Link to="/nitrox" > */}
-        <div data-aos="fade-left"
-        data-aos-duration="200"
-      data-aos-offset="300" id="nitrox" className="participate" 
-      onClick={lastworknitrox}
+        <div
+        //  data-aos="fade-left"
+        data-aos="zoom-in-left"
+        data-aos-duration="400"
+        data-aos-once="true"
+        data-aos-offset="100" id="nitrox" className="participate" 
+        onClick={lastworknitrox}
        >
       TEAM <br/> NITROX
       </div>

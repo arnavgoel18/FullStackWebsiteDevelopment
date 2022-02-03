@@ -1,3 +1,4 @@
+//This component is to show heading of which page you are in the backend.
 import React, { Component } from 'react'
 import './PageHeader.css'
 
