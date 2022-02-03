@@ -1,3 +1,4 @@
+//Simple component containng a register button to be added to bottom of all the information on the Autokriti2 page
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 

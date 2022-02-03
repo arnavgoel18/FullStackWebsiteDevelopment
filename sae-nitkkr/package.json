@@ -34,6 +34,7 @@
     "react-vertical-timeline-component": "^3.5.2",
     "react-web-share": "^1.1.0",
     "slick-carousel": "^1.8.1",
+    "vertical-timeline": "^2.0.0",
     "vertical-timeline-component-for-react": "^1.0.7",
     "web-vitals": "^1.1.2"
   },

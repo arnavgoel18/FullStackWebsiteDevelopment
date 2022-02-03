@@ -1,3 +1,4 @@
+//Vertical TImeline used in Autokriti2
 import React, { Component } from 'react'
 import { Timeline, TimelineItem }  from 'vertical-timeline-component-for-react';
 

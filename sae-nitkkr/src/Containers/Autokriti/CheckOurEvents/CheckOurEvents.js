@@ -1,8 +1,8 @@
 import "./CheckOurEvents.css";
 import React, { useState } from "react";
-import Quiz from "../../../Assets/CheckOurEvents/quiz.jpg";
-import Autokriti2 from "../../../Assets/CheckOurEvents/Autokriti2.png";
-import Au2Poster from "../../../Assets/CheckOurEvents/Au2Poster.jpg";
+import Quiz from "../../../Assets/CheckOurEvents/quiz.webp";
+import Autokriti2 from "../../../Assets/CheckOurEvents/Autokriti2.webp";
+import Au2Poster from "../../../Assets/CheckOurEvents/Au2Poster.webp";
 
 function CheckEvents() {
   return (

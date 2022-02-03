@@ -1,3 +1,4 @@
+//Information page for Autokriti 2.0 which was created a Day Before
 import React, { Component, useEffect } from 'react'
 import {Link} from 'react-router-dom'
 import './Autokriti2.css'
@@ -5,7 +6,7 @@ import './Autokriti2.css'
 import NavBar from '../../../Components/NavBar/NavBar'
 import Footer from '../../../Components/Footer/Footer(black)/FooterBlack'
 
-import Au2Poster from '../../../Assets/CheckOurEvents/Au2Poster.jpg'
+import Au2Poster from '../../../Assets/CheckOurEvents/Au2Poster.webp'
 import VerticalTimeline from './VerticalTimeline/VerticalTimeline'
 import RegisterLine from './VerticalTimeline/RegisterLine'
 

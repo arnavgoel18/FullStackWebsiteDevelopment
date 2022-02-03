@@ -1,3 +1,5 @@
+//login page for ambassadors
+
 import React,{useState} from 'react'
 import { Redirect } from 'react-router-dom';
 import "../Backend/Login.css";

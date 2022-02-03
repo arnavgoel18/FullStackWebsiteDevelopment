@@ -19,12 +19,12 @@ import DisplayAmb from "./Containers/Backend/DisplayAmbassador/DisplayAmbassador
 import DisplayFinalAmbassador from "./Containers/Backend/DisplayFinalAmbassador/DisplayFinalAmbassador"
 import DisplayContact from './Containers/Backend/DisplayContact/DisplayContact'
 import DisplaySignUpSheet from './Containers/Backend/DisplaySignUpSheet/DisplaySignUpSheet'
-import DisplayQuizResponses from './Containers/Backend/DisplayQuizResponses/DisplayQuizResponses'
+// import DisplayQuizResponses from './Containers/Backend/DisplayQuizResponses/DisplayQuizResponses'
 
 import DisplayBlogs from "./Containers/Backend/DisplayBlogs/AllBlogsPage"
 import QuillEditor from "./Containers/Backend/DisplayBlogs/QuillEditor/Add"
 import RegistrationForm from "./Containers/Autokriti/RegistrationForm/RegistrationForm";
-import Quizsignup from "./Components/QuizSignup/Quizsignup";
+import Quizsignup from "./Components/AutokritiRegistration/AutokritiRegistration";
 import ShowAmbassador from "./Containers/ShowAmbassador/ShowAmbassador";
 import ShowAmbLogin from "./Containers/ShowAmbassador/ShowAmbLogin"; 
 import CheckState from './Components/AutokritiEvent/Context/CheckState';
@@ -57,13 +57,13 @@ function App() {
             <Route path="/admin/ambassadorInfo" exact component={() => <DisplayAmb/>}/>
             <Route path="/admin/contactUsInfo" exact component={() => <DisplayContact/>}/>
             <Route path="/admin/finalAmbassador" exact component={() => <DisplayFinalAmbassador/>}/>
-            <Route path="/admin/signUpSheet" exact component={() => <DisplaySignUpSheet/>}/>
-            <Route path="/admin/quizResponses" exact component={() => <DisplayQuizResponses/>}/>
+            <Route path="admin/signUpSheet" exact component={() => <DisplaySignUpSheet/>}/>
+            {/* <Route path="admin/quizResponses" exact component={() => <DisplayQuizResponses/>}/> */}
 
 <Route path="/quizResponses" exact component={() => <DisplayAllQuizes/>}/>
             <Route path="/admin/displayBlogs" exact component={() => <DisplayBlogs/>}/>
             <Route path="/admin/displayBlogs/editor" exact component={() => <QuillEditor/>}/>
-            {/* <Route path="/registrationForm" exact component={()=><RegistrationForm/>}/> */}
+            <Route path="/registrationForm" exact component={()=><RegistrationForm/>}/>
 
             <Route path="/ShowAmbassador" exact component={()=><ShowAmbassador/>}/>
             <Route path="/Ambassador/login" exact component={()=><ShowAmbLogin/>}/>

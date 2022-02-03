@@ -1,7 +1,10 @@
+//This Page is to display entries for those people applying to become ambassadors
 import React, { useState, useEffect } from "react";
-import { Redirect } from "react-router-dom";
-import DisplayCard from "./DisplayCard";
+import { Redirect, Link } from "react-router-dom";
+
 import "./DisplayAmbassador.css";
+
+//Firebase
 import db from "../../../Firebase.js";
 import {
   collection,
@@ -10,9 +13,9 @@ import {
   doc,
   setDoc,
 } from "firebase/firestore";
-
 import { onValue } from "firebase/database";
-import { Link } from "react-router-dom";
+
+import DisplayCard from "./DisplayCard";
 import PageHeader from "../../../Components/Backend/PageHeader/PageHeader";
 
 var flag = false;
@@ -133,7 +136,7 @@ function DisplayInfo() {
   } else {
     return (
       <>
-        <PageHeader heading="Ambassador Responses" />
+        <PageHeader heading="Ambassador Responses"/>
         <div className="displayDiv">
           <div className="LoginPage-header">
             <Link to="/admin/actions">
