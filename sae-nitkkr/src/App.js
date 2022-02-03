@@ -19,6 +19,7 @@ import DisplayAmb from "./Containers/Backend/DisplayAmbassador/DisplayAmbassador
 import DisplayFinalAmbassador from "./Containers/Backend/DisplayFinalAmbassador/DisplayFinalAmbassador"
 import DisplayContact from './Containers/Backend/DisplayContact/DisplayContact'
 import DisplaySignUpSheet from './Containers/Backend/DisplaySignUpSheet/DisplaySignUpSheet'
+// import DisplayQuizResponses from './Containers/Backend/DisplayQuizResponses/DisplayQuizResponses'
 
 import DisplayBlogs from "./Containers/Backend/DisplayBlogs/AllBlogsPage"
 import QuillEditor from "./Containers/Backend/DisplayBlogs/QuillEditor/Add"
@@ -29,6 +30,7 @@ import ShowAmbLogin from "./Containers/ShowAmbassador/ShowAmbLogin";
 import CheckState from './Components/AutokritiEvent/Context/CheckState';
 
 import Autokriti2 from './Containers/Autokriti/Autokriti2/Autorkriti2'
+import DisplayAllQuizes from "./Containers/Backend/DisplayAllQuizes/DisplayAllQuizes";
 
 //import RegistrationForm from "./Containers/Autokriti/RegistrationForm/RegistrationForm";
 
@@ -57,6 +59,7 @@ function App() {
             <Route path="/admin/finalAmbassador" exact component={() => <DisplayFinalAmbassador/>}/>
             <Route path="admin/signUpSheet" exact component={() => <DisplaySignUpSheet/>}/>
 
+            <Route path="/quizResponses" exact component={() => <DisplayAllQuizes/>}/>
             <Route path="/admin/displayBlogs" exact component={() => <DisplayBlogs/>}/>
             <Route path="/admin/displayBlogs/editor" exact component={() => <QuillEditor/>}/>
             <Route path="/registrationForm" exact component={()=><RegistrationForm/>}/>
