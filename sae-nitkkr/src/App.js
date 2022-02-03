@@ -19,7 +19,7 @@ import DisplayAmb from "./Containers/Backend/DisplayAmbassador/DisplayAmbassador
 import DisplayFinalAmbassador from "./Containers/Backend/DisplayFinalAmbassador/DisplayFinalAmbassador"
 import DisplayContact from './Containers/Backend/DisplayContact/DisplayContact'
 import DisplaySignUpSheet from './Containers/Backend/DisplaySignUpSheet/DisplaySignUpSheet'
-import DisplayQuizResponses from './Containers/Backend/DisplayQuizResponses/DisplayQuizResponses'
+// import DisplayQuizResponses from './Containers/Backend/DisplayQuizResponses/DisplayQuizResponses'
 
 import DisplayBlogs from "./Containers/Backend/DisplayBlogs/AllBlogsPage"
 import QuillEditor from "./Containers/Backend/DisplayBlogs/QuillEditor/Add"
@@ -57,7 +57,7 @@ function App() {
             <Route path="/admin/contactUsInfo" exact component={() => <DisplayContact/>}/>
             <Route path="/admin/finalAmbassador" exact component={() => <DisplayFinalAmbassador/>}/>
             <Route path="admin/signUpSheet" exact component={() => <DisplaySignUpSheet/>}/>
-            <Route path="admin/quizResponses" exact component={() => <DisplayQuizResponses/>}/>
+            {/* <Route path="admin/quizResponses" exact component={() => <DisplayQuizResponses/>}/> */}
 
             <Route path="/admin/displayBlogs" exact component={() => <DisplayBlogs/>}/>
             <Route path="/admin/displayBlogs/editor" exact component={() => <QuillEditor/>}/>
