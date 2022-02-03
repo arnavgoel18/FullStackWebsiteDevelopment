@@ -41,21 +41,6 @@ export default function ShowAmbassador() {
     setStuData(stuData);
   }
 
-  var temp = {}
-  autData.map((value, i) => {
-    if (isNaN(temp[value.referalcode])) temp[value.referalcode] = 0;
-    temp[value.referalcode]++;
-  })
-
-  var highLen = (temp.length > stuData.length) ? temp.length : stuData.length;
-
-  for (var i = 0; i < highLen; i++) {
-    stuData[i].numberReferrals = temp[stuData[i].referralCode];
-    if (temp[stuData[i].referralCode] == undefined) {
-      stuData[i].numberReferrals = 0;
-    }
-  }
-
   stuData.sort((a, b) => b.numberReferrals - a.numberReferrals);
 
   if (tester == true) {
