@@ -59,8 +59,8 @@ function Login() {
   }
   if(loggedinsecond==true)
   {
-    userid = localStorage.getItem("username");
-    password = localStorage.getItem("password");
+    // userid = localStorage.getItem("username");
+    // password = localStorage.getItem("password");
     return <Redirect to={"/ShowAmbassador?username="+ userid +"&password=" + password}/>
   }
   else if(loggedin==true)
