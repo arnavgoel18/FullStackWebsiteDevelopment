@@ -26,7 +26,7 @@
 
 #acc
 {
-    background-image: url("abc1new.jpeg");
+    background-image: url("abc1new.webp");
     padding: 15px;
     padding-left: 15px;
     clip-path: polygon(0 0, 100% 0, 61% 100%, 0% 100%);
@@ -52,7 +52,7 @@
    display: flex;
    align-items: flex-end;
    justify-content: flex-end;
-    background-image: url("def1.jpeg");
+    background-image: url("def1.webp");
     clip-path: polygon(44% 0%, 100% 0, 100% 100%, 5% 100%);
     background-repeat: no-repeat;
     background-size: cover;
@@ -93,7 +93,7 @@
 }
 #acc
 {
-    background-image: url("abc1new.jpeg");
+    background-image: url("abc1new.webp");
    
     clip-path: polygon(0 0, 100% 0, 61% 100%, 0% 100%);
     background-repeat: no-repeat;
@@ -108,7 +108,7 @@
 #nitrox
 {
    
-    background-image: url("def1.jpeg");
+    background-image: url("def1.webp");
     clip-path: polygon(44% 0%, 100% 0, 100% 100%, 5% 100%);
     background-repeat: no-repeat;
     background-size: cover;
@@ -147,7 +147,7 @@
 }
 #acc
 {
-    background-image: url("abc1new.jpeg");
+    background-image: url("abc1new.webp");
    
     clip-path: polygon(0 0, 100% 0, 61% 100%, 0% 100%);
     background-repeat: no-repeat;
@@ -162,7 +162,7 @@
 #nitrox
 {
    
-    background-image: url("def1.jpeg");
+    background-image: url("def1.webp");
     clip-path: polygon(44% 0%, 100% 0, 100% 100%, 5% 100%);
     background-repeat: no-repeat;
     background-size: cover;
@@ -200,7 +200,7 @@
   }
   #acc
   {
-      background-image: url("abc1new.jpeg");
+      background-image: url("abc1new.webp");
      
       clip-path: polygon(0 0, 100% 0, 61% 100%, 0% 100%);
       background-repeat: no-repeat;
@@ -214,7 +214,7 @@
   #nitrox
   {
      
-      background-image: url("def1.jpeg");
+      background-image: url("def1.webp");
       clip-path: polygon(44% 0%, 100% 0, 100% 100%, 5% 100%);
       background-repeat: no-repeat;
       background-size: cover;
@@ -253,7 +253,7 @@
   }
   #acc
   {
-      background-image: url("abc1new.jpeg");
+      background-image: url("abc1new.webp");
      
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
       background-repeat: no-repeat;
@@ -267,7 +267,7 @@
   #nitrox
   {
      
-      background-image: url("def1.jpeg");
+      background-image: url("def1.webp");
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
       background-repeat: no-repeat;
       background-size: cover;
@@ -303,7 +303,7 @@
   }
   #acc
   {
-      background-image: url("abc1new.jpeg");
+      background-image: url("abc1new.webp");
      
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
       background-repeat: no-repeat;
@@ -317,7 +317,7 @@
   #nitrox
   {
      
-      background-image: url("def1.jpeg");
+      background-image: url("def1.webp");
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
       background-repeat: no-repeat;
       background-size: cover;
@@ -354,7 +354,7 @@
   }
   #acc
   {
-      background-image: url("abc1new.jpeg");
+      background-image: url("abc1new.webp");
      
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
       background-repeat: no-repeat;
@@ -368,7 +368,7 @@
   #nitrox
   {
      
-      background-image: url("def1.jpeg");
+      background-image: url("def1.webp");
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
       background-repeat: no-repeat;
       background-size: cover;
@@ -406,7 +406,7 @@
   #acc
   {
       padding-left: 15px;
-      background-image: url("abc1new.jpeg");
+      background-image: url("abc1new.webp");
      
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
       background-repeat: no-repeat;
@@ -420,7 +420,7 @@
   #nitrox
   {
      
-      background-image: url("def1.jpeg");
+      background-image: url("def1.webp");
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
       background-repeat: no-repeat;
       background-size: cover;
