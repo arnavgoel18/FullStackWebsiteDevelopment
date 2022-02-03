@@ -1,10 +1,10 @@
 import React from "react";
 import "./Wherenitrox.css";
 
-import NitroxBAJA1 from '../../../Assets/WhereWeParticipate/NitroxBAJA1.jpeg'
-import NitroxBAJA2 from '../../../Assets/WhereWeParticipate/NitroxBAJA2.jpeg'
-import NitroxATVC1 from '../../../Assets/WhereWeParticipate/NitroxATVC1.jpeg'
-import NitroxATVC2 from '../../../Assets/WhereWeParticipate/NitroxATVC2.jpeg'
+// import NitroxBAJA1 from '../../../Assets/WhereWeParticipate/NitroxBAJA1.jpeg'
+// import NitroxBAJA2 from '../../../Assets/WhereWeParticipate/NitroxBAJA2.jpeg'
+// import NitroxATVC1 from '../../../Assets/WhereWeParticipate/NitroxATVC1.jpeg'
+// import NitroxATVC2 from '../../../Assets/WhereWeParticipate/NitroxATVC2.jpeg'
 
 function Wherenitrox() {
   let image2;
@@ -20,14 +20,14 @@ function Wherenitrox() {
      image1=document.getElementById("Nitrox-image1");
      if (check1==0)
      {
-     image1.style.backgroundImage="url(/static/media/NitroxBAJA1.85b6668b.jpeg)";
-     image2.style.backgroundImage="url(/static/media/NitroxBAJA2.7ab3514c.jpeg)";
+     image1.style.backgroundImage="url(/static/media/NitroxBAJA1.f64438ef.webp)";
+     image2.style.backgroundImage="url(/static/media/NitroxBAJA2.c0393ba0.webp)";
      check1=1;
      }
      else if(check1==1)
      {
-      image2.style.backgroundImage="url(/static/media/NitroxBAJA1.85b6668b.jpeg)";
-      image1.style.backgroundImage="url(/static/media/NitroxBAJA2.7ab3514c.jpeg)";
+      image2.style.backgroundImage="url(/static/media/NitroxBAJA1.f64438ef.webp)";
+      image1.style.backgroundImage="url(/static/media/NitroxBAJA2.c0393ba0.webp)";
       check1=0;
      }
   }
@@ -37,14 +37,14 @@ function Wherenitrox() {
      image11=document.getElementById("Nitrox-image11");
      if(check2==0)
      {
-     image11.style.backgroundImage="url(/static/media/NitroxATVC2.dd4e92f7.jpeg)";
-     image22.style.backgroundImage="url(/static/media/NitroxATVC1.91bedd24.jpeg)";
+     image11.style.backgroundImage="url(/static/media/NitroxATVC2.45732ae4.webp)";
+     image22.style.backgroundImage="url(/static/media/NitroxATVC1.16955b64.webp)";
      check2=1;
      }
      else if(check2==1)
      {
-      image22.style.backgroundImage="url(/static/media/NitroxATVC2.dd4e92f7.jpeg)";
-      image11.style.backgroundImage="url(/static/media/NitroxATVC1.91bedd24.jpeg)";
+      image22.style.backgroundImage="url(/static/media/NitroxATVC2.45732ae4.webp)";
+      image11.style.backgroundImage="url(/static/media/NitroxATVC1.16955b64.webp)";
       check2=0;
      }
   }
