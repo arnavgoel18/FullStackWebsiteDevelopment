@@ -53,7 +53,7 @@ function App() {
             
             {/* Blogs */}
             <Route path="/blogs" exact component={() => <Blogs/>}/>
-            <Route path="/blogs/leftvsright" exact component={() => <Topic1/>}/>
+            <Route path="/blogs/yourblog" exact component={() => <Topic1/>}/>
             
             {/* Backend */}
             <Route path="/admin/login" exact component={() => <AdminLogin/>}/>
