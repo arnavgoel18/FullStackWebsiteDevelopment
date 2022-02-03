@@ -61,7 +61,7 @@ export default function AfterLoginPage() {
           </div>
             <AfterLoginCard name="Contact Us responses" id="orange" />
           </Link>
-          <Link to="admin/signUpSheet">
+          <Link to="/admin/signUpSheet">
           <div className="iconimagediv">
             
           <img src="https://img.icons8.com/external-bearicons-glyph-bearicons/64/000000/external-sign-up-call-to-action-bearicons-glyph-bearicons.png" className="iconimage"/>
@@ -69,7 +69,7 @@ export default function AfterLoginPage() {
           </div>
             <AfterLoginCard name="SignUp Details" id="yellow" />
           </Link>
-          <Link to="admin/quizResponses">
+          <Link to="/admin/quizResponses">
           <div className="iconimagediv">
             
           <img src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-vitaly-gorbachev/60/000000/external-quiz-online-learning-vitaliy-gorbachev-lineal-vitaly-gorbachev.png" className="iconimage"/>
