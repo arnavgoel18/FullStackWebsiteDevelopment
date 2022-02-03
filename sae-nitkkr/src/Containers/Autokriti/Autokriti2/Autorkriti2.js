@@ -1,3 +1,4 @@
+//Information page for Autokriti 2.0 which was created a Day Before
 import React, { Component, useEffect } from 'react'
 import {Link} from 'react-router-dom'
 import './Autokriti2.css'

@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+
 import "./AutokritiEvent.css";
 import $ from 'jquery';
 
@@ -21,6 +22,7 @@ function AutokritiEvent() {
       width: '90%'
     }, 500, 'linear');
   }
+  
   function hideRoadmap(e) {
     $(e.target).animate({
       width: '10%'
@@ -29,6 +31,7 @@ function AutokritiEvent() {
       width: '90%'
     }, 500, 'linear');
   }
+
   return (
     <div id="acc_main_container" >
       <div className="acc_container_main">

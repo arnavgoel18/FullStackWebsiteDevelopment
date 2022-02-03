@@ -24,7 +24,7 @@ import DisplayQuizResponses from './Containers/Backend/DisplayQuizResponses/Disp
 import DisplayBlogs from "./Containers/Backend/DisplayBlogs/AllBlogsPage"
 import QuillEditor from "./Containers/Backend/DisplayBlogs/QuillEditor/Add"
 import RegistrationForm from "./Containers/Autokriti/RegistrationForm/RegistrationForm";
-import Quizsignup from "./Components/QuizSignup/Quizsignup";
+import Quizsignup from "./Components/AutokritiRegistration/AutokritiRegistration";
 import ShowAmbassador from "./Containers/ShowAmbassador/ShowAmbassador";
 import ShowAmbLogin from "./Containers/ShowAmbassador/ShowAmbLogin"; 
 import CheckState from './Components/AutokritiEvent/Context/CheckState';
@@ -61,7 +61,7 @@ function App() {
 
             <Route path="/admin/displayBlogs" exact component={() => <DisplayBlogs/>}/>
             <Route path="/admin/displayBlogs/editor" exact component={() => <QuillEditor/>}/>
-            {/* <Route path="/registrationForm" exact component={()=><RegistrationForm/>}/> */}
+            <Route path="/registrationForm" exact component={()=><RegistrationForm/>}/>
 
             <Route path="/ShowAmbassador" exact component={()=><ShowAmbassador/>}/>
             <Route path="/Ambassador/login" exact component={()=><ShowAmbLogin/>}/>

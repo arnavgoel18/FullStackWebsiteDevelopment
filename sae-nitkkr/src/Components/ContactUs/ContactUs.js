@@ -1,3 +1,5 @@
+//This is the main contact us Page
+//The Contact us in containers simply imports this and navbar and footer
 import React from "react";
 import "./ContactUs.css";
 

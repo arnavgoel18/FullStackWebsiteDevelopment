@@ -1,7 +1,8 @@
+//Registeration Page made for Autokriti 2.0
 import React, { useEffect, useState } from "react";
 import { FaInfoCircle } from "react-icons/fa";
 
-import "./Quizsignup.css";
+import "./AutokritiRegistration.css";
 
 import db from "../../Firebase.js";
 import {
