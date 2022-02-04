@@ -53,6 +53,7 @@ function Quizsignup() {
     name = event.target.name;
     value = event.target.value;
     var valid = false;
+    //to check referal code
     if(name === 'referal') {
       for(var i = 0;i < stuData.length;i++){
         if(value == stuData[i]){
@@ -69,11 +70,24 @@ function Quizsignup() {
         document.getElementById('original_price').style.color = 'red'
         document.getElementById('discounted_price').style.color = 'blue'
         document.getElementById('discounted_price').style.display = 'block'
+        document.getElementById('show_invalid').style.display = 'none'
       }
       else {
+        if(value.length >= 6){
+          document.getElementById('show_invalid').style.display = 'block'
+        }
+        else{
+          document.getElementById('show_invalid').style.display = 'none'
+        }
         document.querySelector('.referral_code_verified').style.display = 'none'
       }
     }
+
+    //to make sure same person is not registering again
+    if(name == 'email'){
+      console.log("entering")
+    }
+
     setUserData({ ...userData, [name]: value });    
   };
 
@@ -302,6 +316,7 @@ function Quizsignup() {
             </div>  
           </div>
 
+          <div id="show_invalid">The Referal Code is Invalid</div>
           <div id="pay_price">
             <div id='pay_price_title'>Price: &nbsp;</div>
             <div id='original_price'>&#8377; 699</div>

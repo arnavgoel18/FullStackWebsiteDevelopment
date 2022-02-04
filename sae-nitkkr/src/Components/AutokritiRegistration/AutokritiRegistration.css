@@ -58,6 +58,10 @@
   width: 112%
 }
 
+#show_invalid{
+  display: none;
+}
+
 #ref_image
 {
   margin-left: 10px;
