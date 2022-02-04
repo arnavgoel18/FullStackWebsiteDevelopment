@@ -38,7 +38,7 @@ function DisplayAllQuizes() {
 
   //Get Information from Firebase into detailList array
   async function getInfo() {
-    
+
     const autokritiRegisteration = collection(db, "autokritiRegistration");
     var amb_doc = await getDocs(autokritiRegisteration);
     detailList = amb_doc.docs.map((doc) => doc.data());
@@ -52,7 +52,7 @@ function DisplayAllQuizes() {
         [doc.data().branch],
         [doc.data().semester],
         [doc.data().phone],
-        
+
         [doc.data().referalCode]
         [doc.data().transaction]
       ];
@@ -140,14 +140,15 @@ function DisplayAllQuizes() {
         <div className="displayDiv">
           <div className="LoginPage-header">
             <Link to="/admin/actions">
-              <button id="ambassador-backBtn">
-               
-          <i className="fa fa-arrow-left fa-customize fa-fw"></i>
-                Back</button>
+              <div id="ambassador-backBtn">
+
+                <i className="fa fa-arrow-left fa-customize fa-fw"></i>
+                Back
+              </div>
             </Link>
 
             {/* <i className="fa fa-user fa-lg" aria-hidden="true"></i> */}
-            <button
+            <div
               type="submit"
               id="amb-signout"
               onClick={(e) => {
@@ -156,9 +157,9 @@ function DisplayAllQuizes() {
               }}
             >
               Sign Out
-              
-          <i className="fa fa-sign-out fa-customize fa-fw"></i>
-            </button>
+
+              <i className="fa fa-sign-out fa-customize fa-fw"></i>
+            </div>
           </div>
           <div className="response-num-div">
             <div className="response-num">Response Number</div>
@@ -171,13 +172,15 @@ function DisplayAllQuizes() {
                 +
               </button>
             </div>
-            <a className="downloadCsv">
-              <i
-                onClick={downloadCsv}
-                className="fa fa-download"
-                aria-hidden="true"
-              ></i>
-            </a>
+            <div>
+              <a className="downloadCsv">
+                <i
+                  onClick={downloadCsv}
+                  className="fa fa-download"
+                  aria-hidden="true"
+                ></i>
+              </a>
+            </div>
           </div>
           <div>
             <DisplayQuizescard
@@ -190,7 +193,7 @@ function DisplayAllQuizes() {
               Phoneno={detail.phone}
               Emailid={detail.email}
               referalCode={detail.referalCode}
-            transaction={detail.transaction}
+              transaction={detail.transaction}
             />
           </div>
         </div>
