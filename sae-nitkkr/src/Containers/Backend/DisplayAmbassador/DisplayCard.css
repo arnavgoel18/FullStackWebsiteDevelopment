@@ -27,10 +27,10 @@
 .response-num-div{
     
     
-   display: flex;
+    display: flex;
     flex-direction: row;
-    gap:10px;
-    justify-content: space-around;
+    justify-content: space-between;
+    gap:14px;
     align-self: center;
     width: 60%;
     height: 59px;
@@ -152,6 +152,8 @@
             font-size:10px;
             margin-left:50px;
         }
+
+       
 
       
 }
