@@ -178,6 +178,7 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    z-index: 3;
   }
   .btn-slide img {
     width: 15px;
@@ -279,6 +280,7 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    z-index: 3;
   }
   .btn-slide img {
     width: 15px;
