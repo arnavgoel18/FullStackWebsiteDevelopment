@@ -12,19 +12,33 @@
     color: white;
     background: #000000;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    #AllBlogs-backBtn i{
+     margin-top:0;
     }
     #blog-signout{
         cursor: pointer;
         width: 171.06px;
     height: 49px;
-    float: right;
     background: #F4970A;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    #blog-signout i{
+        margin-top:0;
     }
     .fa-customize{
         font-size: large;
     }
-#addNewBlog{
+    #totalHeading{
+        margin-top:10px;
+    }
+.addNewBlog{
     background-color: #098716;
     height: 2.5rem;
     width: fit-content;
@@ -32,12 +46,17 @@
     font-family: " Montserrat";
     font-weight: bold;
     font-size: 20px;
-    vertical-align: middle;
-    text-align: center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-top:10px;
+}
+.addNewBlog i{
+    margin-top:0;
 }
 .card_contain
 {
@@ -47,7 +66,10 @@
     align-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: auto;
+    margin: 30px auto;
+}
+.card_contain #card_container{
+    margin-bottom:15px;
 }
 .blogIcons{
     display: flex;
@@ -64,9 +86,12 @@
 
 @media screen and (max-width:768px){
     .backendBlogPanel{
-        margin-left: 4rem;
-        width: 40%;
+
+        align-items: center;
+    justify-content: center;
         flex-direction: column;
+        align-items:center;
+        padding-top:5px;
     }
     #addNewBlog{
         margin-bottom: 0.5rem;

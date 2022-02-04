@@ -53,6 +53,7 @@ function Quizsignup() {
     name = event.target.name;
     value = event.target.value;
     var valid = false;
+    //to check referal code
     if(name === 'referal') {
       for(var i = 0;i < stuData.length;i++){
         if(value == stuData[i]){
@@ -69,22 +70,75 @@ function Quizsignup() {
         document.getElementById('original_price').style.color = 'red'
         document.getElementById('discounted_price').style.color = 'blue'
         document.getElementById('discounted_price').style.display = 'block'
+        document.getElementById('show_invalid').style.display = 'none'
       }
-      else document.querySelector('.referral_code_verified').style.display = 'none'
+      else {
+        if(value.length >= 6){
+          document.getElementById('show_invalid').style.display = 'block'
+        }
+        else{
+          document.getElementById('show_invalid').style.display = 'none'
+        }
+        document.querySelector('.referral_code_verified').style.display = 'none'
+      }
     }
+
+    //to make sure same person is not registering again
+    if(name == 'email'){
+      for(var i = 0;i < emailData.length;i++){
+        if(value == emailData[i]){
+          document.getElementById('show_email_is_registered').style.display = 'block';
+          document.getElementById("payform-button1").disabled = true;
+          document.getElementById("payform-button1").style.background = 'grey';
+          document.getElementById("payform-button2").disabled = true;
+          break;
+        }
+        else{
+          document.getElementById('show_email_is_registered').style.display = 'none';
+          document.getElementById("payform-button1").disabled = false;
+          document.getElementById("payform-button1").style.background = '#1a3c7f';
+          document.getElementById("payform-button2").disabled = false;
+        }
+      }
+    }
+
     setUserData({ ...userData, [name]: value });    
   };
 
   var [stuData, setStuData] = useState([]);
-  var [refData, setRefData] = useState([]);
-  var [docIdData, setDocIdData] = useState([]);
+  var [colStuData, setColStuData] = useState([]);
 
+  var [refData, setRefData] = useState([]);
+  var [colRefData, setColRefData] = useState([]);
+
+  var [docIdData, setDocIdData] = useState([]);
+  var [colDocIdData, setColDocIdData] = useState([]);
+
+  var [emailData, setEmailData] = useState([]);
+
+  //this async function is to check for applying discount while typing referal code
   async function getFinalAmbInfo() {
+    //final ambassadors
     const stuInfo = collection(db, "finalStudentAmbassador");
     const stuInfo_doc = await getDocs(stuInfo);
+    //final college representatives
+    const colStuInfo = collection(db, "collegeRepresentatives");
+    const colStuInfo_doc = await getDocs(colStuInfo);
+   
+    colStuData = colStuInfo_doc.docs.map((doc) => doc.data().referralCode);
     stuData = stuInfo_doc.docs.map((doc) => doc.data().referralCode);
-    
+
+    stuData = stuData.concat(colStuData);
+
     setStuData(stuData);
+
+    //email data
+    const emailsDatabase = collection(db, "autokritiRegistration");
+    const emailsDatabase_doc = await getDocs(emailsDatabase);
+
+    emailData = emailsDatabase_doc.docs.map((doc) => doc.data().email);
+
+    setEmailData(emailData);
   }
 
   useEffect(()=>{
@@ -92,20 +146,36 @@ function Quizsignup() {
       getFinalAmbInfo()
     }
   })
+
+  //this function runs when you click on paynow
   const routeChange = async (event) => {
     event.preventDefault();
     const { name, email, phone, college, branch, semester, referal } = userData;
 
-    
     async function getFinalAmbInfo() {
+      //final ambassadors
       const stuInfo = collection(db, "finalStudentAmbassador");
       const stuInfo_doc = await getDocs(stuInfo);
       stuData = stuInfo_doc.docs.map((doc) => doc.data().referralCode);
-      refData = stuInfo_doc.docs.map((doc) => doc.data().numberReferrals);
-      docIdData = stuInfo_doc.docs.map((doc) => doc.id);
+      
+      //final college representatives
+      const colStuInfo = collection(db, "collegeRepresentatives");
+      const colStuInfo_doc = await getDocs(colStuInfo);
+      colStuData = colStuInfo_doc.docs.map((doc) => doc.data().referralCode);
+
+      refData = stuInfo_doc.docs.map((doc) => doc.data().numberReferrals);      //final ambassadors
+      colRefData = colStuInfo_doc.docs.map((doc) => doc.data().numberReferrals);      //final college representatives
+      
+      docIdData = stuInfo_doc.docs.map((doc) => doc.id);      //final ambassadors
+      colDocIdData = colStuInfo_doc.docs.map((doc) => doc.id);      //final college representatives
+      
       setStuData(stuData);
+      setColStuData(colStuData);
       setRefData(refData);
       setDocIdData(docIdData);
+
+      setColRefData(colRefData);
+      setColDocIdData(colDocIdData);
     }
     
     getFinalAmbInfo();
@@ -116,9 +186,15 @@ function Quizsignup() {
           var valid = false;
           for(var i = 0;i < stuData.length;i++){
             if(referal == stuData[i]){
-
               valid = true;
               break;
+            }
+            //college student
+            else if(i < colStuData.length){
+              if(referal == colStuData[i]){
+                valid = true;
+                break;
+              }
             }
           }
 
@@ -172,6 +248,7 @@ function Quizsignup() {
               onChange={postUserData}
             />{" "}
           </div>
+
           <div className="field">
             <span className="payform-label">Email id* </span>
             <br />
@@ -185,6 +262,8 @@ function Quizsignup() {
               onChange={postUserData}
             />{" "}
           </div>
+          <div id="show_email_is_registered">This email has alreay been Registered</div>
+          
           <div className="field">
             <span className="payform-label">Phone No. * </span>
             <br />
@@ -243,7 +322,7 @@ function Quizsignup() {
           <div className="field">
             {" "}
             <span className="payform-label"> Referal Code(optional code) </span>
-            <img className='referral_code_verified' src="https://img.icons8.com/color/48/000000/checked-2--v1.png"/>
+            <img className='referral_code_verified' id="referral_code_verified" src="https://img.icons8.com/color/48/000000/checked-2--v1.png"/>
             <br />
            
             <div id="referal_check">
@@ -264,6 +343,7 @@ function Quizsignup() {
             </div>  
           </div>
 
+          <div id="show_invalid">The Referal Code is Invalid</div>
           <div id="pay_price">
             <div id='pay_price_title'>Price: &nbsp;</div>
             <div id='original_price'>&#8377; 699</div>
@@ -271,7 +351,7 @@ function Quizsignup() {
           </div>
           <div id="pay_button">
               <div id="paynow">
-                <button onClick={routeChange} className="payform-button">₹ &nbsp; Pay Now</button>
+                <button onClick={routeChange} className="payform-button" id="payform-button1">₹ &nbsp; Pay Now</button>
               </div>
               <div id="i_button_content">
                 <h4>Enter only if you are applying through an ambassador (max. 10% off)</h4>
@@ -426,13 +506,24 @@ function Quizsignup() {
     document.getElementById("payform-button2").disabled = true;
     document.getElementById("payform-button2").style.backgroundColor = "gray";
     
-    //check if referal code is present
+    //check if referal code is present and update database by 1 count
+    //this code will work only if number of college representatives are less than or equal in number to final ambasadors
     for(var i = 0;i < stuData.length;i++){
       if(docdata.referalcode == stuData[i]){
         refData[i] += 1;
         await updateDoc(doc(db, "finalStudentAmbassador", docIdData[i]), {
           numberReferrals: refData[i]
         });
+        break;
+      }
+      else if(i < colStuData.length){
+        if(docdata.referalcode == colStuData[i]){
+          colRefData[i] += 1;
+          await updateDoc(doc(db, "collegeRepresentatives", colDocIdData[i]), {
+            numberReferrals: colRefData[i]
+          });
+          break;
+        }
       }
     }
 
@@ -440,13 +531,18 @@ function Quizsignup() {
     var timestamp = String(new Date().getTime());
     await setDoc(doc(db, "autokritiRegistration", timestamp), docdata);
     
-    alert("Congratulations! Your information saved successfully.");
+    alert("Congratulations! You are registered successfully.");
     deletedata();
   
     document.getElementById("payform-button2").disabled = false;
-    document.getElementById("payform-button2").style.backgroundColor =
-      "#E9910DFC";
+    document.getElementById("payform-button2").style.backgroundColor = "#E9910DFC";
     // window.location.reload();
+    document.getElementById('original_price').style.textDecoration = 'none'
+    document.getElementById('original_price').style.color = 'red'
+    document.getElementById('discounted_price').style.color = 'blue'
+    document.getElementById('discounted_price').style.display = 'none'
+    document.getElementById('referral_code_verified').style.display = 'none'
+    document.getElementById('agree').checked = false;
   }
 }
 

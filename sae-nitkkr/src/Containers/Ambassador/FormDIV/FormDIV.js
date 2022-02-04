@@ -7,6 +7,7 @@ import {
   Timestamp,
   doc,
   setDoc,
+  serverTimestamp,
 } from "firebase/firestore";
 
 export default function FormDIV() {
@@ -238,6 +239,7 @@ function submit() {
     s3: s3.value,
     longAnswer2: longAns2.value,
     longAnswer3: longAns3.value,
+    timestamp:serverTimestamp(),
   };
 
   validateForm(docdata);

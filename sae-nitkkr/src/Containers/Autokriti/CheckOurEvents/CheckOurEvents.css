@@ -20,7 +20,7 @@
   align-self: center;
   background: #E9910DFC;
   border-radius: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 18px;
   font-size: 15px;
   border: none;
   font-weight: bold;
@@ -97,7 +97,7 @@
   justify-content: space-evenly;
 }
 .CheckOurEvents-register{
-  margin-top: 17px;
+  margin-top: 8px;
   font-size: 28px;
   font-weight: 1000;
   text-decoration: none;
@@ -143,7 +143,7 @@
   }
   .CheckOurEvents-card {
     width:230px;
-    height:320px;
+    height:auto;
     margin-bottom: 25px;
   }
   .CheckOurEvents-image {

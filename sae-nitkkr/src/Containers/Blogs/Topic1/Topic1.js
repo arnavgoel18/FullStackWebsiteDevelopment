@@ -3,8 +3,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { Route, Link } from "react-router-dom";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.bubble.css";
-import logo1 from "../../../Components/LEFT vs RIGHT/images/logo1.png";
-import topiccardpic from "../../../Components/LEFT vs RIGHT/images/topiccardholder1.png";
+import blogLogo from "../../../Assets/blogLogo.webp";
 import "./Topic1.css";
 import NavBar from "../../../Components/NavBar/NavBar";
 import ShareAndClapDIV from "../../../Components/Blogs/ShareAndClap/ShareAndClapDIV";
@@ -50,70 +49,73 @@ function App() {
 
   return (
     <div>
-      <div className="header">
+      <div className='header'>
         <NavBar />
       </div>
 
       <div className="bodyhead_extraspace">
         <div className="imgcircle">
-          <img src={logo1} id="logo1" alt="not" />
+          <img src={blogLogo} id="logo1" alt="not" />
         </div>
 
-        <div className="topicname">
+        <div className='topicname'>
           <span>{detail.title}</span>
         </div>
 
-        <div className="extraspace "></div>
+        <div className='extraspace '></div>
       </div>
 
-      <div className="body">
-        <div id="bodyContent">
+      <div className='body'>
+        <div id='bodyContent'>
           <ReactQuill
-            theme="bubble"
-            value={detail.information || ""}
+            theme='bubble'
+            value={detail.information || ''}
             readOnly={true}
           />
         </div>
-        <div className="extraspace a">
+        <div className='extraspace a'>
           <ShareAndClapDIV
-            shareUrl={"/blogs/leftvsright?timestamp=" + detail.timestamp}
+            shareUrl={'/blogs/leftvsright?timestamp=' + detail.timestamp}
             title={detail.title}
             database={detail.title}
           />
         </div>
       </div>
-      <div id="extra">
+      <div id='extra'>
         <PhoneShareAndClap
-          shareUrl={"/blogs/leftvsright?timestamp=" + detail.timestamp}
+          shareUrl={'/blogs/leftvsright?timestamp=' + detail.timestamp}
           title={detail.title}
           database={detail.title}
         />
       </div>
       <hr />
 
-      <h2 className="other_blogs">Other Blogs</h2>
-      <div className="end">
+      <h2 className='other_blogs'>Other Blogs</h2>
+      <div className='end'>
         {otherBlog.map((other, index) => {
-          if(index<3){
-          return (
-            <div key={index}>
-              <Link to={"/blogs/leftvsright?timestamp=" + other.timestamp} target={"_parent"}>
-                <TopicsCardHolder
-                  title={other.title}
-                  srcs={other.coverPhotoUrl}
-                  date={other.modifiedDate}
-                  shareUrl={"/blogs/leftvsright?timestamp=" + other.timestamp}
-                />
-              </Link>
-            </div>
-          );
+          if (index < 3) {
+            return (
+              <div key={index}>
+                <Link
+                  to={'/blogs/leftvsright?timestamp=' + other.timestamp}
+                  target={'_parent'}
+                >
+                  <TopicsCardHolder
+                    title={other.title}
+                    srcs={other.coverPhotoUrl}
+                    date={other.modifiedDate}
+                    shareUrl={'/blogs/leftvsright?timestamp=' + other.timestamp}
+                  />
+                </Link>
+              </div>
+            )
           }
         })}
       </div>
 
       <Footer />
     </div>
-  );
+  )
 }
 
 export default App;

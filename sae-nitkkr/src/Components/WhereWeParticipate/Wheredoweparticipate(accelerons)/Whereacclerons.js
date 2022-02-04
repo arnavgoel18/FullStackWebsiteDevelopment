@@ -1,10 +1,10 @@
 import React from "react";
 import "./Whereacclerons.css";
 
-import AcceleronsFB1 from '../../../Assets/WhereWeParticipate/AcceleronsFB1.jpeg'
-import AcceleronsFB2 from '../../../Assets/WhereWeParticipate/AcceleronsFB2.jpeg'
-import AcceleronsSupra1 from '../../../Assets/WhereWeParticipate/AcceleronsSupra1.jpeg'
-import AcceleronsSupra2 from '../../../Assets/WhereWeParticipate/AcceleronsSupra2.jpeg'
+// import AcceleronsFB1 from '../../../Assets/WhereWeParticipate/AcceleronsFB1.webp'
+// import AcceleronsFB2 from '../../../Assets/WhereWeParticipate/AcceleronsFB2.webp'
+// import AcceleronsSupra1 from '../../../Assets/WhereWeParticipate/AcceleronsSupra1.webp'
+// import AcceleronsSupra2 from '../../../Assets/WhereWeParticipate/AcceleronsSupra2.webp'
 
 function Whereacclerons() {
   let image2;
@@ -19,14 +19,14 @@ function Whereacclerons() {
      image1=document.getElementById("Accelarons-image1");
      if(acheck1==0)
      {
-     image1.style.backgroundImage="url(/static/media/AcceleronsFB2.ec57201a.jpeg)";
-     image2.style.backgroundImage="url(/static/media/AcceleronsFB1.ad0cd75e.jpeg)";
+     image1.style.backgroundImage="url(/static/media/AcceleronsFB2.c2b1395d.webp)";
+     image2.style.backgroundImage="url(/static/media/AcceleronsFB1.9cfa97b5.webp)";
      acheck1=1;
      }
      else if(acheck1==1)
      {
-      image2.style.backgroundImage="url(/static/media/AcceleronsFB2.ec57201a.jpeg)";
-      image1.style.backgroundImage="url(/static/media/AcceleronsFB1.ad0cd75e.jpeg)";
+      image2.style.backgroundImage="url(/static/media/AcceleronsFB2.c2b1395d.webp)";
+      image1.style.backgroundImage="url(/static/media/AcceleronsFB1.9cfa97b5.webp)";
       acheck1=0;
      }
      
@@ -37,14 +37,14 @@ function Whereacclerons() {
      image11=document.getElementById("Accelarons-image11");
      if(acheck2==0)
      {
-     image11.style.backgroundImage="url(/static/media/AcceleronsSupra2.e5728be1.jpeg)";
-     image22.style.backgroundImage="url(/static/media/AcceleronsSupra1.bd637769.jpeg)";
+     image11.style.backgroundImage="url(/static/media/AcceleronsSupra2.e680532d.webp)";
+     image22.style.backgroundImage="url(/static/media/AcceleronsSupra1.42ee2953.webp)";
      acheck2=1;
      }
      else if(acheck2==1)
      {
-     image22.style.backgroundImage="url(/static/media/AcceleronsSupra2.e5728be1.jpeg)";
-     image11.style.backgroundImage="url(/static/media/AcceleronsSupra1.bd637769.jpeg)";
+     image22.style.backgroundImage="url(/static/media/AcceleronsSupra2.e680532d.webp)";
+     image11.style.backgroundImage="url(/static/media/AcceleronsSupra1.42ee2953.webp)";
      acheck2=0;
      }
 

@@ -1,10 +1,9 @@
-//This Page is to display entries for those people applying to become ambassadors
-import React, { useState, useEffect } from "react";
-import { Redirect, Link } from "react-router-dom";
+import React from 'react';
+import { useState, useEffect } from "react";
+import { Redirect } from "react-router-dom";
 
-import "./DisplayAmbassador.css";
-
-//Firebase
+import DisplayQuizescard from "./DisplayQuizescard";
+import "./DisplayAllQuizes.css";
 import db from "../../../Firebase.js";
 import {
   collection,
@@ -13,14 +12,17 @@ import {
   doc,
   setDoc,
 } from "firebase/firestore";
-import { onValue } from "firebase/database";
 
-import DisplayCard from "./DisplayCard";
+import { onValue } from "firebase/database";
+import { Link } from "react-router-dom";
 import PageHeader from "../../../Components/Backend/PageHeader/PageHeader";
+
 
 var flag = false;
 //function to get data form database
-function DisplayInfo() {
+function DisplayAllQuizes() {
+
+
   var [index, setIndex] = useState(0);
   var detailList = [];
   var detailListId = [];
@@ -36,25 +38,23 @@ function DisplayInfo() {
 
   //Get Information from Firebase into detailList array
   async function getInfo() {
-    
-    const studentAmbassador = collection(db, "studentAmbassador");
-    var amb_doc = await getDocs(studentAmbassador);
+
+    const autokritiRegisteration = collection(db, "autokritiRegistration");
+    var amb_doc = await getDocs(autokritiRegisteration);
     detailList = amb_doc.docs.map((doc) => doc.data());
     detailListId = amb_doc.docs.map((doc) => doc.id);
 
     amb_doc.forEach((doc) => {
       cvsFileData = [
         [doc.data().studentName],
+        [doc.data().email],
         [doc.data().collegeName],
         [doc.data().branch],
         [doc.data().semester],
         [doc.data().phone],
-        [doc.data().email],
-        [doc.data().s1],
-        [doc.data().s2],
-        [doc.data().longAnswer2],
-        [doc.data().longAnswer3],
-        [doc.data().s3],
+
+        [doc.data().referalCode]
+        [doc.data().transaction]
       ];
 
       mergedCsvData.push(cvsFileData);
@@ -100,7 +100,7 @@ function DisplayInfo() {
 
     //define the heading for each row of the data
     var csv =
-      "StudentName,Collegename,Branch,Semester,PhoneNo,EmailId,Why do you think you can be a Campus Ambassador? *,Have you ever been a Campus Ambassador? *,What are your top 3 qualities related to being a Campus Ambassador? *,What two channels do you think are the most effective for engaging with our target audience (18-22 Yrs)? *,How did you find out about this ambassador program? *";
+      "StudentName,Collegename,Branch,Semester,PhoneNo,EmailId,referalCode, Payment ID ";
     csv += "\n";
 
     //merge the data with CSV
@@ -120,7 +120,7 @@ function DisplayInfo() {
     hiddenElement.target = "_blank";
 
     //provide the name for the CSV file to be downloaded
-    hiddenElement.download = "StudentAmbassadorData.csv";
+    hiddenElement.download = "autokritiRegisterationData.csv";
     hiddenElement.click();
   }
 
@@ -136,18 +136,19 @@ function DisplayInfo() {
   } else {
     return (
       <>
-        <PageHeader heading="Ambassador Responses"/>
+        <PageHeader heading="Autokriti Registeration" />
         <div className="displayDiv">
           <div className="LoginPage-header">
             <Link to="/admin/actions">
-              <button id="ambassador-backBtn">
-               
-          <i className="fa fa-arrow-left fa-customize fa-fw"></i>
-                Back</button>
+              <div id="ambassador-backBtn">
+
+                <i className="fa fa-arrow-left fa-customize fa-fw"></i>
+                Back
+              </div>
             </Link>
 
             {/* <i className="fa fa-user fa-lg" aria-hidden="true"></i> */}
-            <button
+            <div
               type="submit"
               id="amb-signout"
               onClick={(e) => {
@@ -156,9 +157,9 @@ function DisplayInfo() {
               }}
             >
               Sign Out
-              
-          <i className="fa fa-sign-out fa-customize fa-fw"></i>
-            </button>
+
+              <i className="fa fa-sign-out fa-customize fa-fw"></i>
+            </div>
           </div>
           <div className="response-num-div">
             <div className="response-num">Response Number</div>
@@ -171,17 +172,18 @@ function DisplayInfo() {
                 +
               </button>
             </div>
-            <div className="totalAmbassadorResponses">Total Responses={detailListLength}</div>
-            <a className="downloadCsv">
-              <i
-                onClick={downloadCsv}
-                className="fa fa-download"
-                aria-hidden="true"
-              ></i>
-            </a>
+            <div>
+              <a className="downloadCsv">
+                <i
+                  onClick={downloadCsv}
+                  className="fa fa-download"
+                  aria-hidden="true"
+                ></i>
+              </a>
+            </div>
           </div>
           <div>
-            <DisplayCard
+            <DisplayQuizescard
               key={index}
               docId={detailId}
               FullName={detail.studentName}
@@ -190,11 +192,8 @@ function DisplayInfo() {
               CurrentSem={detail.semester}
               Phoneno={detail.phone}
               Emailid={detail.email}
-              s1={detail.s1}
-              s2={detail.s2}
-              s3={detail.s3}
-              ans2={detail.longAnswer2}
-              ans3={detail.longAnswer3}
+              referalCode={detail.referalCode}
+              transaction={detail.transaction}
             />
           </div>
         </div>
@@ -203,4 +202,7 @@ function DisplayInfo() {
   }
 }
 
-export default DisplayInfo;
+export default DisplayAllQuizes;
+
+
+

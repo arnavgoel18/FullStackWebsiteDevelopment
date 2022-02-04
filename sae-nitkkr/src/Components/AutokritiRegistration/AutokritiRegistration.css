@@ -58,6 +58,16 @@
   width: 112%
 }
 
+#show_email_is_registered{
+  display: none;
+  color: red;
+}
+
+#show_invalid{
+  display: none;
+  color: red;
+}
+
 #ref_image
 {
   margin-left: 10px;
