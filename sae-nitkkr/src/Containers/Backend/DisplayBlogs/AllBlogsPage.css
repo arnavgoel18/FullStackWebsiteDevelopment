@@ -72,6 +72,7 @@
     margin-bottom:15px;
 }
 .blogIcons{
+   margin-top: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;

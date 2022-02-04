@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./AllBlogsPage.css";
 import { Redirect } from "react-router-dom";
-import TopicCardHolder from "../../../Components/Blogs/TopicsCardHolder/TopicsCardHolder";
+// import TopicCardHolder from "../../../Components/Blogs/TopicsCardHolder/TopicsCardHolder";
+import TopicCardHolder from '../../../Components/Blogs/TopicsCardHolder/Card_new'
 import {db1} from "../../../Firebase";
 import { getStorage, ref, deleteObject } from "firebase/storage";
 import {
@@ -85,15 +86,22 @@ export default function AllBlogsPage() {
 
       <div className='card_contain'>
         {blogResult.map((detail, index) => {
+           let obj = {
+             src: detail.coverPhotoUrl,
+             title: detail.title,
+             subTitle: '',
+             body: 'I am so tired of doing this again and again',
+           }
           return (
-            <div key={index}>
+            <div key={index} style={{width:'80%',padding:'20px'}}>
               <Link to={'/blogs/leftvsright?timestamp=' + detail.timestamp}>
-                <TopicCardHolder
+                {/* <TopicCardHolder
                   title={detail.title}
                   srcs={detail.coverPhotoUrl}
                   date={detail.modifiedDate}
                   shareUrl={'/blogs/leftvsright?timestamp=' + detail.timestamp}
-                />
+                /> */}
+                <TopicCardHolder poop={obj}/>
               </Link>
               <div className='blogIcons'>
                 <i
