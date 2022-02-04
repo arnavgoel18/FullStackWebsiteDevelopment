@@ -35,6 +35,9 @@
     .fa-customize{
         font-size: large;
     }
+    #totalHeading{
+        margin-top:10px;
+    }
 .addNewBlog{
     background-color: #098716;
     height: 2.5rem;
@@ -50,6 +53,7 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-top:10px;
 }
 .addNewBlog i{
     margin-top:0;
@@ -82,9 +86,12 @@
 
 @media screen and (max-width:768px){
     .backendBlogPanel{
-        margin-left: 4rem;
-        width: 40%;
+
+        align-items: center;
+    justify-content: center;
         flex-direction: column;
+        align-items:center;
+        padding-top:5px;
     }
     #addNewBlog{
         margin-bottom: 0.5rem;
