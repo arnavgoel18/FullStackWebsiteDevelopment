@@ -30,7 +30,7 @@
     
    display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-self: center;
     width: 60%;
     height: 59px;
@@ -42,6 +42,12 @@
 }
 .response-num{
     align-self: center;
+}
+
+.total-responses{
+    align-self: center;
+    float:right;
+
 }
 .response-num-btn{
     align-self: center;
@@ -132,5 +138,11 @@
         height: 17px;
         margin:1px ;
   
+        }
+
+        .response-num-div{
+            display: flex;
+           
+            
         }
 }

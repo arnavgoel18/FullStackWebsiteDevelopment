@@ -1,8 +1,8 @@
 import "./CheckOurEvents.css";
 import React, { useState } from "react";
-import Quiz from "../../../Assets/CheckOurEvents/quiz.jpg";
-import Autokriti2 from "../../../Assets/CheckOurEvents/Autokriti2.png";
-import DesignEvent from "../../../Assets/CheckOurEvents/DesignEvent.png";
+import Quiz from "../../../Assets/CheckOurEvents/quiz.webp";
+import Autokriti2 from "../../../Assets/CheckOurEvents/Autokriti2.webp";
+import Au2Poster from "../../../Assets/CheckOurEvents/Au2Poster.webp";
 
 function CheckEvents() {
   return (
@@ -14,24 +14,19 @@ function CheckEvents() {
           </h2>
           <div className="CheckOurEvents-events">
             <Session
+              title="Autokriti 2.0"
+              status="Venue: Online"
+              date="Starts 12th Feb On Weekends"
+              image={Au2Poster}
+              url="/autokriti/register"
+            />
+            <Session
               title="Quiz"
               status="Venue: D2C"
               date="Date: 29-January-2022"
               image={Quiz}
               url="https://dare2compete.com/p/quiz-on-wheelsautomotive-quiz-national-institute-of-technology-nit-kurukshetra-256604?lb=rt7C3ad/"
             />
-            {/* <Session title="Autokriti 2.0"
-              status="Venue: TBC"
-              date="Date: Coming Soon"
-              image={Autokriti2}/> */}
-            <Session
-              title="Design Event"
-              status="Venue: Online"
-              date="1 Week to Go"
-              image={DesignEvent}
-              url="/autokriti/register"
-            />
-
             {/* <Session title="Understanding Transmission"
           status="online"
           date="24th-January-2021"
@@ -58,10 +53,11 @@ function Session(props) {
           <h2>
             <b>{props.title}</b>
           </h2>
-          <p>
+          <p style={{fontSize: '16px'}}>
             {props.status}
             <br />
             {props.date}
+            <br/>
           </p>
 
           {/* <div className="CheckOurEvents-register"></div> */}

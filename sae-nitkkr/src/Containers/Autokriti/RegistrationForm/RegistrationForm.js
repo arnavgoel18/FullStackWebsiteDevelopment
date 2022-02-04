@@ -1,3 +1,5 @@
+//No need for this one now. It's an old one made just like that
+//Can delete
 import db from "../../../Firebase";
 import {
   doc,

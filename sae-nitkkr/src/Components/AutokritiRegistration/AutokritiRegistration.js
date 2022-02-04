@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+//Registeration Page made for Autokriti 2.0
+import React, { useEffect, useState } from "react";
 import { FaInfoCircle } from "react-icons/fa";
 
-import "./Quizsignup.css";
+import "./AutokritiRegistration.css";
 
 import db from "../../Firebase.js";
 import {
@@ -10,12 +11,19 @@ import {
   Timestamp,
   doc,
   setDoc,
+  updateDoc,
 } from "firebase/firestore";
 
 import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer(black)/FooterBlack";
 
 function Quizsignup() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
+  var [stuData, setStuData] = useState([]);
   function i_information_visible()
   {
     let k=document.getElementById('i_button_content');
@@ -44,12 +52,46 @@ function Quizsignup() {
   const postUserData = (event) => {
     name = event.target.name;
     value = event.target.value;
-
-    setUserData({ ...userData, [name]: value });
+    var valid = false;
+    if(name === 'referal') {
+      for(var i = 0;i < stuData.length;i++){
+        if(value == stuData[i]){
+          valid = true;
+          break;
+        }
+      }
+      if(valid === true){
+        document.querySelector('.referral_code_verified').style.display = 'inline'
+        event.target.setAttribute('readonly', 'true')
+        event.target.style.boxShadow = 'none'
+        event.target.style.border = 'none'
+        document.getElementById('original_price').style.textDecoration = 'line-through'
+        document.getElementById('original_price').style.color = 'red'
+        document.getElementById('discounted_price').style.color = 'blue'
+        document.getElementById('discounted_price').style.display = 'block'
+      }
+      else document.querySelector('.referral_code_verified').style.display = 'none'
+    }
+    setUserData({ ...userData, [name]: value });    
   };
 
   var [stuData, setStuData] = useState([]);
+  var [refData, setRefData] = useState([]);
+  var [docIdData, setDocIdData] = useState([]);
 
+  async function getFinalAmbInfo() {
+    const stuInfo = collection(db, "finalStudentAmbassador");
+    const stuInfo_doc = await getDocs(stuInfo);
+    stuData = stuInfo_doc.docs.map((doc) => doc.data().referralCode);
+    
+    setStuData(stuData);
+  }
+
+  useEffect(()=>{
+    if(stuData.length === 0){
+      getFinalAmbInfo()
+    }
+  })
   const routeChange = async (event) => {
     event.preventDefault();
     const { name, email, phone, college, branch, semester, referal } = userData;
@@ -59,17 +101,22 @@ function Quizsignup() {
       const stuInfo = collection(db, "finalStudentAmbassador");
       const stuInfo_doc = await getDocs(stuInfo);
       stuData = stuInfo_doc.docs.map((doc) => doc.data().referralCode);
+      refData = stuInfo_doc.docs.map((doc) => doc.data().numberReferrals);
+      docIdData = stuInfo_doc.docs.map((doc) => doc.id);
       setStuData(stuData);
+      setRefData(refData);
+      setDocIdData(docIdData);
     }
     
     getFinalAmbInfo();
-    
+
     if (name && email && phone && college && branch && semester) {//if all fields are entered
       if (document.getElementById("agree").checked) {
         if(referal){
           var valid = false;
           for(var i = 0;i < stuData.length;i++){
             if(referal == stuData[i]){
+
               valid = true;
               break;
             }
@@ -102,36 +149,6 @@ function Quizsignup() {
       alert("Please fill the data");
     }
   };
-  // connect with firebase
-  // const SubmitData = async (ev) => {
-  //   ev.preventDefault();
-  //   const { name, email, phone, college, branch, semester,referal,transaction } = userData;
-  //   if(transaction.length == 0){
-  //     alert("Please pay the fees and fill TransactinId")
-  //   }
-  //   else{
-  //     const res = fetch(
-  //       "https://tryingquiz-default-rtdb.firebaseio.com/userDataRecords.json",
-  //       {
-  //         method: "POST",
-  //         headers: {
-  //           "Content-Type": "application/json",
-  //         },
-  //         body: JSON.stringify({
-  //           name, email, phone, college, branch, semester,referal,transaction,
-  //         }),
-  //       }
-  //     );
-
-  //     if (res) {
-  //       setUserData({
-  //         name: "", email:"", phone:"", college:"", branch:"", semester:"",referal:"",transaction:""
-  //       });
-  //       alert("Data Stored");
-  //     }
-
-  //   }
-  // };
 
   return (
     <>
@@ -226,7 +243,7 @@ function Quizsignup() {
           <div className="field">
             {" "}
             <span className="payform-label"> Referal Code(optional code) </span>
-         
+            <img className='referral_code_verified' src="https://img.icons8.com/color/48/000000/checked-2--v1.png"/>
             <br />
            
             <div id="referal_check">
@@ -244,26 +261,23 @@ function Quizsignup() {
                 onMouseOver={i_information_visible}
                 onMouseOut={i_information_nonvisible}
               />
-            </div>
-               
-            {/* &nbsp; &nbsp;
-              <img
-                src="https://img.icons8.com/ios/20/000000/info--v4.png"
-                style={{ margin: "-6px" }}
-              /> */
-            }
-            
+            </div>  
           </div>
 
+          <div id="pay_price">
+            <div id='pay_price_title'>Price: &nbsp;</div>
+            <div id='original_price'>&#8377; 699</div>
+            <div id='discounted_price'>&#8377; 629</div>
+          </div>
           <div id="pay_button">
               <div id="paynow">
                 <button onClick={routeChange} className="payform-button">₹ &nbsp; Pay Now</button>
               </div>
               <div id="i_button_content">
-                <h4>Enter Referal Code only if you are applying through an Ambassador</h4>
+                <h4>Enter only if you are applying through an ambassador (max. 10% off)</h4>
               </div>
           </div>
-          
+
           <div className="field">
             {" "}
             <span className="payform-label"> Payment ID </span>
@@ -339,86 +353,103 @@ function Quizsignup() {
       <Footer/>
     </>
   );
-}
 
-function submit() {
-  var studentName = document.getElementById("amb_name");
-  var collegeName = document.getElementById("amb_college");
-  var branch = document.getElementById("amb_branch");
-  var semester = document.getElementById("amb_semester");
-  var phone = document.getElementById("amb_phone");
-  var email = document.getElementById("amb_email");
-  var referalcode = document.getElementById("referal_code");
-  var transaction = document.getElementById("transaction");
-  var dateOfSubmission = new Date().toLocaleString() + "";
-  const docdata = {
-    dateOfSubmission: dateOfSubmission,
-    studentName: studentName.value,
-    collegeName: collegeName.value,
-    branch: branch.value,
-    semester: semester.value,
-    phone: phone.value,
-    email: email.value,
-    referalcode: referalcode.value,
-    transaction: transaction.value,
-  };
+  function submit() {
+    var studentName = document.getElementById("amb_name");
+    var collegeName = document.getElementById("amb_college");
+    var branch = document.getElementById("amb_branch");
+    var semester = document.getElementById("amb_semester");
+    var phone = document.getElementById("amb_phone");
+    var email = document.getElementById("amb_email");
+    var referalcode = document.getElementById("referal_code");
+    var transaction = document.getElementById("transaction");
+    var dateOfSubmission = new Date().toLocaleString() + "";
+    
+    const docdata = {
+      dateOfSubmission: dateOfSubmission,
+      studentName: studentName.value,
+      collegeName: collegeName.value,
+      branch: branch.value,
+      semester: semester.value,
+      phone: phone.value,
+      email: email.value,
+      referalcode: referalcode.value,
+      transaction: transaction.value,
+    };
+  
+    validateForm(docdata);
+  }
+  
+  //form validation
+  function validateForm(docdata) {
+    if (
+      docdata.studentName == "" ||
+      docdata.collegeName == "" ||
+      docdata.branch == "" ||
+      docdata.phone == "" ||
+      docdata.email == "" ||
+      docdata.transaction == ""
+    ) {
+      alert("Please fill up the required fields.");
+    } else if (docdata.phone.length != 10) {
+      alert("phone number should be of length 10.");
+    } else if (
+      !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(docdata.email)
+    ) {
+      alert("Please enter a valid email address.");
+    } else {
+      setInfo(docdata);
+    }
+  }
+  
+  function deletedata() {
+    var studentName = document.getElementById("amb_name");
+    var collegeName = document.getElementById("amb_college");
+    var branch = document.getElementById("amb_branch");
+    var semester = document.getElementById("amb_semester");
+    var phone = document.getElementById("amb_phone");
+    var email = document.getElementById("amb_email");
+    var referalcode = document.getElementById("referal_code");
+    var transaction = document.getElementById("transaction");
+    studentName.value = null;
+    collegeName.value = null;
+    branch.value = null;
+    semester.value = null;
+    phone.value = null;
+    email.value = null;
+    referalcode.value = null;
+    transaction.value = null;
+  }
+  
+  //save to database
+  async function setInfo(docdata) {
+    document.getElementById("payform-button2").disabled = true;
+    document.getElementById("payform-button2").style.backgroundColor = "gray";
+    
+    //check if referal code is present
+    for(var i = 0;i < stuData.length;i++){
+      if(docdata.referalcode == stuData[i]){
+        refData[i] += 1;
+        await updateDoc(doc(db, "finalStudentAmbassador", docIdData[i]), {
+          numberReferrals: refData[i]
+        });
+      }
+    }
 
-  validateForm(docdata);
-}
-
-//form validation
-function validateForm(docdata) {
-  if (
-    docdata.studentName == "" ||
-    docdata.collegeName == "" ||
-    docdata.branch == "" ||
-    docdata.phone == "" ||
-    docdata.email == "" ||
-    docdata.transaction == ""
-  ) {
-    alert("Please fill up the required fields.");
-  } else if (docdata.phone.length != 10) {
-    alert("phone number should be of length 10.");
-  } else if (
-    !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(docdata.email)
-  ) {
-    alert("Please enter a valid email address.");
-  } else {
-    setInfo(docdata);
+  
+    var timestamp = String(new Date().getTime());
+    await setDoc(doc(db, "autokritiRegistration", timestamp), docdata);
+    
+    alert("Congratulations! Your information saved successfully.");
+    deletedata();
+  
+    document.getElementById("payform-button2").disabled = false;
+    document.getElementById("payform-button2").style.backgroundColor =
+      "#E9910DFC";
+    // window.location.reload();
   }
 }
 
-function deletedata() {
-  var studentName = document.getElementById("amb_name");
-  var collegeName = document.getElementById("amb_college");
-  var branch = document.getElementById("amb_branch");
-  var semester = document.getElementById("amb_semester");
-  var phone = document.getElementById("amb_phone");
-  var email = document.getElementById("amb_email");
-  var referalcode = document.getElementById("referal_code");
-  var transaction = document.getElementById("transaction");
-  studentName.value = null;
-  collegeName.value = null;
-  branch.value = null;
-  semester.value = null;
-  phone.value = null;
-  email.value = null;
-  referalcode.value = null;
-  transaction.value = null;
-}
 
-//save to database
-async function setInfo(docdata) {
-  document.getElementById("payform-button2").disabled = true;
-  document.getElementById("payform-button2").style.backgroundColor = "gray";
-  var timestamp = String(new Date().getTime());
-  await setDoc(doc(db, "autokritiRegistration", timestamp), docdata);
-  alert("Congratulations! Your information saved successfully.");
-  deletedata();
-  document.getElementById("payform-button2").disabled = false;
-  document.getElementById("payform-button2").style.backgroundColor =
-    "#E9910DFC";
-  // window.location.reload();
-}
 
 export default Quizsignup;

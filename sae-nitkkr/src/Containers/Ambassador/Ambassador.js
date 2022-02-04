@@ -30,6 +30,13 @@
 // }
 
 // export default Ambassador
+
+/*-----------------------------------------------
+This is the old ambassador page we made. 
+The page that was completely separate. 
+It had been redirected because we had already shred that link first. 
+Maybe we can remove it now
+-----------------------------------------------*/
 import { Redirect } from 'react-router'
 import React, { PropTypes } from 'react';
 

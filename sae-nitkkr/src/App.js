@@ -24,10 +24,12 @@ import DisplayQuizResponses from './Containers/Backend/DisplayQuizResponses/Disp
 import DisplayBlogs from "./Containers/Backend/DisplayBlogs/AllBlogsPage"
 import QuillEditor from "./Containers/Backend/DisplayBlogs/QuillEditor/Add"
 import RegistrationForm from "./Containers/Autokriti/RegistrationForm/RegistrationForm";
-import Quizsignup from "./Components/QuizSignup/Quizsignup";
+import Quizsignup from "./Components/AutokritiRegistration/AutokritiRegistration";
 import ShowAmbassador from "./Containers/ShowAmbassador/ShowAmbassador";
 import ShowAmbLogin from "./Containers/ShowAmbassador/ShowAmbLogin"; 
 import CheckState from './Components/AutokritiEvent/Context/CheckState';
+
+import Autokriti2 from './Containers/Autokriti/Autokriti2/Autorkriti2'
 
 //import RegistrationForm from "./Containers/Autokriti/RegistrationForm/RegistrationForm";
 
@@ -59,11 +61,13 @@ function App() {
 
             <Route path="/admin/displayBlogs" exact component={() => <DisplayBlogs/>}/>
             <Route path="/admin/displayBlogs/editor" exact component={() => <QuillEditor/>}/>
-            {/* <Route path="/registrationForm" exact component={()=><RegistrationForm/>}/> */}
-            <Route path="/autokriti/register" exact component={() => <Quizsignup/>}/>
+            <Route path="/registrationForm" exact component={()=><RegistrationForm/>}/>
 
             <Route path="/ShowAmbassador" exact component={()=><ShowAmbassador/>}/>
             <Route path="/Ambassador/login" exact component={()=><ShowAmbLogin/>}/>
+
+            <Route path="/e-Autokriti2.0" exact component={()=><Autokriti2/>}/>
+            <Route path="/autokriti/register" exact component={() => <Quizsignup/>}/>
           </Switch>
         </Router>
       </CheckState>

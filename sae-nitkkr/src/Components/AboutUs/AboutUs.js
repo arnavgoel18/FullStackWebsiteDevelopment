@@ -7,9 +7,10 @@ import Autokriti from '../../Containers/Autokriti/Autokriti';
 
 import Aos from"aos";
 import"aos/dist/aos.css";
+
 function Home(props) {
     useEffect(()=>{
-      Aos.init({duration:3000});
+      Aos.init({duration:2000});
     },[])
 
   var content, contentOnlyForHomepage, contentOnlyForAutokriti;
@@ -35,12 +36,14 @@ function Home(props) {
   <>
   <div className="AboutUs-boxes">
     <div data-aos="fade-right"
-      data-aos-offset="300"
+     data-aos-once="true"
+      data-aos-offset="200"
     className="AboutUs-box1">
       <img src={picture} alt="images" className="AboutUs-image"/>
     </div>
     <div data-aos="fade-up"
-        data-aos-offset="320"
+        data-aos-offset="200"
+        data-aos-once="true"
 
     className="AboutUs-box2">
       <div className="AboutUs-box21"><h2>who are</h2><h2 className="AboutUs-head">We?</h2></div>
@@ -56,7 +59,7 @@ function Home(props) {
   </>
   );
 }
-export default Home
+export default Home;
 
 // the lower written text is just to state which props is used for which  text
 

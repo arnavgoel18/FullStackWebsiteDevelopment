@@ -1,4 +1,6 @@
-#acc_main_container
+
+/* .................My styling............. */
+#acc_container
 {
     width:70%;
     margin-left:auto;
@@ -7,7 +9,7 @@
     margin-top: 100px;
     padding-top: 25px;
     margin-bottom:100px;
-    box-shadow: 0px 0px 10px -3px grey
+    box-shadow: 10px 10px 15px -3px grey
 }
 .acc_container_main{
     width:700px;
@@ -126,95 +128,4 @@
     height:15px;
     cursor: pointer;
     font-weight: bold;
-}
-@media (min-width:0px) and (max-width:500px){
-    #acc_main_container
-    {
-        width:95%;
-        flex-direction: column;
-        flex-wrap: wrap;
-        margin-top: 150px;
-        justify-content: center;
-    }
-    .acc_container_left_main{
-        margin-left: auto;
-        margin-right: auto;
-        height:200px;
-        margin-top: -530px;
-        width:220px;
-    }
-    .navigation_bar{
-        margin-top: 10px;
-    }
-    .acc_container_right_main{
-        width:95%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .acc_container_left_main_part1{
-        font-size: 22px;
-    }
-    .acc_container_right_main_part{
-        width:100%;
-        padding:10px;
-    }
-    .acc_container_right_main_part1_text{
-        margin-right: 0px;
-        font-size: 14px;
-    }
-    .acc_container_left_main_part1_timing{
-        font-size: 16px;
-    }
-    .acc_container_main{
-        width:100%;
-    }
-
-}
-@media (min-width:500px) and (max-width:800px){
-    #acc_main_container
-    {
-        width:95%;
-        flex-direction: column;
-        flex-wrap: wrap;
-        margin-top: 150px;
-        justify-content: center;
-    }
-    .acc_container_left_main{
-        margin-left: auto;
-        margin-right: auto;
-        height:200px;
-        margin-top: -500px;
-        width:220px;
-    }
-    .acc_container_right_main{
-        width:95%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .acc_container_left_main_part1{
-        font-size: 22px;
-    }
-    .acc_container_right_main_part{
-        width:100%;
-        padding:10px;
-    }
-    .acc_container_right_main_part1_text{
-        margin-right: 0px;
-        font-size: 14px;
-    }
-    .acc_container_left_main_part1_timing{
-        font-size: 16px;
-    }
-    .acc_container_main{
-        width:100%;
-    }
-    .navigation_bar{
-        margin-top: 50px;
-    }
-}
-@media (min-width:800px) and (max-width:1024px){
-    #acc_main_container
-    {
-        width:95%;
-    }
 }

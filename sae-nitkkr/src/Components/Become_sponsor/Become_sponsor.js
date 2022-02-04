@@ -1,3 +1,4 @@
+//Div on Sponsors page to enroll as an Ambassador
 import React from 'react'
 import { Link } from 'react-router-dom'
 
