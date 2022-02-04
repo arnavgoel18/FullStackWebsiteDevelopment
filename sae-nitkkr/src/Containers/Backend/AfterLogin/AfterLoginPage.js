@@ -75,7 +75,7 @@ export default function AfterLoginPage() {
           <img src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-vitaly-gorbachev/60/000000/external-quiz-online-learning-vitaliy-gorbachev-lineal-vitaly-gorbachev.png" className="iconimage"/>
             
           </div>
-            <AfterLoginCard name="Quiz Responses Recorded" id="yellow" />
+            <AfterLoginCard name="Autokriti Registrations" id="yellow" />
           </Link>
           <Link to="/admin/finalAmbassador">
           <div className="iconimagediv">
