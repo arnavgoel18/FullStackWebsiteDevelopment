@@ -49,7 +49,7 @@ function App() {
 
   return (
     <div>
-      <div className="header">
+      <div className='header'>
         <NavBar />
       </div>
 
@@ -58,61 +58,64 @@ function App() {
           <img src={blogLogo} id="logo1" alt="not" />
         </div>
 
-        <div className="topicname">
+        <div className='topicname'>
           <span>{detail.title}</span>
         </div>
 
-        <div className="extraspace "></div>
+        <div className='extraspace '></div>
       </div>
 
-      <div className="body">
-        <div id="bodyContent">
+      <div className='body'>
+        <div id='bodyContent'>
           <ReactQuill
-            theme="bubble"
-            value={detail.information || ""}
+            theme='bubble'
+            value={detail.information || ''}
             readOnly={true}
           />
         </div>
-        <div className="extraspace a">
+        <div className='extraspace a'>
           <ShareAndClapDIV
-            shareUrl={"/blogs/leftvsright?timestamp=" + detail.timestamp}
+            shareUrl={'/blogs/leftvsright?timestamp=' + detail.timestamp}
             title={detail.title}
             database={detail.title}
           />
         </div>
       </div>
-      <div id="extra">
+      <div id='extra'>
         <PhoneShareAndClap
-          shareUrl={"/blogs/leftvsright?timestamp=" + detail.timestamp}
+          shareUrl={'/blogs/leftvsright?timestamp=' + detail.timestamp}
           title={detail.title}
           database={detail.title}
         />
       </div>
       <hr />
 
-      <h2 className="other_blogs">Other Blogs</h2>
-      <div className="end">
+      <h2 className='other_blogs'>Other Blogs</h2>
+      <div className='end'>
         {otherBlog.map((other, index) => {
-          if(index<3){
-          return (
-            <div key={index}>
-              <Link to={"/blogs/leftvsright?timestamp=" + other.timestamp} target={"_parent"}>
-                <TopicsCardHolder
-                  title={other.title}
-                  srcs={other.coverPhotoUrl}
-                  date={other.modifiedDate}
-                  shareUrl={"/blogs/leftvsright?timestamp=" + other.timestamp}
-                />
-              </Link>
-            </div>
-          );
+          if (index < 3) {
+            return (
+              <div key={index}>
+                <Link
+                  to={'/blogs/leftvsright?timestamp=' + other.timestamp}
+                  target={'_parent'}
+                >
+                  <TopicsCardHolder
+                    title={other.title}
+                    srcs={other.coverPhotoUrl}
+                    date={other.modifiedDate}
+                    shareUrl={'/blogs/leftvsright?timestamp=' + other.timestamp}
+                  />
+                </Link>
+              </div>
+            )
           }
         })}
       </div>
 
       <Footer />
     </div>
-  );
+  )
 }
 
 export default App;

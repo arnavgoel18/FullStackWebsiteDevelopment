@@ -1,5 +1,7 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import React, { useState, useEffect } from 'react'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+
+
 
 import HomePage from './Containers/HomePage/homePage'
 import Autokriti from "./Containers/Autokriti/Autokriti";
@@ -86,4 +88,4 @@ function App() {
   );
 }
 
-export default App;
+export default App
