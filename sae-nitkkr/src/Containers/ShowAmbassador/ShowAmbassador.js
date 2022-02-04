@@ -17,7 +17,8 @@ import {MdLogout} from 'react-icons/md'
 
 export default function ShowAmbassador() {
   const params = new URL(document.location).searchParams;
-  const username = localStorage.getItem("username");
+  const username = params.get("username");
+  // const username = localStorage.getItem("username");
 
   var [tester, setTester] = useState(true);
 

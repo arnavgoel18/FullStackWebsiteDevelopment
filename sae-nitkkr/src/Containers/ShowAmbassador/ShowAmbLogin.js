@@ -41,6 +41,8 @@ function Login() {
   
     if(ambInfoReferalCode.includes(userid) && ambInfoName.includes(password)){
       localStorage.setItem("token","shivaji");
+      localStorage.setItem("username",userid);
+      localStorage.setItem("password",password);
       e.preventDefault();
       setloggedin(true);     
     }

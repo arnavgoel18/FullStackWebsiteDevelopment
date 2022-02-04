@@ -33,12 +33,12 @@ function Card_contain() {
         {blogResult.map((detail, index) => {
           return (
             <div key={index}>
-              <Link to={"/blogs/leftvsright?timestamp=" + detail.timestamp}>
+              <Link to={"/blogs/yourblog?timestamp=" + detail.timestamp}>
                 <TopicCardHolder
                   title={detail.title}
                   srcs={detail.coverPhotoUrl}
                   date={detail.modifiedDate}
-                  shareUrl={"/blogs/leftvsright?timestamp=" + detail.timestamp}
+                  shareUrl={"/blogs/yourblog?timestamp=" + detail.timestamp}
                 />
               </Link>
             </div>
