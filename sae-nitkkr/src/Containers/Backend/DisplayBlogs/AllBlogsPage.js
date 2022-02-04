@@ -53,64 +53,66 @@ export default function AllBlogsPage() {
 
   return (
     <div>
-      <div className="LoginPage-header">
-        <Link to="/admin/actions">
-          <button id="AllBlogs-backBtn">
-          <i className="fa fa-arrow-left fa-customize fa-fw"></i>Back</button>
+      <div className='LoginPage-header'>
+        <Link to='/admin/actions'>
+          <button id='AllBlogs-backBtn'>
+            <i className='fa fa-arrow-left fa-customize fa-fw'></i>Back
+          </button>
         </Link>
 
         {/* <i className="fa fa-user fa-lg" aria-hidden="true"></i> */}
         <button
-          type="submit"
-          id="blog-signout"
+          type='submit'
+          id='blog-signout'
           onClick={(e) => {
-            localStorage.removeItem("token");
-            window.location.href = "/admin/login";
+            localStorage.removeItem('token')
+            window.location.href = '/admin/login'
           }}
         >
           Sign Out
-          <i className="fa fa-sign-out fa-customize fa-fw"></i>
+          <i class='fa fa-arrow-right fa-customize fa-fw'></i>
         </button>
       </div>
-      <div className="backendBlogPanel">
-        <h4 id="totalHeading">Total no. of blogs: {blogResult.length}</h4>
-        <button id="addNewBlog">
-        <i className="fa fa-eye  fa-fw"></i>View Blog Request</button>
-        <button id="addNewBlog" type="button" onClick={goToEditor}>
-        <i className="fa fa-plus fa-customize fa-fw"></i> Add new blog
+      <div className='backendBlogPanel'>
+        <h4 id='totalHeading'>Total no. of blogs: {blogResult.length}</h4>
+        <button className='addNewBlog'>
+          <i className='fa fa-eye  fa-fw'></i>View Blog Request
+        </button>
+        <button className='addNewBlog' type='button' onClick={goToEditor}>
+          <i className='fa fa-plus fa-customize fa-fw'></i> Add new blog
         </button>
       </div>
 
-      <div className="card_contain">
+      <div className='card_contain' style={{marginBottom:'15px'}}>
         {blogResult.map((detail, index) => {
           return (
             <div key={index}>
-              <Link to={"/blogs/leftvsright?timestamp=" + detail.timestamp}>
+              <Link to={'/blogs/leftvsright?timestamp=' + detail.timestamp}>
                 <TopicCardHolder
                   title={detail.title}
                   srcs={detail.coverPhotoUrl}
                   date={detail.modifiedDate}
-                  shareUrl={"/blogs/leftvsright?timestamp=" + detail.timestamp}
+                  shareUrl={'/blogs/leftvsright?timestamp=' + detail.timestamp}
                 />
               </Link>
-              <div className="blogIcons">
+              <div className='blogIcons'>
                 <i
-                  className="fa fa-trash icon"
-                  aria-hidden="true"
+                  className='fa fa-trash'
+                  aria-hidden='true'
                   onClick={() => deleteBlog(detail.timestamp)}
                 ></i>
                 <i
-                  className="fa fa-pencil icon"
-                  aria-hidden="true"
+                  className='fa fa-pencil-square-o'
+                  aria-hidden='true'
                   onClick={() => editBlog(detail.timestamp)}
                 ></i>
               </div>
             </div>
-          );
+          )
         })}
       </div>
     </div>
-  );
+  )
 }
 
 function goToEditor(e) {
