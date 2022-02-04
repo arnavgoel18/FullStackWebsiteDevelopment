@@ -21,8 +21,7 @@ export default function AfterLoginPage() {
             <button id="AfterLogin-backBtn">Back</button>
           </Link>
 
-          {/* <i className="fa fa-user fa-lg" aria-hidden="true"></i> */}
-          <button
+          <div
             id="action-signout"
             onClick={(e) => {
               localStorage.removeItem("token");
@@ -30,8 +29,7 @@ export default function AfterLoginPage() {
             }}
           >
             Sign Out
-            <i className="fa fa-sign-out fa-customize fa-fw"></i>
-          </button>
+          </div>
         </div>
 
         <div className="allCards">
@@ -59,7 +57,7 @@ export default function AfterLoginPage() {
           <div className="iconimagediv">
           <img src="https://img.icons8.com/external-itim2101-lineal-itim2101/64/000000/external-contact-us-contact-and-message-itim2101-lineal-itim2101-1.png"className="iconimage"/>
           </div>
-            <AfterLoginCard name="Contact Us responses" id="orange" />
+            <AfterLoginCard name="Contact Us responses" id="yellow" />
           </Link>
           <Link to="/admin/signUpSheet">
           <div className="iconimagediv">
@@ -67,7 +65,7 @@ export default function AfterLoginPage() {
           <img src="https://img.icons8.com/external-bearicons-glyph-bearicons/64/000000/external-sign-up-call-to-action-bearicons-glyph-bearicons.png" className="iconimage"/>
             
           </div>
-            <AfterLoginCard name="SignUp Details" id="yellow" />
+            <AfterLoginCard name="SignUp Details" id="orange" />
           </Link>
           <Link to="/admin/quizResponses">
           <div className="iconimagediv">
@@ -91,7 +89,7 @@ export default function AfterLoginPage() {
           <img src="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/000000/external-announcement-news-kiranshastry-lineal-kiranshastry-2.png"className="iconimage"/>
            
           </div>
-            <AfterLoginCard name="College Reps" id="orange" />
+            <AfterLoginCard name="College Reps" id="yellow" />
           </Link>
 
         </div>
