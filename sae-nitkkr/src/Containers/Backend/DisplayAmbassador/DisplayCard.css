@@ -27,9 +27,10 @@
 .response-num-div{
     
     
-   display: flex;
+    display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    gap:14px;
     align-self: center;
     width: 60%;
     height: 59px;
@@ -50,6 +51,13 @@
     width: 20%;
     justify-content: space-evenly;
 }
+
+.totalAmbassadorResponses{
+    align-self: center;
+}
+
+
+
 #amb-signout{
     cursor: pointer;
     width: 171.06px;
@@ -101,10 +109,13 @@
     font-size: 11px;
   }
 }
-@media only screen and (max-width: 400px) 
+
+
+
+@media only screen and (max-width: 500px) 
 {
     #ambassador-backBtn{
-        width: 121.06px;
+        width: 110.06px;
         height: 49px;
         left: 32px;
     
@@ -133,4 +144,62 @@
         margin:1px ;
   
         }
+
+        .response-num-div{
+            display:flex;
+            
+            gap:8px;
+            font-size:10px;
+            margin-left:50px;
+        }
+
+       
+
+      
 }
+
+
+@media only screen and (max-width: 320px) 
+{
+    #ambassador-backBtn{
+        width: 110.06px;
+        height: 49px;
+        left: 32px;
+    
+        color: white;
+        background: #000000;
+        border-radius: 10px;
+    }
+    #amb-signout{
+        
+        width: 121.06px;
+        height: 49px;
+        float: right;
+        background: #F4970A;
+        border: none;
+        border-radius: 10px;
+    }
+    .response-num-btn{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
+    #decrement,#increment{
+  
+        width: 17px;
+        height: 17px;
+        margin:1px ;
+  
+        }
+
+        .response-num-div{
+            display:flex;
+           
+            gap:15px;
+            font-size:10px;
+            margin-left:45px;
+        }
+
+     
+}
+
