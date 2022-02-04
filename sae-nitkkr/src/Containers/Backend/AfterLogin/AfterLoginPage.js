@@ -85,6 +85,15 @@ export default function AfterLoginPage() {
           </div>
             <AfterLoginCard name="Selected Ambassadors" id="orange" />
           </Link>
+          <Link to="/admin/collegeRepresentatives">
+          <div className="iconimagediv">
+            
+          <img src="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/000000/external-announcement-news-kiranshastry-lineal-kiranshastry-2.png"className="iconimage"/>
+           
+          </div>
+            <AfterLoginCard name="College Reps" id="orange" />
+          </Link>
+
         </div>
       </div>
     );

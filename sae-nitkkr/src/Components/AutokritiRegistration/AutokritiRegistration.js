@@ -53,6 +53,7 @@ function Quizsignup() {
     name = event.target.name;
     value = event.target.value;
     var valid = false;
+    //to check referal code
     if(name === 'referal') {
       for(var i = 0;i < stuData.length;i++){
         if(value == stuData[i]){
@@ -69,21 +70,50 @@ function Quizsignup() {
         document.getElementById('original_price').style.color = 'red'
         document.getElementById('discounted_price').style.color = 'blue'
         document.getElementById('discounted_price').style.display = 'block'
+        document.getElementById('show_invalid').style.display = 'none'
       }
-      else document.querySelector('.referral_code_verified').style.display = 'none'
+      else {
+        if(value.length >= 6){
+          document.getElementById('show_invalid').style.display = 'block'
+        }
+        else{
+          document.getElementById('show_invalid').style.display = 'none'
+        }
+        document.querySelector('.referral_code_verified').style.display = 'none'
+      }
     }
+
+    //to make sure same person is not registering again
+    if(name == 'email'){
+      console.log("entering")
+    }
+
     setUserData({ ...userData, [name]: value });    
   };
 
   var [stuData, setStuData] = useState([]);
-  var [refData, setRefData] = useState([]);
-  var [docIdData, setDocIdData] = useState([]);
+  var [colStuData, setColStuData] = useState([]);
 
+  var [refData, setRefData] = useState([]);
+  var [colRefData, setColRefData] = useState([]);
+
+  var [docIdData, setDocIdData] = useState([]);
+  var [colDocIdData, setColDocIdData] = useState([]);
+
+  //this async function is to check for applying discount while typing referal code
   async function getFinalAmbInfo() {
+    //final ambassadors
     const stuInfo = collection(db, "finalStudentAmbassador");
     const stuInfo_doc = await getDocs(stuInfo);
+    //final college representatives
+    const colStuInfo = collection(db, "collegeRepresentatives");
+    const colStuInfo_doc = await getDocs(colStuInfo);
+   
+    colStuData = colStuInfo_doc.docs.map((doc) => doc.data().referralCode);
     stuData = stuInfo_doc.docs.map((doc) => doc.data().referralCode);
-    
+
+    stuData = stuData.concat(colStuData);
+
     setStuData(stuData);
   }
 
@@ -92,20 +122,36 @@ function Quizsignup() {
       getFinalAmbInfo()
     }
   })
+
+  //this function runs when you click on paynow
   const routeChange = async (event) => {
     event.preventDefault();
     const { name, email, phone, college, branch, semester, referal } = userData;
 
-    
     async function getFinalAmbInfo() {
+      //final ambassadors
       const stuInfo = collection(db, "finalStudentAmbassador");
       const stuInfo_doc = await getDocs(stuInfo);
       stuData = stuInfo_doc.docs.map((doc) => doc.data().referralCode);
-      refData = stuInfo_doc.docs.map((doc) => doc.data().numberReferrals);
-      docIdData = stuInfo_doc.docs.map((doc) => doc.id);
+      
+      //final college representatives
+      const colStuInfo = collection(db, "collegeRepresentatives");
+      const colStuInfo_doc = await getDocs(colStuInfo);
+      colStuData = colStuInfo_doc.docs.map((doc) => doc.data().referralCode);
+
+      refData = stuInfo_doc.docs.map((doc) => doc.data().numberReferrals);      //final ambassadors
+      colRefData = colStuInfo_doc.docs.map((doc) => doc.data().numberReferrals);      //final college representatives
+      
+      docIdData = stuInfo_doc.docs.map((doc) => doc.id);      //final ambassadors
+      colDocIdData = colStuInfo_doc.docs.map((doc) => doc.id);      //final college representatives
+      
       setStuData(stuData);
+      setColStuData(colStuData);
       setRefData(refData);
       setDocIdData(docIdData);
+
+      setColRefData(colRefData);
+      setColDocIdData(colDocIdData);
     }
     
     getFinalAmbInfo();
@@ -116,9 +162,15 @@ function Quizsignup() {
           var valid = false;
           for(var i = 0;i < stuData.length;i++){
             if(referal == stuData[i]){
-
               valid = true;
               break;
+            }
+            //college student
+            else if(i < colStuData.length){
+              if(referal == colStuData[i]){
+                valid = true;
+                break;
+              }
             }
           }
 
@@ -264,6 +316,7 @@ function Quizsignup() {
             </div>  
           </div>
 
+          <div id="show_invalid">The Referal Code is Invalid</div>
           <div id="pay_price">
             <div id='pay_price_title'>Price: &nbsp;</div>
             <div id='original_price'>&#8377; 699</div>
@@ -426,13 +479,24 @@ function Quizsignup() {
     document.getElementById("payform-button2").disabled = true;
     document.getElementById("payform-button2").style.backgroundColor = "gray";
     
-    //check if referal code is present
+    //check if referal code is present and update database by 1 count
+    //this code will work only if number of college representatives are less than or equal in number to final ambasadors
     for(var i = 0;i < stuData.length;i++){
       if(docdata.referalcode == stuData[i]){
         refData[i] += 1;
         await updateDoc(doc(db, "finalStudentAmbassador", docIdData[i]), {
           numberReferrals: refData[i]
         });
+        break;
+      }
+      else if(i < colStuData.length){
+        if(docdata.referalcode == colStuData[i]){
+          colRefData[i] += 1;
+          await updateDoc(doc(db, "collegeRepresentatives", colDocIdData[i]), {
+            numberReferrals: colRefData[i]
+          });
+          break;
+        }
       }
     }
 
