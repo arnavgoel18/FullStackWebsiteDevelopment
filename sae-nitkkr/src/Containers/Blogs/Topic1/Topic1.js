@@ -3,8 +3,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { Route, Link } from "react-router-dom";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.bubble.css";
-import logo1 from "../../../Components/LEFT vs RIGHT/images/logo1.png";
-import topiccardpic from "../../../Components/LEFT vs RIGHT/images/topiccardholder1.png";
+import blogLogo from "../../../Assets/blogLogo.webp";
 import "./Topic1.css";
 import NavBar from "../../../Components/NavBar/NavBar";
 import ShareAndClapDIV from "../../../Components/Blogs/ShareAndClap/ShareAndClapDIV";
@@ -54,14 +53,9 @@ function App() {
         <NavBar />
       </div>
 
-      <div className='bodyhead_extraspace'>
-        <div
-          className='imgcircle'
-          style={{
-            backgroundImage: `url('${logo1}')`,
-          }}
-        >
-          {/* <img src={logo1} id="logo1" alt="not" /> */}
+      <div className="bodyhead_extraspace">
+        <div className="imgcircle">
+          <img src={blogLogo} id="logo1" alt="not" />
         </div>
 
         <div className='topicname'>

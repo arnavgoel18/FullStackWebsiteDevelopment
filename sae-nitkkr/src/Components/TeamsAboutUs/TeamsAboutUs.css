@@ -13,18 +13,24 @@
 }
 .TeamAboutUs-heading {
   display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+  /* align-items: center; */
   margin-bottom: 30px;
   flex-wrap: wrap;
 }
 .TeamAboutUs-weare {
   font-size: 27px;
   margin-right: 5px;
-  margin-top: 9px;
+  /* margin-top: 9px; */
 }
 .TeamAboutUs-boldcolor {
-  font-size: 37px;
+  font-size: 27px;
   font-weight: 900;
-  color: rgb(67, 67, 197);
+  /* color: rgb(67, 67, 197); */
+  background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .TeamAboutUs-bigcontainer {
   margin-top: 30px;

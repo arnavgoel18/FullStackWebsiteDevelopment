@@ -19,9 +19,13 @@ font-family: 'Montserrat', sans-serif;
 }
 #Nitrox-participate1
 {
-    font-size: 37px;
+    font-size: 27px;
     font-weight: 800;
-   color: rgb(243, 8, 47);
+   /* color: rgb(243, 8, 47);
+    */
+    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 #Nitrox-baja_title
 {
@@ -132,7 +136,7 @@ font-family: 'Montserrat', sans-serif;
     width: 80%;
     height: 275px;
     padding: 5px;
-    background-image: url("../../../Assets/WhereWeParticipate/NitroxATVC1.jpeg");
+    background-image: url("../../../Assets/WhereWeParticipate/NitroxATVC1.webp");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -157,7 +161,7 @@ font-family: 'Montserrat', sans-serif;
     width: 80%;
     padding: 5px;
     height: 275px;
-    background-image: url("../../../Assets/WhereWeParticipate/NitroxBAJA1.jpeg");
+    background-image: url("../../../Assets/WhereWeParticipate/NitroxBAJA1.webp");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -166,7 +170,7 @@ font-family: 'Montserrat', sans-serif;
     width: 20%;
     padding: 5px;
     height: 275px;
-    background-image: url("../../../Assets/WhereWeParticipate/NitroxATVC2.jpeg");
+    background-image: url("../../../Assets/WhereWeParticipate/NitroxATVC2.webp");
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 0.45;
@@ -178,7 +182,7 @@ font-family: 'Montserrat', sans-serif;
     width: 20%;
     padding: 5px;
     height: 275px;
-    background-image: url("../../../Assets/WhereWeParticipate/NitroxBAJA2.jpeg");
+    background-image: url("../../../Assets/WhereWeParticipate/NitroxBAJA2.webp");
     background-repeat: no-repeat;
     background-size: cover;
     

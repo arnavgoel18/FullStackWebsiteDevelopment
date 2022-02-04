@@ -62,7 +62,10 @@
     align-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: auto;
+    margin: 30px auto;
+}
+.card_contain #card_container{
+    margin-bottom:15px;
 }
 .blogIcons{
     display: flex;

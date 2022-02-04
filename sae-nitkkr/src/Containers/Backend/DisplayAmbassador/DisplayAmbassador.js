@@ -1,7 +1,10 @@
+//This Page is to display entries for those people applying to become ambassadors
 import React, { useState, useEffect } from "react";
-import { Redirect } from "react-router-dom";
-import DisplayCard from "./DisplayCard";
+import { Redirect, Link } from "react-router-dom";
+
 import "./DisplayAmbassador.css";
+
+//Firebase
 import db from "../../../Firebase.js";
 import {
   collection,
@@ -11,7 +14,8 @@ import {
   setDoc,
 } from "firebase/firestore";
 import { onValue } from "firebase/database";
-import { Link } from "react-router-dom";
+
+import DisplayCard from "./DisplayCard";
 import PageHeader from "../../../Components/Backend/PageHeader/PageHeader";
 
 var flag = false;
@@ -32,7 +36,7 @@ function DisplayInfo() {
 
   //Get Information from Firebase into detailList array
   async function getInfo() {
-    //console.log("ambassador info")
+    
     const studentAmbassador = collection(db, "studentAmbassador");
     var amb_doc = await getDocs(studentAmbassador);
     detailList = amb_doc.docs.map((doc) => doc.data());
@@ -132,7 +136,7 @@ function DisplayInfo() {
   } else {
     return (
       <>
-        <PageHeader heading="Ambassador Responses" />
+        <PageHeader heading="Ambassador Responses"/>
         <div className="displayDiv">
           <div className="LoginPage-header">
             <Link to="/admin/actions">
@@ -167,6 +171,7 @@ function DisplayInfo() {
                 +
               </button>
             </div>
+            <div className="totalAmbassadorResponses">Total Responses={detailListLength}</div>
             <a className="downloadCsv">
               <i
                 onClick={downloadCsv}

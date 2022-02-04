@@ -10,6 +10,8 @@ import AutokritiFirst from '../../Components/FirstDisplayDIV/Autokriti/Slider'
 import Testimonials from './Testimonials/Testimonials'
 import Gallery from '../../Components/Gallery/AutokritiGallery/Gallery'
 import FooterWhite from "../../Components/Footer/Footer(white)/FooterWhite";
+import AutokritiEvent from '../../Components/AutokritiEvent/AutokritiEvent'
+import AutokritiCheckEvent from '../../Components/AutokritiEvent/AutokritiCheckEvent/AutokritiCheckEvent'
 // import PopUs from './PopUps/popupapp'
 
 function Autokriti(){
@@ -25,6 +27,7 @@ function Autokriti(){
             {/* <PopUs/> */}
             {/* <FirstDisplayDiv page="Autokriti"/> */}
             <AboutUs page="Autokriti"/>
+            <AutokritiEvent/>
             <CheckOurEvents/>
             {/* <Saga/> */}
             <BrandAmbassador/>

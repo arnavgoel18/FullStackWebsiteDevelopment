@@ -1,32 +1,57 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import "./TeamDiv.css";
+import Aos from"aos";
+import"aos/dist/aos.css";
 
 function Teamdiv() {
+  useEffect(()=>{
+    Aos.init({duration:3000});
+  },[])
 
   const [open, setOpen] = useState(false);
 
   function lastworkacc()
   {
   // let acc=document.getElementById("acc");
-    window.location.href='https://www.saenitkurukshetra.in/accelerons'
+    window.location.href='/accelerons'
   }
   function lastworknitrox()
   {
   // let nitrox=document.getElementById("nitrox");
-  window.location.href='https://www.saenitkurukshetra.in/nitrox'
+  window.location.href='/nitrox'
   }
  
-  return(
+  return(<>
+  
    <div id="large_box">
-      <div id="acc" className="participate" onClick={lastworkacc} >
+   {/* <Link to="/accelerons"> */}
+      <div 
+      // data-aos="fade-right"
+      data-aos="zoom-in-right"
+      data-aos-duration="400"
+      data-aos-once="true"
+      data-aos-offset="100" id="acc" className="participate" 
+      onClick={lastworkacc}
+       >
         TEAM <br/>ACCELERONS
       </div>
-        <div id="nitrox" className="participate" onClick={lastworknitrox} >
+      {/* </Link> */}
+      {/* <Link to="/nitrox" > */}
+        <div
+        //  data-aos="fade-left"
+        data-aos="zoom-in-left"
+        data-aos-duration="400"
+        data-aos-once="true"
+        data-aos-offset="100" id="nitrox" className="participate" 
+        onClick={lastworknitrox}
+       >
       TEAM <br/> NITROX
       </div>
+      {/* </Link> */}
     </div>
+    </>
  )
 
 }

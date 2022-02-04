@@ -19,9 +19,14 @@ font-family: 'Montserrat', sans-serif;
 }
 #Accelarons-participate1
 {
-    font-size: 37px;
+    font-size: 27px;
     font-weight: 800;
-   color: rgb(243, 8, 47);
+   /* color: rgb(243, 8, 47); */
+   background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+   
+
 }
 #Accelarons-supra_title
 {
@@ -132,7 +137,7 @@ font-family: 'Montserrat', sans-serif;
     width: 80%;
     height: 275px;
     padding: 5px;
-    background-image: url("../../../Assets/WhereWeParticipate/AcceleronsFB1.jpeg");
+    background-image: url("../../../Assets/WhereWeParticipate/AcceleronsFB1.webp");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -157,7 +162,7 @@ font-family: 'Montserrat', sans-serif;
     width: 80%;
     padding: 5px;
     height: 275px;
-    background-image: url("../../../Assets/WhereWeParticipate/AcceleronsSupra1.jpeg");
+    background-image: url("../../../Assets/WhereWeParticipate/AcceleronsSupra1.webp");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -166,7 +171,7 @@ font-family: 'Montserrat', sans-serif;
     width: 20%;
     padding: 5px;
     height: 275px;
-    background-image: url("../../../Assets/WhereWeParticipate/AcceleronsFB2.jpeg");
+    background-image: url("../../../Assets/WhereWeParticipate/AcceleronsFB2.webp");
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 0.45;
@@ -178,7 +183,7 @@ font-family: 'Montserrat', sans-serif;
     width: 20%;
     padding: 5px;
     height: 275px;
-    background-image: url("../../../Assets/WhereWeParticipate/AcceleronsSupra2.jpeg");
+    background-image: url("../../../Assets/WhereWeParticipate/AcceleronsSupra2.webp");
     background-repeat: no-repeat;
     background-size: cover;
     

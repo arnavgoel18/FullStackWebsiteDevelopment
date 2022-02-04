@@ -83,7 +83,7 @@ export default function AllBlogsPage() {
         </button>
       </div>
 
-      <div className='card_contain' style={{marginBottom:'15px'}}>
+      <div className='card_contain'>
         {blogResult.map((detail, index) => {
           return (
             <div key={index}>

@@ -1,17 +1,24 @@
+import React,{useEffect} from 'react';
 import './AboutUs.css';
 import image from '../../Assets/AboutUs/homeimage.png';
 import HomeAboutUs from '../../Assets/AcceleronsGallery/Accelerons_33.jpeg'
 import AutokritiAboutUs from '../../Assets/AutokritiGallery/AutokritiAboutUs.jpeg'
 import Autokriti from '../../Containers/Autokriti/Autokriti';
 
+import Aos from"aos";
+import"aos/dist/aos.css";
+
 function Home(props) {
+    useEffect(()=>{
+      Aos.init({duration:2000});
+    },[])
 
   var content, contentOnlyForHomepage, contentOnlyForAutokriti;
   var comp1, comp2, comp3, comp4;
   var picture;
 
   if(props.page === "Home"){
-    content = "SAE NIT Kurukshetra is a collegiate club affiliated under SAE India, which is a wing of SAE International, on a national scale. The club is a platform for budding engineers to work together in arrive at solutions to the problems in the mobility field. It forms a link between naive talents and pioneers of the industry. Valuing the interdisciplinary nature of the automobile sector, under graduate students from various branches strive to innovate better under the guidance of our professors here at NIT Kurukshetra. We bring our skills to many competitions "
+    content = "SAE NIT Kurukshetra is a collegiate club affiliated with SAE India, which is a wing of SAE International, on a national scale. The club is a platform for budding engineers to work together to arrive at solutions to the problems in the mobility field. It forms a link between naive talents and pioneers of the industry. Valuing the interdisciplinary nature of the automobile sector, undergraduate students from various branches strive to innovate better under the guidance of our professors here at NIT Kurukshetra. We bring our skills to many competitions    "
     contentOnlyForHomepage = "We bring our skills to many competitions";
     comp1 = "Baja SAE India";
     comp2 = "ATVC";
@@ -28,10 +35,17 @@ function Home(props) {
   return (
   <>
   <div className="AboutUs-boxes">
-    <div className="AboutUs-box1">
+    <div data-aos="fade-right"
+     data-aos-once="true"
+      data-aos-offset="200"
+    className="AboutUs-box1">
       <img src={picture} alt="images" className="AboutUs-image"/>
     </div>
-    <div className="AboutUs-box2">
+    <div data-aos="fade-up"
+        data-aos-offset="200"
+        data-aos-once="true"
+
+    className="AboutUs-box2">
       <div className="AboutUs-box21"><h2>who are</h2><h2 className="AboutUs-head">We?</h2></div>
       <div className="AboutUs-box22">{content}<br/><br/>  {contentOnlyForHomepage}</div>
       <div className="AboutUs-box23">
@@ -45,7 +59,7 @@ function Home(props) {
   </>
   );
 }
-export default Home
+export default Home;
 
 // the lower written text is just to state which props is used for which  text
 
