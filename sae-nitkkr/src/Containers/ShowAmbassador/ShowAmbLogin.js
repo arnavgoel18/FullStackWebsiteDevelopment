@@ -41,6 +41,8 @@ function Login() {
   
     if(ambInfoReferalCode.includes(userid) && ambInfoName.includes(password)){
       localStorage.setItem("token","shivaji");
+      localStorage.setItem("username",userid);
+      localStorage.setItem("password",password);
       e.preventDefault();
       setloggedin(true);     
     }
@@ -59,8 +61,8 @@ function Login() {
   }
   if(loggedinsecond==true)
   {
-    // userid = localStorage.getItem("username");
-    // password = localStorage.getItem("password");
+    userid = localStorage.getItem("username");
+    password = localStorage.getItem("password");
     return <Redirect to={"/ShowAmbassador?username="+ userid +"&password=" + password}/>
   }
   else if(loggedin==true)
