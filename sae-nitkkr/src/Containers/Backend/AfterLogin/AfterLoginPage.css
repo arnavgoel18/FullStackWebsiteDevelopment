@@ -21,6 +21,7 @@
     display: flex;
     justify-content: space-between;
     padding: 25px 20px;
+    
 }
 
 #action-signout
@@ -46,6 +47,6 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     line-height: 25px;
-    width:150px;
+    width:110.06px;
     display: none;
 }

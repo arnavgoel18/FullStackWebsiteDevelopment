@@ -171,6 +171,7 @@ function DisplayInfo() {
                 +
               </button>
             </div>
+            <div className="totalAmbassadorResponses">Total Responses={detailListLength}</div>
             <a className="downloadCsv">
               <i
                 onClick={downloadCsv}

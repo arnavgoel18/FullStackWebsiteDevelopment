@@ -29,7 +29,7 @@
     
    display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    gap:14px;
     align-self: center;
     width: 60%;
     height: 59px;
@@ -104,7 +104,7 @@
 @media only screen and (max-width: 400px) 
 {
     #ambassador-backBtn{
-        width: 121.06px;
+        width:110.06px ;
         height: 49px;
         left: 32px;
     

@@ -85,7 +85,21 @@ function Quizsignup() {
 
     //to make sure same person is not registering again
     if(name == 'email'){
-      console.log("entering")
+      for(var i = 0;i < emailData.length;i++){
+        if(value == emailData[i]){
+          document.getElementById('show_email_is_registered').style.display = 'block';
+          document.getElementById("payform-button1").disabled = true;
+          document.getElementById("payform-button1").style.background = 'grey';
+          document.getElementById("payform-button2").disabled = true;
+          break;
+        }
+        else{
+          document.getElementById('show_email_is_registered').style.display = 'none';
+          document.getElementById("payform-button1").disabled = false;
+          document.getElementById("payform-button1").style.background = '#1a3c7f';
+          document.getElementById("payform-button2").disabled = false;
+        }
+      }
     }
 
     setUserData({ ...userData, [name]: value });    
@@ -99,6 +113,8 @@ function Quizsignup() {
 
   var [docIdData, setDocIdData] = useState([]);
   var [colDocIdData, setColDocIdData] = useState([]);
+
+  var [emailData, setEmailData] = useState([]);
 
   //this async function is to check for applying discount while typing referal code
   async function getFinalAmbInfo() {
@@ -115,6 +131,14 @@ function Quizsignup() {
     stuData = stuData.concat(colStuData);
 
     setStuData(stuData);
+
+    //email data
+    const emailsDatabase = collection(db, "autokritiRegistration");
+    const emailsDatabase_doc = await getDocs(emailsDatabase);
+
+    emailData = emailsDatabase_doc.docs.map((doc) => doc.data().email);
+
+    setEmailData(emailData);
   }
 
   useEffect(()=>{
@@ -224,6 +248,7 @@ function Quizsignup() {
               onChange={postUserData}
             />{" "}
           </div>
+
           <div className="field">
             <span className="payform-label">Email id* </span>
             <br />
@@ -237,6 +262,8 @@ function Quizsignup() {
               onChange={postUserData}
             />{" "}
           </div>
+          <div id="show_email_is_registered">This email has alreay been Registered</div>
+          
           <div className="field">
             <span className="payform-label">Phone No. * </span>
             <br />
@@ -295,7 +322,7 @@ function Quizsignup() {
           <div className="field">
             {" "}
             <span className="payform-label"> Referal Code(optional code) </span>
-            <img className='referral_code_verified' src="https://img.icons8.com/color/48/000000/checked-2--v1.png"/>
+            <img className='referral_code_verified' id="referral_code_verified" src="https://img.icons8.com/color/48/000000/checked-2--v1.png"/>
             <br />
            
             <div id="referal_check">
@@ -324,7 +351,7 @@ function Quizsignup() {
           </div>
           <div id="pay_button">
               <div id="paynow">
-                <button onClick={routeChange} className="payform-button">₹ &nbsp; Pay Now</button>
+                <button onClick={routeChange} className="payform-button" id="payform-button1">₹ &nbsp; Pay Now</button>
               </div>
               <div id="i_button_content">
                 <h4>Enter only if you are applying through an ambassador (max. 10% off)</h4>
@@ -504,13 +531,18 @@ function Quizsignup() {
     var timestamp = String(new Date().getTime());
     await setDoc(doc(db, "autokritiRegistration", timestamp), docdata);
     
-    alert("Congratulations! Your information saved successfully.");
+    alert("Congratulations! You are registered successfully.");
     deletedata();
   
     document.getElementById("payform-button2").disabled = false;
-    document.getElementById("payform-button2").style.backgroundColor =
-      "#E9910DFC";
+    document.getElementById("payform-button2").style.backgroundColor = "#E9910DFC";
     // window.location.reload();
+    document.getElementById('original_price').style.textDecoration = 'none'
+    document.getElementById('original_price').style.color = 'red'
+    document.getElementById('discounted_price').style.color = 'blue'
+    document.getElementById('discounted_price').style.display = 'none'
+    document.getElementById('referral_code_verified').style.display = 'none'
+    document.getElementById('agree').checked = false;
   }
 }
 
