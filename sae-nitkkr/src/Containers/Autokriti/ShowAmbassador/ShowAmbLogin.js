@@ -2,15 +2,15 @@
 
 import React,{useState} from 'react'
 import { Redirect } from 'react-router-dom';
-import "../Backend/Login.css";
-import man_sitting from '../../Assets/LoginPageLogos/man_sitting.jpg'
-import db from "../../Firebase";
+import "../../Backend/Login.css";
+import man_sitting from '../../../Assets/LoginPageLogos/man_sitting.jpg'
+import db from "../../../Firebase";
 import {
   collection,
   getDocs,
 } from "firebase/firestore";
-import Footer from '../../Components/Footer/Footer(black)/FooterBlack';
-import NavBar from '../../Components/NavBar/NavBar';
+import Footer from '../../../Components/Footer/Footer(black)/FooterBlack';
+import NavBar from '../../../Components/NavBar/NavBar';
 
 function Login() {
     var [tester, setTester] = useState(true);

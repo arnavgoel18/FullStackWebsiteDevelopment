@@ -20,14 +20,15 @@ import QuillEditor from "./Containers/Backend/DisplayBlogs/QuillEditor/Add"
 import DisplayAmb from "./Containers/Backend/DisplayAmbassador/DisplayAmbassador"
 import DisplayContact from './Containers/Backend/DisplayContact/DisplayContact'
 import DisplayFinalAmbassador from "./Containers/Backend/DisplayFinalAmbassador/DisplayFinalAmbassador"
+import DisplayClgRepresentatives from "./Containers/Backend/DisplayCollegeRepresentatives/DisplayClgRepresentatives";
 
 // import DisplaySignUpSheet from './Containers/Backend/DisplaySignUpSheet/DisplaySignUpSheet'
 import DisplayAllQuizes from "./Containers/Backend/DisplayAllQuizes/DisplayAllQuizes";
 
 import Autokriti2 from './Containers/Autokriti/Autokriti2/Autorkriti2'
 import Quizsignup from "./Components/AutokritiRegistration/AutokritiRegistration";
-import ShowAmbassador from "./Containers/ShowAmbassador/ShowAmbassador";
-import ShowAmbLogin from "./Containers/ShowAmbassador/ShowAmbLogin"; 
+import ShowAmbassador from "./Containers/Autokriti/ShowAmbassador/ShowAmbassador";
+import ShowAmbLogin from "./Containers/Autokriti/ShowAmbassador/ShowAmbLogin"; 
 
 import CheckState from './Components/AutokritiEvent/Context/CheckState';
 import Ambassador from "./Containers/Ambassador/Ambassador";
@@ -65,6 +66,7 @@ function App() {
             <Route path="/admin/ambassadorInfo" exact component={() => <DisplayAmb/>}/>
             <Route path="/admin/contactUsInfo" exact component={() => <DisplayContact/>}/>
             <Route path="/admin/finalAmbassador" exact component={() => <DisplayFinalAmbassador/>}/>
+            <Route path="/admin/collegeRepresentatives" exact component={() => <DisplayClgRepresentatives/>}/>
             {/* <Route path="/admin/signUpSheet" exact component={() => <DisplaySignUpSheet/>}/> */}
             <Route path="/admin/quizResponses" exact component={() => <DisplayAllQuizes/>}/>
 

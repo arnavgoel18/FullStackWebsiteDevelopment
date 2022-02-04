@@ -4,10 +4,10 @@ import { Redirect } from "react-router-dom";
 
 import "./ShowAmbassador.css";
 
-import NavBar from "../../Components/NavBar/NavBar";
-import Footer from "../../Components/Footer/Footer(black)/FooterBlack";
+import NavBar from "../../../Components/NavBar/NavBar";
+import Footer from "../../../Components/Footer/Footer(black)/FooterBlack";
 
-import db from "../../Firebase";
+import db from "../../../Firebase";
 import {
   collection,
   getDocs,
