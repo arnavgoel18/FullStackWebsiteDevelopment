@@ -4,7 +4,7 @@ import './Card_new.css'
 
 function Card(poop) {
   const { src, title, subTitle, body } = poop.poop
-  console.log(poop.poop)
+  // console.log(poop.poop)
 
   return (
 
