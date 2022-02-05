@@ -38,7 +38,7 @@ function AutokritiCheckEvent() {
     }, 500, 'linear');
   }
   return (
-    <div id="acc_container" >
+      <div id="acc_container" >
       <div id="acc_insidecontainer">
         <div id="acc_first" className="acc_component">
           <h2 className="CheckOurEvents-heading">
@@ -117,6 +117,7 @@ function AutokritiCheckEvent() {
         </div>
       </div> */}
     </div>
+  
   );
 }
 
