@@ -45,6 +45,7 @@ function Quizsignup() {
     semester: "",
     referal: "",
     transaction: "",
+    timeSlot: "",
   });
 
   let name, value;
@@ -150,7 +151,7 @@ function Quizsignup() {
   //this function runs when you click on paynow
   const routeChange = async (event) => {
     event.preventDefault();
-    const { name, email, phone, college, branch, semester, referal } = userData;
+    const { name, email, phone, college, branch, semester, referal, timeSlot } = userData;
 
     async function getFinalAmbInfo() {
       //final ambassadors
@@ -321,6 +322,24 @@ function Quizsignup() {
 
           <div className="field">
             {" "}
+            <span className="payform-label">Time Slot *</span>
+            <br />
+            <select 
+              className="payform-dropdown" 
+              name="timeSlot" 
+              id="time_slot" 
+              required 
+              value={userData.timeSlot} 
+              onChange={postUserData}> 
+                <option selected value="No Selection">-- Select An Option --</option>
+                <option value="12 Feb">Slot 1 - From 12 Feb</option>
+                <option value="26 Feb">Slot 2 - From 26 Feb</option>
+                <option value="Any Slot">No Prefference</option>
+            </select>
+          </div>
+
+          <div className="field">
+            {" "}
             <span className="payform-label"> Referal Code(optional code) </span>
             <img className='referral_code_verified' id="referral_code_verified" src="https://img.icons8.com/color/48/000000/checked-2--v1.png"/>
             <br />
@@ -444,6 +463,7 @@ function Quizsignup() {
     var referalcode = document.getElementById("referal_code");
     var transaction = document.getElementById("transaction");
     var dateOfSubmission = new Date().toLocaleString() + "";
+    var timeSlot = document.getElementById("time_slot");
     
     const docdata = {
       dateOfSubmission: dateOfSubmission,
@@ -455,6 +475,7 @@ function Quizsignup() {
       email: email.value,
       referalcode: referalcode.value,
       transaction: transaction.value,
+      timeSlot: timeSlot.value,
     };
   
     validateForm(docdata);
@@ -491,6 +512,7 @@ function Quizsignup() {
     var email = document.getElementById("amb_email");
     var referalcode = document.getElementById("referal_code");
     var transaction = document.getElementById("transaction");
+    var timeSlot = document.getElementById('time_slot');
     studentName.value = null;
     collegeName.value = null;
     branch.value = null;
@@ -499,6 +521,7 @@ function Quizsignup() {
     email.value = null;
     referalcode.value = null;
     transaction.value = null;
+    timeSlot.value = null;
   }
   
   //save to database
