@@ -223,6 +223,11 @@
   cursor: pointer;
 }
 
+.field_select{
+  display: flex;
+  flex-direction: column;
+}
+
 .payform-checkbox{
   display: flex;
   align-items: center;
@@ -271,14 +276,11 @@
 }
 @media (min-width:320px) and (max-width:1030px)
 {
-
- 
+  
 #i_button_content
 {
-  
   margin-left: 3%;
   margin-right: 3%;
- 
 }
 }
 @media (min-width:320px) and (max-width:720px){

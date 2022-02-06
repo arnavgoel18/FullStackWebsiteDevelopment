@@ -11,22 +11,22 @@ const firebaseConfig = {
   // appId: "1:1064644738570:web:fc0e1fe0cdbd62e5c829f3"
 
   //Kritika
-  //  apiKey: "AIzaSyAfJTGsx3HsGeJlkIeSTf_VsrlgEw2pfrY",
-  //  authDomain: "sae-website-127b1.firebaseapp.com",
-  //  projectId: "sae-website-127b1",
-  //  storageBucket: "sae-website-127b1.appspot.com",
-  //  messagingSenderId: "636129718123",
-  //  appId: "1:636129718123:web:555343dd6f0255ecbe262e",
-  //  measurementId: "G-BHECE0F8CX"
+  apiKey: "AIzaSyAfJTGsx3HsGeJlkIeSTf_VsrlgEw2pfrY",
+  authDomain: "sae-website-127b1.firebaseapp.com",
+  projectId: "sae-website-127b1",
+  storageBucket: "sae-website-127b1.appspot.com",
+  messagingSenderId: "636129718123",
+  appId: "1:636129718123:web:555343dd6f0255ecbe262e",
+  measurementId: "G-BHECE0F8CX"
 
   // SAE TESTER
-   apiKey: "AIzaSyAfGWoUlOwoP5PHuRy4FP9Ic1w1YxY2uFA",
-   authDomain: "saenitkkrforms.firebaseapp.com",
-   projectId: "saenitkkrforms",
-   storageBucket: "saenitkkrforms.appspot.com",
-   messagingSenderId: "248727434698",
-   appId: "1:248727434698:web:0f5498ae740f9ff9738b33",
-   measurementId: "G-PXQ86P5ZPQ"    
+  //  apiKey: "AIzaSyAfGWoUlOwoP5PHuRy4FP9Ic1w1YxY2uFA",
+  //  authDomain: "saenitkkrforms.firebaseapp.com",
+  //  projectId: "saenitkkrforms",
+  //  storageBucket: "saenitkkrforms.appspot.com",
+  //  messagingSenderId: "248727434698",
+  //  appId: "1:248727434698:web:0f5498ae740f9ff9738b33",
+  //  measurementId: "G-PXQ86P5ZPQ"    
 
   //Arnav
   // apiKey: "AIzaSyAfGWoUlOwoP5PHuRy4FP9Ic1w1YxY2uFA",
@@ -40,7 +40,7 @@ const firebaseConfig = {
 
 
 const secondaryAppConfig = {
-  // SECOND DATABASE ONLY FOR BLOGS (DEPLOYMENT)
+  // SECOND DATABASE ONLY FOR BLOGS - ONLY DEPLOYMENT)
   // apiKey: "AIzaSyCk_GyQ6-ytYYfv6Hvt9SXtC51z8AM6000",
   // authDomain: "sae-blogs.firebaseapp.com",
   // projectId: "sae-blogs",
