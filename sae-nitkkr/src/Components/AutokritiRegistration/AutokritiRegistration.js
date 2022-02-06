@@ -39,18 +39,18 @@ function Quizsignup() {
     k.style.visibility="hidden"
   }
   //Display TimeSLot
-  function i_information_visible_time()
-  {
-    let j=document.getElementById('i_button_content');
-    j.style.visibility="visible"
-    j.innerHTML = "Slot-2 is specifically for students having their exams till 25th Feb, so please prefer Slot-1 unless you have similar problem / reason) ";
-  }
+  // function i_information_visible_time()
+  // {
+  //   let j=document.getElementById('i_button_content');
+  //   j.style.visibility="visible"
+  //   j.innerHTML = "Slot-2 is specifically for students having their exams till 25th Feb, so please prefer Slot-1 unless you have similar problem / reason) ";
+  // }
   
-  function i_information_nonvisible_time()
-  {
-    let j=document.getElementById('i_button_content');
-    j.style.visibility="hidden"
-  }
+  // function i_information_nonvisible_time()
+  // {
+  //   let j=document.getElementById('i_button_content');
+  //   j.style.visibility="hidden"
+  // }
 
   const [userData, setUserData] = useState({
     name: "",
@@ -336,31 +336,6 @@ function Quizsignup() {
             />
           </div>
 
-          <div className="field_select">
-            {" "}
-            <span className="payform-label">Time Slot * 
-            {/* <p style={{fontSize: '11px',}}>Slot-2 is specifically for students having their exams till 25th Feb, so please prefer Slot-1 unless you have similar problem / reason)</p> */}
-            </span>
-            <div style={{display: 'flex'}}>
-              <select 
-                className="payform-dropdown" 
-                name="timeSlot" 
-                id="time_slot" 
-                required 
-                value={userData.timeSlot} 
-                onChange={postUserData}> 
-                  <option selected value="No Selection">-- Select An Option --</option>
-                  <option value="12 Feb">Slot 1 - From 12 Feb</option>
-                  <option value="26 Feb">Slot 2 - From 26 Feb</option>
-                  <option value="Any Slot">No Prefference</option>
-              </select> 
-              <img id="ref_image"src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/32/000000/external-information-camping-dreamstale-lineal-dreamstale.png" 
-                  onMouseOver={i_information_visible_time}
-                  onMouseOut={i_information_nonvisible_time}
-                />
-            </div>
-          </div>
-
           <div className="field">
             {" "}
             <span className="payform-label"> Referal Code(optional code) </span>
@@ -419,6 +394,28 @@ function Quizsignup() {
           </div>
 
           <br />
+
+          <div className="field_select">
+            {" "}
+            <span className="payform-label">Time Slot * 
+            {/* <p style={{fontSize: '11px',}}>Slot-2 is specifically for students having their exams till 25th Feb, so please prefer Slot-1 unless you have similar problem / reason)</p> */}
+            </span>
+            <div style={{display: 'flex'}}>
+              <select 
+                className="payform-dropdown" 
+                name="timeSlot" 
+                id="time_slot" 
+                required 
+                value={userData.timeSlot} 
+                onChange={postUserData}> 
+                  <option selected value="No Selection">-- Select An Option --</option>
+                  <option value="12 Feb">Slot 1 - From 12&#x1D57;&#x02B0; Feb</option>
+                  <option value="26 Feb">Slot 2 - From 26&#x1D57;&#x02B0; Feb</option>
+                  <option value="Any Slot">No Preference</option>
+              </select> 
+            </div>
+            <p style={{fontSize: '10px'}}>Slot-2 is specifically for students having their exams till 25th Feb, so please prefer Slot-1 unless you have similar problem / reason)</p>
+          </div>
 
           <button
             onClick={submit}
