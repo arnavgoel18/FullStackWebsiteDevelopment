@@ -7,15 +7,6 @@
     width: 100%;
     margin: 50px auto;
 }
-
-#ambassador-backBtn{ 
-    cursor: pointer;
-    padding:20px;
-    color: white;
-    background: #000000;
-    border: none;
-    border-radius: 10px;
-}
 #decrement,#increment{
     width: 23px;
     height: 23px;
@@ -47,15 +38,6 @@
     flex-direction: row;
     width: 20%;
     justify-content: space-evenly;
-}
-#amb-signout{
-    cursor: pointer;
-    width: 171.06px;
-    height: 49px;
-    float: right;
-    background: #F4970A;
-    border: none;
-    border-radius: 10px;
 }
 .ttable-row{
     display: table;
@@ -101,22 +83,6 @@
     }
     .ttable-row{
         width: 95%;
-    }
-    #ambassador-backBtn{
-        width:110.06px ;
-        height: 49px;
-        left: 32px;
-        color: white;
-        background: #000000;
-        border-radius: 10px;
-    }
-    #amb-signout{
-        width: 121.06px;
-        height: 49px;
-        float: right;
-        background: #F4970A;
-        border: none;
-        border-radius: 10px;
     }
     .response-num-btn{
         display: flex;

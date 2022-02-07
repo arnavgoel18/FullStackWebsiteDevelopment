@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from "react";
 import { Redirect } from "react-router-dom";
-
+import BackSignOutPanel from '../../../Components/Backend/BackSignOutPanel/BackSignOutPanel';
 import DisplayQuizescard from "./DisplayQuizescard";
 import "./DisplayAllQuizes.css";
 import db from "../../../Firebase.js";
@@ -12,9 +12,6 @@ import {
   doc,
   setDoc,
 } from "firebase/firestore";
-
-import { onValue } from "firebase/database";
-import { Link } from "react-router-dom";
 import PageHeader from "../../../Components/Backend/PageHeader/PageHeader";
 
 
@@ -138,29 +135,7 @@ function DisplayAllQuizes() {
       <>
         <PageHeader heading="Autokriti Registeration" />
         <div className="displayDiv">
-          <div className="LoginPage-header">
-            <Link to="/admin/actions">
-              <div id="ambassador-backBtn">
-
-                <i className="fa fa-arrow-left fa-customize fa-fw"></i>
-                Back
-              </div>
-            </Link>
-
-            {/* <i className="fa fa-user fa-lg" aria-hidden="true"></i> */}
-            <div
-              type="submit"
-              id="amb-signout"
-              onClick={(e) => {
-                localStorage.removeItem("token");
-                window.location.href = "/admin/login";
-              }}
-            >
-              Sign Out
-
-              <i className="fa fa-sign-out fa-customize fa-fw"></i>
-            </div>
-          </div>
+          <BackSignOutPanel/>
           <div className="response-num-div">
             <div className="response-num">Response Number</div>
             <div className="response-num-btn">

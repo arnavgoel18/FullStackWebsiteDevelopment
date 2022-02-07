@@ -1,11 +1,9 @@
 import React, {useMemo, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Redirect } from "react-router-dom";
-
+import BackSignOutPanel from "../../../Components/Backend/BackSignOutPanel/BackSignOutPanel";
 import "./DisplayClgRepresentatives.css"
-
 import PageHeader from "../../../Components/Backend/PageHeader/PageHeader";
-
 import db from "../../../Firebase.js";
 import {
     collection,
@@ -205,25 +203,7 @@ function DisplayClgRepresentatives() {
             <>
                 <PageHeader heading="Ambassador Responses" />
                 <div className="displayDiv">
-                    <div className="LoginPage-header">
-                        <Link to="/admin/actions">
-                            <button id="ambassador-backBtn">
-                                <i className="fa fa-arrow-left fa-customize fa-fw"></i>
-                                Back</button>
-                        </Link>
-                        <button
-                            type="submit"
-                            id="amb-signout"
-                            onClick={(e) => {
-                                localStorage.removeItem("token");
-                                window.location.href = "/admin/login";
-                            }}
-                        >
-                            Sign Out
-
-                            <i className="fa fa-sign-out fa-customize fa-fw"></i>
-                        </button>
-                    </div>
+                    <BackSignOutPanel/>
                     <div className="uploadBox">
                         <input type="file" id="userFileInput" onChange={processFile} accept=".csv"/>
                         <div className="uploadFileButton" onClick={triggerFileInput}>Upload New</div>

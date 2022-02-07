@@ -10,9 +10,9 @@ import {
     setDoc,
     addDoc
 } from "firebase/firestore";
-import { Link } from "react-router-dom";
 import PageHeader from "../../../Components/Backend/PageHeader/PageHeader";
 import { connectStorageEmulator } from "firebase/storage";
+import BackSignOutPanel from "../../../Components/Backend/BackSignOutPanel/BackSignOutPanel";
 
 //function to get data form database
 function DisplayFinalAmbassador() {
@@ -201,25 +201,7 @@ function DisplayFinalAmbassador() {
             <>
                 <PageHeader heading="Ambassador Responses" />
                 <div className="displayDiv">
-                    <div className="LoginPage-header">
-                        <Link to="/admin/actions">
-                            <button id="ambassador-backBtn">
-                                <i className="fa fa-arrow-left fa-customize fa-fw"></i>
-                                Back</button>
-                        </Link>
-                        <button
-                            type="submit"
-                            id="amb-signout"
-                            onClick={(e) => {
-                                localStorage.removeItem("token");
-                                window.location.href = "/admin/login";
-                            }}
-                        >
-                            Sign Out
-
-                            <i className="fa fa-sign-out fa-customize fa-fw"></i>
-                        </button>
-                    </div>
+                    <BackSignOutPanel/>
                     <div className="uploadBox">
                         <input type="file" id="userFileInput" onChange={processFile} accept=".csv"/>
                         <div className="uploadFileButton" onClick={triggerFileInput}>Upload New</div>
