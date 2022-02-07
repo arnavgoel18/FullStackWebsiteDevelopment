@@ -30,7 +30,6 @@ function DisplayAllQuizes() {
   var mergedCsvData = [];
 
   var [tester, setTester] = useState(true);
-
   var [detail, setDetail] = useState({});
   var [detailId, setDetailId] = useState(0);
   var [CsvDetail, setCsvDetail] = useState({});
@@ -52,9 +51,8 @@ function DisplayAllQuizes() {
         [doc.data().branch],
         [doc.data().semester],
         [doc.data().phone],
-
-        [doc.data().referalCode]
-        [doc.data().transaction]
+        [doc.data().referalcode],
+        [doc.data().transaction],
       ];
 
       mergedCsvData.push(cvsFileData);
@@ -65,11 +63,11 @@ function DisplayAllQuizes() {
     setDetailListLength(detailList.length);
     setCsvDetail(mergedCsvData);
 
+    console.log(detailList);
     return detailList;
   }
 
   if (tester == true) {
-    // console.log("RAN");
     window.addEventListener("load", getInfo());
     setTester(false);
   }
@@ -192,8 +190,9 @@ function DisplayAllQuizes() {
               CurrentSem={detail.semester}
               Phoneno={detail.phone}
               Emailid={detail.email}
-              referalCode={detail.referalCode}
+              referalCode={detail.referalcode}
               transaction={detail.transaction}
+              slot = {detail.timeSlot}
             />
           </div>
         </div>
