@@ -13,7 +13,8 @@ import {
   setDoc,
 } from "firebase/firestore";
 import { Link } from "react-router-dom";
-// import { RWebShare } from "react-web-share";
+import BackSignOutPanel from "../../../Components/Backend/BackSignOutPanel/BackSignOutPanel";
+
 
 export default function AllBlogsPage() {
   const [forreload, setForreload] = useState([]);
@@ -54,26 +55,7 @@ export default function AllBlogsPage() {
 
   return (
     <div>
-      <div className='LoginPage-header'>
-        <Link to='/admin/actions'>
-          <button id='AllBlogs-backBtn'>
-            <i className='fa fa-arrow-left fa-customize fa-fw'></i>Back
-          </button>
-        </Link>
-
-        {/* <i className="fa fa-user fa-lg" aria-hidden="true"></i> */}
-        <button
-          type='submit'
-          id='blog-signout'
-          onClick={(e) => {
-            localStorage.removeItem('token')
-            window.location.href = '/admin/login'
-          }}
-        >
-          Sign Out
-          <i class='fa fa-arrow-right fa-customize fa-fw'></i>
-        </button>
-      </div>
+      <BackSignOutPanel/>
       <div className='backendBlogPanel'>
         <h4 id='totalHeading'>Total no. of blogs: {blogResult.length}</h4>
         <button className='addNewBlog'>
