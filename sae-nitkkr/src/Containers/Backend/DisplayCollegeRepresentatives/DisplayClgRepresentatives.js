@@ -202,47 +202,47 @@ function DisplayClgRepresentatives() {
         return (
             <>
                 <PageHeader heading="Ambassador Responses" />
-                <div className="displayDiv">
+                <div className="displayClgRepresentatives_displayDiv">
                     <BackSignOutPanel/>
-                    <div className="uploadBox">
+                    <div className="displayClgRepresentatives_uploadBox">
                         <input type="file" id="userFileInput" onChange={processFile} accept=".csv"/>
-                        <div className="uploadFileButton" onClick={triggerFileInput}>Upload New</div>
-                        <div className="loader"></div>
-                        <div className="responseText"></div>
+                        <div className="displayClgRepresentatives_uploadFileButton" onClick={triggerFileInput}>Upload New</div>
+                        <div className="displayClgRepresentatives_loader"></div>
+                        <div className="displayClgRepresentatives_responseText"></div>
                     </div>
-                    <a className="downloadCsv">
+                    <a className="displayClgRepresentatives_downloadCsv">
                     <i
                         onClick={downloadCsv}
                         className="fa fa-download"
                         aria-hidden="true"
                     ></i>
                     </a>
-                    <div className="ambassadorBlock">
+                    <div className="displayClgRepresentatives_ambassadorBlock">
                        {/* <Table columns={columns} data={studentDetails} /> */}
-                       <table>
+                       <table className="displayClgRepresentatives_table">
                            <thead>
                                <tr>
-                                    <th>Name</th>
-                                    <th>College</th>
-                                    <th>Semester</th>
-                                    <th>Branch</th>
-                                    <th>Phone</th>
-                                    <th>Email</th>
-                                    <th>Referral Code</th>
-                                    <th>No. of Referrals</th>
+                                    <th className="displayClgRepresentatives_th">Name</th>
+                                    <th className="displayClgRepresentatives_th">College</th>
+                                    <th className="displayClgRepresentatives_th">Semester</th>
+                                    <th className="displayClgRepresentatives_th">Branch</th>
+                                    <th className="displayClgRepresentatives_th">Phone</th>
+                                    <th className="displayClgRepresentatives_th">Email</th>
+                                    <th className="displayClgRepresentatives_th">Referral Code</th>
+                                    <th className="displayClgRepresentatives_th">No. of Referrals</th>
                                </tr>
                            </thead>
                            <tbody>
                             {studentDetails.map(item => {
                                 return <tr>
-                                    <td>{item.studentName} </td>
-                                    <td>{item.collegeName} </td>
-                                    <td>{item.semester} </td>
-                                    <td>{item.branch} </td>
-                                    <td>{item.phone} </td>
-                                    <td>{item.email} </td>
-                                    <td>{item.referralCode} </td>
-                                    <td>{item.numberReferrals} </td>
+                                    <td className="displayClgRepresentatives_td">{item.studentName} </td>
+                                    <td className="displayClgRepresentatives_td">{item.collegeName} </td>
+                                    <td className="displayClgRepresentatives_td">{item.semester} </td>
+                                    <td className="displayClgRepresentatives_td">{item.branch} </td>
+                                    <td className="displayClgRepresentatives_td">{item.phone} </td>
+                                    <td className="displayClgRepresentatives_td">{item.email} </td>
+                                    <td className="displayClgRepresentatives_td">{item.referralCode} </td>
+                                    <td className="displayClgRepresentatives_td">{item.numberReferrals} </td>
                                     
                                 </tr>;
                                 })}

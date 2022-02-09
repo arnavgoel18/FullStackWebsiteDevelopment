@@ -115,16 +115,16 @@ function DisplayContactInfo() {
     return <Redirect to="/admin/login" />;
   } else {
     return (
-      <>
+      <div className="displaycontact_displayContactBody">
         <PageHeader heading="ContactUs Responses" />
-        <div className="displayDiv">
+        <div className="displaycontact_displayDiv">
           <BackSignOutPanel />
-          <div className="contactResponse">
-            <div className="conResData">
+          <div className="displaycontact_contactResponse">
+            <div className="displaycontact_conResData">
               <div>Pending:</div>
               <div>Completed:</div>
             </div>
-            <a className="downloadCsv">
+            <a className="displaycontact_downloadCsv">
               <i
                 onClick={downloadCsv}
                 className="fa fa-download"
@@ -132,16 +132,40 @@ function DisplayContactInfo() {
               ></i>
             </a>
           </div>
-          <table className="contactResTable">
+          <table className="displaycontact_contactResTable">
             <tr>
-              <th>New Responses</th>
-              <th>In Progress</th>
-              <th>Finished</th>
+              <th className="displaycontact_heading">New Responses</th>
+              <th className="displaycontact_heading">In Progress</th>
+              <th className="displaycontact_heading">Finished</th>
             </tr>
             <tr>
-              <td> <DisplayContactCard/> </td>
-              <td> <DisplayContactCard/> </td>
-              <td> <DisplayContactCard/> </td>      
+              <td> <DisplayContactCard
+              name="Keshav"
+              date="03/01/2000"
+              message="lorem aljkf 'aefl skilk ffuha' kdgnlkdfh gudh gkhflejf iileefjajf kjsajhfqwjeurik eur eirhferfj djsdkf s fj'lkskdfj a[fklrkj idri jf lkdrh kldjgld;jg"
+              emailid="mittakeshav999@gmail.com"
+              mobile="9812189556"
+              person="Student"
+              college="NIT Kurukshetra"
+              /> </td>
+              <td> <DisplayContactCard
+              name="Keshav"
+              date="03/01/2000"
+              message="loremaljkf'aefl skilk ffuha' kdgnlkdfh gudh gkhflejf iileefjajf kjsajhfqwjeurik eur eirhferfj djsdkf s fj'lkskdfj a[fklrkj idri jf lkdrh kldjgld;jg"
+              emailid="mittakeshav9"
+              mobile="9812189556"
+              person="Student"
+              college="NIT Kurukshetra"
+              /> </td>
+              <td> <DisplayContactCard
+              name="Keshav"
+              date="03/01/2000"
+              message="lorem aljkf 'aefl skilk ffuha' kdgnlkdfh gudh gkhflejf iileefjajf kjsajhfqwjeurik eur eirhferfj djsdkf s fj'lkskdfj a[fklrkj idri jf lkdrh kldjgld;jg"
+              emailid="mittakeshav999@gmail.com"
+              mobile="9812189556"
+              person="Student"
+              college="NIT Kurukshetra"
+              /> </td>      
             </tr>
             <tr>
               <td> <DisplayContactCard/> </td>
@@ -156,7 +180,7 @@ function DisplayContactInfo() {
             </tr>
           </table>
         </div>
-      </>
+      </div>
     );
   }
 }
