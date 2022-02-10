@@ -40,6 +40,10 @@ function DisplayAllQuizes() {
     detailList = amb_doc.docs.map((doc) => doc.data());
     detailListId = amb_doc.docs.map((doc) => doc.id);
 
+    for(var i = 0; i < detailList.length; i++){
+      detailList[i]['id'] = detailListId[i]
+    }
+
     amb_doc.forEach((doc) => {
       cvsFileData = [
         [doc.data().studentName],
@@ -50,17 +54,19 @@ function DisplayAllQuizes() {
         [doc.data().phone],
         [doc.data().referalcode],
         [doc.data().transaction],
+        [doc.id]
       ];
-
       mergedCsvData.push(cvsFileData);
     });
-
+    detailList.sort((a, b) => Number(b.id) - Number(a.id))
     setDetail(detailList[index]);
     setDetailId(detailListId[index]);
     setDetailListLength(detailList.length);
     setCsvDetail(mergedCsvData);
 
-    console.log(detailList);
+    document.querySelector('.response-overview').textContent = "Total Responses: " + detailList.length  
+    var todayList = detailList.filter(x => x.dateOfSubmission.split(",")[0] === new Date(Date.now()).toLocaleString().split(',')[0])
+    document.querySelector('.today-response-overview').textContent = "Today's Responses: " + todayList.length  
     return detailList;
   }
 
@@ -133,7 +139,7 @@ function DisplayAllQuizes() {
       <>
         <PageHeader heading="Autokriti Registeration" />
         <div className="displayDiv">
-          <BackSignOutPanel/>
+          <BackSignOutPanel />
           <div className="response-num-div">
             <div className="response-num">Response Number</div>
             <div className="response-num-btn">
@@ -155,10 +161,17 @@ function DisplayAllQuizes() {
               </a>
             </div>
           </div>
+          <div className='response-overview'>
+
+          </div>
+          <div className='today-response-overview'>
+
+          </div>
           <div>
             <DisplayQuizescard
               key={index}
               docId={detailId}
+              dateOfSubmission={detail.dateOfSubmission}
               FullName={detail.studentName}
               ClgName={detail.collegeName}
               Branch={detail.branch}
@@ -167,7 +180,7 @@ function DisplayAllQuizes() {
               Emailid={detail.email}
               referalCode={detail.referalcode}
               transaction={detail.transaction}
-              slot = {detail.timeSlot}
+              slot={detail.timeSlot}
             />
           </div>
         </div>

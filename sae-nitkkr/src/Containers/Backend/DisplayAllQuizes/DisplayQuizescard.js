@@ -69,6 +69,15 @@ export default function DisplayQuizescard(props) {
 
       <div className="ttable-row">
         <div className="ttable-cell ffirst-cell">
+          <p>Date *</p>
+        </div>
+        <div className="ttable-cell">
+          <p>{props.dateOfSubmission}</p>
+        </div>
+      </div>
+
+      <div className="ttable-row">
+        <div className="ttable-cell ffirst-cell">
           <p>Referal Code</p>
         </div>
         <div className="ttable-cell">
