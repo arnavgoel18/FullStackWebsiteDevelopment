@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from "react";
 import { Redirect } from "react-router-dom";
-
+import BackSignOutPanel from '../../../Components/Backend/BackSignOutPanel/BackSignOutPanel';
 import DisplayQuizescard from "./DisplayQuizescard";
 import "./DisplayAllQuizes.css";
 import db from "../../../Firebase.js";
@@ -12,9 +12,6 @@ import {
   doc,
   setDoc,
 } from "firebase/firestore";
-
-import { onValue } from "firebase/database";
-import { Link } from "react-router-dom";
 import PageHeader from "../../../Components/Backend/PageHeader/PageHeader";
 
 
@@ -30,7 +27,6 @@ function DisplayAllQuizes() {
   var mergedCsvData = [];
 
   var [tester, setTester] = useState(true);
-
   var [detail, setDetail] = useState({});
   var [detailId, setDetailId] = useState(0);
   var [CsvDetail, setCsvDetail] = useState({});
@@ -44,6 +40,10 @@ function DisplayAllQuizes() {
     detailList = amb_doc.docs.map((doc) => doc.data());
     detailListId = amb_doc.docs.map((doc) => doc.id);
 
+    for(var i = 0; i < detailList.length; i++){
+      detailList[i]['id'] = detailListId[i]
+    }
+
     amb_doc.forEach((doc) => {
       cvsFileData = [
         [doc.data().studentName],
@@ -52,24 +52,25 @@ function DisplayAllQuizes() {
         [doc.data().branch],
         [doc.data().semester],
         [doc.data().phone],
-
-        [doc.data().referalCode]
-        [doc.data().transaction]
+        [doc.data().referalcode],
+        [doc.data().transaction],
+        [doc.id]
       ];
-
       mergedCsvData.push(cvsFileData);
     });
-
+    detailList.sort((a, b) => Number(b.id) - Number(a.id))
     setDetail(detailList[index]);
     setDetailId(detailListId[index]);
     setDetailListLength(detailList.length);
     setCsvDetail(mergedCsvData);
 
+    document.querySelector('.response-overview').textContent = "Total Responses: " + detailList.length  
+    var todayList = detailList.filter(x => x.dateOfSubmission.split(",")[0] === new Date(Date.now()).toLocaleString().split(',')[0])
+    document.querySelector('.today-response-overview').textContent = "Today's Responses: " + todayList.length  
     return detailList;
   }
 
   if (tester == true) {
-    // console.log("RAN");
     window.addEventListener("load", getInfo());
     setTester(false);
   }
@@ -138,29 +139,7 @@ function DisplayAllQuizes() {
       <>
         <PageHeader heading="Autokriti Registeration" />
         <div className="displayDiv">
-          <div className="LoginPage-header">
-            <Link to="/admin/actions">
-              <div id="ambassador-backBtn">
-
-                <i className="fa fa-arrow-left fa-customize fa-fw"></i>
-                Back
-              </div>
-            </Link>
-
-            {/* <i className="fa fa-user fa-lg" aria-hidden="true"></i> */}
-            <div
-              type="submit"
-              id="amb-signout"
-              onClick={(e) => {
-                localStorage.removeItem("token");
-                window.location.href = "/admin/login";
-              }}
-            >
-              Sign Out
-
-              <i className="fa fa-sign-out fa-customize fa-fw"></i>
-            </div>
-          </div>
+          <BackSignOutPanel />
           <div className="response-num-div">
             <div className="response-num">Response Number</div>
             <div className="response-num-btn">
@@ -182,18 +161,26 @@ function DisplayAllQuizes() {
               </a>
             </div>
           </div>
+          <div className='response-overview'>
+
+          </div>
+          <div className='today-response-overview'>
+
+          </div>
           <div>
             <DisplayQuizescard
               key={index}
               docId={detailId}
+              dateOfSubmission={detail.dateOfSubmission}
               FullName={detail.studentName}
               ClgName={detail.collegeName}
               Branch={detail.branch}
               CurrentSem={detail.semester}
               Phoneno={detail.phone}
               Emailid={detail.email}
-              referalCode={detail.referalCode}
+              referalCode={detail.referalcode}
               transaction={detail.transaction}
+              slot={detail.timeSlot}
             />
           </div>
         </div>

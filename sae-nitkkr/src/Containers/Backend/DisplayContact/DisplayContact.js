@@ -3,12 +3,8 @@ import { Redirect } from "react-router-dom";
 import DisplayContactCard from "./DisplayContactCard";
 import "./DisplayContact.css";
 import db from "../../../Firebase.js";
-import {
-  collection,
-  getDocs,
-} from "firebase/firestore";
-import { onValue } from "firebase/database";
-import { Link } from "react-router-dom";
+import { collection, getDocs } from "firebase/firestore";
+import BackSignOutPanel from "../../../Components/Backend/BackSignOutPanel/BackSignOutPanel";
 import PageHeader from "../../../Components/Backend/PageHeader/PageHeader";
 
 var flag = false;
@@ -29,7 +25,6 @@ function DisplayContactInfo() {
 
   //Get Information from Firebase into detailList array
   async function getContactInfo() {
-    //console.log("ambassador info")
     const contactUs = collection(db, "contactUs");
     var amb_doc = await getDocs(contactUs);
     detailList = amb_doc.docs.map((doc) => doc.data());
@@ -58,7 +53,6 @@ function DisplayContactInfo() {
   }
 
   if (tester == true) {
-    // console.log("RAN");
     window.addEventListener("load", getContactInfo());
     setTester(false);
   }
@@ -87,14 +81,12 @@ function DisplayContactInfo() {
       return;
     }
 
-    //define the heading for each row of the data
     var csv =
       "Name,EmailId,phoneNo,Institute/Organisations(optional),Your Message *,Reason to Contact *,Person Contacting us is a *";
     csv += "\n";
 
     //merge the data with CSV
     CsvDetail.forEach(function (row) {
-      //to replace , with ;
       row.forEach(function (row1) {
         row1[0] = row1[0].replace(/,/g, ";");
         row1[0] = row1[0].replace(/\n/g, ";");
@@ -119,49 +111,20 @@ function DisplayContactInfo() {
   if (token == null) {
     loggedin = false;
   }
-
   if (loggedin == false) {
     return <Redirect to="/admin/login" />;
   } else {
     return (
-      <> 
+      <div className="displaycontact_displayContactBody">
         <PageHeader heading="ContactUs Responses" />
-        <div className="displayDiv">
-          <div className="LoginPage-header">
-            <Link to="/admin/actions">
-              <button id="contact-backBtn">
-                
-          <i className="fa fa-arrow-left fa-customize fa-fw"></i>
-          Back</button>
-            </Link>
-
-            {/* <i className="fa fa-user fa-lg" aria-hidden="true"></i> */}
-            <button
-              type="submit"
-              id="amb-signout"
-              onClick={(e) => {
-                localStorage.removeItem("token");
-                window.location.href = "/admin/login";
-              }}
-            >
-              Sign out
-          <i className="fa fa-sign-out fa-customize fa-fw"></i>
-              
-            </button>
-          </div>
-          <div className="response-num-div">
-            <div className="response-num">Response Number</div>
-            <div className="response-num-btn">
-              <button id="decrement" onClick={decrement}>
-                -
-              </button>
-              <div>{index + 1}</div>
-              <button id="increment" onClick={increment}>
-                +
-              </button>
+        <div className="displaycontact_displayDiv">
+          <BackSignOutPanel />
+          <div className="displaycontact_contactResponse">
+            <div className="displaycontact_conResData">
+              <div>Pending:</div>
+              <div>Completed:</div>
             </div>
-            <div className="total-responses">Total-responses={detailListLength}</div>
-            <a className="downloadCsv">
+            <a className="displaycontact_downloadCsv">
               <i
                 onClick={downloadCsv}
                 className="fa fa-download"
@@ -169,21 +132,55 @@ function DisplayContactInfo() {
               ></i>
             </a>
           </div>
-          <div>
-            <DisplayContactCard
-              key={index}
-              docId={detailId}
-              Name={detail.Name}
-              Emailid={detail.EmailId}
-              Phoneno={detail.PhoneNo}
-              institute={detail.Organisation}
-              message={detail.Message}
-              reason={detail.s1}
-              person={detail.s2}
-            />
-          </div>
+          <table className="displaycontact_contactResTable">
+            <tr>
+              <th className="displaycontact_heading">New Responses</th>
+              <th className="displaycontact_heading">In Progress</th>
+              <th className="displaycontact_heading">Finished</th>
+            </tr>
+            <tr>
+              <td> <DisplayContactCard
+              name="Keshav"
+              date="03/01/2000"
+              message="lorem aljkf 'aefl skilk ffuha' kdgnlkdfh gudh gkhflejf iileefjajf kjsajhfqwjeurik eur eirhferfj djsdkf s fj'lkskdfj a[fklrkj idri jf lkdrh kldjgld;jg"
+              emailid="mittakeshav999@gmail.com"
+              mobile="9812189556"
+              person="Student"
+              college="NIT Kurukshetra"
+              /> </td>
+              <td> <DisplayContactCard
+              name="Keshav"
+              date="03/01/2000"
+              message="loremaljkf'aefl skilk ffuha' kdgnlkdfh gudh gkhflejf iileefjajf kjsajhfqwjeurik eur eirhferfj djsdkf s fj'lkskdfj a[fklrkj idri jf lkdrh kldjgld;jg"
+              emailid="mittakeshav9"
+              mobile="9812189556"
+              person="Student"
+              college="NIT Kurukshetra"
+              /> </td>
+              <td> <DisplayContactCard
+              name="Keshav"
+              date="03/01/2000"
+              message="lorem aljkf 'aefl skilk ffuha' kdgnlkdfh gudh gkhflejf iileefjajf kjsajhfqwjeurik eur eirhferfj djsdkf s fj'lkskdfj a[fklrkj idri jf lkdrh kldjgld;jg"
+              emailid="mittakeshav999@gmail.com"
+              mobile="9812189556"
+              person="Student"
+              college="NIT Kurukshetra"
+              /> </td>      
+            </tr>
+            <tr>
+              <td> <DisplayContactCard/> </td>
+              <td> <DisplayContactCard/> </td>
+              <td> <DisplayContactCard/> </td>
+            </tr>
+            <tr>
+              <td> <DisplayContactCard/> </td>
+              <td> <DisplayContactCard/> </td>
+              <td> <DisplayContactCard/> </td>
+
+            </tr>
+          </table>
         </div>
-      </>
+      </div>
     );
   }
 }

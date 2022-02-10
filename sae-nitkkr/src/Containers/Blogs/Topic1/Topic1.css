@@ -99,14 +99,13 @@ hr {
   margin-left: 22px;
 }
 .end {
-  text-align: center;
-  justify-content: space-between;
-  display: flex;
-  flex-direction: row; 
+   display: flex;
+   flex-direction: column; 
+  justify-content: center;
+  align-items:center;
   flex-wrap:wrap;  
-  width: 70%;
-  margin-left:15%;
-  margin-right: 15%;
+  width: 40%;
+  margin:0px auto;
 }
 .footer {
   height: 10rem;
@@ -133,9 +132,7 @@ hr {
     text-align: center;
     padding-left: 1%;
   }
-  .end { 
-    justify-content: space-evenly;
-  }
+
   .imgcircle{
     margin-left:1%;
   }
@@ -146,7 +143,12 @@ hr {
     flex-wrap: wrap;
   }
 }
-
+@media (min-width:300px) and (max-width:450px)
+{
+  .end{
+    width:80%;
+  }
+}
 @media (min-width: 450px) and (max-width: 768px){
    .extraspace.a
     {
@@ -192,10 +194,8 @@ hr {
       display: block;
     }
     .end { 
-      width: 95%;
-      margin-left:2.5%;
-      margin-right: 2.5%;
-      justify-content: space-evenly;
+      width: 70%;
+
     }
 }
 @media (min-width: 769px) and (max-width: 1024px){
@@ -211,16 +211,14 @@ hr {
     padding-left: 5%;
   }
   .end { 
-    width: 90%;
-    margin-left:5%;
-    margin-right: 5%;
+    width: 65%;
+
   }
 }
 @media (min-width: 1024px) and (max-width: 1450px){
   #bodyContent{
     width: 80%;
-    padding-left:10%;
-    padding-right:10%;
+
   }
   .imgcircle{
     margin-left:10%;
@@ -228,10 +226,6 @@ hr {
   .other_blogs{
     padding-left: 10%;
   }
-  .end { 
-    width: 80%;
-    margin-left:10%;
-    margin-right: 10%;
-  }
+
 }
 

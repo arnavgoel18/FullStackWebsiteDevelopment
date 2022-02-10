@@ -1,8 +1,8 @@
 import './FirstDisplayDIV.css'
-import PictureH from '../../Assets/FirstDisplayDiv/HomePage_FirstDIV.jpeg'
-import PictureAc from '../../Assets/FirstDisplayDiv/TeamAccelerons_FirstDIV.jpeg'
-import PictureN from '../../Assets/FirstDisplayDiv/TeamNitrox_FirstDIV.jpeg'
-import PictureAu from '../../Assets/FirstDisplayDiv/Autokriti_FirstDIV.jpeg'
+import PictureH from '../../Assets/FirstDisplayDiv/HomePage_FirstDIV.webp'
+import PictureAc from '../../Assets/FirstDisplayDiv/TeamAccelerons_FirstDIV.webp'
+import PictureN from '../../Assets/FirstDisplayDiv/TeamNitrox_FirstDIV.webp'
+import PictureAu from '../../Assets/FirstDisplayDiv/Autokriti_FirstDIV.webp'
 
 function FirstDisplayDiv(props){
     

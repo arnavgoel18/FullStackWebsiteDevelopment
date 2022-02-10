@@ -24,10 +24,13 @@ function Quizsignup() {
   }, [])
 
   var [stuData, setStuData] = useState([]);
+  
+  //Display Referal
   function i_information_visible()
   {
     let k=document.getElementById('i_button_content');
     k.style.visibility="visible"
+    k.innerHTML = "Enter only if you are applying through an ambassador (max. 10% off)";
   }
   
   function i_information_nonvisible()
@@ -35,6 +38,19 @@ function Quizsignup() {
     let k=document.getElementById('i_button_content');
     k.style.visibility="hidden"
   }
+  //Display TimeSLot
+  // function i_information_visible_time()
+  // {
+  //   let j=document.getElementById('i_button_content');
+  //   j.style.visibility="visible"
+  //   j.innerHTML = "Slot-2 is specifically for students having their exams till 25th Feb, so please prefer Slot-1 unless you have similar problem / reason) ";
+  // }
+  
+  // function i_information_nonvisible_time()
+  // {
+  //   let j=document.getElementById('i_button_content');
+  //   j.style.visibility="hidden"
+  // }
 
   const [userData, setUserData] = useState({
     name: "",
@@ -45,6 +61,7 @@ function Quizsignup() {
     semester: "",
     referal: "",
     transaction: "",
+    timeSlot: "",
   });
 
   let name, value;
@@ -150,7 +167,7 @@ function Quizsignup() {
   //this function runs when you click on paynow
   const routeChange = async (event) => {
     event.preventDefault();
-    const { name, email, phone, college, branch, semester, referal } = userData;
+    const { name, email, phone, college, branch, semester, referal, timeSlot } = userData;
 
     async function getFinalAmbInfo() {
       //final ambassadors
@@ -265,7 +282,7 @@ function Quizsignup() {
           <div id="show_email_is_registered">This email has alreay been Registered</div>
           
           <div className="field">
-            <span className="payform-label">Phone No. * </span>
+            <span className="payform-label">Phone No * </span>
             <br />
             <input
               className="payform-input"
@@ -354,7 +371,7 @@ function Quizsignup() {
                 <button onClick={routeChange} className="payform-button" id="payform-button1">₹ &nbsp; Pay Now</button>
               </div>
               <div id="i_button_content">
-                <h4>Enter only if you are applying through an ambassador (max. 10% off)</h4>
+                <h4></h4>
               </div>
           </div>
 
@@ -377,6 +394,28 @@ function Quizsignup() {
           </div>
 
           <br />
+
+          <div className="field_select">
+            {" "}
+            <span className="payform-label">Time Slot * 
+            {/* <p style={{fontSize: '11px',}}>Slot-2 is specifically for students having their exams till 25th Feb, so please prefer Slot-1 unless you have similar problem / reason)</p> */}
+            </span>
+            <div style={{display: 'flex'}}>
+              <select 
+                className="payform-dropdown" 
+                name="timeSlot" 
+                id="time_slot" 
+                required 
+                value={userData.timeSlot} 
+                onChange={postUserData}> 
+                  <option selected value="No Selection">-- Select An Option --</option>
+                  <option value="12 Feb">Slot 1 - From 12&#x1D57;&#x02B0; Feb</option>
+                  <option value="26 Feb">Slot 2 - From 26&#x1D57;&#x02B0; Feb</option>
+                  <option value="Any Slot">No Preference</option>
+              </select> 
+            </div>
+            <p style={{fontSize: '10px'}}>Slot-2 is specifically for students having their exams till 25th Feb, so please prefer Slot-1 unless you have similar problem / reason)</p>
+          </div>
 
           <button
             onClick={submit}
@@ -444,6 +483,7 @@ function Quizsignup() {
     var referalcode = document.getElementById("referal_code");
     var transaction = document.getElementById("transaction");
     var dateOfSubmission = new Date().toLocaleString() + "";
+    var timeSlot = document.getElementById("time_slot");
     
     const docdata = {
       dateOfSubmission: dateOfSubmission,
@@ -455,6 +495,7 @@ function Quizsignup() {
       email: email.value,
       referalcode: referalcode.value,
       transaction: transaction.value,
+      timeSlot: timeSlot.value,
     };
   
     validateForm(docdata);
@@ -491,6 +532,7 @@ function Quizsignup() {
     var email = document.getElementById("amb_email");
     var referalcode = document.getElementById("referal_code");
     var transaction = document.getElementById("transaction");
+    var timeSlot = document.getElementById('time_slot');
     studentName.value = null;
     collegeName.value = null;
     branch.value = null;
@@ -499,6 +541,7 @@ function Quizsignup() {
     email.value = null;
     referalcode.value = null;
     transaction.value = null;
+    timeSlot.value = null;
   }
   
   //save to database

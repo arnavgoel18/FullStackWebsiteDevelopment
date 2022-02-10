@@ -20,8 +20,7 @@
 .LoginPage-header{
     display: flex;
     justify-content: space-between;
-    padding: 25px 20px;
-    
+    padding: 30px 30px;  
 }
 
 #action-signout

@@ -1,195 +1,36 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-.ttable-box
-{   
-    width: 75%;
-    margin: 50px auto;
-}
-
-#contact-backBtn{ 
-    cursor: pointer;
-    width: 125px;
-    height: 49px;
-    color: white;
-    background: #000000;
-    border: none;
-    border-radius: 10px;
-}
-#decrement,#increment{
-    cursor: pointer;
-    width: 23px;
-    height: 23px;
-    margin:3px ;
-    border: none;
-    background: #C4C4C4;
-}
-.response-num-div{
-    
-    
-   display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-self: center;
-    width: 60%;
-    height: 59px;
-    margin-left: 20%;
-    align-content: center;
-    background: #EBEBEB;
-    border-radius: 10px;
-    padding: 5px;
-}
-.response-num{
-    align-self: center;
-}
-
-.total-responses{
-    align-self: center;
-    float:right;
-
-}
-.response-num-btn{
-    align-self: center;
+.displayContactCard_contactCardDiv{
+    max-width: 100%;
     display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    width: 20%;
-    justify-content: space-evenly;
-}
-#amb-signout{
-    width: 171.06px;
-    height: 49px;
-    float: right;
-    background: #F4970A;
-    border: none;
+    flex-direction: column;
+    flex-wrap: wrap ;
+    color: white;
+    background: #F1A32E;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
+     padding: 10px 10px 10px 10px;
+    margin: 0 10px 10px 15px;
 }
-.ttable-row{
-    display: table;
-    width: 80%;
-    margin: 10px auto;
-    font-family: sans-serif;
-    background: transparent;
-    padding: 12px 0;
-    color: #555;
-    font-size: 13px;
-    box-shadow: 0 1px 4px 0px rgba(0,0,50,0.3);
+.displayContactCard_firstbox{
+    border-bottom: black 1.5px solid;
+    padding-bottom: 20px;
+    /* border: solid red 1px; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap ;
 }
-.ttable-head{
-    background: #2e37df;
-    box-shadow: none;
-    color: #fff;
-    font-weight: 600;
-}
-.ttable-head .ttable-cell{
-    border-right: none;
-}
-.ttable-cell{
-    display: table-cell;
-    width: 20%;
-    text-align: center;
-    padding: 4px 0;
-    border-right: 1px solid #d6d4d4;
-    vertical-align: middle;
-}
-.ffirst-cell{
-    text-align: left;
-    padding-left: 10px;
-}
-.llast-cell{
-    border-right: none;
-}
+.displayContactCard_secondbox{
+    border-bottom: black 1.5px solid;
+    /* border: solid red 1px; */
 
-
-@media only screen and (max-width: 600px) {
-  .ttable-row {
-    font-size: 11px;
-  }
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap ;
 }
-@media only screen and (max-width: 500px) 
-{
-    #ambassador-backBtn{
-        width: 110.06px;
-        height: 49px;
-        left: 32px;
-    
-        color: white;
-        background: #000000;
-        border-radius: 10px;
-    }
-    #amb-signout{
-        
-        width: 121.06px;
-        height: 49px;
-        float: right;
-        background: #F4970A;
-        border: none;
-        border-radius: 10px;
-    }
-    .response-num-btn{
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-    }
-    #decrement,#increment{
-  
-        width: 17px;
-        height: 17px;
-        margin:1px ;
-  
-        }
-
-        .response-num-div{
-            display:flex;
-            
-            gap:8px;
-            font-size:10px;
-            margin-left:50px;
-        }
-       
-}
-
-@media only screen and (max-width: 320px) 
-{
-    #ambassador-backBtn{
-        width: 100px;
-        height: 49px;
-        left: 32px;
-    
-        color: white;
-        background: #000000;
-        border-radius: 10px;
-    }
-    #amb-signout{
-        
-        width: 121.06px;
-        height: 49px;
-        float: right;
-        background: #F4970A;
-        border: none;
-        border-radius: 10px;
-    }
-    .response-num-btn{
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-    }
-    #decrement,#increment{
-  
-        width: 17px;
-        height: 17px;
-        margin:1px ;
-  
-        }
-
-        .response-num-div{
-            display:flex;
-           
-            gap:15px;
-            font-size:10px;
-            margin-left:45px;
-        }
-
-     
+.displayContactCard_thirdbox{
+    /* border: solid red 1px; */
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap ;
 }

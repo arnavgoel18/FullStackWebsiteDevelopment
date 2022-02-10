@@ -1,8 +1,8 @@
 //This Page is to display entries for those people applying to become ambassadors
 import React, { useState, useEffect } from "react";
 import { Redirect, Link } from "react-router-dom";
-
 import "./DisplayAmbassador.css";
+import BackSignOutPanel from "../../../Components/Backend/BackSignOutPanel/BackSignOutPanel";
 
 //Firebase
 import db from "../../../Firebase.js";
@@ -138,28 +138,7 @@ function DisplayInfo() {
       <>
         <PageHeader heading="Ambassador Responses"/>
         <div className="displayDiv">
-          <div className="LoginPage-header">
-            <Link to="/admin/actions">
-              <button id="ambassador-backBtn">
-               
-          <i className="fa fa-arrow-left fa-customize fa-fw"></i>
-                Back</button>
-            </Link>
-
-            {/* <i className="fa fa-user fa-lg" aria-hidden="true"></i> */}
-            <button
-              type="submit"
-              id="amb-signout"
-              onClick={(e) => {
-                localStorage.removeItem("token");
-                window.location.href = "/admin/login";
-              }}
-            >
-              Sign Out
-              
-          <i className="fa fa-sign-out fa-customize fa-fw"></i>
-            </button>
-          </div>
+          <BackSignOutPanel/>
           <div className="response-num-div">
             <div className="response-num">Response Number</div>
             <div className="response-num-btn">

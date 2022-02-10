@@ -10,9 +10,9 @@ import {
     setDoc,
     addDoc
 } from "firebase/firestore";
-import { Link } from "react-router-dom";
 import PageHeader from "../../../Components/Backend/PageHeader/PageHeader";
 import { connectStorageEmulator } from "firebase/storage";
+import BackSignOutPanel from "../../../Components/Backend/BackSignOutPanel/BackSignOutPanel";
 
 //function to get data form database
 function DisplayFinalAmbassador() {
@@ -200,65 +200,47 @@ function DisplayFinalAmbassador() {
         return (
             <>
                 <PageHeader heading="Ambassador Responses" />
-                <div className="displayDiv">
-                    <div className="LoginPage-header">
-                        <Link to="/admin/actions">
-                            <button id="ambassador-backBtn">
-                                <i className="fa fa-arrow-left fa-customize fa-fw"></i>
-                                Back</button>
-                        </Link>
-                        <button
-                            type="submit"
-                            id="amb-signout"
-                            onClick={(e) => {
-                                localStorage.removeItem("token");
-                                window.location.href = "/admin/login";
-                            }}
-                        >
-                            Sign Out
-
-                            <i className="fa fa-sign-out fa-customize fa-fw"></i>
-                        </button>
-                    </div>
-                    <div className="uploadBox">
+                <div className="displayFInalAmbassador_displayDiv">
+                    <BackSignOutPanel/>
+                    <div className="displayFInalAmbassador_uploadBox">
                         <input type="file" id="userFileInput" onChange={processFile} accept=".csv"/>
-                        <div className="uploadFileButton" onClick={triggerFileInput}>Upload New</div>
-                        <div className="loader"></div>
-                        <div className="responseText"></div>
+                        <div className="displayFInalAmbassador_uploadFileButton" onClick={triggerFileInput}>Upload New</div>
+                        <div className="displayFInalAmbassador_loader"></div>
+                        <div className="displayFInalAmbassador_responseText"></div>
                     </div>
-                    <a className="downloadCsv">
+                    <a className="displayFInalAmbassador_downloadCsv">
                     <i
                         onClick={downloadCsv}
                         className="fa fa-download"
                         aria-hidden="true"
                     ></i>
                     </a>
-                    <div className="ambassadorBlock">
+                    <div className="displayFInalAmbassador_ambassadorBlock">
                        {/* <Table columns={columns} data={studentDetails} /> */}
                        <table>
                            <thead>
                                <tr>
-                                    <th>Name</th>
-                                    <th>College</th>
-                                    <th>Semester</th>
-                                    <th>Branch</th>
-                                    <th>Phone</th>
-                                    <th>Email</th>
-                                    <th>Referral Code</th>
-                                    <th>No. of Referrals</th>
+                                    <th className="displayFInalAmbassador_th>Name</th>
+                                    <th className="displayFInalAmbassador_th>College</th>
+                                    <th className="displayFInalAmbassador_th>Semester</th>
+                                    <th className="displayFInalAmbassador_th>Branch</th>
+                                    <th className="displayFInalAmbassador_th>Phone</th>
+                                    <th className="displayFInalAmbassador_th>Email</th>
+                                    <th className="displayFInalAmbassador_th>Referral Code</th>
+                                    <th className="displayFInalAmbassador_th>No. of Referrals</th>
                                </tr>
                            </thead>
                            <tbody>
                             {studentDetails.map(item => {
                                 return <tr>
-                                    <td>{item.studentName} </td>
-                                    <td>{item.collegeName} </td>
-                                    <td>{item.semester} </td>
-                                    <td>{item.branch} </td>
-                                    <td>{item.phone} </td>
-                                    <td>{item.email} </td>
-                                    <td>{item.referralCode} </td>
-                                    <td>{item.numberReferrals} </td>
+                                    <td className="displayFInalAmbassador_td>{item.studentName} </td>
+                                    <td className="displayFInalAmbassador_td>{item.collegeName} </td>
+                                    <td className="displayFInalAmbassador_td>{item.semester} </td>
+                                    <td className="displayFInalAmbassador_td>{item.branch} </td>
+                                    <td className="displayFInalAmbassador_td>{item.phone} </td>
+                                    <td className="displayFInalAmbassador_td>{item.email} </td>
+                                    <td className="displayFInalAmbassador_td>{item.referralCode} </td>
+                                    <td className="displayFInalAmbassador_td>{item.numberReferrals} </td>
                                     
                                 </tr>;
                                 })}

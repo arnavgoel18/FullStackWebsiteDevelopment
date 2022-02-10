@@ -7,7 +7,8 @@ import blogLogo from "../../../Assets/blogLogo.webp";
 import "./Topic1.css";
 import NavBar from "../../../Components/NavBar/NavBar";
 import ShareAndClapDIV from "../../../Components/Blogs/ShareAndClap/ShareAndClapDIV";
-import TopicsCardHolder from "../../../Components/Blogs/TopicsCardHolder/TopicsCardHolder";
+// import TopicsCardHolder from "../../../Components/Blogs/TopicsCardHolder/TopicsCardHolder";
+import TopicsCardHolder from '../../../Components/Blogs/TopicsCardHolder/Card_new'
 import PhoneShareAndClap from "../../../Components/Blogs/ShareAndClap/PhoneShareAndClap";
 import Footer from "../../../Components/Footer/Footer(black)/FooterBlack";
 import { getDocs, collection, doc } from "firebase/firestore";
@@ -91,21 +92,29 @@ function App() {
       <hr />
 
       <h2 className='other_blogs'>Other Blogs</h2>
-      <div className='end'>
+      <div className='end' >
         {otherBlog.map((other, index) => {
+           let obj = {
+             src: other.coverPhotoUrl,
+             title: other.title,
+             subTitle: '',
+             body: 'I am so tired of doing this again and again',
+           }
           if (index < 3) {
             return (
-              <div key={index}>
+              <div key={index} style={{paddingTop:"30px",paddingBottom:"15px",width:"100%"}}>
                 <Link
-                  to={'/blogs/leftvsright?timestamp=' + other.timestamp}
+                  // to={'/blogs/leftvsright?timestamp=' + other.timestamp}
+                  to={"/blogs/yourblog?timestamp=" + other.timestamp}
                   target={'_parent'}
                 >
-                  <TopicsCardHolder
+                  {/* <TopicsCardHolder
                     title={other.title}
                     srcs={other.coverPhotoUrl}
                     date={other.modifiedDate}
                     shareUrl={'/blogs/leftvsright?timestamp=' + other.timestamp}
-                  />
+                  /> */}
+                  <TopicsCardHolder poop={obj}/>
                 </Link>
               </div>
             )

@@ -3,7 +3,7 @@
 import React,{useState} from 'react'
 import { Redirect } from 'react-router-dom';
 import "../../Backend/Login.css";
-import man_sitting from '../../../Assets/LoginPageLogos/man_sitting.jpg'
+import man_sitting from '../../../Assets/LoginPageLogos/man_sitting.webp'
 import db from "../../../Firebase";
 import {
   collection,

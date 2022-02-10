@@ -8,3 +8,8 @@
     margin-left: 30px;
     cursor: pointer;
 }
+.response-overview, .today-response-overview{
+    font-weight: bold;
+    margin-left: 20px;
+    margin-top: 20px;
+}

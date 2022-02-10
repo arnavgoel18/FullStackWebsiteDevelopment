@@ -7,16 +7,6 @@
     width: 75%;
     margin: 50px auto;
 }
-
-#ambassador-backBtn{ 
-    cursor: pointer;
-    width: 171.06px;
-    height: 49px;
-    color: white;
-    background: #000000;
-    border: none;
-    border-radius: 10px;
-}
 #decrement,#increment{
     width: 23px;
     height: 23px;
@@ -24,9 +14,7 @@
     border: none;
     background: #C4C4C4;
 }
-.response-num-div{
-    
-    
+.response-num-div{  
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -51,21 +39,8 @@
     width: 20%;
     justify-content: space-evenly;
 }
-
 .totalAmbassadorResponses{
     align-self: center;
-}
-
-
-
-#amb-signout{
-    cursor: pointer;
-    width: 171.06px;
-    height: 49px;
-    float: right;
-    background: #F4970A;
-    border: none;
-    border-radius: 10px;
 }
 .ttable-row{
     display: table;

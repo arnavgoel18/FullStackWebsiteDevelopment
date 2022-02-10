@@ -1,0 +1,26 @@
+.backend-panel{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 50px 20px 50px;  
+}
+.backend-backBtn{
+    cursor: pointer;
+    width: 125px;
+    height: 49px;
+    color: white;
+    background: #000000;
+    border: none;
+    border-radius: 10px;
+    font-size: large;
+}
+.backend-signout{
+    width: 125px;
+    height: 49px;
+    float: right;
+    background: #F4970A;
+    border: none;
+    border-radius: 10px;
+    font-size: large;
+    font-weight: 500;
+    cursor: pointer;
+}

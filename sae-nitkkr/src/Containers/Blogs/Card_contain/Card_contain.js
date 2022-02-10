@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Card_contain.css";
-import TopicCardHolder from "../../../Components/Blogs/TopicsCardHolder/TopicsCardHolder";
+// import TopicCardHolder from "../../../Components/Blogs/TopicsCardHolder/TopicsCardHolder";
+import TopicCardHolder from '../../../Components/Blogs/TopicsCardHolder/Card_new'
 // import daq from '../../../Assets/TopicsCardHolder/daq.png'
 // import brakes from '../../../Assets/TopicsCardHolder/brakes.png'
 import FeatureCard from "../../../Components/Blogs/FeatureCard/FeatureCard";
@@ -31,15 +32,22 @@ function Card_contain() {
     <div id="blog_contain">
       <div id="card_contain">
         {blogResult.map((detail, index) => {
+          let obj = {
+            src: detail.coverPhotoUrl,
+            title: detail.title,
+            subTitle: '',
+            body: 'I am so tired of doing this again and again',
+          }
           return (
-            <div key={index}>
+            <div key={index} style={{width:'80%',padding:'10px'}}>
               <Link to={"/blogs/yourblog?timestamp=" + detail.timestamp}>
-                <TopicCardHolder
+                {/* <TopicCardHolder
                   title={detail.title}
                   srcs={detail.coverPhotoUrl}
                   date={detail.modifiedDate}
                   shareUrl={"/blogs/yourblog?timestamp=" + detail.timestamp}
-                />
+                /> */}
+                <TopicCardHolder poop={obj}/>
               </Link>
             </div>
           );

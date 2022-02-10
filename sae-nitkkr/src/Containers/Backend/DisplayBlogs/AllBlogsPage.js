@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./AllBlogsPage.css";
 import { Redirect } from "react-router-dom";
-import TopicCardHolder from "../../../Components/Blogs/TopicsCardHolder/TopicsCardHolder";
+// import TopicCardHolder from "../../../Components/Blogs/TopicsCardHolder/TopicsCardHolder";
+import TopicCardHolder from '../../../Components/Blogs/TopicsCardHolder/Card_new'
 import {db1} from "../../../Firebase";
 import { getStorage, ref, deleteObject } from "firebase/storage";
 import {
@@ -12,7 +13,8 @@ import {
   setDoc,
 } from "firebase/firestore";
 import { Link } from "react-router-dom";
-// import { RWebShare } from "react-web-share";
+import BackSignOutPanel from "../../../Components/Backend/BackSignOutPanel/BackSignOutPanel";
+
 
 export default function AllBlogsPage() {
   const [forreload, setForreload] = useState([]);
@@ -53,26 +55,7 @@ export default function AllBlogsPage() {
 
   return (
     <div>
-      <div className='LoginPage-header'>
-        <Link to='/admin/actions'>
-          <button id='AllBlogs-backBtn'>
-            <i className='fa fa-arrow-left fa-customize fa-fw'></i>Back
-          </button>
-        </Link>
-
-        {/* <i className="fa fa-user fa-lg" aria-hidden="true"></i> */}
-        <button
-          type='submit'
-          id='blog-signout'
-          onClick={(e) => {
-            localStorage.removeItem('token')
-            window.location.href = '/admin/login'
-          }}
-        >
-          Sign Out
-          <i class='fa fa-arrow-right fa-customize fa-fw'></i>
-        </button>
-      </div>
+      <BackSignOutPanel/>
       <div className='backendBlogPanel'>
         <h4 id='totalHeading'>Total no. of blogs: {blogResult.length}</h4>
         <button className='addNewBlog'>
@@ -85,15 +68,22 @@ export default function AllBlogsPage() {
 
       <div className='card_contain'>
         {blogResult.map((detail, index) => {
+           let obj = {
+             src: detail.coverPhotoUrl,
+             title: detail.title,
+             subTitle: '',
+             body: 'I am so tired of doing this again and again',
+           }
           return (
-            <div key={index}>
+            <div key={index} style={{width:'80%',padding:'20px'}}>
               <Link to={'/blogs/leftvsright?timestamp=' + detail.timestamp}>
-                <TopicCardHolder
+                {/* <TopicCardHolder
                   title={detail.title}
                   srcs={detail.coverPhotoUrl}
                   date={detail.modifiedDate}
                   shareUrl={'/blogs/leftvsright?timestamp=' + detail.timestamp}
-                />
+                /> */}
+                <TopicCardHolder poop={obj}/>
               </Link>
               <div className='blogIcons'>
                 <i

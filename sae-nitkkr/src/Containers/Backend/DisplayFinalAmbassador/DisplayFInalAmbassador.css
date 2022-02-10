@@ -1,14 +1,14 @@
-.uploadBox{
+.displayFInalAmbassador_uploadBox{
     display: flex;
     padding: 25px 20px;
 }
-.uploadBox input{
+.displayFInalAmbassador_uploadBox input{
     border-bottom: none;
     width:150px;
     display: none;
 }
 
-.uploadBox .uploadFileButton{
+.displayFInalAmbassador_uploadBox .displayFInalAmbassador_uploadFileButton{
     background-color: green;
     padding:10px;
     color:white;
@@ -16,7 +16,7 @@
     cursor: pointer;
 }
 
-.uploadBox .loader {
+.displayFInalAmbassador_uploadBox .displayFInalAmbassador_loader {
     border-top: 5px solid blue;
     border-bottom: 5px solid blue;
     border-radius: 50%;
@@ -27,7 +27,7 @@
     display: none;
     animation: spin 2s linear infinite;
   }
-  .responseText{
+  .displayFInalAmbassador_responseText{
       color:green;
       margin-left: 30px;
       margin-top: 10px;
@@ -37,23 +37,23 @@
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
-  .ambassadorBlock{
+  .displayFInalAmbassador_ambassadorBlock{
       width:70%;
       margin-left: auto;
       margin-right: auto;
       margin-bottom: 50px;
   }
-  .ambassadorBlock table td, th{
+  .displayFInalAmbassador_ambassadorBlock table .displayFInalAmbassador_td, .displayFInalAmbassador_th  {
      text-align:center;
      width:100px;
      padding:10px;
      border:1px solid black;
   }
 
-  .ambassadorBlock table{
+  .displayFInalAmbassador_ambassadorBlock table{
       border-collapse: collapse;
   }
-  .downloadCsv{
+  .displayFInalAmbassador_downloadCsv{
       float:right;
       margin-right: 60px;
       position: relative;
