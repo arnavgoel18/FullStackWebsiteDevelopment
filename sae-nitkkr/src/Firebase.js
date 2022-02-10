@@ -67,5 +67,5 @@ const db = getFirestore(firebaseApp);
 // const db2 = getFirestore(thirdApp);
 
 export default db;
- export {db1};
+export {db1};
 
