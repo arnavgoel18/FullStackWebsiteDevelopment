@@ -184,6 +184,7 @@ function submit(){
     Message: Message.value,
     s1: s1.value,
     s2: s2.value,
+    status:'new',
     timestamp: serverTimestamp(),
   };
 
