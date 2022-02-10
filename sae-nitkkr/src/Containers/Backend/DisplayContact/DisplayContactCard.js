@@ -6,7 +6,7 @@ function DisplayContactCard(props) {
       <div className="displayContactCard_contactCardDiv">
         <div className="displayContactCard_firstbox">
           <div className="displayContactCard_nameofapplicant">{props.name}</div>
-          <div className="displayContactCard_date">{props.date}</div>
+          <div className="displayContactCard_reason">{props.reason}</div>
           <div className="displayContactCard_message">{props.message}</div>
         </div>
         <div className="displayContactCard_secondbox">
