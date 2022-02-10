@@ -172,7 +172,7 @@ function DisplayFinalAmbassador() {
             }
             //update counter
             (async () => {await setDoc(doc(collection(db, "LengthSelectedStudent"), "1111"), {"len": counter});
-            document.querySelector('.loader').style.display = 'none';
+            document.querySelector('.displayFInalAmbassador_loader').style.display = 'none';
             document.querySelector('.responseText').style.display = 'block';
             document.querySelector('.responseText').textContent = 'upload done!';
             setLoading(true)
