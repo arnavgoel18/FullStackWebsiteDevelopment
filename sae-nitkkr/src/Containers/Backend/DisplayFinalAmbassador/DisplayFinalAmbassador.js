@@ -142,6 +142,7 @@ function DisplayFinalAmbassador() {
     function triggerFileInput(){
         document.querySelector('#userFileInput').click();
     }
+
     async function processFile(){
         document.querySelector('.loader').style.display = 'block';
         const ref = await getDocs(collection(db, "LengthSelectedStudent"));
@@ -220,28 +221,27 @@ function DisplayFinalAmbassador() {
                        <table>
                            <thead>
                                <tr>
-                                    <th className="displayFInalAmbassador_th>Name</th>
-                                    <th className="displayFInalAmbassador_th>College</th>
-                                    <th className="displayFInalAmbassador_th>Semester</th>
-                                    <th className="displayFInalAmbassador_th>Branch</th>
-                                    <th className="displayFInalAmbassador_th>Phone</th>
-                                    <th className="displayFInalAmbassador_th>Email</th>
-                                    <th className="displayFInalAmbassador_th>Referral Code</th>
-                                    <th className="displayFInalAmbassador_th>No. of Referrals</th>
+                                    <th className="displayFInalAmbassador_th">Name</th>
+                                    <th className="displayFInalAmbassador_th">College</th>
+                                    <th className="displayFInalAmbassador_th">Semester</th>
+                                    <th className="displayFInalAmbassador_th">Branch</th>
+                                    <th className="displayFInalAmbassador_th">Phone</th>
+                                    <th className="displayFInalAmbassador_th">Email</th>
+                                    <th className="displayFInalAmbassador_th">Referral Code</th>
+                                    <th className="displayFInalAmbassador_th">No. of Referrals</th>
                                </tr>
                            </thead>
                            <tbody>
                             {studentDetails.map(item => {
                                 return <tr>
-                                    <td className="displayFInalAmbassador_td>{item.studentName} </td>
-                                    <td className="displayFInalAmbassador_td>{item.collegeName} </td>
-                                    <td className="displayFInalAmbassador_td>{item.semester} </td>
-                                    <td className="displayFInalAmbassador_td>{item.branch} </td>
-                                    <td className="displayFInalAmbassador_td>{item.phone} </td>
-                                    <td className="displayFInalAmbassador_td>{item.email} </td>
-                                    <td className="displayFInalAmbassador_td>{item.referralCode} </td>
-                                    <td className="displayFInalAmbassador_td>{item.numberReferrals} </td>
-                                    
+                                    <td className="displayFInalAmbassador_td">{item.studentName} </td>
+                                    <td className="displayFInalAmbassador_td">{item.collegeName} </td>
+                                    <td className="displayFInalAmbassador_td">{item.semester} </td>
+                                    <td className="displayFInalAmbassador_td">{item.branch} </td>
+                                    <td className="displayFInalAmbassador_td">{item.phone} </td>
+                                    <td className="displayFInalAmbassador_td">{item.email} </td>
+                                    <td className="displayFInalAmbassador_td">{item.referralCode} </td>
+                                    <td className="displayFInalAmbassador_td">{item.numberReferrals} </td>
                                 </tr>;
                                 })}
                            </tbody>
