@@ -170,6 +170,7 @@ function DisplayAllQuizes() {
                 var obj = {
                     studentName : dataObj[i][0],
                     collegeName: dataObj[i][1],
+                    dateOfSubmission: new Date(Date.now()).toLocaleString(),
                     branch: dataObj[i][2],
                     semester: dataObj[i][3],
                     email: dataObj[i][4],
@@ -179,7 +180,7 @@ function DisplayAllQuizes() {
                     transaction: dataObj[i][8]
                 };
                 (async () => {
-                    await addDoc(collection(db, "autokritiRegistration"), obj);    
+                    await setDoc(doc(db, "autokritiRegistration", `${Date.now()}`), obj);    
                 })();
                 counter++;
             }
