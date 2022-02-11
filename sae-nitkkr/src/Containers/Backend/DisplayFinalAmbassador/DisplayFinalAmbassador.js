@@ -54,35 +54,36 @@ function DisplayFinalAmbassador() {
         (async () => {await getInfo();})();
         setTester(true)
     }
-    const columns = useMemo(
-        () => [
-          {
-            Header: "Name"
-          },
-          {
-            Header: "College"
-          },
-          {
-            Header: "Semester"
-          },
-          {
-            Header: "Branch"
-          },
-          {
-            Header: "Phone"
-          },
-          {
-            Header: "Email"
-          },
-          {
-            Header: "Referral Code"
-          },
-          {
-            Header: "No. of Referrals"
-          }
-        ],
-        []
-      );
+
+    // const columns = useMemo(
+    //     () => [
+    //       {
+    //         Header: "Name"
+    //       },
+    //       {
+    //         Header: "College"
+    //       },
+    //       {
+    //         Header: "Semester"
+    //       },
+    //       {
+    //         Header: "Branch"
+    //       },
+    //       {
+    //         Header: "Phone"
+    //       },
+    //       {
+    //         Header: "Email"
+    //       },
+    //       {
+    //         Header: "Referral Code"
+    //       },
+    //       {
+    //         Header: "No. of Referrals"
+    //       }
+    //     ],
+    //     []
+    //   );
     
       function downloadCsv() {
         if (CsvDetail.length == 0) {
@@ -144,7 +145,7 @@ function DisplayFinalAmbassador() {
     }
 
     async function processFile(){
-        document.querySelector('.loader').style.display = 'block';
+        document.querySelector('.displayFInalAmbassador_loader').style.display = 'block';
         const ref = await getDocs(collection(db, "LengthSelectedStudent"));
         var counter = ref.docs.map((doc) => doc.data())[0].len
         var myFile = document.querySelector('#userFileInput').files[0];
@@ -173,12 +174,12 @@ function DisplayFinalAmbassador() {
             //update counter
             (async () => {await setDoc(doc(collection(db, "LengthSelectedStudent"), "1111"), {"len": counter});
             document.querySelector('.displayFInalAmbassador_loader').style.display = 'none';
-            document.querySelector('.responseText').style.display = 'block';
-            document.querySelector('.responseText').textContent = 'upload done!';
+            document.querySelector('.displayFInalAmbassador_responseText').style.display = 'block';
+            document.querySelector('.displayFInalAmbassador_responseText').textContent = 'upload done!';
             setLoading(true)
             getInfo()
             setTimeout(()=>{
-                document.querySelector('.responseText').style.display = 'none';
+                document.querySelector('.displayFInalAmbassador_responseText').style.display = 'none';
             }, 3000)
         })();
         });
