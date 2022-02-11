@@ -16,8 +16,7 @@ function RegistrationForm() {
 
 
   const sendEmail = (data) => {
-    //console.log("enter")
-    init("user_qet4RKd7C7UreliHN5dhq"); //user id
+    init("user_qet4RKd7C7UreliHN5dhq");
     const toSend = {
       name: data.Name,
       sem: data.Semester,
