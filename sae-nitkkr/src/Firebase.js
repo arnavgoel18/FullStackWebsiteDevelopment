@@ -41,7 +41,7 @@ const firebaseConfig = {
 
 const secondaryAppConfig = {
   // SECOND DATABASE ONLY FOR BLOGS - ONLY DEPLOYMENT)
-  apiKey: "AIzaSyCk_GyQ6-ytYYfv6Hvt9SXtC51z8AM6000",
+  // apiKey: "AIzaSyCk_GyQ6-ytYYfv6Hvt9SXtC51z8AM6000",
   // authDomain: "sae-blogs.firebaseapp.com",
   // projectId: "sae-blogs",
   // storageBucket: "sae-blogs.appspot.com",
