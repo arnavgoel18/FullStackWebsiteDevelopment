@@ -69,7 +69,7 @@ function DisplayAllQuizes() {
     setCsvDetail(mergedCsvData);
 
     document.querySelector('.response-overview').textContent = "Total Responses: " + detailList.length  
-    var todayList = detailList.filter(x => x.dateOfSubmission.split(",")[0] === new Date(Date.now()).().split(',')[0])
+    var todayList = detailList.filter(x => x.dateOfSubmission.split(",")[0] === new Date(Date.now()).toLocaleString().split(',')[0])
     document.querySelector('.today-response-overview').textContent = "Today's Responses: " + todayList.length  
     return detailList;
   }
