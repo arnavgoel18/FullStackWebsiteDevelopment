@@ -112,8 +112,11 @@ function DisplayAllQuizes() {
     CsvDetail.forEach(function (row) {
       //to replace , with ;
       row.forEach(function (row1) {
-        row1[0] = row1[0].replace(/,/g, ";");
-        row1[0] = row1[0].replace(/\n/g, ";");
+        if(row1[0] !== undefined){
+          row1[0] = row1[0].replace(/,/g, ";");
+          row1[0] = row1[0].replace(/\n/g, ";");
+        }
+        
       });
       csv += row.join(",");
       csv += "\n";
