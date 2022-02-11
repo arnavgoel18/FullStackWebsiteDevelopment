@@ -1,9 +1,11 @@
 //No need for this one now. It's an old one made just like that
 //Can delete
+import {useState} from 'react';
 import db from "../../../Firebase";
 import {
   doc,
-  setDoc,
+  getDocs,
+  collection,
 } from "firebase/firestore";
 import { send, init } from "emailjs-com";
 
@@ -12,8 +14,22 @@ import "./RegistrationForm.css";
 var timestamp;
 
 function RegistrationForm() {
-    
+  var emailList=[];
+  var [tester, setTester] = useState(true);
+  //var [autokritiData, setAutokritiData] = useState({});
 
+  async function getContactInfo() {
+    const contactUs = collection(db, "autokritiRegistration");
+    var amb_doc = await getDocs(contactUs);
+    emailList = amb_doc.docs.map((doc) => doc.data().email);
+    //setAutokritiData(detailList);
+    console.log(emailList);
+  }
+
+  if (tester == true) {
+    window.addEventListener("load", getContactInfo());
+    setTester(false);
+  }
 
   const sendEmail = (data) => {
     init("user_qet4RKd7C7UreliHN5dhq");

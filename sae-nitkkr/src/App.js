@@ -80,6 +80,7 @@ function App() {
 
             {/* Not in Use */}
             <Route path="/sendEmail" exact component={()=><SendEmail/>}/>
+            {/* <Route path="/test" exact component={()=><RegistrationForm/>}/> */}
           
           </Switch>
         </Router>

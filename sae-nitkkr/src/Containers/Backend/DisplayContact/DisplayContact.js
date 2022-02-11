@@ -1,21 +1,64 @@
 import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
-import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import DisplayContactCard from "./DisplayContactCard";
 import "./DisplayContact.css";
-import db from "../../../Firebase.js";
-import { collection, getDocs } from "firebase/firestore";
 import BackSignOutPanel from "../../../Components/Backend/BackSignOutPanel/BackSignOutPanel";
 import PageHeader from "../../../Components/Backend/PageHeader/PageHeader";
+import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
+import db from "../../../Firebase.js";
+import { collection, getDocs } from "firebase/firestore";
 
+//function for drag and drop
+const onDragEnd = (result, columns, setColumns) => {
+  if (!result.destination) return;
+  const { source, destination } = result;
+
+  if (source.droppableId !== destination.droppableId) {
+    const sourceColumn = columns[source.droppableId];
+    const destColumn = columns[destination.droppableId];
+    const sourceItems = [...sourceColumn.items];
+    const destItems = [...destColumn.items];
+    const [removed] = sourceItems.splice(source.index, 1);
+    destItems.splice(destination.index, 0, removed);
+    console.log(source.droppableId, sourceItems);
+    setColumns({
+      ...columns,
+      [source.droppableId]: {
+        ...sourceColumn,
+        items: sourceItems,
+      },
+      [destination.droppableId]: {
+        ...destColumn,
+        items: destItems,
+      },
+    });
+  } else {
+    const column = columns[source.droppableId];
+    const copiedItems = [...column.items];
+    const [removed] = copiedItems.splice(source.index, 1);
+    copiedItems.splice(destination.index, 0, removed);
+    setColumns({
+      ...columns,
+      [source.droppableId]: {
+        ...column,
+        items: copiedItems,
+      },
+    });
+  }
+};
+
+//function that we are exporting
 function DisplayContactInfo() {
   var detailList = [];
   var cvsFileData = [];
   var mergedCsvData = [];
-  
-  const [characters, updateCharacters] = useState([]);
+  var todo = [];
+  var progress = [];
+  var done = [];
+
+  //const [itemsFromBackend, setItemsFromBackend] = useState([]);
+  const [columns, setColumns] = useState({});
   var [tester, setTester] = useState(true);
-  var [details, setDetails] = useState([]);
   var [CsvDetail, setCsvDetail] = useState({});
 
   //Get Information from Firebase into detailList array
@@ -33,12 +76,40 @@ function DisplayContactInfo() {
         [doc.data().Message],
         [doc.data().s1],
         [doc.data().s2],
+        [doc.data().status],
       ];
 
       mergedCsvData.push(cvsFileData);
+
+      if (doc.data().status == "new") {
+        todo.push(doc.data());
+      }
+      if (doc.data().status == "progress") {
+        todo.push(doc.data());
+      }
+      if (doc.data().status == "done") {
+        todo.push(doc.data());
+      }
     });
     setCsvDetail(mergedCsvData);
-    updateCharacters(detailList);
+    // setItemsFromBackend(detailList);
+
+    const columnsFromBackend = {
+      todo: {
+        name: "To do",
+        items: todo,
+      },
+      progress: {
+        name: "In Progress",
+        items: progress,
+      },
+      done: {
+        name: "Completed",
+        items: done,
+      },
+    };
+    setColumns(columnsFromBackend);
+    //console.log(todo, columnsFromBackend);
   }
 
   if (tester == true) {
@@ -46,14 +117,13 @@ function DisplayContactInfo() {
     setTester(false);
   }
 
- 
   function downloadCsv() {
     if (CsvDetail.length == 0) {
       alert("There are no responses yet!");
       return;
     }
     var csv =
-      "Name,EmailId,phoneNo,Institute/Organisations(optional),Your Message *,Reason to Contact *,Person Contacting us is a *";
+      "Name,EmailId,phoneNo,Institute/Organisations(optional),Your Message *,Reason to Contact *,Person Contacting us is a *, status";
     csv += "\n";
 
     //merge the data with CSV
@@ -76,16 +146,6 @@ function DisplayContactInfo() {
     hiddenElement.click();
   }
 
-
-  function handleOnDragEnd(result) {
-    if (!result.destination) return;
-    const items = Array.from(characters);
-    const [reorderedItem] = items.splice(result.source.index, 1);
-    items.splice(result.destination.index, 0, reorderedItem);
-    updateCharacters(items);
-  }
-
-
   const token = localStorage.getItem("token");
   let loggedin = true;
   if (token == null) {
@@ -97,68 +157,97 @@ function DisplayContactInfo() {
     return (
       <div className="displaycontact_displayContactBody">
         <PageHeader heading="ContactUs Responses" />
-        <div className="displaycontact_displayDiv">
-          <BackSignOutPanel />
-          <div className="displaycontact_contactResponse">
-            <div className="displaycontact_conResData">
-              <div>Pending:</div>
-              <div>Completed:</div>
-            </div>
-            <a className="displaycontact_downloadCsv">
-              <i
-                onClick={downloadCsv}
-                className="fa fa-download"
-                aria-hidden="true"
-              ></i>
-            </a>
+        <BackSignOutPanel />
+        <div className="displaycontact_contactResponse">
+          <div className="displaycontact_conResData">
+            <div>Pending: {progress.length}</div>
+            <div>Completed: {done.length}</div>
           </div>
-          <table className="displaycontact_contactResTable">
-            <thead>
-              <tr>
-                <th className="displaycontact_heading">New Responses</th>
-                <th className="displaycontact_heading">In Progress</th>
-                <th className="displaycontact_heading">Finished</th>
-              </tr>
-            </thead>
-            <DragDropContext onDragEnd={handleOnDragEnd}>
-              <Droppable droppableId="characters">
-                {(provided) => (
-                  <tbody
-                    className="characters"
-                    {...provided.droppableProps}
-                    ref={provided.innerRef}
-                  >
-                    {characters.map((data, i) => {
-                      return (
-                          <Draggable key={i} draggableId={data.PhoneNo} index={i}>
-                            {(provided) => (
-                        <tr >
-                              <td
-                                ref={provided.innerRef}
-                                {...provided.draggableProps}
-                                {...provided.dragHandleProps}
-                              >
-                                <DisplayContactCard
-                                  name={data.Name}
-                                  reason={data.s1}
-                                  message={data.Message}
-                                  emailid={data.EmailId}
-                                  mobile={data.PhoneNo}
-                                  person={data.s2}
-                                  college={data.Organisation}
-                                />
-                              </td>
-                        </tr>
-                            )}
-                          </Draggable>
-                      );
-                    })}
-                    {provided.placeholder}
-                  </tbody>
-                )}
-              </Droppable>
-            </DragDropContext>
-          </table>
+          <a className="displaycontact_downloadCsv">
+            <i
+              onClick={downloadCsv}
+              className="fa fa-download"
+              aria-hidden="true"
+            ></i>
+          </a>
+        </div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            height: "100%",
+          }}
+        >
+          <DragDropContext
+            onDragEnd={(result) => onDragEnd(result, columns, setColumns)}
+          >
+            {Object.entries(columns).map(([columnId, column], index) => {
+              return (
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    marginTop: "10px",
+                  }}
+                  key={columnId}
+                >
+                  <h2>{column.name}</h2>
+                  <div style={{ margin: 8 }}>
+                    <Droppable droppableId={columnId} key={columnId}>
+                      {(provided, snapshot) => {
+                        return (
+                          <div
+                            {...provided.droppableProps}
+                            ref={provided.innerRef}
+                            style={{
+                              background: snapshot.isDraggingOver
+                                ? "lightblue"
+                                : "lightgrey",
+                              padding: 4,
+                              width: 450,
+                              minHeight: 500,
+                            }}
+                          >
+                            {column.items.map((item, index) => {
+                              return (
+                                <Draggable
+                                  key={index}
+                                  draggableId={item.PhoneNo}
+                                  index={index}
+                                >
+                                  {(provided, snapshot) => {
+                                    return (
+                                      <div
+                                        ref={provided.innerRef}
+                                        {...provided.draggableProps}
+                                        {...provided.dragHandleProps}
+                                      >
+                                        <DisplayContactCard
+                                          name={item.Name}
+                                          reason={item.s1}
+                                          message={item.Message}
+                                          emailid={item.EmailId}
+                                          mobile={item.PhoneNo}
+                                          person={item.s2}
+                                          college={item.Organisation}
+                                        />
+                                      </div>
+                                    );
+                                  }}
+                                </Draggable>
+                              );
+                            })}
+                            {provided.placeholder}
+                          </div>
+                        );
+                      }}
+                    </Droppable>
+                  </div>
+                </div>
+              );
+            })}
+          </DragDropContext>
         </div>
       </div>
     );
