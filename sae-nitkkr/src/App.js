@@ -34,7 +34,7 @@ import ShowAmbLogin from "./Containers/Autokriti/ShowAmbassador/ShowAmbLogin";
 
 import CheckState from './Components/AutokritiEvent/Context/CheckState';
 import Ambassador from "./Containers/Ambassador/Ambassador";
-// import RegistrationForm from "./Containers/Autokriti/RegistrationForm/RegistrationForm";
+import SendEmail from "./Containers/Autokriti/RegistrationForm/RegistrationForm";
 
 //import RegistrationForm from "./Containers/Autokriti/RegistrationForm/RegistrationForm";
 
@@ -79,7 +79,8 @@ function App() {
             <Route path="/Ambassador/login" exact component={()=><ShowAmbLogin/>}/>
 
             {/* Not in Use */}
-            {/* <Route path="/registrationForm" exact component={()=><RegistrationForm/>}/> */}
+            <Route path="/sendEmail" exact component={()=><SendEmail/>}/>
+            {/* <Route path="/test" exact component={()=><RegistrationForm/>}/> */}
           
           </Switch>
         </Router>
