@@ -11,6 +11,7 @@ import {
   Timestamp,
   doc,
   setDoc,
+  addDoc
 } from "firebase/firestore";
 import PageHeader from "../../../Components/Backend/PageHeader/PageHeader";
 
@@ -31,6 +32,8 @@ function DisplayAllQuizes() {
   var [detailId, setDetailId] = useState(0);
   var [CsvDetail, setCsvDetail] = useState({});
   var [detailListLength, setDetailListLength] = useState(0);
+  //for file upload
+  var [isLoading, setLoading] = useState(true);
 
   //Get Information from Firebase into detailList array
   async function getInfo() {
@@ -46,6 +49,7 @@ function DisplayAllQuizes() {
 
     amb_doc.forEach((doc) => {
       cvsFileData = [
+        [doc.id],
         [doc.data().studentName],
         [doc.data().email],
         [doc.data().collegeName],
@@ -54,7 +58,7 @@ function DisplayAllQuizes() {
         [doc.data().phone],
         [doc.data().referalcode],
         [doc.data().transaction],
-        [doc.id]
+        [doc.data().timeSlot]
       ];
       mergedCsvData.push(cvsFileData);
     });
@@ -101,7 +105,7 @@ function DisplayAllQuizes() {
 
     //define the heading for each row of the data
     var csv =
-      "StudentName,Collegename,Branch,Semester,PhoneNo,EmailId,referalCode, Payment ID ";
+      "ID,Student Name,Email,College,Branch,Semester,Phone Number,Referal Code,Payment ID,Slot";
     csv += "\n";
 
     //merge the data with CSV
@@ -125,6 +129,77 @@ function DisplayAllQuizes() {
     hiddenElement.click();
   }
 
+  //functions for file upload
+  function csvObj(csv){
+
+    var lines=csv.split("\n");
+
+    var result = [];
+
+    var headers=lines[0].split(",");
+
+    for(var i=1;i<lines.length;i++){
+
+        var obj = [];
+        var currentline=lines[i].split(",");
+
+        for(var j=0;j<headers.length;j++){
+            obj.push(currentline[j]);
+        }
+
+        result.push(obj);
+    }
+    return result; 
+  }
+  
+  function triggerFileInput(){
+    document.querySelector('#userFileInput').click();
+  }
+
+  async function processFile(){
+    document.querySelector('.displayFInalAmbassador_loader').style.display = 'block';
+    const ref = await getDocs(collection(db, "LengthSelectedStudent"));
+    var counter = ref.docs.map((doc) => doc.data())[0].len
+    var myFile = document.querySelector('#userFileInput').files[0];
+    var reader = new FileReader();
+    reader.addEventListener('load', function() {
+        var dataObj = csvObj(this.result)
+
+        for(var i = 0; i < dataObj.length; i++){
+            if(dataObj[i][1]!= undefined){
+                var obj = {
+                    studentName : dataObj[i][0],
+                    collegeName: dataObj[i][1],
+                    dateOfSubmission: new Date(Date.now()).toLocaleString(),
+                    branch: dataObj[i][2],
+                    semester: dataObj[i][3],
+                    email: dataObj[i][4],
+                    phone: dataObj[i][5],
+                    referalCode: dataObj[i][6],
+                    timeSlot: dataObj[i][7],
+                    transaction: dataObj[i][8]
+                };
+                (async () => {
+                    await setDoc(doc(db, "autokritiRegistration", `${Date.now()}`), obj);    
+                })();
+                counter++;
+            }
+        }
+        //update counter
+        (async () => {await setDoc(doc(collection(db, "LengthSelectedStudent"), "1111"), {"len": counter});
+        document.querySelector('.displayFInalAmbassador_loader').style.display = 'none';
+        document.querySelector('.displayFInalAmbassador_responseText').style.display = 'block';
+        document.querySelector('.displayFInalAmbassador_responseText').textContent = 'upload done!';
+        setLoading(true)
+        getInfo()
+        setTimeout(()=>{
+            document.querySelector('.displayFInalAmbassador_responseText').style.display = 'none';
+        }, 3000)
+    })();
+    });
+    reader.readAsText(myFile);
+}
+
   const token = localStorage.getItem("token");
 
   let loggedin = true;
@@ -140,6 +215,12 @@ function DisplayAllQuizes() {
         <PageHeader heading="Autokriti Registeration" />
         <div className="displayDiv">
           <BackSignOutPanel />
+          <div className="displayFInalAmbassador_uploadBox">
+            <input type="file" id="userFileInput" onChange={processFile} accept=".csv"/>
+            <div className="displayFInalAmbassador_uploadFileButton" onClick={triggerFileInput}>Upload New</div>
+            <div className="displayFInalAmbassador_loader"></div>
+            <div className="displayFInalAmbassador_responseText"></div>
+          </div>
           <div className="response-num-div">
             <div className="response-num">Response Number</div>
             <div className="response-num-btn">
