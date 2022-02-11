@@ -20,15 +20,6 @@ const firebaseConfig = {
     // measurementId: "G-BHECE0F8CX"
 
   // SAE TESTER
-<<<<<<< HEAD
-    apiKey: "AIzaSyAfGWoUlOwoP5PHuRy4FP9Ic1w1YxY2uFA",
-    authDomain: "saenitkkrforms.firebaseapp.com",
-    projectId: "saenitkkrforms",
-    storageBucket: "saenitkkrforms.appspot.com",
-    messagingSenderId: "248727434698",
-    appId: "1:248727434698:web:0f5498ae740f9ff9738b33",
-    measurementId: "G-PXQ86P5ZPQ"
-=======
   //  apiKey: "AIzaSyAfGWoUlOwoP5PHuRy4FP9Ic1w1YxY2uFA",
   //  authDomain: "saenitkkrforms.firebaseapp.com",
   //  projectId: "saenitkkrforms",
@@ -36,7 +27,6 @@ const firebaseConfig = {
   //  messagingSenderId: "248727434698",
   //  appId: "1:248727434698:web:0f5498ae740f9ff9738b33",
   //  measurementId: "G-PXQ86P5ZPQ"
->>>>>>> bc89cdf880a537d3b943a1d06c5da5aac12bbd7e
 
   //Arnav
   // apiKey: "AIzaSyAfGWoUlOwoP5PHuRy4FP9Ic1w1YxY2uFA",
