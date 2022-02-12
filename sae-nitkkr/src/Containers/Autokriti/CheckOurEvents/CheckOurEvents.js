@@ -16,7 +16,7 @@ function CheckEvents() {
             <Session
               title="Autokriti 2.0"
               status="Venue: Online"
-              date="Starts 12th Feb On Weekends"
+              date="Starts 26th Feb On Weekends"
               image={Au2Poster}
               url="/autokriti/register"
             />
