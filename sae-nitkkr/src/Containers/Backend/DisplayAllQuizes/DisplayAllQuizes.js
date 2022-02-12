@@ -1,9 +1,13 @@
 import React from 'react';
 import { useState, useEffect } from "react";
 import { Redirect } from "react-router-dom";
+
 import BackSignOutPanel from '../../../Components/Backend/BackSignOutPanel/BackSignOutPanel';
 import DisplayQuizescard from "./DisplayQuizescard";
+import PageHeader from "../../../Components/Backend/PageHeader/PageHeader";
+
 import "./DisplayAllQuizes.css";
+
 import db from "../../../Firebase.js";
 import {
   collection,
@@ -13,7 +17,7 @@ import {
   setDoc,
   addDoc
 } from "firebase/firestore";
-import PageHeader from "../../../Components/Backend/PageHeader/PageHeader";
+import { BiDockBottom } from 'react-icons/bi';
 
 
 var flag = false;
@@ -22,16 +26,17 @@ function DisplayAllQuizes() {
 
 
   var [index, setIndex] = useState(0);
-  var detailList = [];
-  var detailListId = [];
   var cvsFileData = [];
   var mergedCsvData = [];
 
   var [tester, setTester] = useState(true);
-  var [detail, setDetail] = useState({});
-  var [detailId, setDetailId] = useState(0);
   var [CsvDetail, setCsvDetail] = useState({});
-  var [detailListLength, setDetailListLength] = useState(0);
+  var [detailList, setDetailList] = useState([]);
+  var [detailListId, setDetailListId] = useState([]);
+
+  var [detailListSlot1, setDetailListSlot1] = useState([]);
+  var [detailListSlot2, setDetailListSlot2] = useState([]);
+
   //for file upload
   var [isLoading, setLoading] = useState(true);
 
@@ -41,12 +46,7 @@ function DisplayAllQuizes() {
     const autokritiRegisteration = collection(db, "autokritiRegistration");
     var amb_doc = await getDocs(autokritiRegisteration);
     detailList = amb_doc.docs.map((doc) => doc.data());
-    detailListId = amb_doc.docs.map((doc) => doc.id);
-
-    for(var i = 0; i < detailList.length; i++){
-      detailList[i]['id'] = detailListId[i]
-    }
-
+    
     amb_doc.forEach((doc) => {
       cvsFileData = [
         [doc.id],
@@ -62,11 +62,26 @@ function DisplayAllQuizes() {
       ];
       mergedCsvData.push(cvsFileData);
     });
-    detailList.sort((a, b) => Number(b.id) - Number(a.id))
-    setDetail(detailList[index]);
-    setDetailId(detailListId[index]);
-    setDetailListLength(detailList.length);
+
+    // detailList.sort((a, b) => Number(b.id) - Number(a.id))
+
+    for(var i = 0;i < detailList.length;i++){
+      if(detailList[i].timeSlot == '26 Feb')
+        detailListSlot2.push(detailList[i]);
+      else
+        detailListSlot1.push(detailList[i]);
+    }
+    
+    setDetailListSlot1(detailListSlot1);
+    setDetailListSlot2(detailListSlot2);
+    setDetailList(detailList);
+    setDetailListId(detailListId);
     setCsvDetail(mergedCsvData);
+
+    console.log("SLOT 1:")
+    console.log(detailListSlot1);
+    console.log("SLOT 2:")
+    console.log(detailListSlot2);
 
     document.querySelector('.response-overview').textContent = "Total Responses: " + detailList.length  
     var todayList = detailList.filter(x => x.dateOfSubmission.split(",")[0] === new Date(Date.now()).toLocaleString().split(',')[0])
@@ -79,24 +94,25 @@ function DisplayAllQuizes() {
     setTester(false);
   }
 
-  function increment() {
-    if (index < detailListLength - 1) {
-      setIndex(++index);
-      getInfo();
-    } else {
-      window.alert("MAXIMUM RESPONSES REACHED");
-    }
-  }
+  // function increment() {
+  //   if (index < detailListLength - 1) {
+  //     setIndex(++index);
+  //     getInfo();
+  //   } else {
+  //     window.alert("MAXIMUM RESPONSES REACHED");
+  //   }
+  // }
 
-  function decrement() {
-    if (index == 0) {
-      window.alert("MINIMUM LIMIT REACHED");
-    } else {
-      setIndex(--index);
-      getInfo();
-    }
-  }
+  // function decrement() {
+  //   if (index == 0) {
+  //     window.alert("MINIMUM LIMIT REACHED");
+  //   } else {
+  //     setIndex(--index);
+  //     getInfo();
+  //   }
+  // }
 
+  /*-------------------------------- Functions for file download --------------------------------*/
   function downloadCsv() {
     if (CsvDetail.length == 0) {
       alert("There are no responses yet!");
@@ -131,8 +147,8 @@ function DisplayAllQuizes() {
     hiddenElement.download = "autokritiRegisterationData.csv";
     hiddenElement.click();
   }
-
-  //functions for file upload
+  /*-------------------------------- End Functions for file download --------------------------------*/
+  /*-------------------------------- Functions for file upload --------------------------------*/
   function csvObj(csv){
 
     var lines=csv.split("\n");
@@ -202,6 +218,7 @@ function DisplayAllQuizes() {
     });
     reader.readAsText(myFile);
 }
+/*-------------------------------- End Functions for file upload --------------------------------*/
 
   const token = localStorage.getItem("token");
 
@@ -215,6 +232,7 @@ function DisplayAllQuizes() {
   } else {
     return (
       <>
+        {/* ---------------------------------------------------------------------------------------- */}
         <PageHeader heading="Autokriti Registeration" />
         <div className="displayDiv">
           <BackSignOutPanel />
@@ -223,18 +241,7 @@ function DisplayAllQuizes() {
             <div className="displayFInalAmbassador_uploadFileButton" onClick={triggerFileInput}>Upload New</div>
             <div className="displayFInalAmbassador_loader"></div>
             <div className="displayFInalAmbassador_responseText"></div>
-          </div>
-          <div className="response-num-div">
-            <div className="response-num">Response Number</div>
-            <div className="response-num-btn">
-              <button id="decrement" onClick={decrement}>
-                -
-              </button>
-              <div>{index + 1}</div>
-              <button id="increment" onClick={increment}>
-                +
-              </button>
-            </div>
+
             <div>
               <a className="downloadCsv">
                 <i
@@ -245,27 +252,73 @@ function DisplayAllQuizes() {
               </a>
             </div>
           </div>
-          <div className='response-overview'>
-
+          {/* ---------------------------------------------------------------------------------------- */}
+        
+          <div className="response_container"> 
+            <div className='response-overview'></div>
+            <div className='today-response-overview'></div>
           </div>
-          <div className='today-response-overview'>
 
+          <h2 style={{marginBottom: '10px'}}>26th Feb</h2>
+          <div className="displayResponses_slot1">
+            Total Responses : {detailListSlot2.length}
+            <table>
+              <thead>
+                <tr>
+                  <th>Student Name</th>
+                  <th>College Name</th>
+                  <th>Email</th>
+                  <th>Phone Number</th>
+                  <th>Payment_Id</th>
+                  <th>Referal Code</th>
+                  <th>Slot</th>
+                </tr>
+              </thead>
+              <tbody>
+                {detailListSlot2.map(item1 => {
+                  return<tr>
+                      <td>{item1.studentName}</td>
+                      <td>{item1.collegeName}</td>
+                      <td>{item1.email}</td>
+                      <td>{item1.phone}</td>
+                      <td>{item1.transaction}</td>
+                      <td>{item1.referalcode}</td>
+                      <td>{item1.timeSlot}</td>
+                    </tr>
+                  })}
+                </tbody>
+            </table>
           </div>
-          <div>
-            <DisplayQuizescard
-              key={index}
-              docId={detailId}
-              dateOfSubmission={detail.dateOfSubmission}
-              FullName={detail.studentName}
-              ClgName={detail.collegeName}
-              Branch={detail.branch}
-              CurrentSem={detail.semester}
-              Phoneno={detail.phone}
-              Emailid={detail.email}
-              referalCode={detail.referalcode}
-              transaction={detail.transaction}
-              slot={detail.timeSlot}
-            />
+
+          <h2 style={{marginBottom: '10px'}}>12th Feb</h2>
+          <div className="displayResponses_slot1">
+            Total Responses : {detailListSlot1.length}
+            <table>
+              <thead>
+                <tr>
+                  <th>Student Name</th>
+                  <th>College Name</th>
+                  <th>Email</th>
+                  <th>Phone Number</th>
+                  <th>Payment_Id</th>
+                  <th>Referal Code</th>
+                  <th>Slot</th>
+                </tr>
+              </thead>
+              <tbody>
+                {detailListSlot1.map(item2 => {
+                  return<tr>
+                      <td>{item2.studentName}</td>
+                      <td>{item2.collegeName}</td>
+                      <td>{item2.email}</td>
+                      <td>{item2.phone}</td>
+                      <td>{item2.transaction}</td>
+                      <td>{item2.referalcode}</td>
+                      <td>{item2.timeSlot}</td>
+                    </tr>
+                  })}
+                </tbody>
+            </table>
           </div>
         </div>
       </>

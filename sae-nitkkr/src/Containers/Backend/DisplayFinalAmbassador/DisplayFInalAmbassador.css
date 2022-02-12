@@ -1,5 +1,6 @@
 .displayFInalAmbassador_uploadBox{
     display: flex;
+    justify-content: space-between;
     padding: 25px 20px;
 }
 .displayFInalAmbassador_uploadBox input{
