@@ -120,6 +120,8 @@ function Quizsignup() {
     }
 
     setUserData({ ...userData, [name]: value });    
+
+    console.log(userData);
   };
 
   var [stuData, setStuData] = useState([]);
@@ -320,7 +322,8 @@ function Quizsignup() {
               onChange={postUserData}
             />
           </div>
-          <div className="field">
+
+          {/* <div className="field">
             {" "}
             <span className="payform-label"> Semester </span>
             <br />
@@ -334,6 +337,26 @@ function Quizsignup() {
               value={userData.semester}
               onChange={postUserData}
             />
+          </div> */}
+
+          <div className="field_select">
+            <span className="payform-label">Semester</span>
+              <select 
+                className="payform-dropdown" 
+                name="semester" 
+                id="amb_semester" 
+                required = "unrequired"
+                value={userData.semester} 
+                onChange={postUserData}>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+              </select> 
           </div>
 
           <div className="field">

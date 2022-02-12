@@ -1,0 +1,25 @@
+.display_analytics_reg{
+    width: 100%;
+    height: auto;
+    border: solid 1px red;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.display_analytics_reg-filters{
+    height: 10vh;
+    display: flex;
+    padding: 1em;
+    justify-content: space-evenly;
+}
+
+.display_analytics_reg-filter select{
+    height: 2em;
+    width: 10em;
+    margin-top: 0.5em;
+}
+
+.display_analytics_reg-btn{
+
+}
