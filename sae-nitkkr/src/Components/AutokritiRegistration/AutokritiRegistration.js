@@ -61,7 +61,7 @@ function Quizsignup() {
     semester: "",
     referal: "",
     transaction: "",
-    timeSlot: "",
+    timeSlot: "26 Feb",
   });
 
   let name, value;
@@ -395,10 +395,8 @@ function Quizsignup() {
 
           <br />
 
-          <div className="field_select">
-            {" "}
+          {/* <div className="field_select">
             <span className="payform-label">Time Slot * 
-            {/* <p style={{fontSize: '11px',}}>Slot-2 is specifically for students having their exams till 25th Feb, so please prefer Slot-1 unless you have similar problem / reason)</p> */}
             </span>
             <div style={{display: 'flex'}}>
               <select 
@@ -415,7 +413,7 @@ function Quizsignup() {
               </select> 
             </div>
             <p style={{fontSize: '10px'}}>Slot-2 is specifically for students having their exams till 25th Feb, so please prefer Slot-1 unless you have similar problem / reason)</p>
-          </div>
+          </div> */}
 
           <button
             onClick={submit}
@@ -483,7 +481,7 @@ function Quizsignup() {
     var referalcode = document.getElementById("referal_code");
     var transaction = document.getElementById("transaction");
     var dateOfSubmission = new Date().toLocaleString() + "";
-    var timeSlot = document.getElementById("time_slot");
+    var timeSlot = "26 Feb";
     
     const docdata = {
       dateOfSubmission: dateOfSubmission,
@@ -495,7 +493,7 @@ function Quizsignup() {
       email: email.value,
       referalcode: referalcode.value,
       transaction: transaction.value,
-      timeSlot: timeSlot.value,
+      timeSlot: timeSlot,
     };
   
     validateForm(docdata);
@@ -532,7 +530,6 @@ function Quizsignup() {
     var email = document.getElementById("amb_email");
     var referalcode = document.getElementById("referal_code");
     var transaction = document.getElementById("transaction");
-    var timeSlot = document.getElementById('time_slot');
     studentName.value = null;
     collegeName.value = null;
     branch.value = null;
@@ -541,7 +538,6 @@ function Quizsignup() {
     email.value = null;
     referalcode.value = null;
     transaction.value = null;
-    timeSlot.value = null;
   }
   
   //save to database
