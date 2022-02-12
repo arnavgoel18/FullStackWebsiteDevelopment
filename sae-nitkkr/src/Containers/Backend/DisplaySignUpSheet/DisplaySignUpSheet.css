@@ -21,5 +21,8 @@
 }
 
 .display_analytics_reg-btn{
-
+    width: 10em;
+    height: 3em;
+    background-color: lightcoral;
+    border: none;
 }

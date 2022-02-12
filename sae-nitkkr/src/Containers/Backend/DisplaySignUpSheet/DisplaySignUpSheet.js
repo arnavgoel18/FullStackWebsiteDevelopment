@@ -21,11 +21,15 @@ import { BiDockBottom } from 'react-icons/bi';
 function DisplaySignUpSheet(){
     var cvsFileData = [];
     var mergedCsvData = [];
+    var [splitData, setSplitData] = useState(false);
 
     var [tester, setTester] = useState(true); //to run code once. NOT TO BE CHANGED AND IS INSIGNIFICANT
     var [CsvDetail, setCsvDetail] = useState({});
 
     var [detailList, setDetailList] = useState([]);
+
+    var [detailListSlot1, setDetailListSlot1] = useState([]);
+    var [detailListSlot2, setDetailListSlot2] = useState([]);
 
     var [slotData, setSlotData] = useState([]);
     var [semData, setSemData] = useState([]);
@@ -183,10 +187,13 @@ function DisplaySignUpSheet(){
 
         slotData = [];
 
-        if(chosenSlot == "Any Slot" || chosenSlot == "Both Slots"){
+        if(chosenSlot == "Both Slots"){
             for(var i = 0;i < detailList.length;i++){
                 slotData.push(detailList[i]);
             }
+            detailListSlot1 = []
+            detailListSlot2 = []
+            splitData = false;
         }
         else if(chosenSlot == "Slot 1"){
             for(var i = 0;i < detailList.length;i++){
@@ -194,6 +201,9 @@ function DisplaySignUpSheet(){
                     slotData.push(detailList[i]);
                 }
             }
+            detailListSlot1 = []
+            detailListSlot2 = []
+            splitData = false;
         }
         else if(chosenSlot == "Slot 2"){
             for(var i = 0;i < detailList.length;i++){
@@ -201,6 +211,23 @@ function DisplaySignUpSheet(){
                     slotData.push(detailList[i]);
                 }
             }
+            detailListSlot1 = []
+            detailListSlot2 = []
+            splitData = false;
+        }
+        else{
+            for(var i = 0;i < detailList.length;i++){
+                if(detailList[i].timeSlot == '26 Feb')
+                    detailListSlot2.push(detailList[i]);
+                else
+                    detailListSlot1.push(detailList[i]);
+            }
+
+            splitData = true;
+
+            setSplitData(splitData);
+            setDetailListSlot1(detailListSlot1);
+            setDetailListSlot2(detailListSlot2);
         }
 
         setSlotData(slotData);
@@ -226,6 +253,7 @@ function DisplaySignUpSheet(){
     }
 
     function filterReferal(){
+        //Referal Code is not working. It is not filtering out all the refeal codes for some reason
         var showReferal = document.getElementById('reg_ref').value;
 
         // refData = [];
@@ -277,10 +305,11 @@ function DisplaySignUpSheet(){
 
         }
         
+        console.log("Split: " + splitData);
 
-        setFinalData(finalData);   
+        setFinalData(finalData);  
+
     }
-
 
     return(
         <>
@@ -310,10 +339,10 @@ function DisplaySignUpSheet(){
                         Slot:
                         <br/>
                         <select onChange={filterSlot} id="reg_slot"> 
-                            <option value="Any Slot" selected="selected">Any Slot</option>
+                            <option value="Both Slots">Both Slots</option>
                             <option value="Slot 1">Slot 1</option>
                             <option value="Slot 2">Slot 2</option>
-                            <option value="Both Slots">Both Slots</option>
+                            <option value="Divide Slots">Divide Slots</option>
                         </select>
                     </div>
                     {/* {
@@ -348,12 +377,12 @@ function DisplaySignUpSheet(){
                         Referal Code:
                         <br/>
                         <select onChange={filterReferal} id="reg_ref"> 
-                            <option value="YES">Show Only Referals</option>
                             <option value="NO">Show All</option>
+                            <option value="YES">Show Only Referals</option>
                         </select>
                     </div>
 
-                    <button className="display_analytics_reg-btn" onClick={handleSubmit}>Click Now</button>
+                    <button className="display_analytics_reg-btn" onClick={handleSubmit}>Query Data</button>
                 </div>
 
                 <div className="displayResponses_slot1">
@@ -361,25 +390,87 @@ function DisplaySignUpSheet(){
                     <table>
                     <thead>
                         <tr>
-                        <th>Student Name</th>
-                        <th>College Name</th>
-                        <th>Email</th>
-                        <th>Phone Number</th>
-                        <th>Payment_Id</th>
-                        <th>Referal Code</th>
-                        <th>Slot</th>
+                            <th>Student Name</th>
+                            <th>College Name</th>
+                            <th>Email</th>
+                            <th>Phone Number</th>
+                            <th>Payment_Id</th>
+                            <th>Referal Code</th>
+                            <th>Slot</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {finalData.map(item1 => {
+                        {finalData.map(item => {
                         return<tr>
-                            <td>{item1.studentName}</td>
-                            <td>{item1.collegeName}</td>
-                            <td>{item1.email}</td>
-                            <td>{item1.phone}</td>
-                            <td>{item1.transaction}</td>
-                            <td>{item1.referalcode}</td>
-                            <td>{item1.timeSlot}</td>
+                            <td>{item.studentName}</td>
+                            <td>{item.collegeName}</td>
+                            <td>{item.email}</td>
+                            <td>{item.phone}</td>
+                            <td>{item.transaction}</td>
+                            <td>{item.referalcode}</td>
+                            <td>{item.timeSlot}</td>
+                            </tr>
+                        })}
+                        </tbody>
+                    </table>
+                </div>
+
+                {/* For Split */}
+                <div className="displayResponses_slot1">
+                    Total Responses : {detailListSlot2.length}
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Student Name</th>
+                                <th>College Name</th>
+                                <th>Email</th>
+                                <th>Phone Number</th>
+                                <th>Payment_Id</th>
+                                <th>Referal Code</th>
+                                <th>Slot</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {console.log(detailListSlot1)}
+                            {detailListSlot2.map(item1 => {
+                            return<tr>
+                                <td>{item1.studentName}</td>
+                                <td>{item1.collegeName}</td>
+                                <td>{item1.email}</td>
+                                <td>{item1.phone}</td>
+                                <td>{item1.transaction}</td>
+                                <td>{item1.referalcode}</td>
+                                <td>{item1.timeSlot}</td>
+                                </tr>
+                            })}
+                        </tbody>
+                    </table>
+                </div>
+
+                <div className="displayResponses_slot1">
+                    Total Responses : {detailListSlot1.length}
+                    <table>
+                    <thead>
+                        <tr>
+                            <th>Student Name</th>
+                            <th>College Name</th>
+                            <th>Email</th>
+                            <th>Phone Number</th>
+                            <th>Payment_Id</th>
+                            <th>Referal Code</th>
+                            <th>Slot</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {detailListSlot1.map(item2 => {
+                        return<tr>
+                            <td>{item2.studentName}</td>
+                            <td>{item2.collegeName}</td>
+                            <td>{item2.email}</td>
+                            <td>{item2.phone}</td>
+                            <td>{item2.transaction}</td>
+                            <td>{item2.referalcode}</td>
+                            <td>{item2.timeSlot}</td>
                             </tr>
                         })}
                         </tbody>

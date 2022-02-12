@@ -78,10 +78,10 @@ function DisplayAllQuizes() {
     setDetailListId(detailListId);
     setCsvDetail(mergedCsvData);
 
-    console.log("SLOT 1:")
-    console.log(detailListSlot1);
-    console.log("SLOT 2:")
-    console.log(detailListSlot2);
+    // console.log("SLOT 1:")
+    // console.log(detailListSlot1);
+    // console.log("SLOT 2:")
+    // console.log(detailListSlot2);
 
     document.querySelector('.response-overview').textContent = "Total Responses: " + detailList.length  
     var todayList = detailList.filter(x => x.dateOfSubmission.split(",")[0] === new Date(Date.now()).toLocaleString().split(',')[0])
