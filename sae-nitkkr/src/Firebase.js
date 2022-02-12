@@ -11,6 +11,7 @@ const firebaseConfig = {
   appId: "1:1064644738570:web:fc0e1fe0cdbd62e5c829f3"
 
   //Kritika
+<<<<<<< HEAD
     //  apiKey: "AIzaSyAfJTGsx3HsGeJlkIeSTf_VsrlgEw2pfrY",
     //  authDomain: "sae-website-127b1.firebaseapp.com",
     //  projectId: "sae-website-127b1",
@@ -18,6 +19,15 @@ const firebaseConfig = {
     //  messagingSenderId: "636129718123",
     //  appId: "1:636129718123:web:555343dd6f0255ecbe262e",
     //  measurementId: "G-BHECE0F8CX"
+=======
+  // apiKey: "AIzaSyAfJTGsx3HsGeJlkIeSTf_VsrlgEw2pfrY",
+  // authDomain: "sae-website-127b1.firebaseapp.com",
+  // projectId: "sae-website-127b1",
+  // storageBucket: "sae-website-127b1.appspot.com",
+  // messagingSenderId: "636129718123",
+  // appId: "1:636129718123:web:555343dd6f0255ecbe262e",
+  // measurementId: "G-BHECE0F8CX"
+>>>>>>> 0d0000d7c7d6c382b9def08d95811855a7c34bf5
 
   // SAE TESTER
   //  apiKey: "AIzaSyAfGWoUlOwoP5PHuRy4FP9Ic1w1YxY2uFA",
@@ -41,21 +51,21 @@ const firebaseConfig = {
 
 const secondaryAppConfig = {
   // SECOND DATABASE ONLY FOR BLOGS - ONLY DEPLOYMENT)
-  // apiKey: "AIzaSyCk_GyQ6-ytYYfv6Hvt9SXtC51z8AM6000",
-  // authDomain: "sae-blogs.firebaseapp.com",
-  // projectId: "sae-blogs",
-  // storageBucket: "sae-blogs.appspot.com",
-  // messagingSenderId: "637915670174",
-  // appId: "1:637915670174:web:66c2cac789acfd3a81fd8f"
+  apiKey: "AIzaSyCk_GyQ6-ytYYfv6Hvt9SXtC51z8AM6000",
+  authDomain: "sae-blogs.firebaseapp.com",
+  projectId: "sae-blogs",
+  storageBucket: "sae-blogs.appspot.com",
+  messagingSenderId: "637915670174",
+  appId: "1:637915670174:web:66c2cac789acfd3a81fd8f"
 
   //TESTER
-  apiKey: "AIzaSyAfJTGsx3HsGeJlkIeSTf_VsrlgEw2pfrY",
-  authDomain: "sae-website-127b1.firebaseapp.com",
-  projectId: "sae-website-127b1",
-  storageBucket: "sae-website-127b1.appspot.com",
-  messagingSenderId: "636129718123",
-  appId: "1:636129718123:web:555343dd6f0255ecbe262e",
-  measurementId: "G-BHECE0F8CX"
+  // apiKey: "AIzaSyAfJTGsx3HsGeJlkIeSTf_VsrlgEw2pfrY",
+  // authDomain: "sae-website-127b1.firebaseapp.com",
+  // projectId: "sae-website-127b1",
+  // storageBucket: "sae-website-127b1.appspot.com",
+  // messagingSenderId: "636129718123",
+  // appId: "1:636129718123:web:555343dd6f0255ecbe262e",
+  // measurementId: "G-BHECE0F8CX"
 }
 
 const firebaseApp = initializeApp(firebaseConfig);
