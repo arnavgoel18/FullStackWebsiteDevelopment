@@ -37,6 +37,7 @@
     "react-table": "^7.7.0",
     "react-vertical-timeline-component": "^3.5.2",
     "react-web-share": "^1.1.0",
+    "sass": "^1.49.7",
     "slick-carousel": "^1.8.1",
     "uuid": "^8.3.2",
     "vertical-timeline": "^2.0.0",

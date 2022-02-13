@@ -71,19 +71,22 @@ export default function AllBlogsPage() {
            let obj = {
              src: detail.coverPhotoUrl,
              title: detail.title,
-             subTitle: '',
+             subTitle: 'I am subtitle',
              body: 'I am so tired of doing this again and again',
+             author:'Author',
+             date:detail.modifiedDate,
+             tags:['Electronics','Cars'],
            }
           return (
-            <div key={index} style={{width:'80%',padding:'20px'}}>
-              <Link to={'/blogs/leftvsright?timestamp=' + detail.timestamp}>
+            <div key={index} style={{ width: '80%', padding: '20px' }}>
+              <Link to={'/blogs/yourblog?timestamp=' + detail.timestamp}>
                 {/* <TopicCardHolder
                   title={detail.title}
                   srcs={detail.coverPhotoUrl}
                   date={detail.modifiedDate}
                   shareUrl={'/blogs/leftvsright?timestamp=' + detail.timestamp}
                 /> */}
-                <TopicCardHolder poop={obj}/>
+                <TopicCardHolder poop={obj} />
               </Link>
               <div className='blogIcons'>
                 <i

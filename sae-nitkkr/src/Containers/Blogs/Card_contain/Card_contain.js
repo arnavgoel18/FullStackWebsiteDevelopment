@@ -35,8 +35,11 @@ function Card_contain() {
           let obj = {
             src: detail.coverPhotoUrl,
             title: detail.title,
-            subTitle: '',
+            subTitle: 'I am subtitle',
             body: 'I am so tired of doing this again and again',
+            author: 'Author',
+            date: detail.modifiedDate,
+            tags: ['Electronics', 'Cars'],
           }
           return (
             <div key={index} style={{width:'80%',padding:'10px'}}>
