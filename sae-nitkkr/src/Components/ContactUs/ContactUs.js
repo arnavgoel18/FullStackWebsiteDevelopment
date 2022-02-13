@@ -175,7 +175,7 @@ function submit(){
   var s1 = document.getElementById("ContactUs_s1");
   var s2 = document.getElementById("ContactUs_s2");
   
-
+  var timestamp = String(new Date().getTime());
   const contactUsData = {
     Name: Name.value,
     EmailId: EmailId.value,
@@ -185,7 +185,7 @@ function submit(){
     s1: s1.value,
     s2: s2.value,
     status:'new',
-    timestamp: serverTimestamp(),
+    timestamp: timestamp,
   };
 
   validateForm(contactUsData);
@@ -236,8 +236,8 @@ function deletedata()
 async function setInfo(contactUsData) {
   document.getElementById('contact_button').disabled = true
   document.getElementById('contact_button').style.backgroundColor="gray"
-  var timestamp = String(new Date().getTime());
-  await setDoc(doc(db, "contactUs", timestamp), contactUsData);
+  
+  await setDoc(doc(db, "contactUs", contactUsData.timestamp), contactUsData);
   alert("Congratulations! Your information has been saved successfully.");
 deletedata();
   // window.location.reload();

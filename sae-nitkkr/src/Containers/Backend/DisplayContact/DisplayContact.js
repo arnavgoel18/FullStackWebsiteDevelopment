@@ -6,7 +6,7 @@ import BackSignOutPanel from "../../../Components/Backend/BackSignOutPanel/BackS
 import PageHeader from "../../../Components/Backend/PageHeader/PageHeader";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 import db from "../../../Firebase.js";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, updateDoc, doc } from "firebase/firestore";
 
 //function for drag and drop
 const onDragEnd = (result, columns, setColumns) => {
@@ -20,7 +20,12 @@ const onDragEnd = (result, columns, setColumns) => {
     const destItems = [...destColumn.items];
     const [removed] = sourceItems.splice(source.index, 1);
     destItems.splice(destination.index, 0, removed);
-    console.log(source.droppableId, sourceItems);
+
+    //console.log(removed.status, destination.droppableId);
+    updateDoc(doc(db, "contactUs", removed.timestamp), {
+        status: destination.droppableId,
+    })
+
     setColumns({
       ...columns,
       [source.droppableId]: {
@@ -56,12 +61,13 @@ function DisplayContactInfo() {
   var progress = [];
   var done = [];
 
-  //const [itemsFromBackend, setItemsFromBackend] = useState([]);
+ 
   const [columns, setColumns] = useState({});
   var [tester, setTester] = useState(true);
   var [CsvDetail, setCsvDetail] = useState({});
+  var [progressEntry, setProgressEntry] = useState([]);
+  var [doneEntry, setDoneEntry] = useState([]);
 
-  //Get Information from Firebase into detailList array
   async function getContactInfo() {
     const contactUs = collection(db, "contactUs");
     var amb_doc = await getDocs(contactUs);
@@ -85,14 +91,15 @@ function DisplayContactInfo() {
         todo.push(doc.data());
       }
       if (doc.data().status == "progress") {
-        todo.push(doc.data());
+        progress.push(doc.data());
       }
       if (doc.data().status == "done") {
-        todo.push(doc.data());
+        done.push(doc.data());
       }
     });
     setCsvDetail(mergedCsvData);
-    // setItemsFromBackend(detailList);
+    setProgressEntry(progress);
+    setDoneEntry(done);
 
     const columnsFromBackend = {
       todo: {
@@ -109,7 +116,6 @@ function DisplayContactInfo() {
       },
     };
     setColumns(columnsFromBackend);
-    //console.log(todo, columnsFromBackend);
   }
 
   if (tester == true) {
@@ -160,8 +166,8 @@ function DisplayContactInfo() {
         <BackSignOutPanel />
         <div className="displaycontact_contactResponse">
           <div className="displaycontact_conResData">
-            <div>Pending: {progress.length}</div>
-            <div>Completed: {done.length}</div>
+            <div>Pending: {progressEntry.length}</div>
+            <div>Completed: {doneEntry.length}</div>
           </div>
           <a className="displaycontact_downloadCsv">
             <i
@@ -231,6 +237,7 @@ function DisplayContactInfo() {
                                           mobile={item.PhoneNo}
                                           person={item.s2}
                                           college={item.Organisation}
+                                          status={item.status}
                                         />
                                       </div>
                                     );

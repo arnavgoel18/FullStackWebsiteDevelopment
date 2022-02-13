@@ -1,6 +1,20 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './DisplayContactCard.css';
 function DisplayContactCard(props) {
+
+  // var [bgcolor, setBgcolor] = useState('');
+  // function setColor(){
+  //   var col;
+  //   if(props.status == 'new')
+  //     col = '#F1A32E';
+  //   if(props.status == 'progress')
+  //     col = '#F2CC45';
+  //   if(props.status == 'done')
+  //     col = '#9EDA75';
+
+  //   setBgcolor(col);
+  // }
+
   return (
     <>
       <div className="displayContactCard_contactCardDiv">
@@ -23,3 +37,4 @@ function DisplayContactCard(props) {
 }
 
 export default DisplayContactCard
+// style={{background: props.status == 'progress'? '#F2CC45': '#9EDA75'}}
