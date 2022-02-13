@@ -1,7 +1,7 @@
 //Registeration Page made for Autokriti 2.0
 import React, { useEffect, useState } from "react";
 import { FaInfoCircle } from "react-icons/fa";
-
+import $ from 'jquery'
 import "./AutokritiRegistration.css";
 
 import db from "../../Firebase.js";
@@ -591,8 +591,22 @@ function Quizsignup() {
 
   
     var timestamp = String(new Date().getTime());
-    await setDoc(doc(db, "autokritiRegistration", timestamp), docdata);
-    
+    // await setDoc(doc(db, "autokritiRegistration", timestamp), docdata);
+    //sending data for sending mail
+    $.ajax({
+      type: 'POST',
+      // url: 'http://localhost:5000/send_confirmation_mail',
+      url: 'https://mail-sender-nodemailer.herokuapp.com/send_confirmation_mail',
+      data: JSON.stringify(docdata),
+      contentType: 'application/json',
+      dataType: 'json',
+      success: function (resultData) {
+        alert('Save Complete')
+      },
+      error: function (err) {
+        console.log('error' + err)
+      },
+    })
     alert("Congratulations! You are registered successfully.");
     deletedata();
   
