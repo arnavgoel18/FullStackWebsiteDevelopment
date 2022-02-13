@@ -247,77 +247,79 @@ function Quizsignup() {
 
   return (
     <>
-    <NavBar/>
-    <br/>
-      <p className="payform-heading">REGISTRATION FORM</p>
-      <div className="payform-container">
-        <div method="POST" className="payform-form">
-          <div className="field">
-            {" "}
-            <span className="payform-label">Full Name * </span>
+      <NavBar />
+      <br />
+      <p className='payform-heading'>REGISTRATION FORM</p>
+      <div className='payform-container'>
+        <div method='POST' className='payform-form'>
+          <div className='field'>
+            {' '}
+            <span className='payform-label'>Full Name * </span>
             <br />
             <input
-              className="payform-input"
-              type="text"
-              alt="Name"
-              name="name"
-              id="amb_name"
-              required="required"
+              className='payform-input'
+              type='text'
+              alt='Name'
+              name='name'
+              id='amb_name'
+              required='required'
               value={userData.name}
               onChange={postUserData}
-            />{" "}
+            />{' '}
           </div>
 
-          <div className="field">
-            <span className="payform-label">Email id* </span>
+          <div className='field'>
+            <span className='payform-label'>Email id* </span>
             <br />
             <input
-              className="payform-input"
-              type="Email"
-              name="email"
-              id="amb_email"
-              required="required"
+              className='payform-input'
+              type='Email'
+              name='email'
+              id='amb_email'
+              required='required'
               value={userData.email}
               onChange={postUserData}
-            />{" "}
+            />{' '}
           </div>
-          <div id="show_email_is_registered">This email has alreay been Registered</div>
-          
-          <div className="field">
-            <span className="payform-label">Phone No * </span>
+          <div id='show_email_is_registered'>
+            This email has alreay been Registered
+          </div>
+
+          <div className='field'>
+            <span className='payform-label'>Phone No * </span>
             <br />
             <input
-              className="payform-input"
-              type="number"
-              name="phone"
-              required="required"
-              id="amb_phone"
+              className='payform-input'
+              type='number'
+              name='phone'
+              required='required'
+              id='amb_phone'
               value={userData.phone}
               onChange={postUserData}
             />
           </div>
-          <div className="field">
-            <span className="payform-label">College</span>
+          <div className='field'>
+            <span className='payform-label'>College</span>
             <br />
             <input
-              className="payform-input"
-              type="text"
-              required="unrequired"
-              name="college"
-              id="amb_college"
+              className='payform-input'
+              type='text'
+              required='unrequired'
+              name='college'
+              id='amb_college'
               value={userData.college}
               onChange={postUserData}
-            />{" "}
+            />{' '}
           </div>
-          <div className="field">
-            <span className="payform-label"> Branch </span>
+          <div className='field'>
+            <span className='payform-label'> Branch </span>
             <br />
             <input
-              className="payform-input"
-              type="name"
-              name="branch"
-              required="unrequired"
-              id="amb_branch"
+              className='payform-input'
+              type='name'
+              name='branch'
+              required='unrequired'
+              id='amb_branch'
               value={userData.branch}
               onChange={postUserData}
             />
@@ -339,78 +341,93 @@ function Quizsignup() {
             />
           </div> */}
 
-          <div className="field_select">
-            <span className="payform-label">Semester</span>
-              <select 
-                className="payform-dropdown" 
-                name="semester" 
-                id="amb_semester" 
-                required = "unrequired"
-                value={userData.semester} 
-                onChange={postUserData}>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-              </select> 
+          <div className='field_select'>
+            <span className='payform-label'>Semester</span>
+            <select
+              className='payform-dropdown'
+              name='semester'
+              id='amb_semester'
+              required='unrequired'
+              value={userData.semester}
+              onChange={postUserData}
+            >
+              <option value='' selected disabled hidden>
+                Choose here
+              </option>
+              <option value='1'>1</option>
+              <option value='2'>2</option>
+              <option value='3'>3</option>
+              <option value='4'>4</option>
+              <option value='5'>5</option>
+              <option value='6'>6</option>
+              <option value='7'>7</option>
+              <option value='8'>8</option>
+            </select>
           </div>
 
-          <div className="field">
-            {" "}
-            <span className="payform-label"> Referal Code(optional code) </span>
-            <img className='referral_code_verified' id="referral_code_verified" src="https://img.icons8.com/color/48/000000/checked-2--v1.png"/>
+          <div className='field'>
+            {' '}
+            <span className='payform-label'> Referal Code(optional code) </span>
+            <img
+              className='referral_code_verified'
+              id='referral_code_verified'
+              src='https://img.icons8.com/color/48/000000/checked-2--v1.png'
+            />
             <br />
-           
-            <div id="referal_check">
+            <div id='referal_check'>
               <input
-                className="payform-input"
-                type="email"
-                name="referal"
-                alt=""
-                id="referal_code"
-                required="unrequired"
+                className='payform-input'
+                type='email'
+                name='referal'
+                alt=''
+                id='referal_code'
+                required='unrequired'
                 value={userData.referal}
                 onChange={postUserData}
               />
-              <img id="ref_image"src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/32/000000/external-information-camping-dreamstale-lineal-dreamstale.png" 
+              <img
+                id='ref_image'
+                src='https://img.icons8.com/external-dreamstale-lineal-dreamstale/32/000000/external-information-camping-dreamstale-lineal-dreamstale.png'
                 onMouseOver={i_information_visible}
                 onMouseOut={i_information_nonvisible}
               />
-            </div>  
+            </div>
           </div>
 
-          <div id="show_invalid">The Referal Code is Invalid</div>
-          <div id="pay_price">
+          <div id='show_invalid'>The Referal Code is Invalid</div>
+          <div id='pay_price'>
             <div id='pay_price_title'>Price: &nbsp;</div>
             <div id='original_price'>&#8377; 699</div>
             <div id='discounted_price'>&#8377; 629</div>
           </div>
-          <div id="pay_button">
-              <div id="paynow">
-                <button onClick={routeChange} className="payform-button" id="payform-button1">₹ &nbsp; Pay Now</button>
-              </div>
-              <div id="i_button_content">
-                <h4></h4>
-              </div>
+          <div id='pay_button'>
+            <div id='paynow'>
+              <button
+                onClick={routeChange}
+                className='payform-button'
+                id='payform-button1'
+              >
+                ₹ &nbsp; Pay Now
+              </button>
+            </div>
+            <div id='i_button_content'>
+              <h4></h4>
+            </div>
           </div>
 
-          <div className="field">
-            {" "}
-            <span className="payform-label"> Payment ID </span>
+          <div className='field'>
+            {' '}
+            <span className='payform-label'> Payment ID </span>
             <br />
             <input
-              id="transaction"
-              className="payform-input"
-              type=""
-              name="transaction"
-              alt=""
-              id="transaction"
+              id='transaction'
+              className='payform-input'
+              type=''
+              name='transaction'
+              alt=''
+              id='transaction'
               disabled={true}
-              required=""
+              required=''
               value={userData.transaction}
               onChange={postUserData}
             />
@@ -440,41 +457,40 @@ function Quizsignup() {
 
           <button
             onClick={submit}
-            id="payform-button2"
-            className="payform-button2"
+            id='payform-button2'
+            className='payform-button2'
           >
             Confirm Registration
           </button>
         </div>
 
-        <div className="payform-infocontain">
-          <div className="payform-info">
-            <FaInfoCircle /> &nbsp; <span id="quiz_registration">Instructions</span>
-            <p className="instruction_para">
+        <div className='payform-infocontain'>
+          <div className='payform-info'>
+            <FaInfoCircle /> &nbsp;{' '}
+            <span id='quiz_registration'>Instructions</span>
+            <p className='instruction_para'>
               * Make sure your email id is correct as you will be getting
               confirmation on that email
             </p>
-            <p className="instruction_para">
+            <p className='instruction_para'>
               * After clicking on Pay, <b>NOTE PAYMENT_ID </b>you get from
               RazorPay and add it to Payment_ID Field.
             </p>
-            <p className="instruction_para">
-              * Your Registration is incomplete without the valid Payment_Id entered
+            <p className='instruction_para'>
+              * Your Registration is incomplete without the valid Payment_Id
+              entered
             </p>
-            <p className="instruction_para">
-              * Payment_Id Field will be <b>activated</b> when payment is
-              made.
+            <p className='instruction_para'>
+              * Payment_Id Field will be <b>activated</b> when payment is made.
             </p>
-            <p className="instruction_para">
-              * Referal IDs are case-sensitive
-            </p>
+            <p className='instruction_para'>* Referal IDs are case-sensitive</p>
           </div>
 
           <br />
 
-          <div className="payform-checkbox">
-            <input type="checkbox" id="agree" name="" value="" />
-            <div id="read_content">
+          <div className='payform-checkbox'>
+            <input type='checkbox' id='agree' name='' value='' />
+            <div id='read_content'>
               I have read and understood the instructions
             </div>
 
@@ -484,15 +500,14 @@ function Quizsignup() {
 
           <br />
           <br />
-
         </div>
       </div>
 
-      <br/>
-      
-      <Footer/>
+      <br />
+
+      <Footer />
     </>
-  );
+  )
 
   function submit() {
     var studentName = document.getElementById("amb_name");
@@ -591,7 +606,7 @@ function Quizsignup() {
 
   
     var timestamp = String(new Date().getTime());
-    // await setDoc(doc(db, "autokritiRegistration", timestamp), docdata);
+    await setDoc(doc(db, "autokritiRegistration", timestamp), docdata);
     //sending data for sending mail
     $.ajax({
       type: 'POST',
@@ -609,16 +624,9 @@ function Quizsignup() {
     })
     alert("Congratulations! You are registered successfully.");
     deletedata();
+    window.location.reload()
   
-    document.getElementById("payform-button2").disabled = false;
-    document.getElementById("payform-button2").style.backgroundColor = "#E9910DFC";
-    // window.location.reload();
-    document.getElementById('original_price').style.textDecoration = 'none'
-    document.getElementById('original_price').style.color = 'red'
-    document.getElementById('discounted_price').style.color = 'blue'
-    document.getElementById('discounted_price').style.display = 'none'
-    document.getElementById('referral_code_verified').style.display = 'none'
-    document.getElementById('agree').checked = false;
+    
   }
 }
 
