@@ -1,9 +1,11 @@
-import React from 'react'
-import './DisplayContactCard.css';
+import React from "react";
+import "./DisplayContactCard.css";
+
 function DisplayContactCard(props) {
+
   return (
     <>
-      <div className="displayContactCard_contactCardDiv">
+      <div className={`displayContactCard_contactCardDiv ${props.status}`}>
         <div className="displayContactCard_firstbox">
           <div className="displayContactCard_nameofapplicant">{props.name}</div>
           <div className="displayContactCard_reason">{props.reason}</div>
@@ -19,7 +21,7 @@ function DisplayContactCard(props) {
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default DisplayContactCard
+export default DisplayContactCard;

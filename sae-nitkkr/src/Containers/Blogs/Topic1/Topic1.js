@@ -55,9 +55,9 @@ function App() {
       </div>
 
       <div className="bodyhead_extraspace">
-        <div className="imgcircle">
+        {/* <div className="imgcircle">
           <img src={blogLogo} id="logo1" alt="not" />
-        </div>
+        </div> */}
 
         <div className='topicname'>
           <span>{detail.title}</span>
@@ -97,8 +97,11 @@ function App() {
            let obj = {
              src: other.coverPhotoUrl,
              title: other.title,
-             subTitle: '',
+             subTitle: 'I am subtitle',
              body: 'I am so tired of doing this again and again',
+             author: 'Author',
+             date: detail.modifiedDate,
+             tags: ['Electronics', 'Cars'],
            }
           if (index < 3) {
             return (
