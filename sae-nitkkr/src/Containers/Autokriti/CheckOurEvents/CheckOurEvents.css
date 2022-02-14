@@ -40,8 +40,8 @@
 
 .CheckOurEvents-card {
   background: #000;
-  width: 250px;
-  height: 350px;
+  width: 257px;
+  height: 380px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transition: 0.3s;
   border-radius: 15px;
@@ -60,16 +60,24 @@
 }
 
 .CheckOurEvents-container {
-  display: flex;
-  flex-direction: column;
+  /* display: flex; */
+  /* flex-direction: column; */
+  display: grid;
+    grid-template-columns: 30px 197px 30px;
+    grid-template-rows: 43px 91px 66px;
   align-content: center;
   text-align: center;
   justify-content: center;
 }
 .CheckOurEvents-container p{
+
+  grid-column: 1/span 3;
+  align-self: center;
   line-height: 1.5;
 }
 .CheckOurEvents-container h2{
+  grid-column: 1/span 3;
+  place-items: center;
   padding-top:10px;
   padding-bottom: 10px;
 }
@@ -101,6 +109,7 @@
   font-size: 28px;
   font-weight: 1000;
   text-decoration: none;
+  grid-column: 1/4;
 }
 .CheckOurEvents-subheading {
   background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
@@ -142,12 +151,12 @@
     width:95%;
   }
   .CheckOurEvents-card {
-    width:230px;
-    height:auto;
+    width:245px;
+    height:362px;
     margin-bottom: 25px;
   }
   .CheckOurEvents-image {
-    height:140px;
+    height:153px;
   }
   .CheckOurEvents-container h2{
     padding-top:5px;
