@@ -21,10 +21,9 @@ const onDragEnd = (result, columns, setColumns) => {
     const [removed] = sourceItems.splice(source.index, 1);
     destItems.splice(destination.index, 0, removed);
 
-    //console.log(removed.status, destination.droppableId);
     updateDoc(doc(db, "contactUs", removed.timestamp), {
-        status: destination.droppableId,
-    })
+      status: destination.droppableId,
+    });
 
     setColumns({
       ...columns,
@@ -61,7 +60,6 @@ function DisplayContactInfo() {
   var progress = [];
   var done = [];
 
- 
   const [columns, setColumns] = useState({});
   var [tester, setTester] = useState(true);
   var [CsvDetail, setCsvDetail] = useState({});
@@ -102,8 +100,8 @@ function DisplayContactInfo() {
     setDoneEntry(done);
 
     const columnsFromBackend = {
-      todo: {
-        name: "To do",
+      new: {
+        name: "New Request",
         items: todo,
       },
       progress: {
