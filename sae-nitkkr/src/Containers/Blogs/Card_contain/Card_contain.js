@@ -42,7 +42,7 @@ function Card_contain() {
             tags: ['Electronics', 'Cars'],
           }
           return (
-            <div key={index} style={{width:'80%',padding:'10px'}}>
+            <div key={index} style={{width:'90%'}}>
               <Link to={"/blogs/yourblog?timestamp=" + detail.timestamp}>
                 {/* <TopicCardHolder
                   title={detail.title}
