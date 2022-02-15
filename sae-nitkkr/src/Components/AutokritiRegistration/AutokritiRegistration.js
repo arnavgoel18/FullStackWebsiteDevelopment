@@ -606,7 +606,7 @@ function Quizsignup() {
 
   
     var timestamp = String(new Date().getTime());
-    await setDoc(doc(db, "autokritiRegistration", timestamp), docdata);
+    //await setDoc(doc(db, "autokritiRegistration", timestamp), docdata);
     //sending data for sending mail
     $.ajax({
       type: 'POST',
