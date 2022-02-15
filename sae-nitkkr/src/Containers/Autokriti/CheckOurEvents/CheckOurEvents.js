@@ -27,6 +27,7 @@ function CheckEvents() {
               image={Quiz}
               url="https://dare2compete.com/p/quiz-on-wheelsautomotive-quiz-national-institute-of-technology-nit-kurukshetra-256604?lb=rt7C3ad/"
             />
+
             {/* <Session title="Understanding Transmission"
           status="online"
           date="24th-January-2021"
@@ -53,11 +54,12 @@ function Session(props) {
           <h2>
             <b>{props.title}</b>
           </h2>
-          <p style={{fontSize: '16px'}}>
+          <p style={{ fontSize: '18px' }}>
             {props.status}
             <br />
-            {props.date}
-            <br/>
+            <span style={{ fontSize: '18px', marginLeft: '19px', marginRight: '-5px', position: 'relative', left: '-6px' }}> {props.date} </span>
+
+
           </p>
 
           {/* <div className="CheckOurEvents-register"></div> */}
