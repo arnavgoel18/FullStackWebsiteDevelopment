@@ -371,6 +371,7 @@ function Quizsignup() {
             <span className='payform-label'> Referal Code(optional code) </span>
             <img
               className='referral_code_verified'
+              alt='sos'
               id='referral_code_verified'
               src='https://img.icons8.com/color/48/000000/checked-2--v1.png'
             />
@@ -388,6 +389,7 @@ function Quizsignup() {
               />
               <img
                 id='ref_image'
+                alt='sos'
                 src='https://img.icons8.com/external-dreamstale-lineal-dreamstale/32/000000/external-information-camping-dreamstale-lineal-dreamstale.png'
                 onMouseOver={i_information_visible}
                 onMouseOut={i_information_nonvisible}
@@ -426,7 +428,7 @@ function Quizsignup() {
               type=''
               name='transaction'
               alt=''
-              id='transaction'
+             
               disabled={true}
               required=''
               value={userData.transaction}
@@ -608,7 +610,7 @@ function Quizsignup() {
   
     var timestamp = String(new Date().getTime());
     await setDoc(doc(db, "autokritiRegistration", timestamp), docdata);
-    //sending data for sending mail
+    // sending data for sending mail
     $.ajax({
       type: 'POST',
       // url: 'http://localhost:5000/send_confirmation_mail',
