@@ -8,7 +8,7 @@ function VerticalTimeline(){
             <Timeline lineColor={'#ddd'}>
                 <TimelineItem
                     key="001"
-                    dateText="12 / 02 / 2022"
+                    dateText="26 / 02 / 2022"
                     dateInnerStyle={{ background: '#76bb7f', color: '#fff' }}
                     bodyContainerStyle={{
                     background: '#ddd',
@@ -30,7 +30,7 @@ function VerticalTimeline(){
                 </TimelineItem>
                 <TimelineItem
                     key="002"
-                    dateText="13 / 02 / 2022 "
+                    dateText="27 / 02 / 2022 "
                     dateInnerStyle={{ background: '#ffde00', color: '#fff' }}
                     bodyContainerStyle={{
                     background: '#ddd',
