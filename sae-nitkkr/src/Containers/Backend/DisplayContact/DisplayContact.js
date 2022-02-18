@@ -21,8 +21,10 @@ const onDragEnd = (result, columns, setColumns) => {
     const [removed] = sourceItems.splice(source.index, 1);
     destItems.splice(destination.index, 0, removed);
 
+    var statusTimestamp = String(new Date().getTime());
     updateDoc(doc(db, "contactUs", removed.timestamp), {
       status: destination.droppableId,
+      statusTimestamp: statusTimestamp,
     });
 
     setColumns({
@@ -98,6 +100,7 @@ function DisplayContactInfo() {
     setCsvDetail(mergedCsvData);
     setProgressEntry(progress);
     setDoneEntry(done);
+    done.sort((a, b) => b.statusTimestamp - a.statusTimestamp);
 
     const columnsFromBackend = {
       new: {
@@ -209,7 +212,7 @@ function DisplayContactInfo() {
                                 ? "lightblue"
                                 : "lightgrey",
                               padding: 4,
-                              width: 450,
+                              width: 400,
                               minHeight: 500,
                             }}
                           >
