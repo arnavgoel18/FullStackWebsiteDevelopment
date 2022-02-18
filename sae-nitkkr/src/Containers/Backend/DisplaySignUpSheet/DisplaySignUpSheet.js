@@ -416,7 +416,7 @@ function DisplaySignUpSheet(){
                 </div>
 
                 {/* For Split */}
-                <div className="displayResponses_slot1">
+                {/* <div className="displayResponses_slot1">
                     Total Responses : {detailListSlot2.length}
                     <table>
                         <thead>
@@ -475,7 +475,7 @@ function DisplaySignUpSheet(){
                         })}
                         </tbody>
                     </table>
-                </div>
+                </div> */}
             </div>
         </>
     )
