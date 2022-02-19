@@ -17,6 +17,7 @@ import {
   addDoc
 } from "firebase/firestore";
 import { BiDockBottom } from 'react-icons/bi';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function DisplaySignUpSheet(){
     var cvsFileData = [];
@@ -265,6 +266,7 @@ function DisplaySignUpSheet(){
                      refData.push(detailList[i]);
                  }
              }
+             console.log(refData);
             setRefData(refData);
             return true;
         }
@@ -291,26 +293,27 @@ function DisplaySignUpSheet(){
             }
         })
 
-        if(calcRef == true){
-            for(var i = 0;i < finalData.length;i++){
-                if(finalData[i].referalcode != ''){
-                    //do nothing if referal code is present
+        
+        var isPresent = false;
+        finalData.map(entry => {
+            for(var i = 0;i < refData.length;i++){
+                if(entry.phone == refData[i].phone){
+                    isPresent = true;
+                }
+
+                if(isPresent == true){
+                    //
                 }
                 else{
-                    //remove entry from list
-                    //console.log(finalData[i]);
                     finalData.pop(finalData[i]);
                 }
             }
-            console.log(finalData);
+        })
 
-        }
         
         console.log("Split: " + splitData);
 
         setFinalData(finalData);  
-        
-
     }
 
     return(
