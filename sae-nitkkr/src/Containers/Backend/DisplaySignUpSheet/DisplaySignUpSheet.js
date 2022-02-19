@@ -260,12 +260,12 @@ function DisplaySignUpSheet(){
 
         if(showReferal == "YES"){
             //show referal
-            // for(var i = 0;i < detailList.length;i++){
-            //     if(detailList[i].referalcode != ""){
-            //         refData.push(detailList[i]);
-            //     }
-            // }
-            // setRefData(refData);
+            for(var i = 0;i < detailList.length;i++){
+                if(detailList[i].referalcode != ''){
+                     refData.push(detailList[i]);
+                 }
+             }
+            setRefData(refData);
             return true;
         }
         else if(showReferal == "NO"){
@@ -293,11 +293,12 @@ function DisplaySignUpSheet(){
 
         if(calcRef == true){
             for(var i = 0;i < finalData.length;i++){
-                if(finalData[i].referalcode != ""){
+                if(finalData[i].referalcode != ''){
                     //do nothing if referal code is present
                 }
                 else{
                     //remove entry from list
+                    //console.log(finalData[i]);
                     finalData.pop(finalData[i]);
                 }
             }
@@ -308,6 +309,7 @@ function DisplaySignUpSheet(){
         console.log("Split: " + splitData);
 
         setFinalData(finalData);  
+        
 
     }
 
@@ -400,8 +402,8 @@ function DisplaySignUpSheet(){
                         </tr>
                     </thead>
                     <tbody>
-                        {finalData.map(item => {
-                        return<tr>
+                        {finalData.map((item, i) => {
+                        return<tr key={i}>
                             <td>{item.studentName}</td>
                             <td>{item.collegeName}</td>
                             <td>{item.email}</td>
