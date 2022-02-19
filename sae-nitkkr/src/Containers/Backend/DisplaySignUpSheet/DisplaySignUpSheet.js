@@ -264,12 +264,12 @@ function DisplaySignUpSheet() {
 
     if (showReferal == "YES") {
       //show referal
-      for (var i = 0; i < detailList.length; i++) {
-        if (detailList[i].referalcode != "") {
-          refData.push(detailList[i]);
-        }
-      }
-      setRefData(refData);
+    //   for (var i = 0; i < detailList.length; i++) {
+    //     if (detailList[i].referalcode != "") {
+    //       refData.push(detailList[i]);
+    //     }
+    //   }
+    //   setRefData(refData);
       return true;
     } else if (showReferal == "NO") {
       //don't show referal and don't do anything. Array will remain empty
