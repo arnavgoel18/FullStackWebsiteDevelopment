@@ -257,50 +257,52 @@ function DisplaySignUpSheet() {
   }
 
   function filterReferal() {
-    //Referal Code is not working. It is not filtering out all the refeal codes for some reason
     var showReferal = document.getElementById("reg_ref").value;
-
-    // refData = [];
-
     if (showReferal == "YES") {
-      //show referal
-    //   for (var i = 0; i < detailList.length; i++) {
-    //     if (detailList[i].referalcode != "") {
-    //       refData.push(detailList[i]);
-    //     }
-    //   }
-    //   setRefData(refData);
       return true;
     } else if (showReferal == "NO") {
       //don't show referal and don't do anything. Array will remain empty
     }
-
     return false;
+  }
+
+  function filterReferalCode() {
+    var selectedRef = document.getElementById("reg_refCode").value;
+    if (selectedRef == "All") return false;
+    else return selectedRef;
   }
 
   function handleSubmit() {
     filterSlot();
     filterSemester();
     const calcRef = filterReferal();
+    const indiRef = filterReferalCode();
 
     finalData = [];
 
-    semData.map((entry) => {
-      for (var i = 0; i < slotData.length; i++) {
-        if (calcRef == true) {
-          if (entry.phone == slotData[i].phone && entry.referalcode != "") {
-            finalData.push(entry);
-            break;
+    if (indiRef == false) {
+      semData.map((entry) => {
+        for (var i = 0; i < slotData.length; i++) {
+          if (calcRef == true) {
+            if (entry.phone == slotData[i].phone && entry.referalcode != "") {
+              finalData.push(entry);
+              break;
+            }
+          } else {
+            if (entry.phone == slotData[i].phone) {
+              finalData.push(entry);
+              break;
+            }
           }
         }
-        else{
-            if (entry.phone == slotData[i].phone) {
-                finalData.push(entry);
-                break;
-              } 
+      });
+    } else {
+      detailList.map((data) => {
+        if (data.referalcode == indiRef) {
+          finalData.push(data);
         }
-      }
-    });
+      });
+    }
 
     console.log("Split: " + splitData);
 
@@ -385,6 +387,75 @@ function DisplaySignUpSheet() {
             <select onChange={filterReferal} id="reg_ref">
               <option value="NO">Show All</option>
               <option value="YES">Show Only Referals</option>
+            </select>
+          </div>
+
+          <div className="display_analytics_reg-filter">
+            *Individual Referal Code:
+            <br />
+            <select onChange={filterReferalCode} id="reg_refCode">
+              <option value="All">Show All</option>
+              <option value="Adi181">Adi181</option>
+              <option value="Aga173">Aga173</option>
+              <option value="Anu184">Anu184</option>
+              <option value="ANL128">ANL128</option>
+              <option value="Ama144">Ama144</option>
+              <option value="Ama126">Ama126</option>
+              <option value="Dee187">Dee187</option>
+              <option value="Omk148">Omk148</option>
+              <option value="Kus175">Kus175</option>
+              <option value="Ket118">Ket118</option>
+              <option value="kus174">kus174</option>
+              <option value="Pri124">Pri124</option>
+              <option value="Har172">Har172</option>
+              <option value="Har169">Har169</option>
+              <option value="Mau177">Mau177</option>
+              <option value="Man170">Man170</option>
+              <option value="Ris178">Ris178</option>
+              <option value="RIS123">RIS123</option>
+              <option value="Pra189">Pra189</option>
+              <option value="Lov176">Lov176</option>
+              <option value="Taj179">Taj179</option>
+              <option value="Sou183">Sou183</option>
+              <option value="Gau188">Gau188</option>
+              <option value="Sah180">Sah180</option>
+              <option value="Nit185">Nit185</option>
+              <option value="Pra189">Pra189</option>
+              <option value="Vik182">Vik182</option>
+              <option value="Van186">Van186</option>
+              <option value="Vij171">Vij171</option>
+              <option value="Ven138">Ven138</option>
+              <option value="say136">say136</option>
+              <option value="Rak143">Rak143</option>
+              <option value="Kom146">Kom146</option>
+              <option value="Dhr147">Dhr147</option>
+              <option value="Abh127">Abh127</option>
+              <option value="Sou131">Sou131</option>
+              <option value="moh121">moh121</option>
+              <option value="kou129">kou129</option>
+              <option value="Nan141">Nan141</option>
+              <option value="pav122">pav122</option>
+              <option value="Che112">Che112</option>
+              <option value="tvi115">tvi115</option>
+              <option value="Aat120">Aat120</option>
+              <option value="Shi145">Shi145</option>
+              <option value="Aks142">Aks142</option>
+              <option value="Gau117">Gau117</option>
+              <option value="Nit139">Nit139</option>
+              <option value="sah132">sah132</option>
+              <option value="Swa119">Swa119</option>
+              <option value="Ash113">Ash113</option>
+              <option value="Kum114">Kum114</option>
+              <option value="Nam111">Nam111</option>
+              <option value="Pri124">Pri124</option>
+              <option value="Meg134">Meg134</option>
+              <option value="Omk148">Omk148</option>
+              <option value="Dee125">Dee125</option>
+              <option value="sag137">sag137</option>
+              <option value="Ath130">Ath130</option>
+              <option value="Val140">Val140</option>
+              <option value="Sar116">Sar116</option>
+              <option value="sha135">sha135</option>
             </select>
           </div>
 
