@@ -12,7 +12,7 @@ import Gallery from '../../Components/Gallery/AutokritiGallery/Gallery'
 import FooterWhite from "../../Components/Footer/Footer(white)/FooterWhite";
 import AutokritiEvent from '../../Components/AutokritiEvent/AutokritiEvent'
 import AutokritiCheckEvent from '../../Components/AutokritiEvent/AutokritiCheckEvent/AutokritiCheckEvent'
-// import PopUs from './PopUps/popupapp'
+import PopupCard from './PopUps/PopupCard'
 
 function Autokriti(){
 
@@ -24,7 +24,7 @@ function Autokriti(){
         <>
             <NavBar/>
             <AutokritiFirst/>
-            {/* <PopUs/> */}
+            <PopupCard/>
             {/* <FirstDisplayDiv page="Autokriti"/> */}
             <AboutUs page="Autokriti"/>
             <AutokritiEvent/>

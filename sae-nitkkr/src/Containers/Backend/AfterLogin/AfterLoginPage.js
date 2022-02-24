@@ -92,6 +92,15 @@ export default function AfterLoginPage() {
             <AfterLoginCard name="College Reps" id="yellow" />
           </Link>
 
+          <Link to="/admin/displaypopups">
+          <div className="iconimagediv">
+            
+         
+          <img src="https://img.icons8.com/ios/50/000000/open-in-popup.png" className="iconimage"/>
+          </div>
+            <AfterLoginCard name="PopUps" id="orange" />
+          </Link>
+
         </div>
       </div>
     );

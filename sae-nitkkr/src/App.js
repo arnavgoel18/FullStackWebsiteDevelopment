@@ -17,6 +17,7 @@ import AdminLogin from "./Containers/Backend/Login";
 import AdminActions from "./Containers/Backend/AfterLogin/AfterLoginPage"
 
 import DisplayBlogs from "./Containers/Backend/DisplayBlogs/AllBlogsPage"
+import DisplayPopups from "./Containers/Backend/DisplayPopUps/AllPopUpPage"
 import QuillEditor from "./Containers/Backend/DisplayBlogs/QuillEditor/Add"
 
 import DisplayAmb from "./Containers/Backend/DisplayAmbassador/DisplayAmbassador"
@@ -63,6 +64,7 @@ function App() {
             <Route path="/admin/actions" exact component={() => <AdminActions/>}/>
 
             <Route path="/admin/displayBlogs" exact component={() => <DisplayBlogs/>}/>
+            <Route path="/admin/displaypopups" exact component={() => <DisplayPopups/>}/>
             <Route path="/admin/displayBlogs/editor" exact component={() => <QuillEditor/>}/>
 
             <Route path="/admin/ambassadorInfo" exact component={() => <DisplayAmb/>}/>
