@@ -97,8 +97,8 @@ function App() {
            let obj = {
              src: other.coverPhotoUrl,
              title: other.title,
-             subTitle: 'I am subtitle',
-             body: 'I am so tired of doing this again and again',
+             subTitle: 'Subtitle',
+             body: 'Click to view more',
              author: 'Author',
              date: detail.modifiedDate,
              tags: ['Electronics', 'Cars'],

@@ -36,7 +36,7 @@ export default function AfterLoginPage() {
           <Link to="/admin/displayBlogs">
             <div className="iconimagediv">
             
-            <img src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/64/000000/external-blog-digital-marketing-flatart-icons-outline-flatarticons-1.png"className="iconimage"/>
+            <img src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/64/000000/external-blog-digital-marketing-flatart-icons-outline-flatarticons-1.png" className="iconimage"/>
               
             </div>
             <AfterLoginCard
@@ -48,7 +48,7 @@ export default function AfterLoginPage() {
           <Link to="/admin/ambassadorInfo">
           <div className="iconimagediv">
             
-          <img src="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/000000/external-announcement-news-kiranshastry-lineal-kiranshastry-2.png"className="iconimage"/>
+          <img src="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/000000/external-announcement-news-kiranshastry-lineal-kiranshastry-2.png" className="iconimage"/>
             
           </div>
             <AfterLoginCard name="Ambassador Response" id="orange" />
