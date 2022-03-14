@@ -31,6 +31,7 @@ import Autokriti2 from './Containers/Autokriti/Autokriti2/Autorkriti2'
 import Quizsignup from "./Components/AutokritiRegistration/AutokritiRegistration";
 import ShowAmbassador from "./Containers/Autokriti/ShowAmbassador/ShowAmbassador";
 import ShowAmbLogin from "./Containers/Autokriti/ShowAmbassador/ShowAmbLogin"; 
+import Certificates from './Containers/Autokriti/Certificates/Certificates.js'
 
 import CheckState from './Components/AutokritiEvent/Context/CheckState';
 import Ambassador from "./Containers/Ambassador/Ambassador";
@@ -77,6 +78,7 @@ function App() {
             <Route path="/autokriti/register" exact component={() => <Quizsignup/>}/>
             <Route path="/ShowAmbassador" exact component={()=><ShowAmbassador/>}/>
             <Route path="/Ambassador/login" exact component={()=><ShowAmbLogin/>}/>
+            <Route path="/autokriti/certificate" exact component={() => <Certificates/>}/>
 
             {/* Not in Use */}
             <Route path="/sendEmail" exact component={()=><SendEmail/>}/>
