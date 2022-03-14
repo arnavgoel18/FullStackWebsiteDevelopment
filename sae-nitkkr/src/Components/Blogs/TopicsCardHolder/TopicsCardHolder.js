@@ -14,7 +14,7 @@ function TopicsCardHolder(props) {
       <div id='card-actions'>
         <div id='shareincard'>
           <div id='shareincard_image'>
-            <RWebShare
+            {/* <RWebShare
               data={{
                 text: 'You are sharing link of your favourite blog.',
                 url: `${props.shareUrl}`,
@@ -27,7 +27,7 @@ function TopicsCardHolder(props) {
                 alt='clap_embed_shareimage'
                 src='https://img.icons8.com/ios/50/000000/forward-arrow.png'
               />
-            </RWebShare>
+            </RWebShare> */}
 
             {/* <a href='/home'>
              <img
@@ -36,20 +36,20 @@ function TopicsCardHolder(props) {
               src="https://img.icons8.com/ios/50/000000/forward-arrow.png"/>
               </a> */}
           </div>
-          <div id='shareincard_title'>Share</div>
+          {/* <div id='shareincard_title'>Share</div> */}
           {/* <img src="https://img.icons8.com/material-outlined/50/000000/planner.png"/> */}
         </div>
         <div id='card_date'>
           <div id='card_date_image'>
-            <a href='/home'>
+            {/* <a href='/home'>
               <img
                 id='blog_embed_calender'
                 alt='blog_embed_calender'
                 src='https://img.icons8.com/material-outlined/50/000000/planner.png'
               />
-            </a>
+            </a> */}
           </div>
-          <div id='card_date_title'>{props.date}</div>
+          {/* <div id='card_date_title'>{props.date}</div> */}
         </div>
       </div>
     </div>
