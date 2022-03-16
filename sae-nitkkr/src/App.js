@@ -10,6 +10,7 @@ import Nitrox from "./Containers/Nitrox/Nitrox"
 import ContactUS from "./Containers/ContactUs/contactus";
 import Sponsors from "./Containers/Sponsors/Sponsors";
 
+
 import Blogs from './Containers/Blogs/Blogs'
 import Topic1 from './Containers/Blogs/Topic1/Topic1'
 
@@ -21,6 +22,7 @@ import DisplayPopups from "./Containers/Backend/DisplayPopUps/AllPopUpPage"
 import QuillEditor from "./Containers/Backend/DisplayBlogs/QuillEditor/Add"
 
 import DisplayAmb from "./Containers/Backend/DisplayAmbassador/DisplayAmbassador"
+import DisplayCounter from './Containers/Backend/DisplayCounterBackend/DisplayCounterBackend';
 import DisplayContact from './Containers/Backend/DisplayContact/DisplayContact'
 import DisplayFinalAmbassador from "./Containers/Backend/DisplayFinalAmbassador/DisplayFinalAmbassador"
 import DisplayClgRepresentatives from "./Containers/Backend/DisplayCollegeRepresentatives/DisplayClgRepresentatives";
@@ -66,6 +68,7 @@ function App() {
 
             <Route path="/admin/displayBlogs" exact component={() => <DisplayBlogs/>}/>
             <Route path="/admin/displaypopups" exact component={() => <DisplayPopups/>}/>
+            <Route path="/admin/displaycounterbackend" exact component={() => <DisplayCounter/>}/>
             <Route path="/admin/displayBlogs/editor" exact component={() => <QuillEditor/>}/>
 
             <Route path="/admin/ambassadorInfo" exact component={() => <DisplayAmb/>}/>
