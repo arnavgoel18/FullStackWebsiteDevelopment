@@ -19,8 +19,7 @@ function Certificates() {
   var [img, setImg] = useState("none");
 
   async function getDbData() {
-    document.getElementById("submit").disabled = true;
-    document.getElementById("submit").style.backgroundColor = "gray";
+ 
 
     var imgNo = document.getElementsByClassName("imgNumber")[0].value;
     const storage = getStorage();
@@ -29,11 +28,11 @@ function Certificates() {
 
     await getDownloadURL(folder).then((url) => {
       console.log(url);
-      alert("certificate added");
+      window.location.href = '/autokriti/certificate?certiNo=' + imgNo;
+      // alert("certificate added");
     });
 
-    document.getElementById("submit").disabled = false;
-    document.getElementById("submit").style.backgroundColor = "#ff5e00";
+  
   }
 
   
@@ -41,31 +40,27 @@ function Certificates() {
   return (
     <>
       <NavBar />
-      <div className="App">
+      <div className='App'>
         <h2>Enter Phone no</h2>
         <input
-          type="tel"
-          className="imgNumber"
+          type='tel'
+          className='imgNumber'
           style={{
-            marginTop: "20px",
-            width: "50vw",
-            textAlign: "center",
-            color: "black",
+            marginTop: '20px',
+            width: '50vw',
+            textAlign: 'center',
+            color: 'black',
           }}
         />
-        <button className="subbtn" id='submit' onClick={getDbData}>
-          Submit
+        <button className='shrbtn' onClick={getDbData}>
+          GetLink
         </button>
-        <div className="btn">
-          <Link to={"/autokriti/certificate?certiNo=" + img} target='_blank'>
-            <button className="shrbtn"> Share </button>
-          </Link>
-        </div>
+       
       </div>
 
       <Footer />
     </>
-  );
+  )
 }
 
 export default Certificates;
