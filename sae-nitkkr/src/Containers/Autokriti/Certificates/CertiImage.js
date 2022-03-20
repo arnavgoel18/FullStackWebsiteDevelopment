@@ -7,7 +7,7 @@ import {
   uploadBytes,
   getDownloadURL,
 } from "firebase/storage";
-import { saveAs } from "file-saver";
+// import { saveAs } from "file-saver";
 
 function CertiImage() {
     const params = new URL(document.location).searchParams;
@@ -46,18 +46,24 @@ function CertiImage() {
     element.download = "certificate.jpg";
     element.click();
     }
+
+  
       
   return (
     <div>
-    
-              <i
-               onClick={download}
-               style={{float:'right', border:'none', marginRight: '10px' }}
-                className="fa fa-download"
-                aria-hidden="true"
-              ></i>
-            
-    <img src={certiUrl} alt="Autokriti Certificate" style={{height:'95vh', width: '95vw'}}/>
+      {/* <i
+        onClick={download}
+        style={{ float: 'right', border: 'none', marginRight: '10px' }}
+        className='fa fa-download '
+        aria-hidden='true'
+      ></i> */}
+
+      <img
+        src={certiUrl}
+        alt='Autokriti Certificate'
+        className='downloadMe'
+        style={{ height: '95vh', width: '95vw' }}
+      />
     </div>
   )
 }

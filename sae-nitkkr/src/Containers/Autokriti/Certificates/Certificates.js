@@ -11,7 +11,7 @@ import {
   getDownloadURL,
 } from "firebase/storage";
 import { Link } from "react-router-dom";
-import jsPDF from 'jspdf';
+// import jsPDF from 'jspdf';
 
 
 function Certificates() {
