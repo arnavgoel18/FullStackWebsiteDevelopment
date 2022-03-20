@@ -10,17 +10,27 @@ import {
   uploadBytes,
   getDownloadURL,
 } from "firebase/storage";
-import { Link } from "react-router-dom";
-// import jsPDF from 'jspdf';
+import {
+  collection,
+  getDocs,
+  Timestamp,
+  doc,
+  setDoc,
+} from "firebase/firestore";
 
 
 function Certificates() {
   
   var [img, setImg] = useState("none");
 
-  async function getDbData() {
- 
+  // var [tester, setTester] = useState(true);
+  // var [allData, setAllData] = useState('');
+  // var [CsvDetail, setcsv] = useState({});
 
+  // var mergedCsvData = [];
+  // var cvsFileData =[];
+  
+  async function getDbData() {
     var imgNo = document.getElementsByClassName("imgNumber")[0].value;
     const storage = getStorage();
     let folder = ref(storage, `certificates//${imgNo}.jpg`);
@@ -29,12 +39,54 @@ function Certificates() {
     await getDownloadURL(folder).then((url) => {
       console.log(url);
       window.location.href = '/autokriti/certificate?certiNo=' + imgNo;
-      // alert("certificate added");
     });
-
-  
   }
 
+  // async function getallurl(){
+  //   const all = collection(db, "autokritiRegistration");
+  //   var amb_doc = await getDocs(all);
+  //   amb_doc.forEach((doc) => {
+  //     cvsFileData = [
+  //       [doc.data().email],
+  //       ['www.saenitkurukshetra.in/autokriti/certificate?certiNo='+doc.data().phone],
+  //     ];
+
+  //     mergedCsvData.push(cvsFileData);
+  //   });
+  //   setcsv(mergedCsvData);
+
+    
+  // }
+
+  // function downloadCsv() {
+  //   var csv =
+  //   'Email, URL';
+  //   csv += "\n";
+
+  // CsvDetail.forEach(function (row) {
+  //   //to replace , with ;
+  //   row.forEach(function (row1) {
+  //     row1[0] = row1[0].replace(/,/g, ";");
+  //     row1[0] = row1[0].replace(/\n/g, ";");
+  //   });
+  //   csv += row.join(",");
+  //   csv += "\n";
+  // });
+
+  // var hiddenElement = document.createElement("a");
+  // hiddenElement.href =
+  //   "data:text/csv;charset=utf-8,%EF%BB%BF" + encodeURI(csv);
+  // hiddenElement.target = "_blank";
+
+  // //provide the name for the CSV file to be downloaded
+  // hiddenElement.download = "url.csv";
+  // hiddenElement.click();
+  // }
+
+  // if (tester == true) {
+  //   window.addEventListener("load", getallurl());
+  //   setTester(false);
+  // }
   
 
   return (
@@ -55,6 +107,7 @@ function Certificates() {
         <button className='shrbtn' onClick={getDbData}>
           GetLink
         </button>
+        {/* <button onClick={downloadCsv}>csv</button> */}
        
       </div>
 
