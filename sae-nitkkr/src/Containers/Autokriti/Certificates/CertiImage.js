@@ -58,12 +58,14 @@ function CertiImage() {
         aria-hidden='true'
       ></i> */}
 
+      <a href={certiUrl} download>
       <img
         src={certiUrl}
         alt='Autokriti Certificate'
         className='downloadMe'
         style={{ height: '95vh', width: '95vw' }}
       />
+      </a>
     </div>
   )
 }
