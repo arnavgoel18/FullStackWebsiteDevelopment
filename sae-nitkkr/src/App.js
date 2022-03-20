@@ -40,6 +40,9 @@ import CheckState from './Components/AutokritiEvent/Context/CheckState';
 import Ambassador from "./Containers/Ambassador/Ambassador";
 import SendEmail from "./Containers/Autokriti/RegistrationForm/RegistrationForm";
 
+import CertiAdmin from './Containers/Backend/CertiAdmin/CertiAdmin';
+import CertiImage from './Containers/Autokriti/Certificates/CertiImage';
+
 //import RegistrationForm from "./Containers/Autokriti/RegistrationForm/RegistrationForm";
 
 function App() {
@@ -83,11 +86,16 @@ function App() {
             <Route path="/autokriti/register" exact component={() => <Quizsignup/>}/>
             <Route path="/ShowAmbassador" exact component={()=><ShowAmbassador/>}/>
             <Route path="/Ambassador/login" exact component={()=><ShowAmbLogin/>}/>
-            <Route path="/autokriti/certificate" exact component={() => <Certificates/>}/>
+            <Route path="/autokriti/certificates" exact component={() => <Certificates/>}/>
 
             {/* Not in Use */}
             <Route path="/sendEmail" exact component={()=><SendEmail/>}/>
             {/* <Route path="/test" exact component={()=><RegistrationForm/>}/> */}
+
+            <Route path="/autokriti/certiAdmin" exact component={()=><CertiAdmin/>}/>
+            <Route path="/autokriti/certificate" exact component={()=><CertiImage/>}/>
+
+
           
           </Switch>
         </Router>
