@@ -1,7 +1,9 @@
-.App {
-    font-family: sans-serif;
-    text-align: center;
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
+
   .imgsRef,
   .subbtn {
     font-size: 1rem;
@@ -33,5 +35,4 @@
   
   .dwnbtn:hover {
     background-color: darkgreen;
-    
   }

@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import db from "../../../Firebase";
+
 import {
   getStorage,
   ref,
@@ -7,6 +8,9 @@ import {
   uploadBytes,
   getDownloadURL,
 } from "firebase/storage";
+
+import './Certificates.css'
+
 // import { saveAs } from "file-saver";
 
 function CertiImage() {
@@ -50,7 +54,7 @@ function CertiImage() {
   
       
   return (
-    <div>
+    <div className='certificate-image'>
       {/* <i
         onClick={download}
         style={{ float: 'right', border: 'none', marginRight: '10px' }}
