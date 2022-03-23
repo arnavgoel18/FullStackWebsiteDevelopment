@@ -36,3 +36,20 @@
   .dwnbtn:hover {
     background-color: darkgreen;
   }
+
+  .certificate-image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .certificate-download{
+    height: 5vh;
+    margin-right: 10vw;
+  }
+
+  .certificate-image img{
+    max-width: 100%;
+    height: auto;
+    max-height: 100vh;
+  }

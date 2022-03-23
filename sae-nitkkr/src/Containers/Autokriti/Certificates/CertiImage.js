@@ -10,6 +10,8 @@ import {
 } from "firebase/storage";
 
 import './Certificates.css'
+import NavBar from '../../../Components/NavBar/NavBar';
+import Footer from '../../../Components/Footer/Footer(black)/FooterBlack';
 
 // import { saveAs } from "file-saver";
 
@@ -28,8 +30,6 @@ function CertiImage() {
     
         await getDownloadURL(folder).then((url) => {
           setCertiUrl(url);
-          console.log(url);
-          //alert("url link added");
         });
       }
 
@@ -54,23 +54,26 @@ function CertiImage() {
   
       
   return (
-    <div className='certificate-image'>
-      {/* <i
-        onClick={download}
-        style={{ float: 'right', border: 'none', marginRight: '10px' }}
-        className='fa fa-download '
-        aria-hidden='true'
-      ></i> */}
-
-      <a href={certiUrl} download>
-      <img
-        src={certiUrl}
-        alt='Autokriti Certificate'
-        className='downloadMe'
-        style={{ height: '95vh', width: '95vw' }}
-      />
-      </a>
-    </div>
+    <>
+      <NavBar/>
+      <div className='certificate-download'>
+        <a href={certiUrl}>
+          <i
+            // onClick={download}
+            style={{ float: 'right', border: 'none', marginRight: '10px' }}
+            className='fa fa-download '
+            aria-hidden='true'
+          ></i>
+        </a>
+      </div>
+      <div className='certificate-image'>  
+        <img
+          src={certiUrl}
+          alt='Autokriti Certificate'
+          className='downloadMe'
+        />
+      </div>
+    </>
   )
 }
 

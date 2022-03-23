@@ -7,6 +7,7 @@ import man_sitting from '../../../Assets/LoginPageLogos/man_sitting.webp'
 import db from "../../../Firebase";
 import {
   collection,
+  doc,
   getDocs,
 } from "firebase/firestore";
 import Footer from '../../../Components/Footer/Footer(black)/FooterBlack';
@@ -16,14 +17,24 @@ function Login() {
     var [tester, setTester] = useState(true);
     var [ambInfoName, setAmbInfoName] = useState([]);
     var [ambInfoReferalCode, setAmbInfoReferalCode] = useState([]);
+    var [collegeRepsName, setCollegeRepsName] = useState([]);
+    var [collegeRepsReferalCode, setCollegeRepsReferalCode] = useState([]);
 
     async function getAmbInfo() {
         const ambInfo = collection(db, "finalStudentAmbassador");
+        const collRepInfo = collection(db, "collegeRepresentatives");
         const ambInfo_doc = await getDocs(ambInfo);
+        const collRepInfo_doc = await getDocs(collRepInfo);
+
         ambInfoName = ambInfo_doc.docs.map((doc) => doc.data().phone);
         ambInfoReferalCode = ambInfo_doc.docs.map((doc) => doc.data().referralCode);
+        collegeRepsName = collRepInfo_doc.docs.map((doc) => doc.data().phone);
+        collegeRepsReferalCode = collRepInfo_doc.docs.map((doc) => doc.data().referralCode);
+        
         setAmbInfoName(ambInfoName);
         setAmbInfoReferalCode(ambInfoReferalCode);
+        setCollegeRepsName(collegeRepsName)
+        setCollegeRepsReferalCode(collegeRepsReferalCode);
       }
 
       if (tester == true) {
@@ -39,7 +50,7 @@ function Login() {
 
   function checkCredentials(e){
   
-    if(ambInfoReferalCode.includes(userid) && ambInfoName.includes(password)){
+    if((ambInfoReferalCode.includes(userid) && ambInfoName.includes(password)) || (collegeRepsReferalCode.includes(userid) && collegeRepsName.includes(password))){
       localStorage.setItem("token","shivaji");
       localStorage.setItem("username",userid);
       localStorage.setItem("password",password);
