@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 .TeamAboutUs-main_container {
-  width:70%;
+  width: 70%;
   margin-left: auto;
   margin-right: auto;
   padding: 10px;
@@ -28,13 +28,21 @@
   font-size: 27px;
   font-weight: 900;
   /* color: rgb(67, 67, 197); */
-  background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+  background: linear-gradient(to right, #30cfd0 0%, #330867 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .TeamAboutUs-bigcontainer {
   margin-top: 30px;
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.TeamAboutUs-text_container {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 .TeamAboutUs-text {
   font-size: 18px;
@@ -48,13 +56,17 @@
 }
 
 .TeamAboutUs-image img {
-  height:60%;
-  width: 40%;
-  float:right;
+  display: flex;
+  float: right;
+  height: 35%;
+  width: 68%;
+  padding: 5px;
   align-items: flex-end;
   clip-path: polygon(33% 0, 100% 0, 100% 100%, 0 100%, 0 30%);
 }
-
+.TeamAboutUs-image_container {
+  height: 10%;
+}
 
 @media only screen and (max-width: 425px) {
   .TeamAboutUs-comp {
@@ -72,18 +84,17 @@
     flex-wrap: wrap;
     padding: 20px;
   }
+ 
   .TeamAboutUs-text {
     padding: 20px;
+    width: 100%;
   }
   .TeamAboutUs-boldcolor {
     font-size: 31px;
     font-weight: 900;
     color: rgb(67, 67, 197);
   }
-  .TeamAboutUs-text {
-    font-size: 16px;
-    width:100%;
-  }
+
   .TeamAboutUs-comp {
     font-size: 12px;
   }
@@ -92,21 +103,39 @@
     margin-right: 5px;
     margin-top: 0px;
   }
-  .TeamAboutUs-bigcontainer {
-    display: inline-block;
-  }
-  .TeamAboutUs-image img {
-    margin-top: 40px;
-    height:60%;
-    width: 90%;
-  }
-  .TeamAboutUs-main_container{
-    width:100%;
+.TeamAboutUs-bigcontainer{
+  display: flex;
+  flex-direction: column;
+}
+.TeamAboutUs-image_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.TeamAboutUs-image{
+  height:200px;
+    width: 290px;
+    align-items: center;
+}
+#teamsabout_us_image_id{
+  margin-top: 50px;
+  height: 200px;
+  width: 290px;
+}
+
+
+.TeamAboutUs-text_container{
+  width: 100%;
+  justify-content: center;
+}
+
+  .TeamAboutUs-main_container {
+    width: 100%;
     font-size: 15px;
   }
 }
 
-@media (min-width: 425px) and (max-width: 767px) {
+@media (min-width: 425px) and (max-width: 768px) {
   .TeamAboutUs-comp {
     border-left: solid rgb(67, 67, 197) 3px;
     font-weight: 700;
@@ -117,23 +146,34 @@
   }
   .TeamAboutUs-text {
     font-size: 15px;
-    width:100%;
+    width: 100%;
   }
   .TeamAboutUs-bigcontainer {
-    display: inline-block;
+  display: flex;
+  flex-direction: column;
+
   }
-  .TeamAboutUs-image img {
+  .TeamAboutUs-text_container{
+    width: 100%;
+    justify-content: center;
+  }
+  .TeamAboutUs-image_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #teamsabout_us_image_id{
     margin-top: 40px;
-    height:60%;
-    width: 80%;
-    margin-right:10%;
+    height: 200px;
+    width: 290px;
   }
-  .TeamAboutUs-main_container{
-    width:90%;
+  
+  .TeamAboutUs-main_container {
+    width: 90%;
     font-size: 15px;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   .TeamAboutUs-text {
     padding: 20px;
     margin-left: -27px;
@@ -141,7 +181,7 @@
   .TeamAboutUs-comp {
     font-size: 18px;
   }
- 
+
   .TeamAboutUs-heading {
     display: flex;
     flex-wrap: wrap;
@@ -152,16 +192,58 @@
     font-weight: 900;
     color: rgb(67, 67, 197);
   }
-  .TeamAboutUs-image img {
-    height:60%;
-    width: 70%;
-
+  .TeamAboutUs-main_container{
+    width: 90%;
   }
+  .TeamAboutUs-bigcontainer {
+    display: flex;
+    flex-direction: column;
+  justify-content: center;
+    }
+    .TeamAboutUs-text_container{
+      width: 70%;
+      align-self: center;
+    }
+    .TeamAboutUs-image_container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #teamsabout_us_image_id{
+      margin-top: 40px;
+      height: 275px;
+      width: 392px;
+    }
 }
 
-@media (min-width: 1024px) and (max-width: 1380px){
+@media (min-width: 1024px) and (max-width: 1380px) {
   .TeamAboutUs-image img {
-    height:60%;
+    height: 60%;
     width: 60%;
+  }
+ .TeamAboutUs-bigcontainer{
+   display: flex;
+   justify-content: center;
+ }
+ .TeamAboutUs-text_container{
+  width: 80%;
+  align-self: center;
+}
+  
+  #teamsabout_us_image_id{
+    margin-top: 40px;
+    height: 270px;
+    width: 392px;
+  }
+}
+@media (min-width:1024px) and (max-width:1439px)
+{
+  .TeamAboutUs-image img {
+    height: 50%;
+    width: 85%;
+  }
+   .TeamAboutUs-text_container{
+    width: 50%;
+   margin-right: 30px;
   }
 }
