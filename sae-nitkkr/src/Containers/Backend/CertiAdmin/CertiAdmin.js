@@ -30,7 +30,7 @@ function CertiAdmin() {
   return (
     <>
       <NavBar />
-      <div className="App">
+      <div className="Appy-frooti">
         <h2>Upload image</h2>
         <input
           type="file"
