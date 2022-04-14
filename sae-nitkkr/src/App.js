@@ -23,6 +23,7 @@ import QuillEditor from "./Containers/Backend/DisplayBlogs/QuillEditor/Add"
 
 import DisplayAmb from "./Containers/Backend/DisplayAmbassador/DisplayAmbassador"
 import DisplayCounter from './Containers/Backend/DisplayCounterBackend/DisplayCounterBackend';
+import DisplayEvent from './Containers/Backend/DisplayEventBackend/DisplayEventBackend';
 import DisplayContact from './Containers/Backend/DisplayContact/DisplayContact'
 import DisplayFinalAmbassador from "./Containers/Backend/DisplayFinalAmbassador/DisplayFinalAmbassador"
 import DisplayClgRepresentatives from "./Containers/Backend/DisplayCollegeRepresentatives/DisplayClgRepresentatives";
@@ -72,6 +73,7 @@ function App() {
             <Route path="/admin/displayBlogs" exact component={() => <DisplayBlogs/>}/>
             {/* <Route path="/admin/displaypopups" exact component={() => <DisplayPopups/>}/> */}
             <Route path="/admin/displaycounterbackend" exact component={() => <DisplayCounter/>}/>
+            <Route path="/admin/displayeventbackend" exact component={() => <DisplayEvent/>}/>
             <Route path="/admin/displayBlogs/editor" exact component={() => <QuillEditor/>}/>
 
             <Route path="/admin/ambassadorInfo" exact component={() => <DisplayAmb/>}/>
