@@ -44,6 +44,9 @@ import SendEmail from "./Containers/Autokriti/RegistrationForm/RegistrationForm"
 import CertiAdmin from './Containers/Backend/CertiAdmin/CertiAdmin';
 import CertiImage from './Containers/Autokriti/Certificates/CertiImage';
 
+import CAcerti from './Containers/Ambassador/CAcerti/CAcerti';
+import CAcertiImage from './Containers/Ambassador/CAcerti/CAcertiImage'
+
 //import RegistrationForm from "./Containers/Autokriti/RegistrationForm/RegistrationForm";
 
 function App() {
@@ -96,6 +99,10 @@ function App() {
 
             <Route path="/autokriti/certiAdmin" exact component={()=><CertiAdmin/>}/>
             <Route path="/autokriti/certificate" exact component={()=><CertiImage/>}/>
+
+            <Route path="/ambassador/cacerti" exact component={()=><CAcerti/>}/>
+            <Route path="/ambassador/certificate" exact component={()=><CAcertiImage/>}/>
+            
 
 
           
