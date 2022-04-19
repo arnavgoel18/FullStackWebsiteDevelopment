@@ -118,6 +118,15 @@ export default function AfterLoginPage() {
             </div>
             <AfterLoginCard name="Counter" id="yellow" />
           </Link>
+          <Link to="/admin/displayeventbackend">
+            <div className="iconimagediv">
+              <img
+                src="https://img.icons8.com/ios/50/000000/open-in-popup.png"
+                className="iconimage"
+              />
+            </div>
+            <AfterLoginCard name="Event" id="orange" />
+          </Link>
         </div>
       </div>
     );

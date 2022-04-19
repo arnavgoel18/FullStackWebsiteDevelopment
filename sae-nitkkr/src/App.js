@@ -23,6 +23,7 @@ import QuillEditor from "./Containers/Backend/DisplayBlogs/QuillEditor/Add"
 
 import DisplayAmb from "./Containers/Backend/DisplayAmbassador/DisplayAmbassador"
 import DisplayCounter from './Containers/Backend/DisplayCounterBackend/DisplayCounterBackend';
+import DisplayEvent from './Containers/Backend/DisplayEventBackend/DisplayEventBackend';
 import DisplayContact from './Containers/Backend/DisplayContact/DisplayContact'
 import DisplayFinalAmbassador from "./Containers/Backend/DisplayFinalAmbassador/DisplayFinalAmbassador"
 import DisplayClgRepresentatives from "./Containers/Backend/DisplayCollegeRepresentatives/DisplayClgRepresentatives";
@@ -42,6 +43,9 @@ import SendEmail from "./Containers/Autokriti/RegistrationForm/RegistrationForm"
 
 import CertiAdmin from './Containers/Backend/CertiAdmin/CertiAdmin';
 import CertiImage from './Containers/Autokriti/Certificates/CertiImage';
+
+import CAcerti from './Containers/Ambassador/CAcerti/CAcerti';
+import CAcertiImage from './Containers/Ambassador/CAcerti/CAcertiImage'
 
 //import RegistrationForm from "./Containers/Autokriti/RegistrationForm/RegistrationForm";
 
@@ -72,6 +76,7 @@ function App() {
             <Route path="/admin/displayBlogs" exact component={() => <DisplayBlogs/>}/>
             {/* <Route path="/admin/displaypopups" exact component={() => <DisplayPopups/>}/> */}
             <Route path="/admin/displaycounterbackend" exact component={() => <DisplayCounter/>}/>
+            <Route path="/admin/displayeventbackend" exact component={() => <DisplayEvent/>}/>
             <Route path="/admin/displayBlogs/editor" exact component={() => <QuillEditor/>}/>
 
             <Route path="/admin/ambassadorInfo" exact component={() => <DisplayAmb/>}/>
@@ -94,6 +99,10 @@ function App() {
 
             <Route path="/autokriti/certiAdmin" exact component={()=><CertiAdmin/>}/>
             <Route path="/autokriti/certificate" exact component={()=><CertiImage/>}/>
+
+            <Route path="/ambassador/cacerti" exact component={()=><CAcerti/>}/>
+            <Route path="/ambassador/certificate" exact component={()=><CAcertiImage/>}/>
+            
 
 
           

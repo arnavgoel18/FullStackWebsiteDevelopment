@@ -105,7 +105,7 @@ function Footerautokriti() {
             src="https://img.icons8.com/ios-glyphs/30/000000/linkedin.png"
             alt="contact_image"
           />
-          <span id="white_linkedin_text"><a href="https://in.linkedin.com/company/sae-nit-kkr" target="_blank">linked.com/company/sae-nit-kkr</a></span>
+          <span id="white_linkedin_text"><a href="https://in.linkedin.com/company/sae-nit-kkr" target="_blank">linkedin</a></span>
         </p>
 
         <p>

@@ -15,7 +15,6 @@ import {
   } from "firebase/firestore";
 // import { getStorage, ref, deleteObject } from "firebase/storage";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
-import jQuery from 'jquery'
 
 var animateDone = 0
 $(window).scroll(function(){
