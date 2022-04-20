@@ -38,7 +38,7 @@ function Cacerti() {
 
     await getDownloadURL(folder).then((url) => {
       console.log(url);
-      window.location.href = '/ambassador/certificate?certiNo=' + imgNo;
+      window.location.href = '/ambassador/certificate?certino=' + imgNo;
     });
   }
 
@@ -48,7 +48,7 @@ function Cacerti() {
      amb_doc.forEach((doc) => {
       cvsFileData = [
         [doc.data().email],
-        ['www.saenitkurukshetra.in/ambassador/certificate?certiNo='+doc.data().phone],
+        ['www.saenitkurukshetra.in/ambassador/certificate?certino='+doc.data().phone],
       ];
 
       mergedCsvData.push(cvsFileData);
