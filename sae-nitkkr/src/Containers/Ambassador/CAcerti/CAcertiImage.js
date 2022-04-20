@@ -17,7 +17,7 @@ import Footer from '../../../Components/Footer/Footer(black)/FooterBlack';
 
 function CAcertiImage() {
     const params = new URL(document.location).searchParams;
-    const certiNo = params.get("certiNo");
+    const certiNo = params.get("certino");
 
     var [tester, setTester] = useState(true);
     var [certiUrl, setCertiUrl] = useState('none');
