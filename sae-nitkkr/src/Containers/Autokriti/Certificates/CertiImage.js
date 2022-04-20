@@ -40,19 +40,17 @@ function CertiImage() {
 
     function download(e){
       var element = document.createElement("a");
-    var file = new Blob(
+      var file = new Blob(
       [
         certiUrl
       ],
       { type: "image/*" }
-    );
-    element.href = URL.createObjectURL(file);
-    element.download = "certificate.jpg";
-    element.click();
+      );
+      element.href = URL.createObjectURL(file);
+      element.download = "certificate.jpg";
+      element.click();
     }
 
-  
-      
   return (
     <>
       <NavBar/>
