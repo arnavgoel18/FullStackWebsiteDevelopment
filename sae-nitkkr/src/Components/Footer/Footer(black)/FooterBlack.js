@@ -151,7 +151,7 @@ function Footer() {
                 href="https://in.linkedin.com/company/sae-nit-kkr"
                 target="_blank"
               >
-                linked.com/company/sae-nit-kkr
+                linkedin
               </a>
             </span>
           </p>

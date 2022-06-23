@@ -1,0 +1,55 @@
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .imgsRef,
+  .subbtn {
+    font-size: 1rem;
+  }
+  
+  .subbtn {
+    background-color: #ff5e00;
+    border-radius: 10px;
+    color: #f7f6f8;
+    cursor: pointer;
+    padding: 10px 40px;
+    margin: 20px 20px;
+    border: none;
+  }
+  
+  .nxtbtn:hover {
+    background-color: red;
+  }
+  .dwnbtn, .shrbtn {
+    background-color: green;
+    border-radius: 10px;
+    color: #f7f6f8;
+    cursor: pointer;
+    border: none;
+    padding: 10px 40px;
+    margin: 20px 20px;
+    font: 1.5rem;
+  }
+  
+  .dwnbtn:hover {
+    background-color: darkgreen;
+  }
+
+  .certificate-image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .certificate-download{
+    height: 5vh;
+    margin-right: 10vw;
+  }
+
+  .certificate-image img{
+    max-width: 100%;
+    height: auto;
+    max-height: 100vh;
+  }

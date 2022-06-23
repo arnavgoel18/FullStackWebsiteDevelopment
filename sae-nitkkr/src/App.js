@@ -10,6 +10,7 @@ import Nitrox from "./Containers/Nitrox/Nitrox"
 import ContactUS from "./Containers/ContactUs/contactus";
 import Sponsors from "./Containers/Sponsors/Sponsors";
 
+
 import Blogs from './Containers/Blogs/Blogs'
 import Topic1 from './Containers/Blogs/Topic1/Topic1'
 
@@ -17,10 +18,12 @@ import AdminLogin from "./Containers/Backend/Login";
 import AdminActions from "./Containers/Backend/AfterLogin/AfterLoginPage"
 
 import DisplayBlogs from "./Containers/Backend/DisplayBlogs/AllBlogsPage"
-import DisplayPopups from "./Containers/Backend/DisplayPopUps/AllPopUpPage"
+// import DisplayPopups from "./Containers/Backend/DisplayPopUps/AllPopUpPage"
 import QuillEditor from "./Containers/Backend/DisplayBlogs/QuillEditor/Add"
 
 import DisplayAmb from "./Containers/Backend/DisplayAmbassador/DisplayAmbassador"
+import DisplayCounter from './Containers/Backend/DisplayCounterBackend/DisplayCounterBackend';
+import DisplayEvent from './Containers/Backend/DisplayEventBackend/DisplayEventBackend';
 import DisplayContact from './Containers/Backend/DisplayContact/DisplayContact'
 import DisplayFinalAmbassador from "./Containers/Backend/DisplayFinalAmbassador/DisplayFinalAmbassador"
 import DisplayClgRepresentatives from "./Containers/Backend/DisplayCollegeRepresentatives/DisplayClgRepresentatives";
@@ -33,10 +36,17 @@ import Autokriti2 from './Containers/Autokriti/Autokriti2/Autorkriti2'
 import Quizsignup from "./Components/AutokritiRegistration/AutokritiRegistration";
 import ShowAmbassador from "./Containers/Autokriti/ShowAmbassador/ShowAmbassador";
 import ShowAmbLogin from "./Containers/Autokriti/ShowAmbassador/ShowAmbLogin"; 
+import Certificates from './Containers/Autokriti/Certificates/Certificates.js'
 
 import CheckState from './Components/AutokritiEvent/Context/CheckState';
 import Ambassador from "./Containers/Ambassador/Ambassador";
 import SendEmail from "./Containers/Autokriti/RegistrationForm/RegistrationForm";
+
+import CertiAdmin from './Containers/Backend/CertiAdmin/CertiAdmin';
+import CertiImage from './Containers/Autokriti/Certificates/CertiImage';
+
+import CAcerti from './Containers/Ambassador/CAcerti/CAcerti';
+import CAcertiImage from './Containers/Ambassador/CAcerti/CAcertiImage'
 
 //import RegistrationForm from "./Containers/Autokriti/RegistrationForm/RegistrationForm";
 
@@ -65,7 +75,9 @@ function App() {
             <Route path="/admin/actions" exact component={() => <AdminActions/>}/>
 
             <Route path="/admin/displayBlogs" exact component={() => <DisplayBlogs/>}/>
-            <Route path="/admin/displaypopups" exact component={() => <DisplayPopups/>}/>
+            {/* <Route path="/admin/displaypopups" exact component={() => <DisplayPopups/>}/> */}
+            <Route path="/admin/displaycounterbackend" exact component={() => <DisplayCounter/>}/>
+            <Route path="/admin/displayeventbackend" exact component={() => <DisplayEvent/>}/>
             <Route path="/admin/displayBlogs/editor" exact component={() => <QuillEditor/>}/>
 
             <Route path="/admin/ambassadorInfo" exact component={() => <DisplayAmb/>}/>
@@ -81,10 +93,20 @@ function App() {
             <Route path="/autokriti/register" exact component={() => <Quizsignup/>}/>
             <Route path="/ShowAmbassador" exact component={()=><ShowAmbassador/>}/>
             <Route path="/Ambassador/login" exact component={()=><ShowAmbLogin/>}/>
+            <Route path="/autokriti/certificates" exact component={() => <Certificates/>}/>
 
             {/* Not in Use */}
             <Route path="/sendEmail" exact component={()=><SendEmail/>}/>
             {/* <Route path="/test" exact component={()=><RegistrationForm/>}/> */}
+
+            <Route path="/autokriti/certiAdmin" exact component={()=><CertiAdmin/>}/>
+            <Route path="/autokriti/certificate" exact component={()=><CertiImage/>}/>
+
+            <Route path="/ambassador/cacerti" exact component={()=><CAcerti/>}/>
+            <Route path="/ambassador/certificate" exact component={()=><CAcertiImage/>}/>
+            
+
+
           
           </Switch>
         </Router>

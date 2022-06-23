@@ -1,45 +1,57 @@
-import React, { useEffect } from "react";
+import react,{useEffect,useState} from "react";
 import { Link } from "react-router-dom";
 
 import "./AutokritiEvent.css";
+import {db1} from "../../Firebase";
+import {
+    collection,
+    getDocs,
+    deleteDoc,
+    doc,
+    setDoc,
+  } from "firebase/firestore";
+// import { getStorage, ref, deleteObject } from "firebase/storage";
+import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import $ from 'jquery';
 
 function AutokritiEvent() {
-  $(document).ready(function () {
-    if (window.location.href.includes('?acc_container')) {
-      $('html, body').animate({
-        scrollTop: $('#acc_container').offset().top
-      }, 'slow');
-    }
-  });
-
-
-  function showRoadmap(e) {
-    $(e.target).animate({
-      width: '10%'
-    }, 500, 'swing');
-    $('.navigation-bar-right').animate({
-      width: '90%'
-    }, 500, 'linear');
+  useEffect(() => {
+    getpopupInfo();
+    // getpopupInfo();
+  },[]);
+  var [popupResult, setResult] = useState([]);
+  async function getpopupInfo() {
+    const popup = collection(db1, "EventBackend");
+    const popup_doc = await getDocs(popup);
+    const popupList = popup_doc.docs.map((doc) => doc.data());
+    setResult(popupList);
+    return popupList;
   }
   
-  function hideRoadmap(e) {
-    $(e.target).animate({
-      width: '10%'
-    }, 500, 'swing');
-    $('.navigation-bar-left').animate({
-      width: '90%'
-    }, 500, 'linear');
-  }
+ const renderCard = (card, index) => {
+    return (<>
+  
+        {/* <div className="acc_container_left_main_part1_timing">
+              {card.Data}
+            </div>
+    
+      <div className="acc_container_left_main_part1">
+            <div>
+             {card.Topic}
+            </div>
+            <div className="acc_container_left_main_part1_timing">
+              {card.Date}
+            </div>
+          </div> */}
 
-  return (
-    <div id="acc_main_container" >
+
+          <div id="acc_main_container" >
       <div className="acc_container_main">
         <div className="acc_container_right_main">
           <div className="acc_container_right_main_part">
             <div className="acc_container_right_main_part1">
               <div className="acc_container_right_main_part1_text">
-                Here we are, SAE NIT Kurukshetra presents e-Autokriti 2.0, where we would lay before you the technical know-how unfurled through years of experimentation & implementation. It will assure you a well-acknowledged welcome in the automotive world & also a direction for further exploration.
+              {card.Data}
               </div>
               <div className="acc_container_right_main_part1_register">
                 <Link to="/e-Autokriti2.0">
@@ -63,10 +75,93 @@ function AutokritiEvent() {
         <div className="acc_container_left_main">
           <div className="acc_container_left_main_part1">
             <div>
-              e-Autokriti 2.0 Is Here !!
+               {card.Topic}
             </div>
             <div className="acc_container_left_main_part1_timing">
-              Sat, 12-Feb Onwards
+              {card.Date}
+            </div>
+          </div>
+          <div className="acc_container_left_main_part2">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+           
+          </>
+    );
+  };
+// const renderCard = (card, index) => {
+//   $(document).ready(function () {
+//     if (window..href.includes('?acc_container')) {
+//       $('html, body').animate({
+//         scrollTop: $('#acc_container').offset().top
+//       }, 'slow');
+//       <div className="counter-counter">
+//                     <i class="fas fa-user-friends"></i>
+//                     <h3 data-value="117" className="count">{card.Date}</h3>
+//                     <h6>{card.Date}</h6>
+//                 </div>
+//     }
+//   });
+
+
+// }
+  function showRoadmap(e) {
+    $(e.target).animate({
+      width: '10%'
+    }, 500, 'swing');
+    $('.navigation-bar-right').animate({
+      width: '90%'
+    }, 500, 'linear');
+  }
+  
+  function hideRoadmap(e) {
+    $(e.target).animate({
+      width: '10%'
+    }, 500, 'swing');
+    $('.navigation-bar-left').animate({
+      width: '90%'
+    }, 500, 'linear');
+  }
+
+  return (
+    <>
+    {/* <div id="acc_main_container" >
+      <div className="acc_container_main">
+        <div className="acc_container_right_main">
+          <div className="acc_container_right_main_part">
+            <div className="acc_container_right_main_part1">
+              <div className="acc_container_right_main_part1_text">
+              {popupResult.map(renderCard)}
+              </div>
+              <div className="acc_container_right_main_part1_register">
+                <Link to="/e-Autokriti2.0">
+                <div className="acc_container_right_main_part1_register_btn">
+                  <a>Register Here</a>
+                </div>
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="navigation_bar">
+            <div className="navigation-bar-left" onClick={showRoadmap} title="What is E-Autokriti?">
+
+            </div>
+            <div className="navigation-bar-right" onClick={hideRoadmap} title="View Roadmap">
+
+            </div>
+          </div>
+        </div>
+        <div className="acc_container_left_main">
+          <div className="acc_container_left_main_part1">
+            <div>
+                  
+            </div>
+            <div className="acc_container_left_main_part1_timing">
+           
             </div>
           </div>
           <div className="acc_container_left_main_part2">
@@ -74,7 +169,12 @@ function AutokritiEvent() {
           </div>
         </div>
       </div>
-    </div>
+    </div> */}
+
+
+    {popupResult.map(renderCard)}
+
+    </>
   );
 }
 

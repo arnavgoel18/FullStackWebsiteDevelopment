@@ -1,0 +1,26 @@
+.Appy-frooti{
+    font-family: sans-serif;
+    text-align: center;
+    height: 70vh;
+    padding: 40px 10px 10px 10px;
+  }
+  .imgsRef,
+  .setbtn {
+    font-size: 1rem;
+  }
+  .imgsRef {
+    color: lightgreen;
+    cursor: pointer;
+  }
+  .setbtn {
+    background-color: #ff5e00;
+    border-radius: 10px;
+    color: #f7f6f8;
+    border: none;
+    cursor: pointer;
+    padding: 10px 40px;
+    margin: 20px 20px;
+  }
+  .setbtn:hover {
+    background-color: red;
+  }

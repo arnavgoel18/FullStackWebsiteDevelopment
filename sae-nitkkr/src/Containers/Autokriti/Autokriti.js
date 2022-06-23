@@ -24,7 +24,7 @@ function Autokriti(){
         <>
             <NavBar/>
             <AutokritiFirst/>
-            <PopupCard/>
+           { /*<PopupCard/>*/}
             {/* <FirstDisplayDiv page="Autokriti"/> */}
             <AboutUs page="Autokriti"/>
             <AutokritiEvent/>

@@ -39,7 +39,13 @@ export default function ShowAmbassador() {
     const stuInfo = collection(db, "finalStudentAmbassador");
     const stuInfo_doc = await getDocs(stuInfo);
     stuData = stuInfo_doc.docs.map((doc) => doc.data());
-    setStuData(stuData);
+    
+    const collInfo = collection(db, "collegeRepresentatives");
+    const collInfo_doc = await getDocs(collInfo);
+    const stuCollData = collInfo_doc.docs.map((doc) => doc.data());
+    
+    const arr = stuData.concat(stuCollData);
+    setStuData(arr);
   }
 
   stuData.sort((a, b) => b.numberReferrals - a.numberReferrals);
