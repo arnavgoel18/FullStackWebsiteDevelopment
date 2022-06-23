@@ -28,6 +28,7 @@ import DisplayClgRepresentatives from "./Containers/Backend/DisplayCollegeRepres
 import DisplaySignUpSheet from './Containers/Backend/DisplaySignUpSheet/DisplaySignUpSheet'
 import DisplayAllQuizes from "./Containers/Backend/DisplayAllQuizes/DisplayAllQuizes";
 
+
 import Autokriti2 from './Containers/Autokriti/Autokriti2/Autorkriti2'
 import Quizsignup from "./Components/AutokritiRegistration/AutokritiRegistration";
 import ShowAmbassador from "./Containers/Autokriti/ShowAmbassador/ShowAmbassador";
@@ -73,6 +74,7 @@ function App() {
             <Route path="/admin/collegeRepresentatives" exact component={() => <DisplayClgRepresentatives/>}/>
             <Route path="/admin/signUpSheet" exact component={() => <DisplaySignUpSheet/>}/>
             <Route path="/admin/quizResponses" exact component={() => <DisplayAllQuizes/>}/>
+           
 
             {/* e-Autokriti 2.0 */}
             <Route path="/e-Autokriti2.0" exact component={()=><Autokriti2/>}/>

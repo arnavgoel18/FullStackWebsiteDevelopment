@@ -101,6 +101,8 @@ export default function AfterLoginPage() {
             <AfterLoginCard name="PopUps" id="orange" />
           </Link>
 
+       
+
         </div>
       </div>
     );
