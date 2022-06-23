@@ -1,12 +1,13 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
-* {  
+
+* {
   font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
 }
-.counter-body{
-  padding-top:30px;
+
+.counter-body {
+  padding-top: 30px;
   padding-bottom: 30px;
 }
 
@@ -33,11 +34,12 @@
   margin: 25px 0;
   z-index: 2;
 }
+
 .counter-counter h3 {
   padding: 0.5rem 0;
   font-size: 2.5rem;
   font-weight: 800;
-  color:white;
+  color: white;
 }
 
 .counter-counter h6 {
@@ -45,13 +47,15 @@
   padding-bottom: 1rem;
   color: white;
 }
-.counter-counter .fas{
-  color:white;
+
+.counter-counter .fas {
+  color: white;
   font-size: 40px;
 }
+
 @media (min-width: 150px) and (max-width: 425px) {
- 
-  .counter-container{
+
+  .counter-container {
     margin: 0;
     display: flex;
     flex-wrap: wrap;
@@ -59,23 +63,15 @@
     justify-content: space-evenly;
   }
 }
-/* .bubbles {
+
+.counter-container {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   position: relative;
   flex-wrap: wrap;
   width: 100%;
-  overflow:hidden;
-} */
-.counter-container{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  position: relative;
-  flex-wrap: wrap;
-  width: 100%;
-  overflow:hidden;
+  overflow: hidden;
 }
 
 .stars {
@@ -88,6 +84,7 @@
   display: block;
   z-index: 0;
 }
+
 .twinkling {
   width: 10000px;
   height: 100%;
@@ -104,34 +101,42 @@
   -webkit-animation: move-background 70s linear infinite;
   animation: move-background 70s linear infinite;
 }
+
 @keyframes move-background {
   from {
     -webkit-transform: translate3d(0px, 0px, 0px);
   }
+
   to {
     -webkit-transform: translate3d(1000px, 0px, 0px);
   }
 }
+
 @-webkit-keyframes move-background {
   from {
     -webkit-transform: translate3d(0px, 0px, 0px);
   }
+
   to {
     -webkit-transform: translate3d(1000px, 0px, 0px);
   }
 }
+
 @-moz-keyframes move-background {
   from {
     -webkit-transform: translate3d(0px, 0px, 0px);
   }
+
   to {
     -webkit-transform: translate3d(1000px, 0px, 0px);
   }
 }
+
 @-webkit-keyframes move-background {
   from {
     -webkit-transform: translate3d(0px, 0px, 0px);
   }
+
   to {
     -webkit-transform: translate3d(1000px, 0px, 0px);
   }

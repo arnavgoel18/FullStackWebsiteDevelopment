@@ -215,10 +215,10 @@ function Sponsicompanies() {
           </a>
         </div>
         <div id="sponsicompanies_ninth2" className="tobeexpanded">
-          {/* <img src={Suresh_Metals} id="Suresh_Metals-id" className='ima'/> */}
+        
         </div>
         <div id="sponsicompanies_ninth3" className="tobeexpanded">
-          {/* <img src={Suresh_Metals} id="Suresh_Metals-id" className='ima'/> */}
+          
           {/* </div> */}
         </div>
       </div>

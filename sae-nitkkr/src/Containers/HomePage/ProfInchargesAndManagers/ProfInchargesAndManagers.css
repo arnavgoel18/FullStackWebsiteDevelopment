@@ -1,50 +1,53 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.ProfInchargesandManagers-Managers-Heading{
+
+.ProfInchargesandManagers-Managers-Heading {
     width: 35%;
     font-size: 22px;
     font-family: "Montserrat", sans-serif;
-    padding-top:15px;
-    padding-bottom:15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     margin-left: auto;
     margin-right: auto;
     background-color: rgb(39, 38, 38);
-    color:white;
+    color: white;
     font-weight: bold;
-    /* width:400px; */
+
 }
-.ProfInchargesandManagers-heading{
+
+.ProfInchargesandManagers-heading {
     width: 35%;
     font-size: 22px;
     font-family: "Montserrat", sans-serif;
-    padding-top:15px;
-    padding-bottom:15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     margin-left: auto;
     margin-right: auto;
     background-color: rgb(39, 38, 38);
-    color:white;
+    color: white;
     font-weight: bold;
-    /* width:400px; */
+
 }
+
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 /*PROF INCHARGES*/
 
-.ProfInchargesandManagers-profIncharge_container{
-    width: 100%; 
-    /* height: 517px; */
+.ProfInchargesandManagers-profIncharge_container {
+    width: 100%;
     background-color: #fff;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     padding-top: 4vh;
 }
 
-.ProfInchargesandManagers-persons_container{
+
+.ProfInchargesandManagers-persons_container {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -53,37 +56,23 @@
     padding: 10vh;
 }
 
-.ProfInchargesandManagers-person{
+.ProfInchargesandManagers-person {
     width: auto;
-}  
-/* 
-.ProfInchargesandManagers-circle{
-    width: 20vh;
-    height: 20vh;
-    border-radius: 50%;
-    border: solid black 1px;
-    margin-bottom: 1vh;
-    overflow: hidden;  
-} */
-
-/* .ProfInchargesandManagers-circle img{
-    height: inherit;
-    width: inherit;
-} */
+}
 
 /*MANAGERS*/
 
-.ProfInchargesandManagers-managers_container{
+.ProfInchargesandManagers-managers_container {
     margin-top: 0px;
     width: 100%;
-    /* height: 576px; */
     background-color: #fff;
     text-align: center;
     padding-top: 4vh;
 }
 
 
-.ProfInchargesandManagers-persons_container{
+
+.ProfInchargesandManagers-persons_container {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -92,11 +81,11 @@
     padding: 10vh;
 }
 
-.ProfInchargesandManagers-person{
+.ProfInchargesandManagers-person {
     width: auto;
 }
 
-.ProfInchargesandManagers-circle{
+.ProfInchargesandManagers-circle {
     width: 20vh;
     height: 20vh;
     border-radius: 50%;
@@ -105,12 +94,12 @@
 }
 
 
-@media screen and (max-width: 460px){
-    .ProfInchargesandManagers-heading{
+@media screen and (max-width: 460px) {
+    .ProfInchargesandManagers-heading {
         width: 70%;
     }
 
-    .ProfInchargesandManagers-Managers-Heading{
+    .ProfInchargesandManagers-Managers-Heading {
         width: 70%;
     }
 }

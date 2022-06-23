@@ -1,15 +1,10 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
-#large_box
-{
-    /* border: 1px solid black; */
+#large_box {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    /* margin-left: -7px;
-    margin-right: -7px; */
     font-size: 61px;
     color: white;
     max-width: 100%;
@@ -17,415 +12,211 @@
     font-family: 'Montserrat', sans-serif;
     z-index: 2;
 }
-.participate
-{
+
+
+.participate {
     height: 500px;
     width: 64%;
 }
 
 
-#acc
-{
+#acc {
     background-image: url("abc1new.webp");
     padding: 15px;
     padding-left: 15px;
     clip-path: polygon(0 0, 100% 0, 61% 100%, 0% 100%);
     background-repeat: no-repeat;
     background-size: cover;
-    
     margin-right: -30%;
-    /* border: 1px solid rgb(15, 1, 1); */
-}
-#acc:hover
-{
-   cursor: pointer;
-   opacity: 0.95;
-    
-}
-#nitrox:hover
-{
-  cursor: pointer;
-  opacity: 0.95;
-}
-#nitrox
-{
-   display: flex;
-   align-items: flex-end;
-   justify-content: flex-end;
-    background-image: url("def1.webp");
-    clip-path: polygon(44% 0%, 100% 0, 100% 100%, 5% 100%);
-    background-repeat: no-repeat;
-    background-size: cover;
-   text-align: end;
-   vertical-align: text-bottom;
-   padding-right: 15px;
-   
-   
-    
-    /* border: 1px solid rgb(8, 1, 20); */
-   
- 
-   
-}
-@media (min-width:1441px) {
-    #large_box
-{
-    /* border: 1px solid black; */
-   
- 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    /* margin-left: -7px;
-    margin-right: -7px; */
-  
-   
-   
-    
-}
-.participate
-{
-    height: 660px;
-    width: 64%;
-  
-    
-}
-#acc
-{
-    background-image: url("abc1new.webp");
-   
-    clip-path: polygon(0 0, 100% 0, 61% 100%, 0% 100%);
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-left: 15px;
-    margin-right: -30%;
-    /* border: 1px solid rgb(15, 1, 1); */
-    
-  
 }
 
-#nitrox
-{
-   
+
+#acc:hover {
+    cursor: pointer;
+    opacity: 0.95;
+
+}
+
+#nitrox:hover {
+    cursor: pointer;
+    opacity: 0.95;
+}
+
+#nitrox {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
     background-image: url("def1.webp");
     clip-path: polygon(44% 0%, 100% 0, 100% 100%, 5% 100%);
     background-repeat: no-repeat;
     background-size: cover;
-    
-    /* border: 1px solid rgb(8, 1, 20); */
-   
- 
-   
+    text-align: end;
+    vertical-align: text-bottom;
+    padding-right: 15px;
+
 }
+
+@media (min-width:1441px) {
+
+    .participate {
+        height: 660px;
+        width: 64%;
+    }
+
+    #acc {
+        clip-path: polygon(0 0, 100% 0, 61% 100%, 0% 100%);
+        padding-left: 15px;
+        margin-right: -30%;
+    }
+
+
+    #nitrox {
+        clip-path: polygon(44% 0%, 100% 0, 100% 100%, 5% 100%);
+
+    }
+
 }
 
 @media (min-width:1024px) and (max-width:1439px) {
-  #large_box
-{
-    /* border: 1px solid black; */
-   box-sizing: border-box;
- 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    /* margin-left: -7px;
-    margin-right: -7px; */
-    font-size: 48px;
-  
-   
-   
-    
-}
-.participate
-{
-    height: 469px;
-    width: 64%;
-  
-    
-}
-#acc
-{
-    background-image: url("abc1new.webp");
-   
-    clip-path: polygon(0 0, 100% 0, 61% 100%, 0% 100%);
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-    margin-right: -30%;
-    padding-left: 15px;
-    /* border: 1px solid rgb(15, 1, 1); */
-    
-  
-}
-#nitrox
-{
-   
-    background-image: url("def1.webp");
-    clip-path: polygon(44% 0%, 100% 0, 100% 100%, 5% 100%);
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-    /* border: 1px solid rgb(8, 1, 20); */
-   
- 
-   
-}
-}
-@media (min-width:768px) and (max-width:1024px) {
-    #large_box
-  {
-      /* border: 1px solid black; */
-     box-sizing: border-box;
-   
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      /* margin-left: -7px;
-      margin-right: -7px; */
-      font-size: 36px;
-    
-     
-     
-      
-  }
-  .participate
-  {
-      height: 351px;
-      width: 64%;
-    
-      
-  }
-  #acc
-  {
-      background-image: url("abc1new.webp");
-     
-      clip-path: polygon(0 0, 100% 0, 61% 100%, 0% 100%);
-      background-repeat: no-repeat;
-      background-size: cover;
-      
-      margin-right: -30%;
-      /* border: 1px solid rgb(15, 1, 1); */
-      
-    
-  }
-  #nitrox
-  {
-     
-      background-image: url("def1.webp");
-      clip-path: polygon(44% 0%, 100% 0, 100% 100%, 5% 100%);
-      background-repeat: no-repeat;
-      background-size: cover;
-      
-      /* border: 1px solid rgb(8, 1, 20); */
-     
-   
-     
-  }
-  }
+    #large_box {
+        font-size: 48px;
+    }
 
-  @media (min-width:425px) and (max-width:550px) {
-    #large_box
-  {
-      /* border: 1px solid black; */
-    
-   
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      /* margin-left: -7px;
-      margin-right: -7px; */
-      font-size: 28px;
-    
-     
-     
-      
-  }
-  .participate
-  {
-      height: 272px;
-      width: 100%;
-    
-      
-  }
-  #acc
-  {
-      background-image: url("abc1new.webp");
-     
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-      background-repeat: no-repeat;
-      background-size: cover;
-      
-      margin-right: 0%;
-      /* border: 1px solid rgb(15, 1, 1); */
-      margin-bottom: 5px;
-    
-  }
-  #nitrox
-  {
-     
-      background-image: url("def1.webp");
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-      background-repeat: no-repeat;
-      background-size: cover;
-      
-      /* border: 1px solid rgb(8, 1, 20); */
-     
-   
-     
-  }
-  }
-  @media (min-width:550px) and (max-width:768px) {
-    #large_box
-  {
-      /* border: 1px solid black; */
-    
-   
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      /* margin-left: -7px;
-      margin-right: -7px; */
-     font-size: 41px;
-     
-      
-  }
-  .participate
-  {
-      height: 400px;
-      width: 100%;
-    
-      
-  }
-  #acc
-  {
-      background-image: url("abc1new.webp");
-     
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-      background-repeat: no-repeat;
-      background-size: cover;
-      
-      margin-right: 0%;
-      /* border: 1px solid rgb(15, 1, 1); */
-      margin-bottom: 5px;
-    
-  }
-  #nitrox
-  {
-     
-      background-image: url("def1.webp");
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-      background-repeat: no-repeat;
-      background-size: cover;
-      
-      /* border: 1px solid rgb(8, 1, 20); */
-     
-   
-     
-  }
-  }
-  @media (min-width:375px) and (max-width:425px) {
-    #large_box
-  {
-      /* border: 1px solid black; */
-    
-   
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      /* margin-left: -7px;
-      margin-right: -7px; */
-    font-size: 27px;
-     
-     
-      
-  }
-  .participate
-  {
-      height: 272px;
-      width: 100%;
-    
-      
-  }
-  #acc
-  {
-      background-image: url("abc1new.webp");
-     
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-      background-repeat: no-repeat;
-      background-size: cover;
-      
-      margin-right: 0%;
-      /* border: 1px solid rgb(15, 1, 1); */
-      margin-bottom: 5px;
-    
-  }
-  #nitrox
-  {
-     
-      background-image: url("def1.webp");
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      /* border: 1px solid rgb(8, 1, 20); */
-     
-   
-     
-  }
-  }
-  @media (min-width:0px) and (max-width:375px) {
-    #large_box
-  {
-      /* border: 1px solid black; */
-    
-   
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      /* margin-left: -7px;
-      margin-right: -7px; */
-      font-size: 25px;
-     
-     
-      
-  }
-  .participate
-  {
-      height: 250px;
-      width: 100%;
-    
-      
-  }
-  #acc
-  {
-      padding-left: 15px;
-      background-image: url("abc1new.webp");
-     
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-      background-repeat: no-repeat;
-      background-size: cover;
-      
-      margin-right: 0%;
-      /* border: 1px solid rgb(15, 1, 1); */
-      margin-bottom: 5px;
-    
-  }
-  #nitrox
-  {
-     
-      background-image: url("def1.webp");
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      /* border: 1px solid rgb(8, 1, 20); */
-        
-  }
-  }
+    .participate {
+        height: 469px;
+        width: 64%;
+    }
+
+    #acc {
+        clip-path: polygon(0 0, 100% 0, 61% 100%, 0% 100%);
+        margin-right: -30%;
+        padding-left: 15px;
+    }
+
+    #nitrox {
+        clip-path: polygon(44% 0%, 100% 0, 100% 100%, 5% 100%);
+
+    }
+
+}
+
+@media (min-width:768px) and (max-width:1024px) {
+    #large_box {
+        box-sizing: border-box;
+        font-size: 36px;
+    }
+
+    .participate {
+        height: 351px;
+        width: 64%;
+    }
+
+    #acc {
+        clip-path: polygon(0 0, 100% 0, 61% 100%, 0% 100%);
+        margin-right: -30%;
+    }
+
+
+    #nitrox {
+        clip-path: polygon(44% 0%, 100% 0, 100% 100%, 5% 100%);
+
+    }
+}
+
+@media (min-width:425px) and (max-width:550px) {
+    #large_box {
+        justify-content: space-around;
+        font-size: 28px;
+    }
+
+    .participate {
+        height: 272px;
+        width: 100%;
+    }
+
+    #acc {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        margin-right: 0%;
+        margin-bottom: 5px;
+    }
+
+    #nitrox {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
+    }
+
+}
+
+@media (min-width:550px) and (max-width:768px) {
+    #large_box {
+        justify-content: space-around;
+        font-size: 41px;
+    }
+
+    .participate {
+        height: 400px;
+        width: 100%;
+    }
+
+    #acc {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        margin-right: 0%;
+        margin-bottom: 5px;
+    }
+
+    #nitrox {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
+    }
+
+}
+
+@media (min-width:375px) and (max-width:425px) {
+    #large_box {
+        justify-content: space-around;
+        font-size: 27px;
+    }
+
+    .participate {
+        height: 272px;
+        width: 100%;
+    }
+
+    #acc {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        margin-right: 0%;
+        margin-bottom: 5px;
+    }
+
+    #nitrox {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        background-position: center;
+    }
+
+}
+
+@media (min-width:0px) and (max-width:375px) {
+    #large_box {
+        justify-content: space-around;
+        font-size: 25px;
+    }
+
+    .participate {
+        height: 250px;
+        width: 100%;
+    }
+
+    #acc {
+        padding-left: 15px;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        margin-right: 0%;
+        margin-bottom: 5px;
+
+    }
+
+    #nitrox {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        background-position: center;
+    }
+
+}
