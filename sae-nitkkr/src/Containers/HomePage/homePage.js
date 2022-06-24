@@ -9,27 +9,27 @@ import ProfIncharges from '../../Containers/HomePage/ProfInchargesAndManagers/Pr
 import Managers from '../../Containers/HomePage/ProfInchargesAndManagers/Managers';
 import Footer from '../../Components/Footer/Footer(black)/FooterBlack';
 import AutokritiEvent from '../../Components/AutokritiEvent/AutokritiEvent'
-// import ContactUs from '../../Components/ContactUs/ContactUs'
 
-function HomePage(){
+
+function HomePage() {
 
     useEffect(() => {
         window.scrollTo(0, 0)
-      }, [])
+    }, [])
 
-    return(
+    return (
         <>
-            <NavBar/>
-            <FirstDisplayDIV page="Home"/>
-            <AboutUs page="Home"/>
-            {/* <AutokritiEvent /> */}
-            <TeamsDIV/>
-            <br/>
-            <ExploreUs/>
-            {/* <ProfIncharges/> */}
-            <Managers/>
-            {/* <ContactUs/> */}
-            <Footer/>
+            <NavBar />
+            <FirstDisplayDIV page="Home" />
+            <AboutUs page="Home" />
+
+            <TeamsDIV />
+            <br />
+            <ExploreUs />
+
+            <Managers />
+
+            <Footer />
         </>
     )
 }

@@ -1,14 +1,14 @@
-#sponsicompanies_bigbox
-{
+#sponsicompanies_bigbox {
     display: flex;
     flex-direction: column;
     margin-left: 30px;
     margin-right: 30px;
 }
-#viewmore_div
-{
+
+#viewmore_div {
     display: none;
 }
+
 #sponsicompanies_first,
 #sponsicompanies_second,
 #sponsicompanies_third,
@@ -18,316 +18,315 @@
 #sponsicompanies_seventh,
 #sponsicompanies_eighth,
 #sponsicompanies_ninth {
-  display: flex;
-  flex-direction: row;
-  /* border: 2px solid black; */
-  margin-left: 30px;
-  margin-right: 30px;
-  flex-wrap: wrap;
-  justify-content: center;
- 
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+    margin-right: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+
 }
-.ima
-{
-    /* border: 2px solid black; */
-    width:300px;
-    margin:10px;
+
+.ima {
+
+    width: 300px;
+    margin: 10px;
 }
-.ima:hover
-{
+
+.ima:hover {
     cursor: pointer;
-    
 }
-/* #sponsicompanies_second2
-{
-   height: 200px;
-} */
-#Ansys-id
-{
+
+#Ansys-id {
     margin-top: 40px;
-    
 }
-#Janatics-id
-{
+
+
+#Janatics-id {
     height: 150px;
     margin-top: 40px;
 }
-#NIT_kurukshetra-id
-{
+
+#NIT_kurukshetra-id {
     height: 250px;
     width: 300px;
 }
-#pankaj_potentiometer-id
-{
+
+#pankaj_potentiometer-id {
     height: 250px;
     width: 300px;
 }
-#skf_sealing-id
-{
+
+#skf_sealing-id {
     height: 250px;
     width: 300px;
 }
-#hero-id
-{
+
+#hero-id {
     height: 250px;
     width: 300px;
 }
-#honda-id
-{
+
+#honda-id {
     height: 200px;
     margin-top: 30px;
     width: 300px;
 }
-#venus-id
-{
+
+#venus-id {
     margin-top: 60px;
     height: 150px;
     width: 300px;
 }
-#republic_motors-id
-{
+
+#republic_motors-id {
     height: 250px;
 }
-#forgify-id
-{
-  margin-top: 120px;    
+
+#forgify-id {
+    margin-top: 120px;
 }
-#polyplastics-id
-{
- margin-top: 30px;
+
+#polyplastics-id {
+    margin-top: 30px;
 
 }
-#Ricardo-id
-{
+
+#Ricardo-id {
     margin-top: -20px;
-    /* height: 250px; */
+
 }
-#advanced_robotics-id
-{
-    height: 250px;;
-    width:250px;
+
+#advanced_robotics-id {
+    height: 250px;
+    width: 250px;
 }
-#mh-id
-{
+    
+#mh-id {
     margin-top: 10px;
 }
-#Instapro-id
-{
+
+#Instapro-id {
     margin-left: -50px;
 }
-#c3-id
-{
+
+#c3-id {
     margin-top: -80px;
     height: 250px;
     width: 250px;
 }
-@media (min-width:0px) and (max-width:320px)
-{
-    .ima
-{
-    /* border: 2px solid black; */
-    width:250px;
-    /* border: 2px solid black; */
-}
-#c3-id
-{
-    margin-top: 10px;
-    height: 250px;
-    width: 250px;
-}
-#skf_sealing-id
-{
-    height: 250px;
-    width: 280px;
-}
-#NIT_kurukshetra-id
-{
-    height: 150px;
-    width: 150px;
-    margin-left: 15px;
-}
-#hero-id,#honda-id
-{
-    height: 250px;
-    width: 270px;
-}
-#venus-id
-{
-    margin-top: 60px;
-    height: 100px;
-    width: 250px;
-}
-#forgify-id
-{
-  margin-top: 50px;    
-}
-#polyplastics-id
-{
- margin-top: 5px;
 
-}
-#Instapro-id
-{
-    
 
-    margin-left: 15px;
+@media (min-width:0px) and (max-width:320px) {
+    .ima {
 
-}
-}
-
-@media (min-width:0px) and (max-width:658px)
-{
-  #sponsicompanies_third1,#sponsicompanies_third2,#sponsicompanies_third3,
-  #sponsicompanies_fourth1,#sponsicompanies_fourth2,#sponsicompanies_fourth3,
-  #sponsicompanies_fifth1,#sponsicompanies_fifth2,#sponsicompanies_fifth3,
-  #sponsicompanies_sixth1,#sponsicompanies_sixth2,#sponsicompanies_sixth3,
-  #sponsicompanies_seventh1,#sponsicompanies_seventh2,#sponsicompanies_seventh3,
-  #sponsicompanies_eight1,#sponsicompanies_eight2,#sponsicompanies_eight3,
-  #sponsicompanies_ninth1,#sponsicompanies_ninth2,#sponsicompanies_ninth3
-  {
-     display: none;
-  }
-  #viewmore_div
-  {
-      display: block;
-  }
-  #viewmore_div
-  {
-      display: flex;
-      /* border: 2px solid black; */
-      width: 100%;
-      justify-content: center;
-  }
-  #viewmore_button
-  {
-      color: white;
-      background-color: rgb(226, 71, 10);
-      border: none;
-      font-size: 25px;
-      height: 40px;
-      margin-bottom: 20px;
-    width: 215px;
-  }
-  #Instapro-id
-{
-    
-
-    margin-left: 15px;
-
-}
-#c3-id
-{
-    margin-top: 10px;
-    height: 250px;
-    width: 250px;
-}
-#forgify-id
-{
-  margin-top: 40px;    
-}
-#venus-id
-{
-    margin-top: 50px;
-    height: 100px;
-    width: 250px;
-}
-}
-/* @media (min-width:769px) and (max-width:900px)
-{
-    #forgify-id
-    {
-      margin-top: 80px;    
+        width: 250px;
     }
-} */
-@media (min-width:769px) and (max-width:1040px)
-{
-    #forgify-id
-    {
-      margin-top: 90px;    
-      /* margin-left: -50px; */
+
+    #c3-id {
+        margin-top: 10px;
+        height: 250px;
+        width: 250px;
     }
-    #Instapro-id
-    {
-        
-    
+
+
+    #skf_sealing-id {
+        height: 250px;
+        width: 280px;
+    }
+
+    #NIT_kurukshetra-id {
+        height: 150px;
+        width: 150px;
         margin-left: 15px;
-    
     }
-    #altair-id
-    {
+
+    #hero-id,
+    #honda-id {
+        height: 250px;
+        width: 270px;
+    }
+
+    #venus-id {
+        margin-top: 60px;
+        height: 100px;
+        width: 250px;
+    }
+
+    #forgify-id {
+        margin-top: 50px;
+    }
+
+    #polyplastics-id {
+        margin-top: 5px;
+
+    }
+
+    #Instapro-id {
+
+
+        margin-left: 15px;
+
+    }
+}
+
+@media (min-width:0px) and (max-width:658px) {
+
+    #sponsicompanies_third1,
+    #sponsicompanies_third2,
+    #sponsicompanies_third3,
+    #sponsicompanies_fourth1,
+    #sponsicompanies_fourth2,
+    #sponsicompanies_fourth3,
+    #sponsicompanies_fifth1,
+    #sponsicompanies_fifth2,
+    #sponsicompanies_fifth3,
+    #sponsicompanies_sixth1,
+    #sponsicompanies_sixth2,
+    #sponsicompanies_sixth3,
+    #sponsicompanies_seventh1,
+    #sponsicompanies_seventh2,
+    #sponsicompanies_seventh3,
+    #sponsicompanies_eight1,
+    #sponsicompanies_eight2,
+    #sponsicompanies_eight3,
+    #sponsicompanies_ninth1,
+    #sponsicompanies_ninth2,
+    #sponsicompanies_ninth3 {
+        display: none;
+    }
+
+    #viewmore_div {
+        display: block;
+    }
+
+    #viewmore_div {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+
+    #viewmore_button {
+        color: white;
+        background-color: rgb(226, 71, 10);
+        border: none;
+        font-size: 25px;
+        height: 40px;
+        margin-bottom: 20px;
+        width: 215px;
+    }
+
+    #Instapro-id {
+
+
+        margin-left: 15px;
+
+    }
+
+    #c3-id {
+        margin-top: 10px;
+        height: 250px;
+        width: 250px;
+    }
+
+    #forgify-id {
+        margin-top: 40px;
+    }
+
+    #venus-id {
+        margin-top: 50px;
+        height: 100px;
+        width: 250px;
+    }
+}
+
+@media (min-width:769px) and (max-width:1040px) {
+    #forgify-id {
+        margin-top: 90px;
+
+    }
+
+    #Instapro-id {
+
+
+        margin-left: 15px;
+
+    }
+
+    #altair-id {
         margin-top: 35px;
     }
-    #polyplastics-id
-{
- margin-top: 10px;
 
+    #polyplastics-id {
+        margin-top: 10px;
+
+    }
+
+    #c3-id {
+        margin-top: 10px;
+        height: 250px;
+        width: 308px;
+    }
 }
-#c3-id
-{
-    margin-top: 10px;
-    height: 250px;
-    width: 308px;
-}
-}
-@media (min-width:1040px) and (max-width:1084px)
-{
-    #Instapro-id
-    {
-        
-    
+
+@media (min-width:1040px) and (max-width:1084px) {
+    #Instapro-id {
+
+
         margin-left: 15px;
-        width:350px;
-    
+        width: 350px;
+
     }
-    #advanced_robotics-id
-    {
-        height: 300px;;
-        width:350px;
+
+    #advanced_robotics-id {
+        height: 300px;
+        width: 350px;
     }
-    #c3-id
-{
-    margin-top: 10px;
-    height: 250px;
-    width: 308px;
-}
-#altair-id
-{
-    margin-top: 50px;
-}
-}
-@media (min-width:1084px) and (max-width:1440px)
-{
-    #Instapro-id
-    {
         
-    
+
+    #c3-id {
+        margin-top: 10px;
+        height: 250px;
+        width: 308px;
+    }
+
+    #altair-id {
+        margin-top: 50px;
+    }
+}
+
+@media (min-width:1084px) and (max-width:1440px) {
+    #Instapro-id {
+
+
         margin-left: 15px;
-        width:285px;
-    
+        width: 285px;
+
     }
 }
-@media (min-width:658px) and (max-width:769px)
-{
-    #forgify-id
-    {
-      margin-top: 40px;    
+
+@media (min-width:658px) and (max-width:769px) {
+    #forgify-id {
+        margin-top: 40px;
     }
-    #Instapro-id
-    {
-        
-    
+
+    #Instapro-id {
+
+
         margin-left: 15px;
-    
+
     }
-    #advanced_robotics-id
-{
-    height: 280px;;
-    width:285px;
-}
-#c3-id
-{
-    margin-top: 10px;
-    height: 250px;
-    width: 308px;
-}
+
+    #advanced_robotics-id {
+        height: 280px;
+        ;
+        width: 285px;
+    }
+
+    #c3-id {
+        margin-top: 10px;
+        height: 250px;
+        width: 308px;
+    }
 }
