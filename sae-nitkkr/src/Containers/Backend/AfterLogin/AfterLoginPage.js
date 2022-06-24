@@ -106,11 +106,6 @@ export default function AfterLoginPage() {
             </div>
             <AfterLoginCard name="PopUps" id="orange" />
           </Link>
-<<<<<<< HEAD
-
-       
-
-=======
           <Link to="/admin/displaycounterbackend">
             <div className="iconimagediv">
               {/* <img
@@ -132,7 +127,6 @@ export default function AfterLoginPage() {
             </div>
             <AfterLoginCard name="Event" id="orange" />
           </Link>
->>>>>>> 7710807a6c546b1e927ac8752cdef25bd7229935
         </div>
       </div>
     );
