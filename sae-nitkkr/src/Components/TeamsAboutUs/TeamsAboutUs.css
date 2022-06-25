@@ -8,26 +8,25 @@
   width: 70%;
   margin-left: auto;
   margin-right: auto;
-  padding: 10px;
+ 
   margin-top: 40px;
 }
 .TeamAboutUs-heading {
   display: flex;
   flex-direction: row;
-  /* justify-content: center; */
-  /* align-items: center; */
+ 
   margin-bottom: 30px;
   flex-wrap: wrap;
 }
 .TeamAboutUs-weare {
   font-size: 27px;
   margin-right: 5px;
-  /* margin-top: 9px; */
+  
 }
 .TeamAboutUs-boldcolor {
   font-size: 27px;
   font-weight: 900;
-  /* color: rgb(67, 67, 197); */
+
   background: linear-gradient(to right, #30cfd0 0%, #330867 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -39,14 +38,15 @@
   justify-content: space-between;
 }
 .TeamAboutUs-text_container {
-  width: 60%;
+  width: 412px;
+
+  
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
-.TeamAboutUs-text {
-  font-size: 18px;
-}
+
+
 .TeamAboutUs-comp {
   font-size: 20px;
   border-left: solid rgb(67, 67, 197) 3px;
@@ -58,8 +58,8 @@
 .TeamAboutUs-image img {
   display: flex;
   float: right;
-  height: 35%;
-  width: 68%;
+  height: 300px;
+  width: 450px;
   padding: 5px;
   align-items: flex-end;
   clip-path: polygon(33% 0, 100% 0, 100% 100%, 0 100%, 0 30%);
@@ -74,6 +74,7 @@
   }
   .TeamAboutUs-comp {
     border-left: solid rgb(67, 67, 197) 3px;
+    font-size: 12px;
     font-weight: 700;
     margin-left: 5px;
     padding: 10px;
@@ -95,9 +96,7 @@
     color: rgb(67, 67, 197);
   }
 
-  .TeamAboutUs-comp {
-    font-size: 12px;
-  }
+ 
   .TeamAboutUs-weare {
     font-size: 31px;
     margin-right: 5px;
@@ -165,7 +164,7 @@
   #teamsabout_us_image_id{
     margin-top: 40px;
     height: 200px;
-    width: 290px;
+    width: 490px;
   }
   
   .TeamAboutUs-main_container {
@@ -178,9 +177,7 @@
     padding: 20px;
     margin-left: -27px;
   }
-  .TeamAboutUs-comp {
-    font-size: 18px;
-  }
+
 
   .TeamAboutUs-heading {
     display: flex;
@@ -196,7 +193,7 @@
     width: 90%;
   }
   .TeamAboutUs-bigcontainer {
-    display: flex;
+
     flex-direction: column;
   justify-content: center;
     }
@@ -221,10 +218,7 @@
     height: 60%;
     width: 60%;
   }
- .TeamAboutUs-bigcontainer{
-   display: flex;
-   justify-content: center;
- }
+
  .TeamAboutUs-text_container{
   width: 80%;
   align-self: center;

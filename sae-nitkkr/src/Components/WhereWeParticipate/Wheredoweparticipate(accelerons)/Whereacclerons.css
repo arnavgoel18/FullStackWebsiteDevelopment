@@ -3,7 +3,7 @@
 font-family: 'Montserrat', sans-serif;
    display: flex;
    flex-direction: column;
-   /* flex-wrap: wrap;  */
+
    align-content: center;
    width: 70%;
    margin-left: auto;
@@ -21,7 +21,7 @@ font-family: 'Montserrat', sans-serif;
 {
     font-size: 27px;
     font-weight: 800;
-   /* color: rgb(243, 8, 47); */
+
    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -255,16 +255,14 @@ font-family: 'Montserrat', sans-serif;
         width:90%;
     }
     #Accelarons-supra_text, #Accelarons-formula_text{
-        width: 100%;
+      
         font-size: 16px;
     }
     #Accelarons-supra_image, #Accelarons-formula_image{
-        /* min-width: 400px; */
+     
         width: 300px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 50px;
-        justify-content: center;
+        
+ 
     }
     #Accelarons-image1, #Accelarons-image2, #Accelarons-image11, #Accelarons-image22{
         height: 200px;

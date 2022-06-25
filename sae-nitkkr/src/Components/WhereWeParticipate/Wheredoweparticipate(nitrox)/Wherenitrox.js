@@ -1,10 +1,7 @@
 import React from "react";
 import "./Wherenitrox.css";
 
-// import NitroxBAJA1 from '../../../Assets/WhereWeParticipate/NitroxBAJA1.jpeg'
-// import NitroxBAJA2 from '../../../Assets/WhereWeParticipate/NitroxBAJA2.jpeg'
-// import NitroxATVC1 from '../../../Assets/WhereWeParticipate/NitroxATVC1.jpeg'
-// import NitroxATVC2 from '../../../Assets/WhereWeParticipate/NitroxATVC2.jpeg'
+
 
 function Wherenitrox() {
   let image2;
@@ -77,14 +74,10 @@ function Wherenitrox() {
             </div>
             <div id="Nitrox-baja_image">
               <div id="Nitrox-image1">
-                {/* <img src={abc1new} alt="imagee" id="car1" /> */}
+              
               </div>
               <div id="Nitrox-image2" onClick={swap}>
-                {/* <img
-                src={def2}
-                alt="imagee"
-                id="car2"
-              /> */}
+               
               </div>
             </div>
           </div>
@@ -98,14 +91,10 @@ function Wherenitrox() {
           <div id="Nitrox-atvc_content">
             <div id="Nitrox-atvc_image">
               <div id="Nitrox-image22" onClick={swap2}>
-                {/* <img src={abc1new} alt="imagee" id="car1" /> */}
+
               </div>
               <div id="Nitrox-image11">
-                {/* <img
-                src={def2}
-                alt="imagee"
-                id="car2"
-              /> */}
+                
               </div>
             </div>
 

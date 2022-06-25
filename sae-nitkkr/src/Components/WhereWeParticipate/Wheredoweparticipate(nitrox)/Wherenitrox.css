@@ -195,7 +195,7 @@ font-family: 'Montserrat', sans-serif;
         font-family: 'Montserrat', sans-serif;
        display: flex;
        flex-direction: column;
-       /* flex-wrap: wrap;  */
+      
        align-content: center;
       
     }
@@ -237,15 +237,7 @@ font-family: 'Montserrat', sans-serif;
         margin-top: 50px;
         justify-content: center;
     }
-    #Nitrox-atvc_content{
-        flex-direction: column-reverse;
-    }
-    #Nitrox-atvc_title{
-        float:left;
-    }
-    #Nitrox-image2, #Nitrox-image22{
-        display: none;
-    }
+ 
 }
 
 @media only screen and (max-width:768px)
@@ -258,26 +250,16 @@ font-family: 'Montserrat', sans-serif;
         font-size: 16px;
     }
     #Nitrox-baja_image, #Nitrox-atvc_image{
-        /* min-width: 400px; */
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 50px;
+    
+
         width: 300px;
-        justify-content: center;
+     
     }
     #Nitrox-image1, #Nitrox-image2, #Nitrox-image11, #Nitrox-image22{
         height: 200px;
         width: 100%;
         background-position: center;
     }
-    #Nitrox-atvc_content{
-        flex-direction: column-reverse;
-    }
-    #Nitrox-atvc_title{
-        float:left;
-    }
-    #Nitrox-image2, #Nitrox-image22{
-        display: none;
-    }
+   
     
 }
