@@ -1,4 +1,4 @@
-* {
+*{
     margin: 0;
     padding: 0;
 }
@@ -38,9 +38,7 @@
     margin-left: auto;
     box-shadow: 10px 10px 4px 0px #00000040;
     border: 1px solid #00000021;
-    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
     border-radius: 10px;
-    /* min-height: 80vh; */
     width: 500px;
     display: flex;
     flex-direction: column;
@@ -74,13 +72,10 @@
 .ContactUs_container textarea {
     width: 95%;
     padding: 5px 0;
-    /* margin: 10px 0; */
     font-size: 16px;
     border: none;
     outline: none;
     border-bottom: 1.5px solid black;
-    /* resize: none; */
-    /* height: auto; */
 }
 
 .ContactUs_whole-body .ContactUs_container .ContactUs_field input:focus~span,

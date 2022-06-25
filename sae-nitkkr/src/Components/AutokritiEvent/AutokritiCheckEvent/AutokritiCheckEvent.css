@@ -146,22 +146,14 @@
     
   font-size: 19px;
   }
-  #acc_second
-{
-    
-    font-size: 14px;
-   
-}
-#acc_fourth
+  #acc_second,#acc_fourth
 {
     
     font-size: 14px;
    
 }
 #acc_card_container {
-    
     width: 100%;
-   
 }
 }
 
