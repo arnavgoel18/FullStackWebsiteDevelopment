@@ -2,15 +2,24 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './Footer.css'
 import Coming from '../../Assets/Coming Soon/Coming.png'
-import { AiFillInstagram } from 'react-icons/ai'
-import {white_icons,black_icons} from './icons'
+import { white_icons, black_icons } from './icons'
+import { useLayoutEffect } from 'react'
 
-function Footer({type='black'}) {
+function Footer({ type = 'black' }) {
+  var icons = type === 'black' ? black_icons : white_icons
+  var color = type === 'black' ? 'white' : 'black';
+  var background = type === 'black' ? 'black' : 'white';
 
-  var icons=(type==='black'?black_icons:white_icons);
+  useLayoutEffect(() => {
+    if(type==='black')
+    document.querySelectorAll('a').forEach((e) => (e.style.color = 'white'))
+  }, [type])
 
   return (
-    <div className='footer_bar'>
+    <div
+      className='footer_bar'
+      style={{ background: background, color: color }}
+    >
       <div className='footer_box'>
         <div>
           {' '}

@@ -7,7 +7,7 @@ import TeamsAboutUs from '../../Components/TeamsAboutUs/TeamsAboutUs'
 import WhereDoWeParticipate from '../../Components/WhereWeParticipate/Wheredoweparticipate(accelerons)/Whereacclerons'
 import Gallery from '../../Components/Gallery/AcceleronsGallery/Gallery'
 import Saga from '../../Components/Saga/AcceleronsSaga'
-import Footer from '../../Components/Footer/Footer(white)/FooterWhite'
+import Footer from '../../Components/Footer/Footer'
 
 function Accelerons(){
 
@@ -23,7 +23,7 @@ function Accelerons(){
             <WhereDoWeParticipate/>
             {/* <Saga/> */}
             <Gallery/>
-            <Footer/>
+            <Footer type="white"/>
         </>
     )
 }

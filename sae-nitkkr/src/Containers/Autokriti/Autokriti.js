@@ -35,7 +35,7 @@ function Autokriti(){
             {/* <Testimonials/>  */}
             <Gallery/>
             
-            <Footer type="white"/>
+            <Footer type="black"/>
         </>
     )
 }
