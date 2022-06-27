@@ -1,8 +1,7 @@
-#featurecard_bigbox
-{
+#featurecard_bigbox {
   border: 2px solid rgb(245, 243, 243);
   box-shadow: 0px 0px 15px;
-  position:sticky;
+  position: sticky;
   top: 310px;
   display: flex;
   width: 240px;
@@ -14,19 +13,14 @@
   margin-right: 30px;
   align-items: center;
 }
-#featurecard_title
-{
+#featurecard_title {
   font-size: 22px;
   display: flex;
-width: 150px;
-font-weight: 700;
+  width: 150px;
+  font-weight: 700;
   text-align: center;
-  /* border: 2px solid black; */
-
 }
-#learnmore_button
-{
-  
+#learnmore_button {
   font-size: 20px;
   margin-top: 50px;
   font-weight: 700;
@@ -35,49 +29,18 @@ font-weight: 700;
   width: 130px;
   border-radius: 5px;
   height: 50px;
-  /* margin-bottom: 15px; */
-
 }
-#learnmore_button:hover
-{
+#learnmore_button:hover {
   cursor: pointer;
 }
-@media (min-width:630px) and (max-width:1200px)
-{
-  #featurecard_bigbox
-{
-  border: 2px solid rgb(245, 243, 243);
-  box-shadow: 0px 0px 15px;
-  
-  display: flex;
-  width: 240px;
-  position: initial;
-
-  /* height: 280px; */
-  flex-direction: column;
-  /* margin-top: 20px; */
-  justify-content: center;
-  margin-left: 30px;
-  margin-right: 30px;
-  align-items: center;
+@media (min-width: 630px) and (max-width: 1200px) {
+  #featurecard_bigbox {
+    position: initial;
+  }
 }
-}
-@media (min-width:0px) and (max-width:630px)
-{
-  #featurecard_bigbox
-{
-  border: 2px solid rgb(245, 243, 243);
-  box-shadow: 0px 0px 15px;
-  position:static;
-  top: 0px;
-  display: flex;
-  width: 240px;
-  height: 255px;
-  flex-direction: column;
-  margin-top: 20px;
-  justify-content: center;
-  margin-left: 30px;
-  margin-right: 30px;
-  align-items: center;
-}
+@media (min-width: 0px) and (max-width: 630px) {
+  #featurecard_bigbox {
+    position: static;
+    top: 0px;
+  }
 }

@@ -1,27 +1,21 @@
+// Not Removing The Commented Code Because Of use oF RwebShare Which can be used later on
 import React from "react";
 import "./TopicCardHolderEvent.css";
 import { RWebShare } from "react-web-share";
-// import daq from '../src/Cards Images/daq.png'
-// import brakes from '../src/Cards Images/brakes.png'
 function TopicsCardHolderEvent(props) {
   return (
-    <div id='card_container'>
-      <div id='card-image'>
-    
-        <img src={props.srcs} id='daq_blog_image' />
+    <div id="card_container">
+      <div id="card-image">
+        <img src={props.srcs} id="daq_blog_image" />
       </div>
-      {/* <div id='card-title'>{props.heading}</div> */}
-      {/* <div id='card-title'>{props.Topic}</div>
-      <div id='card-title'>{props.RegistrationLink}</div> */}
-      <div id='card-title'>{props.eventdata}</div>
-      <div id='card-title'>{props.eventtopic}</div> 
-      <div id='card-title'>{props.eventdate}</div>
-      <div id='card-title'>{props.Topic}</div>
-      
-      {/* <img src="https://img.icons8.com/ios/50/000000/forward-arrow.png"/> */}
-      <div id='card-actions'>
-        <div id='shareincard'>
-          <div id='shareincard_image'>
+      <div id="card-title">{props.eventdata}</div>
+      <div id="card-title">{props.eventtopic}</div>
+      <div id="card-title">{props.eventdate}</div>
+      <div id="card-title">{props.Topic}</div>
+
+      <div id="card-actions">
+        <div id="shareincard">
+          <div id="shareincard_image">
             {/* <RWebShare
               data={{
                 text: 'You are sharing link of your favourite blog.',
@@ -47,8 +41,8 @@ function TopicsCardHolderEvent(props) {
           {/* <div id='shareincard_title'>Share</div> */}
           {/* <img src="https://img.icons8.com/material-outlined/50/000000/planner.png"/> */}
         </div>
-        <div id='card_date'>
-          <div id='card_date_image'>
+        <div id="card_date">
+          <div id="card_date_image">
             {/* <a href='/home'>
               <img
                 id='blog_embed_calender'
@@ -61,7 +55,7 @@ function TopicsCardHolderEvent(props) {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default TopicsCardHolderEvent;

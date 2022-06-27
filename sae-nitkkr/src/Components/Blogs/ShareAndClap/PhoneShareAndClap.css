@@ -1,12 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-#clapmobile_inside
-{
-    display: flex;
-  /* background-color: rgb(26, 230, 77); */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+#clapmobile_inside {
+  display: flex;
   height: 45px;
   box-shadow: 2px 2px 5px #aaaaaa;
-  font-family: 'Montserrat', sans-serif;
-   /* border: 2px solid black; */
+  font-family: "Montserrat", sans-serif;
   justify-content: flex-end;
   align-items: center;
   margin-left: 6px;
@@ -14,82 +11,58 @@
   margin-right: 6px;
   width: 100%;
   border-radius: 4px;
-   
 }
-#clapmobile_bigbox
-{
-    /* position: fixed; */
-    /* top: 120px; */
-    height: 30px;
-    
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    padding-bottom: 8px;
-    padding-right: 8px;
-    padding-left: 8px;
-    /* margin-right: 20px; */
-    /* border-radius: 20px; */
-    /* box-shadow: 0px 0px 20px ; */
-}
-#clapmobile_first
-{
-    /* margin-left: 10px; */
-    /* border: 1px solid black; */
-    display: flex;
-    flex-direction: row;
-    
-}
-#clapmobile_second
-{
-    /* margin-right: 10px; */
-    /* border: 1px solid black; */
-    display: flex;
-    flex-direction: row;
-}
-#clapmobile_embed_clapimage_white
-{
-    margin-top: 4px;
-    padding-right: 9px;
-    height: 20px;
-    width: 40px;
-}
-#clapmobile_first_frequency
-{
-    padding-top: 6px;
-}
-#clapmobile_embed_clapimage_black
-{
-    margin-top: 4px;
-    padding-right: 6px;
-    height: 22px;
-    width:40px;
-}
-#clapmobile_embed_clapimage_black:hover
-{
-    cursor: pointer;
-    opacity: 0.9;
-}
-#clapmobile_second_claptext
-{
-    padding-top: 6px;
-}
-#clapmobile_embed_shareimage
-{
-    
-    padding-left: 8px;
-    width: 35px;
-    height: 30px;
-}
-#clapmobile_embed_shareimage:hover
-{
-    cursor: pointer;
-}
-@media (min-width: 768px) and (max-width: 1440px){
-    #clapmobile_bigbox
-    {
-        display: none;
-    }
+#clapmobile_bigbox {
+  height: 30px;
 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 8px;
+  padding-right: 8px;
+  padding-left: 8px;
+}
+#clapmobile_first {
+  display: flex;
+  flex-direction: row;
+}
+#clapmobile_second {
+  display: flex;
+  flex-direction: row;
+}
+#clapmobile_embed_clapimage_white {
+  margin-top: 4px;
+  padding-right: 9px;
+  height: 20px;
+  width: 40px;
+}
+#clapmobile_first_frequency {
+  padding-top: 6px;
+}
+#clapmobile_embed_clapimage_black {
+  margin-top: 4px;
+  padding-right: 6px;
+  height: 22px;
+  width: 40px;
+}
+#clapmobile_embed_clapimage_black:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+#clapmobile_second_claptext {
+  padding-top: 6px;
+}
+#clapmobile_embed_shareimage {
+  padding-left: 8px;
+  width: 35px;
+  height: 30px;
+}
+#clapmobile_embed_shareimage:hover {
+  cursor: pointer;
+}
+@media (min-width: 768px) and (max-width: 1440px) {
+  #clapmobile_bigbox {
+    display: none;
+  }
 }
