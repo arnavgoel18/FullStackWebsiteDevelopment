@@ -15,10 +15,6 @@ function Login() {
       localStorage.setItem("token","shivaji");
        e.preventDefault();
        setloggedin(true);
-      //  console.log(userid);
-      //  console.log(password);
-      //  console.log(loggedin);
-       
      
     }
     else{
@@ -63,7 +59,6 @@ function Login() {
             }}/></div>
               <br/>
               <div id="logincompo4"><button id="loginbut" onClick={checkCredentials}>LOGIN</button></div>
-              {/* <!-- <div id="logincompo5"> <a href="google.com"> <h5 style="font-family: 'Montserrat', sans-serif; text-align: center;">Forgot <span style="font-family: 'Montserrat', sans-serif;">Username/Password</span></h5></div></a> --> */}
             </div>
         </div>
     </div>

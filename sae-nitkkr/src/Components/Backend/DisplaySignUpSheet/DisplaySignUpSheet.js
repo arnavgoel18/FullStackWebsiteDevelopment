@@ -309,7 +309,7 @@ function DisplaySignUpSheet() {
 
   return (
     <>
-      <PageHeader heading="SignUp Sheet" />
+      <PageHeader heading="Autokriti Registeration" />
       <BackSignOutPanel />
       <div className="displayDiv">
         <div className="displayFInalAmbassador_uploadBox">

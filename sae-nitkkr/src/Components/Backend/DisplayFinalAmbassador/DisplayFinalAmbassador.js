@@ -172,7 +172,7 @@ function DisplayFinalAmbassador() {
     else{
         return (
             <>
-                <PageHeader heading="Selected Ambassador" />
+                <PageHeader heading="Ambassador Responses" />
                 <div className="displayFInalAmbassador_displayDiv">
                     <BackSignOutPanel/>
                     <div className="displayFInalAmbassador_uploadBox">

@@ -1,22 +1,22 @@
 import React, {useMemo, useState, useEffect } from "react";
 import { Redirect } from "react-router-dom";
-import "./DisplayFInalAmbassador.css"
-import PageHeader from "../../../Components/Backend/PageHeader/PageHeader";
+import "./DisplayClgRepresentatives.css"
 import BackSignOutPanel from "../../../Components/Backend/BackSignOutPanel/BackSignOutPanel";
+import PageHeader from "../../../Components/Backend/PageHeader/PageHeader";
 
 //firestore
 import db from "../../../Firebase.js";
 import {
     collection,
     getDocs,
-    Timestamp,
     doc,
     setDoc,
     addDoc
 } from "firebase/firestore";
+import { connectStorageEmulator } from "firebase/storage";
 
 //function to get data form database
-function DisplayFinalAmbassador() {
+function DisplayClgRepresentatives() {
     var studentDetails = [];
     var cvsFileData = [];
     var mergedCsvData = [];
@@ -28,8 +28,8 @@ function DisplayFinalAmbassador() {
 
     //Get Information from Firebase into detailList array
     async function getInfo() {
-        const studentAmbassador = collection(db, "finalStudentAmbassador");
-        var amb_doc = await getDocs(studentAmbassador);
+        const collegeAmbassadors = collection(db, "collegeRepresentatives");
+        var amb_doc = await getDocs(collegeAmbassadors);
         studentDetails = amb_doc.docs.map((doc) => doc.data());
 
         amb_doc.forEach((doc) => {
@@ -55,6 +55,35 @@ function DisplayFinalAmbassador() {
         (async () => {await getInfo();})();
         setTester(true)
     }
+    const columns = useMemo(
+        () => [
+          {
+            Header: "Name"
+          },
+          {
+            Header: "College"
+          },
+          {
+            Header: "Semester"
+          },
+          {
+            Header: "Branch"
+          },
+          {
+            Header: "Phone"
+          },
+          {
+            Header: "Email"
+          },
+          {
+            Header: "Referral Code"
+          },
+          {
+            Header: "No. of Referrals"
+          }
+        ],
+        []
+      );
     
       function downloadCsv() {
         if (CsvDetail.length == 0) {
@@ -84,7 +113,7 @@ function DisplayFinalAmbassador() {
         hiddenElement.target = "_blank";
 
         //provide the name for the CSV file to be downloaded
-        hiddenElement.download = "finalStudentAmbassadorData.csv";
+        hiddenElement.download = "collegeRepresentatives.csv";
         hiddenElement.click();
       }
 
@@ -116,7 +145,7 @@ function DisplayFinalAmbassador() {
     }
 
     async function processFile(){
-        document.querySelector('.displayFInalAmbassador_loader').style.display = 'block';
+        document.querySelector('.displayClgRepresentatives_loader').style.display = 'block';
         const ref = await getDocs(collection(db, "LengthSelectedStudent"));
         var counter = ref.docs.map((doc) => doc.data())[0].len
         var myFile = document.querySelector('#userFileInput').files[0];
@@ -137,20 +166,20 @@ function DisplayFinalAmbassador() {
                         numberReferrals: 0
                     };
                     (async () => {
-                        await addDoc(collection(db, "finalStudentAmbassador"), obj);    
+                        await addDoc(collection(db, "collegeRepresentatives"), obj);    
                     })();
                     counter++;
                 }
             }
             //update counter
             (async () => {await setDoc(doc(collection(db, "LengthSelectedStudent"), "1111"), {"len": counter});
-            document.querySelector('.displayFInalAmbassador_loader').style.display = 'none';
-            document.querySelector('.displayFInalAmbassador_responseText').style.display = 'block';
-            document.querySelector('.displayFInalAmbassador_responseText').textContent = 'upload done!';
+            document.querySelector('.displayClgRepresentatives_loader').style.display = 'none';
+            document.querySelector('.displayClgRepresentatives_responseText').style.display = 'block';
+            document.querySelector('.displayClgRepresentatives_responseText').textContent = 'upload done!';
             setLoading(true)
             getInfo()
             setTimeout(()=>{
-                document.querySelector('.displayFInalAmbassador_responseText').style.display = 'none';
+                document.querySelector('.displayClgRepresentatives_responseText').style.display = 'none';
             }, 3000)
         })();
         });
@@ -172,48 +201,49 @@ function DisplayFinalAmbassador() {
     else{
         return (
             <>
-                <PageHeader heading="Selected Ambassador" />
-                <div className="displayFInalAmbassador_displayDiv">
+                <PageHeader heading="Ambassador Responses" />
+                <div className="displayClgRepresentatives_displayDiv">
                     <BackSignOutPanel/>
-                    <div className="displayFInalAmbassador_uploadBox">
+                    <div className="displayClgRepresentatives_uploadBox">
                         <input type="file" id="userFileInput" onChange={processFile} accept=".csv"/>
-                        <div className="displayFInalAmbassador_uploadFileButton" onClick={triggerFileInput}>Upload New</div>
-                        <div className="displayFInalAmbassador_loader"></div>
-                        <div className="displayFInalAmbassador_responseText"></div>
+                        <div className="displayClgRepresentatives_uploadFileButton" onClick={triggerFileInput}>Upload New</div>
+                        <div className="displayClgRepresentatives_loader"></div>
+                        <div className="displayClgRepresentatives_responseText"></div>
                     </div>
-                    <a className="displayFInalAmbassador_downloadCsv">
+                    <a className="displayClgRepresentatives_downloadCsv">
                     <i
                         onClick={downloadCsv}
                         className="fa fa-download"
                         aria-hidden="true"
                     ></i>
                     </a>
-                    <div className="displayFInalAmbassador_ambassadorBlock">
+                    <div className="displayClgRepresentatives_ambassadorBlock">
                        {/* <Table columns={columns} data={studentDetails} /> */}
-                       <table>
+                       <table className="displayClgRepresentatives_table">
                            <thead>
                                <tr>
-                                    <th className="displayFInalAmbassador_th">Name</th>
-                                    <th className="displayFInalAmbassador_th">College</th>
-                                    <th className="displayFInalAmbassador_th">Semester</th>
-                                    <th className="displayFInalAmbassador_th">Branch</th>
-                                    <th className="displayFInalAmbassador_th">Phone</th>
-                                    <th className="displayFInalAmbassador_th">Email</th>
-                                    <th className="displayFInalAmbassador_th">Referral Code</th>
-                                    <th className="displayFInalAmbassador_th">No. of Referrals</th>
+                                    <th className="displayClgRepresentatives_th">Name</th>
+                                    <th className="displayClgRepresentatives_th">College</th>
+                                    <th className="displayClgRepresentatives_th">Semester</th>
+                                    <th className="displayClgRepresentatives_th">Branch</th>
+                                    <th className="displayClgRepresentatives_th">Phone</th>
+                                    <th className="displayClgRepresentatives_th">Email</th>
+                                    <th className="displayClgRepresentatives_th">Referral Code</th>
+                                    <th className="displayClgRepresentatives_th">No. of Referrals</th>
                                </tr>
                            </thead>
                            <tbody>
                             {studentDetails.map(item => {
                                 return <tr>
-                                    <td className="displayFInalAmbassador_td">{item.studentName} </td>
-                                    <td className="displayFInalAmbassador_td">{item.collegeName} </td>
-                                    <td className="displayFInalAmbassador_td">{item.semester} </td>
-                                    <td className="displayFInalAmbassador_td">{item.branch} </td>
-                                    <td className="displayFInalAmbassador_td">{item.phone} </td>
-                                    <td className="displayFInalAmbassador_td">{item.email} </td>
-                                    <td className="displayFInalAmbassador_td">{item.referralCode} </td>
-                                    <td className="displayFInalAmbassador_td">{item.numberReferrals} </td>
+                                    <td className="displayClgRepresentatives_td">{item.studentName} </td>
+                                    <td className="displayClgRepresentatives_td">{item.collegeName} </td>
+                                    <td className="displayClgRepresentatives_td">{item.semester} </td>
+                                    <td className="displayClgRepresentatives_td">{item.branch} </td>
+                                    <td className="displayClgRepresentatives_td">{item.phone} </td>
+                                    <td className="displayClgRepresentatives_td">{item.email} </td>
+                                    <td className="displayClgRepresentatives_td">{item.referralCode} </td>
+                                    <td className="displayClgRepresentatives_td">{item.numberReferrals} </td>
+                                    
                                 </tr>;
                                 })}
                            </tbody>
@@ -226,4 +256,4 @@ function DisplayFinalAmbassador() {
     }
 }
 
-export default DisplayFinalAmbassador;
+export default DisplayClgRepresentatives;
