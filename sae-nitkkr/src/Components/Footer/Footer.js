@@ -10,11 +10,6 @@ function Footer({ type = 'black' }) {
   var color = type === 'black' ? 'white' : 'black';
   var background = type === 'black' ? 'black' : 'white';
 
-  useLayoutEffect(() => {
-    if(type==='black')
-    document.querySelectorAll('a').forEach((e) => (e.style.color = 'white'))
-  }, [type])
-
   return (
     <div
       className='footer_bar'

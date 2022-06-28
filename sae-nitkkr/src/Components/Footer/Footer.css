@@ -7,6 +7,9 @@
     font-size: 12px;
     padding: 5vh 0;
 }
+.footer_bar a{
+  color: inherit;
+}
 .footer_box{
    padding:10px;
    width:280px;
