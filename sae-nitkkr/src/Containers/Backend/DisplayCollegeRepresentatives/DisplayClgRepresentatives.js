@@ -1,14 +1,14 @@
 import React, {useMemo, useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import { Redirect } from "react-router-dom";
-import BackSignOutPanel from "../../../Components/Backend/BackSignOutPanel/BackSignOutPanel";
 import "./DisplayClgRepresentatives.css"
+import BackSignOutPanel from "../../../Components/Backend/BackSignOutPanel/BackSignOutPanel";
 import PageHeader from "../../../Components/Backend/PageHeader/PageHeader";
+
+//firestore
 import db from "../../../Firebase.js";
 import {
     collection,
     getDocs,
-    Timestamp,
     doc,
     setDoc,
     addDoc
@@ -201,7 +201,7 @@ function DisplayClgRepresentatives() {
     else{
         return (
             <>
-                <PageHeader heading="Ambassador Responses" />
+                <PageHeader heading="College Representatives" />
                 <div className="displayClgRepresentatives_displayDiv">
                     <BackSignOutPanel/>
                     <div className="displayClgRepresentatives_uploadBox">

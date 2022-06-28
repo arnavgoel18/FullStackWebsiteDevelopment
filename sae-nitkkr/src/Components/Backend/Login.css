@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+*
+{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+#logincontainer
+{
+    height:100vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center ;
+    align-content: center;
+}
+#loginbox
+{
+    background-color: white;
+    height: 500px;
+    width: 800px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 20px ;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+}
+#loginlogo
+{
+    height: 250px;
+    width: 200px;
+    background-color: tomato;
+}
+#h2comp1
+{
+    font-family: 'Montserrat', sans-serif; text-align: center;font-weight: 900;
+}
+#loginmain
+{
+    height: 250px;
+    width: 400px;
+           
+}
+#login_man-sitting
+{
+    height: 250px;
+    width: 250px;
+}
+#loginbut
+{
+    position: relative;
+    height: 35px;
+    width: 250px;
+    border-radius: 20px;
+    background-color: rgb(255, 94, 0);
+    font-size: 15px;
+    letter-spacing: 1.2px;
+    color:rgb(247, 246, 248);
+    position: relative;
+    font-weight: bold;
+    border:none;
+    outline: none;
+    cursor: pointer;
+}
+#loginmain
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    outline: none;   
+}
+input#loginadmin
+{
+    background-image:url("https://img.icons8.com/ios-glyphs/30/000000/new-post.png");
+    background-position:15px;
+    font-family: 'Montserrat', 'sans-serif'; padding-left: 50px;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    width: 250px;
+    z-index: 1;
+}
+input#loginpass
+{
+    background-image: url("https://img.icons8.com/ios-glyphs/30/000000/lock--v1.png");
+    background-position:15px;
+    background-repeat: no-repeat;
+    font-family: 'Montserrat', 'sans-serif'; padding-left: 50px;
+    background-size: 20px;
+    width: 250px;
+    z-index: 1;
+}
+.con
+{
+    height: 35px;
+    width: 200px;
+    border-radius: 20px;
+    background-color: lightgrey;
+    border:none;
+    outline: none;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+
+@media (min-width:768px) and (max-width:1024px)
+{
+    #loginbox{
+        height:520px;
+        width: 500px;
+    }
+}
+
+@media (min-width:425px) and (max-width:768px)
+{
+    #loginbox{
+        height:400px;
+        width: 365px;        
+    }
+    #loginlogo{
+        height: 120px;
+        width: 120px;
+    }
+    #login_man-sitting
+    {
+        height: 120px;
+        width: 120px;
+    }
+}
+        
+@media (min-width:375px) and (max-width:425px)
+{
+    #loginbox{
+        height:350px;
+        width: 300px;
+    }
+    #loginlogo{
+        height: 80px;
+        width: 80px;
+    }
+    #login_man-sitting
+    {
+        height: 80px;
+        width: 80px;
+    }
+}
+
+@media (min-width:320px) and (max-width:375px)
+{
+    #loginbox{      
+        height:300px;
+        width: 300px;
+    }
+    #loginlogo
+    {
+        height: 50px;
+        width: 30px;
+    }
+    #login_man-sitting
+    {
+        height: 50px;
+        width: 50px;
+    }
+}
+        

@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import { useState, useEffect } from "react";
 import { Redirect } from "react-router-dom";
-
 import PageHeader from "../../../Components/Backend/PageHeader/PageHeader";
 import BackSignOutPanel from "../../../Components/Backend/BackSignOutPanel/BackSignOutPanel";
-
 import "./DisplaySignUpSheet.css";
 
 import db from "../../../Firebase.js";
@@ -16,7 +14,7 @@ import {
   setDoc,
   addDoc,
 } from "firebase/firestore";
-import { BiDockBottom } from "react-icons/bi";
+
 
 function DisplaySignUpSheet() {
   var cvsFileData = [];
@@ -311,7 +309,7 @@ function DisplaySignUpSheet() {
 
   return (
     <>
-      <PageHeader heading="Autokriti Registeration" />
+      <PageHeader heading="SignUp Sheet" />
       <BackSignOutPanel />
       <div className="displayDiv">
         <div className="displayFInalAmbassador_uploadBox">
@@ -353,18 +351,7 @@ function DisplaySignUpSheet() {
               <option value="Divide Slots">Divide Slots</option>
             </select>
           </div>
-          {/* {
-                        console.log("SLOT")
-                    }
-                    {
-                        console.log(slotData)
-                    }
-                    {
-                        console.log("SEM")
-                    }
-                    {
-                        console.log(semData)
-                    } */}
+        
           <div className="display_analytics_reg-filter">
             Semester:
             <br />

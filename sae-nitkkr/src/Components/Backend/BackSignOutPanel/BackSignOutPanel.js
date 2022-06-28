@@ -1,3 +1,4 @@
+//Back button of admin panel
 import React from "react";
 import './BackSignOutPanel.css'
 import {IoArrowUndoSharp} from "react-icons/io5";

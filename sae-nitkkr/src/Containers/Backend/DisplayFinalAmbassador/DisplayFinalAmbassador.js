@@ -1,6 +1,10 @@
 import React, {useMemo, useState, useEffect } from "react";
 import { Redirect } from "react-router-dom";
 import "./DisplayFInalAmbassador.css"
+import PageHeader from "../../../Components/Backend/PageHeader/PageHeader";
+import BackSignOutPanel from "../../../Components/Backend/BackSignOutPanel/BackSignOutPanel";
+
+//firestore
 import db from "../../../Firebase.js";
 import {
     collection,
@@ -10,9 +14,6 @@ import {
     setDoc,
     addDoc
 } from "firebase/firestore";
-import PageHeader from "../../../Components/Backend/PageHeader/PageHeader";
-import { connectStorageEmulator } from "firebase/storage";
-import BackSignOutPanel from "../../../Components/Backend/BackSignOutPanel/BackSignOutPanel";
 
 //function to get data form database
 function DisplayFinalAmbassador() {
@@ -54,36 +55,6 @@ function DisplayFinalAmbassador() {
         (async () => {await getInfo();})();
         setTester(true)
     }
-
-    // const columns = useMemo(
-    //     () => [
-    //       {
-    //         Header: "Name"
-    //       },
-    //       {
-    //         Header: "College"
-    //       },
-    //       {
-    //         Header: "Semester"
-    //       },
-    //       {
-    //         Header: "Branch"
-    //       },
-    //       {
-    //         Header: "Phone"
-    //       },
-    //       {
-    //         Header: "Email"
-    //       },
-    //       {
-    //         Header: "Referral Code"
-    //       },
-    //       {
-    //         Header: "No. of Referrals"
-    //       }
-    //     ],
-    //     []
-    //   );
     
       function downloadCsv() {
         if (CsvDetail.length == 0) {
@@ -201,7 +172,7 @@ function DisplayFinalAmbassador() {
     else{
         return (
             <>
-                <PageHeader heading="Ambassador Responses" />
+                <PageHeader heading="Selected Ambassador" />
                 <div className="displayFInalAmbassador_displayDiv">
                     <BackSignOutPanel/>
                     <div className="displayFInalAmbassador_uploadBox">
