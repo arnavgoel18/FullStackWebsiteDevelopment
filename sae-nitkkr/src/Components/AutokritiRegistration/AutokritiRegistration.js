@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { FaInfoCircle } from "react-icons/fa";
 import $ from 'jquery'
 import "./AutokritiRegistration.css";
+import saelogo from '../../Assets/SAELOGO.png';
 
 import db from "../../Firebase.js";
 import {
@@ -18,6 +19,62 @@ import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer(black)/FooterBlack";
 
 function Quizsignup() {
+
+  const makePayment = async () => {
+    console.log("here...");
+    const res = await initializeRazorpay();
+
+    if (!res) {
+      alert("Razorpay SDK Failed to load");
+      return;
+    }
+
+    // Make API call to the serverless API
+    const data = await fetch("https://saepayment.herokuapp.com/razorpay", { method: "POST" }).then((t) =>
+      t.json()
+    );
+    console.log(data);
+    var options = {
+      key: 'rzp_test_4N9UbRbW9Gp0Mt', // Enter the Key ID generated from the Dashboard
+      name: "SAE NIT Kurukshetra",
+      currency: data.currency,
+      amount: data.amount,
+      order_id: data.id,
+      description: "Thankyou for your test donation",
+      image: {saelogo},
+      handler: function (response) {
+        // Validate payment at server - using webhooks is a better idea.
+        alert(response.razorpay_payment_id);
+        alert(response.razorpay_order_id);
+        //alert(response.razorpay_signature);
+        console.log('orderid: '+ response.razorpay_order_id, 'paymentid: ' + response.razorpay_payment_id);
+      },
+      prefill: {
+        name: "SAE NIT Kurukshetra",
+        email: "manuarorawork@gmail.com",
+        contact: "9999999999",
+      },
+    };
+
+    const paymentObject = new window.Razorpay(options);
+    paymentObject.open();
+  };
+  const initializeRazorpay = () => {
+    return new Promise((resolve) => {
+      const script = document.createElement("script");
+      script.src = "https://checkout.razorpay.com/v1/checkout.js";
+      document.body.appendChild(script);
+
+      script.onload = () => {
+        resolve(true);
+      };
+      script.onerror = () => {
+        resolve(false);
+      };
+
+      //document.body.appendChild(script);
+    });
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -351,10 +408,10 @@ function Quizsignup() {
               value={userData.semester}
               onChange={postUserData}
             >
-              <option value='' selected disabled hidden>
+              <option defaultValue={'DEFAULT'} disabled hidden>
                 Choose here
               </option>
-              <option value='0'>--None Selected--</option>
+              <option value="DEFAULT">--None Selected--</option>
               <option value='1'>1</option>
               <option value='2'>2</option>
               <option value='3'>3</option>
@@ -406,7 +463,7 @@ function Quizsignup() {
           <div id='pay_button'>
             <div id='paynow'>
               <button
-                onClick={routeChange}
+                onClick={makePayment}
                 className='payform-button'
                 id='payform-button1'
               >

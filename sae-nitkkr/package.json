@@ -24,6 +24,7 @@
     "quill-image-resize-module": "^3.0.0",
     "quill-image-resize-module-plus": "^1.0.2",
     "quill-image-resize-vue": "^1.0.4",
+    "razorpay": "^2.8.2",
     "react": "^18.2.0",
     "react-beautiful-dnd": "^13.1.0",
     "react-carousel": "^4.3.0",
