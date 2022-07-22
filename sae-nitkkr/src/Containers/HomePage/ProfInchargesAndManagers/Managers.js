@@ -1,7 +1,7 @@
 import PersonCard from './PersonCard';
-import manager1 from '../../../Assets/ProfIncharges/President.jpg';
-import manager2 from '../../../Assets/ProfIncharges/VicePres.jpg';
-import manager3 from '../../../Assets/ProfIncharges/Secy.jpg';
+import manager1 from '../../../Assets/ProfIncharges/President.jpeg';
+import manager2 from '../../../Assets/ProfIncharges/VicePres.jpeg';
+import manager3 from '../../../Assets/ProfIncharges/Secy.jpeg';
 
 function Managers(){
     return(
@@ -10,9 +10,9 @@ function Managers(){
                 <p className="ProfInchargesandManagers-Managers-Heading">Team Managers</p>
                 
                 <div className = "ProfInchargesandManagers-persons_container">
-                    <PersonCard name={"Deepak Yadav"} designation={"President"} page={"manager"} url={manager1} linkedin={"https://www.linkedin.com/in/deepak-yadav-48410a185"} email={"mailto:Dy53844@gmail.com"}/>
-                    <PersonCard name={"Ritik "} designation={"Vice-President"} page={"manager"} url={manager2} linkedin={"http://www.linkedin.com/in/ritik-yadav6097"} email={"mailto:ritikyadav542000@gmail.com"}/>
-                    <PersonCard name={"Sarthak Srivastava"} designation={"Secretary"} page={"manager"} url={manager3} linkedin={"https://www.linkedin.com/in/sarthak-srivastava-69061a188"} email={"mailto:sarthaksrivastava1621@gmail.com"}/>
+                    <PersonCard name={"Aasheesh Bansal"} designation={"President"} page={"manager"} url={manager1} linkedin={"https://www.linkedin.com/in/aasheesh4bansal/"} email={"mailto:Bansalaasheesh7@gmail.com"}/>
+                    <PersonCard name={"Arnav Goel"} designation={"Vice-President"} page={"manager"} url={manager2} linkedin={"https://www.linkedin.com/in/arnav-goel-ba94a21ab/"} email={"mailto:arnav18.goel@gmail.com"}/>
+                    <PersonCard name={"Ishika Mittal"} designation={"Secretary"} page={"manager"} url={manager3} linkedin={"https://www.linkedin.com/in/ishika-mittal-464b971b2/"} email={"mailto:ishikamittal117@gmail.com"}/>
                 </div>
             </div>
         </>
