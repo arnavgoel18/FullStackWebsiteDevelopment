@@ -5,6 +5,7 @@ import $ from 'jquery'
 import "./AutokritiRegistration.css";
 import saelogo from '../../Assets/SAELOGO.png';
 
+
 import db from "../../Firebase.js";
 import {
   collection,
@@ -18,8 +19,9 @@ import {
 import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer(black)/FooterBlack";
 
-function Quizsignup() {
 
+function Quizsignup() {
+ let timestamp=""
   const makePayment = async () => {
     console.log("here...");
     const res = await initializeRazorpay();
@@ -42,12 +44,12 @@ function Quizsignup() {
       order_id: data.id,
       description: "Thankyou for your test donation",
       image: {saelogo},
-      handler: function (response) {
-        // Validate payment at server - using webhooks is a better idea.
-        alert(response.razorpay_payment_id);
-        alert(response.razorpay_order_id);
-        //alert(response.razorpay_signature);
-        console.log('orderid: '+ response.razorpay_order_id, 'paymentid: ' + response.razorpay_payment_id);
+      handler:async (response) =>{
+
+       await handler(response);
+       await set_to_database();
+       window.location = `/after_registration/${timestamp}`;
+       
       },
       prefill: {
         name: "SAE NIT Kurukshetra",
@@ -55,6 +57,31 @@ function Quizsignup() {
         contact: "9999999999",
       },
     };
+    
+
+    const set_to_database=async()=>
+    {
+      console.log(userData)
+    
+      const Saving_user_data = userData
+      let gotit=await setDoc(doc(db, "paymentregistrationid",timestamp), Saving_user_data);
+    //  alert("Congratulations! Your information has been saved successfully.");
+     console.log(gotit);
+    }
+    
+
+const handler=async(response)=>
+{
+  alert(response.razorpay_payment_id);
+  // alert(response.razorpay_order_id);
+  userData.orderid=response.razorpay_order_id;
+  timestamp=response.razorpay_payment_id
+  userData.paymentid=timestamp
+  //alert(response.razorpay_signature);
+  console.log('orderid: '+ response.razorpay_order_id, 'paymentid: ' + response.razorpay_payment_id);
+}
+
+ 
 
     const paymentObject = new window.Razorpay(options);
     paymentObject.open();
@@ -118,6 +145,8 @@ function Quizsignup() {
     semester: "",
     referal: "",
     transaction: "",
+    orderid:"",
+    paymentid:"",
     timeSlot: "26 Feb",
   });
 
@@ -178,7 +207,7 @@ function Quizsignup() {
 
     setUserData({ ...userData, [name]: value });    
 
-    console.log(userData);
+    // console.log(userData);
   };
 
   var [stuData, setStuData] = useState([]);

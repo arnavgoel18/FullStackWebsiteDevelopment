@@ -1,0 +1,17 @@
+.afterregistration_box
+{
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    margin-left: 180px;
+    margin-right: 180px;
+}
+.qr_div
+{
+    display: flex;
+    flex-direction: column;
+    margin-left: 280px;
+    margin-right: 180px;
+    
+    
+}

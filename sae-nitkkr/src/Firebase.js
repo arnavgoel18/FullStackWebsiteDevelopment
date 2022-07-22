@@ -10,6 +10,16 @@ const firebaseConfig = {
    messagingSenderId: "1064644738570",
    appId: "1:1064644738570:web:fc0e1fe0cdbd62e5c829f3"
 
+  // Navneet
+  // apiKey: "AIzaSyDQeEFLi3zX-nEDWwW60ZPZNJFXxFRsMd0",
+  // authDomain: "campus-ambassador-73c58.firebaseapp.com",
+  // projectId: "campus-ambassador-73c58",
+  // storageBucket: "campus-ambassador-73c58.appspot.com",
+  // messagingSenderId: "110188397918",
+  // appId: "1:110188397918:web:cc5c27c138b28c4ce8bbcf",
+  // measurementId: "G-DFL6TQJPWE"
+  //  measurementId: "G-4RVE8QSKD9"
+
   //Kritika
   // apiKey: "AIzaSyAfJTGsx3HsGeJlkIeSTf_VsrlgEw2pfrY",
   // authDomain: "sae-website-127b1.firebaseapp.com",
