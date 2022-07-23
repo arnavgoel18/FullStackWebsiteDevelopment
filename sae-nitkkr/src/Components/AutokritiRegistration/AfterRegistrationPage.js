@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import db from "../../Firebase.js";
 import "./AfterRegistrationPage.css";
 import { QRCodeSVG } from "qrcode.react";
-import QRCode from "qrcode";
+import QRCode from "qrcode.react";
 import {
   collection,
   getDocs,
@@ -44,68 +44,73 @@ function AfterRegistrationPage() {
   window.onload = generateQrcode();
 
   // function sendemail(){
-  //   var email = "kritikaagrawal75@gmail.com" 
+  //   var email = "muskan626bidani@gmail.com" 
   //   var subject = "test" 
   //   var body = "Hello world" 
 
-  //   document.write("<form name="form" action=\"mailto:"+ email +"\?subject="+ subject +"\&body="+ body +"\" method=\"post\" enctype=\"text/plain\"></form>");
-  //   document.form.submit();
+  // document.write("<form name="form" action= \"mailto :"+ email +"\?subject="+ subject +"\&body="+ body +"\" method=\"post\" enctype=\"text/plain\"></form>");
+  //    document.form.submit();
   // }
-
+  // window.onload = (event) => {
+  //   console.log('page is fully loaded');
+  // };
   return (
     <div>
       <NavBar />
-      <p>{id}</p>
+      <div className='payment-id-div'>
+      <i className="fa fa-user" aria-hidden="true"></i>
+      <p >{id}</p></div>
+      <br/>
       <p className="payform-heading">AFTER REGISTRATION PAGE</p>
       <div className="afterregistration_box">
-        <table border={1}>
-          <tr>
-            <th>TITLES</th>
-            <th>VALUES</th>
+        <table>
+          <tr className="table_head">
+            <th className="table_cell first_cell">TITLES</th>
+            <th className="table_cell">VALUES</th>
           </tr>
-          <tr>
-            <td>NAME</td>
-            <td>{authorised_user.name}</td>
+          <tr className="table_row">
+            <td className="table_cell first_cell">NAME</td>
+            <td className="table_cell">{authorised_user.name}</td>
           </tr>
-          <tr>
-            <td>EMAIL</td>
-            <td>{authorised_user.email}</td>
+          <tr className="table_row">
+            <td className="table_cell first_cell">EMAIL</td>
+            <td className="table_cell">{authorised_user.email}</td>
           </tr>
-          <tr>
-            <td>COLLEGE</td>
-            <td>{authorised_user.college}</td>
+          <tr className="table_row">
+            <td className="table_cell first_cell">COLLEGE</td>
+            <td className="table_cell">{authorised_user.college}</td>
           </tr>{" "}
-          <tr>
-            <td>BRANCH</td>
-            <td>{authorised_user.branch}</td>
+          <tr className="table_row">
+            <td className="table_cell first_cell">BRANCH</td>
+            <td className="table_cell">{authorised_user.branch}</td>
           </tr>
-          <tr>
-            <td>SEMESTER</td>
-            <td>{authorised_user.semester}</td>
+          <tr className="table_row">
+            <td className="table_cell first_cell">SEMESTER</td>
+            <td className="table_cell">{authorised_user.semester}</td>
           </tr>{" "}
-          <tr>
-            <td>PHONE NO.</td>
-            <td>{authorised_user.phone}</td>
+          <tr className="table_row">
+            <td className="table_cell first_cell">PHONE NO.</td>
+            <td className="table_cell">{authorised_user.phone}</td>
           </tr>{" "}
-          <tr>
-            <td>ORDER ID</td>
-            <td>{authorised_user.orderid}</td>
+          <tr className="table_row">
+            <td className="table_cell first_cell">ORDER ID</td>
+            <td className="table_cell">{authorised_user.orderid}</td>
           </tr>{" "}
-          <tr>
-            <td>PAYMENT ID</td>
-            <td>{authorised_user.paymentid}</td>
+          <tr className="table_row">
+            <td className="table_cell first_cell">PAYMENT ID</td>
+            <td className="table_cell">{authorised_user.paymentid}</td>
           </tr>{" "}
-          <tr>
-            <td>TIMESLOT</td>
-            <td>{authorised_user.timeSlot}</td>
+          <tr className="table_row">
+            <td className="table_cell first_cell">TIMESLOT</td>
+            <td className="table_cell">{authorised_user.timeSlot}</td>
           </tr>{" "}
-          <tr>
-            <td>REFERAL</td>
-            <td>{authorised_user.referal}</td>
+          <tr className="table_row">
+            <td className="table_cell first_cell">REFERAL</td>
+            <td className="table_cell">{authorised_user.referal}</td>
           </tr>
-          <tr>{" "}
-            <td>STATUS</td>
-            <td>{authorised_user.status}</td>
+          <tr className="table_row">{" "}
+            <td className="table_cell first_cell">STATUS</td>
+            <td className="table_cell">{authorised_user.status}</td>
           </tr>
         </table>
         <div className="qr_div">
