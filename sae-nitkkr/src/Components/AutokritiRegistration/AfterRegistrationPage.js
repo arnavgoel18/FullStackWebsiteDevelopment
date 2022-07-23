@@ -29,18 +29,6 @@ function AfterRegistrationPage() {
     console.log(docSnap.data());
     setqrvisible(true);
   }
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   emailjs.sendForm("service_4o6ffqm", "template_9cvft8w", form.current, "USER_ID").then(
-  //     (result) => {
-  //       alert("Message Sent Successfully");
-  //       console.log(result.text);
-  //     },
-  //     (error) => {
-  //       console.log(error.text);
-  //     }
-  //   );
-  // };
   const generateQrcode = async () => {
     try {
       const response = await QRCode.toDataURL(`https://saenitkurukshetra.in/registered/${authorised_user.paymentid}`);
