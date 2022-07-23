@@ -46,7 +46,7 @@ function Quizsignup() {
 
   const makePayment = async () => {
 
-    const checkAllData = true;
+    const checkAllData = checkAllFields();
     if(checkAllData){
     const res = await initializeRazorpay();
 
@@ -163,6 +163,7 @@ function Quizsignup() {
     orderid: "",
     paymentid: "",
     timeSlot: "26 Feb",
+    status: 'Registered'
   });
 
   let name, value;

@@ -48,6 +48,7 @@ import CertiImage from './Containers/Autokriti/Certificates/CertiImage';
 import CAcerti from './Containers/Ambassador/CAcerti/CAcerti';
 import CAcertiImage from './Containers/Ambassador/CAcerti/CAcertiImage'
 import AfterRegistrationPage from './Components/AutokritiRegistration/AfterRegistrationPage';
+import Registered from './Components/AutokritiRegistration/Registered';
 
 //import RegistrationForm from "./Containers/Autokriti/RegistrationForm/RegistrationForm";
 
@@ -67,6 +68,7 @@ function App() {
             <Route path="/sponsors" exact component={() => <Sponsors/>}/>
             <Route path="/contactus" exact component={() => <ContactUS/>} />
             <Route path="/after_registration/:id" exact component={() => <AfterRegistrationPage/>} />
+            <Route path="/registered/:id" exact component={() => <Registered/>} />
             
             {/* Blogs */}
             <Route path="/blogs" exact component={() => <Blogs/>}/>

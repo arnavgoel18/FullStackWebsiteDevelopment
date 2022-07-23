@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import db from "../../Firebase.js";
-import "./AfterRegistrationPage.css";
-import { QRCodeSVG } from "qrcode.react";
-import QRCode from "qrcode";
+import {FaUser} from 'react-icons/fa';
+import "./Registered.css";
 import {
   collection,
   getDocs,
@@ -16,49 +15,43 @@ import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer(black)/FooterBlack";
 import { useParams } from "react-router-dom";
 
-function AfterRegistrationPage() {
+var flag = true;
+function Registered() {
   const { id } = useParams();
   const [authorised_user, setauthorised_user] = useState({});
-  const [qrvisible, setqrvisible] = useState(false);
-  const [imageURL, setimageURL] = useState("");
-  let user = {};
+
   async function getdata() {
     const docRef = doc(db, "paymentregistrationid", id);
     const docSnap = await getDoc(docRef);
     setauthorised_user(docSnap.data());
-    console.log(docSnap.data());
-    setqrvisible(true);
   }
 
-  const generateQrcode = async () => {
-    try {
-      const response = await QRCode.toDataURL(`https://saenitkurukshetra.in/registered/${authorised_user.paymentid}`);
-      setimageURL(response);
-    } catch (error) {
-      console.log(error);
-    }
-  };
   useEffect(() => {
+    console.log('run');
+    flag = false;
     getdata();
-  }, [imageURL]);
-  window.onload = generateQrcode();
+  }, []);
 
-  // function sendemail(){
-  //   var email = "kritikaagrawal75@gmail.com" 
-  //   var subject = "test" 
-  //   var body = "Hello world" 
-
-  //   document.write("<form name="form" action=\"mailto:"+ email +"\?subject="+ subject +"\&body="+ body +"\" method=\"post\" enctype=\"text/plain\"></form>");
-  //   document.form.submit();
-  // }
+  function changestatus(){
+    let status = document.getElementsByTagName('input')[0].value;
+    if(status == 'saecode')
+    {
+        updateDoc(doc(db, "paymentregistrationid", id), {
+            status: 'Arrived'
+          }).then((res) => {
+            alert("Status changed to arrived. Refresh the page.");
+            });
+    }
+  }
 
   return (
-    <div>
+    <>
       <NavBar />
-      <p>{id}</p>
-      <p className="payform-heading">AFTER REGISTRATION PAGE</p>
-      <div className="afterregistration_box">
-        <table border={1}>
+      <div className="registered_id">
+      <FaUser className="iconlarge"></FaUser>
+      <h3>{id}</h3>
+      </div>
+      <table border={1} className='registered_table'>
           <tr>
             <th>TITLES</th>
             <th>VALUES</th>
@@ -102,35 +95,26 @@ function AfterRegistrationPage() {
           <tr>
             <td>REFERAL</td>
             <td>{authorised_user.referal}</td>
-          </tr>
-          <tr>{" "}
+          </tr>{" "}
+          <tr>
             <td>STATUS</td>
             <td>{authorised_user.status}</td>
           </tr>
         </table>
-        <div className="qr_div">
-          <h3> ONLY QR Code</h3>
-          {qrvisible && (
-            <a href="qr">
-              <QRCodeSVG
-                value={
-                  `https://saenitkurukshetra.in/registered/${authorised_user.paymentid}`
-                }
-              />
-            </a>
-          )}
-          <br />
-          <h3> QR CODE Image(click once to download)</h3>
-          {imageURL != "" ? (
-            <a href={imageURL} download>
-              <img src={imageURL} alt="notfound" />{" "}
-            </a>
-          ) : null}
+
+        <hr />
+        <div className="registered_office">
+            <h3>*Only for Office use</h3><br />
+            <div>
+            <p>Change the student status (Enter the code):</p>
+            <input type="text" name="code" id="code" />
+            </div>
+            <button type="submit" onClick={changestatus}>Submit</button>
         </div>
-      </div>
+      
       <Footer />
-    </div>
+    </>
   );
 }
 
-export default AfterRegistrationPage;
+export default Registered;
