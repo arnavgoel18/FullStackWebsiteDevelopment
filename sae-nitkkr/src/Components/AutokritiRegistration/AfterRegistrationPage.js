@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import db from "../../Firebase.js";
 import "./AfterRegistrationPage.css";
 import { QRCodeSVG } from "qrcode.react";
-import QRCode from "qrcode.react";
+import QRCode from "qrcode";
 import {
   collection,
   getDocs,
@@ -29,7 +29,18 @@ function AfterRegistrationPage() {
     console.log(docSnap.data());
     setqrvisible(true);
   }
-
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   emailjs.sendForm("service_4o6ffqm", "template_9cvft8w", form.current, "USER_ID").then(
+  //     (result) => {
+  //       alert("Message Sent Successfully");
+  //       console.log(result.text);
+  //     },
+  //     (error) => {
+  //       console.log(error.text);
+  //     }
+  //   );
+  // };
   const generateQrcode = async () => {
     try {
       const response = await QRCode.toDataURL(`https://saenitkurukshetra.in/registered/${authorised_user.paymentid}`);
@@ -44,16 +55,18 @@ function AfterRegistrationPage() {
   window.onload = generateQrcode();
 
   // function sendemail(){
-  //   var email = "muskan626bidani@gmail.com" 
-  //   var subject = "test" 
-  //   var body = "Hello world" 
-
-  // document.write("<form name="form" action= \"mailto :"+ email +"\?subject="+ subject +"\&body="+ body +"\" method=\"post\" enctype=\"text/plain\"></form>");
+  //   var emailTo = "muskan626bidani@gmail.com" 
+  //   var emailSub = "test" 
+  //   var emailBody = "Hello world" 
+  //   window.open("mailto:"+emailTo+'?cc='+'&subject='+emailSub+'&body='+emailBody,'_self');
+  //   console.log('page is fully loaded');
+    // document.write("<form name="form" action= \"mailto :"+ email +"\?subject="+ subject +"\&body="+ body +"\" method=\"post\" enctype=\"text/plain\"></form>");
   //    document.form.submit();
   // }
   // window.onload = (event) => {
   //   console.log('page is fully loaded');
   // };
+  // window.onload=sendemail();
   return (
     <div>
       <NavBar />
