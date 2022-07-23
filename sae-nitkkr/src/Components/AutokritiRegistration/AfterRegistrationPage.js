@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import db from "../../Firebase.js";
 import "./AfterRegistrationPage.css";
 import { QRCodeSVG } from "qrcode.react";
+import { send, init } from "emailjs-com";
+import emailjs from '@emailjs/browser';
 import QRCode from "qrcode";
 import {
   collection,
@@ -17,6 +19,7 @@ import Footer from "../Footer/Footer(black)/FooterBlack";
 import { useParams } from "react-router-dom";
 
 function AfterRegistrationPage() {
+  var emailList=[];
   const { id } = useParams();
   const [authorised_user, setauthorised_user] = useState({});
   const [qrvisible, setqrvisible] = useState(false);
@@ -29,7 +32,7 @@ function AfterRegistrationPage() {
     console.log(docSnap.data());
     setqrvisible(true);
   }
-
+  
   const generateQrcode = async () => {
     try {
       const response = await QRCode.toDataURL(`https://saenitkurukshetra.in/registered/${authorised_user.paymentid}`);
@@ -40,8 +43,16 @@ function AfterRegistrationPage() {
   };
   useEffect(() => {
     getdata();
+    
   }, [imageURL]);
+ 
   window.onload = generateQrcode();
+  
+  // async ()=>
+  // {
+  //   await generateQrcode();
+  //   sendEmail();
+  // }
 
   // function sendemail(){
   //   var email = "muskan626bidani@gmail.com" 

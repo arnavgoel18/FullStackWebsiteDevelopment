@@ -4,6 +4,7 @@ import { FaInfoCircle } from "react-icons/fa";
 import $ from "jquery";
 import "./AutokritiRegistration.css";
 import saelogo from "../../Assets/SAELOGO.png";
+import emailjs from '@emailjs/browser';
 
 import db from "../../Firebase.js";
 import {
@@ -71,6 +72,7 @@ function Quizsignup() {
       handler: async (response) => {
         await handler(response);
         await set_to_database();
+        
         window.location = `/after_registration/${timestamp}`;
       },
       prefill: {
@@ -81,12 +83,43 @@ function Quizsignup() {
     };
 
     const set_to_database = async () => {
+      sendEmail();
       const Saving_user_data = userData;
       let gotit = await setDoc(
         doc(db, "paymentregistrationid", timestamp),
         Saving_user_data
+        
       );
+      
+      
     };
+    
+  const sendEmail = () => {
+    const toSend = {
+      name: userData.name,
+      sem: userData.semester,
+      branch:userData.branch,
+      email: userData.email,
+      college:userData.college,
+      OrderId:userData.orderid,
+      PaymentId:userData.paymentid,
+      Phone: userData.phone,
+      QRCodeURL:`https://saenitkurukshetra.in/registered/${userData.paymentid}`
+    };
+    emailjs.send('service_dqf2x44', 'template_zezhpzf', toSend,'ulnoJlsECTLQyCRZ5',)
+    .then(function(response) {
+       console.log('SUCCESS!', response.status, response.text);
+    }, function(error) {
+       console.log('FAILED...', error);
+    });
+    // emailjs.send("service_dqf2x44","template_7wsqgfo","",'ulnoJlsECTLQyCRZ5',{
+    //   // user_id: 'ulnoJlsECTLQyCRZ5',
+    //   to_name: "Babloo bisleri",
+    //   from_name: "saenitkurukshetra",
+    //   message: toSend,
+    //   email: userData.email,
+    //   });
+  }
 
     const handler = async (response) => {
       alert('Congratulations! You have registered successfully with payment ID: ' + response.razorpay_payment_id + ' and order ID: ' + response.razorpay_order_id);
