@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import db from "../../Firebase.js";
 import "./AfterRegistrationPage.css";
 import { QRCodeSVG } from "qrcode.react";
-import { send, init } from "emailjs-com";
-import emailjs from '@emailjs/browser';
+
 import QRCode from "qrcode";
 import {
   collection,
@@ -32,7 +31,6 @@ function AfterRegistrationPage() {
     console.log(docSnap.data());
     setqrvisible(true);
   }
-  
   const generateQrcode = async () => {
     try {
       const response = await QRCode.toDataURL(`https://saenitkurukshetra.in/registered/${authorised_user.paymentid}`);
@@ -55,16 +53,18 @@ function AfterRegistrationPage() {
   // }
 
   // function sendemail(){
-  //   var email = "muskan626bidani@gmail.com" 
-  //   var subject = "test" 
-  //   var body = "Hello world" 
-
-  // document.write("<form name="form" action= \"mailto :"+ email +"\?subject="+ subject +"\&body="+ body +"\" method=\"post\" enctype=\"text/plain\"></form>");
+  //   var emailTo = "muskan626bidani@gmail.com" 
+  //   var emailSub = "test" 
+  //   var emailBody = "Hello world" 
+  //   window.open("mailto:"+emailTo+'?cc='+'&subject='+emailSub+'&body='+emailBody,'_self');
+  //   console.log('page is fully loaded');
+    // document.write("<form name="form" action= \"mailto :"+ email +"\?subject="+ subject +"\&body="+ body +"\" method=\"post\" enctype=\"text/plain\"></form>");
   //    document.form.submit();
   // }
   // window.onload = (event) => {
   //   console.log('page is fully loaded');
   // };
+  // window.onload=sendemail();
   return (
     <div>
       <NavBar />
