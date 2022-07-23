@@ -71,9 +71,9 @@ function AfterRegistrationPage() {
     <div>
       <NavBar />
       <div className='payment-id-div'>
-      <i className="fa fa-user" aria-hidden="true"></i>
-      <p >{id}</p></div>
-      <br/>
+        <i className="fa fa-user" aria-hidden="true"></i>
+        <p >{id}</p></div>
+      <br />
       <p className="payform-heading">AFTER REGISTRATION PAGE</p>
       <div className="afterregistration_box">
         <table>
@@ -129,13 +129,13 @@ function AfterRegistrationPage() {
         <div className="qr_div">
           <h3> ONLY QR Code</h3>
           {qrvisible && (
-            <a href="qr">
-              <QRCodeSVG
-                value={
-                  `https://saenitkurukshetra.in/registered/${authorised_user.paymentid}`
-                }
-              />
-            </a>
+
+            <QRCodeSVG
+              value={
+                `https://saenitkurukshetra.in/registered/${authorised_user.paymentid}`
+              }
+            />
+
           )}
           <br />
           <h3> QR CODE Image(click once to download)</h3>
