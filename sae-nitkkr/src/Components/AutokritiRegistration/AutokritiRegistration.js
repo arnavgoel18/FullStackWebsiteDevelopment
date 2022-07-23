@@ -1,16 +1,14 @@
 //Registeration Page made for Autokriti 2.0
 import React, { useEffect, useState } from "react";
 import { FaInfoCircle } from "react-icons/fa";
-import $ from 'jquery'
+import $ from "jquery";
 import "./AutokritiRegistration.css";
-import saelogo from '../../Assets/SAELOGO.png';
-
+import saelogo from "../../Assets/SAELOGO.png";
 
 import db from "../../Firebase.js";
 import {
   collection,
   getDocs,
-  Timestamp,
   doc,
   setDoc,
   updateDoc,
@@ -19,11 +17,37 @@ import {
 import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer(black)/FooterBlack";
 
-
 function Quizsignup() {
- let timestamp=""
+  let timestamp = "";
+
+  function checkAllFields(){
+    const { name, email, phone, college, branch, semester, referal, timeSlot } = userData;
+    if (name && email && phone && college && branch && semester) {
+      //if all fields are entered
+      if(phone.length != 10){
+        alert('Please enter a valid mobile number');
+        return false;
+      }
+      else if(!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)){
+        alert("Please enter a valid email address.");
+        return false;
+      }
+      else if (document.getElementById("agree").checked) {
+        return true;
+      } else {
+        alert("Please tick the checkbox under instructions to proceed");
+        return false;
+      }
+    } else {
+      alert("Please fill the data");
+      return false;
+    }
+  }
+
   const makePayment = async () => {
-    console.log("here...");
+
+    const checkAllData = true;
+    if(checkAllData){
     const res = await initializeRazorpay();
 
     if (!res) {
@@ -32,60 +56,52 @@ function Quizsignup() {
     }
 
     // Make API call to the serverless API
-    const data = await fetch("https://saepayment.herokuapp.com/razorpay", { method: "POST" }).then((t) =>
-      t.json()
-    );
+    const data = await fetch("https://saepayment.herokuapp.com/razorpay", {
+      method: "POST",
+    }).then((t) => t.json());
     console.log(data);
     var options = {
-      key: 'rzp_test_4N9UbRbW9Gp0Mt', // Enter the Key ID generated from the Dashboard
+      key: "rzp_test_4N9UbRbW9Gp0Mt", // Enter the Key ID generated from the Dashboard
       name: "SAE NIT Kurukshetra",
       currency: data.currency,
       amount: data.amount,
       order_id: data.id,
       description: "Thankyou for your test donation",
-      image: {saelogo},
-      handler:async (response) =>{
-
-       await handler(response);
-       await set_to_database();
-       window.location = `/after_registration/${timestamp}`;
-       
+      image: { saelogo },
+      handler: async (response) => {
+        await handler(response);
+        await set_to_database();
+        window.location = `/after_registration/${timestamp}`;
       },
       prefill: {
         name: "SAE NIT Kurukshetra",
-        email: "manuarorawork@gmail.com",
-        contact: "9999999999",
+        email: "saenitkurukshetra@gmail.com",
+        contact: "9650735458",
       },
     };
-    
 
-    const set_to_database=async()=>
-    {
-      console.log(userData)
-    
-      const Saving_user_data = userData
-      let gotit=await setDoc(doc(db, "paymentregistrationid",timestamp), Saving_user_data);
-    //  alert("Congratulations! Your information has been saved successfully.");
-     console.log(gotit);
-    }
-    
+    const set_to_database = async () => {
+      const Saving_user_data = userData;
+      let gotit = await setDoc(
+        doc(db, "paymentregistrationid", timestamp),
+        Saving_user_data
+      );
+    };
 
-const handler=async(response)=>
-{
-  alert(response.razorpay_payment_id);
-  // alert(response.razorpay_order_id);
-  userData.orderid=response.razorpay_order_id;
-  timestamp=response.razorpay_payment_id
-  userData.paymentid=timestamp
-  //alert(response.razorpay_signature);
-  console.log('orderid: '+ response.razorpay_order_id, 'paymentid: ' + response.razorpay_payment_id);
-}
+    const handler = async (response) => {
+      alert('Congratulations! You have registered successfully with payment ID: ' + response.razorpay_payment_id + ' and order ID: ' + response.razorpay_order_id);
 
- 
+      userData.orderid = response.razorpay_order_id;
+      timestamp = response.razorpay_payment_id;
+      userData.paymentid = timestamp;
+    };
 
     const paymentObject = new window.Razorpay(options);
     paymentObject.open();
+  }
   };
+
+
   const initializeRazorpay = () => {
     return new Promise((resolve) => {
       const script = document.createElement("script");
@@ -104,23 +120,22 @@ const handler=async(response)=>
   };
 
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+    window.scrollTo(0, 0);
+  }, []);
 
   var [stuData, setStuData] = useState([]);
-  
+
   //Display Referal
-  function i_information_visible()
-  {
-    let k=document.getElementById('i_button_content');
-    k.style.visibility="visible"
-    k.innerHTML = "Enter only if you are applying through an ambassador (max. 10% off)";
+  function i_information_visible() {
+    let k = document.getElementById("i_button_content");
+    k.style.visibility = "visible";
+    k.innerHTML =
+      "Enter only if you are applying through an ambassador (max. 10% off)";
   }
-  
-  function i_information_nonvisible()
-  {
-    let k=document.getElementById('i_button_content');
-    k.style.visibility="hidden"
+
+  function i_information_nonvisible() {
+    let k = document.getElementById("i_button_content");
+    k.style.visibility = "hidden";
   }
   //Display TimeSLot
   // function i_information_visible_time()
@@ -129,7 +144,7 @@ const handler=async(response)=>
   //   j.style.visibility="visible"
   //   j.innerHTML = "Slot-2 is specifically for students having their exams till 25th Feb, so please prefer Slot-1 unless you have similar problem / reason) ";
   // }
-  
+
   // function i_information_nonvisible_time()
   // {
   //   let j=document.getElementById('i_button_content');
@@ -145,8 +160,8 @@ const handler=async(response)=>
     semester: "",
     referal: "",
     transaction: "",
-    orderid:"",
-    paymentid:"",
+    orderid: "",
+    paymentid: "",
     timeSlot: "26 Feb",
   });
 
@@ -157,55 +172,58 @@ const handler=async(response)=>
     value = event.target.value;
     var valid = false;
     //to check referal code
-    if(name === 'referal') {
-      for(var i = 0;i < stuData.length;i++){
-        if(value == stuData[i]){
+    if (name === "referal") {
+      for (var i = 0; i < stuData.length; i++) {
+        if (value == stuData[i]) {
           valid = true;
           break;
         }
       }
-      if(valid === true){
-        document.querySelector('.referral_code_verified').style.display = 'inline'
-        event.target.setAttribute('readonly', 'true')
-        event.target.style.boxShadow = 'none'
-        event.target.style.border = 'none'
-        document.getElementById('original_price').style.textDecoration = 'line-through'
-        document.getElementById('original_price').style.color = 'red'
-        document.getElementById('discounted_price').style.color = 'blue'
-        document.getElementById('discounted_price').style.display = 'block'
-        document.getElementById('show_invalid').style.display = 'none'
-      }
-      else {
-        if(value.length >= 6){
-          document.getElementById('show_invalid').style.display = 'block'
+      if (valid === true) {
+        document.querySelector(".referral_code_verified").style.display =
+          "inline";
+        event.target.setAttribute("readonly", "true");
+        event.target.style.boxShadow = "none";
+        event.target.style.border = "none";
+        document.getElementById("original_price").style.textDecoration =
+          "line-through";
+        document.getElementById("original_price").style.color = "red";
+        document.getElementById("discounted_price").style.color = "blue";
+        document.getElementById("discounted_price").style.display = "block";
+        document.getElementById("show_invalid").style.display = "none";
+      } else {
+        if (value.length >= 6) {
+          document.getElementById("show_invalid").style.display = "block";
+        } else {
+          document.getElementById("show_invalid").style.display = "none";
         }
-        else{
-          document.getElementById('show_invalid').style.display = 'none'
-        }
-        document.querySelector('.referral_code_verified').style.display = 'none'
+        document.querySelector(".referral_code_verified").style.display =
+          "none";
       }
     }
 
     //to make sure same person is not registering again
-    if(name == 'email'){
-      for(var i = 0;i < emailData.length;i++){
-        if(value == emailData[i]){
-          document.getElementById('show_email_is_registered').style.display = 'block';
+    if (name == "email") {
+      for (var i = 0; i < emailData.length; i++) {
+        if (value == emailData[i]) {
+          document.getElementById("show_email_is_registered").style.display =
+            "block";
           document.getElementById("payform-button1").disabled = true;
-          document.getElementById("payform-button1").style.background = 'grey';
-          document.getElementById("payform-button2").disabled = true;
+          document.getElementById("payform-button1").style.background = "grey";
+          //document.getElementById("payform-button2").disabled = true;
           break;
-        }
-        else{
-          document.getElementById('show_email_is_registered').style.display = 'none';
+        } else {
+          document.getElementById("show_email_is_registered").style.display =
+            "none";
           document.getElementById("payform-button1").disabled = false;
-          document.getElementById("payform-button1").style.background = '#1a3c7f';
-          document.getElementById("payform-button2").disabled = false;
+          document.getElementById("payform-button1").style.background =
+            "#1a3c7f";
+          //document.getElementById("payform-button2").disabled = false;
         }
       }
     }
 
-    setUserData({ ...userData, [name]: value });    
+    setUserData({ ...userData, [name]: value });
 
     // console.log(userData);
   };
@@ -229,7 +247,7 @@ const handler=async(response)=>
     //final college representatives
     const colStuInfo = collection(db, "collegeRepresentatives");
     const colStuInfo_doc = await getDocs(colStuInfo);
-   
+
     colStuData = colStuInfo_doc.docs.map((doc) => doc.data().referralCode);
     stuData = stuInfo_doc.docs.map((doc) => doc.data().referralCode);
 
@@ -246,166 +264,163 @@ const handler=async(response)=>
     setEmailData(emailData);
   }
 
-  useEffect(()=>{
-    if(stuData.length === 0){
-      getFinalAmbInfo()
+  useEffect(() => {
+    if (stuData.length === 0) {
+      getFinalAmbInfo();
     }
-  })
+  });
 
-  //this function runs when you click on paynow
-  const routeChange = async (event) => {
-    event.preventDefault();
-    const { name, email, phone, college, branch, semester, referal, timeSlot } = userData;
+  //this function runs when you click on paynow  
 
-    async function getFinalAmbInfo() {
-      //final ambassadors
-      const stuInfo = collection(db, "finalStudentAmbassador");
-      const stuInfo_doc = await getDocs(stuInfo);
-      stuData = stuInfo_doc.docs.map((doc) => doc.data().referralCode);
-      
-      //final college representatives
-      const colStuInfo = collection(db, "collegeRepresentatives");
-      const colStuInfo_doc = await getDocs(colStuInfo);
-      colStuData = colStuInfo_doc.docs.map((doc) => doc.data().referralCode);
+  // const routeChange = async (event) => {
+  //   event.preventDefault();
+  //   const { name, email, phone, college, branch, semester, referal, timeSlot } =
+  //     userData;
 
-      refData = stuInfo_doc.docs.map((doc) => doc.data().numberReferrals);      //final ambassadors
-      colRefData = colStuInfo_doc.docs.map((doc) => doc.data().numberReferrals);      //final college representatives
-      
-      docIdData = stuInfo_doc.docs.map((doc) => doc.id);      //final ambassadors
-      colDocIdData = colStuInfo_doc.docs.map((doc) => doc.id);      //final college representatives
-      
-      setStuData(stuData);
-      setColStuData(colStuData);
-      setRefData(refData);
-      setDocIdData(docIdData);
+  //   async function getFinalAmbInfo() {
+  //     //final ambassadors
+  //     const stuInfo = collection(db, "finalStudentAmbassador");
+  //     const stuInfo_doc = await getDocs(stuInfo);
+  //     stuData = stuInfo_doc.docs.map((doc) => doc.data().referralCode);
 
-      setColRefData(colRefData);
-      setColDocIdData(colDocIdData);
-    }
-    
-    getFinalAmbInfo();
+  //     //final college representatives
+  //     const colStuInfo = collection(db, "collegeRepresentatives");
+  //     const colStuInfo_doc = await getDocs(colStuInfo);
+  //     colStuData = colStuInfo_doc.docs.map((doc) => doc.data().referralCode);
 
-    if (name && email && phone && college && branch && semester) {//if all fields are entered
-      if (document.getElementById("agree").checked) {
-        if(referal){
-          var valid = false;
-          for(var i = 0;i < stuData.length;i++){
-            if(referal == stuData[i]){
-              valid = true;
-              break;
-            }
-            //college student
-            else if(i < colStuData.length){
-              if(referal == colStuData[i]){
-                valid = true;
-                break;
-              }
-            }
-          }
+  //     refData = stuInfo_doc.docs.map((doc) => doc.data().numberReferrals); //final ambassadors
+  //     colRefData = colStuInfo_doc.docs.map((doc) => doc.data().numberReferrals); //final college representatives
 
-          if(valid){
-            window.open("https://rzp.io/l/uIZPhx2y");//discount
-          }
-          else{
-            window.open("https://rzp.io/l/e87mGYT");//no discount
-          }
-        }
-        else{
-          window.open("https://rzp.io/l/e87mGYT");//no discount
-        }
+  //     docIdData = stuInfo_doc.docs.map((doc) => doc.id); //final ambassadors
+  //     colDocIdData = colStuInfo_doc.docs.map((doc) => doc.id); //final college representatives
 
-        document.getElementById("payform-button2").disabled = false;
-        document.getElementById("transaction").disabled = false;
-        
-        return true;
-      } 
-      else {
-        alert(
-          "Please tick the checkbox under instructions to proceed"
-        );
-        return false;
-      }
-    } 
-    else {
-      alert("Please fill the data");
-    }
-  };
+  //     setStuData(stuData);
+  //     setColStuData(colStuData);
+  //     setRefData(refData);
+  //     setDocIdData(docIdData);
+
+  //     setColRefData(colRefData);
+  //     setColDocIdData(colDocIdData);
+  //   }
+
+  //   getFinalAmbInfo();
+
+  //   if (name && email && phone && college && branch && semester) {
+  //     //if all fields are entered
+  //     if (document.getElementById("agree").checked) {
+  //       if (referal) {
+  //         var valid = false;
+  //         for (var i = 0; i < stuData.length; i++) {
+  //           if (referal == stuData[i]) {
+  //             valid = true;
+  //             break;
+  //           }
+  //           //college student
+  //           else if (i < colStuData.length) {
+  //             if (referal == colStuData[i]) {
+  //               valid = true;
+  //               break;
+  //             }
+  //           }
+  //         }
+
+  //         if (valid) {
+  //           window.open("https://rzp.io/l/uIZPhx2y"); //discount
+  //         } else {
+  //           window.open("https://rzp.io/l/e87mGYT"); //no discount
+  //         }
+  //       } else {
+  //         window.open("https://rzp.io/l/e87mGYT"); //no discount
+  //       }
+
+  //       document.getElementById("payform-button2").disabled = false;
+  //       document.getElementById("transaction").disabled = false;
+
+  //       return true;
+  //     } else {
+  //       alert("Please tick the checkbox under instructions to proceed");
+  //       return false;
+  //     }
+  //   } else {
+  //     alert("Please fill the data");
+  //   }
+  // };
 
   return (
     <>
       <NavBar />
       <br />
-      <p className='payform-heading'>REGISTRATION FORM</p>
-      <div className='payform-container'>
-        <div method='POST' className='payform-form'>
-          <div className='field'>
-            {' '}
-            <span className='payform-label'>Full Name * </span>
+      <p className="payform-heading">REGISTRATION FORM</p>
+      <div className="payform-container">
+        <div method="POST" className="payform-form">
+          <div className="field">
+            {" "}
+            <span className="payform-label">Full Name * </span>
             <br />
             <input
-              className='payform-input'
-              type='text'
-              alt='Name'
-              name='name'
-              id='amb_name'
-              required='required'
+              className="payform-input"
+              type="text"
+              alt="Name"
+              name="name"
+              id="amb_name"
+              required="required"
               value={userData.name}
               onChange={postUserData}
-            />{' '}
+            />{" "}
           </div>
 
-          <div className='field'>
-            <span className='payform-label'>Email id* </span>
+          <div className="field">
+            <span className="payform-label">Email id* </span>
             <br />
             <input
-              className='payform-input'
-              type='Email'
-              name='email'
-              id='amb_email'
-              required='required'
+              className="payform-input"
+              type="Email"
+              name="email"
+              id="amb_email"
+              required="required"
               value={userData.email}
               onChange={postUserData}
-            />{' '}
+            />{" "}
           </div>
-          <div id='show_email_is_registered'>
+          <div id="show_email_is_registered">
             This email has alreay been Registered
           </div>
 
-          <div className='field'>
-            <span className='payform-label'>Phone No * </span>
+          <div className="field">
+            <span className="payform-label">Phone No * </span>
             <br />
             <input
-              className='payform-input'
-              type='number'
-              name='phone'
-              required='required'
-              id='amb_phone'
+              className="payform-input"
+              type="number"
+              name="phone"
+              required="required"
+              id="amb_phone"
               value={userData.phone}
               onChange={postUserData}
             />
           </div>
-          <div className='field'>
-            <span className='payform-label'>College</span>
+          <div className="field">
+            <span className="payform-label">College</span>
             <br />
             <input
-              className='payform-input'
-              type='text'
-              required='unrequired'
-              name='college'
-              id='amb_college'
+              className="payform-input"
+              type="text"
+              required="unrequired"
+              name="college"
+              id="amb_college"
               value={userData.college}
               onChange={postUserData}
-            />{' '}
+            />{" "}
           </div>
-          <div className='field'>
-            <span className='payform-label'> Branch </span>
+          <div className="field">
+            <span className="payform-label"> Branch </span>
             <br />
             <input
-              className='payform-input'
-              type='name'
-              name='branch'
-              required='unrequired'
-              id='amb_branch'
+              className="payform-input"
+              type="name"
+              name="branch"
+              required="unrequired"
+              id="amb_branch"
               value={userData.branch}
               onChange={postUserData}
             />
@@ -427,102 +442,101 @@ const handler=async(response)=>
             />
           </div> */}
 
-          <div className='field_select'>
-            <span className='payform-label'>Semester</span>
+          <div className="field_select">
+            <span className="payform-label">Semester</span>
             <select
-              className='payform-dropdown'
-              name='semester'
-              id='amb_semester'
-              required='unrequired'
+              className="payform-dropdown"
+              name="semester"
+              id="amb_semester"
+              required="unrequired"
               value={userData.semester}
               onChange={postUserData}
             >
-              <option defaultValue={'DEFAULT'} disabled hidden>
+              <option defaultValue={"DEFAULT"} disabled hidden>
                 Choose here
               </option>
               <option value="DEFAULT">--None Selected--</option>
-              <option value='1'>1</option>
-              <option value='2'>2</option>
-              <option value='3'>3</option>
-              <option value='4'>4</option>
-              <option value='5'>5</option>
-              <option value='6'>6</option>
-              <option value='7'>7</option>
-              <option value='8'>8</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
             </select>
           </div>
 
-          <div className='field'>
-            {' '}
-            <span className='payform-label'> Referal Code(optional code) </span>
+          <div className="field">
+            {" "}
+            <span className="payform-label"> Referal Code(optional code) </span>
             <img
-              className='referral_code_verified'
-              alt='sos'
-              id='referral_code_verified'
-              src='https://img.icons8.com/color/48/000000/checked-2--v1.png'
+              className="referral_code_verified"
+              alt="sos"
+              id="referral_code_verified"
+              src="https://img.icons8.com/color/48/000000/checked-2--v1.png"
             />
             <br />
-            <div id='referal_check'>
+            <div id="referal_check">
               <input
-                className='payform-input'
-                type='email'
-                name='referal'
-                alt=''
-                id='referal_code'
-                required='unrequired'
+                className="payform-input"
+                type="email"
+                name="referal"
+                alt=""
+                id="referal_code"
+                required="unrequired"
                 value={userData.referal}
                 onChange={postUserData}
               />
               <img
-                id='ref_image'
-                alt='sos'
-                src='https://img.icons8.com/external-dreamstale-lineal-dreamstale/32/000000/external-information-camping-dreamstale-lineal-dreamstale.png'
+                id="ref_image"
+                alt="sos"
+                src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/32/000000/external-information-camping-dreamstale-lineal-dreamstale.png"
                 onMouseOver={i_information_visible}
                 onMouseOut={i_information_nonvisible}
               />
             </div>
           </div>
 
-          <div id='show_invalid'>The Referal Code is Invalid</div>
-          <div id='pay_price'>
-            <div id='pay_price_title'>Price: &nbsp;</div>
-            <div id='original_price'>&#8377; 699</div>
-            <div id='discounted_price'>&#8377; 629</div>
+          <div id="show_invalid">The Referal Code is Invalid</div>
+          <div id="pay_price">
+            <div id="pay_price_title">Price: &nbsp;</div>
+            <div id="original_price">&#8377; 699</div>
+            <div id="discounted_price">&#8377; 629</div>
           </div>
-          <div id='pay_button'>
-            <div id='paynow'>
+          <div id="pay_button">
+            <div id="paynow">
               <button
                 onClick={makePayment}
-                className='payform-button'
-                id='payform-button1'
+                className="payform-button"
+                id="payform-button1"
               >
                 ₹ &nbsp; Pay Now
               </button>
             </div>
-            <div id='i_button_content'>
+            <div id="i_button_content">
               <h4></h4>
             </div>
           </div>
 
-          <div className='field'>
-            {' '}
-            <span className='payform-label'> Payment ID </span>
+          {/* <div className="field">
+            {" "}
+            <span className="payform-label"> Payment ID </span>
             <br />
             <input
-              id='transaction'
-              className='payform-input'
-              type=''
-              name='transaction'
-              alt=''
-             
+              id="transaction"
+              className="payform-input"
+              type=""
+              name="transaction"
+              alt=""
               disabled={true}
-              required=''
+              required=""
               value={userData.transaction}
               onChange={postUserData}
             />
           </div>
 
-          <br />
+          <br /> */}
 
           {/* <div className="field_select">
             <span className="payform-label">Time Slot * 
@@ -544,42 +558,40 @@ const handler=async(response)=>
             <p style={{fontSize: '10px'}}>Slot-2 is specifically for students having their exams till 25th Feb, so please prefer Slot-1 unless you have similar problem / reason)</p>
           </div> */}
 
-          <button
+          {/* <button
             onClick={submit}
-            id='payform-button2'
-            className='payform-button2'
+            id="payform-button2"
+            className="payform-button2"
           >
             Confirm Registration
-          </button>
+          </button> */}
         </div>
 
-        <div className='payform-infocontain'>
-          <div className='payform-info'>
-            <FaInfoCircle /> &nbsp;{' '}
-            <span id='quiz_registration'>Instructions</span>
-            <p className='instruction_para'>
+        <div className="payform-infocontain">
+          <div className="payform-info">
+            <FaInfoCircle /> &nbsp;{" "}
+            <span id="quiz_registration">Instructions</span>
+            <p className="instruction_para">
               * Make sure your email id is correct as you will be getting
               confirmation on that email
             </p>
-            <p className='instruction_para'>
-              * After clicking on Pay, <b>NOTE PAYMENT_ID </b>you get from
-              RazorPay and add it to Payment_ID Field.
+            <p className="instruction_para">
+              * After clicking on Pay, You will be redirected to confirmation page, make sure to download the <b>QR CODE</b> available there.
             </p>
-            <p className='instruction_para'>
-              * Your Registration is incomplete without the valid Payment_Id
-              entered
+            <p className="instruction_para">
+              * You have to show QR code at the time of arrival.
             </p>
-            <p className='instruction_para'>
-              * Payment_Id Field will be <b>activated</b> when payment is made.
+            <p className="instruction_para">
+              * In case of any issue or payment failure, please contact +91-9650735458
             </p>
-            <p className='instruction_para'>* Referal IDs are case-sensitive</p>
+            <p className="instruction_para">* Referal IDs are case-sensitive</p>
           </div>
 
           <br />
 
-          <div className='payform-checkbox'>
-            <input type='checkbox' id='agree' name='' value='' />
-            <div id='read_content'>
+          <div className="payform-checkbox">
+            <input type="checkbox" id="agree" name="" value="" />
+            <div id="read_content">
               I have read and understood the instructions
             </div>
 
@@ -596,129 +608,123 @@ const handler=async(response)=>
 
       <Footer />
     </>
-  )
+  );
 
-  function submit() {
-    var studentName = document.getElementById("amb_name");
-    var collegeName = document.getElementById("amb_college");
-    var branch = document.getElementById("amb_branch");
-    var semester = document.getElementById("amb_semester");
-    var phone = document.getElementById("amb_phone");
-    var email = document.getElementById("amb_email");
-    var referalcode = document.getElementById("referal_code");
-    var transaction = document.getElementById("transaction");
-    var dateOfSubmission = new Date().toLocaleString() + "";
-    var timeSlot = "26 Feb";
-    
-    const docdata = {
-      dateOfSubmission: dateOfSubmission,
-      studentName: studentName.value,
-      collegeName: collegeName.value,
-      branch: branch.value,
-      semester: semester.value,
-      phone: phone.value,
-      email: email.value,
-      referalcode: referalcode.value,
-      transaction: transaction.value,
-      timeSlot: timeSlot,
-    };
-  
-    validateForm(docdata);
-  }
-  
-  //form validation
-  function validateForm(docdata) {
-    if (
-      docdata.studentName == "" ||
-      docdata.collegeName == "" ||
-      docdata.branch == "" ||
-      docdata.phone == "" ||
-      docdata.email == "" ||
-      docdata.transaction == ""
-    ) {
-      alert("Please fill up the required fields.");
-    } else if (docdata.phone.length != 10) {
-      alert("phone number should be of length 10.");
-    } else if (
-      !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(docdata.email)
-    ) {
-      alert("Please enter a valid email address.");
-    } else {
-      setInfo(docdata);
-    }
-  }
-  
-  function deletedata() {
-    var studentName = document.getElementById("amb_name");
-    var collegeName = document.getElementById("amb_college");
-    var branch = document.getElementById("amb_branch");
-    var semester = document.getElementById("amb_semester");
-    var phone = document.getElementById("amb_phone");
-    var email = document.getElementById("amb_email");
-    var referalcode = document.getElementById("referal_code");
-    var transaction = document.getElementById("transaction");
-    studentName.value = null;
-    collegeName.value = null;
-    branch.value = null;
-    semester.value = null;
-    phone.value = null;
-    email.value = null;
-    referalcode.value = null;
-    transaction.value = null;
-  }
-  
-  //save to database
-  async function setInfo(docdata) {
-    document.getElementById("payform-button2").disabled = true;
-    document.getElementById("payform-button2").style.backgroundColor = "gray";
-    
-    //check if referal code is present and update database by 1 count
-    //this code will work only if number of college representatives are less than or equal in number to final ambasadors
-    for(var i = 0;i < stuData.length;i++){
-      if(docdata.referalcode == stuData[i]){
-        refData[i] += 1;
-        await updateDoc(doc(db, "finalStudentAmbassador", docIdData[i]), {
-          numberReferrals: refData[i]
-        });
-        break;
-      }
-      else if(i < colStuData.length){
-        if(docdata.referalcode == colStuData[i]){
-          colRefData[i] += 1;
-          await updateDoc(doc(db, "collegeRepresentatives", colDocIdData[i]), {
-            numberReferrals: colRefData[i]
-          });
-          break;
-        }
-      }
-    }
+  // function submit() {
+  //   var studentName = document.getElementById("amb_name");
+  //   var collegeName = document.getElementById("amb_college");
+  //   var branch = document.getElementById("amb_branch");
+  //   var semester = document.getElementById("amb_semester");
+  //   var phone = document.getElementById("amb_phone");
+  //   var email = document.getElementById("amb_email");
+  //   var referalcode = document.getElementById("referal_code");
+  //   var transaction = document.getElementById("transaction");
+  //   var dateOfSubmission = new Date().toLocaleString() + "";
+  //   var timeSlot = "26 Feb";
 
-  
-    var timestamp = String(new Date().getTime());
-    await setDoc(doc(db, "autokritiRegistration", timestamp), docdata);
-    // sending data for sending mail
-    $.ajax({
-      type: 'POST',
-      // url: 'http://localhost:5000/send_confirmation_mail',
-      url: 'https://mail-sender-nodemailer.herokuapp.com/send_confirmation_mail',
-      data: JSON.stringify(docdata),
-      contentType: 'application/json',
-      dataType: 'json',
-      success: function (resultData) {
-        alert('Save Complete')
-      },
-      error: function (err) {
-        console.log('error' + err)
-      },
-    })
-    alert("Congratulations! You are registered successfully.");
-    deletedata();
-    window.location.reload()
-  
-    
-  }
+  //   const docdata = {
+  //     dateOfSubmission: dateOfSubmission,
+  //     studentName: studentName.value,
+  //     collegeName: collegeName.value,
+  //     branch: branch.value,
+  //     semester: semester.value,
+  //     phone: phone.value,
+  //     email: email.value,
+  //     referalcode: referalcode.value,
+  //     transaction: transaction.value,
+  //     timeSlot: timeSlot,
+  //   };
+
+  //   validateForm(docdata);
+  // }
+
+  // //form validation
+  // function validateForm(docdata) {
+  //   if (
+  //     docdata.studentName == "" ||
+  //     docdata.collegeName == "" ||
+  //     docdata.branch == "" ||
+  //     docdata.phone == "" ||
+  //     docdata.email == "" ||
+  //     docdata.transaction == ""
+  //   ) {
+  //     alert("Please fill up the required fields.");
+  //   } else if (docdata.phone.length != 10) {
+  //     alert("phone number should be of length 10.");
+  //   } else if (
+  //     !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(docdata.email)
+  //   ) {
+  //     alert("Please enter a valid email address.");
+  //   } else {
+  //     setInfo(docdata);
+  //   }
+  // }
+
+  // function deletedata() {
+  //   var studentName = document.getElementById("amb_name");
+  //   var collegeName = document.getElementById("amb_college");
+  //   var branch = document.getElementById("amb_branch");
+  //   var semester = document.getElementById("amb_semester");
+  //   var phone = document.getElementById("amb_phone");
+  //   var email = document.getElementById("amb_email");
+  //   var referalcode = document.getElementById("referal_code");
+  //   var transaction = document.getElementById("transaction");
+  //   studentName.value = null;
+  //   collegeName.value = null;
+  //   branch.value = null;
+  //   semester.value = null;
+  //   phone.value = null;
+  //   email.value = null;
+  //   referalcode.value = null;
+  //   transaction.value = null;
+  // }
+
+  // //save to database
+  // async function setInfo(docdata) {
+  //   document.getElementById("payform-button2").disabled = true;
+  //   document.getElementById("payform-button2").style.backgroundColor = "gray";
+
+  //   //check if referal code is present and update database by 1 count
+  //   //this code will work only if number of college representatives are less than or equal in number to final ambasadors
+  //   for (var i = 0; i < stuData.length; i++) {
+  //     if (docdata.referalcode == stuData[i]) {
+  //       refData[i] += 1;
+  //       await updateDoc(doc(db, "finalStudentAmbassador", docIdData[i]), {
+  //         numberReferrals: refData[i],
+  //       });
+  //       break;
+  //     } else if (i < colStuData.length) {
+  //       if (docdata.referalcode == colStuData[i]) {
+  //         colRefData[i] += 1;
+  //         await updateDoc(doc(db, "collegeRepresentatives", colDocIdData[i]), {
+  //           numberReferrals: colRefData[i],
+  //         });
+  //         break;
+  //       }
+  //     }
+  //   }
+
+  //   var timestamp = String(new Date().getTime());
+  //   await setDoc(doc(db, "autokritiRegistration", timestamp), docdata);
+  //   // sending data for sending mail
+  //   $.ajax({
+  //     type: "POST",
+  //     // url: 'http://localhost:5000/send_confirmation_mail',
+  //     url: "https://mail-sender-nodemailer.herokuapp.com/send_confirmation_mail",
+  //     data: JSON.stringify(docdata),
+  //     contentType: "application/json",
+  //     dataType: "json",
+  //     success: function (resultData) {
+  //       alert("Save Complete");
+  //     },
+  //     error: function (err) {
+  //       console.log("error" + err);
+  //     },
+  //   });
+  //   alert("Congratulations! You are registered successfully.");
+  //   deletedata();
+  //   window.location.reload();
+  // }
 }
-
-
 
 export default Quizsignup;
