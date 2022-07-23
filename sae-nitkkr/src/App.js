@@ -67,7 +67,7 @@ function App() {
             <Route path="/nitrox" exact component={() => <Nitrox />} />
             <Route path="/sponsors" exact component={() => <Sponsors/>}/>
             <Route path="/contactus" exact component={() => <ContactUS/>} />
-            <Route path="/after_registration/:id" exact component={() => <AfterRegistrationPage/>} />
+            <Route path="/register_confirmation/:id" exact component={() => <AfterRegistrationPage/>} />
             <Route path="/registered/:id" exact component={() => <Registered/>} />
             
             {/* Blogs */}

@@ -73,7 +73,7 @@ function Quizsignup() {
         await handler(response);
         await set_to_database();
         
-        window.location = `/after_registration/${timestamp}`;
+        window.location = `/register_confirmation/${timestamp}`;
       },
       prefill: {
         name: "SAE NIT Kurukshetra",
