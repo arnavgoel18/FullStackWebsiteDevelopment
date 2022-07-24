@@ -50,6 +50,12 @@ function Quizsignup() {
     const checkAllData = checkAllFields();
     if(checkAllData){
     const res = await initializeRazorpay();
+    document.getElementById("payform-button1").disabled = true;
+    document.getElementById("payform-button1").style.background = "grey";
+    setTimeout(() => {
+      document.getElementById("payform-button1").disabled = false;
+      document.getElementById("payform-button1").style.background = "#1a3c7f";
+    }, 10000);
 
     if (!res) {
       alert("Razorpay SDK Failed to load");
