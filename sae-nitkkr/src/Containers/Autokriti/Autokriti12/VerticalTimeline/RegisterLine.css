@@ -1,0 +1,38 @@
+.register_line-container{
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+    box-shadow: 10px 10px 10px -5px grey;
+    margin: 1em auto;
+    padding: 1em 2em;
+}
+
+.register_line-btn{
+    width: auto;
+    padding: 0.7em 3em;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    font-size: 22px;
+    background-color: lightcoral;
+    cursor: pointer;
+}  
+
+.register_line-container p{
+    padding: 1em 5em;
+}
+
+@media screen and (max-width: 670px) {
+    .register_line-container{
+        width: 90%;
+        padding: 1em 0;
+    }
+    .register_line-container p{
+        padding: 1em;
+    }
+
+}

@@ -32,7 +32,8 @@ import DisplaySignUpSheet from './Containers/Backend/DisplaySignUpSheet/DisplayS
 import DisplayAllQuizes from "./Containers/Backend/DisplayAllQuizes/DisplayAllQuizes";
 
 
-import Autokriti2 from './Containers/Autokriti/Autokriti2/Autorkriti2'
+// import Autokriti2 from './Containers/Autokriti/Autokriti2/Autorkriti2';
+import Autokriti12 from './Containers/Autokriti/Autokriti12/Autorkriti12';
 import Quizsignup from "./Components/AutokritiRegistration/AutokritiRegistration";
 import ShowAmbassador from "./Containers/Autokriti/ShowAmbassador/ShowAmbassador";
 import ShowAmbLogin from "./Containers/Autokriti/ShowAmbassador/ShowAmbLogin"; 
@@ -93,7 +94,8 @@ function App() {
            
 
             {/* e-Autokriti 2.0 */}
-            <Route path="/e-Autokriti2.0" exact component={()=><Autokriti2/>}/>
+            {/* <Route path="/e-Autokriti2.0" exact component={()=><Autokriti2/>}/> */}
+            <Route path="/Autokriti12" exact component={()=><Autokriti12/>}/>
             <Route path="/autokriti/register" exact component={() => <Quizsignup/>}/>
             <Route path="/ShowAmbassador" exact component={()=><ShowAmbassador/>}/>
             <Route path="/Ambassador/login" exact component={()=><ShowAmbLogin/>}/>
