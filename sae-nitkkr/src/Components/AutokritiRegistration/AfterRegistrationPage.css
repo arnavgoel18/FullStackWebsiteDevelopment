@@ -16,66 +16,108 @@
 .fa fa-user{
     margin:10px ;
 }
+.after-reg-table{
+    width: 60%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 49px;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+.after-reg-table td,th{
+    text-align: center;
+    padding: 10px;
+    border: 1px solid black;
+}
+.after-reg-table th{
+  background-color: #3c4fe0;
+  color: #fff;
+}
+.qr_code{
+margin:20px;
+width:50%;
+}
+.contactus-link{
+    color: #2e37df;
+}
+.qr-inst{
+    margin:20px;
+
+}
+.qr-code-btn{
+    margin: 20px;
+    padding: 10px;
+    color: #fff;
+    background-color: coral;
+    border: 0ch;
+    border-radius: 10px;
+}
 .qr_div
 {
     display: flex;
-    flex-direction: column;
-    margin-left: 380px;
+    /* flex-direction: column; */
+    margin-left: 280px;
+    align-items: center;
     margin-right: 180px;
     
     
 }
-.table_head
-{
-    display: table;
-    width: 80%;
-    margin: 10px auto;
-    font-family: sans-serif;
-    background: #2e37df;
-    padding: 12px 0;
-    color: #fff;
-    font-size: 18px;
-    box-shadow: 0 1px 4px 0px rgba(0,0,50,0.3);
-}
-.table_row{
-    display: table;
-    width: 80%;
-    margin: 10px auto;
-    font-family: sans-serif;
-    background: transparent;
-    padding: 12px 0;
-    color: #555;
-    font-size: 13px;
-    box-shadow: 0 1px 4px 0px rgba(0,0,50,0.3);
-}
-.table-head .table-cell{
-    border-right: none;
-}
-.table_cell{
-    display: table-cell;
-    width: 20%;
-    text-align: center;
-    padding: 4px 0;
-    border-right: 1px solid #d6d4d4;
-    vertical-align: middle;
-}
-.first_cell{
-    text-align: left;
-    padding-left: 10px;
-}
+/* .qr-code{
+    size: 350;
+} */
+
 @media only screen and (max-width: 400px) 
 {
-    
-    .table-row{
-        width: 95%;
+    .afterregistration_box
+    {
+margin:3vw;
+align-items: center;
+padding: 2px;
     }
-    
+    .after-reg-table {
+        margin:2px;
+    }
+    /* .qr-code{
+        size: 250px;
+    } */
+    .qr_code{
+        margin-left:-50px;
+        
+        }
+.qr_div
+{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    margin: 2vw;
+}
+.after-reg-table td,th{
+
+    padding: 3px;
+    font-size: 10px;
+
+}
+.qr-inst{
+    margin:5px;
+font-size: 12px;
+}  
 }
 
 @media (min-width: 400px) and (max-width: 1024px) 
 {
     
-    .table-row{
+    .after-reg-table tr{
         width: 95%;
     }
+    .qr_div
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10vw;
+}
+.afterregistration_box
+{
+    margin-left: 10vw;
+}
 }

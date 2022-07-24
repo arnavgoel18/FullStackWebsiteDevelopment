@@ -47,57 +47,54 @@ function Registered() {
   return (
     <>
       <NavBar />
-      <div className="registered_id">
-      <FaUser className="iconlarge"></FaUser>
-      <h3>{id}</h3>
-      </div>
+     
       <table border={1} className='registered_table'>
           <tr>
             <th>TITLES</th>
             <th>VALUES</th>
           </tr>
           <tr>
-            <td>NAME</td>
+            <td className="td-first">NAME</td>
             <td>{authorised_user.name}</td>
           </tr>
           <tr>
-            <td>EMAIL</td>
+            <td className="td-first">EMAIL</td>
             <td>{authorised_user.email}</td>
           </tr>
           <tr>
-            <td>COLLEGE</td>
+            <td className="td-first">COLLEGE</td>
             <td>{authorised_user.college}</td>
           </tr>{" "}
           <tr>
-            <td>BRANCH</td>
+            <td className="td-first">BRANCH</td>
             <td>{authorised_user.branch}</td>
           </tr>
           <tr>
-            <td>SEMESTER</td>
+            <td className="td-first">SEMESTER</td>
             <td>{authorised_user.semester}</td>
           </tr>{" "}
           <tr>
-            <td>PHONE NO.</td>
+            <td className="td-first">PHONE NO.</td>
             <td>{authorised_user.phone}</td>
           </tr>{" "}
           <tr>
-            <td>ORDER ID</td>
+            <td className="td-first">ORDER ID</td>
             <td>{authorised_user.orderid}</td>
           </tr>{" "}
           <tr>
-            <td>PAYMENT ID</td>
+            <td className="td-first">PAYMENT ID</td>
             <td>{authorised_user.paymentid}</td>
           </tr>{" "}
           <tr>
-            <td>TIMESLOT</td>
+            <td className="td-first">TIMESLOT</td>
             <td>{authorised_user.timeSlot}</td>
           </tr>{" "}
           <tr>
-            <td>REFERAL</td>
+            <td className="td-first">REFERAL</td>
             <td>{authorised_user.referal}</td>
           </tr>{" "}
           <tr>
-            <td>STATUS</td>
+            <td className="td-first">STATUS</td>
             <td>{authorised_user.status}</td>
           </tr>
         </table>

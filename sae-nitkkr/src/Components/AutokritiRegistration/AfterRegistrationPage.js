@@ -46,103 +46,99 @@ function AfterRegistrationPage() {
  
   window.onload = generateQrcode();
   
-  // async ()=>
-  // {
-  //   await generateQrcode();
-  //   sendEmail();
-  // }
-
-  // function sendemail(){
-  //   var emailTo = "muskan626bidani@gmail.com" 
-  //   var emailSub = "test" 
-  //   var emailBody = "Hello world" 
-  //   window.open("mailto:"+emailTo+'?cc='+'&subject='+emailSub+'&body='+emailBody,'_self');
-  //   console.log('page is fully loaded');
-    // document.write("<form name="form" action= \"mailto :"+ email +"\?subject="+ subject +"\&body="+ body +"\" method=\"post\" enctype=\"text/plain\"></form>");
-  //    document.form.submit();
-  // }
-  // window.onload = (event) => {
-  //   console.log('page is fully loaded');
-  // };
-  // window.onload=sendemail();
+  
   return (
     <div>
       <NavBar />
-      <div className='payment-id-div'>
+
+      {/* <div className='payment-id-div'>
         <i className="fa fa-user" aria-hidden="true"></i>
         <p >{id}</p></div>
-      <br />
-      <p className="payform-heading">AFTER REGISTRATION PAGE</p>
-      <div className="afterregistration_box">
-        <table>
-          <tr className="table_head">
-            <th className="table_cell first_cell">TITLES</th>
-            <th className="table_cell">VALUES</th>
-          </tr>
-          <tr className="table_row">
-            <td className="table_cell first_cell">NAME</td>
-            <td className="table_cell">{authorised_user.name}</td>
-          </tr>
-          <tr className="table_row">
-            <td className="table_cell first_cell">EMAIL</td>
-            <td className="table_cell">{authorised_user.email}</td>
-          </tr>
-          <tr className="table_row">
-            <td className="table_cell first_cell">COLLEGE</td>
-            <td className="table_cell">{authorised_user.college}</td>
-          </tr>{" "}
-          <tr className="table_row">
-            <td className="table_cell first_cell">BRANCH</td>
-            <td className="table_cell">{authorised_user.branch}</td>
-          </tr>
-          <tr className="table_row">
-            <td className="table_cell first_cell">SEMESTER</td>
-            <td className="table_cell">{authorised_user.semester}</td>
-          </tr>{" "}
-          <tr className="table_row">
-            <td className="table_cell first_cell">PHONE NO.</td>
-            <td className="table_cell">{authorised_user.phone}</td>
-          </tr>{" "}
-          <tr className="table_row">
-            <td className="table_cell first_cell">ORDER ID</td>
-            <td className="table_cell">{authorised_user.orderid}</td>
-          </tr>{" "}
-          <tr className="table_row">
-            <td className="table_cell first_cell">PAYMENT ID</td>
-            <td className="table_cell">{authorised_user.paymentid}</td>
-          </tr>{" "}
-          <tr className="table_row">
-            <td className="table_cell first_cell">TIMESLOT</td>
-            <td className="table_cell">{authorised_user.timeSlot}</td>
-          </tr>{" "}
-          <tr className="table_row">
-            <td className="table_cell first_cell">REFERAL</td>
-            <td className="table_cell">{authorised_user.referal}</td>
-          </tr>
-          <tr className="table_row">{" "}
-            <td className="table_cell first_cell">STATUS</td>
-            <td className="table_cell">{authorised_user.status}</td>
-          </tr>
-        </table>
-        <div className="qr_div">
-          <h3> ONLY QR Code</h3>
+      <br /> */}
+      <div className="qr_div">
+
+          <div className='qr_code'>
           {qrvisible && (
 
             <QRCodeSVG
               value={
                 `https://saenitkurukshetra.in/registered/${authorised_user.paymentid}`
               }
+              size='220'
+            //  className='qr-code'
             />
 
           )}
-          <br />
-          <h3> QR CODE Image(click once to download)</h3>
-          {imageURL != "" ? (
-            <a href={imageURL} download>
-              <img src={imageURL} alt="notfound" />{" "}
+        </div>
+        <div className="qr-inst">A mail has been sent to your email address confirming your registeration.
+        <br/>
+        Please Download this Qr code and show this at time of arrival for Workshop 
+        <br/>
+        For any queries Contact us at<br/>
+
+        <a className='contactus-link'href="https://saenitkurukshetra.in/contactus">@saenitkurukshetra.in/contactus</a>
+        <br/>
+        {imageURL != "" ? (
+            <a href={imageURL} download> <button className="qr-code-btn">Download Qr Code</button>
+              {/* <img src={imageURL} alt="notfound" />{" "} */}
             </a>
           ) : null}
         </div>
+          
+        </div>
+      
+      <div className="afterregistration_box">
+      <table border={1} className='after-reg-table'>
+          <tr>
+            <th>TITLES</th>
+            <th>VALUES</th>
+          </tr>
+          <tr>
+            <td className="td-first">NAME</td>
+            <td>{authorised_user.name}</td>
+          </tr>
+          <tr>
+            <td className="td-first">EMAIL</td>
+            <td>{authorised_user.email}</td>
+          </tr>
+          <tr>
+            <td className="td-first">COLLEGE</td>
+            <td>{authorised_user.college}</td>
+          </tr>{" "}
+          <tr>
+            <td className="td-first">BRANCH</td>
+            <td>{authorised_user.branch}</td>
+          </tr>
+          <tr>
+            <td className="td-first">SEMESTER</td>
+            <td>{authorised_user.semester}</td>
+          </tr>{" "}
+          <tr>
+            <td className="td-first">PHONE NO.</td>
+            <td>{authorised_user.phone}</td>
+          </tr>{" "}
+          <tr>
+            <td className="td-first">ORDER ID</td>
+            <td>{authorised_user.orderid}</td>
+          </tr>{" "}
+          <tr>
+            <td className="td-first">PAYMENT ID</td>
+            <td>{authorised_user.paymentid}</td>
+          </tr>{" "}
+          <tr>
+            <td className="td-first">TIMESLOT</td>
+            <td>{authorised_user.timeSlot}</td>
+          </tr>{" "}
+          <tr>
+            <td className="td-first">REFERAL</td>
+            <td>{authorised_user.referal}</td>
+          </tr>{" "}
+          <tr>
+            <td className="td-first">STATUS</td>
+            <td>{authorised_user.status}</td>
+          </tr>
+        </table>
+       
       </div>
       <Footer />
     </div>

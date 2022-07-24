@@ -10,12 +10,23 @@
 .registered_table{
     width: 60%;
     margin: auto;
+    margin-top: 30px;
     margin-bottom: 49px;
+    border-collapse: collapse;
+    border: 1px solid black;
 
+}
+.td-first{
+  font-weight: 800;
 }
 .registered_table td,th{
     text-align: center;
     padding: 10px;
+    border: 1px solid black;
+}
+.registered_table th{
+  background-color: #3c4fe0;
+  color: #fff;
 }
 .registered_table tr:nth-child(even) {background-color: #e2e1e1;}
 
