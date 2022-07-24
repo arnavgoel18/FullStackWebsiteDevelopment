@@ -70,9 +70,7 @@ function Teamdiv() {
       <div  classNAme="f2 heading--sanSerif">NITROX</div>
     </div>
 
-    <div className="tl-content">
-      <h1 className="f3 text--accent ttu">Vestibulum laoreet lorem</h1>
-    </div>
+    
 
   </div>
 
@@ -84,9 +82,7 @@ function Teamdiv() {
       <div className="f2 heading--sanSerif">ACCELERONS</div>
     </div>
 
-    <div className="tl-content">
-      <h1 className="f3 text--accent ttu">Phasellus mauris elit</h1>
-    </div>
+    
 
   </div>
 
@@ -98,9 +94,7 @@ function Teamdiv() {
       <div  className="f2 heading--sanSerif">AUTOKRITI</div>
     </div>
 
-    <div className="tl-content">
-      <h1 className="f3 text--accent ttu">Mauris vitae nunc elem</h1>
-    </div>
+  
 
   </div>
 
