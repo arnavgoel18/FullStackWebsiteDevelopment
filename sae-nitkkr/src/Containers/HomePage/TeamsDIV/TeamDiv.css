@@ -23,8 +23,6 @@
         width: 43.3333%;
       }
 
-  
-  
   .tl-item {
     transform: translate3d(0, 0, 0);
     position: relative;
@@ -95,12 +93,6 @@
     border-top: 1px solid #fff;
     border-bottom: 1px solid #fff;
   }
-   .tl-year p {
-      font-family: 'Pathway Gothic One',Helvetica Neue,Helvetica,Arial,sans-serif;
-      font-size: 1.728rem;
-      line-height: 0;
-    }
-  
   
   .tl-bg {
     transform: translate3d(0, 0, 0);
