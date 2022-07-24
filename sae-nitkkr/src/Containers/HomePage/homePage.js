@@ -25,7 +25,7 @@ function HomePage() {
 
             <TeamsDIV />
             <br />
-            <ExploreUs />
+            {/* <ExploreUs /> */}
 
             <Managers />
 
