@@ -14,11 +14,11 @@ function CheckEvents() {
           </h2>
           <div className="CheckOurEvents-events">
             <Session
-              title="Autokriti 2.0"
-              status="Venue: Online"
-              date="Starts 26th Feb On Weekends"
+              title="Autokriti 12.0"
+              status="Venue: NIT Kurukshetra"
+              date="DATE"
               image={Au2Poster}
-              url="/autokriti/register"
+              url="/autokriti12"
             />
             <Session
               title="Quiz"

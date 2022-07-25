@@ -25,13 +25,19 @@ function Autorkriti12(){
                         Details of <b className="about_autokrit-left-subheading">  Autokriti 12</b> Workshop
                     </h2>
                     <p>
-                        Knowledge could be gained via two ways- by the path of prolong experimentation and trial & error or from a mentor who could show you a circumscribed path to learning. Isn’t latter the better option? 
-                        <br/><br/>
-                        SAE NIT Kurukshetra, with its subsidiaries- Team Nitrox and Team Accelerons, is already deep into the technical bog of vehicle designing and manufacturing. And this is what makes Autokriti North India’s largest automobile workshop. 
-                        <br/><br/>
-                        And so here we are with Autokriti 12, where we would lay before you the technical know-how unfurled through years of research & implementations. 
-                        <br/><br/>
-                        This workshop under  Autokriti 12 is a 4-day workshop which will give you an overall idea of working and designing of vehicle’s powertrain. 
+                    Evolution is the necessity of survival. Changes are the only thing consistent. The world is
+transforming and so is the technology – for better and to pave a path for future. For
+reducing the carbon footprint and for the health of this green planet electrical vehicles are
+the future of automotives. As a Society of Automotive Engineers, we are already deep
+inside the veins of these developments                        <br/><br/>
+From overhauling of a 2 stroke engine of a scooter in Autokriti 1 to Toyota Camry’s Hybrid
+Engine in Autokriti 10, we have always matched our steps with innovation. It is our
+determination to keep up with the ever-changing technology that makes us north India’s
+largest automobile workshop. And this Autokriti will be a ride from CV to EV, with a spark of
+electricity to it. <b>#MOBILITY REDEFINED</b>
+<br /><br />
+It’s a 3 day workshop where the entire working of a vehicle will be explained with the
+addition of Porsche star engine and an EV powertrain
                     </p>
                     <Link to="/autokriti/register">
                         <button>Register Here!</button>

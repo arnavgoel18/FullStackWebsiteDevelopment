@@ -5,6 +5,7 @@ import "./TeamDiv.css";
 import Aos from"aos";
 import nitroximg from "../TeamsDIV/def1.webp"
 import accimg from "../TeamsDIV/abc1new.webp"
+import autokritiimg from "../../../Assets/TeamAboutUs/Autokriti.jpg"
 import"aos/dist/aos.css";
 
 function Teamdiv() {
@@ -67,7 +68,7 @@ function Teamdiv() {
     <div className="tl-bg"  style={{ backgroundImage: `url(${nitroximg})`}}></div>
     
     <div className="tl-year">
-      <div  classNAme="f2 heading--sanSerif">NITROX</div>
+      <div  className="f2 heading--sanSerif">NITROX</div>
     </div>
 
     
@@ -88,7 +89,7 @@ function Teamdiv() {
 
   <div className="tl-item" style={{cursor:"pointer"}} onClick={lastworkautokriti}>
     
-    <div className="tl-bg" style={{ backgroundImage: `url("https://placeimg.com/801/801/nature")`}}></div>
+    <div className="tl-bg" style={{ backgroundImage: `url(${autokritiimg})`}}></div>
     
     <div className="tl-year">
       <div  className="f2 heading--sanSerif">AUTOKRITI</div>
