@@ -14,7 +14,7 @@ import Footer from '../../Components/Footer/Footer'
 import AutokritiEvent from '../../Components/AutokritiEvent/AutokritiEvent'
 import AutokritiCheckEvent from '../../Components/AutokritiEvent/AutokritiCheckEvent/AutokritiCheckEvent'
 import PopupCard from './PopUps/PopupCard'
-import Autokirtee12 from './Autokirtee12/Autokirtee12'
+import Autokirtee12 from './Autokirtee12_popup/Autokirtee12'
 
 function Autokriti(){
 
