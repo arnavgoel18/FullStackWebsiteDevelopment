@@ -22,12 +22,15 @@ function Autokirtee12() {
               <div className="Autokirtee12_content">
                 <div className="Autokirtee12_content_left">
                   <div className="Autokirtee12_content_list">
+                  {/* <img src="https://img.icons8.com/ios/50/000000/engine.png"/> */}
                     <p> Transmission</p>
                   </div>
                   <div className="Autokirtee12_content_list">
+                  {/* <img src="https://img.icons8.com/ios/50/000000/engine.png"/> */}
                     <p> Vehical Dynamics</p>
                   </div>
                   <div className="Autokirtee12_content_list">
+                  {/* <img src="https://img.icons8.com/ios/50/000000/engine.png"/> */}
                     <p> Brakes</p>
                   </div>
                 </div>
