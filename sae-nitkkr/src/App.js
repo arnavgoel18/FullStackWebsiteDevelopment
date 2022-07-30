@@ -70,7 +70,7 @@ function App() {
             <Route path="/contactus" exact component={() => <ContactUS/>} />
             <Route path="/register_confirmation/:id" exact component={() => <AfterRegistrationPage/>} />
             <Route path="/registered/:id" exact component={() => <Registered/>} />
-            <Route path="/register/certificate" exact component={()=><Certificate/>}/>
+            <Route path="/register/certificate/:id" exact component={()=><Certificate/>}/>
             {/* Blogs */}
             <Route path="/blogs" exact component={() => <Blogs/>}/>
             <Route path="/blogs/yourblog" exact component={() => <Topic1/>}/>

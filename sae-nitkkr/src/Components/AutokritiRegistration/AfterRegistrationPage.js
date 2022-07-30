@@ -15,7 +15,7 @@ import {
 } from "firebase/firestore";
 import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer(black)/FooterBlack";
-import { useParams } from "react-router-dom";
+import { useParams, Link} from "react-router-dom";
 
 function AfterRegistrationPage() {
   var emailList=[];
@@ -23,6 +23,7 @@ function AfterRegistrationPage() {
   const [authorised_user, setauthorised_user] = useState({});
   const [qrvisible, setqrvisible] = useState(false);
   const [imageURL, setimageURL] = useState("");
+  const [certiUrl, setcertiUrl] = useState("");
   let user = {};
   async function getdata() {
     const docRef = doc(db, "paymentregistrationid", id);
@@ -33,7 +34,7 @@ function AfterRegistrationPage() {
   }
   const generateQrcode = async () => {
     try {
-      const response = await QRCode.toDataURL(`https://saenitkurukshetra.in/registered/${authorised_user.paymentid}`);
+      const response = await QRCode.toDataURL(`https://saenitkurukshetra.in/registered/${authorised_user.paymentid}`); 
       setimageURL(response);
     } catch (error) {
       console.log(error);
@@ -43,9 +44,9 @@ function AfterRegistrationPage() {
     getdata();
     
   }, [imageURL]);
- 
+
   window.onload = generateQrcode();
-  
+
   
   return (
     <div>
@@ -136,6 +137,12 @@ function AfterRegistrationPage() {
           <tr>
             <td className="td-first">STATUS</td>
             <td>{authorised_user.status}</td>
+          </tr>
+          <tr>
+            <td className="td-first">Certificate</td>
+            
+            <td><Link to={`/register/certificate/${id}`}>Download</Link>
+            </td>
           </tr>
         </table>
        
