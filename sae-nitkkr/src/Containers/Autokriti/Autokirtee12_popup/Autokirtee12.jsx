@@ -1,10 +1,10 @@
 import React from "react";
 import "./Autokirtee12.css";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {BsGearFill} from 'react-icons/bs';
-import {IoCarOutline} from 'react-icons/io5';
-import {MdEdgesensorHigh} from 'react-icons/md';
-import {GiGears} from 'react-icons/gi'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { BsGearFill } from "react-icons/bs";
+import { IoCarOutline } from "react-icons/io5";
+import { MdEdgesensorHigh } from "react-icons/md";
+import { GiGears } from "react-icons/gi";
 
 function Autokirtee12() {
   return (
@@ -23,52 +23,50 @@ function Autokirtee12() {
             </p>
           </div>
           <div className="Autokirtee12_rest">
-         
             <div className="Autokirtee12_left">
               <div className="Autokirtee12_content">
                 <div className="Autokirtee12_content_left">
                   <div className="Autokirtee12_content_list">
-                    < div className="Autokirtee12_content_list_icon">
-                 <BsGearFill/>
-                 </div>
+                    <BsGearFill className="Autokirtee12_content_list_icon" />
                     <p> Transmission</p>
                   </div>
                   <div className="Autokirtee12_content_list">
-               <IoCarOutline/>
+                    <IoCarOutline className="Autokirtee12_content_list_icon" />
                     <p> Vehical Dynamics</p>
                   </div>
                   <div className="Autokirtee12_content_list">
-                  <BsGearFill/>
+                    <BsGearFill className="Autokirtee12_content_list_icon" />
                     <p> Brakes</p>
                   </div>
                 </div>
                 <div className="Autokirtee12_content_right">
                   <div className="Autokirtee12_content_list">
-                  <BsGearFill/>
-                    <p>
-                    Overhauling of engines 
-                    </p>
+                    <BsGearFill className="Autokirtee12_content_list_icon" />
+                    <p>Overhauling of engines</p>
                   </div>
                   <div className="Autokirtee12_content_list">
-                  <GiGears/>
+                    <GiGears className="Autokirtee12_content_list_icon" />
                     <p> Drive train</p>
                   </div>
                   <div className="Autokirtee12_content_list">
-                  <MdEdgesensorHigh/>
+                    <MdEdgesensorHigh className="Autokirtee12_content_list_icon" />
                     <p>DAQ</p>
                   </div>
                 </div>
               </div>
 
               <div className="Autokirtee12_buttons">
-               
-                <a href="/autokriti12"> <button type="button" className="Autokirtee_12_button">
-                  MORE INFORMATION
-                </button></a>
-                <a href="/autokriti/register"><button type="button"  className="Autokirtee_12_button">
-                  REGISTER NOW
-                </button></a>
-                
+                <a href="/autokriti12">
+                  {" "}
+                  <button type="button" className="Autokirtee_12_button">
+                    MORE INFORMATION
+                  </button>
+                </a>
+                <a href="/autokriti/register">
+                  <button type="button" className="Autokirtee_12_button">
+                    REGISTER NOW
+                  </button>
+                </a>
               </div>
             </div>
 

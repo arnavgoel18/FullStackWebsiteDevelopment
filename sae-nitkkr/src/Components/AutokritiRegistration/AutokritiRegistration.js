@@ -4,7 +4,7 @@ import { FaInfoCircle } from "react-icons/fa";
 import $ from "jquery";
 import "./AutokritiRegistration.css";
 import saelogo from "../../Assets/SAELOGO.png";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 
 import db from "../../Firebase.js";
 import {
@@ -20,20 +20,20 @@ import Footer from "../Footer/Footer(black)/FooterBlack";
 
 function Quizsignup() {
   let timestamp = "";
+  var [finalcost, setFinalcost] = useState(0);
 
-  function checkAllFields(){
-    const { name, email, phone, college, branch, semester, referal, timeSlot } = userData;
+  function checkAllFields() {
+    const { name, email, phone, college, branch, semester, referal, timeSlot } =
+      userData;
     if (name && email && phone && college && branch && semester) {
       //if all fields are entered
-      if(phone.length != 10){
-        alert('Please enter a valid mobile number');
+      if (phone.length != 10) {
+        alert("Please enter a valid mobile number");
         return false;
-      }
-      else if(!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)){
+      } else if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
         alert("Please enter a valid email address.");
         return false;
-      }
-      else if (document.getElementById("agree").checked) {
+      } else if (document.getElementById("agree").checked) {
         return true;
       } else {
         alert("Please tick the checkbox under instructions to proceed");
@@ -45,101 +45,139 @@ function Quizsignup() {
     }
   }
 
-  const makePayment = async () => {
+  const calculateAmount = async () => {
+    var Mechanical = document.getElementById("amb_mechanical").checked;
+    var IOT = document.getElementById("amb_IOT").checked;
+    var EV = document.getElementById("amb_EV").checked;
+    var kuchtotha = document.getElementById("amb_kuchtotha").checked;
 
-    const checkAllData = checkAllFields();
-    if(checkAllData){
-    const res = await initializeRazorpay();
-    document.getElementById("payform-button1").disabled = true;
-    document.getElementById("payform-button1").style.background = "grey";
-    setTimeout(() => {
-      document.getElementById("payform-button1").disabled = false;
-      document.getElementById("payform-button1").style.background = "#1a3c7f";
-    }, 10000);
+    if (Mechanical == true) finalcost += 1;
+    if (IOT == true) finalcost += 2;
+    if (EV == true) finalcost += 3;
+    if (kuchtotha == true) finalcost += 4;
 
-    if (!res) {
-      alert("Razorpay SDK Failed to load");
-      return;
-    }
-
-    // Make API call to the serverless API
-    const data = await fetch("https://saepayment.herokuapp.com/razorpay", {
-      method: "POST",
-    }).then((t) => t.json());
-    console.log(data);
-    var options = {
-      key: "rzp_test_4N9UbRbW9Gp0Mt", // Enter the Key ID generated from the Dashboard
-      name: "SAE NIT Kurukshetra",
-      currency: data.currency,
-      amount: data.amount,
-      order_id: data.id,
-      description: "Thankyou for your test donation",
-      image: { saelogo },
-      handler: async (response) => {
-        await handler(response);
-        await set_to_database();
-        
-        window.location = `/register_confirmation/${timestamp}`;
-      },
-      prefill: {
-        name: "SAE NIT Kurukshetra",
-        email: "saenitkurukshetra@gmail.com",
-        contact: "9650735458",
-      },
-    };
-
-    const set_to_database = async () => {
-      sendEmail();
-      const Saving_user_data = userData;
-      let gotit = await setDoc(
-        doc(db, "paymentregistrationid", timestamp),
-        Saving_user_data
-        
-      );
-      
-      
-    };
+    document.getElementById("original_price").innerText = finalcost;
     
-  const sendEmail = () => {
-    const toSend = {
-      name: userData.name,
-      sem: userData.semester,
-      branch:userData.branch,
-      email: userData.email,
-      college:userData.college,
-      OrderId:userData.orderid,
-      PaymentId:userData.paymentid,
-      Phone: userData.phone,
-      QRCodeURL:`https://saenitkurukshetra.in/registered/${userData.paymentid}`
-    };
-    emailjs.send('service_dqf2x44', 'template_zezhpzf', toSend,'ulnoJlsECTLQyCRZ5',)
-    .then(function(response) {
-       console.log('SUCCESS!', response.status, response.text);
-    }, function(error) {
-       console.log('FAILED...', error);
-    });
-    // emailjs.send("service_dqf2x44","template_7wsqgfo","",'ulnoJlsECTLQyCRZ5',{
-    //   // user_id: 'ulnoJlsECTLQyCRZ5',
-    //   to_name: "Babloo bisleri",
-    //   from_name: "saenitkurukshetra",
-    //   message: toSend,
-    //   email: userData.email,
-    //   });
+   // await setDoc(doc(db, "finalcost", 'doccost'), {'cost': finalcost});
+//arnav
+    const result = await fetch('http://localhost:3000/razorpay', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify("4")
+   } )
+
+   const resultinJson = await result.json();
+   console.log(resultinJson);
   }
 
-    const handler = async (response) => {
-      alert('Congratulations! You have registered successfully with payment ID: ' + response.razorpay_payment_id + ' and order ID: ' + response.razorpay_order_id);
+  const makePayment = async () => {
+    const checkAllData = true;
+    calculateAmount();
+    if (checkAllData) {
+      const res = await initializeRazorpay();
+      document.getElementById("payform-button1").disabled = true;
+      document.getElementById("payform-button1").style.background = "grey";
+      setTimeout(() => {
+        document.getElementById("payform-button1").disabled = false;
+        document.getElementById("payform-button1").style.background = "#1a3c7f";
+      }, 10000);
 
-      userData.orderid = response.razorpay_order_id;
-      timestamp = response.razorpay_payment_id;
-      userData.paymentid = timestamp;
-    };
+      if (!res) {
+        alert("Razorpay SDK Failed to load");
+        return;
+      }
 
-    const paymentObject = new window.Razorpay(options);
-    paymentObject.open();
-  }
+      // Make API call to the serverless API
+      const data = await fetch("http://localhost:3000/razorpay", {
+        method: "POST",
+      }).then((t) => t.json());
+
+      console.log(data);
+      var options = {
+        key: "rzp_test_4N9UbRbW9Gp0Mt", // Enter the Key ID generated from the Dashboard
+        name: "SAE NIT Kurukshetra",
+        currency: data.currency,
+        amount: data.amount,
+        order_id: data.id,
+        description: "Thankyou for your test donation",
+        image: { saelogo },
+        handler: async (response) => {
+          await handler(response);
+          await set_to_database();
+          console.log(options);
+          //window.location = `/register_confirmation/${timestamp}`;
+        },
+        prefill: {
+          name: "SAE NIT Kurukshetra",
+          email: "saenitkurukshetra@gmail.com",
+          contact: "9650735458",
+        },
+      };
+
+      const set_to_database = async () => {
+        sendEmail();
+        const Saving_user_data = userData;
+        let gotit = await setDoc(
+          doc(db, "paymentregistrationid", timestamp),
+          Saving_user_data
+        );
+      };
+
+      const sendEmail = () => {
+        const toSend = {
+          name: userData.name,
+          sem: userData.semester,
+          branch: userData.branch,
+          email: userData.email,
+          college: userData.college,
+          OrderId: userData.orderid,
+          PaymentId: userData.paymentid,
+          Phone: userData.phone,
+          QRCodeURL: `https://saenitkurukshetra.in/registered/${userData.paymentid}`,
+        };
+        emailjs
+          .send(
+            "service_dqf2x44",
+            "template_zezhpzf",
+            toSend,
+            "ulnoJlsECTLQyCRZ5"
+          )
+          .then(
+            function (response) {
+              console.log("SUCCESS!", response.status, response.text);
+            },
+            function (error) {
+              console.log("FAILED...", error);
+            }
+          );
+        // emailjs.send("service_dqf2x44","template_7wsqgfo","",'ulnoJlsECTLQyCRZ5',{
+        //   // user_id: 'ulnoJlsECTLQyCRZ5',
+        //   to_name: "Babloo bisleri",
+        //   from_name: "saenitkurukshetra",
+        //   message: toSend,
+        //   email: userData.email,
+        //   });
+      };
+
+      const handler = async (response) => {
+        alert(
+          "Congratulations! You have registered successfully with payment ID: " +
+            response.razorpay_payment_id +
+            " and order ID: " +
+            response.razorpay_order_id
+        );
+
+        userData.orderid = response.razorpay_order_id;
+        timestamp = response.razorpay_payment_id;
+        userData.paymentid = timestamp;
+      };
+
+      const paymentObject = new window.Razorpay(options);
+      paymentObject.open();
+    }
   };
-
 
   const initializeRazorpay = () => {
     return new Promise((resolve) => {
@@ -202,7 +240,7 @@ function Quizsignup() {
     orderid: "",
     paymentid: "",
     timeSlot: "26 Feb",
-    status: 'Registered'
+    status: "Registered",
   });
 
   let name, value;
@@ -310,7 +348,7 @@ function Quizsignup() {
     }
   });
 
-  //this function runs when you click on paynow  
+  //this function runs when you click on paynow
 
   // const routeChange = async (event) => {
   //   event.preventDefault();
@@ -538,11 +576,55 @@ function Quizsignup() {
             </div>
           </div>
 
+          {/* Choose dempartment */}
+          <div className="field">
+            <span className="payform-label"> Select Your Departments </span>
+            <br />
+            <div className="main-chheckbox">
+              <div className="department-checkbox">
+                <input
+                  type="checkbox"
+                  name="Mechanical"
+                  required="unrequired"
+                  id="amb_mechanical"
+                />
+                <span for="Mechanical">Mechanical</span>
+              </div>
+              <div className="department-checkbox">
+                <input
+                  type="checkbox"
+                  name="IOT"
+                  required="unrequired"
+                  id="amb_IOT"
+                />
+                <span for="IOT">IOT</span>
+              </div>
+              <div className="department-checkbox">
+                <input
+                  type="checkbox"
+                  name="EV"
+                  required="unrequired"
+                  id="amb_EV"
+                />
+                <span for="EV">EV</span>
+              </div>
+              <div className="department-checkbox">
+                <input
+                  type="checkbox"
+                  name="kuch to tha"
+                  required="unrequired"
+                  id="amb_kuchtotha"
+                />
+                <span for="kuchtotha">kuch to tha</span>
+              </div>
+            </div>
+          </div>
+
           <div id="show_invalid">The Referal Code is Invalid</div>
           <div id="pay_price">
-            <div id="pay_price_title">Price: &nbsp;</div>
-            <div id="original_price">&#8377; 699</div>
-            <div id="discounted_price">&#8377; 629</div>
+            <div id="pay_price_title">Price: &nbsp; &#8377; &nbsp;</div>
+            <div id="original_price">(To be calculated)</div>
+            <div id="discounted_price">&#8377; 0</div>
           </div>
           <div id="pay_button">
             <div id="paynow">
@@ -616,13 +698,15 @@ function Quizsignup() {
               confirmation on that email
             </p>
             <p className="instruction_para">
-              * After clicking on Pay, You will be redirected to confirmation page, make sure to download the <b>QR CODE</b> available there.
+              * After clicking on Pay, You will be redirected to confirmation
+              page, make sure to download the <b>QR CODE</b> available there.
             </p>
             <p className="instruction_para">
               * You have to show QR code at the time of arrival.
             </p>
             <p className="instruction_para">
-              * In case of any issue or payment failure, please contact +91-9650735458
+              * In case of any issue or payment failure, please contact
+              +91-9650735458
             </p>
             <p className="instruction_para">* Referal IDs are case-sensitive</p>
           </div>

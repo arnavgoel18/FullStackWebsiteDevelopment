@@ -256,6 +256,20 @@ margin-top: 5px;
   color:blue;
   font-weight: bold;
 }
+.department-checkbox{
+  margin-top: 8px;
+  display: flex;
+  margin-left: 10px;
+}
+.department-checkbox input{
+  width: auto;
+  margin-right: 10px;
+}
+.main-chheckbox{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 @media (min-width:320px) and (max-width:425px)
 {
 #referal_check {
