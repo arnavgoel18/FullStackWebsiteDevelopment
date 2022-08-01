@@ -4,6 +4,8 @@ import './Footer.css'
 import Coming from '../../Assets/Coming Soon/Coming.png'
 import { white_icons, black_icons } from './icons'
 import { AiFillLock } from "react-icons/ai";
+import {FaRupeeSign} from "react-icons/fa";
+
 import { useLayoutEffect } from 'react'
 
 function Footer({ type = 'black' }) {
@@ -218,18 +220,20 @@ function Footer({ type = 'black' }) {
           </div>  
           </p>
 
-          <p className='social_bars2'>
-            {' '}
-            <img
-              className='social_icons'
-              src={icons.contactUs}
-              alt='contact_image'
-            />
-            <span>
-              {' '}
-              <Link to='/contactus'>Contact Us</Link>
+            
+          <div className="horizontal">
+            {" "}
+            <div
+              className="black_contact_icon"
+            ><FaRupeeSign/></div>
+            <span id="lllinkedin_text">
+              <Link to="/refundandcancelpolicy"
+                target="_blank"
+              >
+               Refund and Cancel Policy
+              </Link>
             </span>
-          </p>
+          </div>  
         </div>
         {/* <div>
           <h1> Join Our Newsletter</h1>

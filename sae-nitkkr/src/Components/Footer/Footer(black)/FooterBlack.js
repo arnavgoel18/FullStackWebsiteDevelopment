@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./FooterBlack.css";
 import { AiFillLock } from "react-icons/ai";
+import {FaRupeeSign} from "react-icons/fa";
 
 import Coming from '../../../Assets/Coming Soon/Coming.png'
 function Footer() {
@@ -214,20 +215,21 @@ function Footer() {
             </span>
           </div>  
 
-          <p>
+          
+          <div className="horizontal">
             {" "}
-            <img
-              className="black_contact_image"
-              src="https://img.icons8.com/material-outlined/24/ffffff/add-contact-to-company.png"
-              alt="contact_image"
-            />
-            <span id="black_email_text">
-              {" "}
-              <Link to="/contactus">
-                Contact Us
+            <div
+              className="black_contact_icon"
+            ><FaRupeeSign/></div>
+            <span id="black_linkedin_text">
+              <Link to="/refundandcancelpolicy"
+                target="_blank"
+              >
+               Refund and Cancel Policy
               </Link>
             </span>
-          </p>
+          </div>  
+         
         </div>
 
         {/* <div id="black_heading_of_footers4">

@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import "./FooterWhite.css";
 import Coming from '../../../Assets/Coming Soon/Coming.png'
 import { AiFillLock } from "react-icons/ai";
+import {FaRupeeSign} from "react-icons/fa";
+
 function Footerautokriti() {
   return (
     <div id="white_footer">
@@ -160,20 +162,19 @@ function Footerautokriti() {
             </span>
           </div>  
 
-        <p>
+          <div className="horizontal">
             {" "}
-            <img
-              className="white_contact_image"
-              src="https://img.icons8.com/material-outlined/24/000000/add-contact-to-company.png"
-              alt="contact_image"
-            />
-            <span id="white_email_text">
-              {" "}
-              <Link to="/contactus">
-                Contact Us
+            <div
+              className="white_contact_icon"
+            ><FaRupeeSign/></div>
+            <span id="white_linkedin_text">
+              <Link to="/refundandcancelpolicy"
+                target="_blank"
+              >
+               Refund and Cancel Policy
               </Link>
             </span>
-          </p>
+          </div>  
       </div>
       {/* <div id="white_heading_of_footers4">
         <h1 id="white_newsletter" className="white_footer_components">

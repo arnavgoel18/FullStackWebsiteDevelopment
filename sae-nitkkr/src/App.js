@@ -54,6 +54,7 @@ import Certificate from './Components/AutokritiRegistration/Certificate';
 import RegistrationDetails from './Components/AutokritiRegistration/RegistrationDetails';
 import PrivacyPolicy from './Components/Guidelines/privacypolicy';
 import TermsAndConditions from './Components/Guidelines/TermsAndConditions';
+import RefundAndCancel from './Components/Guidelines/refundandcancel';
 //import RegistrationForm from "./Containers/Autokriti/RegistrationForm/RegistrationForm";
 
 function App() {
@@ -113,6 +114,7 @@ function App() {
             <Route path="/autokriti/certificate" exact component={()=><CertiImage/>}/>
             <Route path="/privacypolicy" exact component={()=><PrivacyPolicy/>}/>
             <Route path="/termsandconditions" exact component={()=><TermsAndConditions/>}/>
+            <Route path="/refundandcancelpolicy" exact component={()=><RefundAndCancel/>}/>
 
           
 
