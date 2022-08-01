@@ -131,7 +131,7 @@ function Footer({ type = 'black' }) {
       </div>
       <div className='footer_box'>
         <div>
-          <h1>Conytact Us</h1>
+          <h1>Contact Us</h1>
         </div>
         <hr className='hr_line' />
         <div className='social_bar_data'>
