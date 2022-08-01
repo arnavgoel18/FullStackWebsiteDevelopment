@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./FooterBlack.css";
+import { AiFillLock } from "react-icons/ai";
+
 import Coming from '../../../Assets/Coming Soon/Coming.png'
 function Footer() {
   return (
@@ -116,7 +118,7 @@ function Footer() {
       <div id="black_footer_box3">
         <div id="black_heading_of_footers3">
           <h1 id="black_contact_us" className="black_footer_components">
-            Contact Us
+           Contact Us
           </h1>
         </div>
         <hr id="black_line_for_third" />
@@ -134,7 +136,7 @@ function Footer() {
             <span id="black_email_text">
               {" "}
               <a href="mailto:saenitkurukshetra@gmail.com">
-                saenitkurukshetra@gmail.com
+              saenitkurukshetra@gmail.com
               </a>
             </span>
           </p>
@@ -173,7 +175,62 @@ function Footer() {
         </div>
       </div>
       <div id="black_footer_box4">
-        <div id="black_heading_of_footers4">
+      <div id="black_heading_of_footers3">
+          <h1 id="black_contact_us" className="black_footer_components">
+           Guidelines
+          </h1>
+        </div>
+        <hr id="black_line_for_third" />
+        <div
+          id="black_contact_us_content"
+          className="black_each_footer_content"
+        >
+          <p>
+            {" "}
+            <img
+              className="black_contact_image"
+              src="https://img.icons8.com/ios-filled/50/ffffff/mail.png"
+              alt="contact_image"
+            />
+            <span id="black_email_text">
+              {" "}
+              <Link to="/termsandconditions" target="_blank">
+                Terms And Conditions
+              </Link>
+            </span>
+          </p>
+
+          <div className="horizontal">
+            {" "}
+            <div
+              className="black_contact_icon"
+            ><AiFillLock/></div>
+            <span id="black_linkedin_text">
+              <Link to="/privacypolicy"
+                target="_blank"
+              >
+                Privacy Policy
+              </Link>
+            </span>
+          </div>  
+
+          <p>
+            {" "}
+            <img
+              className="black_contact_image"
+              src="https://img.icons8.com/material-outlined/24/ffffff/add-contact-to-company.png"
+              alt="contact_image"
+            />
+            <span id="black_email_text">
+              {" "}
+              <Link to="/contactus">
+                Contact Us
+              </Link>
+            </span>
+          </p>
+        </div>
+
+        {/* <div id="black_heading_of_footers4">
           <h1 id="black_newsletter" className="black_footer_components">
             {" "}
             Join Our Newsletter
@@ -187,7 +244,7 @@ function Footer() {
          >
          
           <img id="coming_soon"src={Coming}/>
-          {/* <input
+          <input
             id="black_getting_mail"
             type="text"
             placeholder="Enter your email..."
@@ -203,8 +260,8 @@ function Footer() {
           />
           <span id="black_checkbox_disclaimer">
             Yes,I'd like to hear about updates on my mail
-          </span> */}
-        </div>
+          </span>
+        </div> */}
       </div>
     </div>
   );

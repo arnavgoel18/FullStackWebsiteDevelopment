@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import "./FooterWhite.css";
 import Coming from '../../../Assets/Coming Soon/Coming.png'
+import { AiFillLock } from "react-icons/ai";
 function Footerautokriti() {
   return (
     <div id="white_footer">
@@ -83,7 +84,7 @@ function Footerautokriti() {
     <div id="white_footer_box3">
       <div id="white_heading_of_footers3">
         <h1 id="white_contact_us" className="white_footer_components">
-          Contact Us
+         Contact US
         </h1>
       </div>
       <hr id="white_line_for_third" />
@@ -125,7 +126,56 @@ function Footerautokriti() {
       </div>
     </div>
     <div id="white_footer_box4">
-      <div id="white_heading_of_footers4">
+      
+    <div id="white_heading_of_footers3">
+        <h1 id="white_contact_us" className="white_footer_components">
+          Guidelines
+        </h1>
+      </div>
+      <hr id="white_line_for_third" />
+      <div id="white_contact_us_content" className="white_each_footer_content">
+        <p>
+          {" "}
+          <img
+            className="white_contact_image"
+            src="https://img.icons8.com/material-outlined/24/000000/mail.png"
+            alt="contact_image"
+          />
+          <span id="white_email_text"> <Link to="/termsandconditions" target="_blank">
+                Terms And Conditions
+              </Link></span>
+        </p>
+
+        <div className="horizontal">
+            {" "}
+            <div
+              className="white_contact_icon"
+            ><AiFillLock/></div>
+            <span id="white_linkedin_text">
+              <Link to="/privacypolicy"
+                target="_blank"
+              >
+                Privacy Policy
+              </Link>
+            </span>
+          </div>  
+
+        <p>
+            {" "}
+            <img
+              className="white_contact_image"
+              src="https://img.icons8.com/material-outlined/24/000000/add-contact-to-company.png"
+              alt="contact_image"
+            />
+            <span id="white_email_text">
+              {" "}
+              <Link to="/contactus">
+                Contact Us
+              </Link>
+            </span>
+          </p>
+      </div>
+      {/* <div id="white_heading_of_footers4">
         <h1 id="white_newsletter" className="white_footer_components">
           {" "}
           Join Our Newsletter
@@ -136,7 +186,7 @@ function Footerautokriti() {
     
       <div id="white_newsletter_content" className="white_each_footer_content">
       <img id="coming_soon"src={Coming}/>
-        {/* <br />
+        <br />
         <input
           id="white_getting_mail"
           type="text"
@@ -148,8 +198,8 @@ function Footerautokriti() {
         <input type="checkbox" id="white_select" name="select" value="got_it" />
         <span id="white_checkbox_disclaimer">
           Yes,I'd like to hear about updates on my mail
-        </span> */}
-      </div>
+        </span>
+      </div> */}
     </div>
   </div>
   )

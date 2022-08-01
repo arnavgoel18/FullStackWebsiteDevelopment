@@ -11,7 +11,7 @@ import {db1} from "../../../Firebase";
 import { collection, getDocs } from "firebase/firestore";
 
 
-function Card_contain() {
+function Card_contain() { 
   const [forreload, setForreload] = useState([]);
   var [blogResult, setResult] = useState([]);
   // const storage = getStorage();
@@ -35,9 +35,8 @@ function Card_contain() {
           let obj = {
             src: detail.coverPhotoUrl,
             title: detail.title,
-            subTitle: 'Subtitle',
-            body: 'Click to view more',
-            author: 'Author',
+            // body: 'Click to view more',
+            author: detail.author,
             date: detail.modifiedDate,
             tags: ['Electronics', 'Cars'],
           }
