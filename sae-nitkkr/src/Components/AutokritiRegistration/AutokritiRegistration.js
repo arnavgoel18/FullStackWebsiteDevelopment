@@ -59,17 +59,38 @@ function Quizsignup() {
     document.getElementById("original_price").innerText = finalcost;
     
    // await setDoc(doc(db, "finalcost", 'doccost'), {'cost': finalcost});
-//arnav
-    const result = await fetch('http://localhost:3000/razorpay', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify("4")
-   } )
 
-   const resultinJson = await result.json();
-   console.log(resultinJson);
+  //   const result = await fetch('http://localhost:3000/razorpay', {
+  //   method: 'POST',
+  //   headers: {
+  //     'Content-Type': 'application/json'
+  //   },
+  //   body: JSON.stringify("4")
+  //  } )
+
+  //  const resultinJson = await result.json();
+  //  console.log(resultinJson);
+
+  var url = "http://localhost:3000/result";
+
+var xhr = new XMLHttpRequest();
+xhr.open("POST", url);
+
+xhr.setRequestHeader("Accept", "application/json");
+xhr.setRequestHeader("Content-Type", "application/json");
+
+xhr.onreadystatechange = function () {
+   if (xhr.readyState === 4) {
+      console.log(xhr.status);
+      console.log(xhr.responseText);
+   }};
+
+var data = `{
+  "cost": ${finalcost}
+}`;
+
+xhr.send(data);
+
   }
 
   const makePayment = async () => {
