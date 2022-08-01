@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom'
 import './Footer.css'
 import Coming from '../../Assets/Coming Soon/Coming.png'
 import { white_icons, black_icons } from './icons'
+import { AiFillLock } from "react-icons/ai";
+import {FaRupeeSign} from "react-icons/fa";
+
 import { useLayoutEffect } from 'react'
 
 function Footer({ type = 'black' }) {
@@ -128,7 +131,7 @@ function Footer({ type = 'black' }) {
       </div>
       <div className='footer_box'>
         <div>
-          <h1>Contact Us</h1>
+          <h1>Conytact Us</h1>
         </div>
         <hr className='hr_line' />
         <div className='social_bar_data'>
@@ -142,7 +145,7 @@ function Footer({ type = 'black' }) {
             <span>
               {' '}
               <a href='mailto:saenitkurukshetra@gmail.com'>
-                saenitkurukshetra@gmail.com
+              saenitkurukshetra@gmail.com
               </a>
             </span>
           </p>
@@ -179,13 +182,66 @@ function Footer({ type = 'black' }) {
         </div>
       </div>
       <div className='footer_box'>
-        <div>
-          <h1> Join Our Newsletter</h1>
+
+      <div>
+          <h1>Guidelines</h1>
         </div>
         <hr className='hr_line' />
+        <div className='social_bar_data'>
+          <p className='social_bars2'>
+            {' '}
+            <img
+              className='social_icons'
+              src={icons.mail}
+              alt='contact_image'
+            />
+            <span>
+              {' '}
+              <Link to="/termsandconditions" target="_blank">
+                Terms And Conditions
+              </Link>
+            </span>
+          </p>
 
-        <div>
-          <img id='coming_soon' src={Coming} />
+          <p className='social_bars2'>
+           
+          <div className="horizontal">
+            {" "}
+            <div
+              className="contact_icon"
+            ><AiFillLock/></div>
+            <span id="linkedin_text">
+              <Link to="/privacypolicy"
+                target="_blank"
+              >
+                Privacy Policy
+              </Link>
+            </span>
+          </div>  
+          </p>
+
+            
+          <div className="horizontal">
+            {" "}
+            <div
+              className="black_contact_icon"
+            ><FaRupeeSign/></div>
+            <span id="lllinkedin_text">
+              <Link to="/refundandcancelpolicy"
+                target="_blank"
+              >
+               Refund and Cancel Policy
+              </Link>
+            </span>
+          </div>  
+        </div>
+        {/* <div>
+          <h1> Join Our Newsletter</h1>
+        </div> */}
+        {/* <hr className='hr_line' /> */}
+
+        {/* <div> */}
+          {/* <img id='coming_soon' src={Coming} /> */}
           {/* <input
             id="black_getting_mail"
             type="text"
@@ -203,7 +259,7 @@ function Footer({ type = 'black' }) {
           <span id="black_checkbox_disclaimer">
             Yes,I'd like to hear about updates on my mail
           </span> */}
-        </div>
+        {/* </div> */}
       </div>
     </div>
   )

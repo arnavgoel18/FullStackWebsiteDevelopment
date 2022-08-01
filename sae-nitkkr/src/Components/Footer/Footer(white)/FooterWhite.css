@@ -269,3 +269,13 @@
  .white_things_to_explore:hover{
      cursor: pointer;
  }
+ .white_contact_icon{
+    font-size:xx-large  
+ }
+ .horizontal{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top:10px;
+ }
+ 

@@ -4,6 +4,7 @@ import React from "react";
 import "./ContactUs.css";
 
 import db from "../../Firebase.js";
+import { FiPhoneCall } from "react-icons/fi";
 import {
   collection,
   getDocs,
@@ -76,6 +77,16 @@ function ContactUS() {
               <img src={ac} alt="" className="ContactUs_dif" />
             </div>{" "}
             <div className="ContactUs_tt"> teamaccelerons@gmail.com</div>
+          </div>
+    
+          <br />
+          <br />  
+          <div className="ContactUs_abc">
+            {" "}
+            <div className="ContactUs_phone">
+              <FiPhoneCall/>
+            </div>{" "}
+            <div className="ContactUs_tt"> 9 6 5 0 7 3 5 4 5 8</div>
           </div>
         </div>
 

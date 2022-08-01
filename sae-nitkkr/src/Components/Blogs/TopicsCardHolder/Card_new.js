@@ -1,3 +1,4 @@
+import { BiDetail } from "react-icons/bi";
 import "./Card_new.scss";
 
 function Card(poop) {
@@ -22,9 +23,9 @@ function Card(poop) {
         </div>
         <div className="description">
           <h1>{title}</h1>
-          <h2>{subTitle}</h2>
-          <p>{body}</p>
-          <p className="read-more">
+          {/* <h2>{subTitle}</h2> */}
+          {/* <p>{body}</p> */}
+            <p className="read-more">
             <div>Read More</div>
           </p>
         </div>

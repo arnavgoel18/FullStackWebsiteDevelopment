@@ -16,6 +16,7 @@ import {
   storage,
   snapshot,
 } from "firebase/firestore";
+import { user } from "fontawesome";
 
 
 
@@ -30,6 +31,7 @@ function Add() {
     title: "",
     information: "",
     coverPhoto: "",
+    author:"",  
   });
 
   async function getBlogInfo() {
@@ -45,11 +47,13 @@ function Add() {
           title: detail.title,
           information: detail.information,
           coverPhoto: detail.coverPhotoUrl,
+          author: detail.author,
         });
         setuserInfo({
           title: detail.title,
           information: detail.information,
-          coverPhoto: detail.coverPhotoUrl
+          coverPhoto: detail.coverPhotoUrl,
+          author: detail.author,
         });
        
       
@@ -99,6 +103,7 @@ function Add() {
           getDownloadURL(coverPhotoRef).then((url) => {
             setDoc(doc(db1, "blogs", newTimestamp), {
               title: userInfo.title,
+              author: userInfo.author,
               information: userInfo.information,
               createdDate: date,
               modifiedDate: date,
@@ -110,11 +115,13 @@ function Add() {
                 title: "",
                 information: "",
                 coverPhoto: "",
+                author:"",
               });
               setuserInfo({
                 title: "",
                 information: "",
                 coverPhoto: "",
+                author:"",
               });
             
             });
@@ -127,6 +134,7 @@ function Add() {
         getDownloadURL(coverPhotoRef).then((url) => {
           updateDoc(doc(db1, "blogs", timestamp), {
             title: userInfo.title,
+            author: userInfo.author,
             information: userInfo.information,
             modifiedDate: date,
             coverPhotoUrl: url,
@@ -136,11 +144,13 @@ function Add() {
               title: "",
               information: "",
               coverPhoto: "",
+              author:"",
             });
             setuserInfo({
               title: "",
               information: "",
               coverPhoto: "",
+              author:"",
             });
           });
         });
@@ -157,10 +167,15 @@ function Add() {
         title: "",
         information: "",
         coverPhoto: "",
+        author:"",
       });
       setTimeout(() => {
         document.getElementById('quillTitle').value="";
       }, 300);
+      setTimeout(() => {
+        document.getElementById('quillauthor').value="";
+      }, 300);
+      
     }
   }
 
@@ -188,6 +203,16 @@ function Add() {
                       onChange={onChangeValue}
                       className="form-control"
                       placeholder="Enter Topic Here"
+                      required
+                    />
+                         <input
+                      id="quillauthor"
+                      type="text"
+                      name="author"
+                      value={userInfo.author}
+                      onChange={onChangeValue}
+                      className="form-control"
+                      placeholder="Enter Author Name"
                       required
                     />
                     <div className="coverPic">

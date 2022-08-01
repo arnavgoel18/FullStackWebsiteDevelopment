@@ -70,9 +70,7 @@ export default function AllBlogsPage() {
            let obj = {
              src: detail.coverPhotoUrl,
              title: detail.title,
-             subTitle: 'Subtitle',
-             body: 'Click to view more',
-             author:'Author',
+             author: detail.author,
              date:detail.modifiedDate,
              tags:['Electronics','Cars'],
            }

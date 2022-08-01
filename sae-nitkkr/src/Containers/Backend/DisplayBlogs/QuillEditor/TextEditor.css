@@ -16,6 +16,15 @@
     border: 1px solid black;
     border-radius: 4px;
 }
+#quillauthor{
+    margin: 25px 25px;
+    font-size: large;
+    font-weight: bold;  
+    width: fit-content;
+    padding: 5px 5px 5px 5px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
 #quillFile{
     cursor: pointer;
     margin-left: 10px;
