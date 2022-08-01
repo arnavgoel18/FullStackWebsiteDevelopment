@@ -1,4 +1,7 @@
 
 .ppbody{
-    margin: 120px;
+    width: 65%;
+    margin: auto;
+    margin-top: 50px;
+    line-height: 30px;
 }
