@@ -61,6 +61,7 @@ function Quizsignup() {
 
   //to save data in local storage and render to payment page
   function savetoLocal() {
+    localStorage.removeItem('userData');
     const checkAllData = checkAllFields();
     if (checkAllData) {
       calculateAmount();
