@@ -11,6 +11,8 @@ import './privacypolicy.css';
 
 <p>This Privacy Policy applies only to our online activities and is valid for visitors to our website with regards to the information that they shared and/or collect in SAE NIT Kurukshetra. This policy is not applicable to any information collected offline or via channels other than this website. Our Privacy Policy was created with the help of the <a href="https://www.privacypolicygenerator.info/">Free Privacy Policy Generator</a>.</p>
 <br/><br/>
+<p>This Privacy Policy applies only to our online activities and is valid for visitors to our website with regards to the information that they shared and/or collect in SAE NIT Kurukshetra. This policy is not applicable to any information collected offline or via channels other than this website. Our Privacy Policy was created with the help of the <a href="https://www.privacypolicygenerator.info/"> Privacy Policy Generator</a>.</p>
+
 <h2>Consent</h2>
 <br/>
 <p>By using our website, you hereby consent to our Privacy Policy and agree to its terms.</p>
@@ -21,23 +23,23 @@ import './privacypolicy.css';
 <p>If you contact us directly, we may receive additional information about you such as your name, email address, phone number, the contents of the message and/or attachments you may send us, and any other information you may choose to provide.</p>
 <p>When you register for an Account, we may ask for your contact information, including items such as name, company name, address, email address, and telephone number.</p>
 <br/><br/>
+<p>When you register for a Workshop, we may ask for your contact information, including items such as name, company name, college name, email address, and telephone number.</p>
+
 <h2>How we use your information</h2>
 <br/>
 <p>We use the information we collect in various ways, including to:</p>
 
 <ul>
 <li>Provide, operate, and maintain our website</li>
-<li>Improve, personalize, and expand our website</li>
-<li>Understand and analyze how you use our website</li>
-<li>Develop new products, services, features, and functionality</li>
 <li>Communicate with you, either directly or through one of our partners, including for customer service, to provide you with updates and other information relating to the website, and for marketing and promotional purposes</li>
 <li>Send you emails</li>
-<li>Find and prevent fraud</li>
 </ul>
 <br/><br/>
 <h2>Log Files</h2>
 <br/>
 <p>SAE NIT Kurukshetra follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting services' analytics. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users' movement on the website, and gathering demographic information.</p>
+
+<p>SAE NIT Kurukshetra does not log any files such as internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. </p>
 
 
 <br/><br/>
@@ -56,6 +58,9 @@ import './privacypolicy.css';
 
 <p>You can choose to disable cookies through your individual browser options. To know more detailed information about cookie management with specific web browsers, it can be found at the browsers' respective websites.</p>
 <br/><br/>
+
+<p>We do not use any coockies and we do not collaborate with any third party apps for sharing data and content.</p>
+
 <h2>CCPA Privacy Rights (Do Not Sell My Personal Information)</h2>
 <br/>
 <p>Under the CCPA, among other rights, California consumers have the right to:</p>
