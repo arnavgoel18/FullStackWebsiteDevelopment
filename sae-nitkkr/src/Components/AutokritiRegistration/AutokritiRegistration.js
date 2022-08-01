@@ -3,8 +3,6 @@ import React, { useEffect, useState } from "react";
 import { FaInfoCircle } from "react-icons/fa";
 import $ from "jquery";
 import "./AutokritiRegistration.css";
-import saelogo from "../../Assets/SAELOGO.png";
-import emailjs from "@emailjs/browser";
 
 import db from "../../Firebase.js";
 import {
@@ -19,9 +17,25 @@ import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer(black)/FooterBlack";
 
 function Quizsignup() {
-  let timestamp = "";
   var [finalcost, setFinalcost] = useState(0);
 
+  //to calculate finalcost
+  const calculateAmount = async () => {
+    var Mechanical = document.getElementById("amb_mechanical").checked;
+    var IOT = document.getElementById("amb_IOT").checked;
+    var EV = document.getElementById("amb_EV").checked;
+    var kuchtotha = document.getElementById("amb_kuchtotha").checked;
+
+    if (Mechanical == true) finalcost += 1;
+    if (IOT == true) finalcost += 2;
+    if (EV == true) finalcost += 3;
+    if (kuchtotha == true) finalcost += 4;
+
+    setFinalcost(finalcost);
+    userData.amount = finalcost;
+  };
+
+  //to check all fields are filled or not
   function checkAllFields() {
     const { name, email, phone, college, branch, semester, referal, timeSlot } =
       userData;
@@ -45,181 +59,15 @@ function Quizsignup() {
     }
   }
 
-  const calculateAmount = async () => {
-    var Mechanical = document.getElementById("amb_mechanical").checked;
-    var IOT = document.getElementById("amb_IOT").checked;
-    var EV = document.getElementById("amb_EV").checked;
-    var kuchtotha = document.getElementById("amb_kuchtotha").checked;
-
-    if (Mechanical == true) finalcost += 1;
-    if (IOT == true) finalcost += 2;
-    if (EV == true) finalcost += 3;
-    if (kuchtotha == true) finalcost += 4;
-
-    document.getElementById("original_price").innerText = finalcost;
-    
-   // await setDoc(doc(db, "finalcost", 'doccost'), {'cost': finalcost});
-
-  //   const result = await fetch('http://localhost:3000/razorpay', {
-  //   method: 'POST',
-  //   headers: {
-  //     'Content-Type': 'application/json'
-  //   },
-  //   body: JSON.stringify("4")
-  //  } )
-
-  //  const resultinJson = await result.json();
-  //  console.log(resultinJson);
-
-  var url = "http://localhost:3000/result";
-
-var xhr = new XMLHttpRequest();
-xhr.open("POST", url);
-
-xhr.setRequestHeader("Accept", "application/json");
-xhr.setRequestHeader("Content-Type", "application/json");
-
-xhr.onreadystatechange = function () {
-   if (xhr.readyState === 4) {
-      console.log(xhr.status);
-      console.log(xhr.responseText);
-   }};
-
-var data = `{
-  "cost": ${finalcost}
-}`;
-
-xhr.send(data);
-
-  }
-
-  const makePayment = async () => {
-    const checkAllData = true;
-    calculateAmount();
+  //to save data in local storage and render to payment page
+  function savetoLocal() {
+    const checkAllData = checkAllFields();
     if (checkAllData) {
-      const res = await initializeRazorpay();
-      document.getElementById("payform-button1").disabled = true;
-      document.getElementById("payform-button1").style.background = "grey";
-      setTimeout(() => {
-        document.getElementById("payform-button1").disabled = false;
-        document.getElementById("payform-button1").style.background = "#1a3c7f";
-      }, 10000);
-
-      if (!res) {
-        alert("Razorpay SDK Failed to load");
-        return;
-      }
-
-      // Make API call to the serverless API
-      const data = await fetch("http://localhost:3000/razorpay", {
-        method: "POST",
-      }).then((t) => t.json());
-
-      console.log(data);
-      var options = {
-        key: "rzp_test_4N9UbRbW9Gp0Mt", // Enter the Key ID generated from the Dashboard
-        name: "SAE NIT Kurukshetra",
-        currency: data.currency,
-        amount: data.amount,
-        order_id: data.id,
-        description: "Thankyou for your test donation",
-        image: { saelogo },
-        handler: async (response) => {
-          await handler(response);
-          await set_to_database();
-          console.log(options);
-          //window.location = `/register_confirmation/${timestamp}`;
-        },
-        prefill: {
-          name: "SAE NIT Kurukshetra",
-          email: "saenitkurukshetra@gmail.com",
-          contact: "9650735458",
-        },
-      };
-
-      const set_to_database = async () => {
-        sendEmail();
-        const Saving_user_data = userData;
-        let gotit = await setDoc(
-          doc(db, "paymentregistrationid", timestamp),
-          Saving_user_data
-        );
-      };
-
-      const sendEmail = () => {
-        const toSend = {
-          name: userData.name,
-          sem: userData.semester,
-          branch: userData.branch,
-          email: userData.email,
-          college: userData.college,
-          OrderId: userData.orderid,
-          PaymentId: userData.paymentid,
-          Phone: userData.phone,
-          QRCodeURL: `https://saenitkurukshetra.in/registered/${userData.paymentid}`,
-        };
-        emailjs
-          .send(
-            "service_dqf2x44",
-            "template_zezhpzf",
-            toSend,
-            "ulnoJlsECTLQyCRZ5"
-          )
-          .then(
-            function (response) {
-              console.log("SUCCESS!", response.status, response.text);
-            },
-            function (error) {
-              console.log("FAILED...", error);
-            }
-          );
-        // emailjs.send("service_dqf2x44","template_7wsqgfo","",'ulnoJlsECTLQyCRZ5',{
-        //   // user_id: 'ulnoJlsECTLQyCRZ5',
-        //   to_name: "Babloo bisleri",
-        //   from_name: "saenitkurukshetra",
-        //   message: toSend,
-        //   email: userData.email,
-        //   });
-      };
-
-      const handler = async (response) => {
-        alert(
-          "Congratulations! You have registered successfully with payment ID: " +
-            response.razorpay_payment_id +
-            " and order ID: " +
-            response.razorpay_order_id
-        );
-
-        userData.orderid = response.razorpay_order_id;
-        timestamp = response.razorpay_payment_id;
-        userData.paymentid = timestamp;
-      };
-
-      const paymentObject = new window.Razorpay(options);
-      paymentObject.open();
+      calculateAmount();
+      localStorage.setItem("userData", JSON.stringify(userData));
+      window.location = `/register/registrationDetails`;
     }
-  };
-
-  const initializeRazorpay = () => {
-    return new Promise((resolve) => {
-      const script = document.createElement("script");
-      script.src = "https://checkout.razorpay.com/v1/checkout.js";
-      document.body.appendChild(script);
-
-      script.onload = () => {
-        resolve(true);
-      };
-      script.onerror = () => {
-        resolve(false);
-      };
-
-      //document.body.appendChild(script);
-    });
-  };
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  }
 
   var [stuData, setStuData] = useState([]);
 
@@ -262,6 +110,7 @@ xhr.send(data);
     paymentid: "",
     timeSlot: "26 Feb",
     status: "Registered",
+    amount: finalcost,
   });
 
   let name, value;
@@ -525,22 +374,6 @@ xhr.send(data);
             />
           </div>
 
-          {/* <div className="field">
-            {" "}
-            <span className="payform-label"> Semester </span>
-            <br />
-            <input
-              className="payform-input"
-              type="email"
-              name="semester"
-              alt="semester"
-              id="amb_semester"
-              required="unrequired"
-              value={userData.semester}
-              onChange={postUserData}
-            />
-          </div> */}
-
           <div className="field_select">
             <span className="payform-label">Semester</span>
             <select
@@ -642,72 +475,20 @@ xhr.send(data);
           </div>
 
           <div id="show_invalid">The Referal Code is Invalid</div>
-          <div id="pay_price">
-            <div id="pay_price_title">Price: &nbsp; &#8377; &nbsp;</div>
-            <div id="original_price">(To be calculated)</div>
-            <div id="discounted_price">&#8377; 0</div>
-          </div>
           <div id="pay_button">
             <div id="paynow">
               <button
-                onClick={makePayment}
+                onClick={savetoLocal}
                 className="payform-button"
                 id="payform-button1"
               >
-                ₹ &nbsp; Pay Now
+                Confirm
               </button>
             </div>
             <div id="i_button_content">
               <h4></h4>
             </div>
           </div>
-
-          {/* <div className="field">
-            {" "}
-            <span className="payform-label"> Payment ID </span>
-            <br />
-            <input
-              id="transaction"
-              className="payform-input"
-              type=""
-              name="transaction"
-              alt=""
-              disabled={true}
-              required=""
-              value={userData.transaction}
-              onChange={postUserData}
-            />
-          </div>
-
-          <br /> */}
-
-          {/* <div className="field_select">
-            <span className="payform-label">Time Slot * 
-            </span>
-            <div style={{display: 'flex'}}>
-              <select 
-                className="payform-dropdown" 
-                name="timeSlot" 
-                id="time_slot" 
-                required 
-                value={userData.timeSlot} 
-                onChange={postUserData}> 
-                  <option selected value="No Selection">-- Select An Option --</option>
-                  <option value="12 Feb">Slot 1 - From 12&#x1D57;&#x02B0; Feb</option>
-                  <option value="26 Feb">Slot 2 - From 26&#x1D57;&#x02B0; Feb</option>
-                  <option value="Any Slot">No Preference</option>
-              </select> 
-            </div>
-            <p style={{fontSize: '10px'}}>Slot-2 is specifically for students having their exams till 25th Feb, so please prefer Slot-1 unless you have similar problem / reason)</p>
-          </div> */}
-
-          {/* <button
-            onClick={submit}
-            id="payform-button2"
-            className="payform-button2"
-          >
-            Confirm Registration
-          </button> */}
         </div>
 
         <div className="payform-infocontain">

@@ -141,7 +141,7 @@ function AfterRegistrationPage() {
           <tr>
             <td className="td-first">Certificate</td>
             
-            <td><Link to={`/register/certificate/${id}`}>Download</Link>
+            <td><Link to={`/register/certificate/${id}`} style={{color: "blue"}}>Download</Link>
             </td>
           </tr>
         </table>

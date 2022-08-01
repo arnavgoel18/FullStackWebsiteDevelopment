@@ -51,6 +51,7 @@ width:50%;
     background-color: coral;
     border: 0ch;
     border-radius: 10px;
+    cursor: pointer;
 }
 .qr_div
 {

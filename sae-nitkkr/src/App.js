@@ -72,7 +72,7 @@ function App() {
             <Route path="/register_confirmation/:id" exact component={() => <AfterRegistrationPage/>} />
             <Route path="/registered/:id" exact component={() => <Registered/>} />
             <Route path="/register/certificate/:id" exact component={()=><Certificate/>}/>
-            <Route path="/register/registrationDetails/:id" exact component={()=><RegistrationDetails/>}/>
+            <Route path="/register/registrationDetails" exact component={()=><RegistrationDetails/>}/>
             {/* Blogs */}
             <Route path="/blogs" exact component={() => <Blogs/>}/>
             <Route path="/blogs/yourblog" exact component={() => <Topic1/>}/>
