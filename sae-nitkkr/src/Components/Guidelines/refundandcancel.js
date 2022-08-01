@@ -13,15 +13,20 @@ function RefundAndCancel(){
     If you have any questions, concerns, or complaints regarding this refund policy, we encourage you to contact us using the details below:
     </p>
     <br/>
-   <a href="https://saenitkurukshetra in/contactus">
-      Contact US
+   <a href="https://saenitkurukshetra.in/contactus">Website Portal
    </a>
    <br/>
    <br/>
    <a href="saenitkurukshetra@gmail.com">saenitkurukshetra@gmail.com</a>
    <br/>
    <br/>
+   <a href="saenitkurukshetra@gmail.com">autokriti@saenitkurukshetra.in</a>
+   <br/>
+   <br/>
    <p>Gol Canteen (SAE NITKKR), WRV9+W46, NIT, Thanesar, Haryana 136119</p>
+   <br/>
+   <br/>
+   <p>+91 9650735458</p>
     </div>
    );
 
