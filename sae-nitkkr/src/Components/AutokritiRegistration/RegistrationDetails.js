@@ -11,13 +11,17 @@ import Footer from "../Footer/Footer(black)/FooterBlack";
 var flag = true;
 function RegistrationDetails() {
   let timestamp = "";
+  let [department, setDepartment] = useState([]);
   const [authorised_user, setauthorised_user] = useState({});
+
   useEffect(() => {
     console.log("run");
     flag = false;
     const items = JSON.parse(localStorage.getItem("userData"));
+    const depart = JSON.parse(localStorage.getItem("department"));
     if (items) {
       setauthorised_user(items);
+      setDepartment(depart);
     }
   }, []);
 
@@ -39,13 +43,13 @@ function RegistrationDetails() {
     const data = await fetch("https://saepayment.herokuapp.com/razorpay", {
       method: "POST",
       body: JSON.stringify({
-                title: "cost",
-                 body: authorised_user.amount,
-                 userId: 1
-             }),
-             headers: {
-               "Content-type": "application/json; charset=UTF-8"
-             },
+        title: "cost",
+        body: authorised_user.amount,
+        userId: 1,
+      }),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
     }).then((t) => t.json());
 
     console.log(data);
@@ -197,6 +201,17 @@ function RegistrationDetails() {
           <tr>
             <td className="td-first">AMOUNT</td>
             <td>{authorised_user.amount}</td>
+          </tr>{" "}
+          <tr>
+            <td className="td-first">DEPARTMENT</td>
+            <td>{
+              department.map((other, i)=>{
+                return(<>
+                  {other} &nbsp;{" "}
+                </>)
+              })
+            }
+              </td>
           </tr>{" "}
         </table>
       </div>

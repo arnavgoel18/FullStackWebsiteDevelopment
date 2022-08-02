@@ -19,6 +19,7 @@ import { check } from "fontawesome";
 
 function Quizsignup() {
   var [finalcost, setFinalcost] = useState(0);
+  var [department, setDepartment] = useState([]);
   // var [count, setCount] = useState(0);
   //to calculate finalcost
   const calculateAmount = async () => {
@@ -61,20 +62,23 @@ function Quizsignup() {
       software,
     } = userData;
 
+    setDepartment([]);
     var count = 0;
     if (mechanical == "true") {
-      count++;
+      department[count++] = 'Mechanical';
     }
     if (iot == "true") {
-      count++;
+      department[count++] = 'IOT';
     }
     if (ev == "true") {
-      count++;
+      department[count++] = "EV";
     }
     if (software == "true") {
-      count++;
+      department[count++] = "Software";
     }
 
+    setDepartment(department);
+    console.log(department, count);
     if (name && email && phone && college && branch && semester) {
       //if all fields are entered
       if (phone.length != 10) {
@@ -103,10 +107,12 @@ function Quizsignup() {
   //to save data in local storage and render to payment page
   function savetoLocal() {
     localStorage.removeItem("userData");
+    localStorage.removeItem("department");
     const checkAllData = checkAllFields();
     if (checkAllData) {
       calculateAmount();
       localStorage.setItem("userData", JSON.stringify(userData));
+      localStorage.setItem("department", JSON.stringify(department));
       window.location = `/register/registrationDetails`;
     }
   }
