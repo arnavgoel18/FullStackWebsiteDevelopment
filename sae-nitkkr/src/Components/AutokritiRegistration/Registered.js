@@ -97,6 +97,14 @@ function Registered() {
           <td>{authorised_user.referal}</td>
         </tr>{" "}
         <tr>
+            <td className="td-first">NEED ACCOMODATION</td>
+            <td>{authorised_user.accomodation}</td>
+          </tr>{" "}
+        <tr>
+            <td className="td-first">AMOUNT PAID</td>
+            <td>{authorised_user.amount}</td>
+          </tr>{" "}
+        <tr>
           <td className="td-first">DEPARTMENT</td>
           <td>{authorised_user.department}</td>
         </tr>{" "}

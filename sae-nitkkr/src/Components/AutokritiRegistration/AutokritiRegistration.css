@@ -273,10 +273,14 @@ margin-top: 5px;
 }
 .department-timeslot{
   margin-top: 13px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 #chooseTimeslot{
-  margin-bottom: 8px;
+  margin-bottom: 4px;
+}
+#accomodation{
+  width: 5%;
+  margin-bottom: 20px;
 }
 @media (min-width:320px) and (max-width:425px)
 {

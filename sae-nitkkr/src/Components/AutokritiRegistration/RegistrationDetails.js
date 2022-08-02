@@ -205,6 +205,10 @@ function RegistrationDetails() {
             <td>{authorised_user.referal}</td>
           </tr>{" "}
           <tr>
+            <td className="td-first">NEED ACCOMODATION</td>
+            <td>{authorised_user.accomodation}</td>
+          </tr>{" "}
+          <tr>
             <td className="td-first">AMOUNT</td>
             <td>{authorised_user.amount}</td>
           </tr>{" "}

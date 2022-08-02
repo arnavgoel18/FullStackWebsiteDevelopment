@@ -30,18 +30,22 @@ function Quizsignup() {
     var IOT = document.getElementById("amb_IOT").checked;
     var EV = document.getElementById("amb_EV").checked;
     var software = document.getElementById("amb_software").checked;
+    var accomo = document.getElementById("accomodation").checked;
 
     if (Mechanical == true) {
-      finalcost += 1;
+      finalcost += 2500;
     }
     if (IOT == true) {
-      finalcost += 2;
+      finalcost += 2500;
     }
     if (EV == true) {
-      finalcost += 3;
+      finalcost += 2500;
     }
     if (software == true) {
-      finalcost += 4;
+      finalcost += 2500;
+    }
+    if(accomo == true){
+      finalcost += 500;
     }
 
     setFinalcost(finalcost);
@@ -167,6 +171,7 @@ function Quizsignup() {
     software: "",
     amount: finalcost,
     firstChoice: "",
+    accomodation:"",
   });
 
   let name, value, checked, type;
@@ -251,7 +256,14 @@ function Quizsignup() {
       }
     }
 
-    if (type != "checkbox") {
+    if(type == 'radio' && checked == true)
+    {
+      userData.accomodation = 'Yes';
+    }else{
+      userData.accomodation = 'No';
+    }
+
+    if (type != "checkbox" && type != 'radio') {
       setUserData({ ...userData, [name]: value });
     }
     //console.log(userData);
@@ -506,6 +518,7 @@ function Quizsignup() {
               />
             </div>
           </div>
+          <div id="show_invalid">The Referal Code is Invalid</div>
           {/* Choose dempartment */}
           <div className="field">
             <span className="payform-label">
@@ -567,6 +580,7 @@ function Quizsignup() {
               </div>
               <select
                 name="timeSlot1"
+                className="payform-dropdown"
                 id="amb_timeslot"
                 onChange={postUserData}
               >
@@ -577,15 +591,12 @@ function Quizsignup() {
                 <option value="8-11">8-11 August</option>
                 <option value="11-14">11-14 August</option>
               </select>
-              {/* <div id="software"></div> */}
             </div>
           </div>
-          {/* <input
-            type="button"
-            onClick={fnCheckSelection()}
-            value="Fire Validation"
-          /> */}
-          <div id="show_invalid">The Referal Code is Invalid</div>
+            <div className="accomo">
+            <input type="radio" value="accomodation" name="accomodation" id="accomodation"  onChange={postUserData}/> Need Accomodation & food
+            </div>
+        
           <div id="pay_button">
             <div id="paynow">
               <button
