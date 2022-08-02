@@ -51,6 +51,7 @@ function VerticalTimeline() {
         <TimelineItem
           key="002"
           dateText="IOT"
+          id="iot"
           dateInnerStyle={{ background: "#ffde00", color: "#fff" }}
           bodyContainerStyle={{
             background: "#ddd",
@@ -97,6 +98,7 @@ function VerticalTimeline() {
         </TimelineItem>
         <TimelineItem
           key="003"
+          id="vd"
           dateText="Vehicle Dynamics"
           dateInnerStyle={{ background: "#ffbc00", color: "#fff" }}
           bodyContainerStyle={{
@@ -177,6 +179,7 @@ function VerticalTimeline() {
         </TimelineItem>
         <TimelineItem
           key="004"
+          id="ev"
           dateText="Electric Vehicle"
           dateInnerStyle={{ background: "#ffbc00", color: "#fff" }}
           bodyContainerStyle={{
@@ -227,6 +230,7 @@ function VerticalTimeline() {
         </TimelineItem>
         <TimelineItem
           key="005"
+          id="brakes"
           dateText="Brakes"
           dateInnerStyle={{ background: "#ffbc00", color: "#fff" }}
           bodyContainerStyle={{
@@ -272,6 +276,67 @@ function VerticalTimeline() {
         <p className="subtext">What is regenerative braking?</p>
         <p className="subtext">Automatic Braking System Using Ultrasonic Sensor</p>
         <p>Bonus Gift: Calculation(Braking Distance)</p>
+        </TimelineItem>
+        <TimelineItem  key="006"
+          id="engines"
+          dateText="Engines"
+          dateInnerStyle={{ background: "#ffbc00", color: "#fff" }}
+          bodyContainerStyle={{
+            background: "#ddd",
+            padding: "20px",
+            borderRadius: "8px",
+            boxShadow: "0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)",
+          }}>
+          <p>
+          1. Introduction <br/>
+          2. Types of Engine<br/>
+          3. Classification of Engine<br/>
+          4.(I) Petrol Engine<br/>
+          4.(II) Diesel Engine<br/>
+          5. Basic Engine Parts<br/>
+          6. Fuel Injector<br/>
+          7. Variable Valve Timing<br/>
+          8. Turbochargers<br/>
+          9. Superchargers<br/>
+          10. Intercooler<br/>
+          </p>
+        </TimelineItem>
+        <TimelineItem  key="007"
+          id="softwares"
+          dateText="Softwares"
+          dateInnerStyle={{ background: "#ffbc00", color: "#fff" }}
+          bodyContainerStyle={{
+            background: "#ddd",
+            padding: "20px",
+            borderRadius: "8px",
+            boxShadow: "0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)",
+          }}> <h4 style={{ color: "blue", marginBottom: "15px" }}>Solidworks</h4>
+          <p>
+          Installation  <br/>
+          Introduction to UI <br/>
+          Part file(Sketching 2D)<br/>
+          Part File(Sketching 3D)<br/>
+          Extrude/cut/revolve a pattern by an example (sheaves of CVT)<br/>
+          Assembly(Dampers)<br/>
+          </p>
+        </TimelineItem>
+        <TimelineItem key="008"
+          id="ooh"
+          dateText="Overhauling of Engines"
+          dateInnerStyle={{ background: "#ffbc00", color: "#fff" }}
+          bodyContainerStyle={{
+            background: "#ddd",
+            padding: "20px",
+            borderRadius: "8px",
+            boxShadow: "0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)",
+          }}> <h4 style={{ color: "blue", marginBottom: "15px" }}>Overhauling of following engines</h4>
+          <p>
+          Honda city<br/>
+          Audi <br/>
+          Mercedes<br/>
+          Land cruiser<br/>
+          Porsche<br/>
+          </p>
         </TimelineItem>
       </Timeline>
     </>

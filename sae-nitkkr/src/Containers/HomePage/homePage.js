@@ -9,6 +9,7 @@ import ProfIncharges from '../../Containers/HomePage/ProfInchargesAndManagers/Pr
 import Managers from '../../Containers/HomePage/ProfInchargesAndManagers/Managers';
 import Footer from '../../Components/Footer/Footer(black)/FooterBlack';
 import AutokritiEvent from '../../Components/AutokritiEvent/AutokritiEvent'
+import Autokirtee12 from '../Autokriti/Autokirtee12_popup/Autokirtee12';
 
 
 function HomePage() {
@@ -22,7 +23,7 @@ function HomePage() {
             <NavBar />
             <FirstDisplayDIV page="Home" />
             <AboutUs page="Home" />
-
+            <Autokirtee12/>
             <TeamsDIV />
             <br />
             {/* <ExploreUs /> */}

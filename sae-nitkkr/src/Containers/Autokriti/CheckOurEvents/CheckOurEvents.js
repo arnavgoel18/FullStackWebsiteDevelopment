@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import Quiz from "../../../Assets/CheckOurEvents/quiz.webp";
 import Autokriti2 from "../../../Assets/CheckOurEvents/Autokriti2.webp";
 import Au2Poster from "../../../Assets/CheckOurEvents/Au2Poster.webp";
+import autokriti12poster from '../../../Assets/Autokriti12/Autokriti12poster.jpg'
+
 
 function CheckEvents() {
   return (
@@ -16,8 +18,8 @@ function CheckEvents() {
             <Session
               title="Autokriti 12.0"
               status="Venue: NIT Kurukshetra"
-              date="DATE"
-              image={Au2Poster}
+              date="Date : Slot1=>(8-11 August) Slot2=>(11-14 August)-2022" 
+              image={autokriti12poster}
               url="/autokriti12"
             />
             <Session

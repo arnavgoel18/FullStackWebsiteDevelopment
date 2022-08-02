@@ -5,6 +5,22 @@ import { BsGearFill } from "react-icons/bs";
 import { IoCarOutline } from "react-icons/io5";
 import { MdEdgesensorHigh } from "react-icons/md";
 import { GiGears } from "react-icons/gi";
+import { IoIosArrowDropdown } from "react-icons/io";
+import autokriti12poster from "../../../Assets/Autokriti12/Autokriti12poster.jpg"
+import SW from "../../../Assets/Tech/sw.png";
+import TM from "../../../Assets/Tech/tm.png";
+import OH from "../../../Assets/Tech/oh.png";
+import SP from "../../../Assets/Tech/sp.png";
+import ST from "../../../Assets/Tech/st.png";
+import BK from "../../../Assets/Tech/bk.png";
+import IOT from "../../../Assets/Tech/iot.png";
+import BMS from "../../../Assets/Tech/bms.png";
+import AC from "../../../Assets/Tech/ac.png";
+import MT from "../../../Assets/Tech/mt.png";
+import EG from "../../../Assets/Tech/eg.png";
+import ET from "../../../Assets/Tech/et.png";
+import MTC from "../../../Assets/Tech/mtc.png";
+import ANS from "../../../Assets/Tech/ans.png";
 
 function Autokirtee12() {
   return (
@@ -24,37 +40,146 @@ function Autokirtee12() {
           </div>
           <div className="Autokirtee12_rest">
             <div className="Autokirtee12_left">
-              <div className="Autokirtee12_content">
+            <div className="Autokirtee12_content">
                 <div className="Autokirtee12_content_left">
                   <div className="Autokirtee12_content_list">
-                    <BsGearFill className="Autokirtee12_content_list_icon" />
+                    <div className="Autokirtee12_content_list_icon">
+                      <img src={TM} style={{ height: "20px", width: "20px" }} />
+                    </div>
                     <p> Transmission</p>
                   </div>
                   <div className="Autokirtee12_content_list">
-                    <IoCarOutline className="Autokirtee12_content_list_icon" />
+                    <IoCarOutline />
                     <p> Vehical Dynamics</p>
                   </div>
                   <div className="Autokirtee12_content_list">
-                    <BsGearFill className="Autokirtee12_content_list_icon" />
+                    <img src={BK} style={{ height: "20px", width: "20px" }} />
                     <p> Brakes</p>
+                  </div>
+                  <div className="Autokirtee12_content_list">
+                    <img src={SW} style={{ height: "20px", width: "20px" }} />
+                    <p> Solidworks</p>
+                  </div>
+                  <div className="Autokirtee12_content_list">
+                    <img src={SP} style={{ height: "20px", width: "20px" }} />
+                    <p> Suspension</p>
+                  </div>
+                  <div className="Autokirtee12_content_list">
+                    <img src={BMS} style={{ height: "20px", width: "20px" }} />
+                    <p>BMS</p>
+                  </div>
+                  <div className="Autokirtee12_content_list">
+                    <img src={MT} style={{ height: "20px", width: "20px" }} />
+                    <p> Motor</p>
+                  </div>
+                  <div className="Autokirtee12_content_list">
+                    <img src={ET} style={{ height: "20px", width: "20px" }} />
+                    <p> EV Powertrain</p>
+                  </div>
+                  <div className="Autokirtee12_content_list">
+                    <img src={ANS} style={{ height: "20px", width: "20px" }} />
+                    <p> Ansys</p>
                   </div>
                 </div>
                 <div className="Autokirtee12_content_right">
                   <div className="Autokirtee12_content_list">
-                    <BsGearFill className="Autokirtee12_content_list_icon" />
+                    <img src={OH} style={{ height: "20px", width: "20px" }} />
                     <p>Overhauling of engines</p>
                   </div>
                   <div className="Autokirtee12_content_list">
-                    <GiGears className="Autokirtee12_content_list_icon" />
+                    <img src={ST} style={{ height: "20px", width: "20px" }} />
+                    <p> Steering</p>
+                  </div>
+                  <div className="Autokirtee12_content_list">
+                    <img src={IOT} style={{ height: "20px", width: "20px" }} />
+                    <p> IOT</p>
+                  </div>
+                  <div className="Autokirtee12_content_list">
+                    <GiGears />
                     <p> Drive train</p>
                   </div>
                   <div className="Autokirtee12_content_list">
-                    <MdEdgesensorHigh className="Autokirtee12_content_list_icon" />
+                    <MdEdgesensorHigh />
                     <p>DAQ</p>
+                  </div>
+                  <div className="Autokirtee12_content_list">
+                    <img src={AC} style={{ height: "20px", width: "20px" }} />
+                    <p> Accumulator</p>
+                  </div>
+                  <div className="Autokirtee12_content_list">
+                    <img src={EG} style={{ height: "20px", width: "20px" }} />
+                    <p> Engine</p>
+                  </div>
+                  <div className="Autokirtee12_content_list">
+                    <img src={MTC} style={{ height: "20px", width: "20px" }} />
+                    <p> Motor Controller</p>
                   </div>
                 </div>
               </div>
-
+              <div className="Autokirtee12_dropdowns">
+                <button className="Autokirtee_12_dropdown">
+                  <div className="Autokirtee_12_dropdown-text">
+                    Combustion Vehicle
+                  </div>
+                  <div className="Autokirtee_12_icons">
+                    <IoIosArrowDropdown />
+                  </div>
+                  <div className="Autokirtee_12_dropdown-content">
+                    <div className="Autokirtee_12_dropdown-content1">
+                    Engine <br/>
+                    Transmission<br/>
+                    Vehicle Dynamics<br/>
+                    Suspension <br />
+                    Steering <br />
+                    Brakes<br/>
+                    </div>
+                  </div>
+                </button>
+                <button className="Autokirtee_12_dropdown">
+                  <div className="Autokirtee_12_dropdown-text">
+                    Electric Vehicle
+                  </div>
+                  <div className="Autokirtee_12_icons">
+                    <IoIosArrowDropdown />
+                  </div>
+                  <div className="Autokirtee_12_dropdown-content">
+                    <div className="Autokirtee_12_dropdown-content1">
+                      Battery <br />
+                      BMS <br />
+                      Motor <br />
+                      Motor Controller <br />
+                      DAQ <br />
+                      Power Train <br />                     </div>
+                  </div>
+                </button>
+                <button className="Autokirtee_12_dropdown">
+                  <div className="Autokirtee_12_dropdown-text">IOT</div>
+                  <div className="Autokirtee_12_icons">
+                    <IoIosArrowDropdown />
+                  </div>
+                  <div className="Autokirtee_12_dropdown-content">
+                    <div className="Autokirtee_12_dropdown-content1">
+                    COMMUNICATION PROTOCOLS<br/>
+                    ARDUINO<br/>
+                    CANBUS<br/>
+                    TELEMETRY<br/>
+                    PROJECTS<br/>
+                    </div>
+                  </div>
+                </button>
+                <button className="Autokirtee_12_dropdown">
+                  <div className="Autokirtee_12_dropdown-text">Softwares</div>
+                  <div className="Autokirtee_12_icons">
+                    <IoIosArrowDropdown />
+                  </div>
+                  <div className="Autokirtee_12_dropdown-content">
+                    <div className="Autokirtee_12_dropdown-content1">
+                      Solidworks <br/>
+                      Ansys
+                      </div>
+                  </div>
+                </button>
+              </div>
               <div className="Autokirtee12_buttons">
                 <a href="/autokriti12">
                   {" "}
@@ -72,8 +197,8 @@ function Autokirtee12() {
 
             <div className="Autokirtee12_img_container">
               <img
-                src="https://www.picamon.com/wp-content/uploads/2020/10/Picamon-northern-lights-0-5f8b42955e1ad"
-                alt=""
+              src={autokriti12poster}
+              alt=""
                 className="Autokirtee12_img"
               />
             </div>
