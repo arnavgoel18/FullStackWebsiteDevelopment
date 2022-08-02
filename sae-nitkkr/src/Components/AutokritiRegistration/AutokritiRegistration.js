@@ -19,7 +19,7 @@ import { check } from "fontawesome";
 
 function Quizsignup() {
   var [finalcost, setFinalcost] = useState(0);
-  var [count, setCount] = useState(0);
+  // var [count, setCount] = useState(0);
   //to calculate finalcost
   const calculateAmount = async () => {
     var Mechanical = document.getElementById("amb_mechanical").checked;
@@ -27,10 +27,18 @@ function Quizsignup() {
     var EV = document.getElementById("amb_EV").checked;
     var software = document.getElementById("amb_software").checked;
 
-    if (Mechanical == true) {finalcost += 1;}
-    if (IOT == true) {finalcost += 2;}
-    if (EV == true) {finalcost += 3;}
-    if (software == true) {finalcost += 4;}
+    if (Mechanical == true) {
+      finalcost += 1;
+    }
+    if (IOT == true) {
+      finalcost += 2;
+    }
+    if (EV == true) {
+      finalcost += 3;
+    }
+    if (software == true) {
+      finalcost += 4;
+    }
 
     setFinalcost(finalcost);
     userData.amount = finalcost;
@@ -38,14 +46,34 @@ function Quizsignup() {
 
   //to check all fields are filled or not
   function checkAllFields() {
-    const { name, email, phone, college, branch, semester, referal, timeSlot, mechanical, ev, iot, software } =
-      userData;
+    const {
+      name,
+      email,
+      phone,
+      college,
+      branch,
+      semester,
+      referal,
+      timeSlot,
+      mechanical,
+      ev,
+      iot,
+      software,
+    } = userData;
 
-      if (mechanical == 'true') {count++;}
-      if (iot == 'true') {count++;}
-      if (ev == 'true') {count++;}
-      if (software == 'true') {count++;}
-      setCount(count);
+    var count = 0;
+    if (mechanical == "true") {
+      count++;
+    }
+    if (iot == "true") {
+      count++;
+    }
+    if (ev == "true") {
+      count++;
+    }
+    if (software == "true") {
+      count++;
+    }
 
     if (name && email && phone && college && branch && semester) {
       //if all fields are entered
@@ -55,13 +83,13 @@ function Quizsignup() {
       } else if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
         alert("Please enter a valid email address.");
         return false;
-      } else if(count > 2){
-        alert('You can choose maximum two department');
+      } else if (count > 2) {
+        alert("You can choose maximum two department");
         return false;
-      }else if(count == 0){
-        alert('Choose at least one department');
+      } else if (count == 0) {
+        alert("Choose at least one department");
         return false;
-      }else if (document.getElementById("agree").checked) {
+      } else if (document.getElementById("agree").checked) {
         return true;
       } else {
         alert("Please tick the checkbox under instructions to proceed");
@@ -71,11 +99,10 @@ function Quizsignup() {
       alert("Please fill the data");
       return false;
     }
-    
   }
   //to save data in local storage and render to payment page
   function savetoLocal() {
-    localStorage.removeItem('userData');
+    localStorage.removeItem("userData");
     const checkAllData = checkAllFields();
     if (checkAllData) {
       calculateAmount();
@@ -132,13 +159,14 @@ function Quizsignup() {
     amount: finalcost,
   });
 
-  let name, value, checked;
+  let name, value, checked, type;
 
   const postUserData = (event) => {
     name = event.target.name;
     value = event.target.value;
     checked = event.target.checked;
-console.log(name, checked);
+    type = event.target.type;
+    //console.log(type);
 
     var valid = false;
     //to check referal code
@@ -193,15 +221,15 @@ console.log(name, checked);
       }
     }
 
-    if(checked == true){
+    if (type == 'checkbox') {
       var check = checked.toString();
       setUserData({ ...userData, [name]: check });
-   
-    }else{
-      setUserData({ ...userData, [name]: value });
     }
+    
+    if(type != 'checkbox')
+      setUserData({ ...userData, [name]: value });
 
-     console.log(userData);
+    //console.log(userData);
   };
 
   var [stuData, setStuData] = useState([]);
@@ -460,7 +488,7 @@ console.log(name, checked);
 
           {/* Choose dempartment */}
           <div className="field">
-            <span className="payform-label"> Select Your Departments </span>
+            <span className="payform-label"> Select Your Departments(max. two) </span>
             <br />
             <div className="main-chheckbox">
               <div className="department-checkbox">
@@ -469,8 +497,7 @@ console.log(name, checked);
                   name="mechanical"
                   required="unrequired"
                   id="amb_mechanical"
-                 
-                onChange={postUserData}
+                  onChange={postUserData}
                 />
                 <span for="mechanical">Mechanical</span>
               </div>
@@ -480,8 +507,7 @@ console.log(name, checked);
                   name="iot"
                   required="unrequired"
                   id="amb_IOT"
-                 
-                onChange={postUserData}
+                  onChange={postUserData}
                 />
                 <span for="iot">IOT</span>
               </div>
@@ -491,8 +517,7 @@ console.log(name, checked);
                   name="ev"
                   required="unrequired"
                   id="amb_EV"
-                
-                onChange={postUserData}
+                  onChange={postUserData}
                 />
                 <span for="ev">EV</span>
               </div>
@@ -502,8 +527,7 @@ console.log(name, checked);
                   name="software"
                   required="unrequired"
                   id="amb_software"
-              
-                onChange={postUserData}
+                  onChange={postUserData}
                 />
                 <span for="software">Software</span>
               </div>
