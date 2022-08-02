@@ -59,7 +59,7 @@ function RegistrationDetails() {
       currency: data.currency,
       amount: data.amount,
       order_id: data.id,
-      description: "Thankyou for your test donation",
+      description: "Thankyou for registration",
       image: { saelogo },
       handler: async (response) => {
         await handler(response);
@@ -89,6 +89,7 @@ function RegistrationDetails() {
 
     const set_to_database = async () => {
       sendEmail();
+      authorised_user["department"] = department;
       const Saving_user_data = authorised_user;
       let gotit = await setDoc(
         doc(db, "paymentregistrationid", timestamp),
@@ -129,6 +130,7 @@ function RegistrationDetails() {
     paymentObject.open();
 
     localStorage.removeItem("userData");
+    localStorage.removeItem("department");
   };
 
   const initializeRazorpay = () => {
@@ -191,8 +193,12 @@ function RegistrationDetails() {
             <td>{authorised_user.phone}</td>
           </tr>{" "}
           <tr>
-            <td className="td-first">TIMESLOT</td>
-            <td>{authorised_user.timeSlot}</td>
+            <td className="td-first">TIMESLOT ({authorised_user.firstChoice})</td>
+            <td>{authorised_user.timeSlot1} August</td>
+          </tr>{" "}
+          <tr>
+            <td className="td-first">TIMESLOT 2</td>
+            <td>{authorised_user.timeSlot2} August</td>
           </tr>{" "}
           <tr>
             <td className="td-first">REFERAL</td>
@@ -206,9 +212,9 @@ function RegistrationDetails() {
             <td className="td-first">DEPARTMENT</td>
             <td>{
               department.map((other, i)=>{
-                return(<>
+                return(<span key={i}>
                   {other} &nbsp;{" "}
-                </>)
+                </span>)
               })
             }
               </td>

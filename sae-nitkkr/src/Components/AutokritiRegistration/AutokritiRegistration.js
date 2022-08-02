@@ -44,34 +44,10 @@ function Quizsignup() {
       finalcost += 4;
     }
 
-      
     setFinalcost(finalcost);
     userData.amount = finalcost;
   };
-  // function fnCheckSelection()
-  // {
-  // var counter=0;
-  //  var oArryDates = document.getElementsByTagName('input');
 
-  //                 var str="";
-
-  //                 for(let i=0;i< oArryDates.length;i++)
-  //                 {
-  //                     if(oArryDates[i].type == 'checkbox')
-  //                     {
-
-  //                         if(counter  >2)
-  //       {
-  //        alert('Plz select max. two check box');
-  //       break;
-  //       }
-  //       else if(document.getElementById(oArryDates[i].id).checked)
-  //       {
-  //        counter++;
-  //       }
-  //      }
-  //     }
-  //   }
   //to check all fields are filled or not
   function checkAllFields() {
     const {
@@ -82,7 +58,7 @@ function Quizsignup() {
       branch,
       semester,
       referal,
-      timeSlot,
+      timeSlot1,
       mechanical,
       ev,
       iot,
@@ -106,7 +82,7 @@ function Quizsignup() {
 
     setDepartment(department);
     console.log(department, count);
-    if (name && email && phone && college && branch && semester) {
+    if (name && email && phone && college && branch && semester && timeSlot1) {
       //if all fields are entered
       if (phone.length != 10) {
         alert("Please enter a valid mobile number");
@@ -140,7 +116,7 @@ function Quizsignup() {
       calculateAmount();
       localStorage.setItem("userData", JSON.stringify(userData));
       localStorage.setItem("department", JSON.stringify(department));
-      // window.location = `/register/registrationDetails`;
+      window.location = `/register/registrationDetails`;
     }
   }
 
@@ -201,7 +177,7 @@ function Quizsignup() {
     value = event.target.value;
     checked = event.target.checked;
     type = event.target.type;
-    console.log(name, type);
+  
     var valid = false;
     //to check referal code
     if (name === "referal") {
@@ -257,30 +233,28 @@ function Quizsignup() {
 
     if (type == "checkbox") {
       var check = checked.toString();
-      setUserData({ ...userData, [name]: check });
-      console.log(name, check);
-      
-      if (check == "true" && done == 1) {
+
+      if (checked == true && done == 1) {
         document.getElementById(
           "chooseTimeslot"
         ).innerText += `(${name.toUpperCase()}) `;
-        setUserData({ ...userData, ["firstChoice"]: name });
+        userData.firstChoice = name.toUpperCase();
         done = 0;
       }
+      setUserData({ ...userData, [name]: check });
     }
 
-    if (type != "checkbox") setUserData({ ...userData, [name]: value });
     if (name == "timeSlot1") {
       if (value == "8-11") {
-        setUserData({ ...userData, ["timeSlot2"]: "11-14" });
-        console.log('done')
+        userData.timeSlot2 = "11-14";
       } else {
-        setUserData({ ...userData, "timeSlot2": "8-11" });
-        console.log('yo');
+        userData.timeSlot2 = "8-11";
       }
-      console.log(name, value);
     }
 
+    if (type != "checkbox") {
+      setUserData({ ...userData, [name]: value });
+    }
     //console.log(userData);
   };
 
@@ -539,7 +513,7 @@ function Quizsignup() {
               {" "}
               Select Your Departments(max. two){" "}
             </span>
-          
+
             {/* <div className="redcolortext">(Maximum two)</div> */}
             <br />
             <div className="main-chheckbox">
@@ -588,20 +562,24 @@ function Quizsignup() {
                 <div id="software"></div>
               </div>
             </div>
-              <div className="department-timeslot">
-                <div className="payform-label" id="chooseTimeslot">
-                  Choose timeSlot&nbsp;
-                </div>
-                <select
-                  name="timeSlot1"
-                  id="amb_timeslot"
-                  onChange={postUserData}
-                >
-                  <option value="8-11">8-11 August</option>
-                  <option value="11-14">11-14 August</option>
-                </select>
-                {/* <div id="software"></div> */}
+            <div className="department-timeslot">
+              <div className="payform-label" id="chooseTimeslot">
+                Choose timeSlot&nbsp;
               </div>
+              <select
+                name="timeSlot1"
+                id="amb_timeslot"
+                onChange={postUserData}
+              >
+                <option defaultValue={"DEFAULT"} disabled hidden>
+                  Choose here
+                </option>
+                <option value="DEFAULT">--None Selected--</option>
+                <option value="8-11">8-11 August</option>
+                <option value="11-14">11-14 August</option>
+              </select>
+              {/* <div id="software"></div> */}
+            </div>
           </div>
           {/* <input
             type="button"

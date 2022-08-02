@@ -25,11 +25,11 @@ function AfterRegistrationPage() {
   const [imageURL, setimageURL] = useState("");
   const [certiUrl, setcertiUrl] = useState("");
   let user = {};
+
   async function getdata() {
     const docRef = doc(db, "paymentregistrationid", id);
     const docSnap = await getDoc(docRef);
     setauthorised_user(docSnap.data());
-    console.log(docSnap.data());
     setqrvisible(true);
   }
   const generateQrcode = async () => {
@@ -127,12 +127,20 @@ function AfterRegistrationPage() {
             <td>{authorised_user.paymentid}</td>
           </tr>{" "}
           <tr>
-            <td className="td-first">TIMESLOT</td>
-            <td>{authorised_user.timeSlot}</td>
+            <td className="td-first">TIMESLOT ({authorised_user.firstChoice})</td>
+            <td>{authorised_user.timeSlot1} August</td>
+          </tr>{" "}
+          <tr>
+            <td className="td-first">TIMESLOT 2</td>
+            <td>{authorised_user.timeSlot2} August</td>
           </tr>{" "}
           <tr>
             <td className="td-first">REFERAL</td>
             <td>{authorised_user.referal}</td>
+          </tr>{" "}
+          <tr>
+            <td className="td-first">DEPARTMENT</td>
+            <td> {authorised_user.department} </td>
           </tr>{" "}
           <tr>
             <td className="td-first">STATUS</td>

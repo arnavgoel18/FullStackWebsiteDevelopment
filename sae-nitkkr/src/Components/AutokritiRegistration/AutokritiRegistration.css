@@ -263,7 +263,7 @@ margin-top: 5px;
 }
 .department-checkbox input{
   width: auto;
-  margin-right: 10px;
+  margin-right: 5px;
 }
 .main-chheckbox{
   display: flex;
@@ -274,6 +274,9 @@ margin-top: 5px;
 .department-timeslot{
   margin-top: 13px;
   margin-bottom: 30px;
+}
+#chooseTimeslot{
+  margin-bottom: 8px;
 }
 @media (min-width:320px) and (max-width:425px)
 {
