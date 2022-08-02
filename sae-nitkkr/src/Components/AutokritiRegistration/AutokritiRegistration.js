@@ -35,19 +35,19 @@ function Quizsignup() {
     var accomo = document.getElementById("accomodation").checked;
 
     if (Mechanical == true) {
-      finalcost += 2500;
+      finalcost += 1;
     }
     if (IOT == true) {
-      finalcost += 2500;
+      finalcost += 1;
     }
     if (EV == true) {
-      finalcost += 2500;
+      finalcost += 1;
     }
     if (software == true) {
-      finalcost += 2500;
+      finalcost += 1;
     }
     if(accomo == true){
-      finalcost += 500;
+      finalcost += 1;
     }
 
     setFinalcost(finalcost);
