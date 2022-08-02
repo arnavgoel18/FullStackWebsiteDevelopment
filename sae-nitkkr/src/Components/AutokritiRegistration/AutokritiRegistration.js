@@ -652,8 +652,7 @@ function Quizsignup() {
               confirmation on that email
             </p>
             <p className="instruction_para">
-              * After clicking on Pay, You will be redirected to confirmation
-              page, make sure to download the <b>QR CODE</b> available there.
+              * You can choose Maximum 2 Departments. Each department is 3 Days Long + 1 Day Guest Lecture
             </p>
             <p className="instruction_para">
               * You have to show QR code at the time of arrival.
