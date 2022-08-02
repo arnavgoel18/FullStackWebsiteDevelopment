@@ -270,6 +270,11 @@ margin-top: 5px;
   flex-direction: column;
   align-items: flex-start;
 }
+
+.department-timeslot{
+  margin-top: 13px;
+  margin-bottom: 30px;
+}
 @media (min-width:320px) and (max-width:425px)
 {
 #referal_check {

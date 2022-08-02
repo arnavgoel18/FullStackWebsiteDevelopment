@@ -17,6 +17,7 @@ import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer(black)/FooterBlack";
 import { check } from "fontawesome";
 
+var done = 1;
 function Quizsignup() {
   var [finalcost, setFinalcost] = useState(0);
   var [department, setDepartment] = useState([]);
@@ -65,10 +66,10 @@ function Quizsignup() {
     setDepartment([]);
     var count = 0;
     if (mechanical == "true") {
-      department[count++] = 'Mechanical';
+      department[count++] = "Mechanical";
     }
     if (iot == "true") {
-      department[count++] = 'IOT';
+      department[count++] = "IOT";
     }
     if (ev == "true") {
       department[count++] = "EV";
@@ -113,7 +114,7 @@ function Quizsignup() {
       calculateAmount();
       localStorage.setItem("userData", JSON.stringify(userData));
       localStorage.setItem("department", JSON.stringify(department));
-      window.location = `/register/registrationDetails`;
+      // window.location = `/register/registrationDetails`;
     }
   }
 
@@ -156,13 +157,15 @@ function Quizsignup() {
     transaction: "",
     orderid: "",
     paymentid: "",
-    timeSlot: "26 Feb",
+    timeSlot1: "",
+    timeSlot2: "",
     status: "Registered",
     mechanical: "",
     ev: "",
     iot: "",
     software: "",
     amount: finalcost,
+    firstChoice: "",
   });
 
   let name, value, checked, type;
@@ -172,8 +175,7 @@ function Quizsignup() {
     value = event.target.value;
     checked = event.target.checked;
     type = event.target.type;
-    //console.log(type);
-
+    console.log(name, type);
     var valid = false;
     //to check referal code
     if (name === "referal") {
@@ -227,13 +229,31 @@ function Quizsignup() {
       }
     }
 
-    if (type == 'checkbox') {
+    if (type == "checkbox") {
       var check = checked.toString();
       setUserData({ ...userData, [name]: check });
+      console.log(name, check);
+      
+      if (check == "true" && done == 1) {
+        document.getElementById(
+          "chooseTimeslot"
+        ).innerText += `(${name.toUpperCase()}) `;
+        setUserData({ ...userData, ["firstChoice"]: name });
+        done = 0;
+      }
     }
-    
-    if(type != 'checkbox')
-      setUserData({ ...userData, [name]: value });
+
+    if (type != "checkbox") setUserData({ ...userData, [name]: value });
+    if (name == "timeSlot1") {
+      if (value == "8-11") {
+        setUserData({ ...userData, ["timeSlot2"]: "11-14" });
+        console.log('done')
+      } else {
+        setUserData({ ...userData, "timeSlot2": "8-11" });
+        console.log('yo');
+      }
+      console.log(name, value);
+    }
 
     //console.log(userData);
   };
@@ -494,7 +514,10 @@ function Quizsignup() {
 
           {/* Choose dempartment */}
           <div className="field">
-            <span className="payform-label"> Select Your Departments(max. two) </span>
+            <span className="payform-label">
+              {" "}
+              Select Your Departments(max. two){" "}
+            </span>
             <br />
             <div className="main-chheckbox">
               <div className="department-checkbox">
@@ -506,6 +529,7 @@ function Quizsignup() {
                   onChange={postUserData}
                 />
                 <span for="mechanical">Mechanical</span>
+                <div id="mechanical"></div>
               </div>
               <div className="department-checkbox">
                 <input
@@ -516,6 +540,7 @@ function Quizsignup() {
                   onChange={postUserData}
                 />
                 <span for="iot">IOT</span>
+                <div id="iot"></div>
               </div>
               <div className="department-checkbox">
                 <input
@@ -526,6 +551,7 @@ function Quizsignup() {
                   onChange={postUserData}
                 />
                 <span for="ev">EV</span>
+                <div id="ev"></div>
               </div>
               <div className="department-checkbox">
                 <input
@@ -536,6 +562,21 @@ function Quizsignup() {
                   onChange={postUserData}
                 />
                 <span for="software">Software</span>
+                <div id="software"></div>
+              </div>
+              <div className="department-timeslot">
+                <span className="payform-label" id="chooseTimeslot">
+                  Choose timeSlot&nbsp;
+                </span>
+                <select
+                  name="timeSlot1"
+                  id="amb_timeslot"
+                  onChange={postUserData}
+                >
+                  <option value="8-11">8-11 August</option>
+                  <option value="11-14">11-14 August</option>
+                </select>
+                <div id="software"></div>
               </div>
             </div>
           </div>
