@@ -111,7 +111,7 @@ function RegistrationDetails() {
       };
       emailjs
         .send(
-          "service_dqf2x44",
+          "service_oqccfwh",
           "template_zezhpzf",
           toSend,
           "ulnoJlsECTLQyCRZ5"
