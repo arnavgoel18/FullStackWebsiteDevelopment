@@ -54,7 +54,7 @@ function RegistrationDetails() {
 
     console.log(data);
     var options = {
-      key: "rzp_test_4N9UbRbW9Gp0Mt",
+      key: "rzp_live_DhW7UYCWynTVy0",
       name: "SAE NIT Kurukshetra",
       currency: data.currency,
       amount: data.amount,
@@ -111,7 +111,7 @@ function RegistrationDetails() {
       };
       emailjs
         .send(
-          "service_dqf2x44",
+          "service_oqccfwh",
           "template_zezhpzf",
           toSend,
           "ulnoJlsECTLQyCRZ5"
