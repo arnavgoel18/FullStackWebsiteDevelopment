@@ -21,6 +21,8 @@ var done = 1;
 function Quizsignup() {
   var [finalcost, setFinalcost] = useState(0);
   var [department, setDepartment] = useState([]);
+  var [temp,setsettemp]=useState([]);
+  // var nishant=[];
   // var [count, setCount] = useState(0);
   //to calculate finalcost
   const calculateAmount = async () => {
@@ -170,7 +172,7 @@ function Quizsignup() {
   });
 
   let name, value, checked, type;
-
+  
   const postUserData = (event) => {
     name = event.target.name;
     value = event.target.value;
@@ -232,13 +234,39 @@ function Quizsignup() {
 
     if (type == "checkbox") {
       var check = checked.toString();
+  console.log(check)
+      if (checked == true) {
 
-      if (checked == true && done == 1) {
-        document.getElementById(
-          "chooseTimeslot"
-        ).innerText += `(${name.toUpperCase()}) `;
-        userData.firstChoice = name.toUpperCase();
+        // document.getElementById(
+        //   "chooseTimeslot"
+        // ).innerText += `(${name.toUpperCase()}) `;
+        // userData.firstChoice = name.toUpperCase();
+        // (newUser) => {
+        //   setsettemp(state => [newUser, ...state])
+        // }
+        setsettemp((prevdepartment)=>
+        {
+         return [...prevdepartment,name.toUpperCase()];
+        })
+        // setDepartment(name);
+        // setsettemp((prevdepartment)=>
+        // {
+        //  return [name.toUpperCase(),...prevdepartment];
+        // })
+        // nishant.push(name);
+        // console.log(settemp);
         done = 0;
+      }
+      else
+      {
+        setsettemp(prevActions => (
+          // Filter out the item with the matching index
+          prevActions.filter((i)=>
+          {
+          return(i!=name.toUpperCase())
+          })
+        ));
+        console.log(temp);
       }
       setUserData({ ...userData, [name]: check });
     }
@@ -563,7 +591,9 @@ function Quizsignup() {
             </div>
             <div className="department-timeslot">
               <div className="payform-label" id="chooseTimeslot">
-                Choose timeSlot&nbsp;
+                Choose timeSlot&nbsp; 
+                {(temp.length==0)?" ":<span>({temp[0]})</span>}
+                
               </div>
               <select
                 name="timeSlot1"
