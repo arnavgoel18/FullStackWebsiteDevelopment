@@ -16,6 +16,7 @@ function Footerautokriti() {
         </h1>
       </div>
       <hr id="white_line_for_first" />
+      <br/>
       <div id="white_explore_us_content" className="each_footer_content">
         <Link to="/accelerons" style={{ textDecoration: 'none', color: "black" }}><p className="white_things_to_explore">Team Accelerons </p></Link>
         <Link to="/nitrox" style={{ textDecoration: 'none', color: "black" }}><p className="white_things_to_explore">Team Nitrox</p></Link>
