@@ -120,7 +120,7 @@ function Quizsignup() {
     if (checkAllData) {
       calculateAmount();
       localStorage.setItem("userData", JSON.stringify(userData));
-      localStorage.setItem("department", JSON.stringify(department));
+      localStorage.setItem("department", JSON.stringify(temp));
       window.location = `/register/registrationDetails`;
     }
   }
