@@ -267,8 +267,22 @@ margin-top: 5px;
 }
 .main-chheckbox{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  row-gap: 90px;
   align-items: flex-start;
+}
+.redcolortext{
+  color: red;
+}
+.slots{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.slot{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
 @media (min-width:320px) and (max-width:425px)
 {

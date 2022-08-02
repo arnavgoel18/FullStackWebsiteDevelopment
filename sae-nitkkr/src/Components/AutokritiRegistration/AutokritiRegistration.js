@@ -23,6 +23,8 @@ function Quizsignup() {
   // var [count, setCount] = useState(0);
   //to calculate finalcost
   const calculateAmount = async () => {
+    var count = 0;
+
     var Mechanical = document.getElementById("amb_mechanical").checked;
     var IOT = document.getElementById("amb_IOT").checked;
     var EV = document.getElementById("amb_EV").checked;
@@ -41,10 +43,34 @@ function Quizsignup() {
       finalcost += 4;
     }
 
+      
     setFinalcost(finalcost);
     userData.amount = finalcost;
   };
+  // function fnCheckSelection()
+  // {
+  // var counter=0;
+  //  var oArryDates = document.getElementsByTagName('input');
 
+  //                 var str="";
+
+  //                 for(let i=0;i< oArryDates.length;i++)
+  //                 {
+  //                     if(oArryDates[i].type == 'checkbox')
+  //                     {
+
+  //                         if(counter  >2)
+  //       {
+  //        alert('Plz select max. two check box');
+  //       break;
+  //       }
+  //       else if(document.getElementById(oArryDates[i].id).checked)
+  //       {
+  //        counter++;
+  //       }
+  //      }
+  //     }
+  //   }
   //to check all fields are filled or not
   function checkAllFields() {
     const {
@@ -163,6 +189,7 @@ function Quizsignup() {
     iot: "",
     software: "",
     amount: finalcost,
+    department: "",
   });
 
   let name, value, checked, type;
@@ -378,7 +405,6 @@ function Quizsignup() {
               onChange={postUserData}
             />{" "}
           </div>
-
           <div className="field">
             <span className="payform-label">Email id* </span>
             <br />
@@ -395,7 +421,6 @@ function Quizsignup() {
           <div id="show_email_is_registered">
             This email has alreay been Registered
           </div>
-
           <div className="field">
             <span className="payform-label">Phone No * </span>
             <br />
@@ -435,7 +460,6 @@ function Quizsignup() {
               onChange={postUserData}
             />
           </div>
-
           <div className="field_select">
             <span className="payform-label">Semester</span>
             <select
@@ -460,7 +484,6 @@ function Quizsignup() {
               <option value="8">8</option>
             </select>
           </div>
-
           <div className="field">
             {" "}
             <span className="payform-label"> Referal Code(optional code) </span>
@@ -491,10 +514,11 @@ function Quizsignup() {
               />
             </div>
           </div>
-
           {/* Choose dempartment */}
           <div className="field">
             <span className="payform-label"> Select Your Departments(max. two) </span>
+            <br />
+            <div className="redcolortext">(Maximum two)</div>
             <br />
             <div className="main-chheckbox">
               <div className="department-checkbox">
@@ -539,7 +563,11 @@ function Quizsignup() {
               </div>
             </div>
           </div>
-
+          {/* <input
+            type="button"
+            onClick={fnCheckSelection()}
+            value="Fire Validation"
+          /> */}
           <div id="show_invalid">The Referal Code is Invalid</div>
           <div id="pay_button">
             <div id="paynow">
