@@ -50,12 +50,12 @@
     
 }
 .Autokirtee12_left{
-    margin-top: 40px;
+    /* margin-top: 40px; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 160%;
-    gap: 40%;
+    /* width: 160%; */
+    /* gap: 40%; */
 }
 .Autokirtee12_content{
     display:flex;
@@ -91,6 +91,65 @@
     flex-direction: column;
     
 }
+.Autokirtee12_dropdowns {
+    display: flex;
+    flex-direction: row;
+    font-size: medium;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 100%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    justify-content: center;
+  }
+  
+  .Autokirtee_12_dropdown {
+    background-color: rgb(102, 88, 71);
+    cursor: pointer;
+    height: auto;
+    line-height: 30px;
+    font-size: 16px;
+    padding: 10px;
+    color: white;
+    border-radius: 2px;
+    border: none;
+    position: relative;
+    display: flex;
+       
+    justify-content: center;
+    width: 200px;
+  }
+  
+  .Autokirtee_12_icons {
+    line-height: 36px;
+    padding-left: 2px;
+  }
+  
+  .Autokirtee_12_dropdown-content {
+    display: none;
+    border-radius: 5px;
+    background-color: rgb(254, 255, 255);
+    position: absolute;
+    z-index: 1;
+    min-width: 200px;
+    max-width: 200px;
+    margin-top: 50px;
+    padding: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  }
+  .Autokirtee_12_dropdown-content1 {
+    width: 190px;   
+    height:max-content;
+    overflow-wrap: break-word;
+    padding: 5px;
+    /* white-space: wrap; */
+    background-color: antiquewhite;
+    color: black;
+  }
+  
+  .Autokirtee_12_dropdown:hover .Autokirtee_12_dropdown-content {
+    display: block;
+  }
 .Autokirtee_12_button{
     background-color: darkorange;
     font-size: medium;
@@ -108,27 +167,16 @@
     cursor: pointer;
 }
 
-@media screen and (max-width: 1024px){
-    .Autokirtee12_outer{
-        width: 90%;
-      
-    }
-   .Autokirtee12_img_container{
-    margin-top: 5%;
-   }
-}
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 1440px) {
    
     .Autokirtee12_outer{
        
         height: fit-content;
         width: fit-content;
        padding: 01px 20px 20px 20px;
+       width: 95%;
     
        
-    }
-    .Autokirtee12_outer{
-        width: 95%;
     }
     .Autokirtee12_img_container{
         margin-top: 30px;

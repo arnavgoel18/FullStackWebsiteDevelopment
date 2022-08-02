@@ -13,6 +13,10 @@ import CV from "../../../Assets/cv.png";
 import EV from "../../../Assets/ev.png";
 import IOT from "../../../Assets/iot.png";
 import SW from "../../../Assets/sw.png";
+import BK from "../../../Assets/bk.png";
+import TM from "../../../Assets/tm.png";
+import VD from "../../../Assets/vd.png";
+import OH from "../../../Assets/oh.png"
 
 function Autorkriti12() {
   useEffect(() => {
@@ -60,31 +64,59 @@ function Autorkriti12() {
       </div>
       <div className="about_autokriti-container">
         <div className="bigbox">
-          <a href="#">
-            {" "}
+        <a href="#transmission">
             <button className="smallbox">
-              <img src={CV}></img>
-              <h3>Combustion Vehicle</h3>
+              <img src={TM}></img>
+              <h3>Transmission</h3>
             </button>
           </a>
-          <a href="#scroll2">
-            <button className="smallbox">
-              <img src={EV}></img>
-              <h3>Electric Vehicle</h3>
-            </button>
-          </a>
-          <a href="#scroll3">
+          <a href="#iot">
             <button className="smallbox">
               <img src={IOT}></img>
               <h3>IOT</h3>
             </button>
           </a>
-          <a href="#scroll4">
+          <a href="#vd">
+            <button className="smallbox">
+              <img src={VD}></img>
+              <h3>Vehicle Dynamics</h3>
+            </button>
+          </a>
+          <a href="#ev">
+            <button className="smallbox">
+              <img src={EV}></img>
+              <h3>Electric Vehicle</h3>
+            </button>
+          </a>
+          <a href="#brakes">
+            <button className="smallbox">
+              <img src={BK}></img>
+              <h3>Brakes</h3>
+            </button>
+          </a>
+          <a href="#engines">
+            {" "}
+            <button className="smallbox">
+              <img src={CV}></img>
+              <h3>Engines</h3>
+            </button>
+          </a>
+        
+         
+          <a href="#softwares">
             <button className="smallbox">
               <img src={SW}></img>
               <h3>Softwares</h3>
             </button>
           </a>
+          <a href="#ooh">
+            <button className="smallbox">
+              <img src={OH}></img>
+              <h3>Overhauling of Engines</h3>
+            </button>
+          </a>
+         
+       
         </div>
       </div>
       <div className="about_autokriti-container">
