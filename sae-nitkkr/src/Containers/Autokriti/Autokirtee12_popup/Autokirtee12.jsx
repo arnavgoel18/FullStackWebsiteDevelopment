@@ -31,19 +31,31 @@ function Autokirtee12() {
   const hello=()=>
   {
     software.current.style.display=="none"?software.current.style.display="block":software.current.style.display="none"
+    combustion.current.style.display="none"
+    iot.current.style.display="none"
+    ev.current.style.display="none"
     // software.current.style.display=="block"?software.current.style.display="none":software.current.style.display="block"
   }
   const hello2=()=>
   {
     combustion.current.style.display=="none"?combustion.current.style.display="block":combustion.current.style.display="none"
+    software.current.style.display="none"
+    ev.current.style.display="none"
+    iot.current.style.display="none"
   }
   const hello3=()=>
   {
     iot.current.style.display=="none"?iot.current.style.display="block":iot.current.style.display="none"
+    software.current.style.display="none"
+    ev.current.style.display="none"
+    combustion.current.style.display="none"
   }
   const hello4=()=>
   {
     ev.current.style.display=="none"?ev.current.style.display="block":ev.current.style.display="none"
+    software.current.style.display="none"
+    iot.current.style.display="none"
+    combustion.current.style.display="none"
   }
   return (
     <>
