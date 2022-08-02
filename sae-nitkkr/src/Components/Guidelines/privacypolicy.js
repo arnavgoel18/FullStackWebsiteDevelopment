@@ -12,11 +12,11 @@ import './privacypolicy.css';
 <p>This Privacy Policy applies only to our online activities and is valid for visitors to our website with regards to the information that they shared and/or collect in SAE NIT Kurukshetra. This policy is not applicable to any information collected offline or via channels other than this website. Our Privacy Policy was created with the help of the <a href="https://www.privacypolicygenerator.info/">Free Privacy Policy Generator</a>.</p>
 <br/><br/>
 <p>This Privacy Policy applies only to our online activities and is valid for visitors to our website with regards to the information that they shared and/or collect in SAE NIT Kurukshetra. This policy is not applicable to any information collected offline or via channels other than this website. Our Privacy Policy was created with the help of the <a href="https://www.privacypolicygenerator.info/"> Privacy Policy Generator</a>.</p>
-
+<br/>
 <h2>Consent</h2>
 <br/>
 <p>By using our website, you hereby consent to our Privacy Policy and agree to its terms.</p>
-<br/><br/>
+<br/>
 <h2>Information we collect</h2>
 <br/>
 <p>The personal information that you are asked to provide, and the reasons why you are asked to provide it, will be made clear to you at the point we ask you to provide your personal information.</p>
