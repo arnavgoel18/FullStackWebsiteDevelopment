@@ -15,21 +15,22 @@ import {
 
 import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer(black)/FooterBlack";
+import { check } from "fontawesome";
 
 function Quizsignup() {
   var [finalcost, setFinalcost] = useState(0);
-
+  var [count, setCount] = useState(0);
   //to calculate finalcost
   const calculateAmount = async () => {
     var Mechanical = document.getElementById("amb_mechanical").checked;
     var IOT = document.getElementById("amb_IOT").checked;
     var EV = document.getElementById("amb_EV").checked;
-    var kuchtotha = document.getElementById("amb_kuchtotha").checked;
+    var software = document.getElementById("amb_software").checked;
 
-    if (Mechanical == true) finalcost += 1;
-    if (IOT == true) finalcost += 2;
-    if (EV == true) finalcost += 3;
-    if (kuchtotha == true) finalcost += 4;
+    if (Mechanical == true) {finalcost += 1;}
+    if (IOT == true) {finalcost += 2;}
+    if (EV == true) {finalcost += 3;}
+    if (software == true) {finalcost += 4;}
 
     setFinalcost(finalcost);
     userData.amount = finalcost;
@@ -37,8 +38,15 @@ function Quizsignup() {
 
   //to check all fields are filled or not
   function checkAllFields() {
-    const { name, email, phone, college, branch, semester, referal, timeSlot } =
+    const { name, email, phone, college, branch, semester, referal, timeSlot, mechanical, ev, iot, software } =
       userData;
+
+      if (mechanical == 'true') {count++;}
+      if (iot == 'true') {count++;}
+      if (ev == 'true') {count++;}
+      if (software == 'true') {count++;}
+      setCount(count);
+
     if (name && email && phone && college && branch && semester) {
       //if all fields are entered
       if (phone.length != 10) {
@@ -47,7 +55,13 @@ function Quizsignup() {
       } else if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
         alert("Please enter a valid email address.");
         return false;
-      } else if (document.getElementById("agree").checked) {
+      } else if(count > 2){
+        alert('You can choose maximum two department');
+        return false;
+      }else if(count == 0){
+        alert('Choose at least one department');
+        return false;
+      }else if (document.getElementById("agree").checked) {
         return true;
       } else {
         alert("Please tick the checkbox under instructions to proceed");
@@ -57,8 +71,8 @@ function Quizsignup() {
       alert("Please fill the data");
       return false;
     }
+    
   }
-
   //to save data in local storage and render to payment page
   function savetoLocal() {
     localStorage.removeItem('userData');
@@ -111,14 +125,21 @@ function Quizsignup() {
     paymentid: "",
     timeSlot: "26 Feb",
     status: "Registered",
+    mechanical: "",
+    ev: "",
+    iot: "",
+    software: "",
     amount: finalcost,
   });
 
-  let name, value;
+  let name, value, checked;
 
   const postUserData = (event) => {
     name = event.target.name;
     value = event.target.value;
+    checked = event.target.checked;
+console.log(name, checked);
+
     var valid = false;
     //to check referal code
     if (name === "referal") {
@@ -172,9 +193,15 @@ function Quizsignup() {
       }
     }
 
-    setUserData({ ...userData, [name]: value });
+    if(checked == true){
+      var check = checked.toString();
+      setUserData({ ...userData, [name]: check });
+   
+    }else{
+      setUserData({ ...userData, [name]: value });
+    }
 
-    // console.log(userData);
+     console.log(userData);
   };
 
   var [stuData, setStuData] = useState([]);
@@ -439,38 +466,46 @@ function Quizsignup() {
               <div className="department-checkbox">
                 <input
                   type="checkbox"
-                  name="Mechanical"
+                  name="mechanical"
                   required="unrequired"
                   id="amb_mechanical"
+                 
+                onChange={postUserData}
                 />
-                <span for="Mechanical">Mechanical</span>
+                <span for="mechanical">Mechanical</span>
               </div>
               <div className="department-checkbox">
                 <input
                   type="checkbox"
-                  name="IOT"
+                  name="iot"
                   required="unrequired"
                   id="amb_IOT"
+                 
+                onChange={postUserData}
                 />
-                <span for="IOT">IOT</span>
+                <span for="iot">IOT</span>
               </div>
               <div className="department-checkbox">
                 <input
                   type="checkbox"
-                  name="EV"
+                  name="ev"
                   required="unrequired"
                   id="amb_EV"
+                
+                onChange={postUserData}
                 />
-                <span for="EV">EV</span>
+                <span for="ev">EV</span>
               </div>
               <div className="department-checkbox">
                 <input
                   type="checkbox"
-                  name="kuch to tha"
+                  name="software"
                   required="unrequired"
-                  id="amb_kuchtotha"
+                  id="amb_software"
+              
+                onChange={postUserData}
                 />
-                <span for="kuchtotha">kuch to tha</span>
+                <span for="software">Software</span>
               </div>
             </div>
           </div>
