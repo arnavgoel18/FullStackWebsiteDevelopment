@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useRef} from "react";
 import "./Autokirtee12.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { BsGearFill } from "react-icons/bs";
@@ -23,6 +23,28 @@ import MTC from "../../../Assets/Tech/mtc.png";
 import ANS from "../../../Assets/Tech/ans.png";
 
 function Autokirtee12() {
+  let software=useRef();
+  let combustion=useRef();
+  let iot=useRef();
+  let ev=useRef();
+
+  const hello=()=>
+  {
+    software.current.style.display=="none"?software.current.style.display="block":software.current.style.display="none"
+    // software.current.style.display=="block"?software.current.style.display="none":software.current.style.display="block"
+  }
+  const hello2=()=>
+  {
+    combustion.current.style.display=="none"?combustion.current.style.display="block":combustion.current.style.display="none"
+  }
+  const hello3=()=>
+  {
+    iot.current.style.display=="none"?iot.current.style.display="block":iot.current.style.display="none"
+  }
+  const hello4=()=>
+  {
+    ev.current.style.display=="none"?ev.current.style.display="block":ev.current.style.display="none"
+  }
   return (
     <>
       <div className="Autokirtee12_popup_main">
@@ -135,9 +157,9 @@ function Autokirtee12() {
                     Combustion Vehicle
                   </div>
                   <div className="Autokirtee_12_icons">
-                    <IoIosArrowDropdown />
+                    <IoIosArrowDropdown onClick={hello2}  />
                   </div>
-                  <div className="Autokirtee_12_dropdown-content">
+                  <div className="Autokirtee_12_dropdown-content" ref={combustion}>
                     <div className="Autokirtee_12_dropdown-content1">
                     Engine <br/>
                     Transmission<br/>
@@ -153,9 +175,9 @@ function Autokirtee12() {
                     Electric Vehicle
                   </div>
                   <div className="Autokirtee_12_icons">
-                    <IoIosArrowDropdown />
+                    <IoIosArrowDropdown onClick={hello4} />
                   </div>
-                  <div className="Autokirtee_12_dropdown-content">
+                  <div className="Autokirtee_12_dropdown-content" ref={ev}>
                     <div className="Autokirtee_12_dropdown-content1">
                       Battery <br />
                       BMS <br />
@@ -168,9 +190,9 @@ function Autokirtee12() {
                 <button className="Autokirtee_12_dropdown">
                   <div className="Autokirtee_12_dropdown-text">IOT</div>
                   <div className="Autokirtee_12_icons">
-                    <IoIosArrowDropdown />
+                    <IoIosArrowDropdown onClick={hello3} />
                   </div>
-                  <div className="Autokirtee_12_dropdown-content">
+                  <div className="Autokirtee_12_dropdown-content" ref={iot}>
                     <div className="Autokirtee_12_dropdown-content1">
                     COMMUNICATION PROTOCOLS<br/>
                     ARDUINO<br/>
@@ -183,10 +205,10 @@ function Autokirtee12() {
                 <button className="Autokirtee_12_dropdown">
                   <div className="Autokirtee_12_dropdown-text">Softwares</div>
                   <div className="Autokirtee_12_icons">
-                    <IoIosArrowDropdown />
+                    <IoIosArrowDropdown onClick={hello} />
                   </div>
-                  <div className="Autokirtee_12_dropdown-content">
-                    <div className="Autokirtee_12_dropdown-content1">
+                  <div className="Autokirtee_12_dropdown-content" ref={software} >
+                    <div className="Autokirtee_12_dropdown-content1" >
                       Solidworks <br/>
                       Ansys
                       </div>
