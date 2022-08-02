@@ -65,8 +65,8 @@ function Quizsignup() {
       software,
     } = userData;
 
-    setDepartment([]);
     var count = 0;
+    setDepartment([]);
     if (mechanical == "true") {
       department[count++] = "Mechanical";
     }
@@ -80,7 +80,6 @@ function Quizsignup() {
       department[count++] = "Software";
     }
 
-    setDepartment(department);
     console.log(department, count);
     if (name && email && phone && college && branch && semester && timeSlot1) {
       //if all fields are entered
