@@ -157,6 +157,7 @@
     height: auto;
     padding: 10px;
     color: white;
+    margin-bottom: 20px;
     border-radius: 5px;
     border: none;
      width: 100%;
@@ -249,6 +250,7 @@
     }
     .Autokirtee12_buttons{
         flex-direction: column;
+        justify-content: space-between;
     }
    
   }
