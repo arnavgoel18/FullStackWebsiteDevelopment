@@ -116,7 +116,20 @@ function Autokirtee12() {
                   </div>
                 </div>
               </div>
-              <div className="Autokirtee12_dropdowns">
+              <br/><br/>
+             
+            </div>
+            
+
+            <div className="Autokirtee12_img_container">
+              <img
+              src={autokriti12poster}
+              alt=""
+                className="Autokirtee12_img"
+              />
+            </div>
+          </div>
+          <div className="Autokirtee12_dropdowns">
                 <button className="Autokirtee_12_dropdown">
                   <div className="Autokirtee_12_dropdown-text">
                     Combustion Vehicle
@@ -193,16 +206,6 @@ function Autokirtee12() {
                   </button>
                 </a>
               </div>
-            </div>
-
-            <div className="Autokirtee12_img_container">
-              <img
-              src={autokriti12poster}
-              alt=""
-                className="Autokirtee12_img"
-              />
-            </div>
-          </div>
         </div>
       </div>
     </>

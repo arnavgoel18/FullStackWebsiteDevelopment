@@ -75,7 +75,8 @@
 }
 .Autokirtee12_buttons{
      display: flex;
-     gap: 10px;
+     justify-content: space-evenly;
+     /* margin-right: 20px; */
 }
 .Autokirtee12_content_left{
     width: 90%;
@@ -167,7 +168,7 @@
     cursor: pointer;
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1024px) {
    
     .Autokirtee12_outer{
        
@@ -181,6 +182,8 @@
     .Autokirtee12_img_container{
         margin-top: 30px;
         display: flex;
+        width:70%;
+        margin-left: 15%;
         justify-content: center;
     
     }
@@ -227,7 +230,13 @@
 
   }
   @media screen and (max-width: 425px){
+    .Autokirtee12_img_container{
+        width: 100%;
+        margin-left: 2.5%;
+        height: 100%;
+       
     
+    }
     .Autokirtee12_outer{
         width: 95%;
     }
