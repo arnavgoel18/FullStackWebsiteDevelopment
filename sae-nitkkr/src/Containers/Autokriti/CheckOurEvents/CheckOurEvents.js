@@ -3,8 +3,7 @@ import React, { useState } from "react";
 import Quiz from "../../../Assets/CheckOurEvents/quiz.webp";
 import Autokriti2 from "../../../Assets/CheckOurEvents/Autokriti2.webp";
 import Au2Poster from "../../../Assets/CheckOurEvents/Au2Poster.webp";
-import autokriti12poster from '../../../Assets/Autokriti12/Autokriti12poster.jpg'
-
+import autokriti12poster from "../../../Assets/Autokriti12/Autokriti12poster.jpg";
 
 function CheckEvents() {
   return (
@@ -18,7 +17,7 @@ function CheckEvents() {
             <Session
               title="Autokriti 12.0"
               status="Venue: NIT Kurukshetra"
-              date="Date : 8-14 Septmeber" 
+              date="Date : 8-14 Septmeber"
               image={autokriti12poster}
               url="/autokriti12"
             />
@@ -56,12 +55,10 @@ function Session(props) {
           <h2>
             <b>{props.title}</b>
           </h2>
-          <p style={{ fontSize: '18px' }}>
+          <p>
             {props.status}
             <br />
-            <span style={{ fontSize: '18px', marginLeft: '19px', marginRight: '-5px', position: 'relative', left: '-6px' }}> {props.date} </span>
-
-
+            <span> {props.date} </span>
           </p>
 
           {/* <div className="CheckOurEvents-register"></div> */}
