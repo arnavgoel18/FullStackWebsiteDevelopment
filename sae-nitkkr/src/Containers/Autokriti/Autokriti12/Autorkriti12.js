@@ -6,7 +6,7 @@ import "./Autokriti12.css";
 import NavBar from "../../../Components/NavBar/NavBar";
 import Footer from "../../../Components/Footer/Footer(black)/FooterBlack";
 
-import Au2Poster from "../../../Assets/CheckOurEvents/Au2Poster.webp";
+import Au2Poster from "../../../Assets/Autokriti12/Autokriti12poster.jpg";
 import VerticalTimeline from "./VerticalTimeline/VerticalTimeline";
 import RegisterLine from "./VerticalTimeline/RegisterLine";
 import CV from "../../../Assets/cv.png";

@@ -73,7 +73,9 @@
     padding: 2em;
     padding-right: 4em;
     display: flex;
-    justify-content: center;
+    height: 80%;
+    margin-top: 5%;
+    /* justify-content: center; */
     align-items: center;
   }
   
