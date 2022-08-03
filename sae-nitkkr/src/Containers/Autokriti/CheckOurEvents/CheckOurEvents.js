@@ -1,9 +1,9 @@
 import "./CheckOurEvents.css";
 import React, { useState } from "react";
-import Quiz from "../../../Assets/CheckOurEvents/quiz.webp";
 import Autokriti2 from "../../../Assets/CheckOurEvents/Autokriti2.webp";
 import Au2Poster from "../../../Assets/CheckOurEvents/Au2Poster.webp";
 import autokriti12poster from "../../../Assets/Autokriti12/Autokriti12poster.jpg";
+import campusAmbass from '../../../Assets/CheckOurEvents/CampusAmbassador.png'
 
 function CheckEvents() {
   return (
@@ -25,7 +25,7 @@ function CheckEvents() {
               title="Campus Ambassador"
               status="Venue: Online"
               date="August 2022"
-              image={Quiz}
+              image={campusAmbass}
               url="https://www.saenitkurukshetra.in/autokriti#ambassador"
             />
 
