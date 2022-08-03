@@ -18,16 +18,16 @@ function CheckEvents() {
             <Session
               title="Autokriti 12.0"
               status="Venue: NIT Kurukshetra"
-              date="Date : Slot1=>(8-11 August) Slot2=>(11-14 August)-2022" 
+              date="Date : 8-14 Septmeber" 
               image={autokriti12poster}
               url="/autokriti12"
             />
             <Session
-              title="Quiz"
-              status="Venue: D2C"
-              date="Date: 29-January-2022"
+              title="Campus Ambassador"
+              status="Venue: Online"
+              date="August 2022"
               image={Quiz}
-              url="https://dare2compete.com/p/quiz-on-wheelsautomotive-quiz-national-institute-of-technology-nit-kurukshetra-256604?lb=rt7C3ad/"
+              url="https://www.saenitkurukshetra.in/autokriti#ambassador"
             />
 
             {/* <Session title="Understanding Transmission"
