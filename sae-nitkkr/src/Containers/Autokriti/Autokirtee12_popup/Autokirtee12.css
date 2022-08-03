@@ -52,14 +52,14 @@
   gap: 40px;
   width: 100%;
 }
-.Autokirtee12_content_list {
+/* .Autokirtee12_content_list {
   margin-top: 4%;
 
   font-size: large;
   font-weight: 600;
   display: flex;
   gap: 5%;
-}
+} */
 .Autokirtee12_buttons {
   display: flex;
   justify-content: space-evenly;
@@ -208,12 +208,12 @@
   .Autokirtee12_outer {
     width: 95%;
   }
-  .Autokirtee12_content_list {
+  /* .Autokirtee12_content_list {
     display: flex;
     flex-direction: row;
     font-size: small;
     font-weight: 600;
-  }
+  } */
   .Autokirtee12_buttons {
     flex-direction: column;
     justify-content: space-between;

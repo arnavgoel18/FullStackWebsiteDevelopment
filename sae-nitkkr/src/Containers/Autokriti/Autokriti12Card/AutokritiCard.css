@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.AutokritiCard-Container{
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+
+    background-color: rgb(248 249 249);
+
+    box-shadow: 0px 0px 10px -3px grey;
+    border-radius: 5px;
+    margin-bottom: 3em;
+    padding: 1em;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.AutokritiCard-Intro{
+    line-height: 1.5em;
+}
+
+.AutokritiCard-Body{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1.5em;
+}
+
+.AutokritiCard-Icons{
+    width: 50%;
+    display: flex;
+}
+
+.AutokritiCard-Poster{
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.AutokritiCard-Poster img{
+    position: relative;
+
+}
+
+@media screen and (max-width: 1175px){
+    .AutokritiCard-Body{
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .AutokritiCard-Poster{
+        width: 80%;
+    }
+
+    .AutokritiCard-Icons{
+        margin-top: 1em;
+        width: 100%;
+        justify-content: space-around;
+        align-items: flex-end;
+
+    }
+
+    .Autokirtee12_content_list {
+        display: flex;
+        flex-direction: row;
+        font-size: small;
+        font-weight: 600;
+      }
+}
+
+.Autokirtee12_content_list {
+    margin-top: 4%;
+  
+    font-size: large;
+    font-weight: 600;
+    display: flex;
+    gap: 5%;
+}
+
+
