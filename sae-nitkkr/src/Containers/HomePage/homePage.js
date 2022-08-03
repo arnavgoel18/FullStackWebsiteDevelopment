@@ -1,5 +1,6 @@
 import React from 'react';
 import { useEffect } from 'react';
+
 import NavBar from '../../Components/NavBar/NavBar'
 import FirstDisplayDIV from '../../Components/FirstDisplayDIV/FirstDisplayDIV';
 import AboutUs from '../../Components/AboutUs/AboutUs';
@@ -9,8 +10,7 @@ import ProfIncharges from '../../Containers/HomePage/ProfInchargesAndManagers/Pr
 import Managers from '../../Containers/HomePage/ProfInchargesAndManagers/Managers';
 import Footer from '../../Components/Footer/Footer(black)/FooterBlack';
 import AutokritiEvent from '../../Components/AutokritiEvent/AutokritiEvent'
-import Autokirtee12 from '../Autokriti/Autokirtee12_popup/Autokirtee12';
-
+import Autokriti12 from '../Autokriti/Autokriti12Card/AutokritiCard'
 
 function HomePage() {
 
@@ -23,11 +23,10 @@ function HomePage() {
             <NavBar />
             <FirstDisplayDIV page="Home" />
             <AboutUs page="Home" />
-            <Autokirtee12/>
             <TeamsDIV />
-            <br />
+            <br/><br/>
+            <Autokriti12/>
             {/* <ExploreUs /> */}
-
             <Managers />
 
             <Footer />
