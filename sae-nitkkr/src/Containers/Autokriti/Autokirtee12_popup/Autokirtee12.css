@@ -1,256 +1,225 @@
-.Autokirtee12_popup_main{
-    display: flex;
-    justify-content: center;
-    padding-bottom: 2.5rem;
+.Autokirtee12_popup_main {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2.5rem;
 }
-.Autokirtee12_outer{
-    background-color: rgb(248 249 249);
-    height: fit-content;
-    width: 70vw;
-    display: flex;
-    flex-direction: column;
-   
-    box-shadow: 0px 0px 10px -3px grey;
-    border-radius: 5px;
-    
-   padding: 2% 4% 2% 4%;
-    
-   
-}
-.Autokirtee12_title{
-    font-size:xx-large;
-    margin-top: 3%;
-    margin-bottom: 2%;
-    font-weight: bolder;
-    
-    
-}
-.Autokirtee12_text{
-    
-    font-size: large;
-    
-}
-.Autokirtee12_rest{
-    display: flex;
-    flex-direction: row;
-     gap:0% ;
+.Autokirtee12_outer {
+  background-color: rgb(248 249 249);
+  height: fit-content;
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
 
+  box-shadow: 0px 0px 10px -3px grey;
+  border-radius: 5px;
+
+  padding: 2% 4% 2% 4%;
+}
+.Autokirtee12_title {
+  font-size: xx-large;
+  margin-top: 3%;
+  margin-bottom: 2%;
+  font-weight: bolder;
+}
+.Autokirtee12_text {
+  font-size: large;
+}
+.Autokirtee12_rest {
+  display: flex;
+  flex-direction: row;
+  gap: 0%;
 }
 
-.Autokirtee12_img_container{
-    width: 100%;
-    height: 100%;
-   
+.Autokirtee12_img_container {
+  width: 100%;
+  height: 100%;
+}
+.Autokirtee12_img {
+  width: 80%;
+  height: 350px;
+  float: right;
+}
+.Autokirtee12_left {
+  /* margin-top: 40px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* width: 160%; */
+  /* gap: 40%; */
+}
+.Autokirtee12_content {
+  display: flex;
+  gap: 40px;
+  width: 100%;
+}
+.Autokirtee12_content_list {
+  margin-top: 4%;
 
+  font-size: large;
+  font-weight: 600;
+  display: flex;
+  gap: 5%;
 }
-.Autokirtee12_img{
- width: 80%;
- height: 350px;
- float: right;
-    
+.Autokirtee12_buttons {
+  display: flex;
+  justify-content: space-evenly;
+  /* margin-right: 20px; */
 }
-.Autokirtee12_left{
-    /* margin-top: 40px; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* width: 160%; */
-    /* gap: 40%; */
-}
-.Autokirtee12_content{
-    display:flex;
-    gap: 40px;
-    width: 100%;
-
-  
-}
-.Autokirtee12_content_list{
-    margin-top: 4%;
-    
-   font-size: large;
-   font-weight: 600;
-   display: flex;
-   gap: 5%;
-   
-}
-.Autokirtee12_buttons{
-     display: flex;
-     justify-content: space-evenly;
-     /* margin-right: 20px; */
-}
-.Autokirtee12_content_left{
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    gap: 10%;
-    
+.Autokirtee12_content_left {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 10%;
 }
 
-.Autokirtee12_content_right{
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    
+.Autokirtee12_content_right {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
 }
 .Autokirtee12_dropdowns {
-    display: flex;
-    flex-direction: row;
-    font-size: medium;
-    flex-wrap: wrap;
-    gap: 30px;
-    width: 100%;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    justify-content: center;
-  }
-  
-  .Autokirtee_12_dropdown {
-    background-color: rgb(102, 88, 71);
-    cursor: pointer;
-    height: auto;
-    line-height: 30px;
-    font-size: 16px;
-    padding: 10px;
-    color: white;
-    border-radius: 2px;
-    border: none;
-    position: relative;
-    display: flex;
-       
-    justify-content: center;
-    width: 200px;
-  }
-  
-  .Autokirtee_12_icons {
-    line-height: 36px;
-    padding-left: 2px;
-  }
-  
-  .Autokirtee_12_dropdown-content {
-    display: none;
-    border-radius: 5px;
-    background-color: rgb(254, 255, 255);
-    position: absolute;
-    z-index: 1;
-    min-width: 200px;
-    max-width: 200px;
-    margin-top: 50px;
-    padding: 5px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  }
-  .Autokirtee_12_dropdown-content1 {
-    width: 190px;   
-    height:max-content;
-    overflow-wrap: break-word;
-    padding: 5px;
-    /* white-space: wrap; */
-    background-color: antiquewhite;
-    color: black;
-  }
-  
-  .Autokirtee_12_dropdown:hover .Autokirtee_12_dropdown-content {
-    display: block;
-  }
-.Autokirtee_12_button{
-    background-color: darkorange;
-    font-size: medium;
-    height: auto;
-    padding: 10px;
-    color: white;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: none;
-     width: 100%;
-    
+  display: flex;
+  flex-direction: row;
+  font-size: medium;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 100%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  justify-content: center;
 }
 
-.Autokirtee_12_button:hover{
-    scale: 1.2;
-    cursor: pointer;
+.Autokirtee_12_dropdown {
+  background-color: rgb(102, 88, 71);
+  cursor: pointer;
+  height: auto;
+  line-height: 30px;
+  font-size: 16px;
+  padding: 10px;
+  color: white;
+  border-radius: 2px;
+  border: none;
+  position: relative;
+  display: flex;
+
+  justify-content: center;
+  width: 200px;
+}
+
+.Autokirtee_12_icons {
+  line-height: 36px;
+  padding-left: 2px;
+}
+
+.Autokirtee_12_dropdown-content {
+  display: none;
+  border-radius: 5px;
+  background-color: rgb(254, 255, 255);
+  position: absolute;
+  z-index: 1;
+  min-width: 200px;
+  max-width: 200px;
+  margin-top: 50px;
+  padding: 5px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+.Autokirtee_12_dropdown-content1 {
+  width: 190px;
+  height: max-content;
+  overflow-wrap: break-word;
+  padding: 5px;
+  /* white-space: wrap; */
+  background-color: antiquewhite;
+  color: black;
+}
+
+.Autokirtee_12_dropdown:hover .Autokirtee_12_dropdown-content {
+  display: block;
+}
+.Autokirtee_12_button {
+  background-color: darkorange;
+  font-size: medium;
+  height: auto;
+  padding: 10px;
+  color: white;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+}
+
+.Autokirtee_12_button:hover {
+  scale: 1.2;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1024px) {
-   
-    .Autokirtee12_outer{
-       
-        height: fit-content;
-        width: fit-content;
-       padding: 01px 20px 20px 20px;
-       width: 95%;
-    
-       
-    }
-    .Autokirtee12_img_container{
-        margin-top: 30px;
-        display: flex;
-        width:70%;
-        margin-left: 15%;
-        justify-content: center;
-    
-    }
-    .Autokirtee12_rest{
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: center;
-         gap:10px;
-    
-    }
-   
-.Autokirtee12_left{
+  .Autokirtee12_outer {
+    height: fit-content;
+    width: fit-content;
+    padding: 01px 20px 20px 20px;
+    width: 95%;
+  }
+  .Autokirtee12_img_container {
+    margin-top: 30px;
+    display: flex;
+    width: 70%;
+    margin-left: 15%;
+    justify-content: center;
+  }
+  .Autokirtee12_rest {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .Autokirtee12_left {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 20px;
     width: 100%;
-
-}
-.Autokirtee12_rest{
+  }
+  .Autokirtee12_rest {
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
+  }
+
+  .Autokirtee12_img {
+    width: 80%;
+
+    height: 300px;
+  }
+  .Autokirtee12_content_left {
+    width: 50%;
+  }
+  .Autokirtee12_content_right {
+    width: 50%;
+  }
 }
-    
-    .Autokirtee12_img{
-
-        width: 80%;
-       
-        height: 250px;
-        
-       
-           
-       }
-       .Autokirtee12_content_left{
-        width:50%;
-        
-       }
-       .Autokirtee12_content_right{
-        width: 50%;
-       }
-      
-
-
+@media screen and (max-width: 425px) {
+  .Autokirtee12_img_container {
+    width: 100%;
+    margin-left: 0.5%;
+    height: 100%;
   }
-  @media screen and (max-width: 425px){
-    .Autokirtee12_img_container{
-        width: 100%;
-        margin-left: 2.5%;
-        height: 100%;
-       
-    
-    }
-    .Autokirtee12_outer{
-        width: 95%;
-    }
-    .Autokirtee12_content_list{
-       display: flex;
-       flex-direction: row;
-       font-size:small;
-       font-weight: 600;
-       
-    }
-    .Autokirtee12_buttons{
-        flex-direction: column;
-        justify-content: space-between;
-    }
-   
+  .Autokirtee12_outer {
+    width: 95%;
   }
+  .Autokirtee12_content_list {
+    display: flex;
+    flex-direction: row;
+    font-size: small;
+    font-weight: 600;
+  }
+  .Autokirtee12_buttons {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .Autokirtee12_img {
+    width: 100%;
+    height: 250px;
+  }
+}
