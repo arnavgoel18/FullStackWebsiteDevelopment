@@ -22,6 +22,7 @@
 
 .AutokritiCard-Intro{
     line-height: 1.5em;
+    font-size: 0.8em;
 }
 
 .AutokritiCard-Body{
@@ -35,6 +36,15 @@
     display: flex;
 }
 
+.Autokirtee12_content_list {
+    margin-top: 4%;
+  
+    font-size: large;
+    font-weight: 600;
+    display: flex;
+    gap: 5%;
+}
+
 .AutokritiCard-Poster{
     width: 50%;
     height: auto;
@@ -46,6 +56,86 @@
 .AutokritiCard-Poster img{
     position: relative;
 
+}
+
+
+/*-------DropDown-----*/
+
+.Autokirtee12_dropdowns {
+    display: flex;
+    flex-direction: row;
+    font-size: medium;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 100%;
+    margin-top: 2em;
+    margin-bottom: 2%;
+    justify-content: center;
+}
+
+.Autokirtee_12_dropdown {
+    background-color: #5dbea3;
+    cursor: pointer;
+    height: auto;
+    line-height: 2em;
+    font-size: 16px;
+    padding: 0.3em 0;
+    color: white;
+    border-radius: 2px;
+    border: none;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    vertical-align: middle;
+}
+
+.Autokirtee_12_icons {
+    line-height: 36px;
+    padding-left: 2px;
+}
+
+.Autokirtee_12_dropdown-content {
+    display: none;
+    border-radius: 5px;
+    background-color: #5dbea3;
+    position: absolute;
+    z-index: 1;
+    min-width: 200px;
+    max-width: 200px;
+    margin-top: 50px;
+    padding: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+.Autokirtee_12_dropdown-content1 {
+    width: 190px;
+    height: max-content;
+    overflow-wrap: break-word;
+    padding: 5px;
+    /* white-space: wrap; */
+    background-color: whitesmoke;
+    color: black;
+}
+
+.Autokirtee_12_dropdown:hover .Autokirtee_12_dropdown-content {
+    display: block;
+}
+
+.AutokritiCard-Buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 1em;
+}
+
+.Autokirti_12_button{
+    padding: 1em;
+    background-color: orange;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
 }
 
 @media screen and (max-width: 1175px){
@@ -72,16 +162,24 @@
         flex-direction: row;
         font-size: small;
         font-weight: 600;
-      }
+    }
+    .AutokritiCard-Container{
+        width: 80%;
+    }
 }
 
-.Autokirtee12_content_list {
-    margin-top: 4%;
-  
-    font-size: large;
-    font-weight: 600;
-    display: flex;
-    gap: 5%;
+@media screen and (max-width: 600px){
+    .AutokritiCard-Container{
+        width: 90%;
+    }
 }
 
+@media screen and (max-width: 700px){
+    .AutokritiCard-Buttons{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 7em;
+    }
 
+}

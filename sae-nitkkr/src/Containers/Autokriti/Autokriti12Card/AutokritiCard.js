@@ -191,7 +191,7 @@ export default function AutokritiCard(){
                     </div>
                     <div className="Autokirtee_12_dropdown-content" ref={iot}>
                         <div className="Autokirtee_12_dropdown-content1">
-                        COMMUNICATION PROTOCOLS<br/>
+                        COMM PROTOCOLS<br/>
                         ARDUINO<br/>
                         CANBUS<br/>
                         TELEMETRY<br/>
@@ -212,21 +212,20 @@ export default function AutokritiCard(){
                     </div>
                     </button>
                 </div>
-                <div className="Autokirtee12_buttons">
-                    <a href="/autokriti12">
+            </div>
+            <div className='AutokritiCard-Buttons'>
+                <a href="/autokriti12">
                     {" "}
-                    <button type="button" className="Autokirtee_12_button">
+                    <button type="button" className="Autokirti_12_button">
                         MORE INFORMATION
                     </button>
                     </a>
                     <a href="/autokriti/register">
-                    <button type="button" className="Autokirtee_12_button">
+                    <button type="button" className="Autokirti_12_button">
                         REGISTER NOW
                     </button>
-                    </a>
-                </div>
+                </a>
             </div>
-            <div className='AutokritiCard-Buttons'></div>
         </div>
     </>
     )
