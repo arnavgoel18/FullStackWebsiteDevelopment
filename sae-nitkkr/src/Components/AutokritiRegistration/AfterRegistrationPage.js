@@ -21,6 +21,7 @@ function AfterRegistrationPage() {
   var emailList=[];
   const { id } = useParams();
   const [authorised_user, setauthorised_user] = useState({});
+  var [depart, setDepart] = useState([]);
   const [qrvisible, setqrvisible] = useState(false);
   const [imageURL, setimageURL] = useState("");
   const [certiUrl, setcertiUrl] = useState("");
@@ -30,6 +31,7 @@ function AfterRegistrationPage() {
     const docRef = doc(db, "paymentregistrationid", id);
     const docSnap = await getDoc(docRef);
     setauthorised_user(docSnap.data());
+    setDepart(docSnap.data().department);
     setqrvisible(true);
   }
   const generateQrcode = async () => {
@@ -126,24 +128,17 @@ function AfterRegistrationPage() {
             <td className="td-first">PAYMENT ID</td>
             <td>{authorised_user.paymentid}</td>
           </tr>{" "}
-          {authorised_user.department.map((e,i)=>
+          
+          {depart.map((e,i)=>
           { 
             return(
             <tr>
             <td className="td-first">{e} WORKSHOP</td>
-            {i==0?<td>{authorised_user.timeSlot1} August</td>:<td>{authorised_user.timeSlot2} August</td>}
-            {/* <td>{authorised_user.timeSlot1} August</td> */}
+            {i==0?<td>{authorised_user.timeSlot1} September</td>:<td>{authorised_user.timeSlot2} September</td>}
+          
           </tr>)
 
           })}
-          {/* <tr>
-            <td className="td-first">TIMESLOT ({authorised_user.firstChoice})</td>
-            <td>{authorised_user.timeSlot1} August</td>
-          </tr>{" "}
-          <tr>
-            <td className="td-first">TIMESLOT 2</td>
-            <td>{authorised_user.timeSlot2} August</td>
-          </tr>{" "} */}
           <tr>
             <td className="td-first">REFERAL</td>
             <td>{authorised_user.referal}</td>
@@ -152,10 +147,12 @@ function AfterRegistrationPage() {
             <td className="td-first">NEED ACCOMODATION</td>
             <td>{authorised_user.accomodation}</td>
           </tr>{" "}
+          
           <tr>
             <td className="td-first">DEPARTMENT</td>
-            <td> {authorised_user.department[0]},{authorised_user.department[1]} </td>
+            <td> {depart[0]}, {depart[1]} </td>
           </tr>{" "}
+
           <tr>
             <td className="td-first">STATUS</td>
             <td>{authorised_user.status}</td>

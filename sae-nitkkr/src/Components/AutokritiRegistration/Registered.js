@@ -19,11 +19,13 @@ var flag = true;
 function Registered() {
   const { id } = useParams();
   const [authorised_user, setauthorised_user] = useState({});
+  var [depart, setDepart] = useState([]);
 
   async function getdata() {
     const docRef = doc(db, "paymentregistrationid", id);
     const docSnap = await getDoc(docRef);
     setauthorised_user(docSnap.data());
+    setDepart(docSnap.data().department);
   }
 
   useEffect(() => {
@@ -84,24 +86,15 @@ function Registered() {
           <td className="td-first">PAYMENT ID</td>
           <td>{authorised_user.paymentid}</td>
         </tr>{" "}
-        {authorised_user.department.map((e,i)=>
+        {depart.map((e,i)=>
           { 
             return(
             <tr>
             <td className="td-first">{e} WORKSHOP</td>
             {i==0?<td>{authorised_user.timeSlot1} August</td>:<td>{authorised_user.timeSlot2} August</td>}
-            {/* <td>{authorised_user.timeSlot1} August</td> */}
           </tr>)
 
           })}
-        {/* <tr>
-          <td className="td-first">TIMESLOT ({authorised_user.firstChoice})</td>
-          <td>{authorised_user.timeSlot1} August</td>
-        </tr>{" "}
-        <tr>
-          <td className="td-first">TIMESLOT 2</td>
-          <td>{authorised_user.timeSlot2} August</td>
-        </tr>{" "} */}
         <tr>
           <td className="td-first">REFERAL</td>
           <td>{authorised_user.referal}</td>
@@ -116,7 +109,7 @@ function Registered() {
           </tr>{" "}
         <tr>
           <td className="td-first">DEPARTMENT</td>
-          <td>{authorised_user.department[0]},{authorised_user.department[1]}</td>
+          <td>{depart[0]},{depart[1]}</td>
         </tr>{" "}
         <tr>
           <td className="td-first">STATUS</td>

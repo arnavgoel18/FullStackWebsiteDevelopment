@@ -27,7 +27,6 @@ function Quizsignup() {
   //to calculate finalcost
   const calculateAmount = async () => {
     var count = 0;
-
     var Mechanical = document.getElementById("amb_mechanical").checked;
     var IOT = document.getElementById("amb_IOT").checked;
     var EV = document.getElementById("amb_EV").checked;
@@ -36,18 +35,24 @@ function Quizsignup() {
 
     if (Mechanical == true) {
       finalcost += 2500;
+      count++;
     }
     if (IOT == true) {
       finalcost += 2500;
+      count++;
     }
     if (EV == true) {
       finalcost += 2500;
+      count++;
     }
     if (software == true) {
       finalcost += 2500;
+      count++;
     }
-    if (accomo == true) {
-      finalcost += 500;
+    if (accomo == true && count == 2) {
+      finalcost += 1000;
+    }else if(accomo == true && count == 1){
+      finalcost +=500;
     }
 
     setFinalcost(finalcost);
@@ -237,18 +242,20 @@ function Quizsignup() {
       }
     }
 
-    if (type == "checkbox" && name != 'accomodation') {
+    if (type == "checkbox" && name != "accomodation") {
       var check = checked.toString();
-      var regAmount = parseInt(document.getElementById('workshopAmount').innerText);
-      
+      var regAmount = parseInt(
+        document.getElementById("workshopAmount").innerText
+      );
+
       if (checked == true) {
-        document.getElementById('workshopAmount').innerText = regAmount + 2500;
+        document.getElementById("workshopAmount").innerText = regAmount + 2500;
         setsettemp((prevdepartment) => {
           return [...prevdepartment, name.toUpperCase()];
         });
         done = 0;
       } else {
-        document.getElementById('workshopAmount').innerText = regAmount - 2500;
+        document.getElementById("workshopAmount").innerText = regAmount - 2500;
         setsettemp((prevActions) =>
           // Filter out the item with the matching index
           prevActions.filter((i) => {
@@ -267,16 +274,28 @@ function Quizsignup() {
       }
     }
 
-    if(name == 'accomodation'){
-    if (checked == true) {
-      var regAmount = parseInt(document.getElementById('accomoAmount').innerText);
-      document.getElementById('accomoAmount').innerText = regAmount + 500;
-      userData.accomodation = "Yes";
-    } else {
-      var regAmount = parseInt(document.getElementById('accomoAmount').innerText);
-      document.getElementById('accomoAmount').innerText = regAmount - 500;
-      userData.accomodation = "No";
-    }}
+    if (name == "accomodation") {
+      if (checked == true) {
+        // var regAmount = parseInt(
+        //   document.getElementById("accomoAmount").innerText
+        // );
+        // document.getElementById("accomoAmount").innerText = regAmount + 500;
+        userData.accomodation = "Yes";
+      } else {
+        // var regAmount = parseInt(
+        //   document.getElementById("accomoAmount").innerText
+        // );
+        // document.getElementById("accomoAmount").innerText = regAmount - 500;
+        userData.accomodation = "No";
+      }
+    }
+
+    if (document.getElementById("workshopAmount").innerText >= 5000 && document.getElementById('accomodation').checked == true )
+      document.getElementById("accomoAmount").innerText = 1000;
+    else if(document.getElementById('accomodation').checked == true)
+    document.getElementById("accomoAmount").innerText = 500;
+    else
+    document.getElementById("accomoAmount").innerText = 0;
 
     if (type != "checkbox" && type != "radio") {
       setUserData({ ...userData, [name]: value });
@@ -624,9 +643,9 @@ function Quizsignup() {
             Need Accomodation & food
           </div>
           <div className="payform-lable">
-              <span>Amount (&#8377;) : </span>
-              <span id="accomoAmount">0</span>
-            </div>
+            <span>Amount (&#8377;) : </span>
+            <span id="accomoAmount">0</span>
+          </div>
           <div id="pay_button">
             <div id="paynow">
               <button
