@@ -98,25 +98,15 @@ function Autorkriti12() {
             {" "}
             <button className="smallbox">
               <img src={CV}></img>
-              <h3>Engines</h3>
+              <h3>Engine Overhauling</h3>
             </button>
           </a>
-        
-         
           <a href="#softwares">
             <button className="smallbox">
               <img src={SW}></img>
               <h3>Softwares</h3>
             </button>
           </a>
-          <a href="#ooh">
-            <button className="smallbox">
-              <img src={OH}></img>
-              <h3>Overhauling of Engines</h3>
-            </button>
-          </a>
-         
-       
         </div>
       </div>
       <div className="about_autokriti-container">

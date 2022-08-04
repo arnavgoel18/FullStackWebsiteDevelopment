@@ -136,6 +136,7 @@
     color: #fff;
     border: none;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 1175px){
