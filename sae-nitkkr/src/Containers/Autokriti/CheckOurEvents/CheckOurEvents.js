@@ -19,7 +19,7 @@ function CheckEvents() {
               status="Venue: NIT Kurukshetra"
               date="Date : 8-14 Septmeber"
               image={autokriti12poster}
-              url="/autokriti12"
+              url="/autokriti/register"
             />
             <Session
               title="Campus Ambassador"
