@@ -350,6 +350,14 @@ margin-top: 5px;
     Line-height :18.29px;
     margin: 0 auto;
   }
+  .payform-checkbox{
+      display: flex;
+      align-items:center;
+      justify-content: center;
+      margin-left: 10px;
+      margin-right: 10px;
+      
+  }
  
 }
 
