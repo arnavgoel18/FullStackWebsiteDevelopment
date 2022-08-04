@@ -18,6 +18,11 @@
   
   /* border: 2px solid black; */
 }
+.regAmount{
+  font-family:sans-serif;
+  font-weight: 500;
+  font-size: 15px; 
+}
 #read_content
 {
   /* border: 2px solid black; */
@@ -144,7 +149,7 @@
 	    font-weight: 700;
 }
 .payform-label{
-  font-family:sans-serif;
+  font-family: sans-serif;
   font-weight: 300;
   font-size: 15px;
 }
@@ -270,6 +275,7 @@ margin-top: 5px;
   flex-direction: row;
   row-gap: 90px;
   align-items: flex-start;
+  margin-bottom: 8px;
 }
 .department-timeslot{
   margin-top: 13px;
@@ -280,8 +286,12 @@ margin-top: 5px;
 }
 #accomodation{
   width: 5%;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
+#payform-button1{
+  margin-top: 20px;
+}
+
 @media (min-width:320px) and (max-width:425px)
 {
 #referal_check {

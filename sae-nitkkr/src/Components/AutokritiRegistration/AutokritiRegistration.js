@@ -21,7 +21,7 @@ var done = 1;
 function Quizsignup() {
   var [finalcost, setFinalcost] = useState(0);
   var [department, setDepartment] = useState([]);
-  var [temp,setsettemp]=useState([]);
+  var [temp, setsettemp] = useState([]);
   // var nishant=[];
   // var [count, setCount] = useState(0);
   //to calculate finalcost
@@ -46,7 +46,7 @@ function Quizsignup() {
     if (software == true) {
       finalcost += 2500;
     }
-    if(accomo == true){
+    if (accomo == true) {
       finalcost += 500;
     }
 
@@ -173,17 +173,17 @@ function Quizsignup() {
     software: "",
     amount: finalcost,
     firstChoice: "",
-    accomodation:"",
+    accomodation: "",
   });
 
   let name, value, checked, type;
-  
+
   const postUserData = (event) => {
     name = event.target.name;
     value = event.target.value;
     checked = event.target.checked;
     type = event.target.type;
-  
+
     var valid = false;
     //to check referal code
     if (name === "referal") {
@@ -237,41 +237,24 @@ function Quizsignup() {
       }
     }
 
-    if (type == "checkbox") {
+    if (type == "checkbox" && name != 'accomodation') {
       var check = checked.toString();
-  console.log(check)
+      var regAmount = parseInt(document.getElementById('workshopAmount').innerText);
+      
       if (checked == true) {
-
-        // document.getElementById(
-        //   "chooseTimeslot"
-        // ).innerText += `(${name.toUpperCase()}) `;
-        // userData.firstChoice = name.toUpperCase();
-        // (newUser) => {
-        //   setsettemp(state => [newUser, ...state])
-        // }
-        setsettemp((prevdepartment)=>
-        {
-         return [...prevdepartment,name.toUpperCase()];
-        })
-        // setDepartment(name);
-        // setsettemp((prevdepartment)=>
-        // {
-        //  return [name.toUpperCase(),...prevdepartment];
-        // })
-        // nishant.push(name);
-        // console.log(settemp);
+        document.getElementById('workshopAmount').innerText = regAmount + 2500;
+        setsettemp((prevdepartment) => {
+          return [...prevdepartment, name.toUpperCase()];
+        });
         done = 0;
-      }
-      else
-      {
-        setsettemp(prevActions => (
+      } else {
+        document.getElementById('workshopAmount').innerText = regAmount - 2500;
+        setsettemp((prevActions) =>
           // Filter out the item with the matching index
-          prevActions.filter((i)=>
-          {
-          return(i!=name.toUpperCase())
+          prevActions.filter((i) => {
+            return i != name.toUpperCase();
           })
-        ));
-        console.log(temp);
+        );
       }
       setUserData({ ...userData, [name]: check });
     }
@@ -284,14 +267,18 @@ function Quizsignup() {
       }
     }
 
-    if(type == 'radio' && checked == true)
-    {
-      userData.accomodation = 'Yes';
-    }else{
-      userData.accomodation = 'No';
-    }
+    if(name == 'accomodation'){
+    if (checked == true) {
+      var regAmount = parseInt(document.getElementById('accomoAmount').innerText);
+      document.getElementById('accomoAmount').innerText = regAmount + 500;
+      userData.accomodation = "Yes";
+    } else {
+      var regAmount = parseInt(document.getElementById('accomoAmount').innerText);
+      document.getElementById('accomoAmount').innerText = regAmount - 500;
+      userData.accomodation = "No";
+    }}
 
-    if (type != "checkbox" && type != 'radio') {
+    if (type != "checkbox" && type != "radio") {
       setUserData({ ...userData, [name]: value });
     }
     //console.log(userData);
@@ -602,11 +589,14 @@ function Quizsignup() {
                 <div id="software"></div>
               </div>
             </div>
+            <div className="payform-lable">
+              <span>Workshop Amount (&#8377;) : </span>
+              <span id="workshopAmount">0</span>
+            </div>
             <div className="department-timeslot">
               <div className="payform-label" id="chooseTimeslot">
-                Choose Timeslot&nbsp; 
-                {(temp.length==0)?" ":<span>({temp[0]})</span>}
-                
+                Choose Timeslot&nbsp;
+                {temp.length == 0 ? " " : <span>({temp[0]})</span>}
               </div>
               <select
                 name="timeSlot1"
@@ -623,10 +613,20 @@ function Quizsignup() {
               </select>
             </div>
           </div>
-            <div className="accomo">
-            <input type="radio" value="accomodation" name="accomodation" id="accomodation"  onChange={postUserData}/> Need Accomodation & food
+          <div className="accomo">
+            <input
+              type="checkbox"
+              value="accomodation"
+              name="accomodation"
+              id="accomodation"
+              onChange={postUserData}
+            />{" "}
+            Need Accomodation & food
+          </div>
+          <div className="payform-lable">
+              <span>Amount (&#8377;) : </span>
+              <span id="accomoAmount">0</span>
             </div>
-        
           <div id="pay_button">
             <div id="paynow">
               <button
@@ -652,7 +652,8 @@ function Quizsignup() {
               confirmation on that email
             </p>
             <p className="instruction_para">
-              * You can choose Maximum 2 Departments. Each department is 3 Days Long + 1 Day Guest Lecture
+              * You can choose Maximum 2 Departments. Each department is 3 Days
+              Long + 1 Day Guest Lecture
             </p>
             <p className="instruction_para">
               * You have to show QR code at the time of arrival.
