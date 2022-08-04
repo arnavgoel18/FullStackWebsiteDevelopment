@@ -551,7 +551,7 @@ function Quizsignup() {
           <div className="field">
             <span className="payform-label">
               {" "}
-              Select Your Departments(max. two){" "}
+              Select Your Departments (Max. 2){" "}
             </span>
 
             {/* <div className="redcolortext">(Maximum two)</div> */}
@@ -604,7 +604,7 @@ function Quizsignup() {
             </div>
             <div className="department-timeslot">
               <div className="payform-label" id="chooseTimeslot">
-                Choose timeSlot&nbsp; 
+                Choose Timeslot&nbsp; 
                 {(temp.length==0)?" ":<span>({temp[0]})</span>}
                 
               </div>
@@ -618,8 +618,8 @@ function Quizsignup() {
                   Choose here
                 </option>
                 <option value="DEFAULT">--None Selected--</option>
-                <option value="8-11">8-11 August</option>
-                <option value="11-14">11-14 August</option>
+                <option value="8-11">8-11 September</option>
+                <option value="11-14">11-14 September</option>
               </select>
             </div>
           </div>

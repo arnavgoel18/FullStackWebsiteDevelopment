@@ -34,25 +34,12 @@ function Autorkriti12() {
             Workshop
           </h2>
           <p>
-            Evolution is the necessity of survival. Changes are the only thing
-            consistent. The world is transforming and so is the technology – for
-            better and to pave a path for future. For reducing the carbon
-            footprint and for the health of this green planet electrical
-            vehicles are the future of automotives. As a Society of Automotive
-            Engineers, we are already deep inside the veins of these
-            developments <br />
-            <br />
-            From overhauling of a 2 stroke engine of a scooter in Autokriti 1 to
-            Toyota Camry’s Hybrid Engine in Autokriti 10, we have always matched
-            our steps with innovation. It is our determination to keep up with
-            the ever-changing technology that makes us north India’s largest
-            automobile workshop. And this Autokriti will be a ride from CV to
-            EV, with a spark of electricity to it. <b>#MOBILITY REDEFINED</b>
-            <br />
-            <br />
-            It’s a 3 day workshop where the entire working of a vehicle will be
-            explained with the addition of Porsche star engine and an EV
-            powertrain
+          Interested in automobiles, but don’t know where to start? Let this be your first stepping stone to the redefined world of mobility. Join Autokriti 12 and be a part of this remaking. 
+                    <br/><br/>
+                From overhauling of a 2 stroke engine of a scooter in Autokriti 1 to Porsche Cayenne Engine in Autokriti 11, we have always matched our steps with innovation. It is our determination to keep up with the ever-changing technology that makes us North India’s largest automobile workshop. To continue our endeavour of knowledge sharing, we are here with Autokriti 12. This time it will be a ride on both CV and EV, not a rash one but a safe and steady one.<b> #MobilityRedefined</b>
+                <br/><br/>
+                There are four workshops in Autokriti 12: CV, EV, IoT and Software. All these workshops will help you create a proper theoretical as well as practical understanding of their domain. You shall get a personalised learning experience on physical models. Along with all these, the workshop will have guest lectures from some reputed dignitaries. Please visit the content of these workshops for more details.
+
           </p>
           <Link to="/autokriti/register">
             <button>Register Here!</button>
@@ -70,22 +57,10 @@ function Autorkriti12() {
               <h3>Transmission</h3>
             </button>
           </a>
-          <a href="#iot">
-            <button className="smallbox">
-              <img src={IOT}></img>
-              <h3>IOT</h3>
-            </button>
-          </a>
           <a href="#vd">
             <button className="smallbox">
               <img src={VD}></img>
               <h3>Vehicle Dynamics</h3>
-            </button>
-          </a>
-          <a href="#ev">
-            <button className="smallbox">
-              <img src={EV}></img>
-              <h3>Electric Vehicle</h3>
             </button>
           </a>
           <a href="#brakes">
@@ -101,6 +76,21 @@ function Autorkriti12() {
               <h3>Engine Overhauling</h3>
             </button>
           </a>
+          <a href="#iot">
+            <button className="smallbox">
+              <img src={IOT}></img>
+              <h3>IOT</h3>
+            </button>
+          </a>
+          
+          <a href="#ev">
+            <button className="smallbox">
+              <img src={EV}></img>
+              <h3>Electric Vehicle</h3>
+            </button>
+          </a>
+          
+         
           <a href="#softwares">
             <button className="smallbox">
               <img src={SW}></img>

@@ -48,56 +48,9 @@ function VerticalTimeline() {
          <p> Front wd, rear wd</p>
 
        </TimelineItem>
-        <TimelineItem
-          key="002"
-          dateText="IOT"
-          id="iot"
-          dateInnerStyle={{ background: "#ffde00", color: "#fff" }}
-          bodyContainerStyle={{
-            background: "#ddd",
-            padding: "20px",
-            borderRadius: "8px",
-            boxShadow: "0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)",
-          }}
-        >
-          {/* <h3 style={{ color: "blue", marginBottom: "15px" }}>Day 2</h3> */}
-          <h4 style={{ color: "blue", marginBottom: "15px" }}>COMMUNICATION PROTOCOLS </h4>
-              <p>1.	Introduction to Arduino Boards  </p>
-              <p>2.	In depth review of Arduino architecture</p>
-              <p>3.	Programming on Arduino IDE. </p>
-              <p>4.	Learning about extremely handy sensors</p>
-              <p>5.	Live data tracking of various sensors.</p> 
-              <p>6.	Establishing master slave communication between two arduinos using inbuilt libraries. </p>
-              <p>7.	Hands-on intermediate to expert level projects. </p><br/>
-              <h4 style={{ color: "blue", marginBottom: "15px" }}>ARDUINO </h4>
-              <p>1.	Introduction to UART, SPI, I2C Communication</p>
-              <p>2.	How these works- start bit, data frame, stop bits</p>
-              <p>3.	Steps of Data Transmission</p>
-              <p>4.	Slave and Master Communication</p>
-              <p>5.	Advantages and Disadvantages</p>
-              <p>6.	Use Cases</p>
-              <br/>
-              <h4 style={{ color: "blue", marginBottom: "15px" }}>CAN COMMUNICATION  </h4>
-              <p>1.	Introduction</p>
-               <p>2.	Need for CAN protocol</p>
-               <p>3.	Electrical properties of CAN</p>
-               <p>4.	Working</p>
-               <p>5.	Comparison with similar technologies</p>
-               <p>6.	Data transmission/ message framing</p>
-               <p>7.	Troubleshooting</p>
-               <p>8.	Practically implementing of logging CAN bus data</p>
-              <br/>
-              <h4 style={{ color: "blue", marginBottom: "15px" }}>TELEMETRY</h4>
-              <p>1.	Introduction.</p>
-              <p>2.	Need for telemetry.</p>
-              <p>3.	Application in EV and CV.</p>
-              <p>4.	How to implement a long distance telemetry using Arduino and RF signal models.</p>
-              <p>5.	Live data tracking of a vehicle.</p>
-              <p>6.	Tackling range, reliability and stability issues</p>
 
-        </TimelineItem>
-        <TimelineItem
-          key="003"
+       <TimelineItem
+          key="002"
           id="vd"
           dateText="Vehicle Dynamics"
           dateInnerStyle={{ background: "#ffbc00", color: "#fff" }}
@@ -177,8 +130,143 @@ function VerticalTimeline() {
           <p>4.	Parts </p>
       
         </TimelineItem>
+
         <TimelineItem
-          key="004"
+          key="003"
+          id="brakes"
+          dateText="Brakes"
+          dateInnerStyle={{ background: "#ffbc00", color: "#fff" }}
+          bodyContainerStyle={{
+            background: "#ddd",
+            padding: "20px",
+            borderRadius: "8px",
+            boxShadow: "0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)",
+          }}
+    >
+        <p>1.1 Introduction </p>
+        <p>1.2 Objective of Brakes</p>
+        <p>1.3 Mechanical Advantages</p>
+        <p>1.4 Pascal’s Law</p>
+        <p>1.5 Types of Brakes(using graphical representation & video animations)</p>
+        <p className="subtext">1.5.1 Drum Brakes</p>
+        <p className="subsubtext">Single leading edge</p>
+        <p className="subsubtext">Double leading edge</p>
+        <p className="subtext">1.5.2 Disc  Brakes</p>
+        <p className="subsubtext">Types of Calipers</p>
+        <p className="subsubsubtext">Floating Calipers</p>
+        <p className="subsubsubtext">Fixed Calipers</p>
+
+        <p className="subsubtext">Master Cylinders & Tendum Master Cylinders</p>
+        <p className="subsubtext">Hydraulic Brakes</p>
+        <p>1.6 Inboard & Outboard Braking</p>
+        <p>1.7 Brake Biasing</p>
+        <p>1.8 Proportioning Valve</p>
+        <p>1.9 Evolution of Brakes</p>
+        <p className="subtext">1.9.1 Anti-Locking Braking System</p>
+        <p className="subtext">1.9.2 Power Brakes</p>
+        <p>2.0 Types of Brake Fluids</p>
+        <p className="subtext">Glycol Based(DOT 3 & DOT 4)</p>
+        <p className="subtext">Silicon Based(DOT 5)</p>
+        <p>2.1 Brake Fade</p>
+        <p className="subtext">2.1.1 Methods to reduce brake fade</p>
+        <p className="subsubtext">Drilled Rotor</p>
+        <p className="subsubtext">Thermal Barriers</p>
+        <p>2.2 The flow of Brake Fluid inside the entire brake assembly: </p>
+        <p>2.3 What is Bleeding?</p>
+        <p className="subtext">2.3.1 Methods to perform bleeding</p>
+        <p className="subtext">2.3.2 Bleeding Activity: </p> 
+        <p>2.4 Glimpse to the Future segment: </p>
+        <p className="subtext">What is regenerative braking?</p>
+        <p className="subtext">Automatic Braking System Using Ultrasonic Sensor</p>
+        <p>Bonus Gift: Calculation(Braking Distance)</p>
+        </TimelineItem>
+
+        <TimelineItem key="004"
+          id="ooh"
+          dateText="Engines Overhauling"
+          dateInnerStyle={{ background: "#ffbc00", color: "#fff" }}
+          bodyContainerStyle={{
+            background: "#ddd",
+            padding: "20px",
+            borderRadius: "8px",
+            boxShadow: "0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)",
+          }}> <h4 style={{ color: "blue", marginBottom: "15px" }}>Overhauling of following engines</h4>
+          <p>
+          Honda city<br/>
+          Audi <br/>
+          Mercedes<br/>
+          Land cruiser<br/>
+          Porsche<br/>
+          </p>
+          <h4 style={{ color: "blue", marginBottom: "15px" }}>Engine Syallabus</h4>
+          <p>
+          1. Introduction <br/>
+          2. Types of Engine<br/>
+          3. Classification of Engine<br/>
+          4.(I) Petrol Engine<br/>
+          4.(II) Diesel Engine<br/>
+          5. Basic Engine Parts<br/>
+          6. Fuel Injector<br/>
+          7. Variable Valve Timing<br/>
+          8. Turbochargers<br/>
+          9. Superchargers<br/>
+          10. Intercooler<br/>
+          </p>
+        </TimelineItem>
+
+    
+
+        <TimelineItem
+          key="005"
+          dateText="IOT"
+          id="iot"
+          dateInnerStyle={{ background: "#ffde00", color: "#fff" }}
+          bodyContainerStyle={{
+            background: "#ddd",
+            padding: "20px",
+            borderRadius: "8px",
+            boxShadow: "0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)",
+          }}
+        >
+          {/* <h3 style={{ color: "blue", marginBottom: "15px" }}>Day 2</h3> */}
+          <h4 style={{ color: "blue", marginBottom: "15px" }}>COMMUNICATION PROTOCOLS </h4>
+              <p>1.	Introduction to Arduino Boards  </p>
+              <p>2.	In depth review of Arduino architecture</p>
+              <p>3.	Programming on Arduino IDE. </p>
+              <p>4.	Learning about extremely handy sensors</p>
+              <p>5.	Live data tracking of various sensors.</p> 
+              <p>6.	Establishing master slave communication between two arduinos using inbuilt libraries. </p>
+              <p>7.	Hands-on intermediate to expert level projects. </p><br/>
+              <h4 style={{ color: "blue", marginBottom: "15px" }}>ARDUINO </h4>
+              <p>1.	Introduction to UART, SPI, I2C Communication</p>
+              <p>2.	How these works- start bit, data frame, stop bits</p>
+              <p>3.	Steps of Data Transmission</p>
+              <p>4.	Slave and Master Communication</p>
+              <p>5.	Advantages and Disadvantages</p>
+              <p>6.	Use Cases</p>
+              <br/>
+              <h4 style={{ color: "blue", marginBottom: "15px" }}>CAN COMMUNICATION  </h4>
+              <p>1.	Introduction</p>
+               <p>2.	Need for CAN protocol</p>
+               <p>3.	Electrical properties of CAN</p>
+               <p>4.	Working</p>
+               <p>5.	Comparison with similar technologies</p>
+               <p>6.	Data transmission/ message framing</p>
+               <p>7.	Troubleshooting</p>
+               <p>8.	Practically implementing of logging CAN bus data</p>
+              <br/>
+              <h4 style={{ color: "blue", marginBottom: "15px" }}>TELEMETRY</h4>
+              <p>1.	Introduction.</p>
+              <p>2.	Need for telemetry.</p>
+              <p>3.	Application in EV and CV.</p>
+              <p>4.	How to implement a long distance telemetry using Arduino and RF signal models.</p>
+              <p>5.	Live data tracking of a vehicle.</p>
+              <p>6.	Tackling range, reliability and stability issues</p>
+
+        </TimelineItem>
+       
+        <TimelineItem
+          key="006"
           id="ev"
           dateText="Electric Vehicle"
           dateInnerStyle={{ background: "#ffbc00", color: "#fff" }}
@@ -228,79 +316,7 @@ function VerticalTimeline() {
 
           
         </TimelineItem>
-        <TimelineItem
-          key="005"
-          id="brakes"
-          dateText="Brakes"
-          dateInnerStyle={{ background: "#ffbc00", color: "#fff" }}
-          bodyContainerStyle={{
-            background: "#ddd",
-            padding: "20px",
-            borderRadius: "8px",
-            boxShadow: "0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)",
-          }}
-    >
-        <p>1.1 Introduction </p>
-        <p>1.2 Objective of Brakes</p>
-        <p>1.3 Mechanical Advantages</p>
-        <p>1.4 Pascal’s Law</p>
-        <p>1.5 Types of Brakes(using graphical representation & video animations)</p>
-        <p className="subtext">1.5.1 Drum Brakes</p>
-        <p className="subsubtext">Single leading edge</p>
-        <p className="subsubtext">Double leading edge</p>
-        <p className="subtext">1.5.2 Disc  Brakes</p>
-        <p className="subsubtext">Types of Calipers</p>
-        <p className="subsubsubtext">Floating Calipers</p>
-        <p className="subsubsubtext">Fixed Calipers</p>
-
-        <p className="subsubtext">Master Cylinders & Tendum Master Cylinders</p>
-        <p className="subsubtext">Hydraulic Brakes</p>
-        <p>1.6 Inboard & Outboard Braking</p>
-        <p>1.7 Brake Biasing</p>
-        <p>1.8 Proportioning Valve</p>
-        <p>1.9 Evolution of Brakes</p>
-        <p className="subtext">1.9.1 Anti-Locking Braking System</p>
-        <p className="subtext">1.9.2 Power Brakes</p>
-        <p>2.0 Types of Brake Fluids</p>
-        <p className="subtext">Glycol Based(DOT 3 & DOT 4)</p>
-        <p className="subtext">Silicon Based(DOT 5)</p>
-        <p>2.1 Brake Fade</p>
-        <p className="subtext">2.1.1 Methods to reduce brake fade</p>
-        <p className="subsubtext">Drilled Rotor</p>
-        <p className="subsubtext">Thermal Barriers</p>
-        <p>2.2 The flow of Brake Fluid inside the entire brake assembly: </p>
-        <p>2.3 What is Bleeding?</p>
-        <p className="subtext">2.3.1 Methods to perform bleeding</p>
-        <p className="subtext">2.3.2 Bleeding Activity: </p> 
-        <p>2.4 Glimpse to the Future segment: </p>
-        <p className="subtext">What is regenerative braking?</p>
-        <p className="subtext">Automatic Braking System Using Ultrasonic Sensor</p>
-        <p>Bonus Gift: Calculation(Braking Distance)</p>
-        </TimelineItem>
-        <TimelineItem  key="006"
-          id="engines"
-          dateText="Engines"
-          dateInnerStyle={{ background: "#ffbc00", color: "#fff" }}
-          bodyContainerStyle={{
-            background: "#ddd",
-            padding: "20px",
-            borderRadius: "8px",
-            boxShadow: "0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)",
-          }}>
-          <p>
-          1. Introduction <br/>
-          2. Types of Engine<br/>
-          3. Classification of Engine<br/>
-          4.(I) Petrol Engine<br/>
-          4.(II) Diesel Engine<br/>
-          5. Basic Engine Parts<br/>
-          6. Fuel Injector<br/>
-          7. Variable Valve Timing<br/>
-          8. Turbochargers<br/>
-          9. Superchargers<br/>
-          10. Intercooler<br/>
-          </p>
-        </TimelineItem>
+        
         <TimelineItem  key="007"
           id="softwares"
           dateText="Softwares"
@@ -318,26 +334,16 @@ function VerticalTimeline() {
           Part File(Sketching 3D)<br/>
           Extrude/cut/revolve a pattern by an example (sheaves of CVT)<br/>
           Assembly(Dampers)<br/>
-          </p>
-        </TimelineItem>
-        <TimelineItem key="008"
-          id="ooh"
-          dateText="Overhauling of Engines"
-          dateInnerStyle={{ background: "#ffbc00", color: "#fff" }}
-          bodyContainerStyle={{
-            background: "#ddd",
-            padding: "20px",
-            borderRadius: "8px",
-            boxShadow: "0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)",
-          }}> <h4 style={{ color: "blue", marginBottom: "15px" }}>Overhauling of following engines</h4>
+          </p> <br/>
+          <h4 style={{ color: "blue", marginBottom: "15px" }}>Ansys</h4>
           <p>
-          Honda city<br/>
-          Audi <br/>
-          Mercedes<br/>
-          Land cruiser<br/>
-          Porsche<br/>
+            1. Introduction to Ansys
           </p>
+          <p>2. Design and Structural Analysis of components  
+</p>        <p>3. Design and Thermal Analysis  of components 
+</p>        <p>4. Computational Fluid Analysis</p>
         </TimelineItem>
+        
       </Timeline>
     </>
   );

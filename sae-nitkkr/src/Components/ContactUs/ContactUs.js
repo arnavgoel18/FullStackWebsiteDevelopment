@@ -158,6 +158,9 @@ function ContactUS() {
               <option name="brand_ambassador" value="Brand Ambassador">
                 Brand Ambassador
               </option>
+              <option name="autokriti" value="autokriti">
+                Autokriti12.0
+              </option>
               <option name="content was abusive" value="Content was abusive">
                 Content was abusive
               </option>

@@ -63,6 +63,30 @@ function Teamdiv() {
 
  <section id="timeline"> 
 
+ 
+ <div className="tl-item" style={{cursor:"pointer"}} onClick={lastworkacc}>
+    
+    <div className="tl-bg"style={{ backgroundImage: `url(${accimg})`}}></div>
+    
+    <div className="tl-year">
+      <div className="f2 heading--sanSerif">ACCELERONS</div>
+    </div>
+
+    
+
+  </div>
+ 
+  <div className="tl-item" style={{cursor:"pointer"}} onClick={lastworkautokriti}>
+    
+    <div className="tl-bg" style={{ backgroundImage: `url(${autokritiimg})`}}></div>
+    
+    <div className="tl-year">
+      <div  className="f2 heading--sanSerif">AUTOKRITI</div>
+    </div>
+
+  
+
+  </div>
   <div className="tl-item" style={{cursor:"pointer"}} onClick={lastworknitrox}>
     
     <div className="tl-bg"  style={{ backgroundImage: `url(${nitroximg})`}}></div>
@@ -75,29 +99,8 @@ function Teamdiv() {
 
   </div>
 
-  <div className="tl-item" style={{cursor:"pointer"}} onClick={lastworkacc}>
-    
-    <div className="tl-bg"style={{ backgroundImage: `url(${accimg})`}}></div>
-    
-    <div className="tl-year">
-      <div className="f2 heading--sanSerif">ACCELERONS</div>
-    </div>
 
-    
-
-  </div>
-
-  <div className="tl-item" style={{cursor:"pointer"}} onClick={lastworkautokriti}>
-    
-    <div className="tl-bg" style={{ backgroundImage: `url(${autokritiimg})`}}></div>
-    
-    <div className="tl-year">
-      <div  className="f2 heading--sanSerif">AUTOKRITI</div>
-    </div>
-
-  
-
-  </div>
+ 
 
 
 

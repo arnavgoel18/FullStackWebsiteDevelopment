@@ -71,9 +71,9 @@ export default function AutokritiCard(){
             </div>
             <div className='AutokritiCard-Intro'>
                 Interested in automobiles, but don’t know where to start? Let this be your first stepping stone to the redefined world of mobility. Join Autokriti 12 and be a part of this remaking. 
-
-                From overhauling of a 2 stroke engine of a scooter in Autokriti 1 to Porsche Cayenne Engine in Autokriti 11, we have always matched our steps with innovation. It is our determination to keep up with the ever-changing technology that makes us North India’s largest automobile workshop. To continue our endeavour of knowledge sharing, we are here with Autokriti 12. This time it will be a ride on both CV and EV, not a rash one but a safe and steady one. #MobilityRedefined
-
+                    <br/><br/>
+                From overhauling of a 2 stroke engine of a scooter in Autokriti 1 to Porsche Cayenne Engine in Autokriti 11, we have always matched our steps with innovation. It is our determination to keep up with the ever-changing technology that makes us North India’s largest automobile workshop. To continue our endeavour of knowledge sharing, we are here with Autokriti 12. This time it will be a ride on both CV and EV, not a rash one but a safe and steady one.<b> #MobilityRedefined</b>
+                <br/><br/>
                 There are four workshops in Autokriti 12: CV, EV, IoT and Software. All these workshops will help you create a proper theoretical as well as practical understanding of their domain. You shall get a personalised learning experience on physical models. Along with all these, the workshop will have guest lectures from some reputed dignitaries. Please visit the content of these workshops for more details.
             </div>
             <div className='AutokritiCard-Body'>

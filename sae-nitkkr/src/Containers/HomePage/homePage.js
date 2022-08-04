@@ -23,7 +23,7 @@ function HomePage() {
             <NavBar />
             <FirstDisplayDIV page="Home" />
             <AboutUs page="Home" />
-            <TeamsDIV />
+            <TeamsDIV />    
             <br/><br/>
             <Autokriti12/>
             {/* <ExploreUs /> */}
