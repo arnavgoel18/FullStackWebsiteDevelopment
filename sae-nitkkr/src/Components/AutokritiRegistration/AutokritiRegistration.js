@@ -17,7 +17,7 @@ import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer(black)/FooterBlack";
 import { check } from "fontawesome";
 
-var done = 1;
+var c= 0;
 function Quizsignup() {
   var [finalcost, setFinalcost] = useState(0);
   var [department, setDepartment] = useState([]);
@@ -34,25 +34,29 @@ function Quizsignup() {
     var accomo = document.getElementById("accomodation").checked;
 
     if (Mechanical == true) {
-      finalcost += 2500;
+      // finalcost += 2500;
       count++;
     }
     if (IOT == true) {
-      finalcost += 2500;
+      // finalcost += 2500;
       count++;
     }
     if (EV == true) {
-      finalcost += 2500;
+      // finalcost += 2500;
       count++;
     }
     if (software == true) {
-      finalcost += 2500;
+      // finalcost += 2500;
       count++;
     }
     if (accomo == true && count == 2) {
-      finalcost += 1000;
+      finalcost = 5500;
     }else if(accomo == true && count == 1){
-      finalcost +=500;
+      finalcost = 3000;
+    }else if(accomo == false && count == 1){
+      finalcost = 2500;
+    }else if(accomo == false && count == 2){
+      finalcost = 4500;
     }
 
     setFinalcost(finalcost);
@@ -242,26 +246,37 @@ function Quizsignup() {
       }
     }
 
-    if (type == "checkbox" && name != "accomodation") {
+    if (type == "checkbox" && name != "accomodation") {    
       var check = checked.toString();
-      var regAmount = parseInt(
-        document.getElementById("workshopAmount").innerText
-      );
-
       if (checked == true) {
-        document.getElementById("workshopAmount").innerText = regAmount + 2500;
+        c++;
+        console.log(check, c);
         setsettemp((prevdepartment) => {
           return [...prevdepartment, name.toUpperCase()];
         });
-        done = 0;
       } else {
-        document.getElementById("workshopAmount").innerText = regAmount - 2500;
+        c--;
+        console.log(check, c);
         setsettemp((prevActions) =>
           // Filter out the item with the matching index
           prevActions.filter((i) => {
             return i != name.toUpperCase();
           })
         );
+      }
+      if(c == 2){
+        document.getElementById("workshopAmount").innerText = 4500;
+      }
+      if(c == 1){
+        document.getElementById("workshopAmount").innerText = 2500;
+      }
+      if(c == 0){
+        document.getElementById("workshopAmount").innerText = 0;
+      }
+      if(c > 2){
+        alert("You can choose maximum 2 workshop.")
+        event.target.checked = false;
+        c = 2;
       }
       setUserData({ ...userData, [name]: check });
     }
@@ -276,21 +291,13 @@ function Quizsignup() {
 
     if (name == "accomodation") {
       if (checked == true) {
-        // var regAmount = parseInt(
-        //   document.getElementById("accomoAmount").innerText
-        // );
-        // document.getElementById("accomoAmount").innerText = regAmount + 500;
         userData.accomodation = "Yes";
       } else {
-        // var regAmount = parseInt(
-        //   document.getElementById("accomoAmount").innerText
-        // );
-        // document.getElementById("accomoAmount").innerText = regAmount - 500;
         userData.accomodation = "No";
       }
     }
 
-    if (document.getElementById("workshopAmount").innerText >= 5000 && document.getElementById('accomodation').checked == true )
+    if (document.getElementById("workshopAmount").innerText >= 4500 && document.getElementById('accomodation').checked == true )
       document.getElementById("accomoAmount").innerText = 1000;
     else if(document.getElementById('accomodation').checked == true)
     document.getElementById("accomoAmount").innerText = 500;

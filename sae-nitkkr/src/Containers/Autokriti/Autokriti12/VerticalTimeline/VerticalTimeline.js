@@ -28,7 +28,7 @@ function VerticalTimeline() {
           <h4 style={{ color: "blue", marginBottom: "15px" }}>Clutch</h4>
           <p>What is clutch,</p>
           <p>
-            Type of Clutches- Dog, friction- multiplayer, single plate,
+            Type of Clutches- Dog, single plate, friction- multiplate, 
             centrifugal.
           </p>
           <p>Their advantages and disadvantage,</p>
@@ -271,6 +271,14 @@ function VerticalTimeline() {
           }}
         >
           {/* <h3 style={{ color: "blue", marginBottom: "15px" }}>Day 2</h3> */}
+          <h4 style={{ color: "blue", marginBottom: "15px" }}>ARDUINO </h4>
+          <p>1. Introduction to UART, SPI, I2C Communication</p>
+          <p>2. How these works- start bit, data frame, stop bits</p>
+          <p>3. Steps of Data Transmission</p>
+          <p>4. Slave and Master Communication</p>
+          <p>5. Advantages and Disadvantages</p>
+          <p>6. Use Cases</p>
+          <br />
           <h4 style={{ color: "blue", marginBottom: "15px" }}>
             COMMUNICATION PROTOCOLS{" "}
           </h4>
@@ -284,14 +292,6 @@ function VerticalTimeline() {
             using inbuilt libraries.{" "}
           </p>
           <p>7. Hands-on intermediate to expert level projects. </p>
-          <br />
-          <h4 style={{ color: "blue", marginBottom: "15px" }}>ARDUINO </h4>
-          <p>1. Introduction to UART, SPI, I2C Communication</p>
-          <p>2. How these works- start bit, data frame, stop bits</p>
-          <p>3. Steps of Data Transmission</p>
-          <p>4. Slave and Master Communication</p>
-          <p>5. Advantages and Disadvantages</p>
-          <p>6. Use Cases</p>
           <br />
           <h4 style={{ color: "blue", marginBottom: "15px" }}>
             CAN COMMUNICATION{" "}
@@ -365,13 +365,13 @@ function VerticalTimeline() {
           <p>8. Motor controller </p>
           <p>9. H Bridge </p>
           <p>10. PWM </p>
-          <br />
-          <h4 style={{ color: "blue", marginBottom: "15px" }}>DAQ</h4>
+          {/* <br /> */}
+          {/* <h4 style={{ color: "blue", marginBottom: "15px" }}>DAQ</h4>
           <p>1. Arduino (Functions, Variables ,Structure)</p>
           <p>2. Types of communication </p>
           <p>3. Telemetry </p>
           <p>4. IOT </p>
-          <p>4. Sensors & IC </p>
+          <p>4. Sensors & IC </p> */}
         </TimelineItem>
 
         <TimelineItem
