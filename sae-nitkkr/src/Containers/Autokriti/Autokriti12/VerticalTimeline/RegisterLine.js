@@ -27,7 +27,7 @@ function RegisterLine() {
         </p>
         <p>2. Each Department/Workshop is 3 Days long</p>
         <p>
-          3. If you choose 1 workshop, your totoal duration will be 4 Days. 3
+          3. If you choose 1 workshop, your total duration will be 4 Days. 3
           Days Workshop + 1 Day Guest Lecture
         </p>
         <p>
