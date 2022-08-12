@@ -17,7 +17,7 @@ function CheckEvents() {
             <Session
               title="Autokriti 12.0"
               status="Venue: NIT Kurukshetra"
-              date="Date : 8-14 Septmeber"
+              date="Date : 22-28 Septmeber"
               image={autokriti12poster}
               url="/autokriti/register"
             />

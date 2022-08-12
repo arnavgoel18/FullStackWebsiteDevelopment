@@ -282,10 +282,10 @@ function Quizsignup() {
     }
 
     if (name == "timeSlot1") {
-      if (value == "8-11") {
-        userData.timeSlot2 = "11-14";
+      if (value == "22-25") {
+        userData.timeSlot2 = "22-25";
       } else {
-        userData.timeSlot2 = "8-11";
+        userData.timeSlot2 = "25-28";
       }
     }
 
@@ -634,8 +634,8 @@ function Quizsignup() {
                   Choose here
                 </option>
                 <option value="DEFAULT">--None Selected--</option>
-                <option value="8-11">8-11 September</option>
-                <option value="11-14">11-14 September</option>
+                <option value="22-25">22-25 September</option>
+                <option value="25-28">25-28 September</option>
               </select>
             </div>
           </div>
