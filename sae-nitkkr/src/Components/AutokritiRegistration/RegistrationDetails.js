@@ -98,6 +98,7 @@ function RegistrationDetails() {
     };
 
     const sendEmail = () => {
+      console.log("hello destination");
       const toSend = {
         name: authorised_user.name,
         sem: authorised_user.semester,
@@ -117,6 +118,7 @@ function RegistrationDetails() {
           "ulnoJlsECTLQyCRZ5"
         )
         .then(
+          
           function (response) {
             console.log("SUCCESS!", response.status, response.text);
           },
