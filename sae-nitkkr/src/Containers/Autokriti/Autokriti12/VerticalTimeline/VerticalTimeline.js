@@ -21,46 +21,46 @@ function VerticalTimeline() {
         >
           {/* <h3 style={{ color: "blue", marginBottom: "15px" }}>Day 1</h3> */}
           <h4 style={{ color: "blue", marginBottom: "15px" }}>Introduction</h4>
-          <p>What is transmission,</p>
-          <p>Why it is used, </p>
-          <p>Power and Torque.</p>
+          <p>1. What is transmission,</p>
+          <p>2. Why it is used, </p>
+          <p>3. Power and Torque.</p>
           <br />
           <h4 style={{ color: "blue", marginBottom: "15px" }}>Clutch</h4>
-          <p>What is clutch,</p>
+          <p>1. What is clutch,</p>
           <p>
-            Type of Clutches- Dog, single plate, friction- multiplate, 
+            2. Type of Clutches- Dog, single plate, friction- multiplate, 
             centrifugal.
           </p>
-          <p>Their advantages and disadvantage,</p>
-          <p>Their uses</p>
+          <p>3. Their advantages and disadvantage,</p>
+          <p>4. Their uses</p>
           <br />
           <h4 style={{ color: "blue", marginBottom: "15px" }}>
             {" "}
             Manual Transmission Gearbox
           </h4>
-          <p> Slidind Mesh,</p>
-          <p>Constant Mesh</p>
-          <p>Synchromesh Gearbox </p>
+          <p>1. Slidind Mesh,</p>
+          <p>2. Constant Mesh</p>
+          <p>3. Synchromesh Gearbox </p>
           <br />
           <h4 style={{ color: "blue", marginBottom: "15px" }}>
             Automatic Transmission{" "}
           </h4>
-          <p>CVT,</p>
-          <p>DCT,</p>
-          <p>E CVT </p>
-          <p>Torque Converter,</p>
+          <p>1. CVT,</p>
+          <p>2. DCT,</p>
+          <p>3. E CVT </p>
+          <p>4. Torque Converter,</p>
           <br />
           <h4 style={{ color: "blue", marginBottom: "15px" }}>Differential </h4>
-          <p>What is differential,</p>
-          <p>Types of Differential,</p>
-          <p>Uses, advantages and disadvantage.</p>
-          <p> CV,UV.</p>
+          <p>1. What is differential,</p>
+          <p>2. Types of Differential,</p>
+          <p>3. Uses, advantages and disadvantage.</p>
+          <p>4. CV,UV.</p>
           <br />
           <h4 style={{ color: "blue", marginBottom: "15px" }}>
             Drive train and shifting
           </h4>
-          <p>4wd,2wd- advantages, disadvantages,</p>
-          <p> Front wd, rear wd</p>
+          <p>1. 4wd,2wd- advantages, disadvantages,</p>
+          <p>2. Front wd, rear wd</p>
         </TimelineItem>
 
         <TimelineItem
@@ -80,47 +80,47 @@ function VerticalTimeline() {
           <p>1. introduction</p>
           <p>2. Objective </p>
           <p>3. Basic terminology </p>
-          <p className="subtext">3.a Sprung & Unsprung Weight</p>
-          <p className="subtext">3.b Centre of Gravity</p>
-          <p className="subtext">3.c Roll Axis</p>
-          <p className="subtext">3.d Dynamic Load Transfer</p>
-          <p className="subtext">3.e Dive & Squat</p>
-          <p className="subtext">3.f Bump & Droop</p>
+          <p className="subtext">3.1 Sprung & Unsprung Weight</p>
+          <p className="subtext">3.2 Centre of Gravity</p>
+          <p className="subtext">3.3 Roll Axis</p>
+          <p className="subtext">3.4 Dynamic Load Transfer</p>
+          <p className="subtext">3.5 Dive & Squat</p>
+          <p className="subtext">3.6 Bump & Droop</p>
           <p>4. Types </p>
-          <p className="subtext">4.a Dependent Suspension</p>
-          <p className="subsubtext">-Hotchkiss Drive</p>
-          <p className="subsubtext">-Four Link Suspension</p>
-          <p className="subtext">4.b Independent Suspension</p>
-          <p className="subsubtext">-McPherson Suspension System</p>
-          <p className="subsubtext">-Double Wishbone Suspension</p>
-          <p className="subsubtext"> -Trailing Link Suspension </p>
-          <p className="subsubtext">-Semi Trailing Arm Suspension</p>
-          <p className="subsubtext">-Push and Pull Rod Suspension</p>
+          <p className="subtext">4.1 Dependent Suspension</p>
+          <p className="subsubtext">4.1.1 Hotchkiss Drive</p>
+          <p className="subsubtext">4.1.2 Four Link Suspension</p>
+          <p className="subtext">4.2 Independent Suspension</p>
+          <p className="subsubtext">4.2.1 McPherson Suspension System</p>
+          <p className="subsubtext">4.2.2 Double Wishbone Suspension</p>
+          <p className="subsubtext"> 4.2.3 Trailing Link Suspension </p>
+          <p className="subsubtext">4.2.4 Semi Trailing Arm Suspension</p>
+          <p className="subsubtext">4.2.5 Push and Pull Rod Suspension</p>
           <p>5. Springs </p>
-          <p>Types</p>
-          <p className="subtext">5.a Coil Springs</p>
-          <p className="subtext">5.b Leaf Springs</p>
-          <p>Torsion Bars</p>
+          <p>5.1 Types</p>
+          <p className="subtext">5.1.1 Coil Springs</p>
+          <p className="subtext">5.1.2 Leaf Springs</p>
+          <p>5.2 Torsion Bars</p>
           <p>6. Dampers </p>
-          <p> Types</p>
+          <p className="subtext">6.1 Types</p>
           <p>7. Roll center analysis </p>
-          <p>Instant Center</p>
+          <p>8. Instant Center</p>
 
           <br />
           <h4 style={{ color: "blue", marginBottom: "15px" }}>Steering </h4>
           <p>1. introduction</p>
           <p>2. Objective </p>
           <p>3. Basic terminology </p>
-          <p className="subtext">3.a Cambor Angle</p>
-          <p className="subtext">3.b Castor Angle</p>
-          <p className="subtext">3.c Toe Angle</p>
-          <p className="subtext">3.d Kingpin Inclination</p>
-          <p className="subtext">3.e Steering Ratio </p>
-          <p className="subtext">3.f Bump Steer</p>
-          <p className="subtext">3.g Roll Steer</p>
+          <p className="subtext">3.1 Cambor Angle</p>
+          <p className="subtext">3.2 Castor Angle</p>
+          <p className="subtext">3.3 Toe Angle</p>
+          <p className="subtext">3.4 Kingpin Inclination</p>
+          <p className="subtext">3.5 Steering Ratio </p>
+          <p className="subtext">3.6 Bump Steer</p>
+          <p className="subtext">3.7 Roll Steer</p>
           <p>4. Types </p>
-          <p className="subtext">4.a Pitman Arm Steering System</p>
-          <p className="subtext">4.b Rack and Pinion Steering System</p>
+          <p className="subtext">4.1 Pitman Arm Steering System</p>
+          <p className="subtext">4.2 Rack and Pinion Steering System</p>
           <p>5. Ackermann geometry calculations </p>
           <p className="subtext">
             {" "}
@@ -167,12 +167,12 @@ function VerticalTimeline() {
             animations)
           </p>
           <p className="subtext">1.5.1 Drum Brakes</p>
-          <p className="subsubtext">Single leading edge</p>
-          <p className="subsubtext">Double leading edge</p>
+          <p className="subsubtext">-Single leading edge</p>
+          <p className="subsubtext">-Double leading edge</p>
           <p className="subtext">1.5.2 Disc Brakes</p>
           <p className="subsubtext">Types of Calipers</p>
-          <p className="subsubsubtext">Floating Calipers</p>
-          <p className="subsubsubtext">Fixed Calipers</p>
+          <p className="subsubsubtext">-Floating Calipers</p>
+          <p className="subsubsubtext">-Fixed Calipers</p>
 
           <p className="subsubtext">
             Master Cylinders & Tendum Master Cylinders
@@ -189,16 +189,16 @@ function VerticalTimeline() {
           <p className="subtext">Silicon Based(DOT 5)</p>
           <p>2.1 Brake Fade</p>
           <p className="subtext">2.1.1 Methods to reduce brake fade</p>
-          <p className="subsubtext">Drilled Rotor</p>
-          <p className="subsubtext">Thermal Barriers</p>
+          <p className="subsubtext">-Drilled Rotor</p>
+          <p className="subsubtext">-Thermal Barriers</p>
           <p>2.2 The flow of Brake Fluid inside the entire brake assembly: </p>
           <p>2.3 What is Bleeding?</p>
           <p className="subtext">2.3.1 Methods to perform bleeding</p>
           <p className="subtext">2.3.2 Bleeding Activity: </p>
           <p>2.4 Glimpse to the Future segment: </p>
-          <p className="subtext">What is regenerative braking?</p>
+          <p className="subtext">2.4.1 What is regenerative braking?</p>
           <p className="subtext">
-            Automatic Braking System Using Ultrasonic Sensor
+           2.4.2 Automatic Braking System Using Ultrasonic Sensor
           </p>
           <p>Bonus Gift: Calculation(Braking Distance)</p>
         </TimelineItem>
@@ -220,14 +220,14 @@ function VerticalTimeline() {
             Overhauling of following engines
           </h4>
           <p>
-            Honda city
+            1. Honda city
             <br />
-            Audi <br />
-            Mercedes
+            2. Audi <br />
+            3. Mercedes
             <br />
-            Land cruiser
+            4. Land cruiser
             <br />
-            Porsche
+            5. Porsche
             <br />
           </p>
           <h4 style={{ color: "blue", marginBottom: "15px" }}>
@@ -239,9 +239,9 @@ function VerticalTimeline() {
             <br />
             3. Classification of Engine
             <br />
-            4.(I) Petrol Engine
+            4.1 Petrol Engine
             <br />
-            4.(II) Diesel Engine
+            4.2 Diesel Engine
             <br />
             5. Basic Engine Parts
             <br />
@@ -389,15 +389,15 @@ function VerticalTimeline() {
           {" "}
           <h4 style={{ color: "blue", marginBottom: "15px" }}>Solidworks</h4>
           <p>
-            Installation <br />
-            Introduction to UI <br />
-            Part file(Sketching 2D)
+            1. Installation <br />
+            2. Introduction to UI <br />
+            3. Part file(Sketching 2D)
             <br />
-            Part File(Sketching 3D)
+            4. Part File(Sketching 3D)
             <br />
-            Extrude/cut/revolve a pattern by an example (sheaves of CVT)
+            5. Extrude/cut/revolve a pattern by an example (sheaves of CVT)
             <br />
-            Assembly(Dampers)
+            6. Assembly(Dampers)
             <br />
           </p>{" "}
           <br />
