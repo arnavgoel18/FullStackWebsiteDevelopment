@@ -65,6 +65,7 @@
     outline: none;
     cursor: pointer;
 }
+
 #loginmain
 {
     display: flex;
@@ -114,8 +115,23 @@ a{
         height:520px;
         width: 500px;
     }
+   
 }
-
+@media only screen and (max-width: 768px) 
+{
+    #logincompo4{
+    display:flex;
+    justify-content:center;
+}
+    #logincompo2{
+    display:flex;
+    justify-content:center;
+}
+#logincompo3{
+    display:flex;
+    justify-content:center;
+}
+}
 @media (min-width:425px) and (max-width:768px)
 {
     #loginbox{
@@ -131,6 +147,7 @@ a{
         height: 120px;
         width: 120px;
     }
+    
 }
         
 @media (min-width:375px) and (max-width:425px)
