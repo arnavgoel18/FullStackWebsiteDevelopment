@@ -284,9 +284,10 @@ margin-top: 5px;
 #chooseTimeslot{
   margin-bottom: 4px;
 }
-#accomodation{
+#accomodation, #cashondelivery{
   width: 5%;
   margin-bottom: 10px;
+  margin-top: 10px;
 }
 #payform-button1{
   margin-top: 20px;

@@ -60,7 +60,7 @@ function Quizsignup() {
     }
 
     setFinalcost(finalcost);
-    userData.amount = 1;
+    userData.amount = finalcost;
   };
 
   //to check all fields are filled or not
@@ -182,7 +182,8 @@ function Quizsignup() {
     software: "",
     amount: finalcost,
     firstChoice: "",
-    accomodation: "",
+    accomodation: "No",
+    cod: "No",
   });
 
   let name, value, checked, type;
@@ -246,7 +247,7 @@ function Quizsignup() {
       }
     }
 
-    if (type == "checkbox" && name != "accomodation") {    
+    if (type == "checkbox" && name != "accomodation" && name != 'cod') {    
       var check = checked.toString();
       if (checked == true) {
         c++;
@@ -296,6 +297,15 @@ function Quizsignup() {
         userData.accomodation = "No";
       }
     }
+
+    if (name == "cod") {
+      if (checked == true) {
+        userData.cod = "Yes";
+      } else {
+        userData.cod = "No";
+      }
+    }
+
 
     if (document.getElementById("workshopAmount").innerText >= 4500 && document.getElementById('accomodation').checked == true )
       document.getElementById("accomoAmount").innerText = 1000;
@@ -652,6 +662,16 @@ function Quizsignup() {
           <div className="payform-lable">
             <span>Amount (&#8377;) : </span>
             <span id="accomoAmount">0</span>
+          </div>
+          <div className="cod">
+            <input
+              type="checkbox"
+              value="cod"
+              name="cod"
+              id="cashondelivery"
+              onChange={postUserData}
+            />{" "}
+            Pay cash on delivery
           </div>
           <div id="pay_button">
             <div id="paynow">

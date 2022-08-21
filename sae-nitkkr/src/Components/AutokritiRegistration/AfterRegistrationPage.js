@@ -158,6 +158,10 @@ function AfterRegistrationPage() {
             <td>{authorised_user.status}</td>
           </tr>
           <tr>
+            <td className="td-first">CASH ON DELIVERY</td>
+            <td>{authorised_user.cod}</td>
+          </tr>
+          <tr>
             <td className="td-first">Certificate</td>
             
             <td><Link to={`/register/certificate/${id}`} style={{color: "blue"}}>Download</Link>

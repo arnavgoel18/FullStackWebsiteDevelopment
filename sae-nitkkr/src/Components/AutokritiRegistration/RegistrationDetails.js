@@ -25,14 +25,68 @@ function RegistrationDetails() {
     }
   }, []);
 
-  const makePayment = async () => {
-    const res = await initializeRazorpay();
+  const makePaymentCash = async () =>{
     document.getElementById("payform-button1").disabled = true;
     document.getElementById("payform-button1").style.background = "grey";
     setTimeout(() => {
       document.getElementById("payform-button1").disabled = false;
       document.getElementById("payform-button1").style.background = "#1a3c7f";
-    }, 10000);
+    }, 5000);
+
+    const current = new Date();
+    const date = `${current.getDate()}/${
+      current.getMonth() + 1
+    }/${current.getFullYear()}`;
+    var newtimestamp = String(new Date().getTime());
+
+    authorised_user["department"] = department;
+    authorised_user.paymentid = newtimestamp;
+
+    const toSend = {
+      name: authorised_user.name,
+      sem: authorised_user.semester,
+      branch: authorised_user.branch,
+      email: authorised_user.email,
+      college: authorised_user.college,
+      OrderId: authorised_user.orderid,
+      PaymentId: authorised_user.paymentid,
+      Phone: authorised_user.phone,
+      Payment: 'Cash on delivery',
+      QRCodeURL: `https://saenitkurukshetra.in/registered/${authorised_user.paymentid}`,
+    };
+    emailjs
+      .send(
+        "service_oqccfwh",
+        "template_zezhpzf",
+        toSend,
+        "ulnoJlsECTLQyCRZ5"
+      )
+      .then(
+        
+        function (response) {
+          console.log("SUCCESS!", response.status, response.text);
+        },
+        function (error) {
+          console.log("FAILED...", error);
+        }
+      );
+
+    const Saving_user_data = authorised_user;
+    let gotit = await setDoc(
+      doc(db, "paymentregistrationid", newtimestamp),
+      Saving_user_data
+    );
+
+    localStorage.removeItem("userData");
+    localStorage.removeItem("department");
+    window.location = `/register_confirmation/${newtimestamp}`;
+
+  }
+
+  const makePayment = async () => {
+    const res = await initializeRazorpay();
+    document.getElementById("payform-button1").disabled = true;
+    document.getElementById("payform-button1").style.background = "grey";
 
     if (!res) {
       alert("Razorpay SDK Failed to load");
@@ -159,9 +213,12 @@ function RegistrationDetails() {
       <NavBar />
       <div className="reg-details-heading">
         <h1 className="reg-details-h1">Registeration Details</h1>
-        <button className="pay-btn" id="payform-button1" onClick={makePayment}>
+        {authorised_user.cod == 'Yes' ?  <button className="pay-btn" id="payform-button1" onClick={makePaymentCash}>
           Pay Now
-        </button>
+        </button> :  <button className="pay-btn" id="payform-button1" onClick={makePayment}>
+          Pay Now
+        </button> }
+       
       </div>
 
       <div className="reg-details">
@@ -223,6 +280,10 @@ function RegistrationDetails() {
           <tr>
             <td className="td-first">AMOUNT</td>
             <td>{authorised_user.amount}</td>
+          </tr>{" "}
+          <tr>
+            <td className="td-first">CASH ON DELIVERY</td>
+            <td>{authorised_user.cod}</td>
           </tr>{" "}
           <tr>
             <td className="td-first">DEPARTMENT</td>

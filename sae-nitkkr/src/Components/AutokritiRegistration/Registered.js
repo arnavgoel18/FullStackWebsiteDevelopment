@@ -107,6 +107,11 @@ function Registered() {
             <td className="td-first">AMOUNT PAID</td>
             <td>{authorised_user.amount}</td>
           </tr>{" "}
+      
+        <tr>
+            <td className="td-first">CASH ON DELIVERY</td>
+            <td>{authorised_user.cod}</td>
+          </tr>{" "}
         <tr>
           <td className="td-first">DEPARTMENT</td>
           <td>{depart[0]},{depart[1]}</td>
