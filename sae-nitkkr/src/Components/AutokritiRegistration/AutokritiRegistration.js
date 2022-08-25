@@ -60,7 +60,7 @@ function Quizsignup() {
     }
 
     setFinalcost(finalcost);
-    userData.amount = finalcost;
+    userData.amount = 1;    //for testing only, later changed with finalcost;
   };
 
   //to check all fields are filled or not
