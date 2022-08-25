@@ -5,8 +5,11 @@ import "./Autokriti12.css";
 import { GrCircleInformation } from "react-icons/gr";
 import NavBar from "../../../Components/NavBar/NavBar";
 import Footer from "../../../Components/Footer/Footer(black)/FooterBlack";
+import Carousel from "../../../Components/Carousel/Carousel";
 
 import Au2Poster from "../../../Assets/Autokriti12/Autokriti12poster.jpg";
+import El2Poster from "../../../Assets/Autokriti12/ElectrionicsPoster.jpg"
+import Sof2Poster from "../../../Assets/Autokriti12/Software.jpg"
 import VerticalTimeline from "./VerticalTimeline/VerticalTimeline";
 import RegisterLine from "./VerticalTimeline/RegisterLine";
 import CV from "../../../Assets/cv.png";
@@ -23,14 +26,17 @@ function Autorkriti12() {
     window.scrollTo(0, 0);
   }, []);
 
+
+  const images=[Au2Poster,El2Poster,Sof2Poster];
+
   return (
     <>
       <NavBar />
-      <div className="about_autokriti-container">
-        <div className="about_autokriti-left">
-          <h2 className="about_autokrit-left-heading">
-            Details of{" "}
-            <b className="about_autokrit-left-subheading"> Autokriti 12</b>{" "}
+      <div className='about_autokriti-container'>
+        <div className='about_autokriti-left'>
+          <h2 className='about_autokrit-left-heading'>
+            Details of{' '}
+            <b className='about_autokrit-left-subheading'> Autokriti 12</b>{' '}
             Workshop
           </h2>
           <p>
@@ -57,57 +63,59 @@ function Autorkriti12() {
             dignitaries. Please visit the content of these workshops for more
             details.
           </p>
-          <Link to="/autokriti/register">
+          <Link to='/autokriti/register'>
             <button>Register Here!</button>
           </Link>
         </div>
-        <div className="about_autokriti-right">
-          <img src={Au2Poster}></img>
+        <div className='about_autokriti-right'>
+          {/* <img src={Au2Poster}></img> */}
+          
+          <Carousel imgNames ={images}/>
         </div>
       </div>
-      <div className="about_autokriti-container">
-        <div className="bigbox">
-          <a href="#transmission">
-            <button className="smallbox">
+      <div className='about_autokriti-container'>
+        <div className='bigbox'>
+          <a href='#transmission'>
+            <button className='smallbox'>
               <img src={TM}></img>
               <h3>Transmission</h3>
             </button>
           </a>
-          <a href="#vd">
-            <button className="smallbox">
+          <a href='#vd'>
+            <button className='smallbox'>
               <img src={VD}></img>
               <h3>Vehicle Dynamics</h3>
             </button>
           </a>
-          <a href="#brakes">
-            <button className="smallbox">
+          <a href='#brakes'>
+            <button className='smallbox'>
               <img src={BK}></img>
               <h3>Brakes</h3>
             </button>
           </a>
-          <a href="#engines">
-            {" "}
-            <button className="smallbox">
+          <a href='#engines'>
+            {' '}
+            <button className='smallbox'>
               <img src={CV}></img>
               <h3>Engine Overhauling</h3>
             </button>
           </a>
-          <a href="#iot">
-            <button className="smallbox">
+          <a href='#iot'>
+            <button className='smallbox'>
               <img src={IOT}></img>
               <h3>IOT</h3>
             </button>
           </a>
 
-          <a href="#ev">
-            <button className="smallbox">
+          <a href='#ev'>
+            <button className='smallbox'>
               <img src={EV}></img>
               <h3>Electric Vehicle</h3>
             </button>
           </a>
 
-          <a href="#softwares">
-            <button className="smallbox">
+          <a href='#softwares'>
+            <button className='smallbox'>
               <img src={SW}></img>
               <h3>Softwares</h3>
             </button>
@@ -119,7 +127,7 @@ function Autorkriti12() {
       <RegisterLine />
       <Footer />
     </>
-  );
+  )
 }
 
 export default Autorkriti12;
