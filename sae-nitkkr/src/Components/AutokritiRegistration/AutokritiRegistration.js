@@ -11,6 +11,7 @@ import {
   doc,
   setDoc,
   updateDoc,
+  Timestamp,
 } from "firebase/firestore";
 
 import NavBar from "../NavBar/NavBar";
@@ -60,7 +61,7 @@ function Quizsignup() {
     }
 
     setFinalcost(finalcost);
-    userData.amount = 1;    //for testing only, later changed with finalcost;
+    userData.amount = finalcost;    //for testing only, later changed with finalcost;
   };
 
   //to check all fields are filled or not
