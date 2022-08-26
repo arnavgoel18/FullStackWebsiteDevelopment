@@ -181,6 +181,7 @@ function Quizsignup() {
     ev: "",
     iot: "",
     software: "",
+    Registration_time:"",
     amount: finalcost,
     firstChoice: "",
     accomodation: "No",

@@ -72,6 +72,7 @@ function RegistrationDetails() {
       );
 
     const Saving_user_data = authorised_user;
+    Saving_user_data.Registration_time=new Date();
     let gotit = await setDoc(
       doc(db, "paymentregistrationid", newtimestamp),
       Saving_user_data
@@ -145,6 +146,7 @@ function RegistrationDetails() {
       sendEmail();
       authorised_user["department"] = department;
       const Saving_user_data = authorised_user;
+      Saving_user_data.Registration_time=new Date();
       let gotit = await setDoc(
         doc(db, "paymentregistrationid", timestamp),
         Saving_user_data
