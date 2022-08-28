@@ -49,6 +49,7 @@
     "react-web-share": "^1.1.0",
     "sass": "^1.49.7",
     "slick-carousel": "^1.8.1",
+    "string-similarity": "^4.0.4",
     "uuid": "^8.3.2",
     "vertical-timeline": "^2.0.0",
     "vertical-timeline-component-for-react": "^1.0.7",

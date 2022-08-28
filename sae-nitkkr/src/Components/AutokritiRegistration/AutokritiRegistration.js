@@ -1,6 +1,8 @@
 //Registeration Page made for Autokriti 2.0
 import React, { useEffect, useState } from "react";
 import { FaInfoCircle } from "react-icons/fa";
+import stringSimilarity from "string-similarity";
+
 import $ from "jquery";
 import "./AutokritiRegistration.css";
 
@@ -19,6 +21,8 @@ import Footer from "../Footer/Footer(black)/FooterBlack";
 import { check } from "fontawesome";
 
 var c= 0;
+var storeemail = false; //for nitkkr stuednts
+var storecollege = false; //for nitkkr college
 function Quizsignup() {
   var [finalcost, setFinalcost] = useState(0);
   var [department, setDepartment] = useState([]);
@@ -247,6 +251,26 @@ function Quizsignup() {
           //document.getElementById("payform-button2").disabled = false;
         }
       }
+
+      if(/@nitkkr.ac.in\s*$/.test(value)){
+        storeemail = true;
+      }
+    }
+
+    if(name == 'college' && (value.match(/^nit k.*$/) || value.match(/^NIT K.*$/) || value.match(/^NIT k.*$/) || value.match(/^nit K.*$/) || value.match(/^.*Kurukshetra$/) || value.match(/^.*kurukshetra$/))){
+            storecollege = true;
+    }
+
+    if(storeemail == true && storecollege == true)
+    {
+      document.getElementById('amb_software').disabled = true;
+      document.getElementById('amb_timeslot').disabled = true;
+      userData.timeSlot1 = '3-6';
+      userData.timeSlot2 = '3-6';
+    }
+    else{
+      document.getElementById('amb_software').disabled = false;
+      document.getElementById('amb_timeslot').disabled = false;
     }
 
     if (type == "checkbox" && name != "accomodation" && name != 'cod') {    
@@ -615,7 +639,7 @@ function Quizsignup() {
                 <span for="ev">EV</span>
                 <div id="ev"></div>
               </div>
-              <div className="department-checkbox">
+              <div className="department-checkbox" id='software_disable'>
                 <input
                   type="checkbox"
                   name="software"
