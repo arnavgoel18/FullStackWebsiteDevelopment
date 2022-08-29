@@ -263,12 +263,14 @@ function Quizsignup() {
 
     if(storeemail == true && storecollege == true)
     {
+      document.getElementById('showIPorNo').innerHTML = "10 - 13 September";
       document.getElementById('amb_software').disabled = true;
       document.getElementById('amb_timeslot').disabled = true;
       userData.timeSlot1 = '3-6';
       userData.timeSlot2 = '3-6';
     }
     else{
+      document.getElementById('showIPorNo').innerHTML = "Choose Timeslot: ";
       document.getElementById('amb_software').disabled = false;
       document.getElementById('amb_timeslot').disabled = false;
     }
@@ -657,7 +659,7 @@ function Quizsignup() {
             </div>
             <div className="department-timeslot">
               <div className="payform-label" id="chooseTimeslot">
-                Choose Timeslot&nbsp;
+              <span id="showIPorNo">Choose Timeslot:&nbsp;</span>
                 {temp.length == 0 ? " " : <span>({temp[0]})</span>}
               </div>
               <select
