@@ -261,7 +261,7 @@ function Quizsignup() {
             storecollege = true;
     }
 
-    if(storeemail == true && storecollege == true)
+    if(storeemail == true || storecollege == true)
     {
       document.getElementById('showIPorNo').innerHTML = "10 - 13 September";
       document.getElementById('amb_software').disabled = true;
