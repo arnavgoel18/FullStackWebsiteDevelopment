@@ -20,7 +20,7 @@ import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer(black)/FooterBlack";
 import { check } from "fontawesome";
 
-var c = 0;
+var c= 0;
 var storeemail = false; //for nitkkr stuednts
 var storecollege = false; //for nitkkr college
 function Quizsignup() {
@@ -263,14 +263,14 @@ function Quizsignup() {
 
     if(storeemail == true || storecollege == true)
     {
-      document.getElementById('showIPorNo').innerHTML = "10 - 13 September";
       document.getElementById('amb_software').disabled = true;
       document.getElementById('amb_timeslot').disabled = true;
-      userData.timeSlot1 = '10-13';
-      userData.timeSlot2 = '10-13';
+      userData.timeSlot1 = '10-12';
+      userData.timeSlot2 = '10-12';
+      document.getElementById('kkrtime').innerText = "10-12 september";
     }
     else{
-      document.getElementById('showIPorNo').innerHTML = "Choose Timeslot: ";
+      document.getElementById('kkrtime').innerText = "Choose Timeslot";
       document.getElementById('amb_software').disabled = false;
       document.getElementById('amb_timeslot').disabled = false;
     }
@@ -659,7 +659,7 @@ function Quizsignup() {
             </div>
             <div className="department-timeslot">
               <div className="payform-label" id="chooseTimeslot">
-                <span id="showIPorNo">Choose Timeslot:&nbsp;</span>
+                <div id="kkrtime">Choose Timeslot&nbsp;</div>
                 {temp.length == 0 ? " " : <span>({temp[0]})</span>}
               </div>
               <select
@@ -682,7 +682,7 @@ function Quizsignup() {
               type="checkbox"
               value="accomodation"
               name="accomodation"
-              id="accomodat`ion"
+              id="accomodation"
               onChange={postUserData}
             />{" "}
             Need Accomodation & food
