@@ -56,7 +56,7 @@ function RegistrationDetails() {
     };
     emailjs
       .send(
-        "service_oqccfwh",
+        "service_efl7b9h",
         "template_zezhpzf",
         toSend,
         "ulnoJlsECTLQyCRZ5"
@@ -164,11 +164,12 @@ function RegistrationDetails() {
         OrderId: authorised_user.orderid,
         PaymentId: authorised_user.paymentid,
         Phone: authorised_user.phone,
+      
         QRCodeURL: `https://saenitkurukshetra.in/registered/${authorised_user.paymentid}`,
       };
       emailjs
         .send(
-          "service_oqccfwh",
+          "service_efl7b9h",
           "template_zezhpzf",
           toSend,
           "ulnoJlsECTLQyCRZ5"
