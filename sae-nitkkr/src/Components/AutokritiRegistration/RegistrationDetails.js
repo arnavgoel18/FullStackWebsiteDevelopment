@@ -72,7 +72,7 @@ function RegistrationDetails() {
       );
 
     const Saving_user_data = authorised_user;
-    Saving_user_data.Registration_time=new Date();
+    Saving_user_data.Registration_time=new Date().toString();
     let gotit = await setDoc(
       doc(db, "paymentregistrationid", newtimestamp),
       Saving_user_data

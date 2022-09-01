@@ -277,6 +277,8 @@ function RegisteredCandidates() {
                   <th>Payment_Id</th>
                   <th>Order_Id</th>
                   <th>Referal Code</th>
+                  <th>Amount</th>
+                  <th>COD</th>
                   <th>Slot 1</th>
                   <th>Slot 2</th>
                   <th>Registration Time</th>
@@ -292,9 +294,11 @@ function RegisteredCandidates() {
                       <td>{item1.paymentid}</td>
                       <td>{item1.orderid}</td>
                       <td>{item1.referalcode}</td>
+                      <td>{item1.amount}</td>
+                      <td>{item1.cod}</td>
                       <td>{item1.department[0]}({item1.timeSlot1})</td>
                       <td>{item1.department[1]}({item1.timeSlot2})</td>
-                      {/* <td>{item1.Registration_time.Timestamp.now()}</td> */}
+                      <td>{item1.Registration_time}</td>
                     </tr>
                   })}
                 </tbody>

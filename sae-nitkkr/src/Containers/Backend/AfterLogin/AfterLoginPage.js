@@ -124,6 +124,15 @@ export default function AfterLoginPage() {
             </div>
             <AfterLoginCard name="Event" id="orange" />
           </Link>
+          <Link to="/admin/registeredcandidates">
+            <div className="iconimagediv">
+              <img
+                src="https://img.icons8.com/ios/50/000000/open-in-popup.png"
+                className="iconimage"
+              />
+            </div>
+            <AfterLoginCard name="Autokriti Registration" id="yellow" />
+          </Link>
        
 
         </div>
