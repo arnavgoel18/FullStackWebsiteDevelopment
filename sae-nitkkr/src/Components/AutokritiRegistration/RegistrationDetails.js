@@ -30,7 +30,7 @@ function RegistrationDetails() {
     document.getElementById("payform-button1").style.background = "grey";
     setTimeout(() => {
       document.getElementById("payform-button1").disabled = false;
-      document.getElementById("payform-button1").style.background = "#1a3c7f";
+      document.getElementById("payform-button1").style.background = "#3c4fe0";
     }, 5000);
 
     const current = new Date();
@@ -88,6 +88,12 @@ function RegistrationDetails() {
     const res = await initializeRazorpay();
     document.getElementById("payform-button1").disabled = true;
     document.getElementById("payform-button1").style.background = "grey";
+    document.getElementById("payform-button1").innerText = "LOADING...";
+    setTimeout(() => {
+      document.getElementById("payform-button1").disabled = false;
+      document.getElementById("payform-button1").style.background = "#3c4fe0";
+      document.getElementById("payform-button1").innerText = "Pay Now";
+    }, 8000);
 
     if (!res) {
       alert("Razorpay SDK Failed to load");
@@ -146,7 +152,7 @@ function RegistrationDetails() {
       sendEmail();
       authorised_user["department"] = department;
       const Saving_user_data = authorised_user;
-      Saving_user_data.Registration_time=new Date();
+      Saving_user_data.Registration_time=new Date().toString();
       let gotit = await setDoc(
         doc(db, "paymentregistrationid", timestamp),
         Saving_user_data
@@ -217,7 +223,7 @@ function RegistrationDetails() {
       <div className="reg-details-heading">
         <h1 className="reg-details-h1">Registeration Details</h1>
         {authorised_user.cod == 'Yes' ?  <button className="pay-btn" id="payform-button1" onClick={makePaymentCash}>
-          Pay Now
+          Confirm
         </button> :  <button className="pay-btn" id="payform-button1" onClick={makePayment}>
           Pay Now
         </button> }

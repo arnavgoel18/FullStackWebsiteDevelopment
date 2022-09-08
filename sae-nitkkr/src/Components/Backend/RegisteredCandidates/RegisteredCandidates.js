@@ -264,7 +264,7 @@ function RegisteredCandidates() {
             <div className='today-response-overview'></div>
           </div>
 
-          <h2 style={{marginBottom: '10px'}}>26th Feb</h2>
+         
           <div className="displayResponses_slot1">
             Total Responses : {detailList.length}
             <table>
@@ -297,7 +297,7 @@ function RegisteredCandidates() {
                       <td>{item1.amount}</td>
                       <td>{item1.cod}</td>
                       <td>{item1.department[0]}({item1.timeSlot1})</td>
-                      <td>{item1.department[1]}({item1.timeSlot2})</td>
+                      <td>{item1.department[1] == undefined ? '' : item1.department[1]+`(${item1.timeSlot2})`}</td>
                       <td>{item1.Registration_time}</td>
                     </tr>
                   })}
