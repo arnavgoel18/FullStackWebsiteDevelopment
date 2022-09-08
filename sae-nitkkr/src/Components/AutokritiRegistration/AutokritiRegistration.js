@@ -257,7 +257,7 @@ function Quizsignup() {
       }
     }
 
-    if(name == 'college' && (value.match(/^nit k.*$/) || value.match(/^NIT K.*$/) || value.match(/^NIT k.*$/) || value.match(/^nit K.*$/) || value.match(/^.*Kurukshetra$/) || value.match(/^.*kurukshetra$/))){
+    if(name == 'college' && (value.match(/^nit k.*$/) || value.match(/^NIT K.*$/) || value.match(/^NIT k.*$/) || value.match(/^nit K.*$/) || value.match(/^Nit K.*$/) || value.match(/^.*Kurukshetra$/) || value.match(/^.*kurukshetra$/))){
             storecollege = true;
     }
 
