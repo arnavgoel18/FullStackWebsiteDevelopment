@@ -312,10 +312,24 @@ function Quizsignup() {
 
     if (name == "timeSlot1") {
       if (value == "22-25") {
-        userData.timeSlot2 = "22-25";
+        userData.timeSlot1 = "22-25";
+        userData.timeSlot2 = "25-28";
+        // console.log(userData.timeSlot1);
+        // console.log(userData.timeSlot2);
       } else {
         userData.timeSlot2 = "25-28";
+        userData.timeSlot1 = "22-25";
+        // console.log(userData.timeSlot1);
+        // console.log(userData.timeSlot2);
       }
+      // if (value == "25-28") {
+      //   userData.timeSlot1 = "25-28";
+      //   console.log(userData.timeSlot1);
+      // } else {
+      //   userData.timeSlot2 = "22-25";
+      //   console.log(userData.timeSlot2);
+      // }
+    
     }
 
     if (name == "accomodation") {
