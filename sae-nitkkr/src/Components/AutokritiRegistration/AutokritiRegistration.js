@@ -317,8 +317,8 @@ function Quizsignup() {
         // console.log(userData.timeSlot1);
         // console.log(userData.timeSlot2);
       } else {
-        userData.timeSlot2 = "25-28";
-        userData.timeSlot1 = "22-25";
+        userData.timeSlot2 = "22-25";
+        userData.timeSlot1 = "25-28";
         // console.log(userData.timeSlot1);
         // console.log(userData.timeSlot2);
       }
