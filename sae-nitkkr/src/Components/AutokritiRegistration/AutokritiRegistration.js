@@ -215,11 +215,11 @@ function Quizsignup() {
         event.target.setAttribute("readonly", "true");
         event.target.style.boxShadow = "none";
         event.target.style.border = "none";
-        document.getElementById("original_price").style.textDecoration =
-          "line-through";
-        document.getElementById("original_price").style.color = "red";
-        document.getElementById("discounted_price").style.color = "blue";
-        document.getElementById("discounted_price").style.display = "block";
+        // document.getElementById("original_price").style.textDecoration =
+        //   "line-through";
+        // document.getElementById("original_price").style.color = "red";
+        // document.getElementById("discounted_price").style.color = "blue";
+        // document.getElementById("discounted_price").style.display = "block";
         document.getElementById("show_invalid").style.display = "none";
       } else {
         if (value.length >= 6) {
@@ -252,28 +252,28 @@ function Quizsignup() {
         }
       }
 
-      if(/@nitkkr.ac.in\s*$/.test(value)){
-        storeemail = true;
-      }
+      // if(/@nitkkr.ac.in\s*$/.test(value)){
+      //   storeemail = true;
+      // }
     }
 
-    if(name == 'college' && (value.match(/^nit k.*$/) || value.match(/^NIT K.*$/) || value.match(/^NIT k.*$/) || value.match(/^nit K.*$/) || value.match(/^Nit K.*$/) || value.match(/^.*Kurukshetra$/) || value.match(/^.*kurukshetra$/))){
-            storecollege = true;
-    }
+    // if(name == 'college' && (value.match(/^nit k.*$/) || value.match(/^NIT K.*$/) || value.match(/^NIT k.*$/) || value.match(/^nit K.*$/) || value.match(/^Nit K.*$/) || value.match(/^.*Kurukshetra$/) || value.match(/^.*kurukshetra$/))){
+    //         storecollege = true;
+    // }
 
-    if(storeemail == true || storecollege == true)
-    {
-      document.getElementById('amb_software').disabled = true;
-      document.getElementById('amb_timeslot').disabled = true;
-      userData.timeSlot1 = '10-12';
-      userData.timeSlot2 = '10-12';
-      document.getElementById('kkrtime').innerText = "10-12 september";
-    }
-    else{
-      document.getElementById('kkrtime').innerText = "Choose Timeslot";
-      document.getElementById('amb_software').disabled = false;
-      document.getElementById('amb_timeslot').disabled = false;
-    }
+    // if(storeemail == true || storecollege == true)
+    // {
+    //   document.getElementById('amb_software').disabled = true;
+    //   document.getElementById('amb_timeslot').disabled = true;
+    //   userData.timeSlot1 = '10-12';
+    //   userData.timeSlot2 = '10-12';
+    //   document.getElementById('kkrtime').innerText = "10-12 september";
+    // }
+    // else{
+    //   document.getElementById('kkrtime').innerText = "Choose Timeslot";
+    //   document.getElementById('amb_software').disabled = false;
+    //   document.getElementById('amb_timeslot').disabled = false;
+    // }
 
     if (type == "checkbox" && name != "accomodation" && name != 'cod') {    
       var check = checked.toString();
@@ -326,13 +326,13 @@ function Quizsignup() {
       }
     }
 
-    if (name == "cod") {
-      if (checked == true) {
-        userData.cod = "Yes";
-      } else {
-        userData.cod = "No";
-      }
-    }
+    // if (name == "cod") {
+    //   if (checked == true) {
+    //     userData.cod = "Yes";
+    //   } else {
+    //     userData.cod = "No";
+    //   }
+    // }
 
 
     if (document.getElementById("workshopAmount").innerText >= 4500 && document.getElementById('accomodation').checked == true )
@@ -691,7 +691,7 @@ function Quizsignup() {
             <span>Amount (&#8377;) : </span>
             <span id="accomoAmount">0</span>
           </div>
-          <div className="cod">
+          {/* <div className="cod">
             <input
               type="checkbox"
               value="cod"
@@ -700,7 +700,7 @@ function Quizsignup() {
               onChange={postUserData}
             />{" "}
             Pay cash on delivery
-          </div>
+          </div> */}
           <div id="pay_button">
             <div id="paynow">
               <button

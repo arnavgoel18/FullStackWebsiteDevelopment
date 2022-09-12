@@ -115,7 +115,7 @@ function RegistrationDetails() {
 
     console.log(data);
     var options = {
-      key: "rzp_live_DhW7UYCWynTVy0",
+      key: "rzp_live_p9zIgcTn6FVaOD",
       name: "SAE NIT Kurukshetra",
       currency: data.currency,
       amount: data.amount,
@@ -222,11 +222,13 @@ function RegistrationDetails() {
       <NavBar />
       <div className="reg-details-heading">
         <h1 className="reg-details-h1">Registeration Details</h1>
-        {authorised_user.cod == 'Yes' ?  <button className="pay-btn" id="payform-button1" onClick={makePaymentCash}>
+        {/* {authorised_user.cod == 'Yes' ?  <button className="pay-btn" id="payform-button1" onClick={makePaymentCash}>
           Confirm
-        </button> :  <button className="pay-btn" id="payform-button1" onClick={makePayment}>
+        </button> :   */}
+        <button className="pay-btn" id="payform-button1" onClick={makePayment}>
           Pay Now
-        </button> }
+        </button> 
+        {/* } */}
        
       </div>
 
