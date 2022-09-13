@@ -117,6 +117,14 @@ function DisplayCard(props) {
             <p>{props.s3}</p>
           </div>
         </div>
+        <div className="ttable-row">
+          <div className="ttable-cell ffirst-cell">
+            <p>Referral Code</p>
+          </div>
+          <div className="ttable-cell">
+            <p>{props.referralCode}</p>
+          </div>
+        </div>
       </div>
     </>
   );

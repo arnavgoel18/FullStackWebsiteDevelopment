@@ -215,7 +215,10 @@ export default function FormContainer() {
     </div>
   )
  //submit f(); working: onClick submit button;
-function submit() {
+async function submit() {
+  const ref = await getDocs(collection(db, "LengthSelectedStudent"));
+  var counter = ref.docs.map((doc) => doc.data())[0].len;
+
   var studentName = document.getElementById("amb_name");
   var collegeName = document.getElementById("amb_college");
   var branch = document.getElementById("amb_branch");
@@ -240,13 +243,31 @@ function submit() {
     s3: s3.value,
     longAnswer2: longAns2.value,
     longAnswer3: longAns3.value,
+    referralCode:studentName.value.substring(0, 3) + counter,
+  };
+  const finalaambdata = {
+    studentName: studentName.value,
+    collegeName: collegeName.value,
+    semester: semester.value,
+    branch: branch.value,
+    phone: phone.value,
+    email: email.value,
+    referralCode:studentName.value.substring(0, 3) + counter,
+    numberReferrals:0,
   };
 
-  validateForm(docdata);
+  counter++;
+
+  
+  counterInc(counter);
+  validateForm(docdata, finalaambdata);
 }
 
+async function counterInc(counter){
+  await setDoc(doc(collection(db, "LengthSelectedStudent"), "1111"), {"len": counter})}
+
 //form validation
-function validateForm(docdata) {
+function validateForm(docdata, finalaambdata) {
   if (
     docdata.studentName == "" ||
     docdata.collegeName == "" ||
@@ -276,7 +297,7 @@ function validateForm(docdata) {
     alert("Please enter a valid email address.");
     document.getElementById('form-back').click();
   } else {
-    setInfo(docdata);
+    setInfo(docdata, finalaambdata);
   }
 }
 function deletedata()
@@ -305,11 +326,12 @@ var longAns3 = document.getElementById("text3");
 }
 
 //save to database
-async function setInfo(docdata) {
+async function setInfo(docdata, finalaambdata) {
   document.getElementById('amb-button').disabled = true
   document.getElementById('amb-button').style.backgroundColor = 'gray'
   var timestamp = String(new Date().getTime());
   await setDoc(doc(db, "studentAmbassador", timestamp), docdata);
+  await setDoc(doc(db, "finalStudentAmbassador", timestamp), finalaambdata);
   alert("Congratulations! Your information saved successfully.");
   deletedata();
   document.getElementById('amb-button').disabled = false
