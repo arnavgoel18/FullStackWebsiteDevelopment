@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 import { useState, useEffect } from "react";
 import { Redirect } from "react-router-dom";
-import BackSignOutPanel from '../../../Components/Backend/BackSignOutPanel/BackSignOutPanel';
+import BackSignOutPanel from "../../../Components/Backend/BackSignOutPanel/BackSignOutPanel";
 import PageHeader from "../../../Components/Backend/PageHeader/PageHeader";
-import './RegisteredCandidates.css'
+import "./RegisteredCandidates.css";
 
 import db from "../../../Firebase.js";
 import {
@@ -12,17 +12,13 @@ import {
   Timestamp,
   doc,
   setDoc,
-  addDoc
+  addDoc,
 } from "firebase/firestore";
-import { BiDockBottom } from 'react-icons/bi';
-
-
+import { BiDockBottom } from "react-icons/bi";
 
 var flag = false;
 //function to get data form database
 function RegisteredCandidates() {
-
-
   var [index, setIndex] = useState(0);
   var cvsFileData = [];
   var mergedCsvData = [];
@@ -40,11 +36,10 @@ function RegisteredCandidates() {
 
   //Get Information from Firebase into detailList array
   async function getInfo() {
-
     const autokritiRegisteration = collection(db, "paymentregistrationid");
     var amb_doc = await getDocs(autokritiRegisteration);
     detailList = amb_doc.docs.map((doc) => doc.data());
-    
+
     amb_doc.forEach((doc) => {
       cvsFileData = [
         [doc.id],
@@ -54,30 +49,34 @@ function RegisteredCandidates() {
         [doc.data().branch],
         [doc.data().semester],
         [doc.data().phone],
-        
+
         // item1.department[0]
         [doc.data().referal],
         [doc.data().paymentid],
         [doc.data().orderid],
-        
+
         [doc.data().timeSlot1],
         [doc.data().timeSlot2],
         [doc.data().department[0]],
-        [doc.data().department[1]]
-        
+        [doc.data().department[1]],
       ];
       mergedCsvData.push(cvsFileData);
     });
 
+    //sort the array according to registration date
+    detailList.sort(function (a, b) {
+      return new Date(b.Registration_time) - new Date(a.Registration_time);
+    });
+
     // detailList.sort((a, b) => Number(b.id) - Number(a.id))
 
-    for(var i = 0;i < detailList.length;i++){
-      if(detailList[i].timeSlot == '26 Feb')
-        detailListSlot2.push(detailList[i]);
-      else
+    //sort on the basis of timeslot1;
+    for (var i = 0; i < detailList.length; i++) {
+      if (detailList[i].timeSlot1 == "22-25" || detailList[i].timeSlot2 == "22-25" )
         detailListSlot1.push(detailList[i]);
+      else if(detailList[i].timeSlot1 == "25-28" || detailList[i].timeSlot2 == "25-28" ) detailListSlot2.push(detailList[i]);
     }
-    
+
     setDetailListSlot1(detailListSlot1);
     setDetailListSlot2(detailListSlot2);
     setDetailList(detailList);
@@ -89,9 +88,9 @@ function RegisteredCandidates() {
     // console.log("SLOT 2:")
     // console.log(detailListSlot2);
 
-    // document.querySelector('.response-overview').textContent = "Total Responses: " + detailList.length  
+    // document.querySelector('.response-overview').textContent = "Total Responses: " + detailList.length
     // var todayList = detailList.filter(x => x.dateOfSubmission.split(",")[0] === new Date(Date.now()).toLocaleString().split(',')[0])
-    // document.querySelector('.today-response-overview').textContent = "Today's Responses: " + todayList.length  
+    // document.querySelector('.today-response-overview').textContent = "Today's Responses: " + todayList.length
     // return detailList;
   }
 
@@ -100,23 +99,12 @@ function RegisteredCandidates() {
     setTester(false);
   }
 
-  // function increment() {
-  //   if (index < detailListLength - 1) {
-  //     setIndex(++index);
-  //     getInfo();
-  //   } else {
-  //     window.alert("MAXIMUM RESPONSES REACHED");
-  //   }
-  // }
-
-  // function decrement() {
-  //   if (index == 0) {
-  //     window.alert("MINIMUM LIMIT REACHED");
-  //   } else {
-  //     setIndex(--index);
-  //     getInfo();
-  //   }
-  // }
+  /*-------------------------------- Functions for sorting the data --------------------------------*/
+  function checkAlert(){
+    
+    console.log("value");
+  }
+  /*-------------------------------- Functions for sorting the data --------------------------------*/
 
   /*-------------------------------- Functions for file download --------------------------------*/
   function downloadCsv() {
@@ -127,17 +115,16 @@ function RegisteredCandidates() {
 
     //define the heading for each row of the data
     var csv =
-    "ID,Student Name,Email,College,Branch,Semester,Phone Number,Referal,Payment_ID,Order_ID,Slot 1,Slot 2,Slot1 Name,Slot2 Name";
+      "ID,Student Name,Email,College,Branch,Semester,Phone Number,Referal,Payment_ID,Order_ID,Slot 1,Slot 2,Slot1 Name,Slot2 Name";
 
     //merge the data with CSV
     CsvDetail.forEach(function (row) {
       //to replace , with ;
       row.forEach(function (row1) {
-        if(row1[0] !== undefined){
+        if (row1[0] !== undefined) {
           row1[0] = row1[0].replace(/,/g, ";");
           row1[0] = row1[0].replace(/\n/g, ";");
         }
-        
       });
       csv += row.join(",");
       csv += "\n";
@@ -154,76 +141,88 @@ function RegisteredCandidates() {
   }
   /*-------------------------------- End Functions for file download --------------------------------*/
   /*-------------------------------- Functions for file upload --------------------------------*/
-  function csvObj(csv){
-
-    var lines=csv.split("\n");
+  function csvObj(csv) {
+    var lines = csv.split("\n");
 
     var result = [];
 
-    var headers=lines[0].split(",");
+    var headers = lines[0].split(",");
 
-    for(var i=1;i<lines.length;i++){
+    for (var i = 1; i < lines.length; i++) {
+      var obj = [];
+      var currentline = lines[i].split(",");
 
-        var obj = [];
-        var currentline=lines[i].split(",");
+      for (var j = 0; j < headers.length; j++) {
+        obj.push(currentline[j]);
+      }
 
-        for(var j=0;j<headers.length;j++){
-            obj.push(currentline[j]);
-        }
-
-        result.push(obj);
+      result.push(obj);
     }
-    return result; 
-  }
-  
-  function triggerFileInput(){
-    document.querySelector('#userFileInput').click();
+    return result;
   }
 
-  async function processFile(){
-    document.querySelector('.displayFInalAmbassador_loader').style.display = 'block';
+  function triggerFileInput() {
+    document.querySelector("#userFileInput").click();
+  }
+
+  async function processFile() {
+    document.querySelector(".displayFInalAmbassador_loader").style.display =
+      "block";
     const ref = await getDocs(collection(db, "LengthSelectedStudent"));
-    var counter = ref.docs.map((doc) => doc.data())[0].len
-    var myFile = document.querySelector('#userFileInput').files[0];
+    var counter = ref.docs.map((doc) => doc.data())[0].len;
+    var myFile = document.querySelector("#userFileInput").files[0];
     var reader = new FileReader();
-    reader.addEventListener('load', function() {
-        var dataObj = csvObj(this.result)
+    reader.addEventListener("load", function () {
+      var dataObj = csvObj(this.result);
 
-        for(var i = 0; i < dataObj.length; i++){
-            if(dataObj[i][1]!= undefined){
-                var obj = {
-                    studentName : dataObj[i][0],
-                    collegeName: dataObj[i][1],
-                    dateOfSubmission: new Date(Date.now()).toLocaleString(),
-                    branch: dataObj[i][2],
-                    semester: dataObj[i][3],
-                    email: dataObj[i][4],
-                    phone: dataObj[i][5],
-                    referalCode: dataObj[i][6],
-                    timeSlot: dataObj[i][7],
-                    transaction: dataObj[i][8]
-                };
-                (async () => {
-                    await setDoc(doc(db, "paymentregistrationid", `${Date.now()}`), obj);    
-                })();
-                counter++;
-            }
+      for (var i = 0; i < dataObj.length; i++) {
+        if (dataObj[i][1] != undefined) {
+          var obj = {
+            studentName: dataObj[i][0],
+            collegeName: dataObj[i][1],
+            dateOfSubmission: new Date(Date.now()).toLocaleString(),
+            branch: dataObj[i][2],
+            semester: dataObj[i][3],
+            email: dataObj[i][4],
+            phone: dataObj[i][5],
+            referalCode: dataObj[i][6],
+            timeSlot: dataObj[i][7],
+            transaction: dataObj[i][8],
+          };
+          (async () => {
+            await setDoc(
+              doc(db, "paymentregistrationid", `${Date.now()}`),
+              obj
+            );
+          })();
+          counter++;
         }
-        //update counter
-        (async () => {await setDoc(doc(collection(db, "LengthSelectedStudent"), "1111"), {"len": counter});
-        document.querySelector('.displayFInalAmbassador_loader').style.display = 'none';
-        document.querySelector('.displayFInalAmbassador_responseText').style.display = 'block';
-        document.querySelector('.displayFInalAmbassador_responseText').textContent = 'upload done!';
-        setLoading(true)
-        getInfo()
-        setTimeout(()=>{
-            document.querySelector('.displayFInalAmbassador_responseText').style.display = 'none';
-        }, 3000)
-    })();
+      }
+      //update counter
+      (async () => {
+        await setDoc(doc(collection(db, "LengthSelectedStudent"), "1111"), {
+          len: counter,
+        });
+        document.querySelector(".displayFInalAmbassador_loader").style.display =
+          "none";
+        document.querySelector(
+          ".displayFInalAmbassador_responseText"
+        ).style.display = "block";
+        document.querySelector(
+          ".displayFInalAmbassador_responseText"
+        ).textContent = "upload done!";
+        setLoading(true);
+        getInfo();
+        setTimeout(() => {
+          document.querySelector(
+            ".displayFInalAmbassador_responseText"
+          ).style.display = "none";
+        }, 3000);
+      })();
     });
     reader.readAsText(myFile);
-}
-/*-------------------------------- End Functions for file upload --------------------------------*/
+  }
+  /*-------------------------------- End Functions for file upload --------------------------------*/
 
   const token = localStorage.getItem("token");
 
@@ -242,8 +241,18 @@ function RegisteredCandidates() {
         <div className="displayDiv">
           <BackSignOutPanel />
           <div className="displayFInalAmbassador_uploadBox">
-            <input type="file" id="userFileInput" onChange={processFile} accept=".csv"/>
-            <div className="displayFInalAmbassador_uploadFileButton" onClick={triggerFileInput}>Upload New</div>
+            <input
+              type="file"
+              id="userFileInput"
+              onChange={processFile}
+              accept=".csv"
+            />
+            <div
+              className="displayFInalAmbassador_uploadFileButton"
+              onClick={triggerFileInput}
+            >
+              Upload New
+            </div>
             <div className="displayFInalAmbassador_loader"></div>
             <div className="displayFInalAmbassador_responseText"></div>
 
@@ -258,13 +267,21 @@ function RegisteredCandidates() {
             </div>
           </div>
           {/* ---------------------------------------------------------------------------------------- */}
-        
-          <div className="response_container"> 
-            <div className='response-overview'></div>
-            <div className='today-response-overview'></div>
+
+          <div className="response_container">
+            <div className="response-overview"></div>
+            <div className="today-response-overview"></div>
           </div>
 
-         
+          <div className="Sortselect">
+          <span>How you want to sort the data:</span>
+          <select name="sort" id="sort" onchange={checkAlert} >
+            <option value="time" default>Registration Time</option>
+            <option value="22-25">Timeslot 22-25</option>
+            <option value="25-28">Timeslot 25-28</option>
+            <option value="cod">cod</option>
+          </select></div>
+
           <div className="displayResponses_slot1">
             Total Responses : {detailList.length}
             <table>
@@ -285,8 +302,9 @@ function RegisteredCandidates() {
                 </tr>
               </thead>
               <tbody>
-                {detailList.map(item1 => {
-                  return<tr>
+                {detailList.map((item1, i) => {
+                  return (
+                    <tr key={i}>
                       <td>{item1.name}</td>
                       <td>{item1.college}</td>
                       <td>{item1.email}</td>
@@ -296,12 +314,19 @@ function RegisteredCandidates() {
                       <td>{item1.referalcode}</td>
                       <td>{item1.amount}</td>
                       <td>{item1.cod}</td>
-                      <td>{item1.department[0]}({item1.timeSlot1})</td>
-                      <td>{item1.department[1] == undefined ? '' : item1.department[1]+`(${item1.timeSlot2})`}</td>
+                      <td>
+                        {item1.department[0]}({item1.timeSlot1})
+                      </td>
+                      <td>
+                        {item1.department[1] == undefined
+                          ? ""
+                          : item1.department[1] + `(${item1.timeSlot2})`}
+                      </td>
                       <td>{item1.Registration_time}</td>
                     </tr>
-                  })}
-                </tbody>
+                  );
+                })}
+              </tbody>
             </table>
           </div>
 
@@ -337,9 +362,8 @@ function RegisteredCandidates() {
           </div> */}
         </div>
       </>
-      );
-    }
+    );
+  }
 }
 
-
-export default RegisteredCandidates
+export default RegisteredCandidates;
