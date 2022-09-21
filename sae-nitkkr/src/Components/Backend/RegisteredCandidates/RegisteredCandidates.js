@@ -59,6 +59,7 @@ function RegisteredCandidates() {
         [doc.data().timeSlot2],
         [doc.data().department[0]],
         [doc.data().department[1]],
+        [doc.data().status],
       ];
       mergedCsvData.push(cvsFileData);
     });
@@ -115,7 +116,7 @@ function RegisteredCandidates() {
 
     //define the heading for each row of the data
     var csv =
-      "ID,Student Name,Email,College,Branch,Semester,Phone Number,Referal,Payment_ID,Order_ID,Slot 1,Slot 2,Slot1 Name,Slot2 Name";
+      "ID,Student Name,Email,College,Branch,Semester,Phone Number,Referal,Payment_ID,Order_ID,Slot 1,Slot 2,Slot1 Name,Slot2 Name,Status\n";
 
     //merge the data with CSV
     CsvDetail.forEach(function (row) {
@@ -299,6 +300,7 @@ function RegisteredCandidates() {
                   <th>Slot 1</th>
                   <th>Slot 2</th>
                   <th>Registration Time</th>
+                  <th>Status</th>
                 </tr>
               </thead>
               <tbody>
@@ -323,6 +325,7 @@ function RegisteredCandidates() {
                           : item1.department[1] + `(${item1.timeSlot2})`}
                       </td>
                       <td>{item1.Registration_time}</td>
+                      <td>{item1.status}</td>
                     </tr>
                   );
                 })}
