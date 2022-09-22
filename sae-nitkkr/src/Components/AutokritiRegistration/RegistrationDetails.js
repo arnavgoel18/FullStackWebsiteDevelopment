@@ -123,8 +123,8 @@ function RegistrationDetails() {
       description: "Thankyou for registration",
       image: { saelogo },
       handler: async (response) => {
-        await handler(response);
         await set_to_database();
+        await handler(response);
         console.log(options);
         window.location = `/register_confirmation/${timestamp}`;
       },
