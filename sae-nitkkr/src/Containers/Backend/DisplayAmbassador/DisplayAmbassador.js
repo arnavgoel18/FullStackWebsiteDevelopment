@@ -50,6 +50,7 @@ function DisplayInfo() {
         [doc.data().longAnswer2],
         [doc.data().longAnswer3],
         [doc.data().s3],
+        [doc.data().referralCode],
       ];
 
       mergedCsvData.push(cvsFileData);
@@ -60,6 +61,7 @@ function DisplayInfo() {
     setDetailListLength(detailList.length);
     setCsvDetail(mergedCsvData);
 
+    console.log(detail);
     return detailList;
   }
 
@@ -95,7 +97,7 @@ function DisplayInfo() {
 
     //define the heading for each row of the data
     var csv =
-      "StudentName,Collegename,Branch,Semester,PhoneNo,EmailId,Why do you think you can be a Campus Ambassador? *,Have you ever been a Campus Ambassador? *,What are your top 3 qualities related to being a Campus Ambassador? *,What two channels do you think are the most effective for engaging with our target audience (18-22 Yrs)? *,How did you find out about this ambassador program? *";
+      "StudentName,Collegename,Branch,Semester,PhoneNo,EmailId,Why do you think you can be a Campus Ambassador? *,Have you ever been a Campus Ambassador? *,What are your top 3 qualities related to being a Campus Ambassador? *,What two channels do you think are the most effective for engaging with our target audience (18-22 Yrs)? *,How did you find out about this ambassador program? *,referralCode";
     csv += "\n";
 
     //merge the data with CSV
@@ -169,6 +171,7 @@ function DisplayInfo() {
               s3={detail.s3}
               ans2={detail.longAnswer2}
               ans3={detail.longAnswer3}
+              referralCode={detail.referralCode}
             />
           </div>
         </div>

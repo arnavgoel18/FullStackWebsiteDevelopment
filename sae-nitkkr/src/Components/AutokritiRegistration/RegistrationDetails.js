@@ -136,12 +136,12 @@ function RegistrationDetails() {
     };
 
     const handler = async (response) => {
-      alert(
-        "Congratulations! You have registered successfully with payment ID: " +
-          response.razorpay_payment_id +
-          " and order ID: " +
-          response.razorpay_order_id
-      );
+      // alert(
+      //   "Congratulations! You have registered successfully with payment ID: " +
+      //     response.razorpay_payment_id +
+      //     " and order ID: " +
+      //     response.razorpay_order_id
+      // );
 
       authorised_user.orderid = response.razorpay_order_id;
       timestamp = response.razorpay_payment_id;

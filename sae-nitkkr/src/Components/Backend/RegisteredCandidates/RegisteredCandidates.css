@@ -58,3 +58,10 @@
 .displayDiv h2{
     margin: 0 auto;
 }
+.Sortselect{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    font-size: larger;
+}
