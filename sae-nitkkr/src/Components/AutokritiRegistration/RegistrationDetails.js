@@ -30,7 +30,7 @@ function RegistrationDetails() {
     document.getElementById("payform-button1").style.background = "grey";
     setTimeout(() => {
       document.getElementById("payform-button1").disabled = false;
-      document.getElementById("payform-button1").style.background = "#1a3c7f";
+      document.getElementById("payform-button1").style.background = "#3c4fe0";
     }, 5000);
 
     const current = new Date();
@@ -56,7 +56,7 @@ function RegistrationDetails() {
     };
     emailjs
       .send(
-        "service_oqccfwh",
+        "service_efl7b9h",
         "template_zezhpzf",
         toSend,
         "ulnoJlsECTLQyCRZ5"
@@ -72,6 +72,7 @@ function RegistrationDetails() {
       );
 
     const Saving_user_data = authorised_user;
+    Saving_user_data.Registration_time=new Date().toString();
     let gotit = await setDoc(
       doc(db, "paymentregistrationid", newtimestamp),
       Saving_user_data
@@ -87,6 +88,12 @@ function RegistrationDetails() {
     const res = await initializeRazorpay();
     document.getElementById("payform-button1").disabled = true;
     document.getElementById("payform-button1").style.background = "grey";
+    document.getElementById("payform-button1").innerText = "LOADING...";
+    setTimeout(() => {
+      document.getElementById("payform-button1").disabled = false;
+      document.getElementById("payform-button1").style.background = "#3c4fe0";
+      document.getElementById("payform-button1").innerText = "Pay Now";
+    }, 8000);
 
     if (!res) {
       alert("Razorpay SDK Failed to load");
@@ -108,7 +115,7 @@ function RegistrationDetails() {
 
     console.log(data);
     var options = {
-      key: "rzp_live_DhW7UYCWynTVy0",
+      key: "rzp_live_p9zIgcTn6FVaOD",
       name: "SAE NIT Kurukshetra",
       currency: data.currency,
       amount: data.amount,
@@ -129,12 +136,12 @@ function RegistrationDetails() {
     };
 
     const handler = async (response) => {
-      alert(
-        "Congratulations! You have registered successfully with payment ID: " +
-          response.razorpay_payment_id +
-          " and order ID: " +
-          response.razorpay_order_id
-      );
+      // alert(
+      //   "Congratulations! You have registered successfully with payment ID: " +
+      //     response.razorpay_payment_id +
+      //     " and order ID: " +
+      //     response.razorpay_order_id
+      // );
 
       authorised_user.orderid = response.razorpay_order_id;
       timestamp = response.razorpay_payment_id;
@@ -145,6 +152,7 @@ function RegistrationDetails() {
       sendEmail();
       authorised_user["department"] = department;
       const Saving_user_data = authorised_user;
+      Saving_user_data.Registration_time=new Date().toString();
       let gotit = await setDoc(
         doc(db, "paymentregistrationid", timestamp),
         Saving_user_data
@@ -162,11 +170,12 @@ function RegistrationDetails() {
         OrderId: authorised_user.orderid,
         PaymentId: authorised_user.paymentid,
         Phone: authorised_user.phone,
+      
         QRCodeURL: `https://saenitkurukshetra.in/registered/${authorised_user.paymentid}`,
       };
       emailjs
         .send(
-          "service_oqccfwh",
+          "service_efl7b9h",
           "template_zezhpzf",
           toSend,
           "ulnoJlsECTLQyCRZ5"
@@ -213,11 +222,13 @@ function RegistrationDetails() {
       <NavBar />
       <div className="reg-details-heading">
         <h1 className="reg-details-h1">Registeration Details</h1>
-        {authorised_user.cod == 'Yes' ?  <button className="pay-btn" id="payform-button1" onClick={makePaymentCash}>
+        {/* {authorised_user.cod == 'Yes' ?  <button className="pay-btn" id="payform-button1" onClick={makePaymentCash}>
+          Confirm
+        </button> :   */}
+        <button className="pay-btn" id="payform-button1" onClick={makePayment}>
           Pay Now
-        </button> :  <button className="pay-btn" id="payform-button1" onClick={makePayment}>
-          Pay Now
-        </button> }
+        </button> 
+        {/* } */}
        
       </div>
 

@@ -18,7 +18,7 @@ function CertiAdmin() {
     console.log(imgsRef.files.length);
     const storage = getStorage();
     for (let i = 0; i < imgsRef.files.length; i++) {
-      let folder = ref(storage, `campusAmbassador//${imgsRef.files[i].name}`);
+      let folder = ref(storage, `autokriti12Certificates//${imgsRef.files[i].name}`);
 
       console.log(folder);
       await uploadBytes(folder, imgsRef.files[i]).then((res) => {});

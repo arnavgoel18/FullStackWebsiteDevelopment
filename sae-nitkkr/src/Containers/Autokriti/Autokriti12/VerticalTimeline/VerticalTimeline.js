@@ -340,7 +340,7 @@ function VerticalTimeline() {
           <p>1. Basics of BMS</p>
           <p>2. Cell Balancing </p>
           <p>3. Battery parameters Monitoring </p>
-          <p className="subtext">
+          {/* <p className="subtext">
             3.1 Gate Driver vs Integrated FET Driver: Power, Voltage, and
             Current Requirements
           </p>
@@ -348,7 +348,7 @@ function VerticalTimeline() {
             3.2 Three Use Cases: Speed, Torque, or Position
           </p>
           <p className="subtext">3.3 Control Methods: Trap, Sine, or FOC</p>
-          <p className="subtext">3.4 Sensored Versus Sensor less</p>
+          <p className="subtext">3.4 Sensored Versus Sensor less</p> */}
           <p>4. Working Model of BMS </p>
           <p>5. PCB Designing </p>
           <br />
@@ -356,15 +356,13 @@ function VerticalTimeline() {
             Motor and Motor Controller
           </h4>
           <p>1. Motor Considerations and Why Brushless DC Motors?</p>
-          <p>2. Selection of Power Rating </p>
-          <p>3. Motor Controller Architecture </p>
-          <p>4. Simulink Model and Results </p>
-          <p>5. Torque encoder </p>
-          <p>6. Motor resolver</p>
-          <p>7. Characteristics of Motors </p>
-          <p>8. Motor controller </p>
-          <p>9. H Bridge </p>
-          <p>10. PWM </p>
+          <p>2. Characteristics of Motors </p>
+          <p>3. Selection Of Power Rating </p>
+          <p>4. Torque Encoder</p>
+          <p>5. Motor Resolver  </p>
+          <p>6. H Bridge </p>
+          <p>7. PWM </p>
+          <p>8. Motor Controller </p>
           {/* <br /> */}
           {/* <h4 style={{ color: "blue", marginBottom: "15px" }}>DAQ</h4>
           <p>1. Arduino (Functions, Variables ,Structure)</p>

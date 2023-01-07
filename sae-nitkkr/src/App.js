@@ -32,6 +32,7 @@ import DisplaySignUpSheet from './Containers/Backend/DisplaySignUpSheet/DisplayS
 import DisplayAllQuizes from "./Containers/Backend/DisplayAllQuizes/DisplayAllQuizes";
 
 
+
 // import Autokriti2 from './Containers/Autokriti/Autokriti2/Autorkriti2';
 import Autokriti12 from './Containers/Autokriti/Autokriti12/Autorkriti12';
 import Quizsignup from "./Components/AutokritiRegistration/AutokritiRegistration";
@@ -55,6 +56,11 @@ import RegistrationDetails from './Components/AutokritiRegistration/Registration
 import PrivacyPolicy from './Components/Guidelines/privacypolicy';
 import TermsAndConditions from './Components/Guidelines/TermsAndConditions';
 import RefundAndCancel from './Components/Guidelines/refundandcancel';
+import RegisteredCandidates from './Components/Backend/RegisteredCandidates/RegisteredCandidates';
+
+import Autokriti12CertiGetLink from './Containers/Autokriti/Autokriti12Certificates/Autokriti12CertiGetLink';
+import Autokriti12Certificate from './Containers/Autokriti/Autokriti12Certificates/Autokriti12Certificate';
+
 //import RegistrationForm from "./Containers/Autokriti/RegistrationForm/RegistrationForm";
 import CrowdFunding from './Containers/CrowdFunding/CrowdFunding';
 
@@ -97,6 +103,7 @@ function App() {
             <Route path="/admin/collegeRepresentatives" exact component={() => <DisplayClgRepresentatives/>}/>
             <Route path="/admin/signUpSheet" exact component={() => <DisplaySignUpSheet/>}/>
             <Route path="/admin/quizResponses" exact component={() => <DisplayAllQuizes/>}/>
+            <Route path="/admin/registeredcandidates" exact component={() => <RegisteredCandidates/>}/>
            
 
             {/* e-Autokriti 2.0 */}
@@ -121,6 +128,9 @@ function App() {
 
             <Route path="/ambassador/cacerti" exact component={()=><CAcerti/>}/>
             <Route path="/ambassador/certificate" exact component={()=><CAcertiImage/>}/>
+
+            <Route path="/autokriti12/certificates" exact component={()=><Autokriti12CertiGetLink/>}/>
+            <Route path="/autokriti12/certificate" exact component={()=><Autokriti12Certificate/>}/>
         
       
 

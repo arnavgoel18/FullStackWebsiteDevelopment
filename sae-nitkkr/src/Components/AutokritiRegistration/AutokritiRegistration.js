@@ -1,6 +1,8 @@
 //Registeration Page made for Autokriti 2.0
 import React, { useEffect, useState } from "react";
 import { FaInfoCircle } from "react-icons/fa";
+import stringSimilarity from "string-similarity";
+
 import $ from "jquery";
 import "./AutokritiRegistration.css";
 
@@ -11,6 +13,7 @@ import {
   doc,
   setDoc,
   updateDoc,
+  Timestamp,
 } from "firebase/firestore";
 
 import NavBar from "../NavBar/NavBar";
@@ -18,6 +21,8 @@ import Footer from "../Footer/Footer(black)/FooterBlack";
 import { check } from "fontawesome";
 
 var c= 0;
+var storeemail = false; //for nitkkr stuednts
+var storecollege = false; //for nitkkr college
 function Quizsignup() {
   var [finalcost, setFinalcost] = useState(0);
   var [department, setDepartment] = useState([]);
@@ -60,7 +65,7 @@ function Quizsignup() {
     }
 
     setFinalcost(finalcost);
-    userData.amount = finalcost;
+    userData.amount = finalcost;    //for testing only, later changed with finalcost;
   };
 
   //to check all fields are filled or not
@@ -180,6 +185,7 @@ function Quizsignup() {
     ev: "",
     iot: "",
     software: "",
+    Registration_time:"",
     amount: finalcost,
     firstChoice: "",
     accomodation: "No",
@@ -209,11 +215,11 @@ function Quizsignup() {
         event.target.setAttribute("readonly", "true");
         event.target.style.boxShadow = "none";
         event.target.style.border = "none";
-        document.getElementById("original_price").style.textDecoration =
-          "line-through";
-        document.getElementById("original_price").style.color = "red";
-        document.getElementById("discounted_price").style.color = "blue";
-        document.getElementById("discounted_price").style.display = "block";
+        // document.getElementById("original_price").style.textDecoration =
+        //   "line-through";
+        // document.getElementById("original_price").style.color = "red";
+        // document.getElementById("discounted_price").style.color = "blue";
+        // document.getElementById("discounted_price").style.display = "block";
         document.getElementById("show_invalid").style.display = "none";
       } else {
         if (value.length >= 6) {
@@ -245,7 +251,29 @@ function Quizsignup() {
           //document.getElementById("payform-button2").disabled = false;
         }
       }
+
+      // if(/@nitkkr.ac.in\s*$/.test(value)){
+      //   storeemail = true;
+      // }
     }
+
+    // if(name == 'college' && (value.match(/^nit k.*$/) || value.match(/^NIT K.*$/) || value.match(/^NIT k.*$/) || value.match(/^nit K.*$/) || value.match(/^Nit K.*$/) || value.match(/^.*Kurukshetra$/) || value.match(/^.*kurukshetra$/))){
+    //         storecollege = true;
+    // }
+
+    // if(storeemail == true || storecollege == true)
+    // {
+    //   document.getElementById('amb_software').disabled = true;
+    //   document.getElementById('amb_timeslot').disabled = true;
+    //   userData.timeSlot1 = '10-12';
+    //   userData.timeSlot2 = '10-12';
+    //   document.getElementById('kkrtime').innerText = "10-12 september";
+    // }
+    // else{
+    //   document.getElementById('kkrtime').innerText = "Choose Timeslot";
+    //   document.getElementById('amb_software').disabled = false;
+    //   document.getElementById('amb_timeslot').disabled = false;
+    // }
 
     if (type == "checkbox" && name != "accomodation" && name != 'cod') {    
       var check = checked.toString();
@@ -284,10 +312,24 @@ function Quizsignup() {
 
     if (name == "timeSlot1") {
       if (value == "22-25") {
-        userData.timeSlot2 = "22-25";
-      } else {
+        userData.timeSlot1 = "22-25";
         userData.timeSlot2 = "25-28";
+        // console.log(userData.timeSlot1);
+        // console.log(userData.timeSlot2);
+      } else {
+        userData.timeSlot2 = "22-25";
+        userData.timeSlot1 = "25-28";
+        // console.log(userData.timeSlot1);
+        // console.log(userData.timeSlot2);
       }
+      // if (value == "25-28") {
+      //   userData.timeSlot1 = "25-28";
+      //   console.log(userData.timeSlot1);
+      // } else {
+      //   userData.timeSlot2 = "22-25";
+      //   console.log(userData.timeSlot2);
+      // }
+    
     }
 
     if (name == "accomodation") {
@@ -298,13 +340,13 @@ function Quizsignup() {
       }
     }
 
-    if (name == "cod") {
-      if (checked == true) {
-        userData.cod = "Yes";
-      } else {
-        userData.cod = "No";
-      }
-    }
+    // if (name == "cod") {
+    //   if (checked == true) {
+    //     userData.cod = "Yes";
+    //   } else {
+    //     userData.cod = "No";
+    //   }
+    // }
 
 
     if (document.getElementById("workshopAmount").innerText >= 4500 && document.getElementById('accomodation').checked == true )
@@ -613,7 +655,7 @@ function Quizsignup() {
                 <span for="ev">EV</span>
                 <div id="ev"></div>
               </div>
-              <div className="department-checkbox">
+              <div className="department-checkbox" id='software_disable'>
                 <input
                   type="checkbox"
                   name="software"
@@ -631,7 +673,7 @@ function Quizsignup() {
             </div>
             <div className="department-timeslot">
               <div className="payform-label" id="chooseTimeslot">
-                Choose Timeslot&nbsp;
+                <div id="kkrtime">Choose Timeslot&nbsp;</div>
                 {temp.length == 0 ? " " : <span>({temp[0]})</span>}
               </div>
               <select
@@ -644,7 +686,7 @@ function Quizsignup() {
                   Choose here
                 </option>
                 <option value="DEFAULT">--None Selected--</option>
-                <option value="22-25">22-25 September</option>
+                {/*<option value="22-25">22-25 September</option>*/}
                 <option value="25-28">25-28 September</option>
               </select>
             </div>
@@ -663,7 +705,7 @@ function Quizsignup() {
             <span>Amount (&#8377;) : </span>
             <span id="accomoAmount">0</span>
           </div>
-          <div className="cod">
+          {/* <div className="cod">
             <input
               type="checkbox"
               value="cod"
@@ -672,7 +714,7 @@ function Quizsignup() {
               onChange={postUserData}
             />{" "}
             Pay cash on delivery
-          </div>
+          </div> */}
           <div id="pay_button">
             <div id="paynow">
               <button

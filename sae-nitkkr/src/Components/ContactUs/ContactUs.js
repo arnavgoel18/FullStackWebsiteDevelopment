@@ -38,7 +38,7 @@ function ContactUS() {
               href="https://www.google.com/maps/dir/29.5070878,75.0449986/WRV9%2BW46+Gol+Canteen+(SAE+NITKKR),+NIT,+Thanesar,+Haryana+136119/@29.7293325,74.8076003,8z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x390e3f5100000001:0x7f8e5219d122c23e!2m2!1d76.8178281!2d29.9447794"
             >
               {" "}
-              <div className="ContactUs_tt"> Gol,NIT Kurukshetra</div>
+              <div className="ContactUs_tt"> Gol Canteen, NIT Kurukshetra,<br/>Kurukshetra, Haryana - 136119</div>
             </a>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1371.9914590955484!2d76.81686969579629!3d29.944863529234286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390e3f5100000001%3A0x348464dd40cfcf28!2sGol%20Canteen!5e0!3m2!1sen!2sin!4v1641211248086!5m2!1sen!2sin"

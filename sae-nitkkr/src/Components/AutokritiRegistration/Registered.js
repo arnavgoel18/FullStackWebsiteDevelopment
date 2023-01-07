@@ -120,6 +120,10 @@ function Registered() {
           <td className="td-first">STATUS</td>
           <td>{authorised_user.status}</td>
         </tr>
+        <tr>
+          <td className="td-first">TIME</td>
+          <td>{authorised_user.Registration_time}</td>
+        </tr>
       </table>
 
       <hr />
