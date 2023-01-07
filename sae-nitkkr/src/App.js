@@ -56,6 +56,7 @@ import PrivacyPolicy from './Components/Guidelines/privacypolicy';
 import TermsAndConditions from './Components/Guidelines/TermsAndConditions';
 import RefundAndCancel from './Components/Guidelines/refundandcancel';
 //import RegistrationForm from "./Containers/Autokriti/RegistrationForm/RegistrationForm";
+import CrowdFunding from './Containers/CrowdFunding/CrowdFunding';
 
 function App() {
   document.title = "SAE NIT Kurukshetra";
@@ -116,7 +117,7 @@ function App() {
             <Route path="/termsandconditions" exact component={()=><TermsAndConditions/>}/>
             <Route path="/refundandcancelpolicy" exact component={()=><RefundAndCancel/>}/>
 
-          
+            <Route path="/funding" exact component={()=><CrowdFunding/>}/>
 
             <Route path="/ambassador/cacerti" exact component={()=><CAcerti/>}/>
             <Route path="/ambassador/certificate" exact component={()=><CAcertiImage/>}/>
