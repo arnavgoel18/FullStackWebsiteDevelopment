@@ -62,6 +62,7 @@ import Autokriti12CertiGetLink from './Containers/Autokriti/Autokriti12Certifica
 import Autokriti12Certificate from './Containers/Autokriti/Autokriti12Certificates/Autokriti12Certificate';
 
 //import RegistrationForm from "./Containers/Autokriti/RegistrationForm/RegistrationForm";
+import CrowdFunding from './Containers/CrowdFunding/CrowdFunding';
 
 function App() {
   document.title = "SAE NIT Kurukshetra";
@@ -123,7 +124,7 @@ function App() {
             <Route path="/termsandconditions" exact component={()=><TermsAndConditions/>}/>
             <Route path="/refundandcancelpolicy" exact component={()=><RefundAndCancel/>}/>
 
-          
+            <Route path="/funding" exact component={()=><CrowdFunding/>}/>
 
             <Route path="/ambassador/cacerti" exact component={()=><CAcerti/>}/>
             <Route path="/ambassador/certificate" exact component={()=><CAcertiImage/>}/>
