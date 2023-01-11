@@ -67,7 +67,8 @@ function Session(props) {
             href={props.url}
             target="_blank"
           >
-            <button id="event-register">Register Now</button>
+            {/* remove disabled, style and change button content to register NOW */}
+            <button id="event-register" disabled style={{backgroundColor: "Grey"}}>Coming Soon</button>
           </a>
         </div>
       </div>
