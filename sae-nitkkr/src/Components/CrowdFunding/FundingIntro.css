@@ -33,8 +33,15 @@
   color: white;
 }
 
+.cf_image {
+  display: block;
+  margin: 0 auto;
+}
+
 .cf_image > img {
   width: 90%;
+  display: block;
+  margin: 0 auto;
 }
 
 .cf_help {
@@ -66,9 +73,10 @@
 }
 
 .cf_helpImg > img {
-  width: 80%;
+  max-width: 80%;
+  height: auto;
   display: block;
-  margin-left: auto;
+  margin: 0 auto;
 }
 
 .cf_about {
@@ -105,7 +113,7 @@
 .cf_aboutImg > img {
   display: block;
   margin-left: auto;
-  width: 70%;
+  width: 50%;
 }
 
 @media screen and (max-width: 680px) {
@@ -113,14 +121,20 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    padding: 7% 5%;
   }
-  .cf_text,
+  .cf_text {
+    width: 100%;
+    padding-bottom: 2%;
+  }
+
   .cf_image {
-    width: 90%;
+    display: block;
+    margin-left: auto;
   }
 
   .cf_help {
-margin: 5% 0;
+    margin: 5% 0;
   }
   .cf_helpText {
     font-size: 20px;

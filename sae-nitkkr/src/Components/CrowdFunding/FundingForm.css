@@ -1,51 +1,45 @@
-input,textArea{
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    border: 2px solid grey;
-    border-radius:5px;
-    box-sizing: border-box;
-    margin: 10px;
-  }
-  #check{
-    width:50px;
-
-  }
-  .check-Field
-  {
-    display:flex;
-    justify-content:stretch;
-    /* background-color: red; */
-  }
-  .FundingForm{
-    width: 70%;
-    margin-left: auto;
-    padding:20px 20px;
-    margin-right: auto;
-    box-shadow: 10px 10px 15px -3px grey;
-    margin-bottom: 70px;
-
-
-  }
-  .msg{
-    margin:10px;
-  }
-  .Field{
+input,
+textArea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 2px solid grey;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin: 10px;
+}
+#check {
+  width: 50px;
+}
+.check-Field {
+  display: flex;
+  justify-content: stretch;
+  /* background-color: red; */
+}
+.FundingForm {
+  width: 70%;
+  margin-left: auto;
+  padding: 20px 20px;
+  margin-right: auto;
+  box-shadow: 10px 10px 15px -3px grey;
+  margin-bottom: 70px;
+}
+.msg {
+  margin: 10px;
+}
+.Field {
+  display: flex;
+  /* flex-direction: column; */
+}
+.pay {
+  background-color: blue;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+@media (min-width: 320px) and (max-width: 620px) {
+  .Field {
     display: flex;
-    /* flex-direction: column; */
- 
+    flex-direction: column;
   }
-  .pay {
-    background-color: blue;
-    color:white;
-    padding:10px;
-    border-radius: 5px;
-  }
-  @media (min-width:320px) and (max-width:620px){
-    .Field{
-      display: flex;
-      flex-direction: column;
-   
-    }
-  }
-  
+}
