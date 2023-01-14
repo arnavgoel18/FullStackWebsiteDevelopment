@@ -124,7 +124,7 @@ function App() {
             <Route path="/termsandconditions" exact component={()=><TermsAndConditions/>}/>
             <Route path="/refundandcancelpolicy" exact component={()=><RefundAndCancel/>}/>
 
-            <Route path="/funding" exact component={()=><CrowdFunding/>}/>
+            <Route path="/crowdfunding" exact component={()=><CrowdFunding/>}/>
 
             <Route path="/ambassador/cacerti" exact component={()=><CAcerti/>}/>
             <Route path="/ambassador/certificate" exact component={()=><CAcertiImage/>}/>

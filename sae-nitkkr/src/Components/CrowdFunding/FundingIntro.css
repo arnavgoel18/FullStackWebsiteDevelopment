@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+.cf_container {
+  margin: 5%;
+  font-family: "Montserrat", sans-serif;
+}
+
+.cf_car {
+  border-radius: 20px;
+  background-image: linear-gradient(to right, rgb(1, 39, 50), rgb(1, 115, 146));
+  padding: 5% 3%;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  filter: drop-shadow(8px 8px 40px rgba(0, 0, 0, 0.35));
+}
+
+.cf_text {
+  word-wrap: break-word;
+  width: 50%;
+  padding: 0 5%;
+}
+
+.cf_text1 {
+  text-transform: capitalize;
+  color: #32ffff;
+  font-size: 40px;
+  padding-bottom: 4%;
+}
+
+.cf_text2 {
+  font-size: 15px;
+  color: white;
+}
+
+.cf_image > img {
+  width: 90%;
+}
+
+.cf_help {
+  margin: 5% 10%;
+  display: flex;
+  flex-direction: row;
+  padding: 2% 5%;
+  text-transform: uppercase;
+}
+
+.cf_helpText {
+  display: flex;
+  flex-direction: column;
+  margin: 0 5% 0 5%;
+  word-wrap: break-word;
+  font-size: 30px;
+}
+
+.cf_button {
+  color: white;
+  filter: drop-shadow(8px 8px 30px rgba(0, 0, 0, 0.4));
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 5% 15%;
+  margin-top: 5%;
+  background-image: linear-gradient(to right, rgb(24, 1, 60), rgb(3, 91, 231));
+  border: none;
+  width: max-content;
+}
+
+.cf_helpImg > img {
+  width: 80%;
+  display: block;
+  margin-left: auto;
+}
+
+.cf_about {
+  margin: 5%;
+}
+
+.cf_aboutHead {
+  font-size: 40px;
+  padding-bottom: 3%;
+  background: linear-gradient(to right, rgb(59, 3, 148), rgb(203, 221, 250));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.cf_aboutContainer {
+  display: flex;
+  border: 5px solid #cad6e2;
+  border-radius: 0 0 20px 20px;
+  padding: 4%;
+}
+
+.cf_aboutText {
+  word-wrap: break-word;
+  font-size: 20px;
+  width: 60%;
+  padding-right: 5%;
+}
+
+.cf_aboutImg {
+  width: 40%;
+  justify-items: center;
+}
+
+.cf_aboutImg > img {
+  display: block;
+  margin-left: auto;
+  width: 70%;
+}
+
+@media screen and (max-width: 680px) {
+  .cf_car {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .cf_text,
+  .cf_image {
+    width: 90%;
+  }
+
+  .cf_help {
+margin: 5% 0;
+  }
+  .cf_helpText {
+    font-size: 20px;
+    width: 70%;
+  }
+
+  .cf_button,
+  .cf_aboutText {
+    font-size: 15px;
+  }
+
+  .cf_aboutHead {
+    font-size: 20px;
+  }
+}
