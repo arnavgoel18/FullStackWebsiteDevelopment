@@ -101,7 +101,7 @@ function RegistrationDetails() {
     }
 
     // Make API call to the serverless API
-    const data = await fetch("https://saepayment.herokuapp.com/razorpay", {
+    const data = await fetch("https://saepayment.onrender.com/razorpay", {
       method: "POST",
       body: JSON.stringify({
         title: "cost",

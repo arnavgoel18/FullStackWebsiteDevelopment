@@ -264,17 +264,22 @@ export default function AutokritiCard() {
           </div>
         </div>
         <div className="AutokritiCard-Buttons">
+
+        {/* remove disabled, style and change button content to MORE INFORMATION */}
           <a href="/autokriti12">
             {" "}
-            <button type="button" className="Autokirti_12_button">
-              MORE INFORMATION
+            <button type="button" className="Autokirti_12_button" disabled style={{backgroundColor: "Grey"}}>
+            MORE INFORMATION
             </button>
           </a>
+
+          {/* remove disabled, style and change button content to register NOW */}
           <a href="/autokriti/register">
-            <button type="button" className="Autokirti_12_button">
-              REGISTER NOW
+            <button type="button" className="Autokirti_12_button" disabled style={{backgroundColor: "Grey"}}>
+              Comming Soon
             </button>
           </a>
+          
         </div>
       </div>
     </>
