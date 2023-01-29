@@ -11,6 +11,7 @@ import Managers from '../../Containers/HomePage/ProfInchargesAndManagers/Manager
 import Footer from '../../Components/Footer/Footer(black)/FooterBlack';
 import AutokritiEvent from '../../Components/AutokritiEvent/AutokritiEvent'
 import Autokriti12 from '../Autokriti/Autokriti12Card/AutokritiCard'
+import ProgressBar from '../../Components/Loader/Progressbar';
 
 function HomePage() {
 
@@ -19,18 +20,19 @@ function HomePage() {
     }, [])
 
     return (
-        <>
-            <NavBar />
-            <FirstDisplayDIV page="Home" />
-            <AboutUs page="Home" />
-            <TeamsDIV />    
-            <br/><br/>
-            <Autokriti12/>
-            {/* <ExploreUs /> */}
-            <Managers />
+      <>
+        <NavBar />
+        <FirstDisplayDIV page='Home' />
+        <AboutUs page='Home' />
+        <TeamsDIV />
+        <br />
+        <br />
+        <Autokriti12 />
+        {/* <ExploreUs /> */}
+        <Managers />
 
-            <Footer />
-        </>
+        <Footer />
+      </>
     )
 }
 
