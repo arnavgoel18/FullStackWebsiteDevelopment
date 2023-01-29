@@ -4,11 +4,10 @@ import "./FundingForm.css";
 import saelogo from "../../Assets/SAELOGO.png";
 import db from "../../Firebase.js";
 import {
-  collection,
-  getDocs,
-  Timestamp,
+  updateDoc,
   doc,
   setDoc,
+  getDoc,
   serverTimestamp,
 } from "firebase/firestore";
 
@@ -35,7 +34,7 @@ export default function FundingForm() {
       orderid: "",
       paymentid: "",
     };
-    console.log(fundingdata);
+    // console.log(fundingdata);
     validateForm(fundingdata, checkbox);
   }
 
@@ -62,6 +61,7 @@ export default function FundingForm() {
       makePayment(fundingdata);
     }
   }
+
   function deletedata() {
     var FirstName = document.getElementById("fname");
     var LastName = document.getElementById("lname");
@@ -84,17 +84,21 @@ export default function FundingForm() {
     const res = await initializeRazorpay();
     document.getElementById("comp-button").disabled = true;
     document.getElementById("comp-button").style.background = "grey";
+    setTimeout(() => {
+      document.getElementById("comp-button").disabled = false;
+      document.getElementById("comp-button").style.background = "#E9910DFC";
+    }, 8000);
 
     if (!res) {
       alert("Razorpay SDK Failed to load");
       return;
     }
-
+    
     // Make API call to the serverless API
     const data = await fetch("https://saepayment.onrender.com/razorpay", {
       method: "POST",
       body: JSON.stringify({
-        title: "cost",
+        title: "Donation",
         body: fundingdata.amount,
         userId: 1,
       }),
@@ -103,7 +107,6 @@ export default function FundingForm() {
       },
     }).then((t) => t.json());
 
-    console.log(data);
     var options = {
       key: "rzp_live_p9zIgcTn6FVaOD",
       name: "SAE NIT Kurukshetra",
@@ -132,10 +135,14 @@ export default function FundingForm() {
     const set_to_database = async () => {
       var timestamp = String(new Date().getTime());
       await setDoc(doc(db, "FundingForm", timestamp), fundingdata);
+
+      //set progress bar
+      const docRef = doc(db, "FundingForm", "progressBar");
+      const docSnap = await getDoc(docRef);
+      var temp = docSnap.data().collectedAmount + fundingdata.amount;
+      await updateDoc(docRef, { collectedAmount: temp} );
+
       alert("Thank you for Donating.");
-      document.getElementById("comp-button").disabled = false;
-      document.getElementById("comp-button").style.backgroundColor =
-        "#E9910DFC";
       deletedata();
     };
 
@@ -225,7 +232,7 @@ export default function FundingForm() {
               <input type="checkbox" id="check" required />I accept Terms and
               Conditions*
             </div>
-            <button className="pay" id="comp-button" onClick={submit}>
+            <button className="pay" type="button" id="comp-button" onClick={submit}>
               CONTINUE TO PAY
             </button>
           </form>
