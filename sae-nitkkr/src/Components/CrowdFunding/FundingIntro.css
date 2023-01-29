@@ -70,6 +70,7 @@
   background-image: linear-gradient(to right, rgb(24, 1, 60), rgb(3, 91, 231));
   border: none;
   width: max-content;
+  cursor: pointer;
 }
 
 .cf_helpImg > img {
