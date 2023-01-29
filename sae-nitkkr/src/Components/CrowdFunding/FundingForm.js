@@ -49,7 +49,7 @@ export default function FundingForm() {
             name ="amount"  
             id='amount'
             required="required"
-            placeholder='amount Name'/>
+            placeholder='amount'/>
             <div className="msg">Message You Want to Convey To Our Team </div>
             <textarea type="text"
             id='text1'
