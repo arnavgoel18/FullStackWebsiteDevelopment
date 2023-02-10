@@ -13,6 +13,7 @@ import {
   doc,
   getDoc,
 } from "firebase/firestore";
+import Saga from "../../Components/CrowdFunding/Saga";
 
 export default function CrowdFunding() {
   var [tester, setTester] = useState(true);
@@ -40,6 +41,7 @@ export default function CrowdFunding() {
         completed={completed}
       />
       <WhatisSae />
+      <Saga/>
       <FundingForm />
       <Footer />
     </>
