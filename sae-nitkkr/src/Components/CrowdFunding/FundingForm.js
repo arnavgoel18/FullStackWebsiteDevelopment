@@ -15,7 +15,7 @@ export default function FundingForm() {
   function submit() {
     var FirstName = document.getElementById("fname");
     var LastName = document.getElementById("lname");
-    var CompanyName = document.getElementById("comp-name");
+    // var CompanyName = document.getElementById("comp-name");
     var amount = document.getElementById("amount");
     var phone = document.getElementById("phone-no");
     var email = document.getElementById("comp-email");
@@ -25,7 +25,7 @@ export default function FundingForm() {
     const fundingdata = {
       FirstName: FirstName.value,
       LastName: LastName.value,
-      CompanyName: CompanyName.value,
+      // CompanyName: CompanyName.value,
       amount: amount.value,
       phone: phone.value,
       email: email.value,
@@ -43,7 +43,7 @@ export default function FundingForm() {
     if (
       fundingdata.FirstName == "" ||
       fundingdata.LastName == "" ||
-      fundingdata.CompanyName == "" ||
+      // fundingdata.CompanyName == "" ||
       fundingdata.phone == "" ||
       fundingdata.email == "" ||
       fundingdata.longAns1 == ""
@@ -65,7 +65,7 @@ export default function FundingForm() {
   function deletedata() {
     var FirstName = document.getElementById("fname");
     var LastName = document.getElementById("lname");
-    var CompanyName = document.getElementById("comp-name");
+    // var CompanyName = document.getElementById("comp-name");
     var amount = document.getElementById("amount");
     var phone = document.getElementById("phone-no");
     var email = document.getElementById("comp-email");
@@ -73,7 +73,7 @@ export default function FundingForm() {
 
     FirstName.value = null;
     LastName.value = null;
-    CompanyName.value = null;
+    // CompanyName.value = null;
     amount.value = null;
     phone.value = null;
     email.value = null;
@@ -205,13 +205,13 @@ export default function FundingForm() {
               required
               placeholder="Email"
             />
-            <input
+            {/* <input
               type="text"
               name="CompanyName"
               id="comp-name"
               required
               placeholder="Company Name"
-            />
+            /> */}
 
             <input
               type="number"

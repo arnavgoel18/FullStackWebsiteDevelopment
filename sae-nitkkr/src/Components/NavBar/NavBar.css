@@ -22,7 +22,7 @@
 }
 .NavigationBar_Nav-nav-links{
     display: grid;
-    grid-template-columns: repeat(6,auto);
+    grid-template-columns: repeat(7,auto);
     grid-gap: 20px;
     list-style: none;
 }
@@ -53,7 +53,7 @@
 }
 .NavigationBar_Nav-nav-links{
     display: grid;
-    grid-template-columns: repeat(6,auto);
+    grid-template-columns: repeat(7,auto);
     grid-gap: 20px;
     list-style: none;
 }
