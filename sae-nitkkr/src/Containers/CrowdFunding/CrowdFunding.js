@@ -14,6 +14,7 @@ import {
   getDoc,
 } from "firebase/firestore";
 import Saga from "../../Components/CrowdFunding/Saga";
+import FundingTimeline from "../../Components/CrowdFunding/FundingTimeline";
 
 export default function CrowdFunding() {
   var [tester, setTester] = useState(true);
@@ -40,6 +41,7 @@ export default function CrowdFunding() {
         bgcolor= "#32ffff"
         completed={completed}
       />
+      <FundingTimeline/>
       <WhatisSae />
       <Saga/>
       <FundingForm />
