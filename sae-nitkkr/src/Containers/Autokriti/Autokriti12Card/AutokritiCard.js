@@ -5,7 +5,7 @@ import "./AutokritiCard.css";
 
 //icons
 import SW from "../../../Assets/Tech/sw.png";
-import TM from "../../../Assets/Tech/tm.png";
+// import TM from "../../../Assets/Tech/tm.png";
 import OH from "../../../Assets/Tech/oh.png";
 import SP from "../../../Assets/Tech/sp.png";
 import ST from "../../../Assets/Tech/st.png";
@@ -70,13 +70,13 @@ export default function AutokritiCard() {
   };
   return (
     <>
-      <div className="AutokritiCard-Container">
-        <div className="AutokritiCard-Heading">
-          <h1 className="CheckOurEvents-heading">
-            Autokriti <b className="CheckOurEvents-subheading">12.0</b>
+      <div className='AutokritiCard-Container'>
+        <div className='AutokritiCard-Heading'>
+          <h1 className='CheckOurEvents-heading'>
+            Autokriti <b className='CheckOurEvents-subheading'>12.0</b>
           </h1>
         </div>
-        <div className="AutokritiCard-Intro">
+        <div className='AutokritiCard-Intro'>
           Interested in automobiles, but don’t know where to start? Let this be
           your first stepping stone to the redefined world of mobility. Join
           Autokriti 12 and be a part of this remaking.
@@ -100,92 +100,92 @@ export default function AutokritiCard() {
           dignitaries. Please visit the content of these workshops for more
           details.
         </div>
-        <div className="AutokritiCard-Body">
-          <div className="AutokritiCard-Icons">
-            <div className="AutokritiCard-Icons-Left">
-              <div className="Autokirtee12_content_list">
-                <img src={BK} style={{ height: "20px", width: "20px" }} />
+        <div className='AutokritiCard-Body'>
+          <div className='AutokritiCard-Icons'>
+            <div className='AutokritiCard-Icons-Left'>
+              <div className='Autokirtee12_content_list'>
+                <img src={BK} style={{ height: '20px', width: '20px' }} />
                 <p> Brakes</p>
               </div>
-              <div className="Autokirtee12_content_list">
-                <img src={SW} style={{ height: "20px", width: "20px" }} />
+              <div className='Autokirtee12_content_list'>
+                <img src={SW} style={{ height: '20px', width: '20px' }} />
                 <p> Solidworks</p>
               </div>
-              <div className="Autokirtee12_content_list">
-                <img src={SP} style={{ height: "20px", width: "20px" }} />
+              <div className='Autokirtee12_content_list'>
+                <img src={SP} style={{ height: '20px', width: '20px' }} />
                 <p> Suspension</p>
               </div>
-              <div className="Autokirtee12_content_list">
-                <img src={BMS} style={{ height: "20px", width: "20px" }} />
+              <div className='Autokirtee12_content_list'>
+                <img src={BMS} style={{ height: '20px', width: '20px' }} />
                 <p>BMS</p>
               </div>
-              <div className="Autokirtee12_content_list">
-                <img src={MT} style={{ height: "20px", width: "20px" }} />
+              <div className='Autokirtee12_content_list'>
+                <img src={MT} style={{ height: '20px', width: '20px' }} />
                 <p> Motor</p>
               </div>
-              <div className="Autokirtee12_content_list">
-                <img src={ET} style={{ height: "20px", width: "20px" }} />
+              <div className='Autokirtee12_content_list'>
+                <img src={ET} style={{ height: '20px', width: '20px' }} />
                 <p> EV Powertrain</p>
               </div>
-              <div className="Autokirtee12_content_list">
-                <img src={OH} style={{ height: "20px", width: "20px" }} />
+              <div className='Autokirtee12_content_list'>
+                <img src={OH} style={{ height: '20px', width: '20px' }} />
                 <p>Overhauling of engines</p>
               </div>
             </div>
-            <div className="AutokritiCard-Icons-Right">
-              <div className="Autokirtee12_content_list">
-                <img src={ANS} style={{ height: "20px", width: "20px" }} />
+            <div className='AutokritiCard-Icons-Right'>
+              <div className='Autokirtee12_content_list'>
+                <img src={ANS} style={{ height: '20px', width: '20px' }} />
                 <p> Ansys</p>
               </div>
-              <div className="Autokirtee12_content_list">
-                <img src={ST} style={{ height: "20px", width: "20px" }} />
+              <div className='Autokirtee12_content_list'>
+                <img src={ST} style={{ height: '20px', width: '20px' }} />
                 <p> Steering</p>
               </div>
-              <div className="Autokirtee12_content_list">
-                <img src={IOT} style={{ height: "20px", width: "20px" }} />
+              <div className='Autokirtee12_content_list'>
+                <img src={IOT} style={{ height: '20px', width: '20px' }} />
                 <p> IOT</p>
               </div>
-              <div className="Autokirtee12_content_list">
+              <div className='Autokirtee12_content_list'>
                 <GiGears />
                 <p> Drive train</p>
               </div>
-              <div className="Autokirtee12_content_list">
+              <div className='Autokirtee12_content_list'>
                 <MdEdgesensorHigh />
                 <p>DAQ</p>
               </div>
-              <div className="Autokirtee12_content_list">
-                <img src={AC} style={{ height: "20px", width: "20px" }} />
+              <div className='Autokirtee12_content_list'>
+                <img src={AC} style={{ height: '20px', width: '20px' }} />
                 <p> Accumulator</p>
               </div>
-              <div className="Autokirtee12_content_list">
-                <img src={EG} style={{ height: "20px", width: "20px" }} />
+              <div className='Autokirtee12_content_list'>
+                <img src={EG} style={{ height: '20px', width: '20px' }} />
                 <p> Engine</p>
               </div>
-              <div className="Autokirtee12_content_list">
-                <img src={MTC} style={{ height: "20px", width: "20px" }} />
+              <div className='Autokirtee12_content_list'>
+                <img src={MTC} style={{ height: '20px', width: '20px' }} />
                 <p> Motor Controller</p>
               </div>
             </div>
           </div>
-          <div className="AutokritiCard-Poster">
-            <img src={posters[poster_idx]} width="100%"></img>
+          <div className='AutokritiCard-Poster'>
+            <img src={posters[poster_idx]} loading='lazy' width='100%'></img>
           </div>
         </div>
-        <div className="AutokritiCard-Dropdown">
-          <div className="Autokirtee12_dropdowns">
+        <div className='AutokritiCard-Dropdown'>
+          <div className='Autokirtee12_dropdowns'>
             <button
-              className="Autokirtee_12_dropdown"
+              className='Autokirtee_12_dropdown'
               onMouseEnter={() => setPoster_idx(1)}
               onMouseLeave={() => setPoster_idx(0)}
             >
-              <div className="Autokirtee_12_dropdown-text">
+              <div className='Autokirtee_12_dropdown-text'>
                 Combustion Vehicle
               </div>
-              <div className="Autokirtee_12_icons">
+              <div className='Autokirtee_12_icons'>
                 <IoIosArrowDropdown onClick={hello2} />
               </div>
-              <div className="Autokirtee_12_dropdown-content" ref={combustion}>
-                <div className="Autokirtee_12_dropdown-content1">
+              <div className='Autokirtee_12_dropdown-content' ref={combustion}>
+                <div className='Autokirtee_12_dropdown-content1'>
                   Engine <br />
                   Transmission
                   <br />
@@ -199,37 +199,37 @@ export default function AutokritiCard() {
               </div>
             </button>
             <button
-              className="Autokirtee_12_dropdown"
+              className='Autokirtee_12_dropdown'
               onMouseEnter={() => setPoster_idx(1)}
               onMouseLeave={() => setPoster_idx(0)}
             >
-              <div className="Autokirtee_12_dropdown-text">
+              <div className='Autokirtee_12_dropdown-text'>
                 Electric Vehicle
               </div>
-              <div className="Autokirtee_12_icons">
+              <div className='Autokirtee_12_icons'>
                 <IoIosArrowDropdown onClick={hello4} />
               </div>
-              <div className="Autokirtee_12_dropdown-content" ref={ev}>
-                <div className="Autokirtee_12_dropdown-content1">
+              <div className='Autokirtee_12_dropdown-content' ref={ev}>
+                <div className='Autokirtee_12_dropdown-content1'>
                   Battery <br />
                   BMS <br />
                   Motor <br />
                   Motor Controller <br />
-                  Power Train <br />{" "}
+                  Power Train <br />{' '}
                 </div>
               </div>
             </button>
             <button
-              className="Autokirtee_12_dropdown"
+              className='Autokirtee_12_dropdown'
               onMouseEnter={() => setPoster_idx(1)}
               onMouseLeave={() => setPoster_idx(0)}
             >
-              <div className="Autokirtee_12_dropdown-text">IOT</div>
-              <div className="Autokirtee_12_icons">
+              <div className='Autokirtee_12_dropdown-text'>IOT</div>
+              <div className='Autokirtee_12_icons'>
                 <IoIosArrowDropdown onClick={hello3} />
               </div>
-              <div className="Autokirtee_12_dropdown-content" ref={iot}>
-                <div className="Autokirtee_12_dropdown-content1">
+              <div className='Autokirtee_12_dropdown-content' ref={iot}>
+                <div className='Autokirtee_12_dropdown-content1'>
                   COMM PROTOCOLS
                   <br />
                   ARDUINO
@@ -246,16 +246,16 @@ export default function AutokritiCard() {
               </div>
             </button>
             <button
-              className="Autokirtee_12_dropdown"
+              className='Autokirtee_12_dropdown'
               onMouseEnter={() => setPoster_idx(2)}
               onMouseLeave={() => setPoster_idx(0)}
             >
-              <div className="Autokirtee_12_dropdown-text">Softwares</div>
-              <div className="Autokirtee_12_icons">
+              <div className='Autokirtee_12_dropdown-text'>Softwares</div>
+              <div className='Autokirtee_12_icons'>
                 <IoIosArrowDropdown onClick={hello} />
               </div>
-              <div className="Autokirtee_12_dropdown-content" ref={software}>
-                <div className="Autokirtee_12_dropdown-content1">
+              <div className='Autokirtee_12_dropdown-content' ref={software}>
+                <div className='Autokirtee_12_dropdown-content1'>
                   Solidworks <br />
                   Ansys
                 </div>
@@ -263,25 +263,33 @@ export default function AutokritiCard() {
             </button>
           </div>
         </div>
-        <div className="AutokritiCard-Buttons">
-
-        {/* remove disabled, style and change button content to MORE INFORMATION */}
-          <a href="/autokriti12">
-            {" "}
-            <button type="button" className="Autokirti_12_button" disabled style={{backgroundColor: "Grey"}}>
-            MORE INFORMATION
+        <div className='AutokritiCard-Buttons'>
+          {/* remove disabled, style and change button content to MORE INFORMATION */}
+          <a href='/autokriti12'>
+            {' '}
+            <button
+              type='button'
+              className='Autokirti_12_button'
+              disabled
+              style={{ backgroundColor: 'Grey' }}
+            >
+              MORE INFORMATION
             </button>
           </a>
 
           {/* remove disabled, style and change button content to register NOW */}
-          <a href="/autokriti/register">
-            <button type="button" className="Autokirti_12_button" disabled style={{backgroundColor: "Grey"}}>
+          <a href='/autokriti/register'>
+            <button
+              type='button'
+              className='Autokirti_12_button'
+              disabled
+              style={{ backgroundColor: 'Grey' }}
+            >
               Comming Soon
             </button>
           </a>
-          
         </div>
       </div>
     </>
-  );
+  )
 }

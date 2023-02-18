@@ -6,8 +6,8 @@ import PictureAu from "../../Assets/FirstDisplayDiv/Autokriti_FirstDIV.webp";
 // First Display Page of teams page
 //Autokriti has Different First Display Div (caraousal Format)
 function FirstDisplayDiv(props) {
-  var Picture;
-  var text1, text2;
+  let Picture;
+  let text1, text2;
   // Checking Condition For Which page Images are used
   if (props.page === "Home") {
     Picture = PictureH;
@@ -27,8 +27,8 @@ function FirstDisplayDiv(props) {
   }
   return (
     <>
-      <div className="FirstDisplayDIV-main-container">
-        <img src={Picture}></img>
+      <div className='FirstDisplayDIV-main-container'>
+        <img alt='SOS' loading='eager' src={Picture}></img>
         <p>
           {text1}
           <br />
@@ -36,7 +36,7 @@ function FirstDisplayDiv(props) {
         </p>
       </div>
     </>
-  );
+  )
 }
 
 export default FirstDisplayDiv;

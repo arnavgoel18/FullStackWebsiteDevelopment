@@ -1,6 +1,6 @@
 import React from 'react';
-import { useState,useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+// import { Link } from 'react-router-dom';
 import "./TeamDiv.css";
 import Aos from"aos";
 import nitroximg from "../TeamsDIV/def1.webp"
@@ -13,7 +13,7 @@ function Teamdiv() {
     Aos.init({duration:3000});
   },[])
 
-  const [open, setOpen] = useState(false);
+  // const [open, setOpen] = useState(false);
 
   function lastworkacc()
   {
@@ -30,9 +30,9 @@ function Teamdiv() {
   window.location.href='/autokriti'
   }
  
-  return(<>
-  
-   {/* <div id="large_box">
+  return (
+    <>
+      {/* <div id="large_box">
    
       <div 
       // data-aos="fade-right"
@@ -58,58 +58,56 @@ function Teamdiv() {
       
     </div> */}
 
+      <section id='timeline'>
+        <div
+          className='tl-item'
+          style={{ cursor: 'pointer' }}
+          onClick={lastworkacc}
+        >
+          <div
+            className='tl-bg'
+            loading='lazy'
+            style={{ backgroundImage: `url(${accimg})` }}
+          ></div>
 
+          <div className='tl-year'>
+            <div className='f2 heading--sanSerif'>ACCELERONS</div>
+          </div>
+        </div>
 
+        <div
+          className='tl-item'
+          style={{ cursor: 'pointer' }}
+          onClick={lastworkautokriti}
+        >
+          <div
+            className='tl-bg'
+            loading='lazy'
+            style={{ backgroundImage: `url(${autokritiimg})` }}
+          ></div>
 
- <section id="timeline"> 
+          <div className='tl-year'>
+            <div className='f2 heading--sanSerif'>AUTOKRITI</div>
+          </div>
+        </div>
+        <div
+          className='tl-item'
+          style={{ cursor: 'pointer' }}
+          onClick={lastworknitrox}
+        >
+          <div
+            className='tl-bg'
+            style={{ backgroundImage: `url(${nitroximg})` }}
+            loading='lazy'
+          ></div>
 
- 
- <div className="tl-item" style={{cursor:"pointer"}} onClick={lastworkacc}>
-    
-    <div className="tl-bg"style={{ backgroundImage: `url(${accimg})`}}></div>
-    
-    <div className="tl-year">
-      <div className="f2 heading--sanSerif">ACCELERONS</div>
-    </div>
-
-    
-
-  </div>
- 
-  <div className="tl-item" style={{cursor:"pointer"}} onClick={lastworkautokriti}>
-    
-    <div className="tl-bg" style={{ backgroundImage: `url(${autokritiimg})`}}></div>
-    
-    <div className="tl-year">
-      <div  className="f2 heading--sanSerif">AUTOKRITI</div>
-    </div>
-
-  
-
-  </div>
-  <div className="tl-item" style={{cursor:"pointer"}} onClick={lastworknitrox}>
-    
-    <div className="tl-bg"  style={{ backgroundImage: `url(${nitroximg})`}}></div>
-    
-    <div className="tl-year">
-      <div  className="f2 heading--sanSerif">NITROX</div>
-    </div>
-
-    
-
-  </div>
-
-
- 
-
-
-
-
-</section>
-
-
+          <div className='tl-year'>
+            <div className='f2 heading--sanSerif'>NITROX</div>
+          </div>
+        </div>
+      </section>
     </>
- )
+  )
 
 }
 
