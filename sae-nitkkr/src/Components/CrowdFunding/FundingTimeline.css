@@ -11,14 +11,17 @@
 }
 #funding_timeline_component_box {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
   /* border:2px solid black; */
   width: 100%;
   height: 90%;
   align-items: center;
 }
-
+.slick-initialized .slick-slide {
+  display: flex;
+  justify-content: space-around;
+}
 .component_main_conatiner {
   width: 180px;
   margin: 10% 0%;

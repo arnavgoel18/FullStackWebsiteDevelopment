@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import ComponentCard from './ComponentCard';
 import "./FundingTimeline.css";
 import BtnSlider from '../FirstDisplayDIV/Autokriti/BtnSlider';
@@ -10,7 +10,8 @@ import gearbox from '../../Assets/CrowdFunding/Svg/gearbox.svg'
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
 function FundingTimeline() {
-
+    const [device, setdevice] = useState(5)
+    // const { width, height } = useDimensions().dimensions;
     const Next = ({ onClick }) => {
         return (
             <div className="arrow next" onClick={onClick}>
@@ -35,7 +36,7 @@ function FundingTimeline() {
         infinite: false,
         lazyLoad: false,
         speed: 300,
-        slidesToShow: 5,
+        slidesToShow: device,
         centerMode: false,
         centerPadding: 0,
         autoplay: false,
@@ -108,6 +109,45 @@ function FundingTimeline() {
         },
 
     ];
+
+  
+    useEffect(() => {
+      const handleResize = () => {
+        console.log("called", window.innerWidth)
+        predictDevice(window.innerWidth);
+        
+      };
+  
+      window.addEventListener('resize', handleResize);
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, []);
+
+
+
+const predictDevice=(W)=>{
+    if(W>=320 && W<500)
+    {
+        setdevice(1);
+    }
+    else  if(W>=500 && W<768)
+    {
+        setdevice(2)
+    }
+    else  if(W>=768 && W<1024)
+    {
+        setdevice(3)
+    }
+    else  if(W>=1024 && W<1440)
+    {
+        setdevice(4)
+    }
+    else  if(W>=1440)
+    {
+        setdevice(5)
+    }
+}
 
 
     function moveDot(index) {
