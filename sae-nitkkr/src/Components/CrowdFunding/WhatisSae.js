@@ -8,10 +8,20 @@ function WhatisSae() {
         <div className="cf_aboutHead">What is SAE?</div>
         <div className="cf_aboutContainer">
           <div className="cf_aboutText">
-            aadssssssvvcskjhjklkhfjkshkjfhjfhjkfhjkfhkfjhfkjhfkjfhskj
+          SAE NIT Kurukshetra is a collegiate club affiliated with SAE India, which is a wing of SAE International, on a national scale. The club is a platform for budding engineers to work together to arrive at solutions to the problems in the mobility field. It forms a link between naive talents and pioneers of the industry. Valuing the interdisciplinary nature of the automobile sector, undergraduate students from various branches strive to innovate better under the guidance of our professors here at NIT Kurukshetra. We bring our skills to many competitions We bring our skills to many competitions
+Baja SAE India <br/>
+ATVC<br/>
+SUPRA India<br/>
+Formula Bharat<br/>
+Read More<br/>
           </div>
           <div className="cf_aboutImg">
-            <img src={Image} alt="Image" />
+          <iframe src='https://www.youtube.com/embed/E7wJTI-1dvQ'
+        frameborder='0'
+        allow='autoplay; encrypted-media'
+        allowfullscreen
+        title='video'
+/>
           </div>
         </div>
       </div>

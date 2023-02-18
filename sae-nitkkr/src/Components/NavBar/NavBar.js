@@ -36,6 +36,13 @@ function NavBar() {
                         Nitrox
                     </Link>
                 </li>
+
+                <li className="NavigationBar_Nav-nav-item">
+                    <Link to="/Crowdfunding" className="NavigationBar_Nav-nav-link" onClick={() => setOpen(false)}>
+                        DONATE US
+                    </Link>
+                </li>
+
                 <li className="NavigationBar_Nav-nav-item">
                     <Link to="/blogs" className="NavigationBar_Nav-nav-link" onClick={() => setOpen(false)}>
                         Blogs
