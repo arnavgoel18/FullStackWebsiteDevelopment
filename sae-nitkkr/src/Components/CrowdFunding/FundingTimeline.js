@@ -4,9 +4,13 @@ import "./FundingTimeline.css";
 import BtnSlider from '../FirstDisplayDIV/Autokriti/BtnSlider';
 import Slider from "react-slick";
 import battery from '../../Assets/CrowdFunding/Svg/battery.svg'
-import tyres from '../../Assets/CrowdFunding/Svg/tyres.svg'
-import daq from '../../Assets/CrowdFunding/Svg/daq.svg'
-import gearbox from '../../Assets/CrowdFunding/Svg/gearbox.svg'
+import tyres from '../../Assets/CrowdFunding/Svg/tyre.svg'
+import damper from '../../Assets/CrowdFunding/Svg/Damper.svg'
+import gearbox from '../../Assets/CrowdFunding/Svg/Gearbox.svg'
+import machining from '../../Assets/CrowdFunding/Svg/maching.svg'
+import safetygear from '../../Assets/CrowdFunding/Svg/Safetygear.svg'
+import suspension from '../../Assets/CrowdFunding/Svg/suspension.svg'
+import drivetrain from '../../Assets/CrowdFunding/Svg/drivetrain.svg'
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
 function FundingTimeline({amount}) {
@@ -52,14 +56,14 @@ function FundingTimeline({amount}) {
         {
             id: 1,
             title: "Suspension",
-            image: battery,
+            image: suspension,
             status:(amount>=30000)?"Reached":"Notreached",
             price:"30,000"
         },
         {
             id: 2,
             title: "DriveTrain",
-            image: tyres,
+            image: drivetrain,
             status:(amount>=80000)?"Reached":"Notreached",
             price:"50,000"
         },
@@ -73,35 +77,35 @@ function FundingTimeline({amount}) {
         {
             id: 4,
             title: "Dampers",
-            image: daq,
+            image: damper,
             status: (amount>=280000)?"Reached":"Notreached",
             price:"1,50,000"
         },
         {
             id: 5,
             title: "Tyre Set",
-            image: daq,
+            image: tyres,
             status: (amount>=380000)?"Reached":"Notreached",
             price:"1,00,000"
         },
         {
             id: 6,
             title: "Machining",
-            image: battery,
+            image: machining,
             status: (amount>=480000)?"Reached":"Notreached",
             price:"1,00,000"
         },
         {
             id: 7,
             title: "Battery",
-            image: tyres,
+            image: battery,
             status: (amount>=680000)?"Reached":"Notreached",
             price:"2,00,000"
         },
         {
             id: 8,
             title: "Safety Gears",
-            image: gearbox,
+            image: safetygear,
             status: (amount>=800000)?"Reached":"Notreached",
             price:"1,20,000"
         }
