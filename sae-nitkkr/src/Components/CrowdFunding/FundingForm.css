@@ -11,10 +11,17 @@ textArea {
 #check {
   width: 50px;
 }
+.texti{
+  margin-right: 2px;
+}
+.textt{
+  padding-top: 9px;
+}
 .check-Field {
   display: flex;
   justify-content: stretch;
   /* background-color: red; */
+
 }
 .FundingForm {
   width: 70%;

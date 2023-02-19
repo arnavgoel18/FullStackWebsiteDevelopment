@@ -69,3 +69,15 @@
 
       } 
 }
+@media (min-width:375px) and (max-width:700px)
+{
+  #funding_timeline_main_container {
+    margin-top: 20%;
+  }
+}
+@media (min-width:300px) and (max-width:375px)
+{
+  #funding_timeline_main_container {
+    margin-top: 30%;
+  }
+}
