@@ -12,26 +12,8 @@ export default function CrowdFunding() {
           <div className="cf_text">
             <div className="cf_text1">hello there</div>
             <div className="cf_text2">
-              SAE NIT Kurukshetra is a collegiate club affiliated with SAE
-              India, which is a wing of SAE International, on a national scale.
-              The club is a platform for budding engineers to work together to
-              arrive at solutions to the problems in the mobility field. It
-              forms a link between naive talents and pioneers of the industry.
-              Valuing the interdisciplinary nature of the automobile sector,
-              undergraduate students from various branches strive to innovate
-              better under the guidance of our professors here at NIT
-              Kurukshetra. We bring our skills to many competitions like:
-              <br /> <br />
-              Baja SAE India
-              <br />
-              ATVC
-              <br />
-              SUPRA India
-              <br />
-              Formula Bharat
-              <br />
-
-              <div className="button">Read More</div>
+            we have always aim to uplift and institute’s name where we go. Despite the adverse effects from pandemic the team has been able to raise the club back to its formal level but we require your support to achieve greater glory for the institute team nitrox rocks requires 5 lakhs and Team Accelerons  requires 3 lakhs to achieve the same. So help us raise 8 lakhs in 45 days and be a part of the hustle.
+              {/* <div className="button">Read More</div> */}
             </div>
           </div>
           <div className="cf_image">
