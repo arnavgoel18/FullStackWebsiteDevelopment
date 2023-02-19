@@ -5,15 +5,14 @@ import { useState, useEffect } from 'react';
 
 
 const ProgressBar = (props) => {
-  const [remainingTime, setRemainingTime] = useState(45 * 24 * 60 * 60); // time in seconds
+  const [remainingTime, setRemainingTime] = useState(45 * 24 * 60 * 60); 
   
   useEffect(() => {
     const intervalId = setInterval(() => {
       setRemainingTime(prevTime => prevTime - 1);
-      // setRemainingAmount(prevAmount => prevAmount - (800000 / (45 * 24 * 60 * 60))); // calculate the amount deducted per second
     }, 1000);
 
-    return () => clearInterval(intervalId); // clear the interval on unmount
+    return () => clearInterval(intervalId); 
   }, []);
   const days = Math.floor(remainingTime / (24 * 60 * 60));
   const hours = Math.floor((remainingTime % (24 * 60 * 60)) / (60 * 60));
