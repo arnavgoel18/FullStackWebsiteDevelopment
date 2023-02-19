@@ -12,8 +12,8 @@ function ComponentCard({title, image, status, price}) {
       <p style={{color:"red", fontSize:"12px"}}>&#8377; {price}</p>
       </div>
       <div className='component_container'>
-        <div style={{marginLeft:"15px",marginTop:"20px"}}>
-    <img src={image} height="88%"/>
+        <div style={{marginLeft:"15px",marginTop:"10px"}}>
+    <img src={image} height="96%"/>
 
         </div>
         <div style={{display:"flex", border:"0px solid black", alignItems:"flex-end"}}>
