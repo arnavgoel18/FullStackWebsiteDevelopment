@@ -5,13 +5,12 @@ import BtnSlider from '../FirstDisplayDIV/Autokriti/BtnSlider';
 import Slider from "react-slick";
 import battery from '../../Assets/CrowdFunding/Svg/battery.svg'
 import tyres from '../../Assets/CrowdFunding/Svg/tyre.svg'
-import damper from '../../Assets/CrowdFunding/Svg/Damper.svg'
-import gearbox from '../../Assets/CrowdFunding/Svg/Gearbox.svg'
+import damper from '../../Assets/CrowdFunding/Svg/damper.svg'
+import gearbox from '../../Assets/CrowdFunding/Svg/gearbox.svg'
 import machining from '../../Assets/CrowdFunding/Svg/maching.svg'
-import safetygear from '../../Assets/CrowdFunding/Svg/Safetygear.svg'
+import safetygear from '../../Assets/CrowdFunding/Svg/safetygear.svg'
 import suspension from '../../Assets/CrowdFunding/Svg/suspension.svg'
 import drivetrain from '../../Assets/CrowdFunding/Svg/drivetrain.svg'
-import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
 function FundingTimeline({amount}) {
     const [device, setdevice] = useState(5)
