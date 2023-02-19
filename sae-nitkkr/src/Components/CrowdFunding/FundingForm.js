@@ -10,6 +10,7 @@ import {
   getDoc,
   serverTimestamp,
 } from "firebase/firestore";
+import emailjs from "@emailjs/browser";
 
 export default function FundingForm() {
   function submit() {
@@ -35,6 +36,31 @@ export default function FundingForm() {
 
     validateForm(fundingdata, checkbox);
   }
+
+  const sendEmail = (firstname,email) => {
+    console.log("hello destination");
+    const toSend = {
+      name: firstname,
+      email: email,
+    };
+    emailjs
+      .send(
+        "service_v2mc09h",
+        "template_eeq49xm",
+        toSend,
+        "9MHjCKHFFUfBlu_xC"
+      )
+      .then(
+        
+        function (response) {
+          console.log("SUCCESS!", response.status, response.text);
+        },
+        function (error) {
+          console.log("FAILED...", error);
+        }
+      );
+  };
+
 
   //form validation
   function validateForm(fundingdata, checkbox) {
@@ -122,7 +148,7 @@ export default function FundingForm() {
       image: { saelogo },
       handler: async (response) => {
         await handler(response);
-        await set_to_database();
+        await set_to_database(fundingdata.FirstName, fundingdata.email);
         console.log(options);
       },
       prefill: {
@@ -137,7 +163,8 @@ export default function FundingForm() {
       fundingdata.paymentid = response.razorpay_payment_id;
     };
 
-    const set_to_database = async () => {
+    const set_to_database = async (firstname,email) => {
+      sendEmail(firstname,email);
       var timestamp = String(new Date().getTime());
       await setDoc(doc(db, "FundingForm", timestamp), fundingdata);
 
@@ -148,6 +175,7 @@ export default function FundingForm() {
       await updateDoc(docRef, { collectedAmount: temp });
 
       alert("Thank you for Donating.");
+
       deletedata();
     };
 
