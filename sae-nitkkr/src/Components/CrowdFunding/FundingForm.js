@@ -15,7 +15,6 @@ export default function FundingForm() {
   function submit() {
     var FirstName = document.getElementById("fname");
     var LastName = document.getElementById("lname");
-    // var CompanyName = document.getElementById("comp-name");
     var amount = document.getElementById("amount");
     var phone = document.getElementById("phone-no");
     var email = document.getElementById("comp-email");
@@ -25,7 +24,6 @@ export default function FundingForm() {
     const fundingdata = {
       FirstName: FirstName.value,
       LastName: LastName.value,
-      // CompanyName: CompanyName.value,
       amount: amount.value,
       phone: phone.value,
       email: email.value,
@@ -34,30 +32,37 @@ export default function FundingForm() {
       orderid: "",
       paymentid: "",
     };
-    // console.log(fundingdata);
+
     validateForm(fundingdata, checkbox);
   }
 
   //form validation
   function validateForm(fundingdata, checkbox) {
     if (
-      fundingdata.FirstName == "" ||
-      fundingdata.LastName == "" ||
-      // fundingdata.CompanyName == "" ||
-      fundingdata.phone == "" ||
-      fundingdata.email == "" ||
-      fundingdata.longAns1 == ""
+      fundingdata.amount == ""
+      // fundingdata.FirstName == "" ||
+      // fundingdata.LastName == "" ||
+      // // fundingdata.CompanyName == "" ||
+      // fundingdata.phone == "" ||
+      // fundingdata.email == "" ||
+      // fundingdata.longAns1 == ""
     ) {
-      alert("Please fill up the required fields.");
-    } else if (fundingdata.phone.length != 10) {
-      alert("phone number should be of length 10.");
-    } else if (
-      !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(fundingdata.email)
-    ) {
-      alert("Please enter a valid email address.");
-    } else if (checkbox.checked == false) {
+      alert("Please fill up the Amount.");
+     } 
+     //else if (fundingdata.phone.length != 10) {
+    //   alert("phone number should be of length 10.");
+    // } else if (
+    //   !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(fundingdata.email)
+    // ) {
+    //   alert("Please enter a valid email address.");
+     //} 
+     else if (checkbox.checked == false) {
       alert("Please accept the terms and condition.");
-    } else {
+    } else if(parseInt(fundingdata.amount) >= 20000){
+      console.log(parseInt(fundingdata.amount))
+      var bankDetails = document.getElementById("bank_details");
+      bankDetails.style.display = "flex";
+    }else{
       makePayment(fundingdata);
     }
   }
@@ -188,21 +193,21 @@ export default function FundingForm() {
                 type="text"
                 name="First Name"
                 placeholder="Name"
-                required
+                //required
                 id="fname"
               />
               <input
                 type="text"
                 name="Last Name"
                 id="lname"
-                required
+                //required
                 placeholder="Last Name"
               />
             </div>
             <input
               type="number"
               name="phone"
-              required
+              //required
               id="phone-no"
               placeholder="phone No"
             />
@@ -210,7 +215,7 @@ export default function FundingForm() {
               type="email"
               name="Email"
               id="comp-email"
-              required
+              //required
               placeholder="Email"
             />
             {/* <input
@@ -247,6 +252,21 @@ export default function FundingForm() {
             <div className="check-Field">
               <input type="checkbox" id="check" required />I accept Terms and
               Conditions*
+            </div>
+            <div id="bank_details">
+              <h4 style={{marginBottom:'10px'}}>The amount is greater than 20,000. To avoid transaction fee Please Pay directly via bank transfer:</h4>
+              <div>
+                <span>Account Name: </span>
+                <span>SAE INDIA NIT KKR COLLEGIATE CLUB</span>
+              </div>
+              <div>
+                <span>Account Number: </span>
+                <span>30993905530</span>
+              </div>
+              <div>
+                <span>IFSC Code: </span>
+                <span>SBIN0006260</span>
+              </div>
             </div>
             <button
               className="pay"
