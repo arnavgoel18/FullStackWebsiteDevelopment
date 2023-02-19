@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+.cf_about{
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-family: "Montserrat", sans-serif;
+    display: flexbox;
+  }
+  .cf_aboutContainer{
+    display: flexbox;
+    flex-wrap: wrap; 
+    flex-direction: row;
+  }
+  .cf_aboutText{
+    display: flex;
+    word-wrap: break-word;
+    flex: 100%;
+  }
+  .cf_aboutImg{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 50%;
+  }

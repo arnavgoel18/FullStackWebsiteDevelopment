@@ -1,5 +1,7 @@
 import React from 'react'
 import Image from '../../Assets/CrowdFunding/Image.png'
+import Car from "../../Assets/CrowdFunding/car.png";
+import "./WhatisSae.css"
 
 function WhatisSae() {
   return (
@@ -16,12 +18,7 @@ Formula Bharat<br/>
 Read More<br/>
           </div>
           <div className="cf_aboutImg">
-          <iframe src='https://www.youtube.com/embed/E7wJTI-1dvQ'
-        frameborder='0'
-        allow='autoplay; encrypted-media'
-        allowfullscreen
-        title='video'
-/>
+   <img src={Car} alt="SAE cars" />
           </div>
         </div>
       </div>

@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 
 .cf_container {
-  margin: 5%;
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -34,7 +36,8 @@
 }
 
 .cf_image {
-  display: block;
+  word-wrap: break-word;
+  display: flex;
   margin: 0 auto;
 }
 
