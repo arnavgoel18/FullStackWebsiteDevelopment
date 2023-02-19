@@ -12,6 +12,7 @@ import Footer from '../../Components/Footer/Footer(black)/FooterBlack';
 // import AutokritiEvent from '../../Components/AutokritiEvent/AutokritiEvent'
 import Autokriti12 from '../Autokriti/Autokriti12Card/AutokritiCard'
 // import ProgressBar from '../../Components/Loader/Progressbar';
+import FundingIntro from '../../Components/CrowdFunding/FundingIntro';
 
 function HomePage() {
 
@@ -27,8 +28,9 @@ function HomePage() {
         <TeamsDIV />
         <br />
         <br />
-        <Autokriti12 />
+        {/* <Autokriti12 /> */}
         {/* <ExploreUs /> */}
+        <FundingIntro/>
         <Managers />
 
         <Footer />

@@ -16,6 +16,7 @@ import AutokritiCheckEvent from '../../Components/AutokritiEvent/AutokritiCheckE
 import PopupCard from './PopUps/PopupCard'
 import Autokirtee12 from './Autokirtee12_popup/Autokirtee12'
 import AutokritiCard from './Autokriti12Card/AutokritiCard'
+import FundingIntro from '../../Components/CrowdFunding/FundingIntro'
 
 function Autokriti(){
 
@@ -32,13 +33,14 @@ function Autokriti(){
             <AboutUs page="Autokriti"/>
             <AutokritiEvent/>
             {/* <Autokirtee12/> */}
+            
             <CheckOurEvents/>
             <AutokritiCard/>
             {/* <Saga/> */}
             <BrandAmbassador/>
             {/* <Testimonials/>  */}
             <Gallery/>
-            <Footer type="white"/>
+            <Footer type="black"/>
         </>
     )
 }

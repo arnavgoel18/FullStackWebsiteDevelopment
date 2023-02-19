@@ -36,10 +36,28 @@ textArea {
   color: white;
   padding: 10px;
   border-radius: 5px;
+  cursor: pointer;
+}
+.sampleAmountDiv{
+  display: flex;
+  justify-content:space-evenly;
+  flex-wrap: wrap;
+  margin: 0 10px 0 10px;
+  padding: 0 20px 0 20px;
+}
+.sampleAmount{
+  border: 2px solid rgb(41, 129, 41);
+  border-radius: 5px;
+  padding: .4%;
+  /* margin: 0 5% 0 0; */
+  cursor: pointer;
 }
 @media (min-width: 320px) and (max-width: 620px) {
   .Field {
     display: flex;
     flex-direction: column;
+  }
+  .sampleAmount{
+    margin-top: 2%;
   }
 }

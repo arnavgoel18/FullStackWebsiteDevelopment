@@ -93,7 +93,7 @@ export default function FundingForm() {
       alert("Razorpay SDK Failed to load");
       return;
     }
-    
+
     // Make API call to the serverless API
     const data = await fetch("https://saepayment.onrender.com/razorpay", {
       method: "POST",
@@ -140,7 +140,7 @@ export default function FundingForm() {
       const docRef = doc(db, "FundingForm", "progressBar");
       const docSnap = await getDoc(docRef);
       var temp = docSnap.data().collectedAmount + fundingdata.amount;
-      await updateDoc(docRef, { collectedAmount: temp} );
+      await updateDoc(docRef, { collectedAmount: temp });
 
       alert("Thank you for Donating.");
       deletedata();
@@ -169,6 +169,14 @@ export default function FundingForm() {
     window.scrollTo(0, 0);
   }, []);
 
+  function SetAmountText(e){
+    var temp = e.target.innerText;
+    var amountToBeSet = parseInt(temp.split(',').join(''));
+    var amount = document.getElementById('amount');
+    
+    console.log(amountToBeSet, typeof(amountToBeSet),amount);
+    amount.value = amountToBeSet ;
+  }
   return (
     <>
       <div className="FundingForm" id="funding_form">
@@ -220,6 +228,14 @@ export default function FundingForm() {
               required
               placeholder="amount"
             />
+            <div className="sampleAmountDiv">
+              <span className="sampleAmount" onClick={SetAmountText}>1000</span>
+              <span className="sampleAmount" onClick={SetAmountText}>5000</span>{" "}
+              <span className="sampleAmount" onClick={SetAmountText}>10,000</span>{" "}
+              <span className="sampleAmount" onClick={SetAmountText}>25,000</span>{" "}
+              <span className="sampleAmount" onClick={SetAmountText}>50,000</span>{" "}
+              <span className="sampleAmount" onClick={SetAmountText}>1,00,000</span>
+            </div>
             <div className="msg">Message You Want to Convey To Our Team </div>
             <textarea
               type="text"
@@ -232,7 +248,12 @@ export default function FundingForm() {
               <input type="checkbox" id="check" required />I accept Terms and
               Conditions*
             </div>
-            <button className="pay" type="button" id="comp-button" onClick={submit}>
+            <button
+              className="pay"
+              type="button"
+              id="comp-button"
+              onClick={submit}
+            >
               CONTINUE TO PAY
             </button>
           </form>
