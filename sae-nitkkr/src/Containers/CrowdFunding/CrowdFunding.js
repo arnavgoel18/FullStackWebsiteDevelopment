@@ -44,7 +44,7 @@ export default function CrowdFunding() {
         completed={completed}
         amountReceived={amount}
       />
-      <FundingTimeline amount={350000}/>
+      <FundingTimeline amount={amount}/>
       <WhatisSae />
       <Saga/>
       <FundingForm />
