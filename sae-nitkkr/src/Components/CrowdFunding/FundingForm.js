@@ -278,11 +278,11 @@ export default function FundingForm() {
               rows="10"
             />
             <div className="check-Field">
-              <input type="checkbox" id="check" required />I accept Terms and
-              Conditions*
+              <input type="checkbox" id="check" required />I accept &nbsp;
+              <a href="/termsandconditions" target={"_blank"} style={{color:"blue"}}> <u> Terms and Conditions*</u></a>
             </div>
             <div id="bank_details">
-              <h4 style={{marginBottom:'10px'}}>The amount is greater than 20,000. To avoid transaction fee Please Pay directly via bank transfer:</h4>
+              <h4 style={{marginBottom:'10px'}}>The amount is greater than 20,000. To avoid transaction fee, Please Pay directly via <u>Bank Transfer</u>:</h4>
               <div>
                 <span>Account Name: </span>
                 <span>SAE INDIA NIT KKR COLLEGIATE CLUB</span>
@@ -295,6 +295,7 @@ export default function FundingForm() {
                 <span>IFSC Code: </span>
                 <span>SBIN0006260</span>
               </div>
+              <div style={{marginTop:'12px'}}><b>*NOTE:</b> Please add your contact details during Bnak Transfer in comment Section.</div>
             </div>
             <button
               className="pay"
