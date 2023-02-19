@@ -51,61 +51,71 @@ function FundingTimeline() {
             id: 1,
             title: "Battery",
             image: battery,
-            status: "Reached"
+            status: "Notreached",
+            price:0
         },
         {
             id: 2,
             title: "Tyres",
             image: tyres,
-            status: "Reached"
+            status: "Notreached",
+            price:0
         },
         {
             id: 3,
             title: "Gearbox",
             image: gearbox,
-            status: "Notreached"
+            status: "Notreached",
+            price:0
         },
         {
             id: 4,
             title: "DAQ",
             image: daq,
-            status: "Notreached"
+            status: "Notreached",
+            price:0
         },
         {
             id: 5,
             title: "DAQ",
             image: daq,
-            status: "Notreached"
+            status: "Notreached",
+            price:0
         },
         {
-            id: 1,
+            id: 6,
             title: "Battery",
             image: battery,
-            status: "Reached"
+            status: "Notreached",
+            price:0
         },
         {
-            id: 2,
+            id: 7,
             title: "Tyres",
             image: tyres,
-            status: "Reached"
+            status: "Notreached",
+            price:0
         },
         {
-            id: 3,
+            id: 8,
             title: "Gearbox",
             image: gearbox,
-            status: "Notreached"
+            status: "Notreached",
+            price:0
         },
         {
-            id: 4,
+            id: 9,
             title: "DAQ",
             image: daq,
-            status: "Notreached"
+            status: "Notreached",
+            price:0
         },
         {
-            id: 5,
+            id: 10,
             title: "DAQ",
             image: daq,
-            status: "Notreached"
+            status: "Notreached",
+            price:0
         },
 
     ];

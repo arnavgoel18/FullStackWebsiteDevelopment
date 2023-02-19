@@ -12,7 +12,7 @@ function ComponentCard({title, image, status}) {
       </div>
       <div className='component_container'>
         <div style={{marginLeft:"15px"}}>
-    <img src={image} height="75%"/>
+    <img src={image} height="70%"/>
 
         </div>
         <div style={{display:"flex", border:"0px solid black", alignItems:"flex-end"}}>
