@@ -1,12 +1,23 @@
 import './ProgressBar.scss'
 import { useState, useEffect } from 'react';
-//using e.g
-// <ProgressBar bgcolor={'#32FFFF'} completed={55} />
 
 
 const ProgressBar = (props) => {
-  const [remainingTime, setRemainingTime] = useState(45 * 24 * 60 * 60); 
+  var [tester, setTester] = useState(true);
+  const [remainingTime, setRemainingTime] = useState(1680633000); 
   
+  async function getRemainingTimeInfo() {
+    var date = new Date();
+    var currentTime = Math.floor(date.getTime()/1000);
+    setRemainingTime(remainingTime - currentTime);
+    console.log(remainingTime + "yo");
+  }
+
+  if (tester == true) {
+    window.addEventListener("load", getRemainingTimeInfo());
+    setTester(false);
+  }
+
   useEffect(() => {
     const intervalId = setInterval(() => {
       setRemainingTime(prevTime => prevTime - 1);
