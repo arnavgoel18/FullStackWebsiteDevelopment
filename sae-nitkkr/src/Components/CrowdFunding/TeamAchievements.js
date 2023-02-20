@@ -19,6 +19,11 @@ function TeamAchievements(){
                     </div>
                     <div className='team-achievements_team-boxContent'>
                         <div className='team-achievements_team-boxContentRank'>
+                            <p>2022 Formula Bharat</p>
+                            AIR 5 Overall<br/>
+                            AIR 3 CGMR Event
+                        </div>
+                        <div className='team-achievements_team-boxContentRank'>
                             <p>2019</p>
                             Only Team to Incorporate Clutch System(CLUTCHLESS) in FS car Customized Engine wiring Self Design Intake Manifold and Exhaust System
                         </div>
