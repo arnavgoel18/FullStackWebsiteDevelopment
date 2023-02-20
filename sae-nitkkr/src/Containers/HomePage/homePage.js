@@ -26,6 +26,7 @@ function HomePage() {
         <FirstDisplayDIV page='Home' />
         <AboutUs page='Home' />
         <TeamsDIV />
+        
         <br />
         <br />
         {/* <Autokriti12 /> */}
