@@ -39,16 +39,16 @@ export default function CrowdFunding() {
   return (
     <>
       <NavBar />
-      {/* <FundingIntro />
+      <FundingIntro />
       <ProgressBar
         bgcolor= "#32ffff"
         completed={completed}
         amountReceived={amount}
       />
       <FundingTimeline amount={amount}/>
-      <WhatisSae /> */}
+      <WhatisSae />
       <TeamAchievements/>
-      {/* <FundingForm /> */}
+      <FundingForm />
       <Footer />
     </>
   );

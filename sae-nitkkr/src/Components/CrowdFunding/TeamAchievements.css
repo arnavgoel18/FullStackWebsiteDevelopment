@@ -114,13 +114,14 @@
 }
 
 .team-achievements_team-boxContentRank p{
-    color: red;
+    color: rgb(47, 45, 45);
     font-size: 16px;
+    font-weight: bold;
 }
 
 /* ---------------------------------- */
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 900px) {
     .team-achievements_container{
         height: auto;
     }
@@ -136,7 +137,7 @@
     }
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 500px) {
     .team-achievements_team-box{
         width: 95%;
     }
