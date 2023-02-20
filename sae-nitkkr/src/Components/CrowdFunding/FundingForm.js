@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import React from "react";
 import "./FundingForm.css";
 import saelogo from "../../Assets/SAELOGO.png";
+import { Link } from 'react-router-dom'
 import db from "../../Firebase.js";
 import {
   updateDoc,
@@ -176,7 +177,7 @@ export default function FundingForm() {
       console.log(amount, typeof(amount), temp);
       await updateDoc(docRef, { collectedAmount: temp });
 
-      alert("Thank you for Donating.");
+      alert("Thank you for your Donation. This has brought us a step closer to achieving our goals!");
 
       deletedata();
     };
@@ -215,14 +216,14 @@ export default function FundingForm() {
   return (
     <>
       <div className="FundingForm" id="funding_form">
-        <h3>DONATE US</h3>
+        <h3>DONATE HERE</h3>
         <div className="Form">
           <form>
             <div className="Field">
               <input
                 type="text"
                 name="First Name"
-                placeholder="Name"
+                placeholder="First Name"
                 //required
                 id="fname"
               />
@@ -239,7 +240,7 @@ export default function FundingForm() {
               name="phone"
               //required
               id="phone-no"
-              placeholder="phone No"
+              placeholder="Phone No"
             />
             <input
               type="email"
@@ -261,7 +262,7 @@ export default function FundingForm() {
               name="amount"
               id="amount"
               required
-              placeholder="amount"
+              placeholder="Enter or Choose Amount"
             />
             <div className="sampleAmountDiv">
               <span className="sampleAmount" onClick={SetAmountText}>1000</span>
@@ -298,6 +299,13 @@ export default function FundingForm() {
                 <span>SBIN0006260</span>
               </div>
               <div style={{marginTop:'12px'}}><b>*NOTE:</b> Please add your contact details during Bnak Transfer in comment Section.</div>
+              <div className="texti"><input type="checkbox" id="check" required />
+              I accept </div> <span className="textt">
+              {' '}
+              <Link to="/termsandconditions" target="_blank">
+                Terms and Conditions*
+              </Link>
+            </span> 
             </div>
             <button
               className="pay"

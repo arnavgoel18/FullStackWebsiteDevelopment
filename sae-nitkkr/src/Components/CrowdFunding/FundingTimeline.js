@@ -4,12 +4,15 @@ import "./FundingTimeline.css";
 import BtnSlider from '../FirstDisplayDIV/Autokriti/BtnSlider';
 import Slider from "react-slick";
 import battery from '../../Assets/CrowdFunding/Svg/battery.svg'
-import tyres from '../../Assets/CrowdFunding/Svg/tyres.svg'
-import daq from '../../Assets/CrowdFunding/Svg/daq.svg'
+import tyres from '../../Assets/CrowdFunding/Svg/tyre.svg'
+import damper from '../../Assets/CrowdFunding/Svg/damper.svg'
 import gearbox from '../../Assets/CrowdFunding/Svg/gearbox.svg'
-import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
+import machining from '../../Assets/CrowdFunding/Svg/maching.svg'
+import safetygear from '../../Assets/CrowdFunding/Svg/safetygear.svg'
+import suspension from '../../Assets/CrowdFunding/Svg/suspension.svg'
+import drivetrain from '../../Assets/CrowdFunding/Svg/drivetrain.svg'
 
-function FundingTimeline() {
+function FundingTimeline({amount}) {
     const [device, setdevice] = useState(5)
     // const { width, height } = useDimensions().dimensions;
     const Next = ({ onClick }) => {
@@ -46,79 +49,66 @@ function FundingTimeline() {
         
 
     };
-    const dataSlider = [
+
+    
+    const dataSlider=[
         {
             id: 1,
-            title: "Battery",
-            image: battery,
-            status: "Notreached",
-            price:0
+            title: "Suspension",
+            image: suspension,
+            status:(amount>=30000)?"Reached":"Notreached",
+            price:"30,000"
         },
         {
             id: 2,
-            title: "Tyres",
-            image: tyres,
-            status: "Notreached",
-            price:0
+            title: "DriveTrain",
+            image: drivetrain,
+            status:(amount>=80000)?"Reached":"Notreached",
+            price:"50,000"
         },
         {
             id: 3,
             title: "Gearbox",
             image: gearbox,
-            status: "Notreached",
-            price:0
+            status: (amount>=130000)?"Reached":"Notreached",
+            price:"50,000"
         },
         {
             id: 4,
-            title: "DAQ",
-            image: daq,
-            status: "Notreached",
-            price:0
+            title: "Dampers",
+            image: damper,
+            status: (amount>=280000)?"Reached":"Notreached",
+            price:"1,50,000"
         },
         {
             id: 5,
-            title: "DAQ",
-            image: daq,
-            status: "Notreached",
-            price:0
+            title: "Tyre Set",
+            image: tyres,
+            status: (amount>=380000)?"Reached":"Notreached",
+            price:"1,00,000"
         },
         {
             id: 6,
-            title: "Battery",
-            image: battery,
-            status: "Notreached",
-            price:0
+            title: "Machining",
+            image: machining,
+            status: (amount>=480000)?"Reached":"Notreached",
+            price:"1,00,000"
         },
         {
             id: 7,
-            title: "Tyres",
-            image: tyres,
-            status: "Notreached",
-            price:0
+            title: "Battery",
+            image: battery,
+            status: (amount>=680000)?"Reached":"Notreached",
+            price:"2,00,000"
         },
         {
             id: 8,
-            title: "Gearbox",
-            image: gearbox,
-            status: "Notreached",
-            price:0
-        },
-        {
-            id: 9,
-            title: "DAQ",
-            image: daq,
-            status: "Notreached",
-            price:0
-        },
-        {
-            id: 10,
-            title: "DAQ",
-            image: daq,
-            status: "Notreached",
-            price:0
-        },
-
-    ];
+            title: "Safety Gears",
+            image: safetygear,
+            status: (amount>=800000)?"Reached":"Notreached",
+            price:"1,20,000"
+        }
+    ]
 
   
     useEffect(() => {
@@ -184,7 +174,7 @@ const predictDevice=(W)=>{
                         return (
                             <ComponentCard key={index} title={e.title}
                                 slideIndex={slideIndex}
-                                index={index} image={e.image} status={e.status} />
+                                index={index} image={e.image} status={e.status} price={e.price} />
                         )
                     })}
             </Slider>
