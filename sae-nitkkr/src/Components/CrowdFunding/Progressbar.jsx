@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 
 const ProgressBar = (props) => {
   var [tester, setTester] = useState(true);
-  const [remainingTime, setRemainingTime] = useState(1680633000); 
+  const [remainingTime, setRemainingTime] = useState(1680805799); 
   
   async function getRemainingTimeInfo() {
     var date = new Date();
