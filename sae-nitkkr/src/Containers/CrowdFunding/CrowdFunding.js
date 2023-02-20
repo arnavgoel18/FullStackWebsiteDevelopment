@@ -46,7 +46,7 @@ export default function CrowdFunding() {
         amountReceived={amount}
       />
       <FundingTimeline amount={amount}/>
-      <WhatisSae />
+
       <TeamAchievements/>
       <FundingForm />
       <Footer />

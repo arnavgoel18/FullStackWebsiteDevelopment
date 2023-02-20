@@ -17,21 +17,17 @@ export default function CrowdFunding() {
             </div>
           </div>
           <div className="cf_image">
-          <iframe src='https://www.youtube.com/embed/E7wJTI-1dvQ'
-        frameborder='0'
-        allow='autoplay; encrypted-media'
-        allowfullscreen
-        title='video'
-/>
+          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/nP8kjCK6AHQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="true"></iframe>
           </div>
         </div>
+
         <div className="cf_help">
           <div className="cf_helpText">
             <b>help us achieve our goal</b>
             <button className="cf_button">
               <a href="/crowdfunding#funding_form">
                 {" "}
-                <b>DONATE</b>
+                <b style={{color: '#fff'}}>DONATE</b>
               </a>
             </button>
           </div>

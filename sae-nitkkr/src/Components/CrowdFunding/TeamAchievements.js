@@ -44,7 +44,7 @@ function TeamAchievements(){
                         </div>
                     </div>
                 </div>
-                <div className='team-achievements_team-box'>
+                <div className='team-achievements_team-box' style={{}}>
                     <div className='team-achievements_team-boxHeader'>
                         <div className='team-achievements_team-boxHeaderIcon'><img src={atv}></img></div>
                         <div className='team-achievements_team-boxHeaderName'>Team Nitrox</div>
