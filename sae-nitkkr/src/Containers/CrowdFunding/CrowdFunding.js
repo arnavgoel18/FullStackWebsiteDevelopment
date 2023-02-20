@@ -6,6 +6,7 @@ import FundingForm from "../../Components/CrowdFunding/FundingForm";
 import FundingIntro from "../../Components/CrowdFunding/FundingIntro";
 import WhatisSae from "../../Components/CrowdFunding/WhatisSae";
 import ProgressBar from "../../Components/CrowdFunding/Progressbar";
+import TeamAchievements from "../../Components/CrowdFunding/TeamAchievements"
 
 //Firebase
 import db from "../../Firebase";
@@ -38,16 +39,16 @@ export default function CrowdFunding() {
   return (
     <>
       <NavBar />
-      <FundingIntro />
+      {/* <FundingIntro />
       <ProgressBar
         bgcolor= "#32ffff"
         completed={completed}
         amountReceived={amount}
       />
       <FundingTimeline amount={amount}/>
-      <WhatisSae />
-      <Saga/>
-      <FundingForm />
+      <WhatisSae /> */}
+      <TeamAchievements/>
+      {/* <FundingForm /> */}
       <Footer />
     </>
   );
