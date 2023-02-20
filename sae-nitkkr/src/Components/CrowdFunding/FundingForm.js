@@ -171,7 +171,9 @@ export default function FundingForm() {
       //set progress bar
       const docRef = doc(db, "FundingForm", "progressBar");
       const docSnap = await getDoc(docRef);
-      var temp = docSnap.data().collectedAmount + fundingdata.amount;
+      var amount = parseInt(fundingdata.amount);
+      var temp = docSnap.data().collectedAmount + amount;
+      console.log(amount, typeof(amount), temp);
       await updateDoc(docRef, { collectedAmount: temp });
 
       alert("Thank you for Donating.");
