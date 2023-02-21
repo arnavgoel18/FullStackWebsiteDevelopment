@@ -20,17 +20,20 @@ export default function CrowdFunding() {
   var [tester, setTester] = useState(true);
   var [completed, setCompleted] = useState(0);
   let [ amount,setamount]=useState(0);
+  let [netAmount,setNewAmount]=useState(0)
+
   async function getProgressBarInfo() {
     const docRef = doc(db, "FundingForm", "progressBar");
     const docSnap = await getDoc(docRef);
     const progressBar = docSnap.data();
     console.log(progressBar.timestamp)
     setamount(progressBar.collectedAmount)
+    setNewAmount(progressBar.requiredAmount)
     var temp = ((progressBar.requiredAmount - progressBar.collectedAmount)/progressBar.requiredAmount)*100;
     setCompleted(100-temp);
   }
 
-  if (tester == true) {
+  if (tester === true) {
     window.addEventListener("load", getProgressBarInfo());
     setTester(false);
   }
@@ -38,17 +41,17 @@ export default function CrowdFunding() {
   return (
     <>
       <NavBar />
-      <FundingIntro />
+      <FundingIntro netAmount={netAmount} amountReceived={amount} />
       <ProgressBar
-        bgcolor= "#32ffff"
+        bgcolor='#32ffff'
         completed={completed}
         amountReceived={amount}
       />
-      <FundingTimeline amount={amount}/>
+      <FundingTimeline amount={amount} />
       <WhatisSae />
-      <Saga/>
+      <Saga />
       <FundingForm />
       <Footer />
     </>
-  );
+  )
 }
