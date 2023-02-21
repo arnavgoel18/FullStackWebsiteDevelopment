@@ -28,6 +28,7 @@
   color: #32ffff;
   font-size: 40px;
   padding-bottom: 4%;
+  word-wrap: normal;
 }
 
 .cf_text2 {
@@ -123,7 +124,7 @@
   width: 50%;
 }
 
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 800px) {
   .cf_car {
     display: flex;
     align-items: center;
@@ -136,11 +137,12 @@
   }
 
   .cf_image {
-    /* display: block; */
+    display: block;  
     /* margin-left: auto; */
-      /* margin-top: auto;
-      margin-bottom: auto; */
+       /* margin-top: auto; */
+      /* margin-bottom: auto;  */
     /* height: auto; */
+    width: 100%;
   }
 
   .cf_help {
@@ -158,5 +160,10 @@
 
   .cf_aboutHead {
     font-size: 20px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .cf_text1{
+    font-size: xx-large;
   }
 }
