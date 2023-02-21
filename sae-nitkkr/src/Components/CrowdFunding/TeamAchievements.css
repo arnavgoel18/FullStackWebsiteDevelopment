@@ -142,3 +142,8 @@
         width: 95%;
     }
 }
+@media screen and (max-width: 680px) {
+    .TeamAboutUs-heading{
+        font-size:30px;
+    }
+}

@@ -31,7 +31,7 @@
 }
 
 .cf_text2 {
-  font-size: 15px;
+  font-size: 18px;
   color: white;
 }
 
@@ -46,8 +46,8 @@
 }
 
 .cf_image iframe {
-  width: 80%;
-  margin: 0 auto;
+  width: 100%;
+  margin: auto;
 }
 
 .cf_help {
@@ -127,7 +127,7 @@
   .cf_car {
     display: flex;
     align-items: center;
-    flex-direction: column;
+    flex-direction:column-reverse;
     padding: 7% 5%;
   }
   .cf_text {
@@ -136,8 +136,11 @@
   }
 
   .cf_image {
-    display: block;
-    margin-left: auto;
+    /* display: block; */
+    /* margin-left: auto; */
+      /* margin-top: auto;
+      margin-bottom: auto; */
+    /* height: auto; */
   }
 
   .cf_help {
