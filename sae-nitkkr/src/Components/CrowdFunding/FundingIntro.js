@@ -1,10 +1,10 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react'
+import { Link } from 'react-router-dom'
 
-import Donate from "../../Assets/CrowdFunding/donate.png";
-import "./FundingIntro.css";
+import Donate from '../../Assets/CrowdFunding/donate.png'
+import './FundingIntro.css'
 
-export default function CrowdFunding() {
+export default function CrowdFunding({ netAmount, amountReceived }) {
   return (
     <>
       <div className="cf_container">
@@ -23,18 +23,29 @@ export default function CrowdFunding() {
         <div className="cf_help">
           <div className="cf_helpText">
             <b>help us achieve our goal</b>
+            <a href="/crowdfunding#funding_form">
             <button className="cf_button">
-              <a href="/crowdfunding#funding_form">
                 {" "}
                 <b style={{color: '#fff'}}>DONATE</b>
-              </a>
             </button>
+              </a>
           </div>
-          <div className="cf_helpImg">
-            <img src={Donate} alt="Steps" />
+          <div>
+            <div className='fund-intro-fund-box'>
+              <div style={{ color: '#00FF00' }} className='fund-intro-amount'>
+                ₹ {`${amountReceived}`}
+              </div>
+              <div className='fund-intro-fund-text'>FUND RAISED</div>
+            </div>
+            <div className='fund-intro-fund-box'>
+              <div style={{ color: '#FF0000' }} className='fund-intro-amount'>
+                ₹ {`${netAmount - amountReceived}`}
+              </div>
+              <div className='fund-intro-fund-text'>REMAINING FUNDS</div>
+            </div>
           </div>
         </div>
       </div>
     </>
-  );
+  )
 }
