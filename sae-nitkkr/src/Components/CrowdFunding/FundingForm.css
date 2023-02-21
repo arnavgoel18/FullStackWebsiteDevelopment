@@ -78,4 +78,7 @@ textArea {
   .sampleAmount{
     margin-top: 2%;
   }
+  .FundingForm{
+    width: 90%;
+  }
 }

@@ -4,9 +4,10 @@ import NavBar from "../../Components/NavBar/NavBar";
 import Footer from "../../Components/Footer/Footer";
 import FundingForm from "../../Components/CrowdFunding/FundingForm";
 import FundingIntro from "../../Components/CrowdFunding/FundingIntro";
-import WhatisSae from "../../Components/CrowdFunding/WhatisSae";
+// import WhatisSae from "../../Components/CrowdFunding/WhatisSae";
 import ProgressBar from "../../Components/CrowdFunding/Progressbar";
 import TeamAchievements from "../../Components/CrowdFunding/TeamAchievements"
+import FundingTimeline from "../../Components/CrowdFunding/FundingTimeline";
 
 //Firebase
 import db from "../../Firebase";
@@ -14,8 +15,6 @@ import {
   doc,
   getDoc,
 } from "firebase/firestore";
-import Saga from "../../Components/CrowdFunding/Saga";
-import FundingTimeline from "../../Components/CrowdFunding/FundingTimeline";
 
 export default function CrowdFunding() {
   var [tester, setTester] = useState(true);
@@ -46,7 +45,7 @@ export default function CrowdFunding() {
         amountReceived={amount}
       />
       <FundingTimeline amount={amount}/>
-      <WhatisSae />
+      {/* <WhatisSae /> */}
       <TeamAchievements/>
       <FundingForm />
       <Footer />

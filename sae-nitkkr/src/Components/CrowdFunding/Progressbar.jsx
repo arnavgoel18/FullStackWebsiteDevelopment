@@ -42,7 +42,7 @@ const ProgressBar = (props) => {
     <div className='progress_bar_container'>
       <div className='slider' style={fillerStyles}></div>
       <div className='text'>{`${parseInt(completed)}%`} completed</div>
-      <div className='text'> <span style={{color:"red"}}>Remaining time: </span> {days} days, {hours} hours, {minutes} minutes, {seconds} seconds</div>
+      <div className='text'> <span style={{color:"red"}}>Remaining time: </span> {days} days, {hours} hours {/*, {minutes} minutes, {seconds} seconds*/}</div>
       <div className='text' > <span style={{color:"red"}}>Amount To Raise:</span> &#8377; {800000-amountReceived} </div>
 
 

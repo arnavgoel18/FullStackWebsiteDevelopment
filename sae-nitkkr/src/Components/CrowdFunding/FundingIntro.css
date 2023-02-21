@@ -28,6 +28,7 @@
   color: #32ffff;
   font-size: 40px;
   padding-bottom: 4%;
+  word-wrap: normal;
 }
 
 .cf_text2 {
@@ -158,5 +159,15 @@
 
   .cf_aboutHead {
     font-size: 20px;
+  }
+
+  
+}
+
+@media screen and (max-width:1182px) {
+  .cf_image iframe {
+    width:min-content;
+    height: max-content;
+    margin: auto;
   }
 }
