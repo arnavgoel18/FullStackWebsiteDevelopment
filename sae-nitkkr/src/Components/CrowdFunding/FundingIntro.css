@@ -124,7 +124,7 @@
   width: 50%;
 }
 
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 800px) {
   .cf_car {
     display: flex;
     align-items: center;
@@ -137,11 +137,12 @@
   }
 
   .cf_image {
-    /* display: block; */
+    display: block;  
     /* margin-left: auto; */
-      /* margin-top: auto;
-      margin-bottom: auto; */
+       /* margin-top: auto; */
+      /* margin-bottom: auto;  */
     /* height: auto; */
+    width: 100%;
   }
 
   .cf_help {
@@ -169,5 +170,10 @@
     width:min-content;
     height: max-content;
     margin: auto;
+  }
+}
+@media screen and (max-width: 425px) {
+  .cf_text1{
+    font-size: xx-large;
   }
 }
