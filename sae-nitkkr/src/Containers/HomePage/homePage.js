@@ -1,5 +1,5 @@
 import React from 'react';
-import { useEffect } from 'react';
+import { useEffect,useState } from 'react';
 
 import NavBar from '../../Components/NavBar/NavBar'
 import FirstDisplayDIV from '../../Components/FirstDisplayDIV/FirstDisplayDIV';
@@ -14,24 +14,43 @@ import Autokriti12 from '../Autokriti/Autokriti12Card/AutokritiCard'
 // import ProgressBar from '../../Components/Loader/Progressbar';
 import FundingIntro from '../../Components/CrowdFunding/FundingIntro';
 
+
+//Firebase
+import db from "../../Firebase";
+import {
+  doc,
+  getDoc,
+} from "firebase/firestore";
+
+
 function HomePage() {
 
+    let [amount, setamount] = useState(0)
+    let [netAmount, setNewAmount] = useState(0)
     useEffect(() => {
         window.scrollTo(0, 0)
+        getProgressBarInfo()
     }, [])
-
+    async function getProgressBarInfo() {
+          const docRef = doc(db, 'FundingForm', 'progressBar')
+          const docSnap = await getDoc(docRef)
+          const progressBar = docSnap.data()
+          console.log(progressBar.timestamp)
+          setamount(progressBar.collectedAmount)
+          setNewAmount(progressBar.requiredAmount)
+        }
     return (
       <>
         <NavBar />
         <FirstDisplayDIV page='Home' />
         <AboutUs page='Home' />
         <TeamsDIV />
-        
+
         <br />
         <br />
         {/* <Autokriti12 /> */}
         {/* <ExploreUs /> */}
-        <FundingIntro/>
+        <FundingIntro netAmount={netAmount} amountReceived={amount} />
         <Managers />
 
         <Footer />

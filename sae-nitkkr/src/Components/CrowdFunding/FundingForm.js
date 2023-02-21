@@ -172,10 +172,12 @@ export default function FundingForm() {
       //set progress bar
       const docRef = doc(db, "FundingForm", "progressBar");
       const docSnap = await getDoc(docRef);
-      var temp = docSnap.data().collectedAmount + fundingdata.amount;
+      var amount = parseInt(fundingdata.amount);
+      var temp = docSnap.data().collectedAmount + amount;
+      console.log(amount, typeof(amount), temp);
       await updateDoc(docRef, { collectedAmount: temp });
 
-      alert("Thank you for Donating.");
+      alert("Thank you for your Donation. This has brought us a step closer to achieving our goals!");
 
       deletedata();
     };
@@ -214,14 +216,14 @@ export default function FundingForm() {
   return (
     <>
       <div className="FundingForm" id="funding_form">
-        <h3>DONATE US</h3>
+        <h3>DONATE HERE</h3>
         <div className="Form">
           <form>
             <div className="Field">
               <input
                 type="text"
                 name="First Name"
-                placeholder="Name"
+                placeholder="First Name"
                 //required
                 id="fname"
               />
@@ -238,7 +240,7 @@ export default function FundingForm() {
               name="phone"
               //required
               id="phone-no"
-              placeholder="phone No"
+              placeholder="Phone No"
             />
             <input
               type="email"
@@ -260,7 +262,7 @@ export default function FundingForm() {
               name="amount"
               id="amount"
               required
-              placeholder="amount"
+              placeholder="Enter or Choose Amount"
             />
             <div className="sampleAmountDiv">
               <span className="sampleAmount" onClick={SetAmountText}>1000</span>

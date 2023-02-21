@@ -16,6 +16,14 @@ function NavBar() {
                 SAENITKKR
             </Link>
             <ul className={open ? 'NavigationBar_Nav-nav-links active' : 'NavigationBar_Nav-nav-links'}>
+            
+            <li className="NavigationBar_Nav-nav-item">
+                    <Link to="/Crowdfunding" className="NavigationBar_Nav-nav-link" onClick={() => setOpen(false)}>
+                        DONATE US
+                    </Link>
+                </li>
+
+
             <li className="NavigationBar_Nav-nav-item">
                     <Link to="/" className="NavigationBar_Nav-nav-link" onClick={() => setOpen(false)}>
                         Home
@@ -37,17 +45,12 @@ function NavBar() {
                     </Link>
                 </li>
 
-                <li className="NavigationBar_Nav-nav-item">
-                    <Link to="/Crowdfunding" className="NavigationBar_Nav-nav-link" onClick={() => setOpen(false)}>
-                        DONATE US
-                    </Link>
-                </li>
-
-                <li className="NavigationBar_Nav-nav-item">
+               
+                {/* <li className="NavigationBar_Nav-nav-item">
                     <Link to="/blogs" className="NavigationBar_Nav-nav-link" onClick={() => setOpen(false)}>
                         Blogs
                     </Link>
-                </li>
+                </li> */}
                 <li className="NavigationBar_Nav-nav-item">
                     <Link to="/sponsors" className="NavigationBar_Nav-nav-link" onClick={() => setOpen(false)}>
                         Sponsors
