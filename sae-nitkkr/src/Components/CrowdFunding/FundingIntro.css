@@ -176,4 +176,8 @@
   .cf_text1{
     font-size: xx-large;
   }
+  .cf_container{
+    margin-left: 5%;
+    margin-right: 5%;
+  }
 }

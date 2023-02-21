@@ -62,11 +62,7 @@ function TeamAchievements(){
                         </div>
                         <div className='team-achievements_team-boxContentRank'>
                             <p>ATVC 2020</p>
-                            Runner Up
-                        </div>
-                        <div className='team-achievements_team-boxContentRank'>
-                            <p>BAJA USA 2020</p>
-                            INTERNATIONAL RANK 20
+                            AIR 2 Overall
                         </div>
                         <div className='team-achievements_team-boxContentRank'>
                             <p>BAJA 2019</p>
@@ -74,6 +70,10 @@ function TeamAchievements(){
                             AIR 7 in Sales<br></br>
                             AIR 6 in Acceleration<br></br>
                             AIR 8 in Rock Crawl
+                        </div>
+                        <div className='team-achievements_team-boxContentRank'>
+                            <p>BAJA USA 2018</p>
+                            INTERNATIONAL RANK 22
                         </div>
                         <div className='team-achievements_team-boxContentRank'>
                             <p>BAJA 2018</p>
