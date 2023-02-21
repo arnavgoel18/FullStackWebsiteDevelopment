@@ -298,7 +298,7 @@ export default function FundingForm() {
                 <span>IFSC Code: </span>
                 <span>SBIN0006260</span>
               </div>
-              <div style={{marginTop:'12px'}}><b>*NOTE:</b> Please add your contact details during Bnak Transfer in comment Section.</div>
+              <div style={{marginTop:'12px'}}><b>*NOTE:</b> Please add your contact details during Bank Transfer in comment Section.</div>
               <div className="texti"><input type="checkbox" id="check" required />
               I accept </div> <span className="textt">
               {' '}

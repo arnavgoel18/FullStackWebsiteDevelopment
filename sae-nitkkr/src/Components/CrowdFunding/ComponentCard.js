@@ -4,7 +4,8 @@ import "./FundingTimeline.css";
 function ComponentCard({title, image, status, price}) {
   return (
     <div className="component_main_conatiner" style={{
-      border:status=="Reached"?"4px solid #61FF00 ":"4px solid grey"
+      border:status=="Reached"?"4px solid #61FF00 ":"4px solid grey",
+      cursor:'default'
       
       }}>
       <div className='component_title'>
