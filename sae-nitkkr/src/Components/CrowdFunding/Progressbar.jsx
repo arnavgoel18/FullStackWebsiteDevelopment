@@ -10,7 +10,7 @@ const ProgressBar = (props) => {
     var date = new Date();
     var currentTime = Math.floor(date.getTime()/1000);
     setRemainingTime(remainingTime - currentTime);
-    console.log(remainingTime + "yo");
+    //console.log(remainingTime + "yo");
   }
 
   if (tester == true) {

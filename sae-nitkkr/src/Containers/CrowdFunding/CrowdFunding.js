@@ -32,7 +32,7 @@ export default function CrowdFunding() {
     const docRef = doc(db, "FundingForm", "progressBar");
     const docSnap = await getDoc(docRef);
     const progressBar = docSnap.data();
-    console.log(progressBar.timestamp)
+    //console.log(progressBar.timestamp)
     setamount(progressBar.collectedAmount)
     setNewAmount(progressBar.requiredAmount)
     var temp = ((progressBar.requiredAmount - progressBar.collectedAmount)/progressBar.requiredAmount)*100;

@@ -139,7 +139,7 @@ function FundingTimeline({ amount }) {
 
   useEffect(() => {
     const handleResize = () => {
-      console.log('called', window.innerWidth)
+      //console.log('called', window.innerWidth)
       predictDevice(window.innerWidth)
     }
 
