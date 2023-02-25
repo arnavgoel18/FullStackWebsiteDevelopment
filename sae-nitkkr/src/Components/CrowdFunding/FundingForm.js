@@ -270,12 +270,12 @@ export default function FundingForm() {
               placeholder="Enter or Choose Amount"
             />
             <div className="sampleAmountDiv">
-              <span className="sampleAmount" onClick={SetAmountText}>1000</span>
-              <span className="sampleAmount" onClick={SetAmountText}>5000</span>{" "}
-              <span className="sampleAmount" onClick={SetAmountText}>10,000</span>{" "}
-              <span className="sampleAmount" onClick={SetAmountText}>25,000</span>{" "}
-              <span className="sampleAmount" onClick={SetAmountText}>50,000</span>{" "}
               <span className="sampleAmount" onClick={SetAmountText}>1,00,000</span>
+              <span className="sampleAmount" onClick={SetAmountText}>75,000</span>{" "}
+              <span className="sampleAmount" onClick={SetAmountText}>60,000</span>{" "}
+              <span className="sampleAmount" onClick={SetAmountText}>50,000</span>{" "}
+              <span className="sampleAmount" onClick={SetAmountText}>20,000</span>{" "}
+              <span className="sampleAmount" onClick={SetAmountText}>10,000</span>
             </div>
             <div className="msg">Message You Want to Convey To Our Team </div>
             <textarea
