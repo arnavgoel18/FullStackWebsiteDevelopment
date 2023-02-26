@@ -62,23 +62,28 @@ export default function FundingForm() {
       );
   };
 
+  const saveDatabase = async (fundingData) => {
+    var timestamp = String(new Date().getTime());
+    await setDoc(doc(db, "FundingForm", timestamp), fundingData);
+  }
 
   //form validation
   function validateForm(fundingdata, checkbox) {
     if (
-      fundingdata.amount == ""
-      // fundingdata.FirstName == "" ||
+      fundingdata.amount == ""  ||
+       fundingdata.FirstName == "" ||
       // fundingdata.LastName == "" ||
       // // fundingdata.CompanyName == "" ||
-      // fundingdata.phone == "" ||
+       fundingdata.phone == ""
       // fundingdata.email == "" ||
       // fundingdata.longAns1 == ""
     ) {
       alert("Please fill up the Amount.");
      } 
-     //else if (fundingdata.phone.length != 10) {
-    //   alert("phone number should be of length 10.");
-    // } else if (
+     else if (fundingdata.phone.length != 10) {
+       alert("phone number should be of length 10.");
+     } 
+     //else if (
     //   !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(fundingdata.email)
     // ) {
     //   alert("Please enter a valid email address.");
@@ -86,7 +91,7 @@ export default function FundingForm() {
      else if (checkbox.checked == false) {
       alert("Please accept the terms and condition.");
     } else if(parseInt(fundingdata.amount) >= 20000){
-      console.log(parseInt(fundingdata.amount))
+      saveDatabase(fundingdata);
       var bankDetails = document.getElementById("bank_details");
       bankDetails.style.display = "flex";
     }else{
@@ -97,7 +102,6 @@ export default function FundingForm() {
   function deletedata() {
     var FirstName = document.getElementById("fname");
     var LastName = document.getElementById("lname");
-    // var CompanyName = document.getElementById("comp-name");
     var amount = document.getElementById("amount");
     var phone = document.getElementById("phone-no");
     var email = document.getElementById("comp-email");
@@ -105,7 +109,6 @@ export default function FundingForm() {
 
     FirstName.value = null;
     LastName.value = null;
-    // CompanyName.value = null;
     amount.value = null;
     phone.value = null;
     email.value = null;
@@ -114,6 +117,10 @@ export default function FundingForm() {
 
   const makePayment = async (fundingdata) => {
     const res = await initializeRazorpay();
+
+    var timestamp = String(new Date().getTime());
+    await setDoc(doc(db, "FundingForm", timestamp), fundingdata);
+
     document.getElementById("comp-button").disabled = true;
     document.getElementById("comp-button").style.background = "grey";
     setTimeout(() => {
@@ -166,8 +173,6 @@ export default function FundingForm() {
 
     const set_to_database = async (firstname,email) => {
       sendEmail(firstname,email);
-      var timestamp = String(new Date().getTime());
-      await setDoc(doc(db, "FundingForm", timestamp), fundingdata);
 
       //set progress bar
       const docRef = doc(db, "FundingForm", "progressBar");
@@ -224,7 +229,7 @@ export default function FundingForm() {
                 type="text"
                 name="First Name"
                 placeholder="First Name"
-                //required
+                required
                 id="fname"
               />
               <input
@@ -238,7 +243,7 @@ export default function FundingForm() {
             <input
               type="number"
               name="phone"
-              //required
+              required
               id="phone-no"
               placeholder="Phone No"
             />
@@ -265,12 +270,12 @@ export default function FundingForm() {
               placeholder="Enter or Choose Amount"
             />
             <div className="sampleAmountDiv">
-              <span className="sampleAmount" onClick={SetAmountText}>1000</span>
-              <span className="sampleAmount" onClick={SetAmountText}>5000</span>{" "}
-              <span className="sampleAmount" onClick={SetAmountText}>10,000</span>{" "}
-              <span className="sampleAmount" onClick={SetAmountText}>25,000</span>{" "}
-              <span className="sampleAmount" onClick={SetAmountText}>50,000</span>{" "}
               <span className="sampleAmount" onClick={SetAmountText}>1,00,000</span>
+              <span className="sampleAmount" onClick={SetAmountText}>75,000</span>{" "}
+              <span className="sampleAmount" onClick={SetAmountText}>60,000</span>{" "}
+              <span className="sampleAmount" onClick={SetAmountText}>50,000</span>{" "}
+              <span className="sampleAmount" onClick={SetAmountText}>20,000</span>{" "}
+              <span className="sampleAmount" onClick={SetAmountText}>10,00,000</span>
             </div>
             <div className="msg">Message You Want to Convey To Our Team </div>
             <textarea
@@ -299,13 +304,13 @@ export default function FundingForm() {
                 <span>SBIN0006260</span>
               </div>
               <div style={{marginTop:'12px'}}><b>*NOTE:</b> Please add your contact details during Bank Transfer in comment Section.</div>
-              <div className="texti"><input type="checkbox" id="check" required />
+              {/* <div className="texti"><input type="checkbox" id="check" required />
               I accept </div> <span className="textt">
               {' '}
               <Link to="/termsandconditions" target="_blank">
                 Terms and Conditions*
-              </Link>
-            </span> 
+              </Link> */}
+            {/* </span>  */}
             </div>
             <button
               className="pay"

@@ -34,8 +34,7 @@ function HomePage() {
     async function getProgressBarInfo() {
           const docRef = doc(db, 'FundingForm', 'progressBar')
           const docSnap = await getDoc(docRef)
-          const progressBar = docSnap.data()
-          console.log(progressBar.timestamp)
+          const progressBar = docSnap.data();
           setamount(progressBar.collectedAmount)
           setNewAmount(progressBar.requiredAmount)
         }
