@@ -12,43 +12,6 @@ function TeamAchievements(){
                 </div>
             </div>
             <div className='team-achievements_box'>
-                <div className='team-achievements_team-box'>
-                    <div className='team-achievements_team-boxHeader'>
-                        <div className='team-achievements_team-boxHeaderIcon'><img src={formulaCar}></img></div>
-                        <div className='team-achievements_team-boxHeaderName'>Team Accelerons</div>
-                    </div>
-                    <div className='team-achievements_team-boxContent'>
-                        <div className='team-achievements_team-boxContentRank'>
-                            <p>2022 Formula Bharat</p>
-                            AIR 5 Overall<br/>
-                            AIR 3 CGMR Event
-                        </div>
-                        <div className='team-achievements_team-boxContentRank'>
-                            <p>2019</p>
-                            Only Team to Incorporate Clutch System(CLUTCHLESS) in FS car Customized Engine wiring Self Design Intake Manifold and Exhaust System
-                        </div>
-                        <div className='team-achievements_team-boxContentRank'>
-                            <p>2018</p>
-                            1st among NITs in FORMULA BHARAT <br></br>
-                            AIR 6 in Endurance Race <br></br>
-                            AIR 12 in Cost Event Overall 16th Rank among 70 Teams
-                        </div>
-                        <div className='team-achievements_team-boxContentRank'>
-                            <p>2017</p>
-                            Overall 18th rank in SUPRA SAE INDIA
-                        </div>
-                        <div className='team-achievements_team-boxContentRank'>
-                            <p>2016</p>
-                            AIR 25 in FORMULA STUDENT INDIA 2016
-                        </div>
-                        <div className='team-achievements_team-boxContentRank'>
-                            <p>2015</p>
-                            Installed Pneumatic Gear Shifter<br></br>
-                            AIR 10 in COST EVENT<br></br>
-                            AIR 30 in Formula Design
-                        </div>
-                    </div>
-                </div>
                 <div className='team-achievements_team-box' style={{boxShadow: '-7px 7px 4px blue'}}>
                     <div className='team-achievements_team-boxHeader'>
                         <div className='team-achievements_team-boxHeaderIcon'><img src={atv}></img></div>
@@ -115,6 +78,43 @@ function TeamAchievements(){
                             <p>BAJA 2012</p>
                             First Time VIRTUALLY CLEARED<br></br>
                             Roared on BAJA tracks in all events – Hill Climb, Endurance, Acceleration
+                        </div>
+                    </div>
+                </div>
+                <div className='team-achievements_team-box'>
+                    <div className='team-achievements_team-boxHeader'>
+                        <div className='team-achievements_team-boxHeaderIcon'><img src={formulaCar}></img></div>
+                        <div className='team-achievements_team-boxHeaderName'>Team Accelerons</div>
+                    </div>
+                    <div className='team-achievements_team-boxContent'>
+                        <div className='team-achievements_team-boxContentRank'>
+                            <p>2022 Formula Bharat</p>
+                            AIR 5 Overall<br/>
+                            AIR 3 CGMR Event
+                        </div>
+                        <div className='team-achievements_team-boxContentRank'>
+                            <p>2019</p>
+                            Only Team to Incorporate Clutch System(CLUTCHLESS) in FS car Customized Engine wiring Self Design Intake Manifold and Exhaust System
+                        </div>
+                        <div className='team-achievements_team-boxContentRank'>
+                            <p>2018</p>
+                            1st among NITs in FORMULA BHARAT <br></br>
+                            AIR 6 in Endurance Race <br></br>
+                            AIR 12 in Cost Event Overall 16th Rank among 70 Teams
+                        </div>
+                        <div className='team-achievements_team-boxContentRank'>
+                            <p>2017</p>
+                            Overall 18th rank in SUPRA SAE INDIA
+                        </div>
+                        <div className='team-achievements_team-boxContentRank'>
+                            <p>2016</p>
+                            AIR 25 in FORMULA STUDENT INDIA 2016
+                        </div>
+                        <div className='team-achievements_team-boxContentRank'>
+                            <p>2015</p>
+                            Installed Pneumatic Gear Shifter<br></br>
+                            AIR 10 in COST EVENT<br></br>
+                            AIR 30 in Formula Design
                         </div>
                     </div>
                 </div>

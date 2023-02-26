@@ -91,50 +91,50 @@ function FundingTimeline({ amount }) {
       title: 'DriveTrain',
       image: drivetrain,
       status: amount >= 80000 ? 'Reached' : 'Notreached',
-      price: '50,000',
+      price: '80,000',
     },
     {
       id: 3,
       title: 'Gearbox',
       image: gearbox,
       status: amount >= 130000 ? 'Reached' : 'Notreached',
-      price: '50,000',
+      price: '1,30,000',
     },
     {
       id: 4,
       title: 'Dampers',
       image: damper,
       status: amount >= 280000 ? 'Reached' : 'Notreached',
-      price: '1,50,000',
+      price: '2,80,000',
     },
     {
       id: 5,
       title: 'Tyre Set',
       image: tyres,
       status: amount >= 380000 ? 'Reached' : 'Notreached',
-      price: '1,00,000',
+      price: '3,80,000',
     },
     {
       id: 6,
       title: 'Machining',
       image: machining,
       status: amount >= 480000 ? 'Reached' : 'Notreached',
-      price: '1,00,000',
+      price: '4,80,000',
     },
     {
       id: 7,
       title: 'Battery',
       image: battery,
       status: amount >= 680000 ? 'Reached' : 'Notreached',
-      price: '2,00,000',
+      price: '6,80,000',
     },
     {
       id: 8,
       title: 'Safety Gears',
       image: safetygear,
       status: amount >= 800000 ? 'Reached' : 'Notreached',
-      price: '1,20,000',
-    },
+      price: '8,00,000',
+    }
   ]
 
   useEffect(() => {

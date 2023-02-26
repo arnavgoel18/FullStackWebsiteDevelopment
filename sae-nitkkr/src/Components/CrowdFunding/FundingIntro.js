@@ -16,6 +16,7 @@ export default function CrowdFunding({ netAmount, amountReceived }) {
             </div>
           </div>
           <div className="cf_image">
+          {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/qpq4O-wMBqo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="true"></iframe> */}
           <iframe width="560" height="315" src="https://www.youtube.com/embed/qpq4O-wMBqo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="true"></iframe>
           </div>
         </div>
