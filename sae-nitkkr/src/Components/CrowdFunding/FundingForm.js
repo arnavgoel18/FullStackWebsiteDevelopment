@@ -75,14 +75,13 @@ export default function FundingForm() {
     if (
       fundingdata.amount == ""  ||
        fundingdata.FirstName == "" ||
-      // fundingdata.LastName == "" ||
-      // // fundingdata.CompanyName == "" ||
        fundingdata.phone == ""
-      // fundingdata.email == "" ||
-      // fundingdata.longAns1 == ""
     ) {
-      alert("Please fill up the Amount.");
+      alert("Please fill The required details.");
      } 
+     else if(parseInt(fundingdata.amount) < 1){
+        alert("Entered amount should be greater than 0");
+     }
      else if (fundingdata.phone.length != 10) {
        alert("phone number should be of length 10.");
      } 
@@ -231,7 +230,7 @@ export default function FundingForm() {
               <input
                 type='text'
                 name='First Name'
-                placeholder='First Name'
+                placeholder='First Name*'
                 required
                 id='fname'
               />
@@ -249,7 +248,7 @@ export default function FundingForm() {
               onKeyDown={blockInvalidChar}
               required
               id='phone-no'
-              placeholder='Phone No'
+              placeholder='Phone No*'
             />
             <input
               type='email'
@@ -273,7 +272,7 @@ export default function FundingForm() {
               name='amount'
               id='amount'
               required
-              placeholder='Enter or Choose Amount'
+              placeholder='Enter or Choose Amount*'
             />
             <div className='sampleAmountDiv'>
               <span className='sampleAmount' onClick={SetAmountText}>
