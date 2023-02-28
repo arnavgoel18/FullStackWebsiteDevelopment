@@ -14,6 +14,9 @@ import {
 import emailjs from "@emailjs/browser";
 
 export default function FundingForm() {
+  const blockInvalidChar = (e) =>
+    ['e', 'E', '+', '-'].includes(e.key) && e.preventDefault()
+
   function submit() {
     var FirstName = document.getElementById("fname");
     var LastName = document.getElementById("lname");
@@ -220,39 +223,40 @@ export default function FundingForm() {
   }
   return (
     <>
-      <div className="FundingForm" id="funding_form">
+      <div className='FundingForm' id='funding_form'>
         <h3>DONATE HERE</h3>
-        <div className="Form">
+        <div className='Form'>
           <form>
-            <div className="Field">
+            <div className='Field'>
               <input
-                type="text"
-                name="First Name"
-                placeholder="First Name"
+                type='text'
+                name='First Name'
+                placeholder='First Name'
                 required
-                id="fname"
+                id='fname'
               />
               <input
-                type="text"
-                name="Last Name"
-                id="lname"
+                type='text'
+                name='Last Name'
+                id='lname'
                 //required
-                placeholder="Last Name"
+                placeholder='Last Name'
               />
             </div>
             <input
-              type="number"
-              name="phone"
+              type='number'
+              name='phone'
+              onKeyDown={blockInvalidChar}
               required
-              id="phone-no"
-              placeholder="Phone No"
+              id='phone-no'
+              placeholder='Phone No'
             />
             <input
-              type="email"
-              name="Email"
-              id="comp-email"
+              type='email'
+              name='Email'
+              id='comp-email'
               //required
-              placeholder="Email"
+              placeholder='Email'
             />
             {/* <input
               type="text"
@@ -263,35 +267,61 @@ export default function FundingForm() {
             /> */}
 
             <input
-              type="number"
-              name="amount"
-              id="amount"
+              type='number'
+              onKeyDown={blockInvalidChar}
+              min='1'
+              name='amount'
+              id='amount'
               required
-              placeholder="Enter or Choose Amount"
+              placeholder='Enter or Choose Amount'
             />
-            <div className="sampleAmountDiv">
-              <span className="sampleAmount" onClick={SetAmountText}>3,00,000</span>
-              <span className="sampleAmount" onClick={SetAmountText}>1,00,000</span>
-              <span className="sampleAmount" onClick={SetAmountText}>75,000</span>{" "}
-              <span className="sampleAmount" onClick={SetAmountText}>60,000</span>{" "}
-              <span className="sampleAmount" onClick={SetAmountText}>50,000</span>{" "}
-              <span className="sampleAmount" onClick={SetAmountText}>20,000</span>{" "}
-              <span className="sampleAmount" onClick={SetAmountText}>10,000</span>
+            <div className='sampleAmountDiv'>
+              <span className='sampleAmount' onClick={SetAmountText}>
+                3,00,000
+              </span>
+              <span className='sampleAmount' onClick={SetAmountText}>
+                1,00,000
+              </span>
+              <span className='sampleAmount' onClick={SetAmountText}>
+                75,000
+              </span>{' '}
+              <span className='sampleAmount' onClick={SetAmountText}>
+                60,000
+              </span>{' '}
+              <span className='sampleAmount' onClick={SetAmountText}>
+                50,000
+              </span>{' '}
+              <span className='sampleAmount' onClick={SetAmountText}>
+                20,000
+              </span>{' '}
+              <span className='sampleAmount' onClick={SetAmountText}>
+                10,000
+              </span>
             </div>
-            <div className="msg">Message You Want to Convey To Our Team </div>
+            <div className='msg'>Message You Want to Convey To Our Team </div>
             <textarea
-              type="text"
-              id="text1"
+              type='text'
+              id='text1'
               required
-              placeholder="Type here..."
-              rows="10"
+              placeholder='Type here...'
+              rows='10'
             />
-            <div className="check-Field">
-              <input type="checkbox" id="check" required />I accept &nbsp;
-              <a href="/termsandconditions" target={"_blank"} style={{color:"blue"}}> <u> Terms and Conditions*</u></a>
+            <div className='check-Field'>
+              <input type='checkbox' id='check' required />I accept &nbsp;
+              <a
+                href='/termsandconditions'
+                target={'_blank'}
+                style={{ color: 'blue' }}
+              >
+                {' '}
+                <u> Terms and Conditions*</u>
+              </a>
             </div>
-            <div id="bank_details">
-              <h4 style={{marginBottom:'10px'}}>The amount is greater than 20,000. To avoid transaction fee, Please Pay directly via <u>Bank Transfer</u>:</h4>
+            <div id='bank_details'>
+              <h4 style={{ marginBottom: '10px' }}>
+                The amount is greater than 20,000. To avoid transaction fee,
+                Please Pay directly via <u>Bank Transfer</u>:
+              </h4>
               <div>
                 <span>Account Name: </span>
                 <span>SAE INDIA NIT KKR COLLEGIATE CLUB</span>
@@ -304,19 +334,22 @@ export default function FundingForm() {
                 <span>IFSC Code: </span>
                 <span>SBIN0006260</span>
               </div>
-              <div style={{marginTop:'12px'}}><b>*NOTE:</b> Please add your contact details during Bank Transfer in comment Section.</div>
+              <div style={{ marginTop: '12px' }}>
+                <b>*NOTE:</b> Please add your contact details during Bank
+                Transfer in comment Section.
+              </div>
               {/* <div className="texti"><input type="checkbox" id="check" required />
               I accept </div> <span className="textt">
               {' '}
               <Link to="/termsandconditions" target="_blank">
                 Terms and Conditions*
               </Link> */}
-            {/* </span>  */}
+              {/* </span>  */}
             </div>
             <button
-              className="pay"
-              type="button"
-              id="comp-button"
+              className='pay'
+              type='button'
+              id='comp-button'
               onClick={submit}
             >
               CONTINUE TO PAY
@@ -325,5 +358,5 @@ export default function FundingForm() {
         </div>
       </div>
     </>
-  );
+  )
 }
