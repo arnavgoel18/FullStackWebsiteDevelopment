@@ -217,8 +217,6 @@ export default function FundingForm() {
     var temp = e.target.innerText;
     var amountToBeSet = parseInt(temp.split(',').join(''));
     var amount = document.getElementById('amount');
-    
-    console.log(amountToBeSet, typeof(amountToBeSet),amount);
     amount.value = amountToBeSet ;
   }
   return (
@@ -277,16 +275,13 @@ export default function FundingForm() {
             />
             <div className='sampleAmountDiv'>
               <span className='sampleAmount' onClick={SetAmountText}>
-                3,00,000
+                2,00,000
               </span>
               <span className='sampleAmount' onClick={SetAmountText}>
                 1,00,000
               </span>
               <span className='sampleAmount' onClick={SetAmountText}>
                 75,000
-              </span>{' '}
-              <span className='sampleAmount' onClick={SetAmountText}>
-                60,000
               </span>{' '}
               <span className='sampleAmount' onClick={SetAmountText}>
                 50,000
@@ -296,6 +291,12 @@ export default function FundingForm() {
               </span>{' '}
               <span className='sampleAmount' onClick={SetAmountText}>
                 10,000
+              </span>{' '}
+              <span className='sampleAmount' onClick={SetAmountText}>
+              5,000
+              </span>
+              <span className='sampleAmount' onClick={SetAmountText}>
+                2,000
               </span>
             </div>
             <div className='msg'>Message You Want to Convey To Our Team </div>
