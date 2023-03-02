@@ -70,6 +70,11 @@ textArea {
   box-sizing: border-box;
   margin: 15px;
 }
+.QrCode{
+  height: 20%;
+  width: 50%;
+
+}
 @media (min-width: 320px) and (max-width: 620px) {
   .Field {
     display: flex;

@@ -12,6 +12,7 @@ import {
   serverTimestamp,
 } from "firebase/firestore";
 import emailjs from "@emailjs/browser";
+import QrCode from "../../Assets/30993905530@sbi.png"
 
 export default function FundingForm() {
   const blockInvalidChar = (e) =>
@@ -332,6 +333,13 @@ export default function FundingForm() {
               <div>
                 <span>IFSC Code: </span>
                 <span>SBIN0006260</span>
+              </div>
+              <div>
+              <img
+              src={QrCode}
+              loading="lazy"
+              className="QrCode"
+              ></img>
               </div>
               <div style={{ marginTop: '12px' }}>
                 <b>*NOTE:</b> Please add your contact details during Bank
