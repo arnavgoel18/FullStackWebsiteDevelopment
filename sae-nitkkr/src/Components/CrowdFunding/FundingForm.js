@@ -1,8 +1,8 @@
 import { useEffect } from "react";
+import { useState } from "react";
 import React from "react";
 import "./FundingForm.css";
 import saelogo from "../../Assets/SAELOGO.png";
-import { Link } from 'react-router-dom'
 import db from "../../Firebase.js";
 import {
   updateDoc,
@@ -12,9 +12,11 @@ import {
   serverTimestamp,
 } from "firebase/firestore";
 import emailjs from "@emailjs/browser";
-import QrCode from "../../Assets/30993905530@sbi.png"
+import QrCode from "../../Assets/30993905530@sbi.png";
+import Modal from "./Modal/Modal";
 
 export default function FundingForm() {
+  const [show, setShow] = useState(false);
   const blockInvalidChar = (e) =>
     ['e', 'E', '+', '-'].includes(e.key) && e.preventDefault()
 
@@ -185,8 +187,8 @@ export default function FundingForm() {
       console.log(amount, typeof(amount), temp);
       await updateDoc(docRef, { collectedAmount: temp });
 
-      alert("Thank you for your Donation. This has brought us a step closer to achieving our goals!");
-
+      //alert("Thank you for your Donation. This has brought us a step closer to achieving our goals!");
+      setShow(true);
       deletedata();
     };
 
@@ -363,6 +365,9 @@ export default function FundingForm() {
               CONTINUE TO PAY
             </button>
           </form>
+          <Modal title="My Modal" onClose={() => setShow(false)} show={show}>
+            <p>SAE NIT KURUKSHETRA</p>
+          </Modal>
         </div>
       </div>
     </>

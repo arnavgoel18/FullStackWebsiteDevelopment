@@ -47,6 +47,7 @@
     "react-slick": "^0.28.1",
     "react-spinners": "^0.11.0",
     "react-table": "^7.7.0",
+    "react-transition-group": "^4.4.5",
     "react-vertical-timeline-component": "^3.5.2",
     "react-web-share": "^1.1.0",
     "sass": "^1.49.7",
