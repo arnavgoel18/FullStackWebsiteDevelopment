@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useState } from "react";
 import React from "react";
 import "./FundingForm.css";
 import saelogo from "../../Assets/SAELOGO.png";
@@ -10,12 +11,18 @@ import {
   getDoc,
   serverTimestamp,
 } from "firebase/firestore";
+import emailjs from "@emailjs/browser";
+import QrCode from "../../Assets/30993905530@sbi.png";
+import Modal from "./Modal/Modal";
 
 export default function FundingForm() {
+  const [show, setShow] = useState(false);
+  const blockInvalidChar = (e) =>
+    ['e', 'E', '+', '-'].includes(e.key) && e.preventDefault()
+
   function submit() {
     var FirstName = document.getElementById("fname");
     var LastName = document.getElementById("lname");
-    var CompanyName = document.getElementById("comp-name");
     var amount = document.getElementById("amount");
     var phone = document.getElementById("phone-no");
     var email = document.getElementById("comp-email");
@@ -25,7 +32,6 @@ export default function FundingForm() {
     const fundingdata = {
       FirstName: FirstName.value,
       LastName: LastName.value,
-      CompanyName: CompanyName.value,
       amount: amount.value,
       phone: phone.value,
       email: email.value,
@@ -34,30 +40,66 @@ export default function FundingForm() {
       orderid: "",
       paymentid: "",
     };
-    // console.log(fundingdata);
+
     validateForm(fundingdata, checkbox);
+  }
+
+  const sendEmail = (firstname,email) => {
+    console.log("hello destination");
+    const toSend = {
+      name: firstname,
+      email: email,
+    };
+    emailjs
+      .send(
+        "service_v2mc09h",
+        "template_eeq49xm",
+        toSend,
+        "9MHjCKHFFUfBlu_xC"
+      )
+      .then(
+        
+        function (response) {
+          console.log("SUCCESS!", response.status, response.text);
+        },
+        function (error) {
+          console.log("FAILED...", error);
+        }
+      );
+  };
+
+  const saveDatabase = async (fundingData) => {
+    var timestamp = String(new Date().getTime());
+    await setDoc(doc(db, "FundingForm", timestamp), fundingData);
   }
 
   //form validation
   function validateForm(fundingdata, checkbox) {
     if (
-      fundingdata.FirstName == "" ||
-      fundingdata.LastName == "" ||
-      fundingdata.CompanyName == "" ||
-      fundingdata.phone == "" ||
-      fundingdata.email == "" ||
-      fundingdata.longAns1 == ""
+      fundingdata.amount == ""  ||
+       fundingdata.FirstName == "" ||
+       fundingdata.phone == ""
     ) {
-      alert("Please fill up the required fields.");
-    } else if (fundingdata.phone.length != 10) {
-      alert("phone number should be of length 10.");
-    } else if (
-      !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(fundingdata.email)
-    ) {
-      alert("Please enter a valid email address.");
-    } else if (checkbox.checked == false) {
+      alert("Please fill The required details.");
+     } 
+     else if(parseInt(fundingdata.amount) < 1){
+        alert("Entered amount should be greater than 0");
+     }
+     else if (fundingdata.phone.length != 10) {
+       alert("phone number should be of length 10.");
+     } 
+     //else if (
+    //   !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(fundingdata.email)
+    // ) {
+    //   alert("Please enter a valid email address.");
+     //} 
+     else if (checkbox.checked == false) {
       alert("Please accept the terms and condition.");
-    } else {
+    } else if(parseInt(fundingdata.amount) >= 20000){
+      saveDatabase(fundingdata);
+      var bankDetails = document.getElementById("bank_details");
+      bankDetails.style.display = "flex";
+    }else{
       makePayment(fundingdata);
     }
   }
@@ -65,7 +107,6 @@ export default function FundingForm() {
   function deletedata() {
     var FirstName = document.getElementById("fname");
     var LastName = document.getElementById("lname");
-    var CompanyName = document.getElementById("comp-name");
     var amount = document.getElementById("amount");
     var phone = document.getElementById("phone-no");
     var email = document.getElementById("comp-email");
@@ -73,7 +114,6 @@ export default function FundingForm() {
 
     FirstName.value = null;
     LastName.value = null;
-    CompanyName.value = null;
     amount.value = null;
     phone.value = null;
     email.value = null;
@@ -82,6 +122,10 @@ export default function FundingForm() {
 
   const makePayment = async (fundingdata) => {
     const res = await initializeRazorpay();
+
+    var timestamp = String(new Date().getTime());
+    await setDoc(doc(db, "FundingForm", timestamp), fundingdata);
+
     document.getElementById("comp-button").disabled = true;
     document.getElementById("comp-button").style.background = "grey";
     setTimeout(() => {
@@ -93,7 +137,7 @@ export default function FundingForm() {
       alert("Razorpay SDK Failed to load");
       return;
     }
-    
+
     // Make API call to the serverless API
     const data = await fetch("https://saepayment.onrender.com/razorpay", {
       method: "POST",
@@ -117,7 +161,7 @@ export default function FundingForm() {
       image: { saelogo },
       handler: async (response) => {
         await handler(response);
-        await set_to_database();
+        await set_to_database(fundingdata.FirstName, fundingdata.email);
         console.log(options);
       },
       prefill: {
@@ -132,17 +176,19 @@ export default function FundingForm() {
       fundingdata.paymentid = response.razorpay_payment_id;
     };
 
-    const set_to_database = async () => {
-      var timestamp = String(new Date().getTime());
-      await setDoc(doc(db, "FundingForm", timestamp), fundingdata);
+    const set_to_database = async (firstname,email) => {
+      sendEmail(firstname,email);
 
       //set progress bar
       const docRef = doc(db, "FundingForm", "progressBar");
       const docSnap = await getDoc(docRef);
-      var temp = docSnap.data().collectedAmount + fundingdata.amount;
-      await updateDoc(docRef, { collectedAmount: temp} );
+      var amount = parseInt(fundingdata.amount);
+      var temp = docSnap.data().collectedAmount + amount;
+      console.log(amount, typeof(amount), temp);
+      await updateDoc(docRef, { collectedAmount: temp });
 
-      alert("Thank you for Donating.");
+      //alert("Thank you for your Donation. This has brought us a step closer to achieving our goals!");
+      setShow(true);
       deletedata();
     };
 
@@ -169,75 +215,161 @@ export default function FundingForm() {
     window.scrollTo(0, 0);
   }, []);
 
+  function SetAmountText(e){
+    var temp = e.target.innerText;
+    var amountToBeSet = parseInt(temp.split(',').join(''));
+    var amount = document.getElementById('amount');
+    amount.value = amountToBeSet ;
+  }
   return (
     <>
-      <div className="FundingForm" id="funding_form">
-        <h3>DONATE US</h3>
-        <div className="Form">
+      <div className='FundingForm' id='funding_form'>
+        <h3>DONATE HERE</h3>
+        <div className='Form'>
           <form>
-            <div className="Field">
+            <div className='Field'>
               <input
-                type="text"
-                name="First Name"
-                placeholder="Name"
+                type='text'
+                name='First Name'
+                placeholder='First Name*'
                 required
-                id="fname"
+                id='fname'
               />
               <input
-                type="text"
-                name="Last Name"
-                id="lname"
-                required
-                placeholder="Last Name"
+                type='text'
+                name='Last Name'
+                id='lname'
+                //required
+                placeholder='Last Name'
               />
             </div>
             <input
-              type="number"
-              name="phone"
+              type='number'
+              name='phone'
+              onKeyDown={blockInvalidChar}
               required
-              id="phone-no"
-              placeholder="phone No"
+              id='phone-no'
+              placeholder='Phone No*'
             />
             <input
-              type="email"
-              name="Email"
-              id="comp-email"
-              required
-              placeholder="Email"
+              type='email'
+              name='Email'
+              id='comp-email'
+              //required
+              placeholder='Email'
             />
-            <input
+            {/* <input
               type="text"
               name="CompanyName"
               id="comp-name"
               required
               placeholder="Company Name"
-            />
+            /> */}
 
             <input
-              type="number"
-              name="amount"
-              id="amount"
+              type='number'
+              onKeyDown={blockInvalidChar}
+              min='1'
+              name='amount'
+              id='amount'
               required
-              placeholder="amount"
+              placeholder='Enter or Choose Amount*'
             />
-            <div className="msg">Message You Want to Convey To Our Team </div>
-            <textarea
-              type="text"
-              id="text1"
-              required
-              placeholder="Type here..."
-              rows="10"
-            />
-            <div className="check-Field">
-              <input type="checkbox" id="check" required />I accept Terms and
-              Conditions*
+            <div className='sampleAmountDiv'>
+              <span className='sampleAmount' onClick={SetAmountText}>
+                2,00,000
+              </span>
+              <span className='sampleAmount' onClick={SetAmountText}>
+                1,00,000
+              </span>
+              <span className='sampleAmount' onClick={SetAmountText}>
+                75,000
+              </span>{' '}
+              <span className='sampleAmount' onClick={SetAmountText}>
+                50,000
+              </span>{' '}
+              <span className='sampleAmount' onClick={SetAmountText}>
+                20,000
+              </span>{' '}
+              <span className='sampleAmount' onClick={SetAmountText}>
+                10,000
+              </span>{' '}
+              <span className='sampleAmount' onClick={SetAmountText}>
+              5,000
+              </span>
+              <span className='sampleAmount' onClick={SetAmountText}>
+                2,000
+              </span>
             </div>
-            <button className="pay" type="button" id="comp-button" onClick={submit}>
+            <div className='msg'>Message You Want to Convey To Our Team </div>
+            <textarea
+              type='text'
+              id='text1'
+              required
+              placeholder='Type here...'
+              rows='10'
+            />
+            <div className='check-Field'>
+              <input type='checkbox' id='check' required />I accept &nbsp;
+              <a
+                href='/termsandconditions'
+                target={'_blank'}
+                style={{ color: 'blue' }}
+              >
+                {' '}
+                <u> Terms and Conditions*</u>
+              </a>
+            </div>
+            <div id='bank_details'>
+              <h4 style={{ marginBottom: '10px' }}>
+                The amount is greater than 20,000. To avoid transaction fee,
+                Please Pay directly via <u>Bank Transfer</u>:
+              </h4>
+              <div>
+                <span>Account Name: </span>
+                <span>SAE INDIA NIT KKR COLLEGIATE CLUB</span>
+              </div>
+              <div>
+                <span>Account Number: </span>
+                <span>30993905530</span>
+              </div>
+              <div>
+                <span>IFSC Code: </span>
+                <span>SBIN0006260</span>
+              </div>
+              <div>
+              <img
+              src={QrCode}
+              loading="lazy"
+              className="QrCode"
+              ></img>
+              </div>
+              <div style={{ marginTop: '12px' }}>
+                <b>*NOTE:</b> Please add your contact details during Bank
+                Transfer in comment Section.
+              </div>
+              {/* <div className="texti"><input type="checkbox" id="check" required />
+              I accept </div> <span className="textt">
+              {' '}
+              <Link to="/termsandconditions" target="_blank">
+                Terms and Conditions*
+              </Link> */}
+              {/* </span>  */}
+            </div>
+            <button
+              className='pay'
+              type='button'
+              id='comp-button'
+              onClick={submit}
+            >
               CONTINUE TO PAY
             </button>
           </form>
+          <Modal title="My Modal" onClose={() => setShow(false)} show={show}>
+            <p>SAE NIT KURUKSHETRA</p>
+          </Modal>
         </div>
       </div>
     </>
-  );
+  )
 }

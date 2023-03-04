@@ -16,9 +16,8 @@
   }
 
 .AboutUs-image{
-  margin-right: 50px;
   height:100%;
-  width:100%;
+  width:500px;
 }
 
 .AboutUs-box2{
@@ -73,6 +72,12 @@ padding-bottom: 10px;
   .AboutUs-box2{
     padding: 0;
   }
+}
+
+@media only screen and (max-width: 850px) {
+.AboutUs-image{
+  width:400px;
+}
 }
 
 @media only screen and (max-width: 1300px) {

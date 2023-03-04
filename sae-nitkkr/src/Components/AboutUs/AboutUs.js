@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import "./AboutUs.css";
-import image from "../../Assets/AboutUs/homeimage.png";
+// import image from "../../Assets/AboutUs/homeimage.png";
 import HomeAboutUs from "../../Assets/AcceleronsGallery/Accelerons_33.jpeg";
 import AutokritiAboutUs from "../../Assets/AutokritiGallery/AutokritiAboutUs.jpeg";
-import Autokriti from "../../Containers/Autokriti/Autokriti";
+// import Autokriti from "../../Containers/Autokriti/Autokriti";
 
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -13,9 +13,9 @@ function Home(props) {
     Aos.init({ duration: 2000 });
   }, []);
 
-  var content, contentOnlyForHomepage, contentOnlyForAutokriti;
-  var comp1, comp2, comp3, comp4;
-  var picture;
+  let content, contentOnlyForHomepage, contentOnlyForAutokriti;
+  let comp1, comp2, comp3, comp4;
+  let picture;
 
   if (props.page === "Home") {
     content =
@@ -36,31 +36,36 @@ function Home(props) {
 
   return (
     <>
-      <div className="AboutUs-boxes">
+      <div className='AboutUs-boxes'>
         <div
-          data-aos="fade-right"
-          data-aos-once="true"
-          data-aos-offset="200"
-          className="AboutUs-box1"
+          data-aos='fade-right'
+          data-aos-once='true'
+          data-aos-offset='200'
+          className='AboutUs-box1'
         >
-          <img src={picture} alt="images" className="AboutUs-image" />
+          <img
+            src={picture}
+            alt='images'
+            loading='lazy'
+            className='AboutUs-image'
+          />
         </div>
         <div
-          data-aos="fade-up"
-          data-aos-offset="200"
-          data-aos-once="true"
-          className="AboutUs-box2"
+          data-aos='fade-up'
+          data-aos-offset='200'
+          data-aos-once='true'
+          className='AboutUs-box2'
         >
-          <div className="AboutUs-box21">
+          <div className='AboutUs-box21'>
             <h2>who are</h2>
-            <h2 className="AboutUs-head">We?</h2>
+            <h2 className='AboutUs-head'>We?</h2>
           </div>
-          <div className="AboutUs-box22">
+          <div className='AboutUs-box22'>
             {content}
             <br />
             <br /> {contentOnlyForHomepage}
           </div>
-          <div className="AboutUs-box23">
+          <div className='AboutUs-box23'>
             {comp1}
             <br />
             {comp2}
@@ -71,7 +76,7 @@ function Home(props) {
         </div>
       </div>
     </>
-  );
+  )
 }
 export default Home;
 

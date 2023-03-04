@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+#funding_timeline_main_container {
+  margin: 5% 12%;
+  padding: 0% 0%;
+
+
+  /* border: 2px solid black; */
+  /* flex-wrap: wrap; */
+  display: flex;
+  flex-direction: column;
+}
+#funding_timeline_component_box {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  /* border:2px solid black; */
+  width: 100%;
+  height: 90%;
+  align-items: center;
+}
+.slick-initialized .slick-slide {
+  display: flex;
+  justify-content: space-around;
+}
+.component_main_conatiner {
+  width: 170px;
+  margin: 10% 0%;
+  border: 4px solid #61FF00 ;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  justify-content: space-between;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.container_dots {
+  display: flex;
+  justify-content: center;
+  /* border: 2px solid black; */
+}
+.component_title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+  text-transform: capitalize;
+  /* border: 2px solid black; */
+  padding: 5px 10px;
+  height:30%;
+
+  color: #000000;
+}
+.component_container{
+    /* border: 2px solid black; */
+    display: flex;
+    height: 60%;
+    justify-content: space-between;
+
+}
+
+
+@media (min-width:320px) and (max-width:425px)
+{
+    #funding_timeline_main_container {
+
+        height:max-content;
+
+      } 
+}
+@media (min-width:375px) and (max-width:700px)
+{
+  #funding_timeline_main_container {
+    margin-top: 20%;
+  }
+}
+@media (min-width:300px) and (max-width:375px)
+{
+  #funding_timeline_main_container {
+    margin-top: 30%;
+  }
+}

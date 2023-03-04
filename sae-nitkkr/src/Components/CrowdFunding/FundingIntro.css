@@ -1,7 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 
+.fund-intro-fund-box{
+ background: #FFFFFF;
+box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+width:12rem;
+height:4rem;
+ margin-bottom: 2rem;
+}
+.fund-intro-fund-box div{
+  padding-top:7px;
+  padding-left:14px;
+
+}
+.fund-intro-amount{
+font-weight: 600;
+font-size: 20px;
+line-height: 24px;
+}
+.fund-intro-fund-text{
+  font-weight: 600;
+font-size: 14px;
+line-height: 17px;  
+}
 .cf_container {
-  margin: 5%;
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -12,6 +37,7 @@
   display: flex;
   flex-direction: row;
   color: white;
+  align-items: center;
   filter: drop-shadow(8px 8px 40px rgba(0, 0, 0, 0.35));
 }
 
@@ -26,22 +52,29 @@
   color: #32ffff;
   font-size: 40px;
   padding-bottom: 4%;
+  word-wrap: normal;
 }
 
 .cf_text2 {
-  font-size: 15px;
+  font-size: 18px;
   color: white;
 }
 
 .cf_image {
-  display: block;
-  margin: 0 auto;
+  width: 100%;
+  word-wrap: break-word;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0 auto;
+  /* height: auto;   */
+ 
 }
 
-.cf_image > img {
-  width: 90%;
-  display: block;
-  margin: 0 auto;
+.cf_image iframe {
+  width: 100%;
+  margin: auto;
 }
 
 .cf_help {
@@ -50,6 +83,7 @@
   flex-direction: row;
   padding: 2% 5%;
   text-transform: uppercase;
+  justify-content:center;
 }
 
 .cf_helpText {
@@ -117,11 +151,36 @@
   width: 50%;
 }
 
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 850px) {
+ .fund-intro-fund-box{
+ width:10rem;
+height:4rem;
+border-radius: 8px;
+}
+.cf_help
+{
+    margin: 5% 7%;
+}
+}
+
+@media screen and (max-width: 1020px) {
+   .fund-intro-fund-box{
+ width:8rem;
+height:3rem;
+margin-bottom:1rem; 
+}
+.fund-intro-amount{
+font-size: 15px;
+line-height: 13px;
+}
+.fund-intro-fund-text{
+font-size: 10px;
+line-height: 17px;  
+}
   .cf_car {
     display: flex;
     align-items: center;
-    flex-direction: column;
+    flex-direction:column-reverse;
     padding: 7% 5%;
   }
   .cf_text {
@@ -130,8 +189,13 @@
   }
 
   .cf_image {
-    display: block;
-    margin-left: auto;
+    display: block;  
+    /* margin-left: auto; */
+       /* margin-top: auto; */
+      /* margin-bottom: auto;  */
+    /* height: auto; */
+    width: 100%;
+    /* height: auto; */
   }
 
   .cf_help {
@@ -149,5 +213,32 @@
 
   .cf_aboutHead {
     font-size: 20px;
+  }
+
+  
+}
+
+@media screen and (max-width: 450px) {
+  .fund-intro-amount{
+font-size: 14px;
+line-height: 12px;
+}
+.fund-intro-fund-text{
+font-size: 9px;
+line-height: 8px;  
+}
+.fund-intro-fund-box{
+width:6rem;
+height:3rem;
+border-radius: 6px;
+}
+}
+@media screen and (max-width: 425px) {
+  .cf_text1{
+    font-size: xx-large;
+  }
+  .cf_container{
+    margin-left: 5%;
+    margin-right: 5%;
   }
 }
