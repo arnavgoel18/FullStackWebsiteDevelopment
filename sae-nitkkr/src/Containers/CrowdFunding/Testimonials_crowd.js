@@ -45,7 +45,7 @@ function Testimonial_crowds() {
     return (
       <div className="testimonial_crowd">
         <div className="testimonial_crowd-title">
-          Testimonial_crowds
+          Testimonials
         </div>
         <Slider {...settings}>
           {images.map((img, idx) => (

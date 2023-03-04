@@ -15,8 +15,7 @@ import {
   doc,
   getDoc,
 } from "firebase/firestore";
-// import Testimonial_crowds from "./Testimonials_crowd";
-
+ import Testimonial_crowds from "./Testimonials_crowd";
 export default function CrowdFunding() {
   var [tester, setTester] = useState(true);
   var [completed, setCompleted] = useState(0);
@@ -57,7 +56,7 @@ export default function CrowdFunding() {
       <FundingTimeline amount={amount} />
       {/* <WhatisSae /> */}
       <TeamAchievements />
-      {/* <Testimonial_crowds/> */}
+      <Testimonial_crowds/>
       <FundingForm />
       <Footer />
     </>
