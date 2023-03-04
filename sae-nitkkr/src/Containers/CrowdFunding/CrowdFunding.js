@@ -6,7 +6,6 @@ import FundingForm from "../../Components/CrowdFunding/FundingForm";
 import FundingIntro from "../../Components/CrowdFunding/FundingIntro";
 import WhatisSae from "../../Components/CrowdFunding/WhatisSae";
 import ProgressBar from "../../Components/CrowdFunding/Progressbar";
-
 //Firebase
 import db from "../../Firebase";
 import {
@@ -14,7 +13,7 @@ import {
   getDoc,
 } from "firebase/firestore";
 import Saga from "../../Components/CrowdFunding/Saga";
-
+import Testimonials_crowd from "./Testimonials_crowd";
 export default function CrowdFunding() {
   var [tester, setTester] = useState(true);
   var [completed, setCompleted] = useState(0);
@@ -42,6 +41,7 @@ export default function CrowdFunding() {
       />
       <WhatisSae />
       <Saga/>
+      <Testimonials_crowd/>
       <FundingForm />
       <Footer />
     </>
