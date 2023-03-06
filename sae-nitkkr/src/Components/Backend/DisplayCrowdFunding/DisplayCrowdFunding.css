@@ -1,0 +1,62 @@
+.displayFInalAmbassador_uploadBox{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 20px;
+}
+.displayFInalAmbassador_uploadBox input{
+    border-bottom: none;
+    width:150px;
+    display: none;
+}
+
+.displayFInalAmbassador_uploadBox .displayFInalAmbassador_uploadFileButton{
+    background-color: green;
+    padding:10px;
+    color:white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.displayFInalAmbassador_uploadBox .displayFInalAmbassador_loader {
+    border-top: 5px solid blue;
+    border-bottom: 5px solid blue;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    margin-top: 5px;
+    margin-left: 20px;
+    display: none;
+    animation: spin 2s linear infinite;
+  }
+  .displayFInalAmbassador_responseText{
+      color:green;
+      margin-left: 30px;
+      margin-top: 10px;
+      display: none;
+  }
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  .displayFInalAmbassador_ambassadorBlock{
+      width:70%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 50px;
+  }
+  .displayFInalAmbassador_ambassadorBlock table .displayFInalAmbassador_td, .displayFInalAmbassador_th  {
+     text-align:center;
+     width:100px;
+     padding:10px;
+     border:1px solid black;
+  }
+
+  .displayFInalAmbassador_ambassadorBlock table{
+      border-collapse: collapse;
+  }
+  .displayFInalAmbassador_downloadCsv{
+      float:right;
+      margin-right: 60px;
+      position: relative;
+      top:-60px;
+  }
