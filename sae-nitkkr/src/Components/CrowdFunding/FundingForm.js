@@ -85,9 +85,9 @@ export default function FundingForm() {
      else if(parseInt(fundingdata.amount) < 1){
         alert("Entered amount should be greater than 0");
      }
-     else if (fundingdata.phone.length != 10) {
-       alert("phone number should be of length 10.");
-     } 
+    //  else if (fundingdata.phone.length != 10) {
+    //    alert("phone number should be of length 10.");
+    //  } 
      //else if (
     //   !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(fundingdata.email)
     // ) {
@@ -162,7 +162,7 @@ export default function FundingForm() {
       handler: async (response) => {
         await handler(response);
         await set_to_database(fundingdata.FirstName, fundingdata.email);
-        console.log(options);
+        //console.log(options);
       },
       prefill: {
         name: "SAE NIT Kurukshetra",
@@ -244,9 +244,8 @@ export default function FundingForm() {
               />
             </div>
             <input
-              type='number'
+              type='text'
               name='phone'
-              onKeyDown={blockInvalidChar}
               required
               id='phone-no'
               placeholder='Phone No*'
