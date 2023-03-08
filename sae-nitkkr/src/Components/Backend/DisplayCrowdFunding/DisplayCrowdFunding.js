@@ -41,6 +41,7 @@ function DisplayCrowdFundnig() {
     });
     setDetailList(detailList);
     setDetailListId(detailListId);
+    mergedCsvData.pop();
     setCsvDetail(mergedCsvData);
 
     return detailList;
@@ -63,6 +64,7 @@ function DisplayCrowdFundnig() {
 
     CsvDetail.forEach(function (row) {
       row.forEach(function (row1) {
+        console.log(row1);
         if(row1[0] !== undefined){
           row1[0] = row1[0].replace(/,/g, ";");
           row1[0] = row1[0].replace(/\n/g, ";");
