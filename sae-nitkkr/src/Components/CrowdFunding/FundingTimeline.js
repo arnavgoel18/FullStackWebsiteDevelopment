@@ -139,41 +139,6 @@ function FundingTimeline({ amount }) {
       image: safetygear,
       status: amount >= 800000 ? 'Reached' : 'Notreached',
       price: '8,00,000',
-    },
-    {
-      id: 9,
-      title: 'Transportation Logistics',
-      image: logistics,
-      status: amount >= 900000 ? 'Reached' : 'Notreached',
-      price: '9,00,000',
-    },    
-    {
-      id: 10,
-      title: 'Electrical Components',
-      image: electrical,
-      status: amount >= 930000 ? 'Reached' : 'Notreached',
-      price: '9,30,000',
-    },
-    {
-      id: 11,
-      title: 'Exhaust',
-      image: exhaust,
-      status: amount >= 945000 ? 'Reached' : 'Notreached',
-      price: '9,45,000',
-    },
-    {
-      id: 12,
-      title: 'Fire Extinguisher',
-      image: fire,
-      status: amount >= 955000 ? 'Reached' : 'Notreached',
-      price: '9,55,000',
-    },
-    {
-      id: 13,
-      title: 'Driver Firewall',
-      image: firewall,
-      status: amount >= 957000 ? 'Reached' : 'Notreached',
-      price: '9,57,000',
     }
   ]
 
