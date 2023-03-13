@@ -1,0 +1,55 @@
+.leaderboard {
+    max-width: 490px;
+    width: 100%;
+    
+    border-radius: 12px;
+    
+   
+    &__profiles {
+      // background-color: #fff;
+      border-radius: 0 0 12px 12px;
+      padding: 33px 33px 39px;
+      display: grid;
+      row-gap: 16px;
+    }
+    
+    &__profile {
+      display: grid;
+      margin: 10px;
+      grid-template-columns: 1fr 3fr 1fr;
+      align-items: center;
+      padding: 10px 30px 10px 10px;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 4px 4px 4px 4px rgba(220, 217, 217, 0.23);
+      cursor: pointer;
+      transition: transform .25s cubic-bezier(.7,.98,.86,.98), box-shadow .25s cubic-bezier(.7,.98,.86,.98);
+      
+      &:hover {
+        transform: scale(1.00001);
+        background-color: rgb(102, 140, 176);
+      }
+    }
+    
+    &__picture {
+      max-width: 100%;
+      width: 80px;
+      height: 80px;
+      max-height: 100%;
+      border-radius: 50%;
+    }
+    
+    &__name {
+      // color: #979cb0;
+      font-weight: 520;
+      font-size: 20px;
+      letter-spacing: 0.64px;
+      margin-left: 12px;
+    }
+    
+   
+  }
+  
+  
+  
+  
