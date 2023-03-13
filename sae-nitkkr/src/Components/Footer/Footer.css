@@ -28,7 +28,7 @@
 .social_icons{
     width: 30px;
      cursor: pointer;
-     margin-right:5px;
+     /* margin-right:5px; */
 }
 
 #coming_soon
@@ -39,7 +39,8 @@
   animation: updown 2s ease infinite ;
   
 }
-@keyframes updown {
+@keyframes updown
+{
     0% {
         transform: translateY(-5%);
       }
@@ -63,6 +64,8 @@
 
 .social_span{
   position:relative;
+  display: flexbox;
+  flex-direction: row;
   right:60px;
 }
 

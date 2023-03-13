@@ -1,8 +1,8 @@
 import { useEffect } from "react";
+import { useState } from "react";
 import React from "react";
 import "./FundingForm.css";
 import saelogo from "../../Assets/SAELOGO.png";
-import { Link } from 'react-router-dom'
 import db from "../../Firebase.js";
 import {
   updateDoc,
@@ -12,8 +12,14 @@ import {
   serverTimestamp,
 } from "firebase/firestore";
 import emailjs from "@emailjs/browser";
+import QrCode from "../../Assets/30993905530@sbi.png";
+import Modal from "./Modal/Modal";
 
 export default function FundingForm() {
+  const [show, setShow] = useState(false);
+  const blockInvalidChar = (e) =>
+    ['e', 'E', '+', '-'].includes(e.key) && e.preventDefault()
+
   function submit() {
     var FirstName = document.getElementById("fname");
     var LastName = document.getElementById("lname");
@@ -72,17 +78,16 @@ export default function FundingForm() {
     if (
       fundingdata.amount == ""  ||
        fundingdata.FirstName == "" ||
-      // fundingdata.LastName == "" ||
-      // // fundingdata.CompanyName == "" ||
        fundingdata.phone == ""
-      // fundingdata.email == "" ||
-      // fundingdata.longAns1 == ""
     ) {
-      alert("Please fill up the Amount.");
+      alert("Please fill The required details.");
      } 
-     else if (fundingdata.phone.length != 10) {
-       alert("phone number should be of length 10.");
-     } 
+     else if(parseInt(fundingdata.amount) < 1){
+        alert("Entered amount should be greater than 0");
+     }
+    //  else if (fundingdata.phone.length != 10) {
+    //    alert("phone number should be of length 10.");
+    //  } 
      //else if (
     //   !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(fundingdata.email)
     // ) {
@@ -157,7 +162,7 @@ export default function FundingForm() {
       handler: async (response) => {
         await handler(response);
         await set_to_database(fundingdata.FirstName, fundingdata.email);
-        console.log(options);
+        //console.log(options);
       },
       prefill: {
         name: "SAE NIT Kurukshetra",
@@ -182,8 +187,8 @@ export default function FundingForm() {
       console.log(amount, typeof(amount), temp);
       await updateDoc(docRef, { collectedAmount: temp });
 
-      alert("Thank you for your Donation. This has brought us a step closer to achieving our goals!");
-
+      //alert("Thank you for your Donation. This has brought us a step closer to achieving our goals!");
+      setShow(true);
       deletedata();
     };
 
@@ -214,45 +219,43 @@ export default function FundingForm() {
     var temp = e.target.innerText;
     var amountToBeSet = parseInt(temp.split(',').join(''));
     var amount = document.getElementById('amount');
-    
-    console.log(amountToBeSet, typeof(amountToBeSet),amount);
     amount.value = amountToBeSet ;
   }
   return (
     <>
-      <div className="FundingForm" id="funding_form">
+      <div className='FundingForm' id='funding_form'>
         <h3>DONATE HERE</h3>
-        <div className="Form">
+        <div className='Form'>
           <form>
-            <div className="Field">
+            <div className='Field'>
               <input
-                type="text"
-                name="First Name"
-                placeholder="First Name"
+                type='text'
+                name='First Name'
+                placeholder='First Name*'
                 required
-                id="fname"
+                id='fname'
               />
               <input
-                type="text"
-                name="Last Name"
-                id="lname"
+                type='text'
+                name='Last Name'
+                id='lname'
                 //required
-                placeholder="Last Name"
+                placeholder='Last Name'
               />
             </div>
             <input
-              type="number"
-              name="phone"
+              type='text'
+              name='phone'
               required
-              id="phone-no"
-              placeholder="Phone No"
+              id='phone-no'
+              placeholder='Phone No*'
             />
             <input
-              type="email"
-              name="Email"
-              id="comp-email"
+              type='email'
+              name='Email'
+              id='comp-email'
               //required
-              placeholder="Email"
+              placeholder='Email'
             />
             {/* <input
               type="text"
@@ -263,35 +266,64 @@ export default function FundingForm() {
             /> */}
 
             <input
-              type="number"
-              name="amount"
-              id="amount"
+              type='number'
+              onKeyDown={blockInvalidChar}
+              min='1'
+              name='amount'
+              id='amount'
               required
-              placeholder="Enter or Choose Amount"
+              placeholder='Enter or Choose Amount*'
             />
-            <div className="sampleAmountDiv">
-              <span className="sampleAmount" onClick={SetAmountText}>3,00,000</span>
-              <span className="sampleAmount" onClick={SetAmountText}>1,00,000</span>
-              <span className="sampleAmount" onClick={SetAmountText}>75,000</span>{" "}
-              <span className="sampleAmount" onClick={SetAmountText}>60,000</span>{" "}
-              <span className="sampleAmount" onClick={SetAmountText}>50,000</span>{" "}
-              <span className="sampleAmount" onClick={SetAmountText}>20,000</span>{" "}
-              <span className="sampleAmount" onClick={SetAmountText}>10,000</span>
+            <div className='sampleAmountDiv'>
+              <span className='sampleAmount' onClick={SetAmountText}>
+                2,00,000
+              </span>
+              <span className='sampleAmount' onClick={SetAmountText}>
+                1,00,000
+              </span>
+              <span className='sampleAmount' onClick={SetAmountText}>
+                75,000
+              </span>{' '}
+              <span className='sampleAmount' onClick={SetAmountText}>
+                50,000
+              </span>{' '}
+              <span className='sampleAmount' onClick={SetAmountText}>
+                20,000
+              </span>{' '}
+              <span className='sampleAmount' onClick={SetAmountText}>
+                10,000
+              </span>{' '}
+              <span className='sampleAmount' onClick={SetAmountText}>
+              5,000
+              </span>
+              <span className='sampleAmount' onClick={SetAmountText}>
+                2,000
+              </span>
             </div>
-            <div className="msg">Message You Want to Convey To Our Team </div>
+            <div className='msg'>Message You Want to Convey To Our Team </div>
             <textarea
-              type="text"
-              id="text1"
+              type='text'
+              id='text1'
               required
-              placeholder="Type here..."
-              rows="10"
+              placeholder='Type here...'
+              rows='10'
             />
-            <div className="check-Field">
-              <input type="checkbox" id="check" required />I accept &nbsp;
-              <a href="/termsandconditions" target={"_blank"} style={{color:"blue"}}> <u> Terms and Conditions*</u></a>
+            <div className='check-Field'>
+              <input type='checkbox' id='check' required />I accept &nbsp;
+              <a
+                href='/termsandconditions'
+                target={'_blank'}
+                style={{ color: 'blue' }}
+              >
+                {' '}
+                <u> Terms and Conditions*</u>
+              </a>
             </div>
-            <div id="bank_details">
-              <h4 style={{marginBottom:'10px'}}>The amount is greater than 20,000. To avoid transaction fee, Please Pay directly via <u>Bank Transfer</u>:</h4>
+            <div id='bank_details'>
+              <h4 style={{ marginBottom: '10px' }}>
+                The amount is greater than 20,000. To avoid transaction fee,
+                Please Pay directly via <u>Bank Transfer</u>:
+              </h4>
               <div>
                 <span>Account Name: </span>
                 <span>SAE INDIA NIT KKR COLLEGIATE CLUB</span>
@@ -304,26 +336,39 @@ export default function FundingForm() {
                 <span>IFSC Code: </span>
                 <span>SBIN0006260</span>
               </div>
-              <div style={{marginTop:'12px'}}><b>*NOTE:</b> Please add your contact details during Bank Transfer in comment Section.</div>
+              <div>
+              <img
+              src={QrCode}
+              loading="lazy"
+              className="QrCode"
+              ></img>
+              </div>
+              <div style={{ marginTop: '12px' }}>
+                <b>*NOTE:</b> Please add your contact details during Bank
+                Transfer in comment Section.
+              </div>
               {/* <div className="texti"><input type="checkbox" id="check" required />
               I accept </div> <span className="textt">
               {' '}
               <Link to="/termsandconditions" target="_blank">
                 Terms and Conditions*
               </Link> */}
-            {/* </span>  */}
+              {/* </span>  */}
             </div>
             <button
-              className="pay"
-              type="button"
-              id="comp-button"
+              className='pay'
+              type='button'
+              id='comp-button'
               onClick={submit}
             >
               CONTINUE TO PAY
             </button>
           </form>
+          <Modal title="My Modal" onClose={() => setShow(false)} show={show}>
+            <p>SAE NIT KURUKSHETRA</p>
+          </Modal>
         </div>
       </div>
     </>
-  );
+  )
 }
