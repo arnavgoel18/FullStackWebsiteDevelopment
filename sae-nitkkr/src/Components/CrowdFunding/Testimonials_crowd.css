@@ -39,12 +39,16 @@ li {
 .hh {
   font-size: 1.2em;
 }
-
+.active {
+  background-color: rgb(85, 149, 238);
+}
 @media screen and (max-width: 768px) {
   .containerr {
     flex-direction: column;
   }
-
+  .leaderboard__picture {
+    display: none;
+  }
   .right-box {
     margin-left: 0;
     margin-top: 20px;
@@ -84,10 +88,10 @@ li {
   bottom: 1rem;
 }
 
-/* cite {
+cite {
   line-height: 3;
   text-align: left;
-} */
+}
 @media only screen and (max-width: 900px) {
   .realC {
     height: auto;

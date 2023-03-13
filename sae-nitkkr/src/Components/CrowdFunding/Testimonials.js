@@ -20,9 +20,11 @@ const Testimonials = ({ testimonials }) => {
               <article
                 key={index}
                 className={`leaderboard__profile ${
-                  selectedTestimonial === index ? "active" : ""
+                  selectedTestimonial === index ? "active" : "lll"
                 }`}
-                onClick={() => setSelectedTestimonial(index)}
+                onClick={() => {
+                  setSelectedTestimonial(index);
+                }}
               >
                 <img
                   src={testimonial.profileImage}
@@ -39,7 +41,7 @@ const Testimonials = ({ testimonials }) => {
           {testimonials[selectedTestimonial].content}
         </blockquote>
 
-        {/* <cite>{testimonial.name}</cite> */}
+        {/* <cite>{testimonials[selectedTestimonial].name}</cite> */}
         {/* <div className="testimonial-content right-box">
           <p>{testimonials[selectedTestimonial].content}</p>
         </div> */}
