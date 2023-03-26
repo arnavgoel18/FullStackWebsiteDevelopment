@@ -14,7 +14,7 @@ import {
   updateDoc,
 } from "firebase/firestore";
 import NavBar from "../NavBar/NavBar";
-import Footer from "../Footer/Footer(black)/FooterBlack";
+import Footer from "../Footer/Footer.js";
 import { useParams, Link} from "react-router-dom";
 
 function AfterRegistrationPage() {

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./Autokriti12.css";
 import { GrCircleInformation } from "react-icons/gr";
 import NavBar from "../../../Components/NavBar/NavBar";
-import Footer from "../../../Components/Footer/Footer(black)/FooterBlack";
+import Footer from "../../../Components/Footer/Footer";
 import Carousel from "../../../Components/Carousel/Carousel";
 
 import Au2Poster from "../../../Assets/Autokriti12/Autokriti12poster.jpg";

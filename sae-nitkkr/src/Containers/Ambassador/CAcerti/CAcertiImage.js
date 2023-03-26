@@ -11,7 +11,7 @@ import {
 
 import './CAcerti.css'
 import NavBar from '../../../Components/NavBar/NavBar';
-import Footer from '../../../Components/Footer/Footer(black)/FooterBlack';
+
 
 // import { saveAs } from "file-saver";
 

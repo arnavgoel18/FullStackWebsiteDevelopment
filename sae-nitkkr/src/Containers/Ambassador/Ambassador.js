@@ -5,7 +5,7 @@
 // import AmbassadorRoles from './AmbassadorRoles/AmbassadorRoles'
 // import RedirectToForm from './RedirectToForm/RedirectToForm'
 // import RedirectToInfo from './RedirectToInfo/RedirectToInfo'
-// import Footer from '../../Components/Footer/Footer(black)/FooterBlack'
+// import Footer from '../../Components/Footer/Footer';
 // import FormDIV from './FormDIV/FormDIV'
 
 // function Ambassador(){

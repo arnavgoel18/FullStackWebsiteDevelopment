@@ -6,7 +6,7 @@ import emailjs from "@emailjs/browser";
 import "./RegistrationDetails.css";
 import { doc, setDoc } from "firebase/firestore";
 import NavBar from "../NavBar/NavBar";
-import Footer from "../Footer/Footer(black)/FooterBlack";
+import Footer from "../Footer/Footer.js";
 
 var flag = true;
 function RegistrationDetails() {

@@ -7,7 +7,7 @@ import TeamsAboutUs from '../../Components/TeamsAboutUs/TeamsAboutUs'
 import WhereDoWeParticipate from '../../Components/WhereWeParticipate/Wheredoweparticipate(nitrox)/Wherenitrox'
 import Gallery from '../../Components/Gallery/NitroxGallery/Gallery'
 import Saga from '../../Components/Saga/NitroxSaga'
-import Footer from '../../Components/Footer/Footer(white)/FooterWhite'
+import Footer from '../../Components/Footer/Footer'
 
 function Nitrox(){
 
@@ -23,7 +23,7 @@ function Nitrox(){
             <WhereDoWeParticipate />
             {/* <Saga/> */}
             <Gallery/>
-            <Footer/>
+            <Footer type="white"/>
         </>
     )
 }

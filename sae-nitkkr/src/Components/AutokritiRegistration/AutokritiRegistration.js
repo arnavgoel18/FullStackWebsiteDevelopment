@@ -17,7 +17,7 @@ import {
 } from "firebase/firestore";
 
 import NavBar from "../NavBar/NavBar";
-import Footer from "../Footer/Footer(black)/FooterBlack";
+import Footer from "../Footer/Footer";
 import { check } from "fontawesome";
 
 var c= 0;

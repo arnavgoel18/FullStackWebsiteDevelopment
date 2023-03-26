@@ -1,7 +1,7 @@
 import React from 'react'
 import { useEffect } from 'react'
 import NavBar from '../../Components/NavBar/NavBar'
-import Footer from '../../Components/Footer/Footer(black)/FooterBlack'
+import Footer from '../../Components/Footer/Footer'
 import Become_sponsor from '../../Components/Become_sponsor/Become_sponsor'
 import Sponsicompanies from '../../Components/Sponsicompanies/Sponsicompanies'
 

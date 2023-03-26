@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 
 import ContactUS from '../../Components/ContactUs/ContactUs'
 import NavBar from '../../Components/NavBar/NavBar'
-import Footer from '../../Components/Footer/Footer(black)/FooterBlack'
+import Footer from '../../Components/Footer/Footer'
 
 function Contact(){
   

@@ -10,7 +10,7 @@ import ShareAndClapDIV from "../../../Components/Blogs/ShareAndClap/ShareAndClap
 // import TopicsCardHolder from "../../../Components/Blogs/TopicsCardHolder/TopicsCardHolder";
 import TopicsCardHolder from '../../../Components/Blogs/TopicsCardHolder/Card_new'
 import PhoneShareAndClap from "../../../Components/Blogs/ShareAndClap/PhoneShareAndClap";
-import Footer from "../../../Components/Footer/Footer(black)/FooterBlack";
+import Footer from "../../../Components/Footer/Footer";
 import { getDocs, collection, doc } from "firebase/firestore";
 import {db1} from "../../../Firebase";
 

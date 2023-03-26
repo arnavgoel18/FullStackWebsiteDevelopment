@@ -3,17 +3,22 @@ import { Link } from 'react-router-dom'
 import './Footer.css'
 import Coming from '../../Assets/Coming Soon/Coming.png'
 import { white_icons, black_icons } from './icons'
-import { AiFillLock } from "react-icons/ai";
-import {FaRupeeSign} from "react-icons/fa";
-import { AiFillMail,AiFillLinkedin,AiOutlineMobile,AiFillInstagram,AiFillFacebook} from "react-icons/ai";
-
+import { AiFillLock } from 'react-icons/ai'
+import { FaRupeeSign } from 'react-icons/fa'
+import {
+  AiFillMail,
+  AiFillLinkedin,
+  AiOutlineMobile,
+  AiFillInstagram,
+  AiFillFacebook,
+} from 'react-icons/ai'
 
 import { useLayoutEffect } from 'react'
 
 function Footer({ type = 'black' }) {
   var icons = type === 'black' ? black_icons : white_icons
-  var color = type === 'black' ? 'white' : 'black';
-  var background = type === 'black' ? 'black' : 'white';
+  var color = type === 'black' ? 'white' : 'black'
+  var background = type === 'black' ? 'black' : 'white'
 
   return (
     <div
@@ -56,19 +61,23 @@ function Footer({ type = 'black' }) {
         <div className='social_bar_data'>
           <p className='social_bars'>
             Team Accelerons
-            <div className="social_span">
+            <div className='social_span'>
               <a
                 href='https://instagram.com/accelerons_nitkkr?utm_medium=copy_link'
                 target='_blank'
               >
-                <div  className="contact_icon"><AiFillInstagram/></div> 
+                <span className='contact_icon'>
+                  <AiFillInstagram />
+                </span>
               </a>
               <a
                 href='https://www.facebook.com/teamaccelerons/'
                 target='_blank'
               >
                 {' '}
-                <div  className="contact_icon"><AiFillFacebook/></div> 
+                <span className='contact_icon'>
+                  <AiFillFacebook />
+                </span>
               </a>
             </div>
           </p>
@@ -80,11 +89,15 @@ function Footer({ type = 'black' }) {
                 href='https://instagram.com/nitroxteam?utm_medium=copy_link'
                 target='_blank'
               >
-                <div  className="contact_icon"><AiFillInstagram/></div> 
+                <span className='contact_icon'>
+                  <AiFillInstagram />
+                </span>
               </a>
               {/* &nbsp; */}
               <a href='https://www.facebook.com/teamnitrox/' target='_blank'>
-                <div  className="contact_icon"><AiFillFacebook/></div> 
+                <span className='contact_icon'>
+                  <AiFillFacebook />
+                </span>
               </a>
             </span>
           </p>
@@ -96,12 +109,15 @@ function Footer({ type = 'black' }) {
                 href='https://instagram.com/autokriti?utm_medium=copy_link'
                 target='_blank'
               >
-                <div  className="contact_icon"><AiFillInstagram/></div> 
+                <span className='contact_icon'>
+                  <AiFillInstagram />
+                </span>
               </a>
               {/* &nbsp; */}
               <a href='https://www.facebook.com/autokriti/' target='_blank'>
-                <div  className="contact_icon"><AiFillFacebook/></div> 
-                
+                <span className='contact_icon'>
+                  <AiFillFacebook />
+                </span>
               </a>
             </span>
           </p>
@@ -114,19 +130,23 @@ function Footer({ type = 'black' }) {
         <hr className='hr_line' />
         <div className='social_bar_data'>
           <p className='social_bars2'>
-            {' '} 
-            <div  className="contact_icon"><AiFillMail/></div> 
+            {' '}
+            <div className='contact_icon'>
+              <AiFillMail />
+            </div>
             <span>
               {' '}
               <a href='mailto:saenitkurukshetra@gmail.com'>
-              saenitkurukshetra@gmail.com
+                saenitkurukshetra@gmail.com
               </a>
             </span>
           </p>
 
           <p className='social_bars2'>
             {' '}
-            <div  className="contact_icon"><AiFillLinkedin/></div> 
+            <div className='contact_icon'>
+              <AiFillLinkedin />
+            </div>
             <span>
               <a
                 href='https://in.linkedin.com/company/sae-nit-kkr'
@@ -139,7 +159,9 @@ function Footer({ type = 'black' }) {
 
           <p className='social_bars2'>
             {' '}
-             <div  className="contact_icon"><AiOutlineMobile/></div> 
+            <div className='contact_icon'>
+              <AiOutlineMobile />
+            </div>
             <span>
               {' '}
               <Link to='/contactus'>Contact Us</Link>
@@ -148,54 +170,49 @@ function Footer({ type = 'black' }) {
         </div>
       </div>
       <div className='footer_box'>
-
-      <div>
+        <div>
           <h1>Guidelines</h1>
         </div>
         <hr className='hr_line' />
         <div className='social_bar_data'>
           <p className='social_bars2'>
             {' '}
-            <div  className="contact_icon"><AiFillMail/></div> 
+            <div className='contact_icon'>
+              <AiFillMail />
+            </div>
             <span>
               {' '}
-              <Link to="/termsandconditions" target="_blank">
+              <Link to='/termsandconditions' target='_blank'>
                 Terms And Conditions
               </Link>
             </span>
           </p>
 
           <p className='social_bars2'>
-           
-          <div className="horizontal">
-            {" "}
-            <div
-              className="contact_icon"
-            ><AiFillLock/></div>
-            <span id="linkedin_text">
-              <Link to="/privacypolicy"
-                target="_blank"
-              >
-                Privacy Policy
-              </Link>
-            </span>
-          </div>  
+            <div className='horizontal'>
+              {' '}
+              <div className='contact_icon'>
+                <AiFillLock />
+              </div>
+              <span id='linkedin_text'>
+                <Link to='/privacypolicy' target='_blank'>
+                  Privacy Policy
+                </Link>
+              </span>
+            </div>
           </p>
 
-            
-          <div className="horizontal">
-            {" "}
-            <div
-              className="black_contact_icon"
-            ><FaRupeeSign/></div>
-            <span id="lllinkedin_text">
-              <Link to="/refundandcancelpolicy"
-                target="_blank"
-              >
-               Refund and Cancel Policy
+          <div className='horizontal'>
+            {' '}
+            <div className='black_contact_icon' style={{ fontSize: '1.7rem' }}>
+              <FaRupeeSign />
+            </div>
+            <span id='lllinkedin_text'>
+              <Link to='/refundandcancelpolicy' target='_blank'>
+                Refund and Cancel Policy
               </Link>
             </span>
-          </div>  
+          </div>
         </div>
         {/* <div>
           <h1> Join Our Newsletter</h1>
@@ -203,8 +220,8 @@ function Footer({ type = 'black' }) {
         {/* <hr className='hr_line' /> */}
 
         {/* <div> */}
-          {/* <img id='coming_soon' src={Coming} /> */}
-          {/* <input
+        {/* <img id='coming_soon' src={Coming} /> */}
+        {/* <input
             id="black_getting_mail"
             type="text"
             placeholder="Enter your email..."

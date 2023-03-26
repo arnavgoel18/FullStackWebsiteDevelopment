@@ -10,7 +10,7 @@ import {
   doc,
   getDocs,
 } from "firebase/firestore";
-import Footer from '../../../Components/Footer/Footer(black)/FooterBlack';
+import Footer from '../../../Components/Footer/Footer';
 import NavBar from '../../../Components/NavBar/NavBar';
 
 function Login() {

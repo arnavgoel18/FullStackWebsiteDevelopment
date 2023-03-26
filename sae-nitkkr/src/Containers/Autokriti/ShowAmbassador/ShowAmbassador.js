@@ -5,7 +5,7 @@ import { Redirect } from "react-router-dom";
 import "./ShowAmbassador.css";
 
 import NavBar from "../../../Components/NavBar/NavBar";
-import Footer from "../../../Components/Footer/Footer(black)/FooterBlack";
+import Footer from "../../../Components/Footer/Footer";
 
 import db from "../../../Firebase";
 import {

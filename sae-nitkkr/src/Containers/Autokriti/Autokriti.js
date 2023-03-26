@@ -9,7 +9,6 @@ import BrandAmbassador from './BrandAmbassador/BrandAmbassador'
 import AutokritiFirst from '../../Components/FirstDisplayDIV/Autokriti/Slider'
 import Testimonials from './Testimonials/Testimonials'
 import Gallery from '../../Components/Gallery/AutokritiGallery/Gallery'
-// import FooterWhite from "../../Components/Footer/Footer(white)/FooterWhite";
 import Footer from '../../Components/Footer/Footer'
 import AutokritiEvent from '../../Components/AutokritiEvent/AutokritiEvent'
 import AutokritiCheckEvent from '../../Components/AutokritiEvent/AutokritiCheckEvent/AutokritiCheckEvent'

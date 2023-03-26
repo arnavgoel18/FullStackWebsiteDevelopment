@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react'
 import Navbar from '../../Components/NavBar/NavBar'
-import Footerblack from '../../Components/Footer/Footer(black)/FooterBlack'
+import Footer from '../../Components/Footer/Footer'
 import Card_contain from '../Blogs/Card_contain/Card_contain'
 
 function Blogs() {

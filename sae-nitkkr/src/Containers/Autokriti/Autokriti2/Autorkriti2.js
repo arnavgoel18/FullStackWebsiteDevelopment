@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 import './Autokriti2.css'
 
 import NavBar from '../../../Components/NavBar/NavBar'
-import Footer from '../../../Components/Footer/Footer(black)/FooterBlack'
+import Footer from '../../../Components/Footer/Footer'
 
 import Au2Poster from '../../../Assets/CheckOurEvents/Au2Poster.webp'
 import VerticalTimeline from './VerticalTimeline/VerticalTimeline'
