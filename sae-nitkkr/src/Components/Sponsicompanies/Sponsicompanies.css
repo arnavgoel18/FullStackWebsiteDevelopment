@@ -1,15 +1,18 @@
-#sponsicompanies_bigbox {
+.sponsicompanies_bigbox {
     display: flex;
     flex-direction: column;
-    margin-left: 30px;
     margin-right: 30px;
 }
 
 #viewmore_div {
     display: none;
 }
+.margin-left-2rem{
+    margin-left:2rem;
+    margin-top:2rem;
+}
 
-#sponsicompanies_first,
+.sponsicompanies_first,
 #sponsicompanies_second,
 #sponsicompanies_third,
 #sponsicompanies_fourth,
@@ -19,11 +22,11 @@
 #sponsicompanies_eighth,
 #sponsicompanies_ninth {
     display: flex;
+    justify-content:space-around;
     flex-direction: row;
     margin-left: 30px;
     margin-right: 30px;
     flex-wrap: wrap;
-    justify-content: center;
 
 }
 
@@ -195,7 +198,9 @@
     #sponsicompanies_ninth3 {
         display: none;
     }
-
+    .margin-left-2rem{
+        text-align:center;
+    }
     #viewmore_div {
         display: block;
     }

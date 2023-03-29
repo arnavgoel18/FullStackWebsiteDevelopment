@@ -15,7 +15,7 @@ function Blogs() {
       <br/>
       <Card_contain/>
       <br/><br/>
-      <Footerblack/>  
+      <Footer/>  
     </div>
   )
 }
