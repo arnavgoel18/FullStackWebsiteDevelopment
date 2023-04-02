@@ -3,17 +3,17 @@ import './style.css'
 import { BsLinkedin } from 'react-icons/bs' 
 import { AiOutlineUser } from 'react-icons/ai'
 
-export default function Card1() {
+export default function Card1({name,amount}) {
   return (
     <div className='contri-card-border flex m-auto align-center'>
-      <div className='flex align-center' style={{ margin: '0.2rem 0.3rem' }}>
+      <div className='flex align-center' style={{ margin: '0.2rem 0.3rem',width:'200px' }}>
         <div className='contri-image'>
           <AiOutlineUser />
         </div>
-        <div style={{ marginLeft: '0.7rem' }}> Name </div>
+        <div style={{ marginLeft: '0.7rem' }}> {name} </div>
       </div>
 
-      <div>₹ amount</div>
+      <div>₹ {amount}</div>
       <a
         href='#'
         className='flex linkedin_icon'

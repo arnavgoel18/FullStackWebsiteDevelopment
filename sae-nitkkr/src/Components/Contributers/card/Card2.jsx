@@ -3,7 +3,7 @@ import './style.css'
 import { BsLinkedin } from 'react-icons/bs'
 import { GiGoat } from 'react-icons/gi'
 
-export default function Card2() {
+export default function Card2({ name, amount }) {
   return (
     <div className='top-contri-container contri-card-border'>
       <div className='top-contri-out'>
@@ -15,8 +15,8 @@ export default function Card2() {
           <div className='contri-image contri-image2'>
             <GiGoat />
           </div>
-          <div className='margin-top-1'> Name xuxuxxuuxux</div>
-          <div className='margin-top-1'>₹ amount</div>
+          <div className='margin-top-1'> {name}</div>
+          <div className='margin-top-1'>₹ {amount}</div>
           <a
             href='#'
             className='flex linkedin_icon_2 margin-top-1 justify-end'

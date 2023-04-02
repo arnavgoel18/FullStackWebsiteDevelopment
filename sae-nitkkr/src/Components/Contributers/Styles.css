@@ -19,7 +19,7 @@
     margin:2rem 3rem;
 }
 }
-@media (max-width:600px) {
+@media (max-width:730px) {
 .flex.top-contri-goats{
     display:none;
 }

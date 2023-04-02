@@ -28,7 +28,7 @@ box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.23);
 }
 
 .linkedin_icon{
-    font-size:2rem;
+    font-size:1.5rem;
 }
 
 .justify-center{
@@ -64,14 +64,27 @@ box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.23);
     font-size:2rem;
 }
 
-@media (max-width:870px) {
+@media (max-width:1000px) {
     .top-contri-out{
     padding:1rem;
-}}
+}
+.top-contri-container{
+    width:200px;
+    height:200px;
+}
+.contri-image2{
+    width:70px;
+    height:70px;
+}
+}
 
 @media (max-width:770px) {
     .top-contri-out{
     padding:0.5rem;
+}
+.top-contri-container{
+    width:180px;
+    height:180px;
 }
 .contri-image2{
     font-size:4rem;
