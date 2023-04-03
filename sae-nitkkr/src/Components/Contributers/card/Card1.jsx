@@ -6,7 +6,7 @@ import { AiOutlineUser } from 'react-icons/ai'
 export default function Card1({name,amount}) {
   return (
     <div className='contri-card-border flex m-auto align-center'>
-      <div className='flex align-center' style={{ margin: '0.2rem 0.3rem',width:'200px' }}>
+      <div className='flex align-center contri-card-text' style={{ margin: '0.2rem 0.3rem' }}>
         <div className='contri-image'>
           <AiOutlineUser />
         </div>

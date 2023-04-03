@@ -4,6 +4,10 @@ border: 1px solid #B9B9B9;
 box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.23);
 }
 
+.contri-card-text{
+    width:200px;
+}
+
 .contri-image{
   display: flex;
   justify-content:center;
@@ -29,6 +33,7 @@ box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.23);
 
 .linkedin_icon{
     font-size:1.5rem;
+    visibility:hidden;
 }
 
 .justify-center{
@@ -62,6 +67,7 @@ box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.23);
 }
 .linkedin_icon_2{
     font-size:2rem;
+    visibility:hidden;
 }
 
 @media (max-width:1000px) {
@@ -110,7 +116,13 @@ box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.23);
         width:20px;
         font-size:1.2rem;
     }
+    .contri-card-text{
+        width:150px;
+    }
     .linkedin_icon{
         font-size:1.2rem;
+    }
+    .contri-card-border {
+        font-size:0.7rem;
     }
 }
