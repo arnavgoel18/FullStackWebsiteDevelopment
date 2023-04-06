@@ -3,7 +3,7 @@ import './style.css'
 import { BsLinkedin } from 'react-icons/bs' 
 import { AiOutlineUser } from 'react-icons/ai'
 
-export default function Card1({name,amount}) {
+export default function Card1({name,amount=""}) {
   return (
     <div className='contri-card-border flex m-auto align-center'>
       <div className='flex align-center contri-card-text' style={{ margin: '0.2rem 0.3rem' }}>
@@ -13,7 +13,7 @@ export default function Card1({name,amount}) {
         <div style={{ marginLeft: '0.7rem' }}> {name} </div>
       </div>
 
-      <div>₹ {amount}</div>
+      <div>{amount!==""?`₹ ${amount}`:<></>}</div>
       <a
         href='#'
         className='flex linkedin_icon'

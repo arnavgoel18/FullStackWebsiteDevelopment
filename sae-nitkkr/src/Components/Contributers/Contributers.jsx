@@ -34,7 +34,7 @@ export default function Contributers() {
                 type={2}
                 key={index}
                 name={item[0]}
-                amount={item[1]}
+                // amount={item[1]}
               />
             ) : (
               <></>
@@ -65,7 +65,7 @@ export default function Contributers() {
                 type={1}
                 key={index}
                 name={item[0]}
-                amount={item[1]}
+                // amount={item[1]}
               />
             ))}
           </ul>

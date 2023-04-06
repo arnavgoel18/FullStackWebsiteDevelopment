@@ -17,11 +17,11 @@ function NavBar() {
             </Link>
             <ul className={open ? 'NavigationBar_Nav-nav-links active' : 'NavigationBar_Nav-nav-links'}>
             
-            <li className="NavigationBar_Nav-nav-item">
+            {/* <li className="NavigationBar_Nav-nav-item">
                     <Link to="/Crowdfunding" className="NavigationBar_Nav-nav-link" onClick={() => setOpen(false)}>
                         DONATE US
                     </Link>
-                </li>
+                </li> */}
 
 
             <li className="NavigationBar_Nav-nav-item">

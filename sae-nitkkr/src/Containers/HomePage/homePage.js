@@ -49,7 +49,7 @@ function HomePage() {
         <br />
         {/* <Autokriti12 /> */}
         {/* <ExploreUs /> */}
-        <FundingIntro netAmount={netAmount} amountReceived={amount} />
+        {/* <FundingIntro netAmount={netAmount} amountReceived={amount} /> */}
         <Managers />
 
         <Footer />
