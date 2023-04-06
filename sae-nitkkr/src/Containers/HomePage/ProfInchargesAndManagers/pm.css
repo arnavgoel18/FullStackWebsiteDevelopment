@@ -58,7 +58,7 @@
 .container_pm .icons {
   position: relative;
   margin-top: 0px;
-  margin-left: -163px;
+  /* margin-left: -163px; */
   list-style: none;
   display: flex;
   justify-content: space-evenly;
