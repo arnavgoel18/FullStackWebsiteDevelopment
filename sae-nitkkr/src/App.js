@@ -59,11 +59,12 @@ import Autokriti12Certificate from './Containers/Autokriti/Autokriti12Certificat
 //import RegistrationForm from "./Containers/Autokriti/RegistrationForm/RegistrationForm";
 import CrowdFunding from './Containers/CrowdFunding/CrowdFunding'
 import DisplayCrowdFunding from './Components/Backend/DisplayCrowdFunding/DisplayCrowdFunding'
-
+import Announcement from './Components/Announcement/Announcement'
 function App() {
   document.title = 'SAE NIT Kurukshetra'
   return (
     <>
+     <Announcement/>
       <CheckState>
         <Router>
           <Switch>
