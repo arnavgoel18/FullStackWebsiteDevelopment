@@ -65,7 +65,7 @@ function Quizsignup() {
     }
 
     setFinalcost(finalcost);
-    userData.amount = finalcost;    //for testing only, later changed with finalcost;
+    userData.amount = 1;    //for testing only, later changed with finalcost;
   };
 
   //to check all fields are filled or not
@@ -484,226 +484,227 @@ function Quizsignup() {
     <>
       <NavBar />
       <br />
-      <p className="payform-heading">REGISTRATION FORM</p>
-      <div className="payform-container">
-        <div method="POST" className="payform-form">
-          <div className="field">
-            {" "}
-            <span className="payform-label">Full Name * </span>
+      <p className='payform-heading'>REGISTRATION FORM</p>
+      <div className='payform-container'>
+        <div method='POST' className='payform-form'>
+          <div className='field'>
+            {' '}
+            <span className='payform-label'>Full Name * </span>
             <br />
             <input
-              className="payform-input"
-              type="text"
-              alt="Name"
-              name="name"
-              id="amb_name"
-              required="required"
+              className='payform-input'
+              type='text'
+              alt='Name'
+              name='name'
+              id='amb_name'
+              required='required'
               value={userData.name}
               onChange={postUserData}
-            />{" "}
+            />{' '}
           </div>
-          <div className="field">
-            <span className="payform-label">Email id* </span>
+          <div className='field'>
+            <span className='payform-label'>Email id* </span>
             <br />
             <input
-              className="payform-input"
-              type="Email"
-              name="email"
-              id="amb_email"
-              required="required"
+              className='payform-input'
+              type='Email'
+              name='email'
+              id='amb_email'
+              required='required'
               value={userData.email}
               onChange={postUserData}
-            />{" "}
+            />{' '}
           </div>
-          <div id="show_email_is_registered">
+          <div id='show_email_is_registered'>
             This email has alreay been Registered
           </div>
-          <div className="field">
-            <span className="payform-label">Phone No * </span>
+          <div className='field'>
+            <span className='payform-label'>Phone No * </span>
             <br />
             <input
-              className="payform-input"
-              type="number"
-              name="phone"
-              required="required"
-              id="amb_phone"
+              className='payform-input'
+              type='number'
+              name='phone'
+              required='required'
+              id='amb_phone'
               value={userData.phone}
               onChange={postUserData}
             />
           </div>
-          <div className="field">
-            <span className="payform-label">College</span>
+          <div className='field'>
+            <span className='payform-label'>College</span>
             <br />
             <input
-              className="payform-input"
-              type="text"
-              required="unrequired"
-              name="college"
-              id="amb_college"
+              className='payform-input'
+              type='text'
+              required='unrequired'
+              name='college'
+              id='amb_college'
               value={userData.college}
               onChange={postUserData}
-            />{" "}
+            />{' '}
           </div>
-          <div className="field">
-            <span className="payform-label"> Branch </span>
+          <div className='field'>
+            <span className='payform-label'> Branch </span>
             <br />
             <input
-              className="payform-input"
-              type="name"
-              name="branch"
-              required="unrequired"
-              id="amb_branch"
+              className='payform-input'
+              type='name'
+              name='branch'
+              required='unrequired'
+              id='amb_branch'
               value={userData.branch}
               onChange={postUserData}
             />
           </div>
-          <div className="field_select">
-            <span className="payform-label">Semester</span>
+          <div className='field_select'>
+            <span className='payform-label'>Semester</span>
             <select
-              className="payform-dropdown"
-              name="semester"
-              id="amb_semester"
-              required="unrequired"
+              className='payform-dropdown'
+              name='semester'
+              id='amb_semester'
+              required='unrequired'
               value={userData.semester}
               onChange={postUserData}
             >
-              <option defaultValue={"DEFAULT"} disabled hidden>
+              <option defaultValue={'DEFAULT'} disabled hidden>
                 Choose here
               </option>
-              <option value="DEFAULT">--None Selected--</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
+              <option value='DEFAULT'>--None Selected--</option>
+              <option value='1'>1</option>
+              <option value='2'>2</option>
+              <option value='3'>3</option>
+              <option value='4'>4</option>
+              <option value='5'>5</option>
+              <option value='6'>6</option>
+              <option value='7'>7</option>
+              <option value='8'>8</option>
             </select>
           </div>
-          <div className="field">
-            {" "}
-            <span className="payform-label"> Referal Code(optional code) </span>
+          <div className='field'>
+            {' '}
+            <span className='payform-label'> Referal Code(optional code) </span>
             <img
-              className="referral_code_verified"
-              alt="sos"
-              id="referral_code_verified"
-              src="https://img.icons8.com/color/48/000000/checked-2--v1.png"
+              className='referral_code_verified'
+              alt='sos'
+              id='referral_code_verified'
+              src='https://img.icons8.com/color/48/000000/checked-2--v1.png'
             />
             <br />
-            <div id="referal_check">
+            <div id='referal_check'>
               <input
-                className="payform-input"
-                type="email"
-                name="referal"
-                alt=""
-                id="referal_code"
-                required="unrequired"
+                className='payform-input'
+                type='email'
+                name='referal'
+                alt=''
+                id='referal_code'
+                required='unrequired'
                 value={userData.referal}
                 onChange={postUserData}
               />
               <img
-                id="ref_image"
-                alt="sos"
-                src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/32/000000/external-information-camping-dreamstale-lineal-dreamstale.png"
+                id='ref_image'
+                alt='sos'
+                src='https://img.icons8.com/external-dreamstale-lineal-dreamstale/32/000000/external-information-camping-dreamstale-lineal-dreamstale.png'
                 onMouseOver={i_information_visible}
                 onMouseOut={i_information_nonvisible}
               />
             </div>
           </div>
-          <div id="show_invalid">The Referal Code is Invalid</div>
+          <div id='show_invalid'>The Referal Code is Invalid</div>
           {/* Choose dempartment */}
-          <div className="field">
-            <span className="payform-label">
-              {" "}
-              Select Your Departments (Max. 2){" "}
+          <div className='field'>
+            <span className='payform-label'>
+              {' '}
+              Select Your Departments (Max. 2){' '}
             </span>
 
             {/* <div className="redcolortext">(Maximum two)</div> */}
             <br />
-            <div className="main-chheckbox">
-              <div className="department-checkbox">
+            <div className='main-chheckbox'>
+              <div className='department-checkbox'>
                 <input
-                  type="checkbox"
-                  name="mechanical"
-                  required="unrequired"
-                  id="amb_mechanical"
+                  type='checkbox'
+                  name='mechanical'
+                  required='unrequired'
+                  id='amb_mechanical'
                   onChange={postUserData}
                 />
-                <span for="mechanical">Mechanical</span>
-                <div id="mechanical"></div>
+                <span for='mechanical'>Mechanical</span>
+                <div id='mechanical'></div>
               </div>
-              <div className="department-checkbox">
+              <div className='department-checkbox'>
                 <input
-                  type="checkbox"
-                  name="iot"
-                  required="unrequired"
-                  id="amb_IOT"
+                  type='checkbox'
+                  name='iot'
+                  required='unrequired'
+                  id='amb_IOT'
                   onChange={postUserData}
                 />
-                <span for="iot">IOT</span>
-                <div id="iot"></div>
+                <span for='iot'>IOT</span>
+                <div id='iot'></div>
               </div>
-              <div className="department-checkbox">
+              <div className='department-checkbox'>
                 <input
-                  type="checkbox"
-                  name="ev"
-                  required="unrequired"
-                  id="amb_EV"
+                  type='checkbox'
+                  name='ev'
+                  required='unrequired'
+                  id='amb_EV'
                   onChange={postUserData}
                 />
-                <span for="ev">EV</span>
-                <div id="ev"></div>
+                <span for='ev'>EV</span>
+                <div id='ev'></div>
               </div>
-              <div className="department-checkbox" id='software_disable'>
+              <div className='department-checkbox' id='software_disable'>
                 <input
-                  type="checkbox"
-                  name="software"
-                  required="unrequired"
-                  id="amb_software"
+                  type='checkbox'
+                  name='software'
+                  required='unrequired'
+                  id='amb_software'
                   onChange={postUserData}
                 />
-                <span for="software">Software</span>
-                <div id="software"></div>
+                <span for='software'>Software</span>
+                <div id='software'></div>
               </div>
             </div>
-            <div className="payform-lable">
+            <div className='payform-lable'>
               <span>Workshop Amount (&#8377;) : </span>
-              <span id="workshopAmount">0</span>
+              <span id='workshopAmount'>0</span>
             </div>
-            <div className="department-timeslot">
-              <div className="payform-label" id="chooseTimeslot">
-                <div id="kkrtime">Choose Timeslot&nbsp;</div>
-                {temp.length == 0 ? " " : <span>({temp[0]})</span>}
+            <div className='department-timeslot'>
+              <div className='payform-label' id='chooseTimeslot'>
+                <div id='kkrtime'>Choose Timeslot&nbsp;</div>
+                {temp.length == 0 ? ' ' : <span>({temp[0]})</span>}
               </div>
               <select
-                name="timeSlot1"
-                className="payform-dropdown"
-                id="amb_timeslot"
+                name='timeSlot1'
+                className='payform-dropdown'
+                id='amb_timeslot'
                 onChange={postUserData}
               >
-                <option defaultValue={"DEFAULT"} disabled hidden>
+                <option defaultValue={'DEFAULT'} disabled hidden>
                   Choose here
                 </option>
-                <option value="DEFAULT">--None Selected--</option>
+                <option value='DEFAULT'>--None Selected--</option>
                 {/*<option value="22-25">22-25 September</option>*/}
-                <option value="25-28">25-28 September</option>
+                <option value='5-8'>5-8 October</option>
+                <option value='8-11'>8-11 October</option>
               </select>
             </div>
           </div>
-          <div className="accomo">
+          <div className='accomo'>
             <input
-              type="checkbox"
-              value="accomodation"
-              name="accomodation"
-              id="accomodation"
+              type='checkbox'
+              value='accomodation'
+              name='accomodation'
+              id='accomodation'
               onChange={postUserData}
-            />{" "}
+            />{' '}
             Need Accomodation & food
           </div>
-          <div className="payform-lable">
+          <div className='payform-lable'>
             <span>Amount (&#8377;) : </span>
-            <span id="accomoAmount">0</span>
+            <span id='accomoAmount'>0</span>
           </div>
           {/* <div className="cod">
             <input
@@ -715,49 +716,49 @@ function Quizsignup() {
             />{" "}
             Pay cash on delivery
           </div> */}
-          <div id="pay_button">
-            <div id="paynow">
+          <div id='pay_button'>
+            <div id='paynow'>
               <button
                 onClick={savetoLocal}
-                className="payform-button"
-                id="payform-button1"
+                className='payform-button'
+                id='payform-button1'
               >
                 Confirm
               </button>
             </div>
-            <div id="i_button_content">
+            <div id='i_button_content'>
               <h4></h4>
             </div>
           </div>
         </div>
 
-        <div className="payform-infocontain">
-          <div className="payform-info">
-            <FaInfoCircle /> &nbsp;{" "}
-            <span id="quiz_registration">Instructions</span>
-            <p className="instruction_para">
+        <div className='payform-infocontain'>
+          <div className='payform-info'>
+            <FaInfoCircle /> &nbsp;{' '}
+            <span id='quiz_registration'>Instructions</span>
+            <p className='instruction_para'>
               * Make sure your email id is correct as you will be getting
               confirmation on that email
             </p>
-            <p className="instruction_para">
+            <p className='instruction_para'>
               * You can choose Maximum 2 Departments. Each department is 3 Days
               Long + 1 Day Guest Lecture
             </p>
-            <p className="instruction_para">
+            <p className='instruction_para'>
               * You have to show QR code at the time of arrival.
             </p>
-            <p className="instruction_para">
+            <p className='instruction_para'>
               * In case of any issue or payment failure, please contact
               +91-9650735458
             </p>
-            <p className="instruction_para">* Referal IDs are case-sensitive</p>
+            <p className='instruction_para'>* Referal IDs are case-sensitive</p>
           </div>
 
           <br />
 
-          <div className="payform-checkbox">
-            <input type="checkbox" id="agree" name="" value="" />
-            <div id="read_content">
+          <div className='payform-checkbox'>
+            <input type='checkbox' id='agree' name='' value='' />
+            <div id='read_content'>
               I have read and understood the instructions
             </div>
 
@@ -774,7 +775,7 @@ function Quizsignup() {
 
       <Footer />
     </>
-  );
+  )
 
   // function submit() {
   //   var studentName = document.getElementById("amb_name");

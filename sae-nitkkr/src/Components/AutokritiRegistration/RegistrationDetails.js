@@ -154,9 +154,9 @@ function RegistrationDetails() {
       const Saving_user_data = authorised_user;
       Saving_user_data.Registration_time=new Date().toString();
       let gotit = await setDoc(
-        doc(db, "paymentregistrationid", timestamp),
+        doc(db, 'paymentregistrationid', timestamp.toString()),
         Saving_user_data
-      );
+      )
     };
 
     const sendEmail = () => {

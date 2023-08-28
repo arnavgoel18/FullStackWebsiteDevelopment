@@ -169,7 +169,7 @@ export default function AutokritiCard() {
               </div>
             </div>
           </div>
-          <div className='AutokritiCard-Poster' >
+          <div className='AutokritiCard-Poster'>
             <img src={posters[poster_idx]} loading='lazy' width='100%'></img>
           </div>
         </div>
@@ -284,10 +284,9 @@ export default function AutokritiCard() {
             <button
               type='button'
               className='Autokirti_12_button'
-              disabled
-              style={{ backgroundColor: 'Grey' }}
+              style={{ backgroundColor: 'lightcoral' }}
             >
-              Comming Soon
+              Register NOW !!
             </button>
           </a>
         </div>
