@@ -1,0 +1,26 @@
+.contri-input-box{
+    margin:1rem 0;
+}
+
+.justify-between{
+     justify-content: space-between;
+}
+
+.contri-list{
+    max-height:530px;
+    overflow-y: scroll;
+}
+
+.top-contri-goats{
+    margin:2rem 6rem;
+}
+@media (max-width:1100px) {
+    .top-contri-goats{
+    margin:2rem 3rem;
+}
+}
+@media (max-width:730px) {
+.flex.top-contri-goats{
+    display:none;
+}
+}

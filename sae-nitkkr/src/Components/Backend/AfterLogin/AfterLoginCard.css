@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+.afterLoginCard{
+    width: 200px;
+    height: 3rem;
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.iconimagediv{
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+.iconimagediv:hover .afterLoginCard{
+    background-color: grey;
+}
+.iconimage{
+    width: 5rem;
+    height: 5rem;
+}
+.afterLoginCard:hover{
+ cursor: pointer;
+}
+
+#yellow{
+    background-color: #F4B40F;
+}
+
+#orange{
+    background-color: #F88215;
+}

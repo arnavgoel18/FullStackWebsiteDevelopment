@@ -1,0 +1,135 @@
+.backendBlogPanel{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 25px;
+}
+#AllBlogs-backBtn{
+   cursor: pointer;
+    width: 171.06px;
+    height: 49px;
+    color: white;
+    background: #000000;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+#AllBlogs-backBtn i{
+    margin-top:0;
+}
+#blog-signout{
+    cursor: pointer;
+    width: 171.06px;
+    height: 49px;
+    background: #F4970A;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#blog-signout i{
+    margin-top:0;
+}
+.fa-customize{
+    font-size: large;
+}
+#totalHeading{
+    margin-top:10px;
+}
+.addNewBlog{
+    background-color: #098716;
+    height: 2.5rem;
+    width: fit-content;
+    padding: 0 15px 0 15px;
+    font-family: " Montserrat";
+    font-weight: bold;
+    font-size: 20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top:10px;
+}
+.addNewBlog i{
+    margin-top:0;
+}
+.card_contain
+{
+    width: 800px;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 30px auto;
+}
+.card_contain #card_container{
+    margin-bottom:15px;
+}
+.blogIcons{
+   margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 25px;
+    cursor: pointer;
+}
+.icon{
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 5px 2px 5px 9px;
+}
+
+@media screen and (max-width:768px){
+    .backendBlogPanel{
+
+        align-items: center;
+    justify-content: center;
+        flex-direction: column;
+        align-items:center;
+        padding-top:5px;
+    }
+    #addNewBlog{
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
+        height: fit-content;
+        width: 100%;
+        padding: 5px 10px 5px 10px;
+    }
+    .card_contain{
+        flex-direction: column;
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:460px){
+    .backendBlogPanel{
+        width: 70%;
+    }
+}
+@media only screen and (max-width: 400px) 
+{
+    #AllBlogs-backBtn{
+  
+    width: 121.06px;
+    height: 49px;
+    left: 32px;
+  
+    color: white;
+    background: #000000;
+    border-radius: 10px;
+    }
+    #blog-signout{
+        
+    width: 121.06px;
+    height: 49px;
+    float: right;
+    background: #F4970A;
+    border-radius: 10px;
+    }
+}

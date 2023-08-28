@@ -1,0 +1,17 @@
+TimelineItem p{
+    position: relative;
+    left: 10px;
+}
+.subtext{
+    position: relative;
+    left: 30px;
+}
+.subsubtext{
+    position: relative;
+    left:60px;
+    padding-right: 30px;
+}
+.subsubsubtext{
+    position: relative;
+    left: 90px;
+}

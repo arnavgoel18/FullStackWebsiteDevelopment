@@ -1,0 +1,280 @@
+#Accelarons-participate
+{
+font-family: 'Montserrat', sans-serif;
+   display: flex;
+   flex-direction: column;
+
+   align-content: center;
+   width: 70%;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 40px;
+   margin-bottom: 60px;
+}
+
+#Accelarons-titlecomp1
+{
+   font-weight: bold;
+    font-size: 27px;
+}
+#Accelarons-participate1
+{
+    font-size: 27px;
+    font-weight: 800;
+
+   background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+   
+
+}
+#Accelarons-supra_title
+{
+    border-bottom: 8px solid black;
+    font-size: 32px;
+    font-weight: 800;
+    color: rgb(12, 12, 12);
+    
+}
+#Accelarons-car1
+{
+    width: 100%;
+}
+#Accelarons-car2
+{
+    width: 100%;
+}
+
+#Accelarons-formula_title
+{
+    border-bottom: 8px solid black;
+    float:right;
+    font-size: 32px;
+    font-weight: 800;
+    color: rgb(12, 12, 12);
+}
+#Accelarons-formula_image
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+    width: 42%;
+    padding: 5px;
+}
+
+#Accelarons-car3
+{
+    width: 100%;
+}
+#Accelarons-car4
+{
+    width: 100%;
+}
+.content1
+{
+    padding:10px;
+}
+#Accelarons-supra_content
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    font-size: 18px;
+}
+#Accelarons-formula_content
+{
+   display: flex;
+  flex-direction: row; 
+   flex-wrap: wrap;  
+   justify-content: space-between;
+   font-size: 18px;
+   margin-top: 40px;
+   width:100%;
+}
+#Accelarons-formula{
+    margin-top: 40px;
+}
+#Accelarons-supraline
+{
+    border: none;
+   border-left: 5px solid red;
+    padding-left: 10px;
+}
+#Accelarons-formulaline
+{
+    border: none;
+    border-right: 5px solid red;
+    padding-right: 10px;
+}
+#Accelarons-supra_text
+{
+    margin-top:30px;
+    width: 40%;
+    padding: 5px;
+    font-size: 18px;
+}
+#Accelarons-formula_text
+{
+    width: 40%;
+    padding: 5px;
+    font-size: 18px;
+}
+#Accelarons-supra_image
+{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    width: 42%;
+    padding: 5px;
+}
+#Accelarons-image1
+{
+    width: 80%;
+    height: 275px;
+    padding: 5px;
+    background-image: url("../../../Assets/WhereWeParticipate/AcceleronsFB1.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#Accelarons-image1:hover
+{
+    cursor: pointer;
+}
+#Accelarons-image2:hover
+{
+    cursor: pointer;
+}
+#Accelarons-image11:hover
+{
+    cursor: pointer;
+}
+#Accelarons-image22:hover
+{
+    cursor: pointer;
+}
+#Accelarons-image11
+{
+    width: 80%;
+    padding: 5px;
+    height: 275px;
+    background-image: url("../../../Assets/WhereWeParticipate/AcceleronsSupra1.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#Accelarons-image2
+{
+    width: 20%;
+    padding: 5px;
+    height: 275px;
+    background-image: url("../../../Assets/WhereWeParticipate/AcceleronsFB2.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.45;
+
+}
+#Accelarons-image22
+{
+    opacity: 0.45;
+    width: 20%;
+    padding: 5px;
+    height: 275px;
+    background-image: url("../../../Assets/WhereWeParticipate/AcceleronsSupra2.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+@media (min-width:1024px) and (max-width:1439px)
+{
+    #Accelarons-participate
+    {
+        font-family: 'Montserrat', sans-serif;
+       display: flex;
+       flex-direction: column;
+       flex-wrap: wrap; 
+       align-content: center;
+      
+    }
+    
+    #Accelarons-supra_title
+    {
+        border-bottom: 8px solid black;
+        font-size: 32px;
+        font-weight: 800;
+        color: rgb(12, 12, 12);
+        
+    }
+    #Accelarons-formula_title
+    {
+        border-bottom: 8px solid black;
+        margin-left: 57%;
+        font-size: 32px;
+        font-weight: 800;
+        color: rgb(12, 12, 12);
+    }
+    
+    #Accelarons-supra_text,  #Accelarons-formula_text
+    {
+        width: 46%;
+    }
+    #Accelarons-supra_image, #Accelarons-formula_image{
+        width: 50%;
+    }
+}
+@media (min-width:768px) and (max-width:1024px)
+{
+    #Accelarons-supra_text, #Accelarons-formula_text{
+        width: 100%;
+    }
+    #Accelarons-supra_image, #Accelarons-formula_image{
+        min-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+        justify-content: center;
+    }
+    #Accelarons-formula_content{
+        flex-direction: column-reverse;
+    }
+    #Accelarons-formula_title{
+        float:left;
+    }
+    #Accelarons-image2, #Accelarons-image22{
+        display: none;
+    }
+}
+
+@media only screen and (max-width:768px)
+{
+    #Accelarons-participate{
+        width:90%;
+    }
+    #Accelarons-supra_text, #Accelarons-formula_text{
+      
+        font-size: 16px;
+    }
+    #Accelarons-supra_image, #Accelarons-formula_image{
+     
+        width: 300px;
+        
+ 
+    }
+    #Accelarons-image1, #Accelarons-image2, #Accelarons-image11, #Accelarons-image22{
+        height: 200px;
+    }
+    #Accelarons-formula_content{
+        flex-direction: column-reverse;
+    }
+    #Accelarons-formula_title{
+        float:left;
+    }
+    #Accelarons-image2, #Accelarons-image22{
+        display: none;
+    }
+    
+}

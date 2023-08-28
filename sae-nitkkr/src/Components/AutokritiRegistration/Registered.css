@@ -1,0 +1,95 @@
+.registered_id{
+    margin: 20px;
+    display: flex;
+    color: rgb(37, 37, 133);
+}
+.iconlarge{
+    font-size: larger;
+    margin-right: 10px;
+}
+.registered_table{
+    width: 60%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 49px;
+    border-collapse: collapse;
+    border: 1px solid black;
+
+}
+.td-first{
+  font-weight: 800;
+}
+.registered_table td,th{
+    text-align: center;
+    padding: 10px;
+    border: 1px solid black;
+}
+.registered_table th{
+  background-color: #3c4fe0;
+  color: #fff;
+}
+.registered_table tr:nth-child(even) {background-color: #e2e1e1;}
+
+.registered_office{
+    margin-left: 20px;
+    margin-top: 40px;
+}
+.registered_office div{
+    margin: 8px;
+}
+.registered_office input{
+    background-color: rgb(211, 239, 250);
+    border: none;
+    width: 20%;
+    padding: 8px;
+    margin-top: 8px;
+    font-size: small;
+}
+
+
+
+.registered_office  button {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 40px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: 8px;
+  margin-bottom: 40px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+.registered_office  button:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.registered_office  button:hover {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.registered_office  button:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}

@@ -1,0 +1,118 @@
+.popup {
+    margin-top: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(179, 175, 175, 0.5)
+    
+  
+    
+     }
+  
+   .popup-inner{
+    position: relative;
+   padding: 40px;
+   background-color: rgb(122, 100, 250);
+   width:fit-content;
+   height: fit-content;
+   display: flex;
+   justify-content: center;
+   gap: 20px;
+   border-radius: 5%;
+  }
+  
+  
+  .card-container{
+    
+     
+        border-radius: 20px;
+      
+  
+    }  
+  
+  
+  
+  
+  /* close btn*/
+  .popup-inner .close-btn{
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-family: 'Fira Sans', sans-serif; 
+    font-size: 22px;
+    background-color:  rgb(122, 100, 250);
+    border: none;
+  }
+  /*image*/
+  .popup_card_image_container:hover{
+    transform: scale(1.1);
+    box-shadow:0px 0px 15px 0px;
+    border-radius: 20px;
+   
+  }
+  
+  .popup_card_image_container img{
+       overflow: hidden;
+       height: 140px;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+       
+   }
+  .popup_card_image_container{
+     background-color: white;
+     width: 150px;
+   
+     border-radius: 15px;
+  }
+  
+  .popup_image{
+     width: 150px;
+     
+  }
+  .popup_card_title{
+    margin: 10px;
+    text-align: center;
+    text-decoration: none;
+  }
+  .pop_card_text{
+    margin: 10px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  
+  
+  
+  
+  
+  @media all and (max-device-width: 640px){
+    .popup-inner{
+      padding: 35px;
+      padding-top: 260px;
+      flex-direction: column;
+      gap: 30px;
+      height: 470px;
+      overflow:hidden;
+    }
+  
+    .popup_card_image_container img{
+      width: 160px;
+      height: 120px;   
+  }
+  .popup_card_image_container{
+   
+    width: 160px;
+  
+  
+  }
+  .popup_image{
+    width: 160px;
+    height: 140px;
+    
+  }
+  }

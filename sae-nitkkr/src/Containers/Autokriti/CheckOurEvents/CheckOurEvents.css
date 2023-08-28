@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200&display=swap");
+* {
+  font-family: "Montserrat", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.CheckOurEvents-main{
+  width: 70%;
+  margin: 0 auto;
+  background-color: rgb(248 249 249);
+  box-shadow: 0px 0px 10px -3px grey;
+  margin-bottom:100px;
+}
+#event-register
+{
+  cursor: pointer;     
+  width: 121.06px;
+  height: 49px;
+  align-self: center;
+  background: #E9910DFC;
+  border-radius: 10px;
+  margin-bottom: 18px;
+  font-size: 15px;
+  border: none;
+  font-weight: bold;
+  color: #fff;
+}
+
+.CheckOurEvents-main_container{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top:40px;
+  padding-bottom:40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.CheckOurEvents-card {
+  background: #000;
+  width: 257px;
+  height: 380px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: 0.3s;
+  border-radius: 15px;
+  background-color: white;
+  margin: 5px;
+}
+.CheckOurEvents-image {
+  width: 100%;
+  height: 170px;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+.CheckOurEvents-card:hover {
+  box-shadow: 0 8px 16px 0 linear-gradient(to right, #74ebd5 0%, #9face6 100%);
+}
+
+.CheckOurEvents-container {
+  /* display: flex; */
+  /* flex-direction: column; */
+  display: grid;
+    grid-template-columns: 30px 197px 30px;
+    grid-template-rows: 43px 91px 66px;
+  align-content: center;
+  text-align: center;
+  justify-content: center;
+}
+.CheckOurEvents-container p{
+
+  grid-column: 1/span 3;
+  align-self: center;
+  line-height: 1.5;
+  padding-top: 5px;
+}
+.CheckOurEvents-container h2{
+  grid-column: 1/span 3;
+  place-items: center;
+  padding-top:10px;
+  padding-bottom: 10px;
+}
+.CheckOurEvents-heading {
+  background-color: transparent;
+}
+.CheckOurEvents-heading1 {
+  background-color: transparent;
+}
+
+.CheckOurEvents-heading {
+  color: black;
+  margin-bottom: 40px;
+  font-size: 30px;
+}
+.CheckOurEvents-heading1 {
+  color: black;
+  margin-top: 40px;
+  margin-left: 190px;
+  font-size: 30px;
+}
+.CheckOurEvents-events {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.CheckOurEvents-register{
+  margin-top: 8px;
+  font-size: 28px;
+  font-weight: 1000;
+  text-decoration: none;
+  grid-column: 1/4;
+}
+.CheckOurEvents-subheading {
+  background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  font-size: 40px;
+  font-weight: 1000;
+}
+
+.CheckOurEvents-subheading1 {
+  background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.extraeffect {
+  background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+.CheckOurEvents-register {
+  content: " ";
+  display: block;
+}
+@media only screen and (max-width:769px){
+  .CheckOurEvents-main{
+    width:95%;
+  }
+  .CheckOurEvents-card {
+    width:245px;
+    height:362px;
+    margin-bottom: 25px;
+  }
+  .CheckOurEvents-image {
+    height:153px;
+  }
+  .CheckOurEvents-container h2{
+    padding-top:5px;
+    padding-bottom: 5px;
+  }
+  .CheckOurEvents-heading{
+    font-size: 25px;
+  }
+  .CheckOurEvents-subheading{
+    font-size: 30px;
+  }
+  .CheckOurEvents-events {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: 
+    center;
+  }
+}
+@media (min-width:769px) and (max-width:1024px){
+  .CheckOurEvents-main{
+    width:90%;
+  }
+  .CheckOurEvents-main_container{
+      display: flex;
+      justify-content: space-evenly;
+    }
+}

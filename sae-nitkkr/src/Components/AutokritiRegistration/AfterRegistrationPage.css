@@ -1,0 +1,124 @@
+.afterregistration_box
+{
+    /* border: 2px solid black; */
+    display: flex;
+
+    flex-direction: column;
+    width: 85%;
+    margin-left: 140px;
+    margin-right: 180px;
+}
+.payment-id-div{
+    display:flex;
+    padding: 10px;
+    align-items: baseline;
+}
+.fa fa-user{
+    margin:10px ;
+}
+.after-reg-table{
+    width: 60%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 49px;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+.after-reg-table td,th{
+    text-align: center;
+    padding: 10px;
+    border: 1px solid black;
+}
+.after-reg-table th{
+  background-color: #3c4fe0;
+  color: #fff;
+}
+.qr_code{
+margin:20px;
+width:50%;
+}
+.contactus-link{
+    color: #2e37df;
+}
+.qr-inst{
+    margin:20px;
+
+}
+.qr-code-btn{
+    margin: 20px;
+    padding: 10px;
+    color: #fff;
+    background-color: coral;
+    border: 0ch;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.qr_div
+{
+    display: flex;
+    /* flex-direction: column; */
+    margin-left: 280px;
+    align-items: center;
+    margin-right: 180px;
+    
+    
+}
+/* .qr-code{
+    size: 350;
+} */
+
+@media only screen and (max-width: 400px) 
+{
+    .afterregistration_box
+    {
+margin:3vw;
+align-items: center;
+padding: 2px;
+    }
+    .after-reg-table {
+        margin:2px;
+    }
+    /* .qr-code{
+        size: 250px;
+    } */
+    .qr_code{
+        margin-left:-50px;
+        
+        }
+.qr_div
+{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    margin: 2vw;
+}
+.after-reg-table td,th{
+
+    padding: 3px;
+    font-size: 10px;
+
+}
+.qr-inst{
+    margin:5px;
+font-size: 12px;
+}  
+}
+
+@media (min-width: 400px) and (max-width: 1024px) 
+{
+    
+    .after-reg-table tr{
+        width: 95%;
+    }
+    .qr_div
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10vw;
+}
+.afterregistration_box
+{
+    margin-left: 10vw;
+}
+}

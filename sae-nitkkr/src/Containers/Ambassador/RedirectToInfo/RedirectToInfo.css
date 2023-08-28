@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+#redirect_info_container
+{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: 'Montserrat', sans-serif;
+    /* height: 30px; */
+    justify-content:center;
+    
+    /* align-items: center; */
+}
+#redirect_info_second_box
+{
+    text-align: center;
+    font-size: 20px;
+    padding-top: 12px;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-bottom: 12px;
+}
+#learn_more
+{
+    font-family: 'Montserrat', sans-serif;
+    color: #f88c11;
+}
+#learn_more:hover
+{
+    cursor: pointer;
+}
+#info_remaining
+{
+    font-family: 'Montserrat', sans-serif;
+    color: white
+}
+@media (min-width:0px) and (max-width:394px)
+{
+    #redirect_info_second_box
+{
+    text-align: center;
+    font-size: 10px;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+}
+@media (min-width:394px) and (max-width:600px)
+{
+    #redirect_info_second_box
+{
+    text-align: center;
+    font-size: 12px;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+}
+@media (min-width:600px) and (max-width:900px)
+{
+    #redirect_info_second_box
+{
+    text-align: center;
+    font-size: 14px;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+}
+@media (min-width:900px) and (max-width:1300px)
+{
+    #redirect_info_second_box
+{
+    text-align: center;
+    font-size: 16px;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+}

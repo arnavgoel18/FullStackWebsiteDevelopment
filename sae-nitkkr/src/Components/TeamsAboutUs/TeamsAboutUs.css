@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  padding: 0px;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+}
+.TeamAboutUs-main_container {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+ 
+  margin-top: 40px;
+}
+.TeamAboutUs-heading {
+  display: flex;
+  flex-direction: row;
+ 
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+.TeamAboutUs-weare {
+  font-size: 27px;
+  margin-right: 5px;
+  
+}
+.TeamAboutUs-boldcolor {
+  font-size: 27px;
+  font-weight: 900;
+
+  background: linear-gradient(to right, #30cfd0 0%, #330867 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.TeamAboutUs-bigcontainer {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.TeamAboutUs-text_container {
+  width: 412px;
+
+  
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+
+.TeamAboutUs-comp {
+  font-size: 20px;
+  border-left: solid rgb(67, 67, 197) 3px;
+  font-weight: 700;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.TeamAboutUs-image img {
+  display: flex;
+  float: right;
+  height: 300px;
+  width: 450px;
+  padding: 5px;
+  align-items: flex-end;
+  clip-path: polygon(33% 0, 100% 0, 100% 100%, 0 100%, 0 30%);
+}
+.TeamAboutUs-image_container {
+  height: 10%;
+}
+
+@media only screen and (max-width: 425px) {
+  .TeamAboutUs-comp {
+    font-size: 18px;
+  }
+  .TeamAboutUs-comp {
+    border-left: solid rgb(67, 67, 197) 3px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-left: 5px;
+    padding: 10px;
+  }
+  .TeamAboutUs-heading {
+    margin-left: -14px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+ 
+  .TeamAboutUs-text {
+    padding: 20px;
+    width: 100%;
+  }
+  .TeamAboutUs-boldcolor {
+    font-size: 31px;
+    font-weight: 900;
+    color: rgb(67, 67, 197);
+  }
+
+ 
+  .TeamAboutUs-weare {
+    font-size: 31px;
+    margin-right: 5px;
+    margin-top: 0px;
+  }
+.TeamAboutUs-bigcontainer{
+  display: flex;
+  flex-direction: column;
+}
+.TeamAboutUs-image_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.TeamAboutUs-image{
+  height:200px;
+    width: 290px;
+    align-items: center;
+}
+#teamsabout_us_image_id{
+  margin-top: 50px;
+  height: 200px;
+  width: 290px;
+}
+
+
+.TeamAboutUs-text_container{
+  width: 100%;
+  justify-content: center;
+}
+
+  .TeamAboutUs-main_container {
+    width: 100%;
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 425px) and (max-width: 768px) {
+  .TeamAboutUs-comp {
+    border-left: solid rgb(67, 67, 197) 3px;
+    font-weight: 700;
+    font-size: 15px;
+  }
+  .TeamAboutUs-comp {
+    font-size: 18px;
+  }
+  .TeamAboutUs-text {
+    font-size: 15px;
+    width: 100%;
+  }
+  .TeamAboutUs-bigcontainer {
+  display: flex;
+  flex-direction: column;
+
+  }
+  .TeamAboutUs-text_container{
+    width: 100%;
+    justify-content: center;
+  }
+  .TeamAboutUs-image_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #teamsabout_us_image_id{
+    margin-top: 40px;
+    height: 200px;
+    width: 490px;
+  }
+  
+  .TeamAboutUs-main_container {
+    width: 90%;
+    font-size: 15px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .TeamAboutUs-text {
+    padding: 20px;
+    margin-left: -27px;
+  }
+
+
+  .TeamAboutUs-heading {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -6px;
+  }
+  .TeamAboutUs-boldcolor {
+    font-size: 37px;
+    font-weight: 900;
+    color: rgb(67, 67, 197);
+  }
+  .TeamAboutUs-main_container{
+    width: 90%;
+  }
+  .TeamAboutUs-bigcontainer {
+
+    flex-direction: column;
+  justify-content: center;
+    }
+    .TeamAboutUs-text_container{
+      width: 70%;
+      align-self: center;
+    }
+    .TeamAboutUs-image_container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #teamsabout_us_image_id{
+      margin-top: 40px;
+      height: 275px;
+      width: 392px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1380px) {
+  .TeamAboutUs-image img {
+    height: 60%;
+    width: 60%;
+  }
+
+ .TeamAboutUs-text_container{
+  width: 80%;
+  align-self: center;
+}
+  
+  #teamsabout_us_image_id{
+    margin-top: 40px;
+    height: 270px;
+    width: 392px;
+  }
+}
+@media (min-width:1024px) and (max-width:1439px)
+{
+  .TeamAboutUs-image img {
+    height: 50%;
+    width: 85%;
+  }
+   .TeamAboutUs-text_container{
+    width: 50%;
+   margin-right: 30px;
+  }
+}

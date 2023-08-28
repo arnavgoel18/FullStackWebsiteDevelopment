@@ -1,0 +1,401 @@
+@import url("https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap");
+
+.payform-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-bottom: 2em;
+  height: auto;
+}
+.instruction_para
+{
+  /* margin-bottom: 5px; */
+  margin-top: 20px;
+}
+#quiz_registration
+{
+  font-size: 28px;
+  
+  /* border: 2px solid black; */
+}
+.regAmount{
+  font-family:sans-serif;
+  font-weight: 500;
+  font-size: 15px; 
+}
+#read_content
+{
+  /* border: 2px solid black; */
+  margin-left: -30px;
+ width: 312%;
+}
+.payform-form {
+  width: 340px;
+  height: fit-content;
+  /* border: 2px solid black; */
+}
+.payform-checkbox
+{
+  display: flex;
+  /* border: 2px solid black; */
+}
+
+.payform-info {
+  width: 302px;
+
+  height: max-content;
+  border: none;
+  border-radius: 20px;
+  background-color:#CFE8FE;
+  font-family: sans-serif;
+  padding:30px;
+  Line-height :18.29px;
+}
+.payform-heading{
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 20px;
+    
+}
+#referal_check
+{
+  display: flex;
+  flex-direction: row;
+  /* border: 2px solid black; */
+  width: 112%
+}
+
+#show_email_is_registered{
+  display: none;
+  color: red;
+}
+
+#show_invalid{
+  display: none;
+  color: red;
+}
+
+#ref_image
+{
+  margin-left: 10px;
+  margin-top: 11px;
+  margin-right: 2px;
+  /* border: 2px solid black; */
+  width: 23px;
+  height: 23px;
+  cursor: pointer;
+}
+#pay_button
+{
+  /* border: 2px solid black; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 560px;
+}
+#paynow
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#pricing{
+   text-align: center;
+    vertical-align: middle;
+    width: 5em;
+    display: flex;
+    justify-content: center;
+    top: -10px;
+    position: relative;
+}
+
+#i_button_content
+{
+  /* position:absolute; */
+  /* top: -1px; */
+  
+  /* left: 490px; */
+  /* border: 2px solid black; */
+  background-color:#CFE8FE;
+  padding: 10px;
+  
+  justify-content: flex-end;
+  width: 198px;
+  /* display: none; */
+  border-radius: 10px;
+  visibility: hidden;
+}
+
+.payform-infocontain{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+@import url('https://fonts.googleapis.com/css?family=Montserrat:900i&display=swap');
+
+
+
+.payform-heading{
+
+  font-size: 40px;
+	    text-align: center;
+      /* height:90vh; */
+      /* line-height: 90vh; */
+	    color: black;
+	   	/* font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+       font-family: 'Montserrat';
+	    font-weight: 700;
+}
+.payform-label{
+  font-family: sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+}
+.payform-input {
+  margin: 8px 0;
+  padding: 5px;
+  width: 100%;
+  outline: none;
+  border: 0.5px solid #bbb;
+  background-color: rgb(245, 245, 245);
+  /* border-radius:20px; */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -ms-transition: 0.2s ease all;
+  -o-transition: 0.2s ease all;
+  transition: 0.2s ease all;
+}
+
+.payform-dropdown{
+  margin: 8px 0;
+  padding: 5px;
+  width: 100%;
+  outline: none;
+  border: 0.5px solid #bbb;
+  background-color: rgb(245, 245, 245);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -ms-transition: 0.2s ease all;
+  -o-transition: 0.2s ease all;
+  transition: 0.2s ease all;
+}
+
+.payform-button {
+  height: 40px;
+  background-color: #1a3c7f;
+
+  font-weight: 700;
+  border-radius: 5px;
+margin-top: 5px;
+  border: none;
+  color: white;
+  font-size: 18px;
+  padding-left: 10px;
+  font-family: sans-serif;
+  padding-right: 10px;
+  margin-bottom: 20px;
+  width: 140px;
+}
+
+.payform-button2 {
+  background-color: grey;
+  font-family: sans-serif;
+  font-weight: 700;
+  color: white;
+  width: 184.64px;
+  height: 39px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 1em;
+}
+.payform-button2:enabled{
+  background-color: #299204;
+}
+ 
+.payform-button, .payform-button2:enabled:hover{
+  cursor: pointer;
+}
+
+.field_select{
+  display: flex;
+  flex-direction: column;
+}
+
+.payform-checkbox{
+  display: flex;
+  align-items: center;
+}
+.referral_code_verified{
+  height:30px;
+  display: none;
+}
+#pay_price{
+  display: flex;
+  margin-top: 20px;
+}
+
+#original_price{
+  margin-right: 10px;
+  color:blue;
+  font-weight: bold;
+}
+#discounted_price{
+  display: none;
+}
+#pay_price_title{
+  color:blue;
+  font-weight: bold;
+}
+.department-checkbox{
+  margin-top: 8px;
+  display: flex;
+  margin-left: 10px;
+}
+.department-checkbox input{
+  width: auto;
+  margin-right: 5px;
+}
+.main-chheckbox{
+  display: flex;
+  flex-direction: row;
+  row-gap: 90px;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+.department-timeslot{
+  margin-top: 13px;
+  margin-bottom: 15px;
+}
+#chooseTimeslot{
+  margin-bottom: 4px;
+}
+#accomodation, #cashondelivery{
+  width: 5%;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+#payform-button1{
+  margin-top: 20px;
+}
+
+@media (min-width:320px) and (max-width:425px)
+{
+#referal_check {
+  display: flex;
+  flex-direction: row;
+  /* border: 2px solid black; */
+  width: 102%;
+}
+#pay_button {
+  width: 102%;
+}
+
+
+}
+@media (min-width:425px) and (max-width:1030px)
+{
+  #pay_button
+  {
+    width: 112%;
+  }
+}
+@media (min-width:320px) and (max-width:1030px)
+{
+  
+#i_button_content
+{
+  margin-left: 3%;
+  margin-right: 3%;
+}
+}
+@media (min-width:320px) and (max-width:720px){
+  
+  .payform-container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-Items: 'center';
+    margin: auto;
+  }
+
+  .payform-form {
+    width: 320px;
+    height: 800px;
+    /* border: 2px solid black; */
+    margin: 0 auto;
+  }
+
+  .payform-info {
+    /* width: 300px; */
+    height: max-content;
+    border: none;
+    border-radius: 20px;
+    background-color:#CFE8FE;
+    
+    padding:30px;
+    Line-height :18.29px;
+    margin: 0 auto;
+  }
+  .payform-checkbox{
+      display: flex;
+      align-items:center;
+      justify-content: center;
+      margin-left: 10px;
+      margin-right: 10px;
+      
+  }
+ 
+}
+
+
+@media (min-width:0px) and (max-width:320px){
+  .payform-container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-Items: 'center';
+    margin-bottom: 40px;
+  }
+  .payform-form {
+    width: 300px;
+    height: 800px;
+    /* border: 2px solid black; */
+    margin: 0 auto;
+  }
+
+  .payform-info {
+    /* width: 96%; */
+    height: max-content;
+    border: none;
+    border-radius: 20px;
+    background-color:#CFE8FE;
+    font-family: sans-serif;
+    padding:15px;
+    Line-height :18.29px;
+    /* margin: 0 20px; */
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 720px){
+  .payform-checkbox{
+    position: relative;
+    left: -20px;
+  }
+}
+

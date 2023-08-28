@@ -1,0 +1,53 @@
+#followuscard_bigbox {
+  position: relative;
+  width: 240px;
+  margin-top: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-bottom: 30px;
+  display: flex;
+  box-shadow: 0px 0px 10px;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+#followus_socialmedia {
+  display: flex;
+  justify-content: center;
+}
+#followus_title {
+  margin-left: 20px;
+  display: inline;
+  font-weight: 700;
+}
+
+.follow-line {
+  display: flex;
+  position: relative;
+  width: 92px;
+  left: -15px;
+  margin-top: 10px;
+  float: right;
+}
+#follow_table {
+  border: 1px solid #c4c4c4;
+  border-collapse: collapse;
+}
+.follow_teams {
+  width: 150px;
+  font-size: 20px;
+  text-align: center;
+}
+.follow_logos {
+  width: 40px;
+}
+
+@media (min-width: 0px) and (max-width: 630px) {
+  #followuscard_bigbox {
+    position: static;
+    top: 0px;
+    padding-bottom: 25px;
+  }
+}

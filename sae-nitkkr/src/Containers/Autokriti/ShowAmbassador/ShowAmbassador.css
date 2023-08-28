@@ -1,0 +1,165 @@
+.amb_subnav{
+    display: flex;
+    justify-content: space-around;
+    width:250px;
+    background-color: #EEA311;
+    margin-right: auto;
+    padding:15px;
+    margin-bottom: 50px;
+    border-bottom-right-radius: 10px;
+}
+.general-logout{
+    border-radius: 5px;
+    color:white;
+    font-size: 20px;
+    padding-left:10px;
+    padding-right:10px;
+}
+
+.ambassador-profile-name{
+    font-weight: bold;
+    font-size: 20px;
+    padding-right: 10px;
+    border-right: 1px solid grey;
+}
+
+.amb_yourRef{
+    font-size:18px;
+    padding:10px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #EEA311;
+    /* border-top-right-radius: 10px;
+    border-top-left-radius: 10px; */
+    border: solid 2px #000;
+    color:white;
+    font-weight: bold;
+}
+.showAmbDiv{
+    border: solid 2px #000;
+    border-top: none;
+    padding: 0.5rem 0 0.5rem 0.5rem;
+    width: 400px;
+    height: fit-content;
+    max-height: 42.5vh;
+    overflow-y: scroll;
+}
+.showPersonAmb, .showPersonAmbCollege, .ambLeaderName, .ambLeaderRefer{
+    background-color: #1a6b99;
+    width:100%;
+    margin: 0 0 0.3rem 0;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight:600;
+    color:white;
+    text-align: center;
+    
+}
+.showPersonAmb{
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.showPersonAmbCollege{
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.ambFlex{
+    display: flex;
+}
+.ambFlexMain{
+    margin-bottom: 100px;
+    display: flex;
+    width:800px;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+}
+.amb_leaderboard_container{
+    width:350px;
+}
+.amb_leaderboard{
+    border: 2px solid rgb(39, 39, 124);
+    max-height: 42.5vh;
+    overflow-y: scroll;
+    padding: 0.5rem 0 0.3rem 0;
+}
+.amb_leader_heading{
+    padding: 1rem 3rem 0.5rem 3rem;
+    text-align: center;
+    background-color: #EEA311;
+    color:white;
+    border-top: 2px solid rgb(39, 39, 124);
+    border-left: 2px solid rgb(39, 39, 124);
+    border-right: 2px solid rgb(39, 39, 124);
+    font-size: 1.5rem;
+    font-weight: 600;
+    
+}
+.ambLeaderName{
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    margin-left: 0.5rem;
+}
+.ambLeaderRefer{
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    
+}
+::-webkit-scrollbar-track {
+    background: none;
+    height: 0%;
+}
+::-webkit-scrollbar-thumb {
+    background: #CDCDCD;
+    border-radius: 10px
+}
+@media (min-width:0px) and (max-width:400px)
+{
+    .ambFlexMain{
+        width:auto;
+        flex-direction: column;
+    }
+    .showAmbDiv{
+        width:95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .amb_leaderboard_container{
+        margin-top: 50px;
+        width:95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .amb_yourRef{
+       width:95%;
+       margin-left: auto;
+       margin-right: auto;
+    }
+}
+@media (min-width:400px) and (max-width:750px)
+{
+    .ambFlexMain{
+        width:auto;
+        flex-direction: column;
+    }
+    .showAmbDiv{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .amb_leaderboard_container{
+        width:400px;
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .amb_yourRef{
+       width:400px;
+       margin-left: auto;
+       margin-right: auto;
+    }
+}

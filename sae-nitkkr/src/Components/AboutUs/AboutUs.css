@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.AboutUs-boxes{
+  display: flex;
+  width: 70%;
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: auto; 
+  padding-top:50px;
+  padding-bottom: 50px;
+  }
+
+.AboutUs-image{
+  height:100%;
+  width:500px;
+}
+
+.AboutUs-box2{
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.AboutUs-box1
+{ 
+  margin-top:auto;
+  margin-bottom: auto;
+  padding-right: 70px;
+}
+
+.AboutUs-box21{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap   ;
+padding-bottom: 10px;
+}
+
+.AboutUs-box22{
+  margin: 20px 0px;
+}
+
+.AboutUs-head{
+  background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+	-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-left: 5px;
+}
+
+.AboutUs-box23{
+  background: linear-gradient(white,white), 
+              linear-gradient(to bottom, #30CFD0 0%, #330867 100%);
+  background-origin: padding-box, border-box;
+  background-repeat: no-repeat; /* this is important */
+  border-left: 3px solid transparent;
+  margin: 10px;
+  padding-left: 10px;
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+  .AboutUs-boxes{
+    width: 90%;
+  }
+  .AboutUs-box1{
+    display: none;
+  }
+  .AboutUs-box2{
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+.AboutUs-image{
+  width:400px;
+}
+}
+
+@media only screen and (max-width: 1300px) {
+  .AboutUs-boxes{
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .AboutUs-boxes{
+    width: 95%;
+  }
+}

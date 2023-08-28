@@ -1,0 +1,35 @@
+.mainBoxRoles{
+    background-color:#9810EB ;
+}
+.rolesTitle{
+    font-family:" Montserrat";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 27px;
+    line-height: 33px;
+    color: #FFFFFF;
+    display: flex;
+    justify-content:left;
+    padding-left: 7.5rem;
+    padding-top: 1rem;
+}
+.ambassadorRoles{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+    background-color:#9810EB;
+    padding-left: 4.7rem;
+    margin-top: 1rem;
+}
+
+@media (min-width: 0px) and (max-width: 919px){
+    .rolesTitle{
+       padding-left: 4rem;
+       
+    }
+    .ambassadorRoles{
+        justify-content: space-evenly;
+        padding-left: 1rem;
+    }
+}

@@ -1,0 +1,223 @@
+.Ambassador-container{
+  width:70%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 10px 10px 15px -3px grey;
+  margin-bottom: 70px;
+}
+.Ambassador-title{
+  margin-top:40px;
+  padding:10px;
+  font-size: 25px;
+  font-weight: bold;
+  color:white;
+  background-color: #24292E;
+  width:fit-content;
+}
+.AmbassadorBody{
+    display: flex;
+    justify-content: space-between;
+  }
+.leftportion{
+  width: 45%;
+  height: 600px;
+}
+.rightportion{
+    width: 50%;
+}
+.rightportion-back{
+  padding:10px;
+  background-color: red;
+  color:white;
+  cursor: pointer;
+  width:60px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top:15px;
+  display: none;
+} 
+.ambassador-buttons{
+    display: flex;
+    flex-direction: row;
+    padding-top:30px;
+    border-bottom: 2px solid #c5d7e9;
+}
+.button-4 {
+  appearance: none;
+  width: 50%;
+  background-color: #c5d7e9;
+  border:none;
+  color: #24292E;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  padding: 6px 16px;
+  position: relative;
+  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-4:hover {
+  background-color: #F3F4F6;
+  text-decoration: none;
+  transition-duration: 0.1s;
+}
+
+.button-4:active {
+  background-color: #EDEFF2;
+  box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+  transition: none 0s;
+}
+
+.button-42{
+  background-color: white;
+}
+.leftportion-joinus{
+  width:80px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:40px;
+  background-color: green;
+  padding:10px;
+  border-radius: 5px;
+  color:white;
+  display: none;
+  cursor: pointer;
+}
+@media only screen and (max-width:400px){
+  .Ambassador-container{
+    width:95%;
+  }
+  .AmbassadorBody{
+    display: block;
+    overflow:hidden;
+    position:relative;
+    height:650px;
+  }
+  .leftportion, .rightportion{
+    width:100%;
+    position:absolute;
+    transition: all 0.5s ease;
+  }
+  .rightportion{
+    transform: translateX(100%);
+  }
+
+  .trig .rightportion
+  {
+      transform: translateX(0%);
+  }
+
+  .trig .leftportion
+  {
+    transform: translateX(-100%);
+  }
+  .leftportion-joinus{
+    display: block;
+    position: relative;
+    top: 5%;
+  }
+  .rightportion-back{
+    display: block;
+  }
+}
+@media (min-width:400px) and (max-width:550px){
+  .Ambassador-container{
+    width:90%;
+  }
+  .AmbassadorBody{
+    display: block;
+    overflow:hidden;
+    position:relative;
+    height:650px;
+  }
+  .leftportion, .rightportion{
+    width:100%;
+    position:absolute;
+    transition: all 0.5s ease;
+  }
+  .rightportion{
+    transform: translateX(100%);
+  }
+
+  .trig .rightportion
+  {
+      transform: translateX(0%);
+  }
+
+  .trig .leftportion
+  {
+    transform: translateX(-100%);
+  }
+  .leftportion-joinus{
+    display: block;
+    position: relative;
+    top: 5%;
+  }
+  .rightportion-back{
+    display: block;
+  }
+}
+@media (min-width:550px) and (max-width:850px){
+  .Ambassador-container{
+    width:90%;
+  }
+  .AmbassadorBody{
+    display: block;
+    overflow:hidden;
+    position:relative;
+    height:650px;
+  }
+  .leftportion-joinus{
+    display: block;
+  }
+  .rightportion-back{
+    display: block;
+  }
+  .leftportion, .rightportion{
+    width:100%;
+    position:absolute;
+    transition: all 0.5s ease;
+  }
+  .rightportion{
+    transform: translateX(100%);
+  }
+
+  .trig .rightportion
+  {
+      transform: translateX(0%);
+  }
+
+  .trig .leftportion
+  {
+    transform: translateX(-100%);
+  }
+}
+@media (min-width:850px) and (max-width:1024px)  {
+  .Ambassador-container{
+    width:95%;
+  }
+}
+.ambassador-login-chance{
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  position: relative;
+  top: -10px;
+}
+
+.ambassador-login_btn{
+  height: auto;
+  width: auto;
+  background-color: lightcoral;
+  border-radius: 10px;
+  padding: 1em;
+}

@@ -1,0 +1,69 @@
+.BenifitsBody {
+    margin-top: 30px;
+    height:400px;
+}
+
+.BenifitsBody .foto{    
+    text-align: center;
+}
+
+.benifitheading{
+    color: #0026ff;
+    margin-top: 0;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 23px;
+    text-align: left;
+    line-height: 1.2;   
+}
+.BenifitsBody h3{
+    color: #232524;
+    margin-top: 0;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.BenifitsBody p{
+    color: rgb(70, 70, 70);
+    font-family: " Montserrat";
+    font-style: normal;
+    font-weight: 200;
+    font-size: 17px;
+    padding-left:20px;
+    line-height: 1.2;
+    margin-top: 0.2rem;
+    text-align: center;
+}
+.BenifitsBody img{
+    width:20rem;
+}
+.amb-carousel-arrow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+.amb-arrow{
+    margin: 5px 20px 5px 20px;
+    font-size: 1.5rem;
+}
+
+@media only screen and (max-width:400px){
+    .BenifitsBody img{
+        width:15rem;
+    }
+    .BenifitsBody{
+        height: 370px;
+    }
+}

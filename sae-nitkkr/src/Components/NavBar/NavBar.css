@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.NavigationBar_Nav-navbar{
+    height: 50px;
+    width: 100%;
+    background: #000;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    font-size: 1.2rem;    
+}
+.NavigationBar_Nav-nav-logo{
+    text-decoration: none;
+    color: white;
+}
+.NavigationBar_Nav-nav-links{
+    display: grid;
+    grid-template-columns: repeat(7,auto);
+    grid-gap: 20px;
+    list-style: none;
+}
+.NavigationBar_Nav-nav-link{
+    text-decoration: none;
+    color: white;
+    transition: 0.3s all;
+}
+.NavigationBar_Nav-nav-link:hover{
+    color: red;
+}
+.NavigationBar_Nav-nav-icon{
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.NavigationBar_Nav-navlogo{
+    color: #fff;
+    margin-left: -17px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.NavigationBar_Nav-nav-logo{
+    text-decoration: none;
+    color: white;
+}
+.NavigationBar_Nav-nav-links{
+    display: grid;
+    grid-template-columns: repeat(7,auto);
+    grid-gap: 20px;
+    list-style: none;
+}
+.NavigationBar_Nav-nav-link{
+    text-decoration: none;
+    color: white;
+    transition: 0.3s all;
+}
+.NavigationBar_Nav-nav-link:hover{
+    color: red;
+}
+.NavigationBar_Nav-nav-icon{
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.Navigation-new{
+    font-size: 12px;
+    position: relative;
+    top: -20%;
+   color: yellow;
+   text-shadow: 0 0 1px #FFFFFF;
+   animation-name: example;
+   animation-iteration-count: infinite;
+    animation-duration: 4s;
+}
+
+@keyframes example {
+    0%   {color:yellow;}
+    25%  {color:#00FFFF;}
+    50%  {color:#FF7171;}
+    75%  {color:Magenta;}
+    100% {color:yellow;}
+  }
+  
+
+@media only screen and (max-width:800px){
+    .NavigationBar_Nav-navbar{
+        position: relative;
+    }
+    .NavigationBar_Nav-nav-links{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        top: 50px;
+        left: -100%;
+        transition: 0.5s all;
+    }
+    .NavigationBar_Nav-nav-links.active{
+        background: #000;
+        left: 0;
+        z-index: 5;
+        top: 50px;
+    }
+    .NavigationBar_Nav-nav-item{
+        padding: 10px 0;
+
+    }
+    .NavigationBar_Nav-nav-icon{
+        display: flex;
+        
+    }
+}

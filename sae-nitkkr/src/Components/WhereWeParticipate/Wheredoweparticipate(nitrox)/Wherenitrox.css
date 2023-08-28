@@ -1,0 +1,265 @@
+#Nitrox-participate
+{
+font-family: 'Montserrat', sans-serif;
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap; 
+   align-content: center;
+   width: 70%;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 40px;
+   margin-bottom: 60px;
+}
+
+#Nitrox-titlecomp1
+{
+   font-weight: bold;
+    font-size: 27px;
+}
+#Nitrox-participate1
+{
+    font-size: 27px;
+    font-weight: 800;
+   /* color: rgb(243, 8, 47);
+    */
+    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#Nitrox-baja_title
+{
+    border-bottom: 8px solid black;
+    font-size: 32px;
+    font-weight: 800;
+    color: rgb(12, 12, 12);
+    
+}
+#Nitrox-car1
+{
+    width: 100%;
+}
+#Nitrox-car2
+{
+    width: 100%;
+}
+
+#Nitrox-atvc_title
+{
+    border-bottom: 8px solid black;
+    float:right;
+    font-size: 32px;
+    font-weight: 800;
+    color: rgb(12, 12, 12);
+}
+#Nitrox-atvc_image
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+    width: 42%;
+    padding: 5px;
+}
+
+#Nitrox-car3
+{
+    width: 100%;
+}
+#Nitrox-car4
+{
+    width: 100%;
+}
+.content1
+{
+    padding:10px;
+}
+#Nitrox-baja_content
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    font-size: 18px;
+}
+#Nitrox-atvc_content
+{
+   display: flex;
+  flex-direction: row; 
+   flex-wrap: wrap;  
+   justify-content: space-between;
+   font-size: 18px;
+   margin-top: 40px;
+   width:100%;
+}
+#Nitrox-atvc{
+    margin-top: 40px;
+}
+#Nitrox-bajaline
+{
+    border: none;
+   border-left: 5px solid red;
+    padding-left: 10px;
+}
+#Nitrox-atvcline
+{
+    border: none;
+    border-right: 5px solid red;
+    padding-right: 10px;
+}
+#Nitrox-baja_text
+{
+    margin-top:30px;
+    width: 40%;
+    padding: 5px;
+    font-size: 18px;
+}
+#Nitrox-atvc_text
+{
+    width: 40%;
+    padding: 5px;
+    font-size: 18px;
+}
+#Nitrox-baja_image
+{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    width: 42%;
+    padding: 5px;
+}
+#Nitrox-image1
+{
+    width: 80%;
+    height: 275px;
+    padding: 5px;
+    background-image: url("../../../Assets/WhereWeParticipate/NitroxATVC1.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#Nitrox-image1:hover
+{
+    cursor: pointer;
+}
+#Nitrox-image2:hover
+{
+    cursor: pointer;
+}
+#Nitrox-image11:hover
+{
+    cursor: pointer;
+}
+#Nitrox-image22:hover
+{
+    cursor: pointer;
+}
+#Nitrox-image11
+{
+    width: 80%;
+    padding: 5px;
+    height: 275px;
+    background-image: url("../../../Assets/WhereWeParticipate/NitroxBAJA1.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#Nitrox-image2
+{
+    width: 20%;
+    padding: 5px;
+    height: 275px;
+    background-image: url("../../../Assets/WhereWeParticipate/NitroxATVC2.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.45;
+
+}
+#Nitrox-image22
+{
+    opacity: 0.45;
+    width: 20%;
+    padding: 5px;
+    height: 275px;
+    background-image: url("../../../Assets/WhereWeParticipate/NitroxBAJA2.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+@media (min-width:1024px) and (max-width:1439px)
+{
+    #Nitrox-participate
+    {
+        font-family: 'Montserrat', sans-serif;
+       display: flex;
+       flex-direction: column;
+      
+       align-content: center;
+      
+    }
+    
+    #Nitrox-baja_title
+    {
+        border-bottom: 8px solid black;
+        font-size: 32px;
+        font-weight: 800;
+        color: rgb(12, 12, 12);
+        
+    }
+    #Nitrox-atvc_title
+    {
+        border-bottom: 8px solid black;
+        margin-left: 57%;
+        font-size: 32px;
+        font-weight: 800;
+        color: rgb(12, 12, 12);
+    }
+    
+    #Nitrox-baja_text,  #Nitrox-atvc_text
+    {
+        width: 46%;
+    }
+    #Nitrox-baja_image, #Nitrox-atvc_image{
+        width: 50%;
+    }
+}
+@media (min-width:768px) and (max-width:1024px)
+{
+    #Nitrox-baja_text, #Nitrox-atvc_text{
+        width: 100%;
+    }
+    #Nitrox-baja_image, #Nitrox-atvc_image{
+        min-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+        justify-content: center;
+    }
+ 
+}
+
+@media only screen and (max-width:768px)
+{
+    #Nitrox-participate{
+        width:90%;
+    }
+    #Nitrox-baja_text, #Nitrox-atvc_text{
+        width: 100%;
+        font-size: 16px;
+    }
+    #Nitrox-baja_image, #Nitrox-atvc_image{
+    
+
+        width: 300px;
+     
+    }
+    #Nitrox-image1, #Nitrox-image2, #Nitrox-image11, #Nitrox-image22{
+        height: 200px;
+        width: 100%;
+        background-position: center;
+    }
+   
+    
+}

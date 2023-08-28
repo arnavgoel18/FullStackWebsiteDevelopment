@@ -1,0 +1,281 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.acclerons_saga-outside-container{
+    width: 100%;
+    /* margin-left: 5px; */
+    padding: 10vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.acclerons_heading{
+    width: 100%;
+    height: auto;
+    padding: 5vh;
+    font-size: 23px;
+    font-weight: 900;
+}
+
+.acclerons_heading p{
+    display: inline;
+    font-size: 34px;
+}
+
+.legacy{
+    
+}
+
+/* Years Compnent */
+.acclerons_years{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    overflow: none;
+}
+
+@media (max-width: 600px){
+    .acclerons_years{
+        overflow-x: scroll;
+        justify-content: left;
+        margin: 0 20px;
+    }
+}
+
+#year{
+    display: inline-block;
+    padding: 1vh;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Vertical Line */
+.vl {
+    border-left: 3px solid #000;
+    height: 3vh;
+    margin-left: 2vh;
+}
+
+.acclerons_saga-container{
+    position: relative;
+}
+
+
+/* Content Will Change on clicking the button */
+.acclerons_main-content{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.acclerons_image{
+    width: 535px;
+    height: 46vh;
+    margin-left: 2%;
+    margin-top: 33px;
+}
+
+.acclerons_image img{
+    width: 100%;
+    height: 100%;
+}
+p#nitrox_legacy{
+    font-size: 37px;
+    color: rgb(67, 67, 197);
+}
+
+.nitrox_heading p{
+    display: inline;
+    font-size: 34px;
+}
+
+p#acclerons_legacy{
+    font-size: 37px;
+    color: rgb(67, 67, 197);
+}
+.acclerons_text{
+    width: 535px;
+    height: 60vh;
+    margin-left: 2%;
+    padding: 3%;
+}
+
+.acclerons_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 23px;
+}
+
+.acclerons_comp1{
+    width: 94%;
+    height: 45%;
+}
+.acclerons_comp2{
+    width: 94%;
+    height: 45%;
+}
+
+.acclerons_text ul{
+    margin-top: 3vh;
+    margin-left: 4vh;
+}
+
+@media (min-width:320px) and (max-width:768px)
+{
+    .acclerons_saga-outside-container{
+        width: 100%;
+        margin-left: -4px;
+        padding: 0vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .acclerons_text{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: 19px;
+    }
+}
+
+
+
+/* Nitrox css */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nitrox_saga-outside-container{
+    width: 100%;
+    /* margin-left: 5px; */
+    padding: 10vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.nitrox_heading{
+    width: 100%;
+    height: auto;
+    padding: 5vh;
+    font-size: 23px;
+    font-weight: 900;
+}
+
+.nitrox_heading p{
+    display: inline;
+}
+
+.legacy{
+    
+}
+
+/* Years Compnent */
+.nitrox_years{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    overflow: none;
+}
+
+@media (max-width: 600px){
+    .nitrox_years{
+        overflow-x: scroll;
+        justify-content: left;
+        margin: 0 20px;
+    }
+}
+
+#year{
+    display: inline-block;
+    padding: 1vh;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Vertical Line */
+.vl {
+    border-left: 3px solid #000;
+    height: 3vh;
+    margin-left: 2vh;
+}
+
+.nitrox_saga-container{
+    position: relative;
+}
+
+
+/* Content Will Change on clicking the button */
+.nitrox_main-content{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.nitrox_image{
+    width: 535px;
+    height: 46vh;
+    margin-left: 2%;
+    margin-top: 33px;
+}
+
+.nitrox_image img{
+    width: 100%;
+    height: 100%;
+}
+
+.nitrox_text{
+    width: 535px;
+    height: 60vh;
+    margin-left: 2%;
+    padding: 3%;
+}
+
+.nitrox_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 23px;
+}
+
+.nitrox_comp1{
+    width: 94%;
+    height: 45%;
+}
+.nitrox_comp2{
+    width: 94%;
+    height: 45%;
+}
+
+.nitrox_text ul{
+    margin-top: 3vh;
+    margin-left: 4vh;
+}
+
+@media (min-width:320px) and (max-width:768px)
+{
+    .nitrox_saga-outside-container{
+        width: 100%;
+        margin-left: -4px;
+        padding: 0vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .nitrox_text{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,81 @@
+/* .reg-center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgb(246, 250, 250);
+  height: 30rem;
+  width: 24rem;
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow:.4rem .4rem .4rem .4rem rgb(165, 163, 163);
+  padding:1rem 1rem 1rem 1rem;
+  font-family:' Montserrat';
+}
+.reg-signUp-sign{
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.reg-heading{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+#center{
+  font-size: 2rem;
+  width:100%;
+}
+.reg-form{
+  display: flex;
+  flex-direction: column;
+}
+.reg-input-div{
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-evenly;
+  text-align: center;
+  margin-top: 0.8rem;
+}
+#reg_name, #reg_college, #reg_sem, #reg_mail, #reg_pn{
+  width:15rem;
+  border: 2px solid black; 
+  border-radius:2rem;
+  height:2.5rem;
+  background:rgb(218, 216, 216);
+  border:none;
+  padding-left:1rem;
+}
+#reg-div-name{
+  margin-left: 10px;
+}
+#reg_college{
+  margin-left: -5px;
+}
+#reg_button{
+  margin: auto;
+  margin-top: 1.5rem;
+  background: green;
+  border-radius:20px;
+  border:none;
+  color:white;
+  width:9rem;
+  height:2.5rem;
+  font-size:1.7rem;
+}
+
+@media (max-width:500px)
+{
+  .reg-center{
+    width: 90%;
+    height: 450px;
+    padding: 10px 10px 10px 10px;
+  }
+  #center{
+    font-size: 1.5rem;
+  }
+  #reg_name, #reg_college, #reg_sem, #reg_mail, #reg_pn{
+    width: 60%;
+  }
+}
+
+ */

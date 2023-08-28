@@ -1,0 +1,60 @@
+.downloadCsv{
+    font-size: 30px;
+    color: grey;
+    margin-top: 0px;
+    position: relative;
+    top:0px;
+    margin-right: 20px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+.response-overview, .today-response-overview{
+    font-weight: bold;
+    margin-left: 20px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.displayResponses_slot1{
+    width: 90%;
+    max-height: 100vh;
+    overflow: scroll;
+    margin: 0 auto;
+    border: solid 1 px red;
+}
+
+.displayResponses_slot1 table{
+    text-align:center;
+    width:auto;
+    padding: 0;
+    border:1px solid black;
+    border-collapse: collapse;
+}
+
+.displayResponses_slot1 table td, .displayResponses_slot1 table th{
+    text-align:center;
+    width:auto;
+    padding:5px;
+    border:1px solid black;
+}
+
+.displayResponses_slot1 table th{
+    font-size: 18px;
+}
+
+.displayDiv{
+  width: auto;
+  height: auto; 
+  display: flex;
+  flex-direction: column;
+}
+
+.response_container{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.displayDiv h2{
+    margin: 0 auto;
+}

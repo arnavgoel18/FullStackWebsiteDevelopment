@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+.allCards{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);
+    justify-content: space-between;
+}
+
+.allCards a{
+    width:200px;
+    margin-left: 25px;
+    margin-right: 25px;
+    border: 1px solid rgb(211, 211, 211);
+    margin-bottom: 40px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.LoginPage-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 30px;  
+}
+
+#action-signout
+{  
+    cursor: pointer;
+    font-weight: bold;     
+    padding:20px;
+    text-align: center;
+    float: right;
+    color:white;
+    background: #350d92;
+    margin-bottom: 30px;
+    border-radius: 10px;   
+}
+
+#signout:hover
+{
+    cursor: pointer;
+}
+
+#AfterLogin-backBtn{
+    float: right;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    line-height: 25px;
+    width:110.06px;
+    display: none;
+}
