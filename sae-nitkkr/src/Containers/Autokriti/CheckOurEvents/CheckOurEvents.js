@@ -1,6 +1,7 @@
 import "./CheckOurEvents.css";
 import React, { useState } from "react";
 import Autokriti2 from "../../../Assets/CheckOurEvents/Autokriti2.webp";
+import Autokriti13 from '../../../Assets/CheckOurEvents/autokriti13.jpg'
 import Au2Poster from "../../../Assets/CheckOurEvents/Au2Poster.webp";
 import autokriti12poster from "../../../Assets/Autokriti12/Autokriti12poster.jpg";
 import campusAmbass from '../../../Assets/CheckOurEvents/CampusAmbassador.png'
@@ -8,13 +9,13 @@ import campusAmbass from '../../../Assets/CheckOurEvents/CampusAmbassador.png'
 function CheckEvents() {
   return (
     <>
-      <div className="CheckOurEvents-main">
-        <div className="CheckOurEvents-main_container">
-          <h2 className="CheckOurEvents-heading">
-            Check out our <b className="CheckOurEvents-subheading"> EVENTS </b>
+      <div className='CheckOurEvents-main'>
+        <div className='CheckOurEvents-main_container'>
+          <h2 className='CheckOurEvents-heading'>
+            Check out our <b className='CheckOurEvents-subheading'> EVENTS </b>
           </h2>
-          <div className="CheckOurEvents-events">
-            <Session
+          <div className='CheckOurEvents-events'>
+            {/* <Session
               title="Autokriti 12.0"
               status="Venue: NIT Kurukshetra"
               date="Date : 22-28 Septmeber"
@@ -27,6 +28,11 @@ function CheckEvents() {
               date="August 2022"
               image={campusAmbass}
               url="https://www.saenitkurukshetra.in/autokriti#ambassador"
+            /> */}
+            <img
+            style={{width:'100%'}}
+              src={Autokriti13}
+              alt='Avatar'
             />
 
             {/* <Session title="Understanding Transmission"
@@ -34,7 +40,7 @@ function CheckEvents() {
           date="24th-January-2021"
           image={poster}/> */}
           </div>
-          <div className="CheckOurEvents-showmore">
+          <div className='CheckOurEvents-showmore'>
             {/* <p className="CheckOurEvents-heading1">
             NO EVENTS <b className="CheckOurEvents-subheading1"> AS OF NOW </b> 
             <FontAwesomeIcon id="CheckOurEvents-button1" className="CheckOurEvents-icon" icon={faAngleDoubleDown} />{" "}
@@ -43,7 +49,7 @@ function CheckEvents() {
         </div>
       </div>
     </>
-  );
+  )
 }
 
 function Session(props) {
