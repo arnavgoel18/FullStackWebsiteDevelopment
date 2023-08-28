@@ -18,13 +18,12 @@ import EG from "../../../Assets/Tech/eg.png";
 import ET from "../../../Assets/Tech/et.png";
 import MTC from "../../../Assets/Tech/mtc.png";
 import ANS from "../../../Assets/Tech/ans.png";
-import { GiConsoleController, GiGears } from "react-icons/gi";
+import { GiGears } from "react-icons/gi";
 import { MdEdgesensorHigh } from "react-icons/md";
 import { IoIosArrowDropdown } from "react-icons/io";
 
 //poster
 import autokriti12poster from "../../../Assets/Autokriti12/Autokriti12poster.jpg";
-import autokriti13poster from "../../../Assets/CheckOurEvents/autokriti13.jpg"
 import Elec2Poster from "../../../Assets/Autokriti12/ElectrionicsPoster.jpg";
 import Soft2Poster from "../../../Assets/Autokriti12/Software.jpg";
 
@@ -34,7 +33,7 @@ export default function AutokritiCard() {
   let iot = useRef();
   let ev = useRef();
 
-  const posters = [autokriti13poster, Elec2Poster, Soft2Poster]
+  const posters = [autokriti12poster, Elec2Poster, Soft2Poster];
   const [poster_idx, setPoster_idx] = useState(0);
   const hello = () => {
     software.current.style.display == "none"
@@ -69,19 +68,18 @@ export default function AutokritiCard() {
     iot.current.style.display = "none";
     combustion.current.style.display = "none";
   };
-  console.log(poster_idx)
   return (
     <>
       <div className='AutokritiCard-Container'>
         <div className='AutokritiCard-Heading'>
           <h1 className='CheckOurEvents-heading'>
-            Autokriti <b className='CheckOurEvents-subheading'>13.0</b>
+            Autokriti <b className='CheckOurEvents-subheading'>12.0</b>
           </h1>
         </div>
         <div className='AutokritiCard-Intro'>
           Interested in automobiles, but don’t know where to start? Let this be
           your first stepping stone to the redefined world of mobility. Join
-          Autokriti 13 and be a part of this remaking.
+          Autokriti 12 and be a part of this remaking.
           <br />
           <br />
           From overhauling of a 2 stroke engine of a scooter in Autokriti 1 to
@@ -89,12 +87,12 @@ export default function AutokritiCard() {
           steps with innovation. It is our determination to keep up with the
           ever-changing technology that makes us North India’s largest
           automobile workshop. To continue our endeavour of knowledge sharing,
-          we are here with Autokriti 13. This time it will be a ride on both CV
+          we are here with Autokriti 12. This time it will be a ride on both CV
           and EV, not a rash one but a safe and steady one.
           <b> #MobilityRedefined</b>
           <br />
           <br />
-          There are four workshops in Autokriti 13: CV, EV, IoT and Software.
+          There are four workshops in Autokriti 12: CV, EV, IoT and Software.
           All these workshops will help you create a proper theoretical as well
           as practical understanding of their domain. You shall get a
           personalised learning experience on physical models. Along with all
@@ -177,8 +175,8 @@ export default function AutokritiCard() {
           <div className='Autokirtee12_dropdowns'>
             <button
               className='Autokirtee_12_dropdown'
-              // onMouseEnter={() => setPoster_idx(1)}
-              // onMouseLeave={() => setPoster_idx(0)}
+              onMouseEnter={() => setPoster_idx(1)}
+              onMouseLeave={() => setPoster_idx(0)}
             >
               <div className='Autokirtee_12_dropdown-text'>
                 Combustion Vehicle
@@ -202,8 +200,8 @@ export default function AutokritiCard() {
             </button>
             <button
               className='Autokirtee_12_dropdown'
-              // onMouseEnter={() => setPoster_idx(1)}
-              // onMouseLeave={() => setPoster_idx(0)}
+              onMouseEnter={() => setPoster_idx(1)}
+              onMouseLeave={() => setPoster_idx(0)}
             >
               <div className='Autokirtee_12_dropdown-text'>
                 Electric Vehicle
@@ -223,8 +221,8 @@ export default function AutokritiCard() {
             </button>
             <button
               className='Autokirtee_12_dropdown'
-              // onMouseEnter={() => setPoster_idx(1)}
-              // onMouseLeave={() => setPoster_idx(0)}
+              onMouseEnter={() => setPoster_idx(1)}
+              onMouseLeave={() => setPoster_idx(0)}
             >
               <div className='Autokirtee_12_dropdown-text'>IOT</div>
               <div className='Autokirtee_12_icons'>
@@ -249,8 +247,8 @@ export default function AutokritiCard() {
             </button>
             <button
               className='Autokirtee_12_dropdown'
-              // onMouseEnter={() => setPoster_idx(2)}
-              // onMouseLeave={() => setPoster_idx(0)}
+              onMouseEnter={() => setPoster_idx(2)}
+              onMouseLeave={() => setPoster_idx(0)}
             >
               <div className='Autokirtee_12_dropdown-text'>Softwares</div>
               <div className='Autokirtee_12_icons'>
@@ -284,9 +282,10 @@ export default function AutokritiCard() {
             <button
               type='button'
               className='Autokirti_12_button'
-              style={{ backgroundColor: 'lightcoral' }}
+              disabled
+              style={{ backgroundColor: 'Grey' }}
             >
-              Register NOW !!
+              Comming Soon
             </button>
           </a>
         </div>
