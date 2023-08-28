@@ -5,6 +5,7 @@ import PersonCard from "../HomePage/ProfInchargesAndManagers/PersonCard";
 import "../HomePage/ProfInchargesAndManagers/ProfInchargesAndManagers.css";
 import manager1 from "../../Assets/ProfIncharges/Yasharora.jpg";
 import manager2 from "../../Assets/ProfIncharges/Bhupeksh.jpg";
+import manager3 from "../../Assets/ProfIncharges/man.png";
 
 import NavBar from "../../Components/NavBar/NavBar";
 import FirstDisplayDiv from "../../Components/FirstDisplayDIV/FirstDisplayDIV";
@@ -49,14 +50,14 @@ function Accelerons() {
             linkedin={"https://www.linkedin.com/in/bhupeksh-kaushik-360424222"}
             email={"mailto:kaushikbhupeksh@gmail.com "}
           />
-          {/* <PersonCard
-            name={"VINAY SAINI"}
-            designation={"Secretary"}
+          <PersonCard
+            name={"Manikya"}
+            designation={"EV-Head"}
             page={"manager"}
             url={manager3}
-            linkedin={"https://www.linkedin.com/in/vinay-saini-6a3044241"}
-            email={"mailto:sainivinay013@gmail.com"}
-          /> */}
+            linkedin={"Linkedin.com/in/Na"}
+            email={"mailto:NA@gmail.com"}
+          />
         </div>
       </div>
       <Footer type="white" />
