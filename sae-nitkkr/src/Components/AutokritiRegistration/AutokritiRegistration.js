@@ -20,10 +20,49 @@ import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer";
 import { check } from "fontawesome";
 
-var c= 0;
+var c = 0;
 var storeemail = false; //for nitkkr stuednts
 var storecollege = false; //for nitkkr college
 function Quizsignup() {
+  const [workshopamount, setWorkshopAmount] = useState(0);
+  const [checkboxes, setCheckboxes] = useState([
+    { id: "mechanical", label: "Mechanical", price: 2500, checked: false },
+    { id: "iot", label: "IoT", price: 2750, checked: false },
+    { id: "ev", label: "EV", price: 2500, checked: false },
+    { id: "software", label: "Software", price: 2500, checked: false },
+  ]);
+
+  const handleCheckboxChange = (id) => {
+    const updatedCheckboxes = checkboxes.map((checkbox) => {
+      if (checkbox.id === id) {
+        checkbox.checked = !checkbox.checked;
+      }
+      return checkbox;
+    });
+
+    const checkedCount = updatedCheckboxes.reduce((count, checkbox) => {
+      return checkbox.checked ? count + 1 : count;
+    }, 0);
+
+    if (checkedCount > 2) {
+      alert("You can choose a maximum of 2 workshops.");
+      const index = updatedCheckboxes.findIndex(
+        (checkbox) => checkbox.id === id
+      );
+      updatedCheckboxes[index].checked = false;
+    }
+
+    const updatedWorkshopAmount = updatedCheckboxes.reduce(
+      (total, checkbox) => {
+        return total + (checkbox.checked ? checkbox.price : 0);
+      },
+      0
+    );
+
+    setCheckboxes(updatedCheckboxes);
+    setWorkshopAmount(updatedWorkshopAmount);
+  };
+
   var [finalcost, setFinalcost] = useState(0);
   var [department, setDepartment] = useState([]);
   var [temp, setsettemp] = useState([]);
@@ -55,21 +94,21 @@ function Quizsignup() {
       count++;
     }
     if (accomo == true && count == 2) {
-      //finalcost = 5500; 
+      //finalcost = 5500;
       finalcost += 500;
-    }else if(accomo == true && count == 1){
+    } else if (accomo == true && count == 1) {
       //finalcost = 3000;
       finalcost += 500;
-    }else if(accomo == false && count == 1){
+    } else if (accomo == false && count == 1) {
       //finalcost = 2500;
       finalcost += 0;
-    }else if(accomo == false && count == 2){
+    } else if (accomo == false && count == 2) {
       //finalcost = 4500;
       finalcost += 0;
     }
 
     setFinalcost(finalcost);
-    userData.amount = finalcost;    //for testing only, later changed with finalcost;
+    userData.amount = finalcost; //for testing only, later changed with finalcost;
   };
 
   //to check all fields are filled or not
@@ -189,7 +228,7 @@ function Quizsignup() {
     ev: "",
     iot: "",
     software: "",
-    Registration_time:"",
+    Registration_time: "",
     amount: finalcost,
     firstChoice: "",
     accomodation: "No",
@@ -197,7 +236,25 @@ function Quizsignup() {
   });
 
   let name, value, checked, type;
+  let workshopamountt = 2500;
 
+  const updateAmount = (c) => {
+    if (c.checked) {
+      if (c.id === "iot") {
+        workshopamountt += 2750;
+      } else {
+        workshopamountt += 2500;
+      }
+    } else {
+      if (c.id === "iot") {
+        workshopamountt -= 2750;
+      } else {
+        workshopamountt -= 2500;
+      }
+    }
+
+    document.getElementById("workshopAmount").innerText = workshopamountt;
+  };
   const postUserData = (event) => {
     name = event.target.name;
     value = event.target.value;
@@ -278,10 +335,9 @@ function Quizsignup() {
     //   document.getElementById('amb_software').disabled = false;
     //   document.getElementById('amb_timeslot').disabled = false;
     // }
-
-    if (type == "checkbox" && name != "accomodation" && name != 'cod') {    
+    if (type === "checkbox" && name !== "accommodation" && name !== "cod") {
       var check = checked.toString();
-      if (checked == true) {
+      if (checked) {
         c++;
         console.log(check, c);
         setsettemp((prevdepartment) => {
@@ -291,32 +347,37 @@ function Quizsignup() {
         c--;
         console.log(check, c);
         setsettemp((prevActions) =>
-          // Filter out the item with the matching index
           prevActions.filter((i) => {
-            return i != name.toUpperCase();
+            return i !== name.toUpperCase();
           })
         );
       }
-      if(c == 2){
-        document.getElementById("workshopAmount").innerText = 5000;
-        // document.getElementById("workshopAmount").innerText = 4500;
-      }
-      if(c == 1){
-        if(name = "iot"){
-          document.getElementById("workshopAmount").innerText = 2750;
-        }else{
 
-          document.getElementById("workshopAmount").innerText = 2500;
+      let currentWorkshopAmount = parseInt(
+        document.getElementById("workshopAmount").innerText
+      );
+
+      if (c === 2 && name !== "iot") {
+        if (name == "iot") currentWorkshopAmount = currentWorkshopAmount + 2500;
+        else currentWorkshopAmount = currentWorkshopAmount + 2750;
+      } else if (c === 1) {
+        if (name === "iot") {
+          currentWorkshopAmount = currentWorkshopAmount + 2750;
+        } else {
+          currentWorkshopAmount = currentWorkshopAmount + 2500;
         }
+      } else if (c === 0) {
+        currentWorkshopAmount = 0;
       }
-      if(c == 0){
-        document.getElementById("workshopAmount").innerText = 0;
-      }
-      if(c > 2){
-        alert("You can choose maximum 2 workshop.")
+
+      if (c > 2) {
+        alert("You can choose a maximum of 2 workshops.");
         event.target.checked = false;
         c = 2;
       }
+
+      document.getElementById("workshopAmount").innerText =
+        currentWorkshopAmount.toString();
       setUserData({ ...userData, [name]: check });
     }
 
@@ -339,7 +400,6 @@ function Quizsignup() {
       //   userData.timeSlot2 = "22-25";
       //   console.log(userData.timeSlot2);
       // }
-    
     }
 
     if (name == "accomodation") {
@@ -358,13 +418,14 @@ function Quizsignup() {
     //   }
     // }
 
-
-    if (document.getElementById("workshopAmount").innerText >= 4500 && document.getElementById('accomodation').checked == true )
+    if (
+      document.getElementById("workshopAmount").innerText >= 4500 &&
+      document.getElementById("accomodation").checked == true
+    )
       document.getElementById("accomoAmount").innerText = 1000;
-    else if(document.getElementById('accomodation').checked == true)
-    document.getElementById("accomoAmount").innerText = 500;
-    else
-    document.getElementById("accomoAmount").innerText = 0;
+    else if (document.getElementById("accomodation").checked == true)
+      document.getElementById("accomoAmount").innerText = 500;
+    else document.getElementById("accomoAmount").innerText = 0;
 
     if (type != "checkbox" && type != "radio") {
       setUserData({ ...userData, [name]: value });
@@ -494,227 +555,301 @@ function Quizsignup() {
     <>
       <NavBar />
       <br />
-      <p className='payform-heading'>REGISTRATION FORM</p>
-      <div className='payform-container'>
-        <div method='POST' className='payform-form'>
-          <div className='field'>
-            {' '}
-            <span className='payform-label'>Full Name * </span>
+      <p className="payform-heading">REGISTRATION FORM</p>
+      <div className="payform-container">
+        <div method="POST" className="payform-form">
+          <div className="field">
+            {" "}
+            <span className="payform-label">Full Name * </span>
             <br />
             <input
-              className='payform-input'
-              type='text'
-              alt='Name'
-              name='name'
-              id='amb_name'
-              required='required'
+              className="payform-input"
+              type="text"
+              alt="Name"
+              name="name"
+              id="amb_name"
+              required="required"
               value={userData.name}
               onChange={postUserData}
-            />{' '}
+            />{" "}
           </div>
-          <div className='field'>
-            <span className='payform-label'>Email id* </span>
+          <div className="field">
+            <span className="payform-label">Email id* </span>
             <br />
             <input
-              className='payform-input'
-              type='Email'
-              name='email'
-              id='amb_email'
-              required='required'
+              className="payform-input"
+              type="Email"
+              name="email"
+              id="amb_email"
+              required="required"
               value={userData.email}
               onChange={postUserData}
-            />{' '}
+            />{" "}
           </div>
-          <div id='show_email_is_registered'>
+          <div id="show_email_is_registered">
             This email has alreay been Registered
           </div>
-          <div className='field'>
-            <span className='payform-label'>Phone No * </span>
+          <div className="field">
+            <span className="payform-label">Phone No * </span>
             <br />
             <input
-              className='payform-input'
-              type='number'
-              name='phone'
-              required='required'
-              id='amb_phone'
+              className="payform-input"
+              type="number"
+              name="phone"
+              required="required"
+              id="amb_phone"
               value={userData.phone}
               onChange={postUserData}
             />
           </div>
-          <div className='field'>
-            <span className='payform-label'>College</span>
+          <div className="field">
+            <span className="payform-label">College</span>
             <br />
             <input
-              className='payform-input'
-              type='text'
-              required='unrequired'
-              name='college'
-              id='amb_college'
+              className="payform-input"
+              type="text"
+              required="unrequired"
+              name="college"
+              id="amb_college"
               value={userData.college}
               onChange={postUserData}
-            />{' '}
+            />{" "}
           </div>
-          <div className='field'>
-            <span className='payform-label'> Branch </span>
+          <div className="field">
+            <span className="payform-label"> Branch </span>
             <br />
             <input
-              className='payform-input'
-              type='name'
-              name='branch'
-              required='unrequired'
-              id='amb_branch'
+              className="payform-input"
+              type="name"
+              name="branch"
+              required="unrequired"
+              id="amb_branch"
               value={userData.branch}
               onChange={postUserData}
             />
           </div>
-          <div className='field_select'>
-            <span className='payform-label'>Semester</span>
+          <div className="field_select">
+            <span className="payform-label">Semester</span>
             <select
-              className='payform-dropdown'
-              name='semester'
-              id='amb_semester'
-              required='unrequired'
+              className="payform-dropdown"
+              name="semester"
+              id="amb_semester"
+              required="unrequired"
               value={userData.semester}
               onChange={postUserData}
             >
-              <option defaultValue={'DEFAULT'} disabled hidden>
+              <option defaultValue={"DEFAULT"} disabled hidden>
                 Choose here
               </option>
-              <option value='DEFAULT'>--None Selected--</option>
-              <option value='1'>1</option>
-              <option value='2'>2</option>
-              <option value='3'>3</option>
-              <option value='4'>4</option>
-              <option value='5'>5</option>
-              <option value='6'>6</option>
-              <option value='7'>7</option>
-              <option value='8'>8</option>
+              <option value="DEFAULT">--None Selected--</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
             </select>
           </div>
-          <div className='field'>
-            {' '}
-            <span className='payform-label'> Referal Code(optional code) </span>
+          <div className="field">
+            {" "}
+            <span className="payform-label"> Referal Code(optional code) </span>
             <img
-              className='referral_code_verified'
-              alt='sos'
-              id='referral_code_verified'
-              src='https://img.icons8.com/color/48/000000/checked-2--v1.png'
+              className="referral_code_verified"
+              alt="sos"
+              id="referral_code_verified"
+              src="https://img.icons8.com/color/48/000000/checked-2--v1.png"
             />
             <br />
-            <div id='referal_check'>
+            <div id="referal_check">
               <input
-                className='payform-input'
-                type='email'
-                name='referal'
-                alt=''
-                id='referal_code'
-                required='unrequired'
+                className="payform-input"
+                type="email"
+                name="referal"
+                alt=""
+                id="referal_code"
+                required="unrequired"
                 value={userData.referal}
                 onChange={postUserData}
               />
               <img
-                id='ref_image'
-                alt='sos'
-                src='https://img.icons8.com/external-dreamstale-lineal-dreamstale/32/000000/external-information-camping-dreamstale-lineal-dreamstale.png'
+                id="ref_image"
+                alt="sos"
+                src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/32/000000/external-information-camping-dreamstale-lineal-dreamstale.png"
                 onMouseOver={i_information_visible}
                 onMouseOut={i_information_nonvisible}
               />
             </div>
           </div>
-          <div id='show_invalid'>The Referal Code is Invalid</div>
+          <div id="show_invalid">The Referal Code is Invalid</div>
           {/* Choose dempartment */}
-          <div className='field'>
-            <span className='payform-label'>
-              {' '}
-              Select Your Departments (Max. 2){' '}
+          <div className="field">
+            <span className="payform-label">
+              {" "}
+              Select Your Departments (Max. 2){" "}
             </span>
 
             {/* <div className="redcolortext">(Maximum two)</div> */}
             <br />
-            <div className='main-chheckbox'>
-              <div className='department-checkbox'>
+            <div className="main-chheckbox">
+              <div className="department-checkbox">
                 <input
-                  type='checkbox'
-                  name='mechanical'
-                  required='unrequired'
-                  id='amb_mechanical'
-                  onChange={postUserData}
+                  type="checkbox"
+                  name="mechanical"
+                  required="unrequired"
+                  id="amb_mechanical"
+                  checked={
+                    checkboxes.find((checkbox) => checkbox.id === "mechanical")
+                      .checked
+                  }
+                  onChange={() => handleCheckboxChange("mechanical")}
                 />
-                <span for='mechanical'>Mechanical</span>
-                <div id='mechanical'></div>
+                <label htmlFor="amb_mechanical">Mechanical</label>
+                <div id="mechanical"></div>
               </div>
-              <div className='department-checkbox'>
+              <div className="department-checkbox">
                 <input
-                  type='checkbox'
-                  name='iot'
-                  required='unrequired'
-                  id='amb_IOT'
-                  onChange={postUserData}
+                  type="checkbox"
+                  name="iot"
+                  required="unrequired"
+                  id="amb_IOT"
+                  checked={
+                    checkboxes.find((checkbox) => checkbox.id === "iot").checked
+                  }
+                  onChange={() => handleCheckboxChange("iot")}
                 />
-                <span for='iot'>IOT</span>
-                <div id='iot'></div>
+                <label htmlFor="amb_IOT">IoT</label>
+                <div id="iot"></div>
               </div>
-              <div className='department-checkbox'>
+              <div className="department-checkbox">
                 <input
-                  type='checkbox'
-                  name='ev'
-                  required='unrequired'
-                  id='amb_EV'
-                  onChange={postUserData}
+                  type="checkbox"
+                  name="ev"
+                  required="unrequired"
+                  id="amb_EV"
+                  checked={
+                    checkboxes.find((checkbox) => checkbox.id === "ev").checked
+                  }
+                  onChange={() => handleCheckboxChange("ev")}
                 />
-                <span for='ev'>EV</span>
-                <div id='ev'></div>
+                <label htmlFor="amb_EV">EV</label>
+                <div id="ev"></div>
               </div>
-              <div className='department-checkbox' id='software_disable'>
+              <div className="department-checkbox" id="software_disable">
                 <input
-                  type='checkbox'
-                  name='software'
-                  required='unrequired'
-                  id='amb_software'
-                  onChange={postUserData}
+                  type="checkbox"
+                  name="software"
+                  required="unrequired"
+                  id="amb_software"
+                  checked={
+                    checkboxes.find((checkbox) => checkbox.id === "software")
+                      .checked
+                  }
+                  onChange={() => handleCheckboxChange("software")}
                 />
-                <span for='software'>Software</span>
-                <div id='software'></div>
+                <label htmlFor="amb_software">Software</label>
+                <div id="software"></div>
               </div>
+              {/* <br />
+              <p>Total Amount: ${workshopamount}</p> */}
             </div>
-            <div className='payform-lable'>
-              <span>Workshop Amount (&#8377;) : </span>
-              <span id='workshopAmount'>0</span>
+            {/* <div className="main-chheckbox">
+              <div className="department-checkbox">
+                <input
+                  type="checkbox"
+                  name="mechanical"
+                  required="unrequired"
+                  id="amb_mechanical"
+                  onChange={() => updateAmount(this)}
+                />
+                <span for="mechanical">Mechanical</span>
+                <div id="mechanical"></div>
+              </div>
+              <div className="department-checkbox">
+                <input
+                  type="checkbox"
+                  name="iot"
+                  required="unrequired"
+                  id="amb_IOT"
+                  onChange={() => updateAmount(this)}
+                />
+                <span for="iot">IOT</span>
+                <div id="iot"></div>
+              </div>
+              <div className="department-checkbox">
+                <input
+                  type="checkbox"
+                  name="ev"
+                  required="unrequired"
+                  id="amb_EV"
+                  onChange={() => updateAmount(this)}
+                />
+                <span for="ev">EV</span>
+                <div id="ev"></div>
+              </div>
+              <div className="department-checkbox" id="software_disable">
+                <input
+                  type="checkbox"
+                  name="software"
+                  required="unrequired"
+                  id="amb_software"
+                  onChange={() => updateAmount(this)}
+                />
+                <span for="software">Software</span>
+                <div id="software"></div>
+              </div>
+            </div> */}
+            {/* {checkboxes.map((checkbox) => (
+              <div key={checkbox.id}>
+                <input
+                  type="checkbox"
+                  id={checkbox.id}
+                  checked={checkbox.checked}
+                  onChange={() => handleCheckboxChange(checkbox.id)}
+                />
+                <label htmlFor={checkbox.id}>{checkbox.label}</label>
+              </div>
+            ))} */}
+            <div className="payform-lable">
+              {/* <span>Workshop Amount (&#8377;) : </span> */}
+              <span>Workshop Amount (&#8377;) :{workshopamount} </span>
+              <span id="workshopAmount">0</span>
             </div>
-            <div className='department-timeslot'>
-              <div className='payform-label' id='chooseTimeslot'>
-                <div id='kkrtime'>Choose Timeslot&nbsp;</div>
-                {temp.length == 0 ? ' ' : <span>({temp[0]})</span>}
+            <div className="department-timeslot">
+              <div className="payform-label" id="chooseTimeslot">
+                <div id="kkrtime">Choose Timeslot&nbsp;</div>
+                {temp.length == 0 ? " " : <span>({temp[0]})</span>}
               </div>
               <select
-                name='timeSlot1'
-                className='payform-dropdown'
-                id='amb_timeslot'
+                name="timeSlot1"
+                className="payform-dropdown"
+                id="amb_timeslot"
                 onChange={postUserData}
               >
-                <option defaultValue={'DEFAULT'} disabled hidden>
+                <option defaultValue={"DEFAULT"} disabled hidden>
                   Choose here
                 </option>
-                <option value='DEFAULT'>--None Selected--</option>
+                <option value="DEFAULT">--None Selected--</option>
                 {/*<option value="22-25">22-25 September</option>*/}
-                <option value='5-8'>5-8 October</option>
-                <option value='8-11'>8-11 October</option>
+                <option value="5-8">5-8 October</option>
+                <option value="8-11">8-11 October</option>
               </select>
             </div>
           </div>
-          <div className='accomo'>
+          <div className="accomo">
             <input
-              type='checkbox'
-              value='accomodation'
-              name='accomodation'
-              id='accomodation'
+              type="checkbox"
+              value="accomodation"
+              name="accomodation"
+              id="accomodation"
               onChange={postUserData}
-            />{' '}
+            />{" "}
             Need Accomodation & food
           </div>
-          <div className='payform-lable'>
+          <div className="payform-lable">
             <span>Amount (&#8377;) : </span>
-            <span id='accomoAmount'>0</span>
+            <span id="accomoAmount">0</span>
           </div>
           {/* <div className="cod">
             <input
@@ -726,49 +861,49 @@ function Quizsignup() {
             />{" "}
             Pay cash on delivery
           </div> */}
-          <div id='pay_button'>
-            <div id='paynow'>
+          <div id="pay_button">
+            <div id="paynow">
               <button
                 onClick={savetoLocal}
-                className='payform-button'
-                id='payform-button1'
+                className="payform-button"
+                id="payform-button1"
               >
                 Confirm
               </button>
             </div>
-            <div id='i_button_content'>
+            <div id="i_button_content">
               <h4></h4>
             </div>
           </div>
         </div>
 
-        <div className='payform-infocontain'>
-          <div className='payform-info'>
-            <FaInfoCircle /> &nbsp;{' '}
-            <span id='quiz_registration'>Instructions</span>
-            <p className='instruction_para'>
+        <div className="payform-infocontain">
+          <div className="payform-info">
+            <FaInfoCircle /> &nbsp;{" "}
+            <span id="quiz_registration">Instructions</span>
+            <p className="instruction_para">
               * Make sure your email id is correct as you will be getting
               confirmation on that email
             </p>
-            <p className='instruction_para'>
+            <p className="instruction_para">
               * You can choose Maximum 2 Departments. Each department is 3 Days
               Long + 1 Day Guest Lecture
             </p>
-            <p className='instruction_para'>
+            <p className="instruction_para">
               * You have to show QR code at the time of arrival.
             </p>
-            <p className='instruction_para'>
+            <p className="instruction_para">
               * In case of any issue or payment failure, please contact
               +91-9650735458
             </p>
-            <p className='instruction_para'>* Referal IDs are case-sensitive</p>
+            <p className="instruction_para">* Referal IDs are case-sensitive</p>
           </div>
 
           <br />
 
-          <div className='payform-checkbox'>
-            <input type='checkbox' id='agree' name='' value='' />
-            <div id='read_content'>
+          <div className="payform-checkbox">
+            <input type="checkbox" id="agree" name="" value="" />
+            <div id="read_content">
               I have read and understood the instructions
             </div>
 
@@ -785,7 +920,7 @@ function Quizsignup() {
 
       <Footer />
     </>
-  )
+  );
 
   // function submit() {
   //   var studentName = document.getElementById("amb_name");
