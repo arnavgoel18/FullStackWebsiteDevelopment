@@ -136,8 +136,8 @@ function Footer({ type = 'black' }) {
             </div>
             <span>
               {' '}
-              <a href='mailto:saenitkurukshetra@gmail.com'>
-                saenitkurukshetra@gmail.com
+              <a href='mailto:saenitkkr@nitkkr.ac.in'>
+                saenitkkr@nitkkr.ac.in
               </a>
             </span>
           </p>

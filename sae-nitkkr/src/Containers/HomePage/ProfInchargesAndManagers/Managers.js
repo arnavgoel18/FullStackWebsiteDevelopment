@@ -27,7 +27,7 @@ function Managers() {
             designation={"Vice-President"}
             page={"manager"}
             url={manager2}
-            linkedin={"https://www.linkedin.com/in/arnav-goel-ba94a21ab/"}
+            linkedin={"https://www.linkedin.com/in/hk2107/"}
             email={"mailto:hkhatri2107@gmail.com"}
           />
           <PersonCard

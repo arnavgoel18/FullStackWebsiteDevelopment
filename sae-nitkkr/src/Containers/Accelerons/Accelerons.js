@@ -39,7 +39,7 @@ function Accelerons() {
             designation={"Captain"}
             page={"manager"}
             url={manager1}
-            linkedin={"blamk"}
+            linkedin={"https://www.linkedin.com/in/yash-arora-0b2027215/"}
             email={"mailto:yasharora1808@gmail.com"}
           />
           <PersonCard
@@ -55,7 +55,7 @@ function Accelerons() {
             designation={"EV-Head"}
             page={"manager"}
             url={manager3}
-            linkedin={"Linkedin.com/in/Na"}
+            linkedin={"https://www.linkedin.com/in/10manikya/"}
             email={"mailto:NA@gmail.com"}
           />
         </div>

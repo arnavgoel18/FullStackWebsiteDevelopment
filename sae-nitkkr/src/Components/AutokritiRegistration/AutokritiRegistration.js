@@ -39,33 +39,37 @@ function Quizsignup() {
     var accomo = document.getElementById("accomodation").checked;
 
     if (Mechanical == true) {
-      // finalcost += 2500;
+      finalcost += 2500;
       count++;
     }
     if (IOT == true) {
-      // finalcost += 2500;
+      finalcost += 2750;
       count++;
     }
     if (EV == true) {
-      // finalcost += 2500;
+      finalcost += 2500;
       count++;
     }
     if (software == true) {
-      // finalcost += 2500;
+      finalcost += 2500;
       count++;
     }
     if (accomo == true && count == 2) {
-      finalcost = 5500;
+      //finalcost = 5500; 
+      finalcost += 500;
     }else if(accomo == true && count == 1){
-      finalcost = 3000;
+      //finalcost = 3000;
+      finalcost += 500;
     }else if(accomo == false && count == 1){
-      finalcost = 2500;
+      //finalcost = 2500;
+      finalcost += 0;
     }else if(accomo == false && count == 2){
-      finalcost = 4500;
+      //finalcost = 4500;
+      finalcost += 0;
     }
 
     setFinalcost(finalcost);
-    userData.amount = 1;    //for testing only, later changed with finalcost;
+    userData.amount = finalcost;    //for testing only, later changed with finalcost;
   };
 
   //to check all fields are filled or not
@@ -294,10 +298,16 @@ function Quizsignup() {
         );
       }
       if(c == 2){
-        document.getElementById("workshopAmount").innerText = 4500;
+        document.getElementById("workshopAmount").innerText = 5000;
+        // document.getElementById("workshopAmount").innerText = 4500;
       }
       if(c == 1){
-        document.getElementById("workshopAmount").innerText = 2500;
+        if(name = "iot"){
+          document.getElementById("workshopAmount").innerText = 2750;
+        }else{
+
+          document.getElementById("workshopAmount").innerText = 2500;
+        }
       }
       if(c == 0){
         document.getElementById("workshopAmount").innerText = 0;
@@ -311,14 +321,14 @@ function Quizsignup() {
     }
 
     if (name == "timeSlot1") {
-      if (value == "22-25") {
-        userData.timeSlot1 = "22-25";
-        userData.timeSlot2 = "25-28";
+      if (value == "5-8") {
+        userData.timeSlot1 = "5-8";
+        userData.timeSlot2 = "8-11";
         // console.log(userData.timeSlot1);
         // console.log(userData.timeSlot2);
       } else {
-        userData.timeSlot2 = "22-25";
-        userData.timeSlot1 = "25-28";
+        userData.timeSlot2 = "5-8";
+        userData.timeSlot1 = "8-11";
         // console.log(userData.timeSlot1);
         // console.log(userData.timeSlot2);
       }

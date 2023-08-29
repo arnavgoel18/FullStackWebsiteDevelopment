@@ -123,19 +123,22 @@ function RegistrationDetails() {
       description: "Thankyou for registration",
       image: { saelogo },
       handler: async (response) => {
-        await set_to_database();
         await handler(response);
+        await set_to_database();
         console.log(options);
         window.location = `/register_confirmation/${timestamp}`;
       },
       prefill: {
         name: "SAE NIT Kurukshetra",
-        email: "saenitkurukshetra@gmail.com",
+        email: "saenitkkr@nitkkr.ac.in",
         contact: "9650735458",
       },
     };
 
     const handler = async (response) => {
+      authorised_user.orderid = response.razorpay_order_id;
+      timestamp = response.razorpay_payment_id;
+      authorised_user.paymentid = timestamp;
       // alert(
       //   "Congratulations! You have registered successfully with payment ID: " +
       //     response.razorpay_payment_id +
@@ -143,24 +146,21 @@ function RegistrationDetails() {
       //     response.razorpay_order_id
       // );
 
-      authorised_user.orderid = response.razorpay_order_id;
-      timestamp = response.razorpay_payment_id;
-      authorised_user.paymentid = timestamp;
     };
-
     const set_to_database = async () => {
-      sendEmail();
+      //sendEmail();
       authorised_user["department"] = department;
       const Saving_user_data = authorised_user;
+      console.log(Saving_user_data, timestamp);
       Saving_user_data.Registration_time=new Date().toString();
       let gotit = await setDoc(
-        doc(db, 'paymentregistrationid', timestamp.toString()),
+        doc(db, 'paymentregistrationid', timestamp),
         Saving_user_data
-      )
-    };
+        )
+      };
 
     const sendEmail = () => {
-      console.log("hello destination");
+      //console.log("hello destination");
       const toSend = {
         name: authorised_user.name,
         sem: authorised_user.semester,

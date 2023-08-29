@@ -39,7 +39,7 @@ function Nitrox() {
             designation={"Captain"}
             page={"manager"}
             url={manager1}
-            linkedin={"blamk"}
+            linkedin={"https://www.linkedin.com/in/hk2107/"}
             email={"mailto:hkhatri2107@gmail.com"}
           />
           <PersonCard
@@ -47,7 +47,7 @@ function Nitrox() {
             designation={"Vice-Captain"}
             page={"manager"}
             url={manager2}
-            linkedin={"NA"}
+            linkedin={"https://www.linkedin.com/in/anmol-chaudhary-278a22225/"}
             email={"mailto:anmolchaudhary854@gmail.com "}
           />
           <PersonCard
@@ -55,7 +55,7 @@ function Nitrox() {
             designation={"EV-Head"}
             page={"manager"}
             url={manager3}
-            linkedin={"Linkedin.com/in/parv-sarin"}
+            linkedin={"https://www.linkedin.com/in/parv-sarin"}
             email={"mailto:Parvsarin01@gmail.com"}
           />
         </div>
