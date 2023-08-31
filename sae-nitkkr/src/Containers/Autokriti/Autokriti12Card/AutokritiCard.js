@@ -90,7 +90,7 @@ export default function AutokritiCard() {
           automobile workshop. To continue our endeavour of knowledge sharing,
           we are here with Autokriti 13. This time it will be a ride on both CV
           and EV, not a rash one but a safe and steady one.
-          <b> #MobilityRedefined</b>
+          <b> #ChargedReality</b>
           <br />
           <br />
           There are four workshops in Autokriti 13: CV, EV, IoT and Software.
