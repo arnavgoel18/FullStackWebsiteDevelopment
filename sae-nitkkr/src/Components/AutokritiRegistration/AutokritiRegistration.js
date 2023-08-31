@@ -95,10 +95,10 @@ function Quizsignup() {
     }
     if (accomo == true && count == 2) {
       //finalcost = 5500;
-      finalcost += 500;
+      finalcost += 750;
     } else if (accomo == true && count == 1) {
       //finalcost = 3000;
-      finalcost += 500;
+      finalcost += 750;
     } else if (accomo == false && count == 1) {
       //finalcost = 2500;
       finalcost += 0;
@@ -424,7 +424,7 @@ function Quizsignup() {
     )
       document.getElementById("accomoAmount").innerText = 1000;
     else if (document.getElementById("accomodation").checked == true)
-      document.getElementById("accomoAmount").innerText = 500;
+      document.getElementById("accomoAmount").innerText = 750;
     else document.getElementById("accomoAmount").innerText = 0;
 
     if (type != "checkbox" && type != "radio") {
