@@ -99,10 +99,10 @@ function Quizsignup() {
     }
     if (accomo == true && count == 2) {
       //finalcost = 5500;
-      finalcost += 500;
+      finalcost += 750;
     } else if (accomo == true && count == 1) {
       //finalcost = 3000;
-      finalcost += 500;
+      finalcost += 750;
     } else if (accomo == false && count == 1) {
       //finalcost = 2500;
       finalcost += 0;
