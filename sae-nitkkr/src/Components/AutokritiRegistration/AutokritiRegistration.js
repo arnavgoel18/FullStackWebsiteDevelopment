@@ -31,12 +31,15 @@ function Quizsignup() {
     { id: "ev", label: "EV", price: 2500, checked: false },
     { id: "software", label: "Software", price: 2500, checked: false },
   ]);
-
+  let flag = 0;
   const handleCheckboxChange = (id) => {
     const updatedCheckboxes = checkboxes.map((checkbox) => {
       if (checkbox.id === id) {
         checkbox.checked = !checkbox.checked;
+        if (checkbox.checked) flag = flag + 1;
+        else flag = flag - 1;
       }
+      console.log(flag);
       return checkbox;
     });
 
@@ -60,6 +63,7 @@ function Quizsignup() {
     );
 
     setCheckboxes(updatedCheckboxes);
+
     setWorkshopAmount(updatedWorkshopAmount);
   };
 
@@ -146,6 +150,10 @@ function Quizsignup() {
     console.log(department, count);
     if (name && email && phone && college && branch && semester && timeSlot1) {
       //if all fields are entered
+      const allCheckboxesEmpty = checkboxes.every(
+        (checkbox) => !checkbox.checked
+      );
+
       if (phone.length != 10) {
         alert("Please enter a valid mobile number");
         return false;
@@ -155,7 +163,7 @@ function Quizsignup() {
       } else if (count > 2) {
         alert("You can choose maximum two department");
         return false;
-      } else if (count == 0) {
+      } else if (allCheckboxesEmpty) {
         alert("Choose at least one department");
         return false;
       } else if (document.getElementById("agree").checked) {
@@ -424,7 +432,7 @@ function Quizsignup() {
     )
       document.getElementById("accomoAmount").innerText = 1000;
     else if (document.getElementById("accomodation").checked == true)
-      document.getElementById("accomoAmount").innerText = 500;
+      document.getElementById("accomoAmount").innerText = 750;
     else document.getElementById("accomoAmount").innerText = 0;
 
     if (type != "checkbox" && type != "radio") {
@@ -814,7 +822,9 @@ function Quizsignup() {
             <div className="payform-lable">
               {/* <span>Workshop Amount (&#8377;) : </span> */}
               <span>Workshop Amount (&#8377;) :{workshopamount} </span>
-              <span id="workshopAmount">0</span>
+              <span style={{ display: "none" }} id="workshopAmount">
+                0
+              </span>
             </div>
             <div className="department-timeslot">
               <div className="payform-label" id="chooseTimeslot">
