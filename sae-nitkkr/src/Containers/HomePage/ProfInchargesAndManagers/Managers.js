@@ -4,6 +4,7 @@ import PersonCard from "./PersonCard";
 import manager1 from "../../../Assets/ProfIncharges/President.jpg";
 import manager2 from "../../../Assets/ProfIncharges/VicePre.jpg";
 import manager3 from "../../../Assets/ProfIncharges/secyy.jpg";
+import manager4 from "../../../Assets/ProfIncharges/lisha.jpg";
 
 function Managers() {
   return (
@@ -37,6 +38,14 @@ function Managers() {
             url={manager3}
             linkedin={"https://www.linkedin.com/in/vinay-saini-6a3044241"}
             email={"mailto:sainivinay013@gmail.com"}
+          />
+          <PersonCard
+            name={"Lisha Garg"}
+            designation={"Secretary"}
+            page={"manager"}
+            url={manager4}
+            linkedin={"https://www.linkedin.com/in/lisha-garg-61373a211/"}
+            email={"mailto:lisha317garg@gmail.com"}
           />
         </div>
       </div>

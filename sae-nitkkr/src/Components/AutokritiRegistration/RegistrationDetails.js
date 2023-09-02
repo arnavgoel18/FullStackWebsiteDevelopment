@@ -267,7 +267,7 @@ function RegistrationDetails() {
             return(
             <tr>
             <td className="td-first">{e} WORKSHOP</td>
-            {i==0?<td>{authorised_user.timeSlot1} September</td>:<td>{authorised_user.timeSlot2} September</td>}
+            {i==0?<td>{authorised_user.timeSlot1} October</td>:<td>{authorised_user.timeSlot2} October</td>}
             {/* <td>{authorised_user.timeSlot1} August</td> */}
           </tr>)
 

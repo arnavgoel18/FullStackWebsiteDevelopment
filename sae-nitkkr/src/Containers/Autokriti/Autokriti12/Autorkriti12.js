@@ -7,9 +7,13 @@ import NavBar from "../../../Components/NavBar/NavBar";
 import Footer from "../../../Components/Footer/Footer";
 import Carousel from "../../../Components/Carousel/Carousel";
 
+//These are autokriti 12 posters
 import Au2Poster from "../../../Assets/Autokriti12/Autokriti12poster.jpg";
 import El2Poster from "../../../Assets/Autokriti12/ElectrionicsPoster.jpg"
 import Sof2Poster from "../../../Assets/Autokriti12/Software.jpg"
+
+//aut0kriti 13poster
+import autokriti13 from "../../../Assets/CheckOurEvents/autokriti13.jpg"
 import VerticalTimeline from "./VerticalTimeline/VerticalTimeline";
 import RegisterLine from "./VerticalTimeline/RegisterLine";
 import CV from "../../../Assets/cv.png";
@@ -28,6 +32,7 @@ function Autorkriti12() {
 
 
   const images=[Au2Poster,El2Poster,Sof2Poster];
+  //const images=[autokriti13];
 
   return (
     <>
@@ -36,13 +41,13 @@ function Autorkriti12() {
         <div className='about_autokriti-left'>
           <h2 className='about_autokrit-left-heading'>
             Details of{' '}
-            <b className='about_autokrit-left-subheading'> Autokriti 12</b>{' '}
+            <b className='about_autokrit-left-subheading'> Autokriti 13</b>{' '}
             Workshop
           </h2>
           <p>
             Interested in automobiles, but don’t know where to start? Let this
             be your first stepping stone to the redefined world of mobility.
-            Join Autokriti 12 and be a part of this remaking.
+            Join Autokriti 13 and be a part of this remaking.
             <br />
             <br />
             From overhauling of a 2 stroke engine of a scooter in Autokriti 1 to
@@ -50,12 +55,12 @@ function Autorkriti12() {
             steps with innovation. It is our determination to keep up with the
             ever-changing technology that makes us North India’s largest
             automobile workshop. To continue our endeavour of knowledge sharing,
-            we are here with Autokriti 12. This time it will be a ride on both
+            we are here with Autokriti 13. This time it will be a ride on both
             CV and EV, not a rash one but a safe and steady one.
-            <b> #MobilityRedefined</b>
+            <b> #ChargedReality</b>
             <br />
             <br />
-            There are four workshops in Autokriti 12: CV, EV, IoT and Software.
+            There are four workshops in Autokriti 13: CV, EV, IoT and Software.
             All these workshops will help you create a proper theoretical as
             well as practical understanding of their domain. You shall get a
             personalised learning experience on physical models. Along with all

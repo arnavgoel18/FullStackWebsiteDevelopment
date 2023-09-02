@@ -36,10 +36,10 @@ function RegisterLine() {
           (Department 2)
         </p>
         <p>
-          5. Each workshop is <b>2500/- INR</b>
+          5. Each workshop (except IOT) is <b>2500/- INR</b>. IOT workshop is <b>2750/- INR</b>
         </p>
         <p>
-          6. Accomodation and Food is <b>500/-</b> Extra per Slot
+          6. Accomodation and Food is <b>750/-</b> Extra per Slot
         </p>
         <p>
           7. For any queries on type of accomodation or food service, please
@@ -54,7 +54,7 @@ function RegisterLine() {
           <p className="register_line-last">
             Interested in automobiles, but don’t know where to start? Let’s this
             be your first step, to the world of electrification. Join Autokriti
-            12 and be the part of this remaking
+            13 and be the part of this remaking
           </p>
         </h4>
         <Link to="/autokriti/register">

@@ -271,8 +271,7 @@ export default function AutokritiCard() {
             <button
               type='button'
               className='Autokirti_12_button'
-              disabled
-              style={{ backgroundColor: 'Grey' }}
+             // style={{ backgroundColor: 'Grey' }}
             >
               MORE INFORMATION
             </button>
