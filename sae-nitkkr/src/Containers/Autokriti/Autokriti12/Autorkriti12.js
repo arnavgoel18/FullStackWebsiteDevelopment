@@ -7,10 +7,10 @@ import NavBar from "../../../Components/NavBar/NavBar";
 import Footer from "../../../Components/Footer/Footer";
 import Carousel from "../../../Components/Carousel/Carousel";
 
-//These are autokriti 12 posters
-import Au2Poster from "../../../Assets/Autokriti12/Autokriti12poster.jpg";
-import El2Poster from "../../../Assets/Autokriti12/ElectrionicsPoster.jpg"
-import Sof2Poster from "../../../Assets/Autokriti12/Software.jpg"
+//These are autokriti 13 posters
+import Au2Poster from "../../../Assets/Autokriti13/cv.webp";
+import El2Poster from "../../../Assets/Autokriti13/iot.webp"
+import Sof2Poster from "../../../Assets/Autokriti13/software.webp"
 
 //aut0kriti 13poster
 import autokriti13 from "../../../Assets/CheckOurEvents/autokriti13.jpg"

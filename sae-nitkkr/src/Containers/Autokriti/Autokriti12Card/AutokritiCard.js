@@ -1,6 +1,6 @@
 import React from "react";
 import { useRef, useState } from "react";
-
+import Carousel from "../../../Components/Carousel/Carousel";
 import "./AutokritiCard.css";
 
 //icons
@@ -23,10 +23,11 @@ import { MdEdgesensorHigh } from "react-icons/md";
 import { IoIosArrowDropdown } from "react-icons/io";
 
 //poster
-import autokriti12poster from "../../../Assets/Autokriti12/Autokriti12poster.jpg";
+//import autokriti12poster from "../../../Assets/Autokriti12/Autokriti12poster.jpg";
 import autokriti13poster from "../../../Assets/CheckOurEvents/autokriti13.jpg"
-import Elec2Poster from "../../../Assets/Autokriti12/ElectrionicsPoster.jpg";
-import Soft2Poster from "../../../Assets/Autokriti12/Software.jpg";
+import cv from "../../../Assets/Autokriti13/cv.webp";
+import iotposter from "../../../Assets/Autokriti13/iot.webp"
+import softwareposter from "../../../Assets/Autokriti13/software.webp"
 
 export default function AutokritiCard() {
   let software = useRef();
@@ -34,7 +35,8 @@ export default function AutokritiCard() {
   let iot = useRef();
   let ev = useRef();
 
-  const posters = [autokriti13poster, Elec2Poster, Soft2Poster];
+  const posters = [autokriti13poster, cv, iotposter, softwareposter];
+
   const [poster_idx, setPoster_idx] = useState(0);
   const hello = () => {
     software.current.style.display == "none"
@@ -176,8 +178,8 @@ export default function AutokritiCard() {
           <div className='Autokirtee12_dropdowns'>
             <button
               className='Autokirtee_12_dropdown'
-              // onMouseEnter={() => setPoster_idx(1)}
-              // onMouseLeave={() => setPoster_idx(0)}
+              onMouseEnter={() => setPoster_idx(1)}
+              onMouseLeave={() => setPoster_idx(0)}
             >
               <div className='Autokirtee_12_dropdown-text'>
                 Combustion Vehicle
@@ -201,8 +203,8 @@ export default function AutokritiCard() {
             </button>
             <button
               className='Autokirtee_12_dropdown'
-              // onMouseEnter={() => setPoster_idx(1)}
-              // onMouseLeave={() => setPoster_idx(0)}
+              onMouseEnter={() => setPoster_idx(1)}
+              onMouseLeave={() => setPoster_idx(0)}
             >
               <div className='Autokirtee_12_dropdown-text'>
                 Electric Vehicle
@@ -222,8 +224,8 @@ export default function AutokritiCard() {
             </button>
             <button
               className='Autokirtee_12_dropdown'
-              // onMouseEnter={() => setPoster_idx(1)}
-              // onMouseLeave={() => setPoster_idx(0)}
+              onMouseEnter={() => setPoster_idx(2)}
+              onMouseLeave={() => setPoster_idx(0)}
             >
               <div className='Autokirtee_12_dropdown-text'>IOT</div>
               <div className='Autokirtee_12_icons'>
@@ -248,8 +250,8 @@ export default function AutokritiCard() {
             </button>
             <button
               className='Autokirtee_12_dropdown'
-              // onMouseEnter={() => setPoster_idx(2)}
-              // onMouseLeave={() => setPoster_idx(0)}
+                onMouseEnter={() => setPoster_idx(3)}
+                onMouseLeave={() => setPoster_idx(0)}
             >
               <div className='Autokirtee_12_dropdown-text'>Softwares</div>
               <div className='Autokirtee_12_icons'>

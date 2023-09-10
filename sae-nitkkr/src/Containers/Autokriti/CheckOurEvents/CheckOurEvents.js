@@ -6,6 +6,10 @@ import Au2Poster from "../../../Assets/CheckOurEvents/Au2Poster.webp";
 import autokriti12poster from "../../../Assets/Autokriti12/Autokriti12poster.jpg";
 import campusAmbass from '../../../Assets/CheckOurEvents/CampusAmbassador.png'
 
+import cv from "../../../Assets/Autokriti13/cv.webp";
+import iot from "../../../Assets/Autokriti13/iot.webp"
+import software from "../../../Assets/Autokriti13/software.webp"
+
 function CheckEvents() {
   return (
     <>
