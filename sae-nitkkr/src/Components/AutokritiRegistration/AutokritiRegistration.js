@@ -904,7 +904,7 @@ function Quizsignup() {
             </p>
             <p className="instruction_para">
               * In case of any issue or payment failure, please contact
-              +91-9650735458
+              +91-9027073663
             </p>
             <p className="instruction_para">* Referal IDs are case-sensitive</p>
           </div>
