@@ -34,160 +34,195 @@ import Accelerons34 from "../../../Assets/AcceleronsGallery/AcceleronsGallery_34
 import Accelerons35 from "../../../Assets/AcceleronsGallery/AcceleronsGallery_35.JPG";
 import Accelerons37 from "../../../Assets/AcceleronsGallery/AcceleronsGallery_37.JPG";
 import Accelerons38 from "../../../Assets/AcceleronsGallery/AcceleronsGallery_38.JPG";
+import Accelerons39 from "../../../Assets/AcceleronsGallery/AcceleronsGallery_39.webp";
+import Accelerons40 from "../../../Assets/AcceleronsGallery/AcceleronsGallery_40.webp";
+import Accelerons41 from "../../../Assets/AcceleronsGallery/AcceleronsGallery_41.webp";
+import Accelerons42 from "../../../Assets/AcceleronsGallery/AcceleronsGallery_42.webp";
+import Accelerons43 from "../../../Assets/AcceleronsGallery/AcceleronsGallery_43.webp";
+import Accelerons44 from "../../../Assets/AcceleronsGallery/AcceleronsGallery_44.webp";
+import Accelerons45 from "../../../Assets/AcceleronsGallery/AcceleronsGallery_45.webp";
 
 const Gallery = () => {
   let data = [
     {
       id: 1,
-      imgSrc: Accelerons1,
+      imgSrc: Accelerons39,
     },
     {
       id: 2,
-      imgSrc: Accelerons2,
+      imgSrc: Accelerons40,
     },
     {
       id: 3,
-      imgSrc: Accelerons3,
+      imgSrc: Accelerons41,
     },
     {
       id: 4,
-      imgSrc: Accelerons4,
+      imgSrc: Accelerons42,
     },
     {
       id: 5,
-      imgSrc: Accelerons5,
+      imgSrc: Accelerons43,
     },
     {
       id: 6,
-      imgSrc: Accelerons6,
+      imgSrc: Accelerons44,
     },
     {
       id: 7,
-      imgSrc:Accelerons7,
+      imgSrc: Accelerons45,
     },
     {
       id: 8,
-      imgSrc: Accelerons8,
+      imgSrc: Accelerons1,
     },
     {
       id: 9,
-      imgSrc: Accelerons9,
+      imgSrc: Accelerons2,
     }];
     let data1=[
     {
       id: 10,
-      imgSrc: Accelerons10,
+      imgSrc: Accelerons3,
     },
     {
       id: 11,
-      imgSrc: Accelerons11,
+      imgSrc: Accelerons4,
     },
     {
       id: 12,
-      imgSrc: Accelerons12,
+      imgSrc: Accelerons5,
     },
     {
       id: 13,
-      imgSrc: Accelerons13,
+      imgSrc: Accelerons6,
     },
     {
       id: 14,
-      imgSrc:Accelerons14,
+      imgSrc:Accelerons7,
     },
     {
       id: 15,
-      imgSrc: Accelerons15,
+      imgSrc: Accelerons8,
     },
     {
       id: 16,
-      imgSrc: Accelerons16,
+      imgSrc: Accelerons9,
     },
     {
       id: 17,
-      imgSrc: Accelerons17,
+      imgSrc: Accelerons10,
     },
     {
       id: 18,
-      imgSrc: Accelerons18,
+      imgSrc: Accelerons11,
     },
     {
       id: 19,
-      imgSrc: Accelerons19,
+      imgSrc: Accelerons12,
     },
     {
       id: 20,
-      imgSrc: Accelerons20,
+      imgSrc: Accelerons13,
     },
     {
       id: 21,
-      imgSrc: Accelerons21,
+      imgSrc:Accelerons14,
     },
     {
       id: 22,
-      imgSrc: Accelerons22,
+      imgSrc: Accelerons15,
     },
     {
       id: 23,
-      imgSrc: Accelerons23,
+      imgSrc: Accelerons16,
     },
     {
       id: 24,
-      imgSrc: Accelerons24,
+      imgSrc: Accelerons17,
     },
     {
       id: 25,
-      imgSrc: Accelerons2,
+      imgSrc: Accelerons18,
     },
     {
       id: 26,
-      imgSrc: Accelerons26,
+      imgSrc: Accelerons19,
     },
     {
       id: 27,
-      imgSrc: Accelerons27,
+      imgSrc: Accelerons20,
     },
     {
       id: 28,
-      imgSrc: Accelerons28,
+      imgSrc: Accelerons21,
     },
     {
       id: 29,
-      imgSrc: Accelerons2,
+      imgSrc: Accelerons22,
     },
     {
       id: 30,
-      imgSrc: Accelerons3,
+      imgSrc: Accelerons23,
     },
     {
       id: 31,
-      imgSrc: Accelerons31,
+      imgSrc: Accelerons24,
     },
     {
       id: 32,
-      imgSrc: Accelerons32,
+      imgSrc: Accelerons2,
     },
     {
       id: 33,
-      imgSrc: Accelerons3,
+      imgSrc: Accelerons26,
     },
     {
       id: 34,
-      imgSrc: Accelerons34,
+      imgSrc: Accelerons27,
     },
     {
       id: 35,
-      imgSrc: Accelerons35,
+      imgSrc: Accelerons28,
     },
     {
       id: 36,
-      imgSrc: Accelerons3,
+      imgSrc: Accelerons2,
     },
     {
       id: 37,
-      imgSrc: Accelerons37,
+      imgSrc: Accelerons3,
     },
     {
       id: 38,
+      imgSrc: Accelerons31,
+    },
+    {
+      id: 39,
+      imgSrc: Accelerons32,
+    },
+    {
+      id: 40,
+      imgSrc: Accelerons3,
+    },
+    {
+      id: 41,
+      imgSrc: Accelerons34,
+    },
+    {
+      id: 42,
+      imgSrc: Accelerons35,
+    },
+    {
+      id: 43,
+      imgSrc: Accelerons3,
+    },
+    {
+      id: 44,
+      imgSrc: Accelerons37,
+    },
+    {
+      id: 45,
       imgSrc: Accelerons38,
     },
   ];
