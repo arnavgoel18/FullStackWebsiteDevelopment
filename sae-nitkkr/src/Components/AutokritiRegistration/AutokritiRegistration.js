@@ -21,6 +21,7 @@ import Footer from "../Footer/Footer";
 import { check } from "fontawesome";
 
 var c = 0;
+var valid = false;
 var storeemail = false; //for nitkkr stuednts
 var storecollege = false; //for nitkkr college
 function Quizsignup() {
@@ -111,8 +112,9 @@ function Quizsignup() {
       finalcost += 0;
     }
 
+    if(valid == true) finalcost = finalcost - 100;
     setFinalcost(finalcost);
-    userData.amount = finalcost; //for testing only, later changed with finalcost;
+    userData.amount = finalcost; //1 for testing only, later changed with finalcost;
   };
 
   //to check all fields are filled or not
@@ -269,7 +271,7 @@ function Quizsignup() {
     checked = event.target.checked;
     type = event.target.type;
 
-    var valid = false;
+    // var valid = false;
     //to check referal code
     if (name === "referal") {
       for (var i = 0; i < stuData.length; i++) {
