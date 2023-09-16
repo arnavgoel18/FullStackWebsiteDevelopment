@@ -1,8 +1,31 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import NavBar from '../../Components/NavBar/NavBar'
 import "../../Components/AutokritiRegistration/AutokritiRegistration.css";
 import PAYTMQR from "../../Assets/PaymentQR/KeshavPaytmQR.jpeg"
+
 function SecondaryPaymentPage() {
+  const params = new URL(document.location).searchParams;
+  const timestamp = params.get("id");
+
+  const [image, setImage] = useState('');
+
+  const upload = () => {
+    document.getElementById("payform-button1").disabled = true;
+    document.getElementById("payform-button1").style.background = "grey";
+
+      if (image == null)
+          return;
+          const storage = getStorage();
+          const coverPhotoRef = ref(storage, `/AutokritiRegistration2024/${timestamp}`);
+          uploadBytes(coverPhotoRef, image).then((res) => {
+            alert("Your Registration is confirmed !! Email will be send after verification.");
+            document.getElementById("payform-button1").disabled = false;
+            document.getElementById("payform-button1").style.background = "#1a3c7f";
+            window.location = `/autokriti`;
+          });     
+  }
+
   return (
    <>
    <NavBar/>
@@ -19,12 +42,14 @@ function SecondaryPaymentPage() {
    </div>
    <h4 className="payform-heading">Upload the Screenshot of Payment Made:</h4>
    <div className='payform-container'>
-   <input type="file" width="200"/>
+   <input type="file" width="200" 
+   onChange={(e) => { setImage(e.target.files[0]) }}/>
    </div>
    <div id="paynow">
               <button
                 className="payform-button"
                 id="payform-button1"
+                onClick={upload}
               >
               Confirm
               </button>

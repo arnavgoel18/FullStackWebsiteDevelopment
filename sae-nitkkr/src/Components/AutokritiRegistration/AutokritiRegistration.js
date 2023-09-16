@@ -32,15 +32,27 @@ function Quizsignup() {
     { id: "ev", label: "EV", price: 2500, checked: false },
     { id: "software", label: "Software", price: 2500, checked: false },
   ]);
+
   let flag = 0;
   const handleCheckboxChange = (id) => {
     const updatedCheckboxes = checkboxes.map((checkbox) => {
       if (checkbox.id === id) {
         checkbox.checked = !checkbox.checked;
-        if (checkbox.checked) flag = flag + 1;
-        else flag = flag - 1;
+        if (checkbox.checked) {
+          flag = flag + 1;
+          setsettemp((prevdepartment) => {
+            return [...prevdepartment, checkbox.id.toUpperCase()];
+          });
+        }
+        else {
+          flag = flag - 1;
+          setsettemp((prevActions) =>
+          prevActions.filter((i) => {
+            return i !== checkbox.id.toUpperCase();
+          }));
+        }
       }
-      console.log(flag);
+      //console.log(flag);
       return checkbox;
     });
 
@@ -345,7 +357,7 @@ function Quizsignup() {
     //   document.getElementById('amb_software').disabled = false;
     //   document.getElementById('amb_timeslot').disabled = false;
     // }
-    if (type === "checkbox" && name !== "accommodation" && name !== "cod") {
+    if (type == "checkbox" && name !== "accomodation" && name !== "cod") {
       var check = checked.toString();
       if (checked) {
         c++;
