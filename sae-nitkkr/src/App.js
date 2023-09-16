@@ -60,6 +60,7 @@ import Autokriti12Certificate from './Containers/Autokriti/Autokriti12Certificat
 import CrowdFunding from './Containers/CrowdFunding/CrowdFunding'
 import DisplayCrowdFunding from './Components/Backend/DisplayCrowdFunding/DisplayCrowdFunding'
 import Announcement from './Components/Announcement/Announcement'
+import SecondaryPaymentPage from './Containers/SecondaryPaymentPage/SecondaryPaymentPage'
 function App() {
   document.title = 'SAE NIT Kurukshetra'
   return (
@@ -76,6 +77,7 @@ function App() {
             <Route path='/nitrox' exact component={() => <Nitrox />} />
             <Route path='/sponsors' exact component={() => <Sponsors />} />
             <Route path='/contactus' exact component={() => <ContactUS />} />
+            <Route path='/makepayment' exact component={() => <SecondaryPaymentPage />} />
             <Route
               path='/register_confirmation/:id'
               exact
