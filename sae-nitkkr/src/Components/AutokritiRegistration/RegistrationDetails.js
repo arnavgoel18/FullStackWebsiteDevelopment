@@ -139,13 +139,6 @@ function RegistrationDetails() {
       authorised_user.orderid = response.razorpay_order_id;
       timestamp = response.razorpay_payment_id;
       authorised_user.paymentid = timestamp;
-      // alert(
-      //   "Congratulations! You have registered successfully with payment ID: " +
-      //     response.razorpay_payment_id +
-      //     " and order ID: " +
-      //     response.razorpay_order_id
-      // );
-
     };
     const set_to_database = async () => {
       //sendEmail();
@@ -213,6 +206,19 @@ function RegistrationDetails() {
     });
   };
 
+  const secondaryMakePayment = async () =>{
+      var newTimestamp = String(new Date().getTime());
+      authorised_user["department"] = department;
+      const Saving_user_data = authorised_user;
+      Saving_user_data.Registration_time=new Date().toString();
+      let gotit = await setDoc(
+        doc(db, 'AutokritiRegistration2024', newTimestamp),
+        Saving_user_data
+        )
+
+        window.location = `/makepayment?id=`+ newTimestamp;
+  }
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -225,10 +231,16 @@ function RegistrationDetails() {
         {/* {authorised_user.cod == 'Yes' ?  <button className="pay-btn" id="payform-button1" onClick={makePaymentCash}>
           Confirm
         </button> :   */}
+{/* 
+        To activate payment gateway
         <button className="pay-btn" id="payform-button1" onClick={makePayment}>
           Pay Now
-        </button> 
-        {/* } */}
+        </button>  */}
+
+<button className="pay-btn" id="payform-button1" onClick={secondaryMakePayment}>
+          Pay Now
+        </button>
+
        
       </div>
 

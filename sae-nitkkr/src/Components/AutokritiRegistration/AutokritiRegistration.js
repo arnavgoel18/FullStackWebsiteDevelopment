@@ -21,6 +21,7 @@ import Footer from "../Footer/Footer";
 import { check } from "fontawesome";
 
 var c = 0;
+var valid = false;
 var storeemail = false; //for nitkkr stuednts
 var storecollege = false; //for nitkkr college
 function Quizsignup() {
@@ -31,15 +32,27 @@ function Quizsignup() {
     { id: "ev", label: "EV", price: 2500, checked: false },
     { id: "software", label: "Software", price: 2500, checked: false },
   ]);
+
   let flag = 0;
   const handleCheckboxChange = (id) => {
     const updatedCheckboxes = checkboxes.map((checkbox) => {
       if (checkbox.id === id) {
         checkbox.checked = !checkbox.checked;
-        if (checkbox.checked) flag = flag + 1;
-        else flag = flag - 1;
+        if (checkbox.checked) {
+          flag = flag + 1;
+          setsettemp((prevdepartment) => {
+            return [...prevdepartment, checkbox.id.toUpperCase()];
+          });
+        }
+        else {
+          flag = flag - 1;
+          setsettemp((prevActions) =>
+          prevActions.filter((i) => {
+            return i !== checkbox.id.toUpperCase();
+          }));
+        }
       }
-      console.log(flag);
+      //console.log(flag);
       return checkbox;
     });
 
@@ -111,8 +124,9 @@ function Quizsignup() {
       finalcost += 0;
     }
 
+    if(valid == true) finalcost = finalcost - 100;
     setFinalcost(finalcost);
-    userData.amount = finalcost; //for testing only, later changed with finalcost;
+    userData.amount = finalcost; //1 for testing only, later changed with finalcost;
   };
 
   //to check all fields are filled or not
@@ -269,7 +283,7 @@ function Quizsignup() {
     checked = event.target.checked;
     type = event.target.type;
 
-    var valid = false;
+    // var valid = false;
     //to check referal code
     if (name === "referal") {
       for (var i = 0; i < stuData.length; i++) {
@@ -343,7 +357,7 @@ function Quizsignup() {
     //   document.getElementById('amb_software').disabled = false;
     //   document.getElementById('amb_timeslot').disabled = false;
     // }
-    if (type === "checkbox" && name !== "accommodation" && name !== "cod") {
+    if (type == "checkbox" && name !== "accomodation" && name !== "cod") {
       var check = checked.toString();
       if (checked) {
         c++;
@@ -904,7 +918,7 @@ function Quizsignup() {
             </p>
             <p className="instruction_para">
               * In case of any issue or payment failure, please contact
-              +91-9650735458
+              +91-9027073663
             </p>
             <p className="instruction_para">* Referal IDs are case-sensitive</p>
           </div>

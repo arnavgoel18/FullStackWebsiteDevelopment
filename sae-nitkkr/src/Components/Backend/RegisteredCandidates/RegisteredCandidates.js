@@ -36,7 +36,7 @@ function RegisteredCandidates() {
 
   //Get Information from Firebase into detailList array
   async function getInfo() {
-    const autokritiRegisteration = collection(db, "paymentregistrationid");
+    const autokritiRegisteration = collection(db, "AutokritiRegistration2024");
     var amb_doc = await getDocs(autokritiRegisteration);
     detailList = amb_doc.docs.map((doc) => doc.data());
 
@@ -73,9 +73,9 @@ function RegisteredCandidates() {
 
     //sort on the basis of timeslot1;
     for (var i = 0; i < detailList.length; i++) {
-      if (detailList[i].timeSlot1 == "22-25" || detailList[i].timeSlot2 == "22-25" )
+      if (detailList[i].timeSlot1 == "5-8" || detailList[i].timeSlot2 == "5-8" )
         detailListSlot1.push(detailList[i]);
-      else if(detailList[i].timeSlot1 == "25-28" || detailList[i].timeSlot2 == "25-28" ) detailListSlot2.push(detailList[i]);
+      else if(detailList[i].timeSlot1 == "8-11" || detailList[i].timeSlot2 == "8-11" ) detailListSlot2.push(detailList[i]);
     }
 
     setDetailListSlot1(detailListSlot1);
@@ -278,8 +278,8 @@ function RegisteredCandidates() {
           <span>How you want to sort the data:</span>
           <select name="sort" id="sort" onchange={checkAlert} >
             <option value="time" default>Registration Time</option>
-            <option value="22-25">Timeslot 22-25</option>
-            <option value="25-28">Timeslot 25-28</option>
+            <option value="5-8">Timeslot 5-8</option>
+            <option value="8-11">Timeslot 8-11</option>
             <option value="cod">cod</option>
           </select></div>
 

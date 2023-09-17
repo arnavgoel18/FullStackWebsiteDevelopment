@@ -49,7 +49,7 @@ export default function AfterLoginPage() {
                 className="iconimage"
               />
             </div>
-            <AfterLoginCard name="Ambassador Response" id="orange" />
+            <AfterLoginCard name="Ambassador Response ('24)" id="orange" />
           </Link>
           <Link to="/admin/contactUsInfo">
             <div className="iconimagediv">
@@ -85,7 +85,7 @@ export default function AfterLoginPage() {
                 className="iconimage"
               />
             </div>
-            <AfterLoginCard name="Selected Ambassadors" id="orange" />
+            <AfterLoginCard name="Selected Ambassadors ('24)" id="orange" />
           </Link>
           <Link to="/admin/collegeRepresentatives">
             <div className="iconimagediv">
@@ -131,7 +131,7 @@ export default function AfterLoginPage() {
                 className="iconimage"
               />
             </div>
-            <AfterLoginCard name="Autokriti Registration" id="yellow" />
+            <AfterLoginCard name="Autokriti Registration (2024)" id="yellow" />
           </Link>
        
 

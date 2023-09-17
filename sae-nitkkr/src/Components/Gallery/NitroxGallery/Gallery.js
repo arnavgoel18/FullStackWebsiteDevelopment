@@ -28,127 +28,158 @@ import Nitrox66 from "../../../Assets/NitroxGallery/Nitroxgallery_66.JPG";
 import Nitrox71 from "../../../Assets/NitroxGallery/Nitroxgallery_71.JPG";
 import Nitrox75 from "../../../Assets/NitroxGallery/Nitroxgallery_75.JPG";
 import Nitrox78 from "../../../Assets/NitroxGallery/Nitroxgallery_78.JPG";
+import Nitrox90 from "../../../Assets/NitroxGallery/Nitroxgallery_90.webp";
+import Nitrox91 from "../../../Assets/NitroxGallery/Nitroxgallery_91.webp";
+import Nitrox92 from "../../../Assets/NitroxGallery/Nitroxgallery_92.webp";
+import Nitrox93 from "../../../Assets/NitroxGallery/Nitroxgallery_93.webp";
+import Nitrox94 from "../../../Assets/NitroxGallery/Nitroxgallery_94.webp";
+import Nitrox95 from "../../../Assets/NitroxGallery/Nitroxgallery_95.webp";
 
 const Gallery = () => {
   let data = [
     {
-      id: 1,
-      imgSrc: Nitrox1,
+      id:1,
+      imgSrc: Nitrox90,
     },
     {
-      id: 2,
-      imgSrc: Nitrox2,
+      id:2,
+      imgSrc: Nitrox91,
     },
     {
-      id: 3,
-      imgSrc: Nitrox5,
+      id:3,
+      imgSrc: Nitrox92,
     },
     {
-      id: 4,
-      imgSrc: Nitrox6,
+      id:4,
+      imgSrc: Nitrox93,
     },
     {
-      id: 5,
-      imgSrc: Nitrox8,
+      id:4,
+      imgSrc: Nitrox94,
     },
     {
-      id: 6,
-      imgSrc:Nitrox9,
+      id:6,
+      imgSrc: Nitrox95,
     },
     {
       id: 7,
-      imgSrc: Nitrox10,
+      imgSrc: Nitrox1,
     },
     {
       id: 8,
-      imgSrc: Nitrox11,
+      imgSrc: Nitrox2,
     },
     {
       id: 9,
-      imgSrc: Nitrox13,
+      imgSrc: Nitrox5,
+    },
+    {
+      id: 10,
+      imgSrc: Nitrox6,
     },];
     let data1=[
     {
-      id: 10,
-      imgSrc: Nitrox12,
-    },
-    {
       id: 11,
-      imgSrc: Nitrox11,
+      imgSrc: Nitrox8,
     },
     {
       id: 12,
-      imgSrc: Nitrox12,
+      imgSrc:Nitrox9,
     },
     {
       id: 13,
-      imgSrc: Nitrox13,
+      imgSrc: Nitrox10,
     },
     {
       id: 14,
-      imgSrc: Nitrox15,
+      imgSrc: Nitrox11,
     },
     {
       id: 15,
-      imgSrc: Nitrox16,
+      imgSrc: Nitrox13,
     },
     {
       id: 16,
-      imgSrc: Nitrox17,
+      imgSrc: Nitrox12,
     },
     {
       id: 17,
-      imgSrc: Nitrox18,
+      imgSrc: Nitrox11,
     },
     {
-      id: 18,Nitrox20,
+      id: 18,
+      imgSrc: Nitrox12,
     },
     {
       id: 19,
-      imgSrc: Nitrox21,
+      imgSrc: Nitrox13,
     },
     {
       id: 20,
-      imgSrc: Nitrox23,
+      imgSrc: Nitrox15,
     },
     {
       id: 21,
-      imgSrc: Nitrox25,
+      imgSrc: Nitrox16,
     },
     {
       id: 22,
-      imgSrc: Nitrox26,
+      imgSrc: Nitrox17,
     },
     {
       id: 23,
-      imgSrc: Nitrox36,
+      imgSrc: Nitrox18,
     },
     {
       id: 24,
-      imgSrc: Nitrox61,
+      imgSrc: Nitrox20,
     },
     {
       id: 25,
-      imgSrc: Nitrox62,
+      imgSrc: Nitrox21,
     },
     {
       id: 26,
-      imgSrc: Nitrox65,
+      imgSrc: Nitrox23,
     },
     {
       id: 27,
-      imgSrc: Nitrox66,
+      imgSrc: Nitrox25,
     },
     {
       id: 28,
-      imgSrc: Nitrox71,
+      imgSrc: Nitrox26,
     },
     {
       id: 29,
-      imgSrc: Nitrox75,
+      imgSrc: Nitrox36,
     },
     {
       id: 30,
+      imgSrc: Nitrox61,
+    },
+    {
+      id: 31,
+      imgSrc: Nitrox62,
+    },
+    {
+      id: 32,
+      imgSrc: Nitrox65,
+    },
+    {
+      id: 33,
+      imgSrc: Nitrox66,
+    },
+    {
+      id: 34,
+      imgSrc: Nitrox71,
+    },
+    {
+      id: 35,
+      imgSrc: Nitrox75,
+    },
+    {
+      id: 36,
       imgSrc: Nitrox78,
     }
     
