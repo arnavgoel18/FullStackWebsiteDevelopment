@@ -11,6 +11,7 @@ function NavBar() {
     const [open, setOpen] = useState(false);
 
     return(
+        <>
         <nav className="NavigationBar_Nav-navbar">
             <Link to="/" className="NavigationBar_Nav-navlogo" onClick={()=>setOpen(false)}>
                 SAENITKKR
@@ -29,6 +30,13 @@ function NavBar() {
                         Home
                     </Link>
                 </li>
+
+			<li className="NavigationBar_Nav-nav-item">
+				<Link to="/merchandise" className="NavigationBar_Nav-nav-link" onClick={() => setOpen(false)}>
+					Merchandise
+				</Link>
+			</li>
+
                 <li className="NavigationBar_Nav-nav-item">
                     <Link to="/autokriti" className="NavigationBar_Nav-nav-link" onClick={() => setOpen(false)}>
                         Autokriti
@@ -63,6 +71,7 @@ function NavBar() {
                 {open ? <FiX /> : <FiMenu />}
             </div>
         </nav>
+        </>
     )
 }
 

@@ -60,6 +60,10 @@ import Autokriti12Certificate from './Containers/Autokriti/Autokriti12Certificat
 import CrowdFunding from './Containers/CrowdFunding/CrowdFunding'
 import DisplayCrowdFunding from './Components/Backend/DisplayCrowdFunding/DisplayCrowdFunding'
 import Announcement from './Components/Announcement/Announcement'
+
+// imported merchandise component for linking
+import { Merchandise } from './Containers/Merchandise/Merchandise'
+
 function App() {
   document.title = 'SAE NIT Kurukshetra'
   return (
@@ -76,6 +80,14 @@ function App() {
             <Route path='/nitrox' exact component={() => <Nitrox />} />
             <Route path='/sponsors' exact component={() => <Sponsors />} />
             <Route path='/contactus' exact component={() => <ContactUS />} />
+			      <Route path='/merchandise' exact component={() => <Merchandise />} />		
+			
+			{/* todo: make merchandise card component under `product` component name - done
+			* to be updated later with data - done (data in content.js)
+			* include merchandise component on the top - done
+			* update NavBar component to include merchandise option - done
+			*/}
+
             <Route
               path='/register_confirmation/:id'
               exact
