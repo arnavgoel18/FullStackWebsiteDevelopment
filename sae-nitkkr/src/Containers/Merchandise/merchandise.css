@@ -1,0 +1,109 @@
+.productList{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5rem;
+}
+
+.app{
+  display: grid;
+  grid-template-columns: 350px 350px 350px;
+  justify-content:space-evenly;
+}
+
+
+.productCard{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--color-grey-primary);
+  margin: 8rem;
+  flex: 1 0 25rem;
+  /* flex: 20; */
+  max-width: 30rem;
+  max-height: 50rem;
+  transition: 0.2s;
+}
+
+.productCard:hover{
+  transform: translateY(-0.5rem);
+  box-shadow: 0.5rem 0.75rem 1.5rem #bbbbbb;
+}
+
+.productImage{
+  margin-top: 2rem;
+  /* margin: auto; */
+  /* max-width: 100%; */
+  height: auto;
+}
+
+.productCard__cart{
+  position: absolute;
+  right: 0;
+  margin: 1rem;
+  font-size: 2rem;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.productCard__wishlist{
+  position: absolute;
+  right: 3rem;
+  margin: 1rem;
+  font-size: 2rem;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.productCard__fastSelling {
+  position: absolute;
+  font-size: 2rem;
+  left: 0;
+  margin: 1rem;
+  fill: var(--color-orange-primary);
+}
+
+.productCard__content {
+  margin: 2rem;
+}
+
+.productName{
+  font-size: 1.5rem;
+}
+
+.displayStack__1,
+.displayStack__2{
+  margin: 2rem 0;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+
+.productPrice{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.productSales,
+.productTime{
+  font-size: 1.1rem;
+}
+
+.addToCart_button {
+  box-sizing: border-box;
+  height:3rem;
+  padding: 2%;
+  width: 70%;
+  /* font-family: 'Courier New', Courier, monospace; */
+  border-radius: 10px;
+  /* font-weight: 300; */
+  font-size: 1.3rem;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+.addToCart_button:hover {
+  cursor: pointer;
+  background-color: gray;
+}
