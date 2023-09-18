@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Work+Sans:wght@300&display=swap");
+
+/* .main-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  background-color: black;
+  color: white;
+} */
+
+.main-block {
+  height: 100%;
+  width: 100%;
+
+
+ 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+}
+
+.image {
+  height: 500px;
+  width: 400px;
+  border: 2px solid white;
+
+  background-position: cover;
+  background-repeat: no-repeat;
+  /* padding-bottom: 11rem; */
+
+  background-color: rgb(243, 239, 234);
+}
+
+.right {
+  margin-top: 2rem;
+  height: 600px;
+  width: 500px;
+  
+  display: flex;
+  flex-direction: column;
+  
+}
+.main-heading h5 {
+  margin-bottom: 15px;
+}
+.main-heading {
+display: flex;
+ flex-direction: column;
+ align-items: flex-start;
+  border-bottom: 2px solid black;
+}
+
+.price {
+  margin-top: 1rem;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  gap: 5px;
+}
+
+.size_chart {
+  margin-top: 1rem;
+display: flex;
+ flex-direction: column;
+ align-items: flex-start;
+
+}
+
+.size-content {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+ display: flex;
+ flex-direction: column;
+ align-items: flex-start;
+
+
+}
+
+.size {
+  display: flex;
+  height: 60px;
+  width: 33%px;
+  /* border: 1px solid white; */
+
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.t-size {
+  margin: 10px;
+  margin-left: 30px;
+  height: 45px;
+  width: 45px;
+  border: 2px solid red;
+  font-weight: 500;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.t-size:hover {
+  color: red;
+  background-color: wheat;
+}
+
+.quantity {
+  display: flex;
+  height: 60px;
+  width: 33%px;
+
+  align-items: center;
+}
+
+.cart-btn {
+  margin-top: 2rem;
+}
+
+.btn {
+  padding: 10px;
+  border: 2px solid red;
+  background-color: rgb(202, 21, 21);
+  color: white;
+  border-radius: 10px;
+  font-size: 15px;
+  border: none;
+}
+
+.btn:hover {
+  background-color: wheat;
+  color: red;
+}
+
+.number {
+  margin-left: 2rem;
+  height: 50px;
+  width: 45%;
+
+  font-size: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.totalcount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  width: 40px;
+}
+
+@media screen and (max-width: 1038px) {
+  .main-block {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+  .btn {
+    margin-bottom: 5rem;
+  }
+
+  .main-heading {
+    margin-top: 2rem;
+  }
+}
