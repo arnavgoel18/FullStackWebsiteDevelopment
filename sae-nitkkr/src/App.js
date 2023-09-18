@@ -60,14 +60,16 @@ import Autokriti12Certificate from './Containers/Autokriti/Autokriti12Certificat
 import CrowdFunding from './Containers/CrowdFunding/CrowdFunding'
 import DisplayCrowdFunding from './Components/Backend/DisplayCrowdFunding/DisplayCrowdFunding'
 import Announcement from './Components/Announcement/Announcement'
-<<<<<<< HEAD
+
 
 // imported merchandise component for linking
 import { Merchandise } from './Containers/Merchandise/Merchandise'
+// imported cart component for linking from containers
+import Cart from './Containers/Cart/Cart'
 
-=======
+
 import SecondaryPaymentPage from './Containers/SecondaryPaymentPage/SecondaryPaymentPage'
->>>>>>> 4a452088656c78e90cb2068a55930f58a7249d99
+
 function App() {
   document.title = 'SAE NIT Kurukshetra'
   return (
@@ -84,18 +86,17 @@ function App() {
             <Route path='/nitrox' exact component={() => <Nitrox />} />
             <Route path='/sponsors' exact component={() => <Sponsors />} />
             <Route path='/contactus' exact component={() => <ContactUS />} />
-<<<<<<< HEAD
+
 			      <Route path='/merchandise' exact component={() => <Merchandise />} />		
-			
+			      <Route path='/cart' exact component={() => <Cart />} />
 			{/* todo: make merchandise card component under `product` component name - done
 			* to be updated later with data - done (data in content.js)
 			* include merchandise component on the top - done
 			* update NavBar component to include merchandise option - done
 			*/}
 
-=======
+
             <Route path='/makepayment' exact component={() => <SecondaryPaymentPage />} />
->>>>>>> 4a452088656c78e90cb2068a55930f58a7249d99
             <Route
               path='/register_confirmation/:id'
               exact

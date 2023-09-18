@@ -13,6 +13,9 @@
 
 .productCard{
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: var(--color-grey-primary);
   margin: 8rem;
   flex: 1 0 25rem;
@@ -29,7 +32,8 @@
 
 .productImage{
   margin-top: 2rem;
-  max-width: 100%;
+  /* margin: auto; */
+  /* max-width: 100%; */
   height: auto;
 }
 
@@ -71,7 +75,7 @@
 .displayStack__2{
   margin: 2rem 0;
   display: flex;
-  justify-content: space-between;
+  justify-content:center;
   align-items: center;
 }
 
@@ -83,4 +87,23 @@
 .productSales,
 .productTime{
   font-size: 1.1rem;
+}
+
+.addToCart_button {
+  box-sizing: border-box;
+  height:3rem;
+  padding: 2%;
+  width: 70%;
+  /* font-family: 'Courier New', Courier, monospace; */
+  border-radius: 10px;
+  /* font-weight: 300; */
+  font-size: 1.3rem;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+.addToCart_button:hover {
+  cursor: pointer;
+  background-color: gray;
 }

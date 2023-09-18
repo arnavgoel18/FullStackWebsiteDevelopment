@@ -12,6 +12,7 @@ export function Merchandise() {
                {contents.map(contents => (
                    <Products 
                        key={contents.id}
+                       id = {contents.id}
                        image={contents.image}
                        name={contents.name}
                        price={contents.price}

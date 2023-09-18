@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaAlignRight } from 'react-icons/fa';
+import { FaAlignRight, FaShoppingCart } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { useState } from 'react';
@@ -64,6 +64,12 @@ function NavBar() {
                         Sponsors
                         {/* Quiz <sup className='Navigation-new'> New!</sup> */}
                         {/* <img src="http://www.nitp.ac.in/php/images/new.gif" border="0" alt="new" className='Navigation-new'/> */}
+                    </Link>
+                </li>
+                <li>
+                    <Link to="/cart" className="NavigationBar_Nav-nav-link" onClick={() => setOpen(false)}>
+                    {/* <FaShoppingCart className={"productCard__cart"}  /> */}
+                    Cart
                     </Link>
                 </li>
             </ul>
