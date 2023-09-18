@@ -66,6 +66,7 @@ import Announcement from './Components/Announcement/Announcement'
 import { Merchandise } from './Containers/Merchandise/Merchandise'
 // imported cart component for linking from containers
 import Cart from './Containers/Cart/Cart'
+import ViewBill from './Containers/Cart/viewBill'
 
 
 import SecondaryPaymentPage from './Containers/SecondaryPaymentPage/SecondaryPaymentPage'
@@ -89,6 +90,7 @@ function App() {
 
 			      <Route path='/merchandise' exact component={() => <Merchandise />} />		
 			      <Route path='/cart' exact component={() => <Cart />} />
+            <Route path='/viewBill' exact component={() => <ViewBill />} />
 			{/* todo: make merchandise card component under `product` component name - done
 			* to be updated later with data - done (data in content.js)
 			* include merchandise component on the top - done

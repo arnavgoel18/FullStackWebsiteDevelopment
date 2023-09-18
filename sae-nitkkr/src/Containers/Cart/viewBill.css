@@ -1,0 +1,114 @@
+.cart_bill_heading{
+    margin: 50px;
+}
+
+.cart_bill_list{
+    margin: 50px;
+    display: grid;
+    grid-template-columns: auto 1fr 1fr 1fr;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.image_head, .name_head, .quan_head, .price_head{
+    font-weight: bold;
+    text-align: center;
+    padding: 8px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+}
+
+.bill_item_image{
+    max-width: 100px;
+    max-height: 100px;
+    display: block;
+    margin: 0 auto;
+}
+
+.bill_item_name, .bill_item_quan, .bill_item_price{
+    text-align: center;
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+.total_amount{
+    text-align: center;
+    color: red;
+}
+
+.cart-form-body{
+    margin-top: 100px;
+    width: 500px;
+    height: auto;
+    background-color: white;
+    margin-left:auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+}
+
+.cart-form-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.cart-form-buttons .next-button{
+    margin: 10px;
+}
+
+.Form-container{
+    border: 1px solid #00000021;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align:left;
+    gap: 10px;
+    font-size: 1.2rem;
+    padding-top:20px;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin:auto;
+    align-self: center;
+}
+
+.Form-container .field{
+    font-size: 14px;
+    margin-top: 0.8rem;
+}
+
+input,textarea{
+    width: 95%; 
+    padding: 5px 0;
+    font-size: 16px;
+    resize: none;
+    border: none;
+    outline: none;
+    border-bottom: 1.5px solid black;
+}  
+
+.next-button
+{
+    text-align: center;
+}
+.buyer-next-back{
+    cursor: pointer;
+    border-radius: 15px;
+    background: #E9910DFC;
+    height: 40px;
+    width: 100px;
+    color: white;
+    border: none;
+    font-size: medium;
+}
+#buyer_button{
+    cursor: pointer;
+    border-radius: 15px;
+    background: #E9910DFC;
+    height: 40px;
+    width: 100px;
+    color: white;
+    border: none;
+    font-size: medium;
+}
