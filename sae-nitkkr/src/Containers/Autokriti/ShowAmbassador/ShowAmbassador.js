@@ -28,11 +28,11 @@ export default function ShowAmbassador() {
 
   async function getAmbRefInfo() {
     
-    const autInfo = collection(db, "autokritiRegistration");
+    const autInfo = collection(db, "AutokritiRegistration2024");
     const autInfo_doc = await getDocs(autInfo);
     autData = autInfo_doc.docs.map((doc) => doc.data());
     setAutData(autData);
-    setOwnreferrals(autData.filter(x => x.referalcode === username))
+    setOwnreferrals(autData.filter(x => x.referal == username))
   }
 
   async function getFinalAmbInfo() {
@@ -94,16 +94,18 @@ export default function ShowAmbassador() {
         </div>
 
         <div className="ambFlexMain">
+          <div className="">**This Referal Count is temporary,<br></br>will update the count after verification of the registration.</div>
           <div className="ambassador-own-referrals-div">
+          <div>Your Referal code: <b>{username}</b></div> <br></br>
             <div className="amb_yourRef">Your Referal Count: {ownReferrals.length}</div>
             <div className="showAmbDiv">
               {autData.map((data, i) => {
-                if (data.referalcode == username) {
+                if (data.referal == username) {
                   return (
                     <div className="ambFlex" key={i}>
-                      <div className="showPersonAmb">{data.studentName}</div>
+                      <div className="showPersonAmb">{data.name}</div>
                       <div className="showPersonAmbCollege">
-                        {data.collegeName}
+                        {data.college}
                       </div>
                     </div>
                   );
@@ -112,7 +114,7 @@ export default function ShowAmbassador() {
             </div>
           </div>
 
-          <div className="amb_leaderboard_container">
+          {/* <div className="amb_leaderboard_container">
             <div className="amb_leader_heading">Leaderboard</div>
             <div className="amb_leaderboard">
               {stuData.map((studata, i) => {
@@ -140,7 +142,7 @@ export default function ShowAmbassador() {
                 
               })}
             </div>
-          </div>
+          </div> */}
         </div>
 
         <Footer />

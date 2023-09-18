@@ -90,11 +90,11 @@ function Login() {
             <div id="loginmain">
               <div id="logincompo1"> <h2 id="h2comp1">SAE NITKKR Ambassador</h2> </div>
               <br/>
-              <div id="logincompo2"> <input type="text" id="loginadmin" className="con"  placeholder= "Username"  onChange={(e)=>
+              <div id="logincompo2"> <input type="text" id="loginadmin" className="con"  placeholder= "Username (ReferalCode)"  onChange={(e)=>
             {
               setuserid(e.target.value)
             }}/></div>
-              <div id="logincompo3"> <input type="password" id="loginpass" className="con" placeholder="Password" onChange={(e)=>
+              <div id="logincompo3"> <input type="password" id="loginpass" className="con" placeholder="Password (Phone No)" onChange={(e)=>
             {
                setpassword(e.target.value)
             }}/></div>

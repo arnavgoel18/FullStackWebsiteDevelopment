@@ -209,6 +209,7 @@ function RegistrationDetails() {
   const secondaryMakePayment = async () =>{
       var newTimestamp = String(new Date().getTime());
       authorised_user["department"] = department;
+      authorised_user.paymentid = newTimestamp;
       const Saving_user_data = authorised_user;
       Saving_user_data.Registration_time=new Date().toString();
       let gotit = await setDoc(
