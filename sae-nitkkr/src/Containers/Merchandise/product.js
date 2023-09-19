@@ -14,7 +14,11 @@ export function Products(props) {
   return (
     <>
       <script src="./cart.js"></script>
-      <div className="productList">
+
+      <Link to="/merchandise/tshirt">  
+   <div className="productList">
+        
+              
         <div key={props.id} className="productCard">
           <img
             src={props.image}
@@ -42,7 +46,7 @@ export function Products(props) {
                         </div>
                         <div className='productTime'>{props.timeLeft} days left</div> */}
 
-              <Link to="/merchandise/tshirt">
+              {/* <Link to="/merchandise/tshirt"> */}
                 <div
                   onClick={() => {
                     addToCart(props);
@@ -51,11 +55,12 @@ export function Products(props) {
                 >
                   Add to Cart
                 </div>
-              </Link>
+              {/* </Link> */}
             </div>
           </div>
         </div>
       </div>
+      </Link>
     </>
   );
 }
