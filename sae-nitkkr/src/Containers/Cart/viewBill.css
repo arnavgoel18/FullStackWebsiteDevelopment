@@ -112,3 +112,11 @@ input,textarea{
     border: none;
     font-size: medium;
 }
+
+.dec_button{
+    display: inline-block;
+    background-color: red;
+    width: 20px;
+    color: white;
+    margin-left: 5px;
+}
