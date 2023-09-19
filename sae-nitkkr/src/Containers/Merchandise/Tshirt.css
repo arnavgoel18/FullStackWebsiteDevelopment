@@ -107,10 +107,7 @@ display: flex;
   font-size: 20px;
 }
 
-.t-size:hover {
-  color: red;
-  background-color: wheat;
-}
+
 
 .quantity {
   display: flex;
@@ -172,5 +169,29 @@ display: flex;
 
   .main-heading {
     margin-top: 2rem;
+  }
+}
+
+
+
+@media screen and (max-width: 530px){
+
+.main-block {
+    display: flex;
+    flex-direction: column;
+  
+    width: 140%;
+  }
+}
+
+@media screen and (max-width: 432px){
+
+.main-block {
+    display: flex;
+    flex-direction: column;
+ 
+    width: 180%;
+    font-size: 18px;
+
   }
 }
