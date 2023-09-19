@@ -313,7 +313,7 @@ function RegisteredCandidates() {
                       <td>{item1.phone}</td>
                       <td>{item1.paymentid}</td>
                       <td>{item1.orderid}</td>
-                      <td>{item1.referalcode}</td>
+                      <td>{item1?.referal}</td>
                       <td>{item1.amount}</td>
                       <td>{item1.cod}</td>
                       <td>
