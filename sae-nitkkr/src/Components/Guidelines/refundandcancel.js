@@ -26,7 +26,8 @@ function RefundAndCancel(){
    <p>Gol Canteen (SAE NITKKR), WRV9+W46, NIT, Thanesar, Haryana 136119</p>
    <br/>
    <br/>
-   <p>+91 9650735458</p>
+   <p>Manikya Sharma: +91 8899669050</p>
+   <p>Vaibhav Dharmani: +91 8949212535</p>
     </div>
    );
 
