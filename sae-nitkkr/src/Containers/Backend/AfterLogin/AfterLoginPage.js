@@ -49,7 +49,8 @@ export default function AfterLoginPage() {
                 className="iconimage"
               />
             </div>
-            <AfterLoginCard name="Ambassador Response ('24)" id="orange" />
+            {/* student Ambassador collection data */}
+            <AfterLoginCard name="Ambassador Response ('24)" id="orange" /> 
           </Link>
           <Link to="/admin/contactUsInfo">
             <div className="iconimagediv">
@@ -85,6 +86,7 @@ export default function AfterLoginPage() {
                 className="iconimage"
               />
             </div>
+            {/* student finalStudentAmbassador collection data */}
             <AfterLoginCard name="Selected Ambassadors ('24)" id="orange" />
           </Link>
           <Link to="/admin/collegeRepresentatives">
