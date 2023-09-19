@@ -9,7 +9,9 @@ import { collection, getDocs, Timestamp, doc, setDoc } from 'firebase/firestore'
 
 export default function ViewBill(){
 
-    const allCartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    const [allCartItems,setAllCartItems]=useState(JSON.parse(localStorage.getItem('cartItems')) || []);
+    
+    // const allCartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
     var tot_amount=0;
     allCartItems.map((item) => (
         tot_amount+=parseInt(item.quantity)*parseInt(item.price)
@@ -25,6 +27,22 @@ export default function ViewBill(){
         );
     }
 
+    const handleQuanChange = (itemId) => {
+        const itemToUpdate = allCartItems.find((item) => item.id===itemId);
+
+        const newQuan = itemToUpdate.quantity-1;
+        if(newQuan<=0){
+            const updatedCartItems=allCartItems.filter((item) => item.id != itemId);
+            setAllCartItems(updatedCartItems);
+        }
+        else{
+            const updatedCartItems=allCartItems.map((item)=> 
+            item.id === itemId ? {...item,quantity:newQuan}: item
+            );
+            setAllCartItems(updatedCartItems);
+        }
+    }
+
     function showNext(){
         document.querySelector('.cart-form-body').classList.add('logged')
     }
@@ -32,11 +50,11 @@ export default function ViewBill(){
         document.querySelector('.cart-form-body').classList.remove('logged')
     }
 
-    return(
+    return( 
         <div className="bill_page">
             <NavBar />
             <div className="cart_bill">
-                <h2 className="cart_bill_heading">Your Bill</h2>
+                <h2 className="cart_bill_heading">Your cart</h2>
                 <div className="cart_bill_list">
                     <div className="image_head">Image</div>
                     <div className="name_head">Product name</div>
@@ -46,7 +64,7 @@ export default function ViewBill(){
                         <React.Fragment key={index}>
                             <img src={item.image} alt="product" className="bill_item_image"></img>
                             <div className="bill_item_name">{item.name}</div>
-                            <div className="bill_item_quan">{item.quantity}</div>
+                            <div className="bill_item_quan">{item.quantity} <div className="dec_button" onClick={() => handleQuanChange(item.id)}>-</div></div>
                             <div className="bill_item_price">{item.price}</div>
                         </React.Fragment>
                     ))}
@@ -177,6 +195,7 @@ export default function ViewBill(){
         document.getElementById('buyer_button').disabled = false
         document.getElementById('buyer_button').style.backgroundColor = '#E9910DFC'
         document.getElementById('form-back').click();
+        localStorage.removeItem('cartItems');
         // window.location.reload();
     }
 }

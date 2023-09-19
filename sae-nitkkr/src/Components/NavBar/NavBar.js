@@ -66,12 +66,12 @@ function NavBar() {
                         {/* <img src="http://www.nitp.ac.in/php/images/new.gif" border="0" alt="new" className='Navigation-new'/> */}
                     </Link>
                 </li>
-                <li>
+                {/* <li>
                     <Link to="/cart" className="NavigationBar_Nav-nav-link" onClick={() => setOpen(false)}>
                     {/* <FaShoppingCart className={"productCard__cart"}  /> */}
-                    Cart
+                    {/* Cart
                     </Link>
-                </li>
+                </li> */}
             </ul>
             <div onClick={() => setOpen(!open)} className="NavigationBar_Nav-nav-icon">
                 {open ? <FiX /> : <FiMenu />}

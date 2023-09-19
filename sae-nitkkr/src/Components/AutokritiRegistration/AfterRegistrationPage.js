@@ -28,7 +28,7 @@ function AfterRegistrationPage() {
   let user = {};
 
   async function getdata() {
-    const docRef = doc(db, "paymentregistrationid", id);
+    const docRef = doc(db, "AutokritiRegistration2024", id);
     const docSnap = await getDoc(docRef);
     setauthorised_user(docSnap.data());
     setDepart(docSnap.data().department);
