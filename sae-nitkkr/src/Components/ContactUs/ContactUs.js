@@ -38,7 +38,7 @@ function ContactUS() {
               href="https://www.google.com/maps/dir/29.5070878,75.0449986/WRV9%2BW46+Gol+Canteen+(SAE+NITKKR),+NIT,+Thanesar,+Haryana+136119/@29.7293325,74.8076003,8z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x390e3f5100000001:0x7f8e5219d122c23e!2m2!1d76.8178281!2d29.9447794"
             >
               {" "}
-              <div className="ContactUs_tt"> Gol Canteen, NIT Kurukshetra,<br/>Kurukshetra, Haryana - 136119</div>
+              <div className="ContactUs_tt"> Gol Canteen, NIT Kurukshetra,<br />Kurukshetra, Haryana - 136119</div>
             </a>
             <iframe
               title="sae_location"
@@ -79,15 +79,15 @@ function ContactUS() {
             </div>{" "}
             <div className="ContactUs_tt"> teamaccelerons@gmail.com</div>
           </div>
-    
+
           <br />
-          <br />  
+          <br />
           <div className="ContactUs_abc">
             {" "}
             <div className="ContactUs_phone">
-              <FiPhoneCall/>
+              <FiPhoneCall />
             </div>{" "}
-            <div className="ContactUs_tt"> 9 6 5 0 7 3 5 4 5 8</div>
+            <div className="ContactUs_tt"> 8 8 9 9 6 6 9 0 5 0</div>
           </div>
         </div>
 
@@ -139,8 +139,8 @@ function ContactUS() {
               required="required"
               name="message"
               id="ContactUs_cont_message"
-              // cols="65"
-              // rows="6"
+            // cols="65"
+            // rows="6"
             ></textarea>
             <span>Your Message * </span>
           </div>
