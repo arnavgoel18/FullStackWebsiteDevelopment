@@ -22,7 +22,7 @@ function Registered() {
   var [depart, setDepart] = useState([]);
 
   async function getdata() {
-    const docRef = doc(db, "paymentregistrationid", id);
+    const docRef = doc(db, "AutokritiRegistration2024", id);
     const docSnap = await getDoc(docRef);
     setauthorised_user(docSnap.data());
     setDepart(docSnap.data().department);
@@ -37,7 +37,7 @@ function Registered() {
   function changestatus() {
     let status = document.getElementsByTagName("input")[0].value;
     if (status == "saecode") {
-      updateDoc(doc(db, "paymentregistrationid", id), {
+      updateDoc(doc(db, "AutokritiRegistration2024", id), {
         status: "Arrived",
       }).then((res) => {
         alert("Status changed to arrived. Refresh the page.");
