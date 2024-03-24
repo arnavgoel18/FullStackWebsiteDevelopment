@@ -1,0 +1,290 @@
+.cards {
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin: 30px 0;
+  height: 550px;
+  overflow: hidden;
+}
+
+.cards-full {
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.year-heading {
+  // display: block;
+  background: linear-gradient(to right, #72ebeb 0%, #330867 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-left: 5px;
+  font-size: 40px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.card-wrapper {
+  width: 250px;
+  height: 250px;
+  position: relative;
+}
+
+@media (max-width: 580px) {
+  .card-wrapper {
+    width: 150px;
+    height: 150px;
+  }
+}
+.card {
+  width: 250px;
+  height: 250px;
+  transform: translate(0%, 0%);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  transition: 0.5s;
+
+  .card-image {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: #000;
+    transition: 0.5s;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &:hover img {
+    opacity: 0.4;
+    transition: 0.5s;
+  }
+}
+
+@media (max-width: 580px) {
+  .card {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.card:hover .card-image {
+  transform: translateY(-100px);
+  transition: all 0.9s;
+}
+
+/**** Social Icons *****/
+
+.social-icons {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  display: flex;
+
+  li {
+    list-style: none;
+
+    a {
+      position: relative;
+      display: block;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      background: #fff;
+      font-size: 23px;
+      color: #333;
+      font-weight: bold;
+      margin: 0 6px;
+      transition: 0.4s;
+      transform: translateY(200px);
+      opacity: 0;
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  .social-icons {
+    top: 25%;
+    li {
+      a {
+        width: 35px;
+        height: 35px;
+        line-height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+.card:hover .social-icons li a {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.social-icons li a:hover {
+  background: #000;
+  transition: 0.2s;
+  .fab {
+    color: #fff;
+  }
+}
+
+.social-icons li a .fab {
+  transition: 0.8s;
+
+  &:hover {
+    transform: rotateY(360deg);
+    color: #fff;
+  }
+}
+
+.card:hover li:nth-child(1) a {
+  transition-delay: 0.1s;
+}
+.card:hover li:nth-child(2) a {
+  transition-delay: 0.2s;
+}
+.card:hover li:nth-child(3) a {
+  transition-delay: 0.3s;
+}
+.card:hover li:nth-child(4) a {
+  transition-delay: 0.4s;
+}
+
+/**** Personal Details ****/
+
+.details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  width: 100%;
+  height: 120px;
+  z-index: 1;
+  padding: 10px;
+
+  h2 {
+    font-size: 20px;
+    padding: 0;
+    text-align: center;
+    font-weight: 800;
+  }
+  .team {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 300;
+  }
+  .Department {
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 580px) {
+  .details {
+    height: 90px;
+    h2 {
+      font-size: 13px;
+      font-weight: 800;
+    }
+    .team {
+      font-size: 0.8rem;
+    }
+    .position1 {
+      font-size: 12px;
+    }
+    .Department {
+      font-size: 12px;
+      text-align: center;
+    }
+  }
+}
+
+.jane {
+  position: absolute;
+  bottom: -120px;
+  left: 0;
+  opacity: 0;
+  background: #fff;
+  width: 100%;
+  height: 120px;
+  z-index: 3;
+  padding: 10px;
+  transition: 0.4s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .position1 {
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 580px) {
+  .jane {
+    height: 90px;
+  }
+  .len {
+    height: 95px;
+    .position1 {
+      font-size: 13px;
+    }
+    .position2 {
+      font-size: 13px;
+    }
+  }
+}
+
+.profile-two .social-icons li a {
+  border-radius: 50%;
+}
+
+.card:hover .profile-img--two {
+  transform: rotateY(180deg);
+}
+
+.card:hover .jane {
+  bottom: 0;
+  left: 0;
+  transition-delay: 0.5s;
+  opacity: 1;
+}
+
+.arrow-btn {
+  margin: 0 auto;
+  font-weight: 900;
+  font-size: 35px;
+  color: red;
+  display: block;
+  cursor: pointer;
+  margin-bottom: 20px;
+  animation: move 1s linear infinite;
+}
+
+@keyframes move {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(20px);
+  }
+}
