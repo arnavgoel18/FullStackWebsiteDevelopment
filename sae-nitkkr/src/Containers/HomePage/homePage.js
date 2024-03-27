@@ -13,7 +13,6 @@ import Footer from '../../Components/Footer/Footer';
 import Autokriti12 from '../Autokriti/Autokriti12Card/AutokritiCard'
 // import ProgressBar from '../../Components/Loader/Progressbar';
 import FundingIntro from '../../Components/CrowdFunding/FundingIntro';
-import Teammembers from '../../Components/Teammembers/Teammembers';
 
 //Firebase
 import db from "../../Firebase";
@@ -51,7 +50,6 @@ function HomePage() {
         {/* <ExploreUs /> */}
         {/* <FundingIntro netAmount={netAmount} amountReceived={amount} /> */}
         <Managers />
-        <Teammembers/>
         <Footer />
       </>
     )

@@ -5,6 +5,7 @@ import manager1 from "../../../Assets/ProfIncharges/President.jpg";
 import manager2 from "../../../Assets/ProfIncharges/VicePre.jpg";
 import manager3 from "../../../Assets/ProfIncharges/secyy.jpg";
 import manager4 from "../../../Assets/ProfIncharges/lisha.jpg";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 function Managers() {
   return (
@@ -48,6 +49,11 @@ function Managers() {
             email={"mailto:lisha317garg@gmail.com"}
           />
         </div>
+        <Link to="/Teammembers">
+          <p className="know-more-text">
+            Know More About Our Team →
+          </p>
+        </Link>
       </div>
     </>
   );

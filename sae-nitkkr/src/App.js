@@ -69,6 +69,7 @@ import Tshirt from "./Containers/Merchandise/Tshirt";
 import Cart from "./Containers/Cart/Cart";
 
 import SecondaryPaymentPage from "./Containers/SecondaryPaymentPage/SecondaryPaymentPage";
+import TeammembersPage from "./Containers/TeammembersPage/teammembersPage.js";
 
 function App() {
   document.title = "SAE NIT Kurukshetra";
@@ -86,7 +87,7 @@ function App() {
             <Route path="/nitrox" exact component={() => <Nitrox />} />
             <Route path="/sponsors" exact component={() => <Sponsors />} />
             <Route path="/contactus" exact component={() => <ContactUS />} />
-
+            <Route path="/Teammembers" exact component={()=><TeammembersPage/>}/>
             <Route path="/cart" exact component={() => <Cart />} />
             {/* todo: make merchandise card component under `product` component name - done
              * to be updated later with data - done (data in content.js)
