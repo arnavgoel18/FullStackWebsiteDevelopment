@@ -3,22 +3,21 @@ import icon41 from "../../Assets/Teammembers/24356 - Parv Sarin.jpeg";
 import icon42 from "../../Assets/Teammembers/20230502_162439 - Keshav Mittal.jpg";
 import icon43 from "../../Assets/Teammembers/20230601_184004 - Nishchal.jpg";
 import icon44 from "../../Assets/Teammembers/20230707191932_IMG_6831 - Bhupeksh _Kaushik.jpg";
-import icon45 from "../../Assets/Teammembers/Garima_1 - Garima Gupta.jpg";
+import icon45 from "../../Assets/Teammembers/garima.jpg";
 import icon46 from "../../Assets/Teammembers/IMG_0476 - Tanuj _6145.jpeg";
 import icon47 from "../../Assets/Teammembers/IMG_2790 - Sourabh Singh.jpeg";
 import icon48 from "../../Assets/Teammembers/IMG_4340 - ME_C_09_170_ Deekshith Naik.jpeg";
-import icon49 from "../../Assets/Teammembers/IMG_4529 - MEB5 6040 Karnakar Reddy.jpeg";
 import icon410 from "../../Assets/Teammembers/IMG_5310-2 - ABHISHEK KUMAR.jpg";
 import icon411 from "../../Assets/Teammembers/IMG_20220201_140147_114 - Mysterious gamer.jpg";
 import icon412 from "../../Assets/Teammembers/IMG_20230625_022008 - 018_EE-A2_Navneet Raj.jpg";
-import icon413 from "../../Assets/Teammembers/IMG_20230718_160758 - R Abinaya.jpg";
+import icon413 from "../../Assets/Teammembers/abinaya.jpg";
 import icon414 from "../../Assets/Teammembers/IMG_20230719_125932 - Kritika Agrawal.jpg";
 import icon415 from "../../Assets/Teammembers/IMG_20230719_133000 - muskan bidani.jpg";
 import icon416 from "../../Assets/Teammembers/IMG-20221012-WA0010 - Lisha Garg.jpg";
 import icon417 from "../../Assets/Teammembers/IMG-20230716-WA0052 - Ani Dubey.jpg";
 import icon418 from "../../Assets/Teammembers/IMG20220611104150 - 6102 Koilada bindu madhava.jpg";
 import icon419 from "../../Assets/Teammembers/SAVE_20230713_011735 - Hima.jpg";
-import icon420 from "../../Assets/Teammembers/Screenshot_20230716-163513-807 - Himanshu Khatri.png";
+import icon420 from "../../Assets/Teammembers/Himanshu Khatri.jpg";
 import icon421 from "../../Assets/Teammembers/Snapchat-1199048726 - Vinay Saini.jpg";
 import icon422 from "../../Assets/Teammembers/Yash Arora.jpg";
 import icon423 from "../../Assets/Teammembers/20220821_151741 - Prikshit Anthal.jpg";
@@ -27,10 +26,10 @@ import icon425 from "../../Assets/Teammembers/WhatsApp Image 2023-05-07 at 19.29
 import icon426 from "../../Assets/Teammembers/keshav.jpg";
 import icon427 from "../../Assets/Teammembers/Anmoll.24c79311.jpg";
 import icon428 from "../../Assets/Teammembers/manikya.png";
+import icon429 from "../../Assets/Teammembers/Nimish.jpeg";
 //3rd year
 
-import icon31 from "../../Assets/Teammembers/1614224109267 - Sourav.jpg";
-import icon32 from "../../Assets/Teammembers/aditya - 070_Aditya Sheokand.jpg";
+import icon31 from "../../Assets/Teammembers/sourav.jpg";
 import icon33 from "../../Assets/Teammembers/aryan_photo - Aryan Kushan.jpg";
 import icon34 from "../../Assets/Teammembers/IMG_20230304_184310 - Rahul Siloniya.jpg";
 import icon35 from "../../Assets/Teammembers/IMG_20230718_170639 - Vivek Kumar.jpg";
@@ -52,11 +51,11 @@ import icon319 from "../../Assets/Teammembers/sugam.jpg";
 import icon21 from "../../Assets/Teammembers/68E0CAD9-EDC5-4819-9E2E-B3BE230E1F6D - Shubhayu Sinha.jpeg";
 import icon22 from "../../Assets/Teammembers/12214111 - Chirag chirag.jpg";
 import icon24 from "../../Assets/Teammembers/12216103 - Mohit Chaudhary.jpg";
-import icon25 from "../../Assets/Teammembers/12216146_1 (1) - Romit Kumar.jpg";
-import icon23 from "../../Assets/Teammembers/12216054 - Danish Goyal.jpg";
-import icon26 from "../../Assets/Teammembers/20230518_013635 - Mukul Verma.jpg";
+import icon25 from "../../Assets/Teammembers/RomitKumar.jpg";
+import icon23 from "../../Assets/Teammembers/danish.jpg";
+import icon26 from "../../Assets/Teammembers/mukul.jpg";
 import icon27 from "../../Assets/Teammembers/IMG_8766 - Abhishek.jpeg";
-import icon28 from "../../Assets/Teammembers/IMG_20221104_145845 - Pritam Beriwal.jpg";
+import icon28 from "../../Assets/Teammembers/pritam.jpg";
 import icon29 from "../../Assets/Teammembers/IMG_20230424_173056_927 - NEHA NEHA.jpg";
 import icon210 from "../../Assets/Teammembers/IMG_20230718_175019 - Sahaj Srivastava.jpg";
 import icon211 from "../../Assets/Teammembers/Vipul Goyal.jpg";
@@ -83,6 +82,7 @@ import icon231 from "../../Assets/Teammembers/Ajay jangra.jpeg";
 import icon232 from "../../Assets/Teammembers/Arjun Joshi.jpeg";
 import icon233 from "../../Assets/Teammembers/priyanshu.jpg";
 import icon234 from "../../Assets/Teammembers/atharva.jpg";
+import icon235 from "../../Assets/Teammembers/yashGarg.jpeg";
 export const Details4yr = [
   {
     id: 3,
@@ -249,6 +249,16 @@ export const Details4yr = [
     Email: "nishantjamdgni@gmail.com",
   },
   {
+    id: 29,
+    img: icon429,
+    name: "Nimish Raman Mital",
+    Team: "Nitrox",
+    Department: "Vehicle Dynamics",
+    LinkedIn: "http://linkedin.com/in/nimish-mital-58904a39",
+    Email: "nimish_mital@yahoo.com",
+    github: "",
+  },
+  {
     id: 4,
     img: icon419,
     name: "Himatri Noonwal",
@@ -331,15 +341,6 @@ export const Details4yr = [
     LinkedIn: "https://www.linkedin.com/in/preetham-a-289628225/",
     Email: "Preetham2532002@gmail.com",
     github: "https://github.com/EmulatedDragon",
-  },
-  {
-    id: 26,
-    img: icon49,
-    name: "Karnakar Reddy",
-    Team: "",
-    Department: "Mechanical",
-    LinkedIn: "https://www.linkedin.com/in/yeredla-karnakar-reddy-30a233224",
-    Email: "karnakarreddyyeredla@nitkkr.ac.in",
   },
   {
     id: 15,
@@ -538,15 +539,7 @@ export const Details3yr = [
     LinkedIn: "https://www.linkedin.com/in/rahul-siloniya-64776a231",
     Email: "rsiloniya@gmail.com",
     github: "https://github.com/rahulsiloniya",
-  },
-  {
-    id: 2,
-    img: icon32,
-    name: "Aditya Sheokand",
-    Team: "IT Team",
-    LinkedIn: "https://www.linkedin.com/in/aditya-sheokand-6b850722a/",
-    Email: "Adityasheokandofficial000@gmail.com",
-  },
+  }
 ];
 
 export const Details2yr = [
@@ -573,7 +566,7 @@ export const Details2yr = [
     img: icon23,
     name: "Danish Goyal",
     Team: "Nitrox",
-    Department: "Vehicle Dynamics",
+    Department: "Transmission",
     LinkedIn: "https://www.linkedin.com/in/danish-goyal-94bb80269/",
     Email: "danishgoyaljind15@gmail.com",
   },
@@ -701,7 +694,7 @@ export const Details2yr = [
     name: "Sahaj Srivastava",
     Team: "Nitrox",
     Department: "Transmission",
-    LinkedIn: "",
+    LinkedIn: "https://www.linkedin.com/in/sahaj-kumar-6b469325a/",
     Email: "imssahaj@gmail.com",
   },
   {
@@ -782,7 +775,7 @@ export const Details2yr = [
     name: "Sarvagya Agrawal",
     Team: "Accelerons",
     Department: "Electrical",
-    LinkedIn: "",
+    LinkedIn: "https://www.linkedin.com/in/sarvagya-agrawal-5371a3258/",
     Email: "12214084@nitkkr.ac.in",
   },
   {
@@ -848,4 +841,13 @@ export const Details2yr = [
     LinkedIn: "",
     Email: "ankitaashish121@gmail.com",
   },
+  {
+    id: 35,
+    img: icon235,
+    name: "Yash Garg",
+    Team: "IT Team",
+    Department: "",
+    LinkedIn: "https://www.linkedin.com/in/yash-garg-566417281",
+    Email: "Ygarg423@gmail.com",
+  }
 ];

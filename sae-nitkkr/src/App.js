@@ -75,7 +75,7 @@ function App() {
   document.title = "SAE NIT Kurukshetra";
   return (
     <>
-      <Announcement />
+      {/* <Announcement /> */}
       <CheckState>
         <Router>
           <Switch>
