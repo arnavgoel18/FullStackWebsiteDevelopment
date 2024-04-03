@@ -46,10 +46,11 @@ import icon316 from "../../Assets/Teammembers/Umesh Kumar.jpeg";
 import icon317 from "../../Assets/Teammembers/Sachin.jpeg";
 import icon318 from "../../Assets/Teammembers/Rahul Meena.jpg";
 import icon319 from "../../Assets/Teammembers/sugam.jpg";
+import icon320 from "../../Assets/Teammembers/Harpreet singh.jpg";
 //2nd year
 
 import icon21 from "../../Assets/Teammembers/68E0CAD9-EDC5-4819-9E2E-B3BE230E1F6D - Shubhayu Sinha.jpeg";
-import icon22 from "../../Assets/Teammembers/12214111 - Chirag chirag.jpg";
+import icon22 from "../../Assets/Teammembers/chirag.jpeg";
 import icon24 from "../../Assets/Teammembers/12216103 - Mohit Chaudhary.jpg";
 import icon25 from "../../Assets/Teammembers/RomitKumar.jpg";
 import icon23 from "../../Assets/Teammembers/danish.jpg";
@@ -60,15 +61,15 @@ import icon29 from "../../Assets/Teammembers/IMG_20230424_173056_927 - NEHA NEHA
 import icon210 from "../../Assets/Teammembers/IMG_20230718_175019 - Sahaj Srivastava.jpg";
 import icon211 from "../../Assets/Teammembers/Vipul Goyal.jpg";
 import icon212 from "../../Assets/Teammembers/IMG-20230718-WA0006~2 - Daksh Singh Chauhan.jpg";
-import icon213 from "../../Assets/Teammembers/InShot_20230131_133857348 - SANJANA SANJANA.jpg";
+import icon213 from "../../Assets/Teammembers/sanjana.jpg";
 import icon214 from "../../Assets/Teammembers/linked in profile pic - Preetham A.jpeg";
-import icon215 from "../../Assets/Teammembers/Neha - Neha Bhadu.jpeg";
-import icon216 from "../../Assets/Teammembers/photo - Lakshmi narayan.jpg";
+import icon215 from "../../Assets/Teammembers/neha bhadu.jpeg";
+import icon216 from "../../Assets/Teammembers/narayan.jpeg";
 // import icon217 from "../../Assets/Teammembers/Screenshot_20230413_184643 - Anand Malaiya.jpg";
 import icon218 from "../../Assets/Teammembers/somaa - SOMYA ARORA.jpg";
 import icon219 from "../../Assets/Teammembers/hemant2.jpeg";
 import icon220 from "../../Assets/Teammembers/photograph - Sarvagya Agrawal.jpg";
-import icon221 from "../../Assets/Teammembers/passport size photo 24-Jun-2023 13-36-35(1) - Sarthak Anand.jpg";
+import icon221 from "../../Assets/Teammembers/sarthak anand.jpg";
 import icon222 from "../../Assets/Teammembers/Akash.jpg";
 import icon223 from "../../Assets/Teammembers/Abhay Rana.jpg";
 import icon224 from "../../Assets/Teammembers/Jatin.jpg";
@@ -462,6 +463,15 @@ export const Details3yr = [
     Email: "12116024@nitkkr.ac.in",
   },
   {
+    id: 19,
+    img:icon320,
+    name:"Harpreet Singh",
+    Team:"Nitrox",
+    Department:"Transmission",
+    LinkedIn:"https://www.linkedin.com/in/harpreet-singh-16bb83286/",
+    Email:"NA@gmail.com"
+  },
+  {
     id: 12,
     img: icon311,
     name: "Aryan Sharma",
@@ -703,8 +713,8 @@ export const Details2yr = [
     name: "Ajay Jangra",
     Team: "Accelerons",
     Department: "Transmission",
-    LinkedIn: "",
-    Email: "",
+    LinkedIn: "https://www.linkedin.com/in/ajay-jangra-67a499289",
+    Email: "ajayjangra2403@gmail.com",
   },
   {
     id: 33,
@@ -748,7 +758,7 @@ export const Details2yr = [
     name: "Abhishek",
     Team: "Accelerons",
     Department: "Electrical",
-    LinkedIn: "",
+    LinkedIn: "https://www.linkedin.com/in/abhi-badgujar-882bb124b/",
     Email: "abhi.abhishek.badgujar@gmail.com",
   },
   {
@@ -784,7 +794,7 @@ export const Details2yr = [
     name: "Akash",
     Team: "Accelerons",
     Department: "DAQ",
-    LinkedIn: "https://www.linkedin.com/in/akash-jindhar-9a1784258/",
+    LinkedIn: "https://www.linkedin.com/in/akash-jindhar-a97648294",
     Email: "akashjindhar@gmail.com",
   },
   {
