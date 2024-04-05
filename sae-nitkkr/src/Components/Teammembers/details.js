@@ -226,7 +226,7 @@ export const Details4yr = [
     metadata: {
       position1: "DAQ Head",
     },
-    Department: "DAQ,WebD",
+    Department: "DAQ, IT-Team",
     LinkedIn: "https://www.linkedin.com/in/navneet-raj-94395a182",
     Email: "navneetraj3695@gmail.com",
     github: "https://github.com/Navneet-Raj99",
@@ -236,6 +236,9 @@ export const Details4yr = [
     img: icon417,
     name: "Aniruddha Dubey",
     Team: "Nitrox",
+    metadata: {
+      position1: "Procurement Head",
+    },
     Department: "EV",
     LinkedIn: "https://www.linkedin.com/in/aniruddha-dubey-811074189/",
     Email: "aniruddhadubey4@gmail.com",
