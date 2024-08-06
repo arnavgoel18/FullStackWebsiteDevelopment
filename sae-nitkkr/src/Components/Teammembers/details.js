@@ -84,7 +84,7 @@ import icon232 from "../../Assets/Teammembers/Arjun Joshi.jpeg";
 import icon233 from "../../Assets/Teammembers/priyanshu.jpg";
 import icon234 from "../../Assets/Teammembers/atharva.jpg";
 import icon235 from "../../Assets/Teammembers/yashGarg.jpeg";
-export const Details4yr = [
+export const Alumni = [
   {
     id: 3,
     img: icon411,
@@ -392,7 +392,7 @@ export const Details4yr = [
   },
 ];
 
-export const Details3yr = [
+export const Details4yr = [
   {
     id: 17,
     img: icon317,
@@ -467,12 +467,12 @@ export const Details3yr = [
   },
   {
     id: 19,
-    img:icon320,
-    name:"Harpreet Singh",
-    Team:"Nitrox",
-    Department:"Transmission",
-    LinkedIn:"https://www.linkedin.com/in/harpreet-singh-16bb83286/",
-    Email:"NA@gmail.com"
+    img: icon320,
+    name: "Harpreet Singh",
+    Team: "Nitrox",
+    Department: "Transmission",
+    LinkedIn: "https://www.linkedin.com/in/harpreet-singh-16bb83286/",
+    Email: "NA@gmail.com",
   },
   {
     id: 12,
@@ -523,7 +523,7 @@ export const Details3yr = [
     id: 4,
     img: icon315,
     name: "Ujjawal Tyagi",
-    Team: "IT Team",
+    Team: "IT Team Head",
     LinkedIn: "https://www.linkedin.com/in/ujjawal-tyagi-943762213/",
     Email: "",
   },
@@ -548,14 +548,14 @@ export const Details3yr = [
     id: 5,
     img: icon34,
     name: "Rahul Siloniya",
-    Team: "IT Team",
+    Team: "IT Team Head",
     LinkedIn: "https://www.linkedin.com/in/rahul-siloniya-64776a231",
     Email: "rsiloniya@gmail.com",
     github: "https://github.com/rahulsiloniya",
-  }
+  },
 ];
 
-export const Details2yr = [
+export const Details3yr = [
   {
     id: 19,
     img: icon219,
@@ -862,5 +862,5 @@ export const Details2yr = [
     Department: "",
     LinkedIn: "https://www.linkedin.com/in/yash-garg-566417281",
     Email: "Ygarg423@gmail.com",
-  }
+  },
 ];
