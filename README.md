@@ -24,3 +24,16 @@
 10. Finally, run `npm start`.
 
 Hooray!! Your project will take some time to build and run on `localhost:3000`. Make sure no other app is using that port.
+
+
+# Firebase Deployment
+1. Install Firebase CLI globally.
+   `npm install -g firebase-tools`
+2. Go to `sae-nitkkr` directory in `FullStackWebsiteDevelopment` ans update build after making changes.
+   `npm run build`
+3. Login to firebase if using first time.
+   `firebase login`
+4. Deploy on firebase (Must have permissions to deploy) 
+   `firebase deploy`
+
+Website will be updated successfully !!!
