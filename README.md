@@ -29,7 +29,7 @@ Hooray!! Your project will take some time to build and run on `localhost:3000`. 
 # Firebase Deployment
 1. Install Firebase CLI globally.
    `npm install -g firebase-tools`
-2. Go to `sae-nitkkr` directory in `FullStackWebsiteDevelopment` ans update build after making changes.
+2. Go to `sae-nitkkr` directory in `FullStackWebsiteDevelopment` and update build after making changes.
    `npm run build`
 3. Login to firebase if using first time.
    `firebase login`
