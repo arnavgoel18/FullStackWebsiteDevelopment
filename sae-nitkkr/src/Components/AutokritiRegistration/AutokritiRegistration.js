@@ -19,6 +19,7 @@ import {
 import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer";
 import { check } from "fontawesome";
+import AutokritiRegistration2 from "./AutokritiRegistration2.js";
 
 var c = 0;
 var valid = false;
@@ -26,18 +27,143 @@ var storeemail = false; //for nitkkr stuednts
 var storecollege = false; //for nitkkr college
 function Quizsignup() {
   const [workshopamount, setWorkshopAmount] = useState(0);
+  const [discountedAmount, setDiscountedAmount] = useState(0);
   const [checkboxes, setCheckboxes] = useState([
-    { id: "mechanical", label: "Mechanical", price: 2500, checked: false },
-    { id: "iot", label: "IoT", price: 2750, checked: false },
-    { id: "ev", label: "EV", price: 2500, checked: false },
-    { id: "software", label: "Software", price: 2500, checked: false },
+    { id: "mechanical", label: "Mechanical", price: 1999, checked: false },
+    { id: "iot", label: "IoT", price: 2450, checked: false },
+    { id: "ev", label: "EV", price: 1999, checked: false },
+    { id: "software", label: "Software", price: 1999, checked: false },
   ]);
+  const [isSoftware, setIsSoftware] = useState(false);
+  const [isIOT, setIsIOT] = useState(false);
+  const [checkboxessoftware, setCheckboxessoftware] = useState([
+    { id: "solidworks", label: "SolidWorks", checked: false },
+    { id: "catia", label: "Catia", checked: false },
+    { id: "nx", label: "NX", checked: false }
+  ]);
+  const [iotoptions, setIotoptions] = useState([
+    { id: "individual", label: "Individuals", price: 2450, checked: false },
+    { id: "group2", label: "Group2", price: 2250 * 2, checked: false },
+  ])
+  const [show2, setShow2] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [category, setCategory] = useState("");
+  const [getuserdata2, setGetuserdata2] = useState({});
+  let flag3 = 0;
+  const handleCheckboxChange3 = (id) => {
+    const updatedCheckboxes3 = iotoptions.map((checkbox3) => {
+      if (checkbox3.id === id) {
+        checkbox3.checked = !checkbox3.checked;
+        if (id === "group2" && checkbox3.checked) {
+          setShow2(true);
+        }
+        else {
+          setShow2(false);
+        }
+
+        if (checkbox3.checked) {
+          flag3 = flag3 + 1;
+          setCategory(()=> {return id});
+        }
+        else {
+          flag3 = flag3 - 1;
+          setCategory("");
+        }
+      }
+      //console.log(flag);
+      return checkbox3;
+    });
+
+    const checkedCount3 = updatedCheckboxes3.reduce((count, checkbox) => {
+      return checkbox.checked ? count + 1 : count;
+    }, 0);
+
+    if (checkedCount3 > 1) {
+      alert("You cannot choose both.");
+      const index = updatedCheckboxes3.findIndex(
+        (checkbox) => checkbox.id === id
+      );
+      updatedCheckboxes3[index].checked = false;
+    }
+
+    const updatedWorkshopAmount2 = iotoptions.reduce(
+      (total, checkbox) => {
+        return total + (checkbox.checked ? checkbox.price : 0);
+      },
+      0
+    );
+
+    setWorkshopAmount(updatedWorkshopAmount2);
+    const today = new Date();
+    const discountDeadline = new Date('2024-09-10'); // Change the year if needed
+
+    if (today < discountDeadline) {
+      setDiscountedAmount(() => {
+        return parseInt(updatedWorkshopAmount2 * 0.9);
+      });
+    } else {
+      setDiscountedAmount(parseInt(updatedWorkshopAmount2));
+    }
+  }
+
+
+
+
+  let flag2 = 0;
+  const handleCheckboxChange2 = (id) => {
+    const updatedCheckboxes2 = checkboxessoftware.map((checkbox2) => {
+      if (checkbox2.id === id) {
+        checkbox2.checked = !checkbox2.checked;
+        if (checkbox2.checked) {
+          flag2 = flag2 + 1;
+          setsettemp((prevdepartment) => {
+            return [...prevdepartment, "Ansys", checkbox2.id.toUpperCase()];
+          });
+        }
+        else {
+          flag2 = flag2 - 1;
+          setsettemp((prevActions) =>
+            prevActions.filter((i) => {
+              return i !== checkbox2.id.toUpperCase();
+            }));
+        }
+      }
+      //console.log(flag);
+      return checkbox2;
+    });
+
+    const checkedCount2 = updatedCheckboxes2.reduce((count, checkbox) => {
+      return checkbox.checked ? count + 1 : count;
+    }, 0);
+
+    if (checkedCount2 > 1) {
+      alert("You can choose a maximum of 1 Softwares.");
+      const index = updatedCheckboxes2.findIndex(
+        (checkbox) => checkbox.id === id
+      );
+      updatedCheckboxes2[index].checked = false;
+    }
+  }
+
 
   let flag = 0;
   const handleCheckboxChange = (id) => {
     const updatedCheckboxes = checkboxes.map((checkbox) => {
       if (checkbox.id === id) {
         checkbox.checked = !checkbox.checked;
+        if (id === "software" && checkbox.checked) {
+          setIsSoftware(true);
+        }
+        else {
+          setIsSoftware(false);
+        }
+
+        if (id === "iot" && checkbox.checked) {
+          setIsIOT(true);
+        }
+        else {
+          setIsIOT(false);
+        }
         if (checkbox.checked) {
           flag = flag + 1;
           setsettemp((prevdepartment) => {
@@ -47,9 +173,9 @@ function Quizsignup() {
         else {
           flag = flag - 1;
           setsettemp((prevActions) =>
-          prevActions.filter((i) => {
-            return i !== checkbox.id.toUpperCase();
-          }));
+            prevActions.filter((i) => {
+              return i !== checkbox.id.toUpperCase();
+            }));
         }
       }
       //console.log(flag);
@@ -60,11 +186,17 @@ function Quizsignup() {
       return checkbox.checked ? count + 1 : count;
     }, 0);
 
-    if (checkedCount > 2) {
-      alert("You can choose a maximum of 2 workshops.");
+    if (checkedCount > 1) {
+      alert("You can choose a maximum of 1 workshops.");
       const index = updatedCheckboxes.findIndex(
         (checkbox) => checkbox.id === id
       );
+      if (id === "software") {
+        setIsSoftware(false);
+      }
+      if (id === "iot") {
+        setIsIOT(false);
+      }
       updatedCheckboxes[index].checked = false;
     }
 
@@ -76,10 +208,20 @@ function Quizsignup() {
     );
 
     setCheckboxes(updatedCheckboxes);
-
     setWorkshopAmount(updatedWorkshopAmount);
-  };
+    const today = new Date();
+    const discountDeadline = new Date('2024-09-10'); // Change the year if needed
 
+    if (today < discountDeadline) {
+      setDiscountedAmount(() => {
+        return parseInt(updatedWorkshopAmount * 0.9);
+      });
+    } else {
+      setDiscountedAmount(parseInt(updatedWorkshopAmount));
+    }
+  };
+  // console.log(getuserdata2);
+  
   var [finalcost, setFinalcost] = useState(0);
   var [department, setDepartment] = useState([]);
   var [temp, setsettemp] = useState([]);
@@ -87,7 +229,6 @@ function Quizsignup() {
   // var [count, setCount] = useState(0);
   //to calculate finalcost
   const calculateAmount = async () => {
-    var count = 0;
     var Mechanical = document.getElementById("amb_mechanical").checked;
     var IOT = document.getElementById("amb_IOT").checked;
     var EV = document.getElementById("amb_EV").checked;
@@ -95,36 +236,22 @@ function Quizsignup() {
     var accomo = document.getElementById("accomodation").checked;
 
     if (Mechanical == true) {
-      finalcost += 2500;
-      count++;
+      finalcost += (discountedAmount < workshopamount ? discountedAmount : workshopamount);
     }
     if (IOT == true) {
-      finalcost += 2750;
-      count++;
+      finalcost += (discountedAmount < workshopamount ? discountedAmount : workshopamount);
     }
     if (EV == true) {
-      finalcost += 2500;
-      count++;
+      finalcost += (discountedAmount < workshopamount ? discountedAmount : workshopamount);
     }
     if (software == true) {
-      finalcost += 2500;
-      count++;
+      finalcost += (discountedAmount < workshopamount ? discountedAmount : workshopamount);
     }
-    if (accomo == true && count == 2) {
-      //finalcost = 5500;
-      finalcost += 750;
-    } else if (accomo == true && count == 1) {
-      //finalcost = 3000;
-      finalcost += 750;
-    } else if (accomo == false && count == 1) {
-      //finalcost = 2500;
-      finalcost += 0;
-    } else if (accomo == false && count == 2) {
-      //finalcost = 4500;
-      finalcost += 0;
+    if (accomo === true) {
+      finalcost += 279 * 3;
     }
 
-    if(valid == true) finalcost = finalcost - 100;
+    if (valid == true) finalcost = finalcost - 100;
     setFinalcost(finalcost);
     userData.amount = finalcost; //1 for testing only, later changed with finalcost;
   };
@@ -161,7 +288,7 @@ function Quizsignup() {
       department[count++] = "Software";
     }
 
-    console.log(department, count);
+    // console.log(department, count);
     if (name && email && phone && college && branch && semester && timeSlot1) {
       //if all fields are entered
       const allCheckboxesEmpty = checkboxes.every(
@@ -187,6 +314,38 @@ function Quizsignup() {
         return false;
       }
     } else {
+      console.log("failed1");
+      
+      alert("Please fill the data");
+      return false;
+    }
+  }
+  function checkAllFields2() {
+    const {
+      name,
+      email,
+      phone,
+      college,
+      branch,
+      semester,
+    } = getuserdata2;
+    
+    
+    if (name && email && phone && college && branch && semester) {
+      //if all fields are entered
+
+      if (phone.length != 10) {
+        alert("Please enter a valid mobile number");
+        return false;
+      } else if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+        alert("Please enter a valid email address.");
+        return false;
+      }else if (document.getElementById("agree").checked) {
+        return true;
+      }
+    } else {
+      console.log("failed");
+      
       alert("Please fill the data");
       return false;
     }
@@ -195,10 +354,21 @@ function Quizsignup() {
   function savetoLocal() {
     localStorage.removeItem("userData");
     localStorage.removeItem("department");
+    localStorage.removeItem("userData2");
     const checkAllData = checkAllFields();
-    if (checkAllData) {
+    if (show2) {
+      var checkAllData2 = checkAllFields2();
+    }
+    if (!show2 && checkAllData) {
       calculateAmount();
       localStorage.setItem("userData", JSON.stringify(userData));
+      localStorage.setItem("department", JSON.stringify(temp));
+      window.location = `/register/registrationDetails`;
+    }
+    else if (show2 && checkAllData && checkAllData2) {
+      calculateAmount();
+      localStorage.setItem("userData", JSON.stringify(userData));
+      localStorage.setItem("userData2", JSON.stringify(getuserdata2))
       localStorage.setItem("department", JSON.stringify(temp));
       window.location = `/register/registrationDetails`;
     }
@@ -231,7 +401,8 @@ function Quizsignup() {
   //   let j=document.getElementById('i_button_content');
   //   j.style.visibility="hidden"
   // }
-
+  // console.log(category);
+  
   const [userData, setUserData] = useState({
     name: "",
     email: "",
@@ -239,16 +410,16 @@ function Quizsignup() {
     college: "",
     branch: "",
     semester: "",
-    referal: "",
+    // referal: "",
     transaction: "",
     orderid: "",
     paymentid: "",
     timeSlot1: "",
-    timeSlot2: "",
+    // timeSlot2: "",
     status: "Registered",
     mechanical: "",
     ev: "",
-    iot: "",
+    iot: category,
     software: "",
     Registration_time: "",
     amount: finalcost,
@@ -392,8 +563,8 @@ function Quizsignup() {
         currentWorkshopAmount = 0;
       }
 
-      if (c > 2) {
-        alert("You can choose a maximum of 2 workshops.");
+      if (c > 1) {
+        alert("You can choose a maximum of 1 workshops.");
         event.target.checked = false;
         c = 2;
       }
@@ -402,19 +573,20 @@ function Quizsignup() {
         currentWorkshopAmount.toString();
       setUserData({ ...userData, [name]: check });
     }
-
+    userData.iot=category;
     if (name == "timeSlot1") {
-      if (value == "5-8") {
-        userData.timeSlot1 = "5-8";
-        userData.timeSlot2 = "8-11";
-        // console.log(userData.timeSlot1);
-        // console.log(userData.timeSlot2);
-      } else {
-        userData.timeSlot2 = "5-8";
-        userData.timeSlot1 = "8-11";
+      if (value == "20-22") {
+        userData.timeSlot1 = "20-22";
+        // userData.timeSlot2 = "8-11";
         // console.log(userData.timeSlot1);
         // console.log(userData.timeSlot2);
       }
+      // else {
+      //   userData.timeSlot2 = "5-8";
+      //   userData.timeSlot1 = "8-11";
+      //   // console.log(userData.timeSlot1);
+      //   // console.log(userData.timeSlot2);
+      // }
       // if (value == "25-28") {
       //   userData.timeSlot1 = "25-28";
       //   console.log(userData.timeSlot1);
@@ -440,13 +612,13 @@ function Quizsignup() {
     //   }
     // }
 
-    if (
-      document.getElementById("workshopAmount").innerText >= 4500 &&
-      document.getElementById("accomodation").checked == true
-    )
-      document.getElementById("accomoAmount").innerText = 1000;
-    else if (document.getElementById("accomodation").checked == true)
-      document.getElementById("accomoAmount").innerText = 750;
+    // if (
+    //   document.getElementById("workshopAmount").innerText >= 4500 &&
+    //   document.getElementById("accomodation").checked == true
+    // )
+    //   document.getElementById("accomoAmount").innerText = 1000;
+    if (document.getElementById("accomodation").checked == true)
+      document.getElementById("accomoAmount").innerText = 279 * 3;
     else document.getElementById("accomoAmount").innerText = 0;
 
     if (type != "checkbox" && type != "radio") {
@@ -572,6 +744,18 @@ function Quizsignup() {
   //     alert("Please fill the data");
   //   }
   // };
+  useEffect(() => {
+    function handleResize() {
+      setWindowWidth(window.innerWidth);
+    }
+
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <>
@@ -674,7 +858,7 @@ function Quizsignup() {
               <option value="8">8</option>
             </select>
           </div>
-          <div className="field">
+          {/* <div className="field">
             {" "}
             <span className="payform-label"> Referal Code(optional code) </span>
             <img
@@ -703,19 +887,19 @@ function Quizsignup() {
                 onMouseOut={i_information_nonvisible}
               />
             </div>
-          </div>
-          <div id="show_invalid">The Referal Code is Invalid</div>
+          </div> */}
+          {/* <div id="show_invalid">The Referal Code is Invalid</div> */}
           {/* Choose dempartment */}
           <div className="field">
             <span className="payform-label">
               {" "}
-              Select Your Departments (Max. 2){" "}
+              Select Your Departments{" "}
             </span>
 
             {/* <div className="redcolortext">(Maximum two)</div> */}
             <br />
             <div className="main-chheckbox">
-              <div className="department-checkbox">
+              <div className="department-checkbox" style={{ marginLeft: 0 }}>
                 <input
                   type="checkbox"
                   name="mechanical"
@@ -755,27 +939,120 @@ function Quizsignup() {
                   }
                   onChange={() => handleCheckboxChange("ev")}
                 />
-                <label htmlFor="amb_EV">EV</label>
+                <label htmlFor="amb_EV">EV+PCB Designing</label>
                 <div id="ev"></div>
               </div>
-              <div className="department-checkbox" id="software_disable">
-                <input
-                  type="checkbox"
-                  name="software"
-                  required="unrequired"
-                  id="amb_software"
-                  checked={
-                    checkboxes.find((checkbox) => checkbox.id === "software")
-                      .checked
-                  }
-                  onChange={() => handleCheckboxChange("software")}
-                />
-                <label htmlFor="amb_software">Software</label>
-                <div id="software"></div>
-              </div>
+              <br />
               {/* <br />
               <p>Total Amount: ${workshopamount}</p> */}
             </div>
+            <div className="department-checkbox" id="software_disable" style={{ marginLeft: 0 }}>
+              <input
+                type="checkbox"
+                name="software"
+                required="unrequired"
+                id="amb_software"
+                checked={
+                  checkboxes.find((checkbox) => checkbox.id === "software")
+                    .checked
+                }
+                onChange={() => handleCheckboxChange("software")}
+              />
+              <label htmlFor="amb_software">Software</label>
+              <div id="software"></div>
+            </div>
+            {isSoftware &&
+              <div style={{ marginTop: "5px" }}>
+                <span>Your First Software Domain :</span> <span>Ansys</span><br />
+                <span>Choose Your Second Domain:</span><br />
+                <div className="main-chheckbox">
+                  <div className="department-checkbox" style={{ marginLeft: 0 }}>
+                    <input
+                      type="checkbox"
+                      name="mechanical"
+                      required="unrequired"
+                      id="amb_solidworks"
+                      checked={
+                        checkboxessoftware.find((checkbox) => checkbox.id === "solidworks")
+                          .checked
+                      }
+                      onChange={() => handleCheckboxChange2("solidworks")}
+                    />
+                    <label htmlFor="amb_mechanical">SolidWorks</label>
+                    <div id="mechanical"></div>
+                  </div>
+                  <div className="department-checkbox">
+                    <input
+                      type="checkbox"
+                      name="iot"
+                      required="unrequired"
+                      id="amb_catia"
+                      checked={
+                        checkboxessoftware.find((checkbox) => checkbox.id === "catia").checked
+                      }
+                      onChange={() => handleCheckboxChange2("catia")}
+                    />
+                    <label htmlFor="amb_IOT">Catia</label>
+                    <div id="iot"></div>
+                  </div>
+                  <div className="department-checkbox">
+                    <input
+                      type="checkbox"
+                      name="ev"
+                      required="unrequired"
+                      id="amb_nx"
+                      checked={
+                        checkboxessoftware.find((checkbox) => checkbox.id === "nx").checked
+                      }
+                      onChange={() => handleCheckboxChange2("nx")}
+                    />
+                    <label htmlFor="amb_EV">NX</label>
+                    <div id="ev"></div>
+                  </div>
+                  <br />
+                </div>
+              </div>
+            }
+            {isIOT &&
+              <div>
+                <span>Register As:</span>
+                <div className="main-chheckbox">
+                  <div className="department-checkbox" style={{ marginLeft: 0 }}>
+                    <input
+                      type="checkbox"
+                      name="mechanical"
+                      required="unrequired"
+                      id="amb_individuals"
+                      checked={
+                        iotoptions.find((checkbox) => checkbox.id === "individual")
+                          .checked
+                      }
+                      onChange={() => handleCheckboxChange3("individual")}
+                    />
+                    <label htmlFor="amb_mechanical">Individuals</label>
+                    <div id="individuals"></div>
+                  </div>
+                  <div className="department-checkbox">
+                    <input
+                      type="checkbox"
+                      name="iot"
+                      required="unrequired"
+                      id="amb_group2"
+                      checked={
+                        iotoptions.find((checkbox) => checkbox.id === "group2").checked
+                      }
+                      onChange={() => handleCheckboxChange3("group2")}
+                    />
+                    <label htmlFor="amb_IOT">Group of Two</label>
+                    <div id="group2"></div>
+                  </div>
+
+                  <br />
+                </div>
+                {windowWidth < 1130 && show2 && <AutokritiRegistration2 submit={setGetuserdata2} />}
+              </div>
+            }
+
             {/* <div className="main-chheckbox">
               <div className="department-checkbox">
                 <input
@@ -835,7 +1112,7 @@ function Quizsignup() {
             ))} */}
             <div className="payform-lable">
               {/* <span>Workshop Amount (&#8377;) : </span> */}
-              <span>Workshop Amount (&#8377;) :{workshopamount} </span>
+              <span>Workshop Amount (&#8377;) : {discountedAmount < workshopamount ? <strike>{workshopamount}</strike> : workshopamount} {discountedAmount < workshopamount && discountedAmount} </span>
               <span style={{ display: "none" }} id="workshopAmount">
                 0
               </span>
@@ -856,8 +1133,8 @@ function Quizsignup() {
                 </option>
                 <option value="DEFAULT">--None Selected--</option>
                 {/*<option value="22-25">22-25 September</option>*/}
-                <option value="5-8">5-8 October</option>
-                <option value="8-11">8-11 October</option>
+                <option value="20-22">20-22 September</option>
+                {/* <option value="8-11"></option> */}
               </select>
             </div>
           </div>
@@ -869,7 +1146,7 @@ function Quizsignup() {
               id="accomodation"
               onChange={postUserData}
             />{" "}
-            Need Accomodation & food
+            Need Accomodation & food(279 per Day)
           </div>
           <div className="payform-lable">
             <span>Amount (&#8377;) : </span>
@@ -900,7 +1177,7 @@ function Quizsignup() {
             </div>
           </div>
         </div>
-
+        {windowWidth >= 1130 && show2 && <AutokritiRegistration2 submit={setGetuserdata2} />}
         <div className="payform-infocontain">
           <div className="payform-info">
             <FaInfoCircle /> &nbsp;{" "}
@@ -910,19 +1187,18 @@ function Quizsignup() {
               confirmation on that email
             </p>
             <p className="instruction_para">
-              * You can choose Maximum 2 Departments. Each department is 3 Days
-              Long + 1 Day Guest Lecture
+              *Workshop Will be 3 Days
+              Long
             </p>
             <p className="instruction_para">
-              * You have to show QR code at the time of arrival.
+              * You have to Show Registration ID at the time of arrival.
             </p>
             <p className="instruction_para">
               * In case of any issue or payment failure, please contact
-              +91-9027073663
+              +91-9306356371
             </p>
-            <p className="instruction_para">* Referal IDs are case-sensitive</p>
+            {/*  <p className="instruction_para">* Referal IDs are case-sensitive</p> */}
           </div>
-
           <br />
 
           <div className="payform-checkbox">

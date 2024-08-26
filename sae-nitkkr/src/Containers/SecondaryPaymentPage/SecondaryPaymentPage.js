@@ -3,6 +3,7 @@ import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import NavBar from '../../Components/NavBar/NavBar'
 import "../../Components/AutokritiRegistration/AutokritiRegistration.css";
 import PAYTMQR from "../../Assets/PaymentQR/KeshavPaytmQR.jpeg"
+import emailjs from 'emailjs-com';
 
 function SecondaryPaymentPage() {
   const params = new URL(document.location).searchParams;
@@ -23,7 +24,21 @@ function SecondaryPaymentPage() {
             document.getElementById("payform-button1").disabled = false;
             document.getElementById("payform-button1").style.background = "#1a3c7f";
             window.location = `/autokriti`;
-          });     
+          }); 
+          // emailjs.sendForm(
+          //   'service_coet73h',  // Replace with your Service ID
+          //   'template_gx6w4wq',  // Replace with your Template ID
+          //   form.current,
+          //   'vu8NQbdo_al3pcY5td'       // Replace with your User ID
+          // )
+          // .then((result) => {
+          //     console.log(result.text);
+          //     alert('Email sent successfully!');
+          // }, (error) => {
+          //     console.log(error.text);
+          //     alert('Failed to send email. Please try again.');
+          // });
+      
   }
 
   return (

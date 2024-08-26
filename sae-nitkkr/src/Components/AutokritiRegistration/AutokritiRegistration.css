@@ -30,7 +30,7 @@
  width: 312%;
 }
 .payform-form {
-  width: 340px;
+  width: 353px;
   height: fit-content;
   /* border: 2px solid black; */
 }
@@ -91,7 +91,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 560px;
+  width: 353px;
 }
 #paynow
 {
@@ -267,8 +267,11 @@ margin-top: 5px;
   margin-left: 10px;
 }
 .department-checkbox input{
-  width: auto;
+  width: max-content;
   margin-right: 5px;
+}
+.department-checkbox label{
+  width: max-content;
 }
 .main-chheckbox{
   display: flex;
@@ -335,7 +338,7 @@ margin-top: 5px;
 
   .payform-form {
     width: 320px;
-    height: 800px;
+    height: auto;
     /* border: 2px solid black; */
     margin: 0 auto;
   }

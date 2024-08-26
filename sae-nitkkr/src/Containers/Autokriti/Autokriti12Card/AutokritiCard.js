@@ -18,6 +18,9 @@ import EG from "../../../Assets/Tech/eg.png";
 import ET from "../../../Assets/Tech/et.png";
 import MTC from "../../../Assets/Tech/mtc.png";
 import ANS from "../../../Assets/Tech/ans.png";
+import CT from "../../../Assets/Tech/ct.png";
+import NX from "../../../Assets/Tech/nx.png";
+import PCB from "../../../Assets/Tech/pcb.png";
 import { GiConsoleController,GiGears } from "react-icons/gi";
 import { MdEdgesensorHigh } from "react-icons/md";
 import { IoIosArrowDropdown } from "react-icons/io";
@@ -76,7 +79,7 @@ export default function AutokritiCard() {
       <div className='AutokritiCard-Container'>
         <div className='AutokritiCard-Heading'>
           <h1 className='CheckOurEvents-heading'>
-            Autokriti <b className='CheckOurEvents-subheading'>13.0</b>
+            Autokriti <b className='CheckOurEvents-subheading'>14.0</b>
           </h1>
         </div>
         <div className='AutokritiCard-Intro'>
@@ -115,6 +118,10 @@ export default function AutokritiCard() {
                 <p> Solidworks</p>
               </div>
               <div className='Autokirtee12_content_list'>
+                <img src={CT} style={{ height: '20px', width: '20px' }} />
+                <p>Catia</p>
+              </div>
+              <div className='Autokirtee12_content_list'>
                 <img src={SP} style={{ height: '20px', width: '20px' }} />
                 <p> Suspension</p>
               </div>
@@ -125,6 +132,10 @@ export default function AutokritiCard() {
               <div className='Autokirtee12_content_list'>
                 <img src={MT} style={{ height: '20px', width: '20px' }} />
                 <p> Motor</p>
+              </div>
+              <div className='Autokirtee12_content_list'>
+                <img src={PCB} style={{ height: '20px', width: '20px' }} />
+                <p> PCB Designing</p>
               </div>
               <div className='Autokirtee12_content_list'>
                 <img src={ET} style={{ height: '20px', width: '20px' }} />
@@ -139,6 +150,10 @@ export default function AutokritiCard() {
               <div className='Autokirtee12_content_list'>
                 <img src={ANS} style={{ height: '20px', width: '20px' }} />
                 <p> Ansys</p>
+              </div>
+              <div className='Autokirtee12_content_list'>
+                <img src={NX} style={{ height: '20px', width: '20px' }} />
+                <p> NX</p>
               </div>
               <div className='Autokirtee12_content_list'>
                 <img src={ST} style={{ height: '20px', width: '20px' }} />
@@ -198,6 +213,7 @@ export default function AutokritiCard() {
                   Steering <br />
                   Brakes
                   <br />
+                  Software Basics<br/>
                 </div>
               </div>
             </button>
@@ -219,6 +235,7 @@ export default function AutokritiCard() {
                   Motor <br />
                   Motor Controller <br />
                   Power Train <br />{' '}
+                  PCB Designing <br/>
                 </div>
               </div>
             </button>
@@ -260,7 +277,9 @@ export default function AutokritiCard() {
               <div className='Autokirtee_12_dropdown-content' ref={software}>
                 <div className='Autokirtee_12_dropdown-content1'>
                   Solidworks <br />
-                  Ansys
+                  Ansys<br/>
+                  Catia <br/>
+                  NX<br/>
                 </div>
               </div>
             </button>

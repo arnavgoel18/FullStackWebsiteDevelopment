@@ -13,19 +13,25 @@ function RegistrationDetails() {
   let timestamp = "";
   let [department, setDepartment] = useState([]);
   const [authorised_user, setauthorised_user] = useState({});
+  const [authorised_user2, setauthorised_user2] = useState({});
 
   useEffect(() => {
     console.log("run");
     flag = false;
     const items = JSON.parse(localStorage.getItem("userData"));
     const depart = JSON.parse(localStorage.getItem("department"));
+    const items2 = JSON.parse(localStorage.getItem("userData2"));
+    
     if (items) {
       setauthorised_user(items);
       setDepartment(depart);
     }
+    if (items2) {
+      setauthorised_user2(items2);
+    }
   }, []);
 
-  const makePaymentCash = async () =>{
+  const makePaymentCash = async () => {
     document.getElementById("payform-button1").disabled = true;
     document.getElementById("payform-button1").style.background = "grey";
     setTimeout(() => {
@@ -34,9 +40,8 @@ function RegistrationDetails() {
     }, 5000);
 
     const current = new Date();
-    const date = `${current.getDate()}/${
-      current.getMonth() + 1
-    }/${current.getFullYear()}`;
+    const date = `${current.getDate()}/${current.getMonth() + 1
+      }/${current.getFullYear()}`;
     var newtimestamp = String(new Date().getTime());
 
     authorised_user["department"] = department;
@@ -62,7 +67,7 @@ function RegistrationDetails() {
         "ulnoJlsECTLQyCRZ5"
       )
       .then(
-        
+
         function (response) {
           console.log("SUCCESS!", response.status, response.text);
         },
@@ -72,7 +77,7 @@ function RegistrationDetails() {
       );
 
     const Saving_user_data = authorised_user;
-    Saving_user_data.Registration_time=new Date().toString();
+    Saving_user_data.Registration_time = new Date().toString();
     let gotit = await setDoc(
       doc(db, "paymentregistrationid", newtimestamp),
       Saving_user_data
@@ -145,12 +150,12 @@ function RegistrationDetails() {
       authorised_user["department"] = department;
       const Saving_user_data = authorised_user;
       console.log(Saving_user_data, timestamp);
-      Saving_user_data.Registration_time=new Date().toString();
+      Saving_user_data.Registration_time = new Date().toString();
       let gotit = await setDoc(
         doc(db, 'paymentregistrationid', timestamp),
         Saving_user_data
-        )
-      };
+      )
+    };
 
     const sendEmail = () => {
       //console.log("hello destination");
@@ -163,7 +168,7 @@ function RegistrationDetails() {
         OrderId: authorised_user.orderid,
         PaymentId: authorised_user.paymentid,
         Phone: authorised_user.phone,
-      
+
         QRCodeURL: `https://saenitkurukshetra.in/registered/${authorised_user.paymentid}`,
       };
       emailjs
@@ -174,7 +179,7 @@ function RegistrationDetails() {
           "ulnoJlsECTLQyCRZ5"
         )
         .then(
-          
+
           function (response) {
             console.log("SUCCESS!", response.status, response.text);
           },
@@ -206,18 +211,27 @@ function RegistrationDetails() {
     });
   };
 
-  const secondaryMakePayment = async () =>{
-      var newTimestamp = String(new Date().getTime());
-      authorised_user["department"] = department;
-      authorised_user.paymentid = newTimestamp;
-      const Saving_user_data = authorised_user;
-      Saving_user_data.Registration_time=new Date().toString();
+  const secondaryMakePayment = async () => {
+    var newTimestamp = String(new Date().getTime());
+    authorised_user["department"] = department;
+    authorised_user.paymentid = newTimestamp;
+    const Saving_user_data2 = authorised_user2;
+    const Saving_user_data = authorised_user;
+    Saving_user_data.Registration_time = new Date().toString();
+    let gotit = await setDoc(
+      doc(db, 'AutokritiRegistration2024', newTimestamp),
+      Saving_user_data
+    )
+    if(authorised_user.iot==="group2"){
+      Saving_user_data2.Registration_time=new Date().toString();
+      console.log("saved");
       let gotit = await setDoc(
         doc(db, 'AutokritiRegistration2024', newTimestamp),
-        Saving_user_data
-        )
+        Saving_user_data2
+      )
+    }
 
-        window.location = `/makepayment?id=`+ newTimestamp;
+    // window.location = `/makepayment?id=` + newTimestamp;
   }
 
   useEffect(() => {
@@ -232,17 +246,17 @@ function RegistrationDetails() {
         {/* {authorised_user.cod == 'Yes' ?  <button className="pay-btn" id="payform-button1" onClick={makePaymentCash}>
           Confirm
         </button> :   */}
-{/* 
+        {/* 
         To activate payment gateway
         <button className="pay-btn" id="payform-button1" onClick={makePayment}>
           Pay Now
         </button>  */}
 
-<button className="pay-btn" id="payform-button1" onClick={secondaryMakePayment}>
+        <button className="pay-btn" id="payform-button1" onClick={secondaryMakePayment}>
           Pay Now
         </button>
 
-       
+
       </div>
 
       <div className="reg-details">
@@ -275,16 +289,19 @@ function RegistrationDetails() {
             <td className="td-first">PHONE NO.</td>
             <td>{authorised_user.phone}</td>
           </tr>{" "}
-          {department.map((e,i)=>
-          { 
-            return(
-            <tr>
-            <td className="td-first">{e} WORKSHOP</td>
-            {i==0?<td>{authorised_user.timeSlot1} October</td>:<td>{authorised_user.timeSlot2} October</td>}
-            {/* <td>{authorised_user.timeSlot1} August</td> */}
-          </tr>)
+          {department.map((e, i) => {
+            //   return(
+            //   <tr>
+            //   <td className="td-first">{e} WORKSHOP</td>
+            //   {i==0?<td>{authorised_user.timeSlot1} September</td>:<td>{authorised_user.timeSlot2} September</td>}
+            //   {/* <td>{authorised_user.timeSlot1} August</td> */}
+            // </tr>)
 
           })}
+          <tr>
+            <td className="td-first">{department[0]}WORKSHOP</td>
+            <td>{authorised_user.timeSlot1} September</td>
+          </tr>
           {/* <tr>
             <td className="td-first">{department[0]} WORKSHOP</td>
             <td>{authorised_user.timeSlot1} August</td>
@@ -293,10 +310,10 @@ function RegistrationDetails() {
             <td className="td-first">{department[1]} WORKSHOP</td>
             <td>{authorised_user.timeSlot2} August</td>
           </tr>{" "} */}
-          <tr>
+          {/* <tr>
             <td className="td-first">REFERAL</td>
             <td>{authorised_user.referal}</td>
-          </tr>{" "}
+          </tr>{" "} */}
           <tr>
             <td className="td-first">NEED ACCOMODATION</td>
             <td>{authorised_user.accomodation}</td>
@@ -312,16 +329,98 @@ function RegistrationDetails() {
           <tr>
             <td className="td-first">DEPARTMENT</td>
             <td>{
-              department.map((other, i)=>{
-                return(<span key={i}>
+              department.map((other, i) => {
+                return (<span key={i}>
                   {other} &nbsp;{" "}
                 </span>)
               })
             }
-              </td>
+            </td>
           </tr>{" "}
         </table>
       </div>
+      {authorised_user.iot === "group2" &&
+        <div className="reg-details">
+          <table border={1} className="reg-details-table">
+            <tr>
+              <th>TITLES</th>
+              <th>VALUES</th>
+            </tr>
+            <tr>
+              <td className="td-first">NAME</td>
+              <td>{authorised_user2.name}</td>
+            </tr>
+            <tr>
+              <td className="td-first">EMAIL</td>
+              <td>{authorised_user2.email}</td>
+            </tr>
+            <tr>
+              <td className="td-first">COLLEGE</td>
+              <td>{authorised_user2.college}</td>
+            </tr>{" "}
+            <tr>
+              <td className="td-first">BRANCH</td>
+              <td>{authorised_user2.branch}</td>
+            </tr>
+            <tr>
+              <td className="td-first">SEMESTER</td>
+              <td>{authorised_user2.semester}</td>
+            </tr>{" "}
+            <tr>
+              <td className="td-first">PHONE NO.</td>
+              <td>{authorised_user2.phone}</td>
+            </tr>{" "}
+            {department.map((e, i) => {
+              //   return(
+              //   <tr>
+              //   <td className="td-first">{e} WORKSHOP</td>
+              //   {i==0?<td>{authorised_user.timeSlot1} September</td>:<td>{authorised_user.timeSlot2} September</td>}
+              //   {/* <td>{authorised_user.timeSlot1} August</td> */}
+              // </tr>)
+
+            })}
+            <tr>
+              <td className="td-first">{department[0]}WORKSHOP</td>
+              <td>{authorised_user.timeSlot1} September</td>
+            </tr>
+            {/* <tr>
+          <td className="td-first">{department[0]} WORKSHOP</td>
+          <td>{authorised_user.timeSlot1} August</td>
+        </tr>{" "}
+        <tr>
+          <td className="td-first">{department[1]} WORKSHOP</td>
+          <td>{authorised_user.timeSlot2} August</td>
+        </tr>{" "} */}
+            {/* <tr>
+          <td className="td-first">REFERAL</td>
+          <td>{authorised_user.referal}</td>
+        </tr>{" "} */}
+            <tr>
+              <td className="td-first">NEED ACCOMODATION</td>
+              <td>{authorised_user.accomodation}</td>
+            </tr>{" "}
+            <tr>
+              <td className="td-first">AMOUNT</td>
+              <td>{authorised_user.amount}</td>
+            </tr>{" "}
+            <tr>
+              <td className="td-first">CASH ON DELIVERY</td>
+              <td>{authorised_user.cod}</td>
+            </tr>{" "}
+            <tr>
+              <td className="td-first">DEPARTMENT</td>
+              <td>{
+                department.map((other, i) => {
+                  return (<span key={i}>
+                    {other} &nbsp;{" "}
+                  </span>)
+                })
+              }
+              </td>
+            </tr>{" "}
+          </table>
+        </div>
+      }
       <Footer />
     </>
   );

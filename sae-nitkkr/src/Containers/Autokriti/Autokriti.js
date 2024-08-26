@@ -36,7 +36,7 @@ function Autokriti(){
             <CheckOurEvents/>
             <AutokritiCard/>
             {/* <Saga/> */}
-            <BrandAmbassador/>
+            {/* <BrandAmbassador/> */}
             {/* <Testimonials/>  */}
             <Gallery/>
             <Footer type="black"/>

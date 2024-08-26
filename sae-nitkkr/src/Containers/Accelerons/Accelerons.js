@@ -3,9 +3,9 @@ import { useEffect } from "react";
 import "../HomePage/ProfInchargesAndManagers/pm.css";
 import PersonCard from "../HomePage/ProfInchargesAndManagers/PersonCard";
 import "../HomePage/ProfInchargesAndManagers/ProfInchargesAndManagers.css";
-import manager1 from "../../Assets/ProfIncharges/Yasharora.jpg";
-import manager2 from "../../Assets/ProfIncharges/Bhupeksh.jpg";
-import manager3 from "../../Assets/ProfIncharges/man.png";
+import manager1 from "../../Assets/ProfIncharges/Sachin.jpeg";
+import manager2 from "../../Assets/ProfIncharges/yohannan.jpg";
+import manager3 from "../../Assets/ProfIncharges/sugam.jpg";
 
 import NavBar from "../../Components/NavBar/NavBar";
 import FirstDisplayDiv from "../../Components/FirstDisplayDIV/FirstDisplayDIV";
@@ -35,28 +35,28 @@ function Accelerons() {
 
         <div className="ProfInchargesandManagers-persons_container">
           <PersonCard
-            name={"Yash Arora"}
+            name={"Sachin Kumar"}
             designation={"Captain"}
             page={"manager"}
             url={manager1}
-            linkedin={"https://www.linkedin.com/in/yash-arora-0b2027215/"}
-            email={"mailto:yasharora1808@gmail.com"}
+            linkedin={"https://www.linkedin.com/in/sachin-kumar-a827b7258/"}
+            email={"mailto:sachinphalswal19@gmail.com"}
           />
           <PersonCard
-            name={"Bhupeksh"}
+            name={"Yohannan Jezaniah"}
             designation={"Vice-Captain"}
             page={"manager"}
             url={manager2}
-            linkedin={"https://www.linkedin.com/in/bhupeksh-kaushik-360424222"}
-            email={"mailto:kaushikbhupeksh@gmail.com "}
+            linkedin={"https://www.linkedin.com/in/yohannan-jezaniah-9436aa20b/"}
+            email={"mailto:jezaniahyohannan@gmail.com"}
           />
           <PersonCard
-            name={"Manikya"}
+            name={"Sugam Tripathi"}
             designation={"EV-Head"}
             page={"manager"}
             url={manager3}
-            linkedin={"https://www.linkedin.com/in/10manikya/"}
-            email={"mailto:NA@gmail.com"}
+            linkedin={"https://www.linkedin.com/in/sugam-tripathi-6aa67b226/"}
+            email={"mailto:12114020@nitkkr.ac.in"}
           />
         </div>
       </div>

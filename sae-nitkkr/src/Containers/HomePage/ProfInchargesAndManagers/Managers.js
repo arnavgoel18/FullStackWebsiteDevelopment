@@ -1,10 +1,11 @@
 import "./ProfInchargesAndManagers.css";
 import "./pm.css";
 import PersonCard from "./PersonCard";
-import manager1 from "../../../Assets/ProfIncharges/President.jpg";
-import manager2 from "../../../Assets/ProfIncharges/VicePre.jpg";
-import manager3 from "../../../Assets/ProfIncharges/secyy.jpg";
-import manager4 from "../../../Assets/ProfIncharges/lisha.jpg";
+import manager1 from "../../../Assets/ProfIncharges/Bhavya Gevariya.jpg";
+import manager2 from "../../../Assets/ProfIncharges/Umesh Kumar.jpeg";
+import manager3 from "../../../Assets/ProfIncharges/Aditya Dabral.jpg";
+import manager4 from "../../../Assets/ProfIncharges/Asmita Singh.jpg";
+import manager5 from "../../../Assets/ProfIncharges/sourav.jpg";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 function Managers() {
@@ -17,36 +18,44 @@ function Managers() {
 
         <div className="ProfInchargesandManagers-persons_container">
           <PersonCard
-            name={"Vaibhav Dharmani"}
+            name={"Bhavya Gevariya"}
             designation={"President"}
             page={"manager"}
             url={manager1}
-            linkedin={"https://www.linkedin.com/in/vaibhav-dharmani-aa91a7199"}
-            email={"mailto:dharmani.vaibhav2001@gmail.com"}
+            linkedin={"https://www.linkedin.com/in/bhavya-gevariya-99183b220"}
+            email={"mailto:Bhavyagevariya@gmail.com"}
           />
           <PersonCard
-            name={"Himanshu Khatri"}
+            name={"Umesh Kumar"}
             designation={"Vice-President"}
             page={"manager"}
             url={manager2}
-            linkedin={"https://www.linkedin.com/in/hk2107/"}
-            email={"mailto:hkhatri2107@gmail.com"}
+            linkedin={"https://www.linkedin.com/in/umesh-kumar-4532551a6/"}
+            email={"mailto:umeshnagawan1225@gmail.com"}
           />
           <PersonCard
-            name={"VINAY SAINI"}
+            name={"Aditya Dabral"}
             designation={"Secretary"}
             page={"manager"}
             url={manager3}
-            linkedin={"https://www.linkedin.com/in/vinay-saini-6a3044241"}
-            email={"mailto:sainivinay013@gmail.com"}
-          />
+            linkedin={"https://www.linkedin.com/in/aditya-dabral-294a6523a"}
+            email={"mailto:adityas.dabral@gmail.com"}
+            />
           <PersonCard
-            name={"Lisha Garg"}
+            name={"Asmita Singh"}
             designation={"Secretary"}
             page={"manager"}
             url={manager4}
-            linkedin={"https://www.linkedin.com/in/lisha-garg-61373a211/"}
-            email={"mailto:lisha317garg@gmail.com"}
+            linkedin={"https://www.linkedin.com/in/asmita-singh-7657a8261/"}
+            email={"mailto:asmita0782@gmail.com"}
+          />
+          <PersonCard
+            name={"Sourav"}
+            designation={"Student Program Chairperson"}
+            page={"manager"}
+            url={manager5}
+            linkedin={"https://www.linkedin.com/in/sourav-kumar-691270284"}
+            email={"mailto:101souravkumar@gamil.com"}
           />
         </div>
         <Link to="/Teammembers">
