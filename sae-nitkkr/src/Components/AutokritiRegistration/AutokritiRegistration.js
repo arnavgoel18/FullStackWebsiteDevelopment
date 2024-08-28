@@ -43,7 +43,7 @@ function Quizsignup() {
   ]);
   const [iotoptions, setIotoptions] = useState([
     { id: "individual", label: "Individuals", price: 2450, checked: false },
-    { id: "group2", label: "Group2", price: 2250 * 2, checked: false },
+    { id: "group2", label: "Group2", price: 2250, checked: false },
   ])
   const [show2, setShow2] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -163,6 +163,7 @@ function Quizsignup() {
         }
         else {
           setIsIOT(false);
+          setShow2(()=> {return false})
         }
         if (checkbox.checked) {
           flag = flag + 1;
@@ -254,6 +255,14 @@ function Quizsignup() {
     if (valid == true) finalcost = finalcost - 100;
     setFinalcost(finalcost);
     userData.amount = finalcost; //1 for testing only, later changed with finalcost;
+    if(show2){
+      if(getuserdata2.accomodation=="Yes"){
+        getuserdata2.amount=(discountedAmount < workshopamount ? discountedAmount : workshopamount)+279*3;
+      }
+      else{
+        getuserdata2.amount=(discountedAmount < workshopamount ? discountedAmount : workshopamount);
+      }
+    }
   };
 
   //to check all fields are filled or not
@@ -1190,12 +1199,13 @@ function Quizsignup() {
               *Workshop Will be 3 Days
               Long
             </p>
-            <p className="instruction_para">
+            {/* <p className="instruction_para">
               * You have to Show Registration ID at the time of arrival.
-            </p>
+            </p> */}
             <p className="instruction_para">
-              * In case of any issue or payment failure, please contact
-              +91-9306356371
+              * In case of any issue or payment failure, please contact-<br/>
+              Vipul Goyal +91-9520417250
+              Sourav +91-9306356371
             </p>
             {/*  <p className="instruction_para">* Referal IDs are case-sensitive</p> */}
           </div>

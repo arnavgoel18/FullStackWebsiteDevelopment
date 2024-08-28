@@ -14,11 +14,14 @@ const Announcement = () => {
 //      contactSection.scrollIntoView({ behavior: "smooth" });
 //    }
 //  }, 100);
+  const handleclick=()=>{
+    window.location = `/autokriti/register`
+  }
   return (
 
 
     
-    <div className='announcement'>
+    <div className='announcement' onClick={handleclick}>
 
         <Marquee speed={100} gradient={false} pauseOnHover direction='right'>
         <div className="announcement-text text1">

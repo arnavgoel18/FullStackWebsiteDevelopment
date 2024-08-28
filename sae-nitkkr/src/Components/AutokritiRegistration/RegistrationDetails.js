@@ -4,7 +4,8 @@ import saelogo from "../../Assets/SAELOGO.png";
 import emailjs from "@emailjs/browser";
 
 import "./RegistrationDetails.css";
-import { doc, setDoc } from "firebase/firestore";
+import { collection,
+  getDocs,query,where,doc, setDoc } from "firebase/firestore";
 import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer.js";
 
@@ -21,7 +22,7 @@ function RegistrationDetails() {
     const items = JSON.parse(localStorage.getItem("userData"));
     const depart = JSON.parse(localStorage.getItem("department"));
     const items2 = JSON.parse(localStorage.getItem("userData2"));
-    
+
     if (items) {
       setauthorised_user(items);
       setDepartment(depart);
@@ -210,11 +211,81 @@ function RegistrationDetails() {
       };
     });
   };
+  const sendEmail = async (userDetails) => {
+    try {
+      const response = await fetch('http://localhost:5000/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(userDetails)
+      });
 
+      const result = await response.json();
+      console.log(response);
+      if (response.ok) {
+        alert(result.message);
+      } else {
+        alert(result.error);
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('Failed to send email');
+    }
+  }
+  async function isRegistrationIdUnique(registrationId) {
+    const usersCollection = collection(db, "AutokritiRegistration2024"); // Replace with your collection name
+    const q = query(usersCollection, where("registrationId", "==", registrationId));
+  
+    try {
+      const querySnapshot = await getDocs(q);
+  
+      if (!querySnapshot.empty) {
+        // registrationId is already present
+        console.log("Registration ID already exists.");
+        return false;
+      } else {
+        // registrationId is unique
+        console.log("Registration ID is unique.");
+        return true;
+      }
+    } catch (error) {
+      console.error("Error checking registrationId:", error);
+      return false;
+    }
+  }
+  async function getUniqueRegistrationId() {
+    let isUnique = false;
+    let registrationId;
+  
+    while (!isUnique) {
+      registrationId = generateRegId();
+      isUnique = await isRegistrationIdUnique(registrationId);
+    }
+    return registrationId;
+  }
+  function generateRegId() {
+    // Generate a random integer between 100000 and 999999
+    const min = 100000;
+    const max = 999999;
+    const registrationId = Math.floor(Math.random() * (max - min + 1)) + min;
+    return registrationId.toString();
+  }
+  async function generateRegistrationId(){
+    const id = await getUniqueRegistrationId();
+    return id;
+  }
   const secondaryMakePayment = async () => {
     var newTimestamp = String(new Date().getTime());
     authorised_user["department"] = department;
     authorised_user.paymentid = newTimestamp;
+    authorised_user.registrationId = await generateRegistrationId();
+    // console.log(authorised_user.registrationId);
+    if(authorised_user.iot === "group2"){
+      authorised_user2.registrationId=generateRegistrationId();
+      authorised_user2.paymentid=newTimestamp;
+      authorised_user2["department"] = department;
+    }
     const Saving_user_data2 = authorised_user2;
     const Saving_user_data = authorised_user;
     Saving_user_data.Registration_time = new Date().toString();
@@ -222,8 +293,10 @@ function RegistrationDetails() {
       doc(db, 'AutokritiRegistration2024', newTimestamp),
       Saving_user_data
     )
-    if(authorised_user.iot==="group2"){
-      Saving_user_data2.Registration_time=new Date().toString();
+    sendEmail(authorised_user);
+    if (authorised_user.iot === "group2") {
+      Saving_user_data2.Registration_time = new Date().toString();
+      sendEmail(authorised_user2)
       console.log("saved");
       let gotit = await setDoc(
         doc(db, 'AutokritiRegistration2024', newTimestamp),
@@ -322,10 +395,10 @@ function RegistrationDetails() {
             <td className="td-first">AMOUNT</td>
             <td>{authorised_user.amount}</td>
           </tr>{" "}
-          <tr>
+          {/* <tr>
             <td className="td-first">CASH ON DELIVERY</td>
             <td>{authorised_user.cod}</td>
-          </tr>{" "}
+          </tr>{" "} */}
           <tr>
             <td className="td-first">DEPARTMENT</td>
             <td>{
@@ -381,7 +454,7 @@ function RegistrationDetails() {
             })}
             <tr>
               <td className="td-first">{department[0]}WORKSHOP</td>
-              <td>{authorised_user.timeSlot1} September</td>
+              <td>{authorised_user2.timeSlot1} September</td>
             </tr>
             {/* <tr>
           <td className="td-first">{department[0]} WORKSHOP</td>
@@ -397,16 +470,16 @@ function RegistrationDetails() {
         </tr>{" "} */}
             <tr>
               <td className="td-first">NEED ACCOMODATION</td>
-              <td>{authorised_user.accomodation}</td>
+              <td>{authorised_user2.accomodation}</td>
             </tr>{" "}
             <tr>
               <td className="td-first">AMOUNT</td>
-              <td>{authorised_user.amount}</td>
+              <td>{authorised_user2.amount}</td>
             </tr>{" "}
-            <tr>
+            {/* <tr>
               <td className="td-first">CASH ON DELIVERY</td>
               <td>{authorised_user.cod}</td>
-            </tr>{" "}
+            </tr>{" "} */}
             <tr>
               <td className="td-first">DEPARTMENT</td>
               <td>{
@@ -421,6 +494,49 @@ function RegistrationDetails() {
           </table>
         </div>
       }
+      {/* {authorised_user.iot === "group2" &&
+        <div className="reg-details">
+          <table border={1} className="reg-details-table">
+            <tr>
+              <th>TITLES</th>
+              <th>VALUES</th>
+            </tr>
+            <tr>
+              <td className="td-first">NAME</td>
+              <td>{authorised_user2.name}</td>
+            </tr>
+            <tr>
+              <td className="td-first">EMAIL</td>
+              <td>{authorised_user2.email}</td>
+            </tr>
+            <tr>
+              <td className="td-first">COLLEGE</td>
+              <td>{authorised_user2.college}</td>
+            </tr>{" "}
+            <tr>
+              <td className="td-first">BRANCH</td>
+              <td>{authorised_user2.branch}</td>
+            </tr>
+            <tr>
+              <td className="td-first">SEMESTER</td>
+              <td>{authorised_user2.semester}</td>
+            </tr>{" "}
+            <tr>
+              <td className="td-first">PHONE NO.</td>
+              <td>{authorised_user2.phone}</td>
+            </tr>{" "}
+            <tr>
+              <td className="td-first">{department[0]}WORKSHOP</td>
+              <td>{authorised_user.timeSlot1} September</td>
+            </tr>
+            <tr>
+              <td className="td-first">AMOUNT</td>
+              <td>{authorised_user.amount}</td>
+            </tr>{" "}
+
+          </table>
+        </div>
+      } */}
       <Footer />
     </>
   );

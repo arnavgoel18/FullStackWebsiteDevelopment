@@ -25,17 +25,15 @@ var valid = false;
 var storeemail = false; //for nitkkr stuednts
 var storecollege = false; //for nitkkr college
 
-const AutokritiRegistration2 = ({submit}) => {
+const AutokritiRegistration2 = ({ submit }) => {
   const [workshopamount, setWorkshopAmount] = useState(0);
   const [discountedAmount, setDiscountedAmount] = useState(0);
   const [checkboxes, setCheckboxes] = useState([
     { id: "mechanical", label: "Mechanical", price: 1999, checked: false },
-    { id: "iot", label: "IoT", price: 2750, checked: false },
+    { id: "iot", label: "IoT", price: 2250, checked: false },
     { id: "ev", label: "EV", price: 1999, checked: false },
     { id: "software", label: "Software", price: 1999, checked: false },
   ]);
-  const [isSoftware, setIsSoftware] = useState(false);
-  const [isIOT, setIsIOT] = useState(false);
   const [checkboxessoftware, setCheckboxessoftware] = useState([
     { id: "solidworks", label: "SolidWorks", checked: false },
     { id: "catia", label: "Catia", checked: false },
@@ -46,7 +44,7 @@ const AutokritiRegistration2 = ({submit}) => {
     { id: "group2", label: "Group2", checked: false },
   ])
   const [show2, setShow2] = useState(false);
-  
+
   let flag3 = 0;
   const handleCheckboxChange3 = (id) => {
     const updatedCheckboxes3 = iotoptions.map((checkbox3) => {
@@ -135,19 +133,6 @@ const AutokritiRegistration2 = ({submit}) => {
     const updatedCheckboxes = checkboxes.map((checkbox) => {
       if (checkbox.id === id) {
         checkbox.checked = !checkbox.checked;
-        if (id === "software" && checkbox.checked) {
-          setIsSoftware(true);
-        }
-        else {
-          setIsSoftware(false);
-        }
-
-        if (id === "iot" && checkbox.checked) {
-          setIsIOT(true);
-        }
-        else {
-          setIsIOT(false);
-        }
         if (checkbox.checked) {
           flag = flag + 1;
           setsettemp((prevdepartment) => {
@@ -207,46 +192,23 @@ const AutokritiRegistration2 = ({submit}) => {
   // var [count, setCount] = useState(0);
   //to calculate finalcost
   const calculateAmount = async () => {
-    var count = 0;
-    var Mechanical = document.getElementById("amb_mechanical").checked;
-    var IOT = document.getElementById("amb_IOT").checked;
-    var EV = document.getElementById("amb_EV").checked;
-    var software = document.getElementById("amb_software").checked;
-    var accomo = document.getElementById("accomodation").checked;
+    // var count = 0;
+    // var Mechanical = document.getElementById("amb_mechanical").checked;
+    finalcost=0;
+    var IOT = document.getElementById("amb_IOT2").checked;
+    // var EV = document.getElementById("amb_EV").checked;
+    // var software = document.getElementById("amb_software").checked;
+    var accomo = document.getElementById("accomodation2").checked;
 
-    if (Mechanical == true) {
-      finalcost += 2500;
-      count++;
-    }
     if (IOT == true) {
-      finalcost += 2750;
-      count++;
+      finalcost += discountedAmount<workshopamount ? discountedAmount : workshopamount;
     }
-    if (EV == true) {
-      finalcost += 2500;
-      count++;
+    if(accomo){
+      finalcost+=279*3;
     }
-    if (software == true) {
-      finalcost += 2500;
-      count++;
-    }
-    if (accomo == true && count == 2) {
-      //finalcost = 5500;
-      finalcost += 750;
-    } else if (accomo == true && count == 1) {
-      //finalcost = 3000;
-      finalcost += 750;
-    } else if (accomo == false && count == 1) {
-      //finalcost = 2500;
-      finalcost += 0;
-    } else if (accomo == false && count == 2) {
-      //finalcost = 4500;
-      finalcost += 0;
-    }
-
-    if (valid == true) finalcost = finalcost - 100;
-    setFinalcost(finalcost);
-    userData.amount = finalcost; //1 for testing only, later changed with finalcost;
+    userData.amount = finalcost;
+    submit.amount = finalcost //1 for testing only, later changed with finalcost;
+    // console.log(submit.amount);
   };
 
   //to check all fields are filled or not
@@ -368,7 +330,7 @@ const AutokritiRegistration2 = ({submit}) => {
     status: "Registered",
     mechanical: "",
     ev: "",
-    iot: "",
+    iot: "group2",
     software: "",
     Registration_time: "",
     amount: finalcost,
@@ -376,6 +338,7 @@ const AutokritiRegistration2 = ({submit}) => {
     accomodation: "No",
     cod: "No",
   });
+
 
   let name, value, checked, type;
   let workshopamountt = 2500;
@@ -402,7 +365,7 @@ const AutokritiRegistration2 = ({submit}) => {
     value = event.target.value;
     checked = event.target.checked;
     type = event.target.type;
-
+    console.log(userData.amount);
     // var valid = false;
     //to check referal code
     if (name === "referal") {
@@ -477,53 +440,52 @@ const AutokritiRegistration2 = ({submit}) => {
     //   document.getElementById('amb_software').disabled = false;
     //   document.getElementById('amb_timeslot').disabled = false;
     // }
-    if (type == "checkbox" && name !== "accomodation" && name !== "cod") {
-      var check = checked.toString();
-      if (checked) {
-        c++;
-        console.log(check, c);
-        setsettemp((prevdepartment) => {
-          return [...prevdepartment, name.toUpperCase()];
-        });
-      } else {
-        c--;
-        console.log(check, c);
-        setsettemp((prevActions) =>
-          prevActions.filter((i) => {
-            return i !== name.toUpperCase();
-          })
-        );
-      }
+    // if (type == "checkbox" && name !== "accomodation" && name !== "cod") {
+    //   var check = checked.toString();
+    //   if (checked) {
+    //     c++;
+    //     console.log(check, c);
+    //     setsettemp((prevdepartment) => {
+    //       return [...prevdepartment, name.toUpperCase()];
+    //     });
+    //   } else {
+    //     c--;
+    //     console.log(check, c);
+    //     setsettemp((prevActions) =>
+    //       prevActions.filter((i) => {
+    //         return i !== name.toUpperCase();
+    //       })
+    //     );
+    //   }
 
-      let currentWorkshopAmount = parseInt(
-        document.getElementById("workshopAmount").innerText
-      );
+    //   let currentWorkshopAmount = parseInt(
+    //     document.getElementById("workshopAmount").innerText
+    //   );
 
-      if (c === 2 && name !== "iot") {
-        if (name == "iot") currentWorkshopAmount = currentWorkshopAmount + 2500;
-        else currentWorkshopAmount = currentWorkshopAmount + 2750;
-      } else if (c === 1) {
-        if (name === "iot") {
-          currentWorkshopAmount = currentWorkshopAmount + 2750;
-        } else {
-          currentWorkshopAmount = currentWorkshopAmount + 2500;
-        }
-      } else if (c === 0) {
-        currentWorkshopAmount = 0;
-      }
+    //   if (c === 2 && name !== "iot") {
+    //     if (name == "iot") currentWorkshopAmount = currentWorkshopAmount + 2250;
+    //     else currentWorkshopAmount = currentWorkshopAmount + 2250;
+    //   } else if (c === 1) {
+    //     if (name === "iot") {
+    //       currentWorkshopAmount = currentWorkshopAmount + 2250;
+    //     } else {
+    //       currentWorkshopAmount = currentWorkshopAmount + 2250;
+    //     }
+    //   } else if (c === 0) {
+    //     currentWorkshopAmount = 0;
+    //   }
 
-      if (c > 2) {
-        alert("You can choose a maximum of 2 workshops.");
-        event.target.checked = false;
-        c = 2;
-      }
+    //   if (c > 2) {
+    //     alert("You can choose a maximum of 2 workshops.");
+    //     event.target.checked = false;
+    //     c = 2;
+    //   }
 
-      document.getElementById("workshopAmount").innerText =
-        currentWorkshopAmount.toString();
-      setUserData({ ...userData, [name]: check });
-      submit({...userData, [name]: check});
-    }
-
+    //   document.getElementById("workshopAmount").innerText =
+    //     currentWorkshopAmount.toString();
+    //   setUserData({ ...userData, [name]: check });
+    //   submit({ ...userData, [name]: check });
+    // }
     if (name == "timeSlot1") {
       if (value == "20-22") {
         userData.timeSlot1 = "20-22";
@@ -545,6 +507,7 @@ const AutokritiRegistration2 = ({submit}) => {
       //   console.log(userData.timeSlot2);
       // }
     }
+    userData.timeSlot1 = "20-22";
 
     if (name == "accomodation") {
       if (checked == true) {
@@ -567,14 +530,27 @@ const AutokritiRegistration2 = ({submit}) => {
     //   document.getElementById("accomodation").checked == true
     // )
     //   document.getElementById("accomoAmount").innerText = 1000;
-    if (document.getElementById("accomodation").checked == true)
-      document.getElementById("accomoAmount").innerText = 279 * 3;
-    else document.getElementById("accomoAmount").innerText = 0;
-
-    if (type != "checkbox" && type != "radio") {
-      setUserData({ ...userData, [name]: value });
-      submit({...userData, [name]: value})
+    // console.log(document.getElementById("accomodation").checked);
+    if (name=="accomodation" && document.getElementById("accomodation2").checked == true){
+      submit.accomodation="Yes";
+      userData.accomodation="Yes";
+      value="Yes";
+      document.getElementById("accomoAmount2").innerText = 279 * 3;
     }
+    else if(name=="accomodation") {
+      submit.accomodation="No";
+      userData.accomodation="No";
+      value="No"
+      // calculateAmount();
+      document.getElementById("accomoAmount2").innerText = 0;
+    }
+    // calculateAmount();
+    if (type != "radio") {
+      setUserData({ ...userData, [name]: value });
+      submit({ ...userData, [name]: value })
+    }
+    console.log(submit.accomodation);
+    console.log(submit.amount);
     //console.log(userData);
   };
 
@@ -748,7 +724,7 @@ const AutokritiRegistration2 = ({submit}) => {
               />
             </div>
           </div> */}
-        <div id="show_invalid">The Referal Code is Invalid</div>
+        {/* <div id="show_invalid">The Referal Code is Invalid</div> */}
         {/* Choose dempartment */}
         <div className="field">
           <span className="payform-label">
@@ -764,13 +740,13 @@ const AutokritiRegistration2 = ({submit}) => {
                 type="checkbox"
                 name="iot"
                 required="unrequired"
-                id="amb_IOT"
+                id="amb_IOT2"
                 checked={
                   checkboxes.find((checkbox) => checkbox.id === "iot").checked
                 }
                 onChange={() => handleCheckboxChange("iot")}
               />
-              <label htmlFor="amb_IOT">IoT</label>
+              <label htmlFor="amb_IOT2">IoT</label>
               <div id="iot"></div>
             </div>
             <br />
@@ -788,6 +764,27 @@ const AutokritiRegistration2 = ({submit}) => {
             />{" "}
             Pay cash on delivery
           </div> */}
+        <div className="payform-lable">
+          {/* <span>Workshop Amount (&#8377;) : </span> */}
+          <span>Workshop Amount (&#8377;) : {discountedAmount < workshopamount ? <strike>{workshopamount}</strike> : workshopamount} {discountedAmount < workshopamount && discountedAmount} </span>
+          <span style={{ display: "none" }} id="workshopAmount">
+            0
+          </span>
+        </div>
+        <div className="accomo">
+          <input
+            type="checkbox"
+            value="accomodation"
+            name="accomodation"
+            id="accomodation2"
+            onChange={postUserData}
+          />{" "}
+          Need Accomodation & food(279 per Day)
+        </div>
+        <div className="payform-lable">
+          <span>Amount (&#8377;) : </span>
+          <span id="accomoAmount2">0</span>
+        </div>
       </div>
     </>
   )

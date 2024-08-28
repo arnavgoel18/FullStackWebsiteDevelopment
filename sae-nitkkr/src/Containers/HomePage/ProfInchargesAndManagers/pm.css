@@ -51,8 +51,9 @@
 .wrapper .designation {
   color: #fff;
   font-size: 17px;
-  line-height: 0px;
+  line-height: normal;
   margin: 10px 0;
+  height: auto;
 }
 
 .container_pm .icons {
