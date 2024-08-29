@@ -2,10 +2,12 @@ import React, { useEffect, useState } from "react";
 import db from "../../Firebase.js";
 import saelogo from "../../Assets/SAELOGO.png";
 import emailjs from "@emailjs/browser";
-
+import MoonLoader from "react-spinners/MoonLoader.js";
 import "./RegistrationDetails.css";
-import { collection,
-  getDocs,query,where,doc, setDoc } from "firebase/firestore";
+import {
+  collection,
+  getDocs, query, where, doc, setDoc
+} from "firebase/firestore";
 import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer.js";
 
@@ -15,7 +17,8 @@ function RegistrationDetails() {
   let [department, setDepartment] = useState([]);
   const [authorised_user, setauthorised_user] = useState({});
   const [authorised_user2, setauthorised_user2] = useState({});
-
+  const [loading, setLoading] = useState(false);
+  let totalamount = 0;
   useEffect(() => {
     console.log("run");
     flag = false;
@@ -31,7 +34,6 @@ function RegistrationDetails() {
       setauthorised_user2(items2);
     }
   }, []);
-
   const makePaymentCash = async () => {
     document.getElementById("payform-button1").disabled = true;
     document.getElementById("payform-button1").style.background = "grey";
@@ -89,128 +91,141 @@ function RegistrationDetails() {
     window.location = `/register_confirmation/${newtimestamp}`;
 
   }
+  // const res = await initializeRazorpay();
+  // document.getElementById("payform-button1").disabled = true;
+  // document.getElementById("payform-button1").style.background = "grey";
+  // document.getElementById("payform-button1").innerText = "LOADING...";
+  // setTimeout(() => {
+  //   document.getElementById("payform-button1").disabled = false;
+  //   document.getElementById("payform-button1").style.background = "#3c4fe0";
+  //   document.getElementById("payform-button1").innerText = "Pay Now";
+  // }, 8000);
 
-  const makePayment = async () => {
-    const res = await initializeRazorpay();
-    document.getElementById("payform-button1").disabled = true;
-    document.getElementById("payform-button1").style.background = "grey";
-    document.getElementById("payform-button1").innerText = "LOADING...";
-    setTimeout(() => {
-      document.getElementById("payform-button1").disabled = false;
-      document.getElementById("payform-button1").style.background = "#3c4fe0";
-      document.getElementById("payform-button1").innerText = "Pay Now";
-    }, 8000);
+  // if (!res) {
+  //   alert("Razorpay SDK Failed to load");
+  //   return;
+  // }
 
-    if (!res) {
-      alert("Razorpay SDK Failed to load");
-      return;
-    }
+  // Make API call to the serverless API
+  // const data = await fetch("https://saepayment.onrender.com/razorpay", {
+  //   method: "POST",
+  //   body: JSON.stringify({
+  //     title: "cost",
+  //     body: authorised_user.amount,
+  //     userId: 1,
+  //   }),
+  //   headers: {
+  //     "Content-type": "application/json; charset=UTF-8",
+  //   },
+  // }).then((t) => t.json());
 
-    // Make API call to the serverless API
-    const data = await fetch("https://saepayment.onrender.com/razorpay", {
-      method: "POST",
-      body: JSON.stringify({
-        title: "cost",
-        body: authorised_user.amount,
-        userId: 1,
-      }),
+  // console.log(data);
+  // var options = {
+  //   key: "rzp_live_p9zIgcTn6FVaOD",
+  //   name: "SAE NIT Kurukshetra",
+  //   currency: data.currency,
+  //   amount: data.amount,
+  //   order_id: data.id,
+  //   description: "Thankyou for registration",
+  //   image: { saelogo },
+  //   handler: async (response) => {
+  //     await handler(response);
+  //     await set_to_database();
+  //     console.log(options);
+  //     window.location = `/register_confirmation/${timestamp}`;
+  //   },
+  //   prefill: {
+  //     name: "SAE NIT Kurukshetra",
+  //     email: "saenitkkr@nitkkr.ac.in",
+  //     contact: "9650735458",
+  //   },
+  // };
+  // console.log(authorised_user.amount);
+  // setTotalamount(()=> {return authorised_user.amount})
+  // setTotalamount((prev)=>{return prev+authorised_user.amount});
+  // if(authorised_user.iot==="group2"){
+  //   setTotalamount((prev)=>{return prev+authorised_user2.amount});
+  // }
+
+
+  const loadRazorpay = (amount) => {
+    const script = document.createElement('script');
+    script.src = 'https://checkout.razorpay.com/v1/checkout.js';
+    script.onload = () => {
+      openRazorpay(amount);
+    };
+    document.body.appendChild(script);
+  };
+  // const totalamount=authorised_user.amount
+  // if(authorised_user.iot === "group2"){
+  //   totalamount+=authorised_user2.amount
+  // }
+  // console.log(totalamount);
+  const openRazorpay = async (amount) => {
+    const result = await fetch('http://localhost:5000/create-order', {
+      method: 'POST',
       headers: {
-        "Content-type": "application/json; charset=UTF-8",
+        'Content-Type': 'application/json',
       },
-    }).then((t) => t.json());
+      body: JSON.stringify({ amount }),
+    });
+    console.log(result);
+    const order = await result.json();
 
-    console.log(data);
-    var options = {
-      key: "rzp_live_p9zIgcTn6FVaOD",
-      name: "SAE NIT Kurukshetra",
-      currency: data.currency,
-      amount: data.amount,
-      order_id: data.id,
-      description: "Thankyou for registration",
+    const options = {
+      key: 'rzp_test_DpkksCCoV6nye1',
+      amount: order.amount,
+      currency: order.currency,
+      name: 'SAE NIT KURUKSHETRA',
+      description: 'Thank You for Registration',
+      order_id: order.id,
       image: { saelogo },
       handler: async (response) => {
-        await handler(response);
-        await set_to_database();
-        console.log(options);
-        window.location = `/register_confirmation/${timestamp}`;
+        // alert(`Payment successful! Payment ID: ${response.razorpay_payment_id}`);
+        await secondaryMakePayment();
       },
       prefill: {
-        name: "SAE NIT Kurukshetra",
-        email: "saenitkkr@nitkkr.ac.in",
-        contact: "9650735458",
+        name: 'SAE NIT KURUKSHETRA',
+        email: 'saenitkkr@nitkkr.ac.in',
+        contact: '9520417250',
+      },
+      theme: {
+        color: '#3399cc',
       },
     };
 
-    const handler = async (response) => {
-      authorised_user.orderid = response.razorpay_order_id;
-      timestamp = response.razorpay_payment_id;
-      authorised_user.paymentid = timestamp;
-    };
-    const set_to_database = async () => {
-      //sendEmail();
-      authorised_user["department"] = department;
-      const Saving_user_data = authorised_user;
-      console.log(Saving_user_data, timestamp);
-      Saving_user_data.Registration_time = new Date().toString();
-      let gotit = await setDoc(
-        doc(db, 'paymentregistrationid', timestamp),
-        Saving_user_data
-      )
-    };
-
-    const sendEmail = () => {
-      //console.log("hello destination");
-      const toSend = {
-        name: authorised_user.name,
-        sem: authorised_user.semester,
-        branch: authorised_user.branch,
-        email: authorised_user.email,
-        college: authorised_user.college,
-        OrderId: authorised_user.orderid,
-        PaymentId: authorised_user.paymentid,
-        Phone: authorised_user.phone,
-
-        QRCodeURL: `https://saenitkurukshetra.in/registered/${authorised_user.paymentid}`,
-      };
-      emailjs
-        .send(
-          "service_efl7b9h",
-          "template_zezhpzf",
-          toSend,
-          "ulnoJlsECTLQyCRZ5"
-        )
-        .then(
-
-          function (response) {
-            console.log("SUCCESS!", response.status, response.text);
-          },
-          function (error) {
-            console.log("FAILED...", error);
-          }
-        );
-    };
-
-    const paymentObject = new window.Razorpay(options);
-    paymentObject.open();
-
-    localStorage.removeItem("userData");
-    localStorage.removeItem("department");
+    const rzp = new window.Razorpay(options);
+    rzp.open();
   };
 
-  const initializeRazorpay = () => {
-    return new Promise((resolve) => {
-      const script = document.createElement("script");
-      script.src = "https://checkout.razorpay.com/v1/checkout.js";
-      document.body.appendChild(script);
+  // const handler = async (response) => {
+  //   authorised_user.orderid = response.razorpay_order_id;
+  //   timestamp = response.razorpay_payment_id;
+  //   authorised_user.paymentid = timestamp;
+  // };
 
-      script.onload = () => {
-        resolve(true);
-      };
-      script.onerror = () => {
-        resolve(false);
-      };
-    });
-  };
+
+
+  // const paymentObject = new window.Razorpay(options);
+  // paymentObject.open();
+
+  // localStorage.removeItem("userData");
+  // localStorage.removeItem("department");
+
+  // const initializeRazorpay = () => {
+  //   return new Promise((resolve) => {
+  //     const script = document.createElement("script");
+  //     script.src = "https://checkout.razorpay.com/v1/checkout.js";
+  //     document.body.appendChild(script);
+
+  //     script.onload = () => {
+  //       resolve(true);
+  //     };
+  //     script.onerror = () => {
+  //       resolve(false);
+  //     };
+  //   });
+  // };
   const sendEmail = async (userDetails) => {
     try {
       const response = await fetch('http://localhost:5000/send-email', {
@@ -222,7 +237,7 @@ function RegistrationDetails() {
       });
 
       const result = await response.json();
-      console.log(response);
+      // console.log(response);
       if (response.ok) {
         alert(result.message);
       } else {
@@ -236,10 +251,10 @@ function RegistrationDetails() {
   async function isRegistrationIdUnique(registrationId) {
     const usersCollection = collection(db, "AutokritiRegistration2024"); // Replace with your collection name
     const q = query(usersCollection, where("registrationId", "==", registrationId));
-  
+
     try {
       const querySnapshot = await getDocs(q);
-  
+
       if (!querySnapshot.empty) {
         // registrationId is already present
         console.log("Registration ID already exists.");
@@ -257,7 +272,7 @@ function RegistrationDetails() {
   async function getUniqueRegistrationId() {
     let isUnique = false;
     let registrationId;
-  
+
     while (!isUnique) {
       registrationId = generateRegId();
       isUnique = await isRegistrationIdUnique(registrationId);
@@ -271,20 +286,23 @@ function RegistrationDetails() {
     const registrationId = Math.floor(Math.random() * (max - min + 1)) + min;
     return registrationId.toString();
   }
-  async function generateRegistrationId(){
+  async function generateRegistrationId() {
     const id = await getUniqueRegistrationId();
     return id;
   }
   const secondaryMakePayment = async () => {
+    setLoading(true);
     var newTimestamp = String(new Date().getTime());
     authorised_user["department"] = department;
     authorised_user.paymentid = newTimestamp;
     authorised_user.registrationId = await generateRegistrationId();
     // console.log(authorised_user.registrationId);
-    if(authorised_user.iot === "group2"){
-      authorised_user2.registrationId=generateRegistrationId();
-      authorised_user2.paymentid=newTimestamp;
+    console.log(totalamount);
+    if (authorised_user.iot === "group2") {
+      authorised_user2.registrationId = await generateRegistrationId();
+      authorised_user2.paymentid = newTimestamp;
       authorised_user2["department"] = department;
+      // console.log(authorised_user2.registrationId);
     }
     const Saving_user_data2 = authorised_user2;
     const Saving_user_data = authorised_user;
@@ -293,20 +311,28 @@ function RegistrationDetails() {
       doc(db, 'AutokritiRegistration2024', newTimestamp),
       Saving_user_data
     )
-    sendEmail(authorised_user);
+    // sendEmail(authorised_user);
     if (authorised_user.iot === "group2") {
       Saving_user_data2.Registration_time = new Date().toString();
-      sendEmail(authorised_user2)
-      console.log("saved");
+      // sendEmail(authorised_user2)
+      // console.log("saved");
       let gotit = await setDoc(
         doc(db, 'AutokritiRegistration2024', newTimestamp),
         Saving_user_data2
       )
+      // loadRazorpay(authorised_user.amount+authorised_user2.amount);
     }
-
-    // window.location = `/makepayment?id=` + newTimestamp;
+    // setLoading(false);
+    window.location = `/autokriti`;
   }
-
+  const handlemakepayment = () => {
+    if (authorised_user.iot === "group2") {
+      loadRazorpay(authorised_user.amount + authorised_user2.amount)
+    }
+    else {
+      loadRazorpay(authorised_user.amount)
+    }
+  }
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -324,10 +350,15 @@ function RegistrationDetails() {
         <button className="pay-btn" id="payform-button1" onClick={makePayment}>
           Pay Now
         </button>  */}
-
-        <button className="pay-btn" id="payform-button1" onClick={secondaryMakePayment}>
-          Pay Now
-        </button>
+        <div style={{display:"flex",alignItems:"center",justifyContent:"center",gap:"10px"}}>
+          <button className="pay-btn" id="payform-button1" onClick={handlemakepayment}>
+            Pay Now
+          </button>
+          {loading &&
+            <div style={{width:"auto",display:"flex",justifyContent:"center",alignItems:"center",marginTop:"20px"}}>
+              <MoonLoader loading={loading} size={25} />
+            </div>}
+        </div>
 
 
       </div>
@@ -541,5 +572,4 @@ function RegistrationDetails() {
     </>
   );
 }
-
 export default RegistrationDetails;
