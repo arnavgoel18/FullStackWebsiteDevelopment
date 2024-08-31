@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { FaInfoCircle } from "react-icons/fa";
 import stringSimilarity from "string-similarity";
+import toast, { Toaster } from 'react-hot-toast';
 
 import $ from "jquery";
 import "./AutokritiRegistration.css";
@@ -80,7 +81,7 @@ const AutokritiRegistration2 = ({ submit }) => {
     }, 0);
 
     if (checkedCount3 > 1) {
-      alert("You cannot choose both.");
+      toast.success("You cannot choose both.");
       const index = updatedCheckboxes3.findIndex(
         (checkbox) => checkbox.id === id
       );
@@ -119,7 +120,7 @@ const AutokritiRegistration2 = ({ submit }) => {
     }, 0);
 
     if (checkedCount2 > 1) {
-      alert("You can choose a maximum of 1 Softwares.");
+      toast.success("You can choose a maximum of 1 Softwares.");
       const index = updatedCheckboxes2.findIndex(
         (checkbox) => checkbox.id === id
       );
@@ -156,7 +157,7 @@ const AutokritiRegistration2 = ({ submit }) => {
     }, 0);
 
     if (checkedCount > 1) {
-      alert("You can choose a maximum of 1 workshops.");
+      toast.success("You can choose a maximum of 1 workshops.");
       const index = updatedCheckboxes.findIndex(
         (checkbox) => checkbox.id === id
       );
@@ -251,7 +252,7 @@ const AutokritiRegistration2 = ({ submit }) => {
       );
 
       if (phone.length != 10) {
-        alert("Please enter a valid mobile number");
+        toast.success("Please enter a valid mobile number");
         return false;
       } else if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
         alert("Please enter a valid email address.");
@@ -598,6 +599,7 @@ const AutokritiRegistration2 = ({ submit }) => {
 
   return (
     <>
+      <Toaster/>
       <div method="POST" className="payform-form">
         <p style={{ fontWeight: "600", marginBottom: "3px" }}>Add Member: </p>
         <div className="field">

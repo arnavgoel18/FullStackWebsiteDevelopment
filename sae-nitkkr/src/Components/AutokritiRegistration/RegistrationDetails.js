@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import db from "../../Firebase.js";
 import saelogo from "../../Assets/SAELOGO.png";
-import emailjs from "@emailjs/browser";
 import MoonLoader from "react-spinners/MoonLoader.js";
+import toast, { Toaster } from 'react-hot-toast';
 import "./RegistrationDetails.css";
 import {
   collection,
@@ -13,7 +13,6 @@ import Footer from "../Footer/Footer.js";
 
 var flag = true;
 function RegistrationDetails() {
-  let timestamp = "";
   let [department, setDepartment] = useState([]);
   const [authorised_user, setauthorised_user] = useState({});
   const [authorised_user2, setauthorised_user2] = useState({});
@@ -34,63 +33,63 @@ function RegistrationDetails() {
       setauthorised_user2(items2);
     }
   }, []);
-  const makePaymentCash = async () => {
-    document.getElementById("payform-button1").disabled = true;
-    document.getElementById("payform-button1").style.background = "grey";
-    setTimeout(() => {
-      document.getElementById("payform-button1").disabled = false;
-      document.getElementById("payform-button1").style.background = "#3c4fe0";
-    }, 5000);
+  // const makePaymentCash = async () => {
+  //   document.getElementById("payform-button1").disabled = true;
+  //   document.getElementById("payform-button1").style.background = "grey";
+  //   setTimeout(() => {
+  //     document.getElementById("payform-button1").disabled = false;
+  //     document.getElementById("payform-button1").style.background = "#3c4fe0";
+  //   }, 5000);
 
-    const current = new Date();
-    const date = `${current.getDate()}/${current.getMonth() + 1
-      }/${current.getFullYear()}`;
-    var newtimestamp = String(new Date().getTime());
+  //   const current = new Date();
+  //   const date = `${current.getDate()}/${current.getMonth() + 1
+  //     }/${current.getFullYear()}`;
+  //   var newtimestamp = String(new Date().getTime());
 
-    authorised_user["department"] = department;
-    authorised_user.paymentid = newtimestamp;
+  //   authorised_user["department"] = department;
+  //   authorised_user.paymentid = newtimestamp;
 
-    const toSend = {
-      name: authorised_user.name,
-      sem: authorised_user.semester,
-      branch: authorised_user.branch,
-      email: authorised_user.email,
-      college: authorised_user.college,
-      OrderId: authorised_user.orderid,
-      PaymentId: authorised_user.paymentid,
-      Phone: authorised_user.phone,
-      Payment: 'Cash on delivery',
-      QRCodeURL: `https://saenitkurukshetra.in/registered/${authorised_user.paymentid}`,
-    };
-    emailjs
-      .send(
-        "service_efl7b9h",
-        "template_zezhpzf",
-        toSend,
-        "ulnoJlsECTLQyCRZ5"
-      )
-      .then(
+  //   const toSend = {
+  //     name: authorised_user.name,
+  //     sem: authorised_user.semester,
+  //     branch: authorised_user.branch,
+  //     email: authorised_user.email,
+  //     college: authorised_user.college,
+  //     OrderId: authorised_user.orderid,
+  //     PaymentId: authorised_user.paymentid,
+  //     Phone: authorised_user.phone,
+  //     Payment: 'Cash on delivery',
+  //     QRCodeURL: `https://saenitkurukshetra.in/registered/${authorised_user.paymentid}`,
+  //   };
+  //   emailjs
+  //     .send(
+  //       "service_efl7b9h",
+  //       "template_zezhpzf",
+  //       toSend,
+  //       "ulnoJlsECTLQyCRZ5"
+  //     )
+  //     .then(
 
-        function (response) {
-          console.log("SUCCESS!", response.status, response.text);
-        },
-        function (error) {
-          console.log("FAILED...", error);
-        }
-      );
+  //       function (response) {
+  //         console.log("SUCCESS!", response.status, response.text);
+  //       },
+  //       function (error) {
+  //         console.log("FAILED...", error);
+  //       }
+  //     );
 
-    const Saving_user_data = authorised_user;
-    Saving_user_data.Registration_time = new Date().toString();
-    let gotit = await setDoc(
-      doc(db, "paymentregistrationid", newtimestamp),
-      Saving_user_data
-    );
+  //   const Saving_user_data = authorised_user;
+  //   Saving_user_data.Registration_time = new Date().toString();
+  //   let gotit = await setDoc(
+  //     doc(db, "paymentregistrationid", newtimestamp),
+  //     Saving_user_data
+  //   );
 
-    localStorage.removeItem("userData");
-    localStorage.removeItem("department");
-    window.location = `/register_confirmation/${newtimestamp}`;
+  //   localStorage.removeItem("userData");
+  //   localStorage.removeItem("department");
+  //   window.location = `/register_confirmation/${newtimestamp}`;
 
-  }
+  // }
   // const res = await initializeRazorpay();
   // document.getElementById("payform-button1").disabled = true;
   // document.getElementById("payform-button1").style.background = "grey";
@@ -162,40 +161,48 @@ function RegistrationDetails() {
   // }
   // console.log(totalamount);
   const openRazorpay = async (amount) => {
-    const result = await fetch('http://localhost:5000/create-order', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ amount }),
-    });
-    console.log(result);
-    const order = await result.json();
-
-    const options = {
-      key: 'rzp_test_DpkksCCoV6nye1',
-      amount: order.amount,
-      currency: order.currency,
-      name: 'SAE NIT KURUKSHETRA',
-      description: 'Thank You for Registration',
-      order_id: order.id,
-      image: { saelogo },
-      handler: async (response) => {
-        // alert(`Payment successful! Payment ID: ${response.razorpay_payment_id}`);
-        await secondaryMakePayment();
-      },
-      prefill: {
+    try{
+      setLoading(true);
+      const result = await fetch('https://sae-backend.vercel.app/create-order', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ amount }),
+      });
+      console.log(result);
+      const order = await result.json();
+  
+      const options = {
+        key: 'rzp_test_DpkksCCoV6nye1',
+        amount: order.amount,
+        currency: order.currency,
         name: 'SAE NIT KURUKSHETRA',
-        email: 'saenitkkr@nitkkr.ac.in',
-        contact: '9520417250',
-      },
-      theme: {
-        color: '#3399cc',
-      },
-    };
-
-    const rzp = new window.Razorpay(options);
-    rzp.open();
+        description: 'Thank You for Registration',
+        order_id: order.id,
+        image: { saelogo },
+        handler: async (response) => {
+          // alert(`Payment successful! Payment ID: ${response.razorpay_payment_id}`);
+          await secondaryMakePayment();
+        },
+        prefill: {
+          name: 'SAE NIT KURUKSHETRA',
+          email: 'saenitkkr@nitkkr.ac.in',
+          contact: '9520417250',
+        },
+        theme: {
+          color: '#3399cc',
+        },
+      };
+  
+      setLoading(false)
+      const rzp = new window.Razorpay(options);
+      rzp.open();
+    }
+    catch (error) {
+      setLoading(false);
+      toast.success('Something went wrong. Please try again.');
+    }
   };
 
   // const handler = async (response) => {
@@ -228,7 +235,7 @@ function RegistrationDetails() {
   // };
   const sendEmail = async (userDetails) => {
     try {
-      const response = await fetch('http://localhost:5000/send-email', {
+      const response = await fetch('https://sae-backend.vercel.app/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -239,13 +246,13 @@ function RegistrationDetails() {
       const result = await response.json();
       // console.log(response);
       if (response.ok) {
-        alert(result.message);
+        // alert(result.message);
       } else {
-        alert(result.error);
+        // alert(result.error);
       }
     } catch (error) {
       console.error('Error:', error);
-      alert('Failed to send email');
+      // alert('Failed to send email');
     }
   }
   async function isRegistrationIdUnique(registrationId) {
@@ -311,10 +318,10 @@ function RegistrationDetails() {
       doc(db, 'AutokritiRegistration2024', newTimestamp),
       Saving_user_data
     )
-    // sendEmail(authorised_user);
+    sendEmail(authorised_user);
     if (authorised_user.iot === "group2") {
       Saving_user_data2.Registration_time = new Date().toString();
-      // sendEmail(authorised_user2)
+      sendEmail(authorised_user2)
       // console.log("saved");
       let gotit = await setDoc(
         doc(db, 'AutokritiRegistration2024', newTimestamp),
@@ -322,8 +329,11 @@ function RegistrationDetails() {
       )
       // loadRazorpay(authorised_user.amount+authorised_user2.amount);
     }
-    // setLoading(false);
-    window.location = `/autokriti`;
+    setLoading(false);
+    toast.success("Registration Completed")
+    setTimeout(() => {
+      window.location.href = '/'; // Redirect to home page
+    }, 2000);
   }
   const handlemakepayment = () => {
     if (authorised_user.iot === "group2") {
@@ -339,6 +349,7 @@ function RegistrationDetails() {
 
   return (
     <>
+      <Toaster/>
       <NavBar />
       <div className="reg-details-heading">
         <h1 className="reg-details-h1">Registeration Details</h1>

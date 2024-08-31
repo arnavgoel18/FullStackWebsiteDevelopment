@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { FaInfoCircle } from "react-icons/fa";
 import stringSimilarity from "string-similarity";
-
+import toast, { Toaster } from 'react-hot-toast';
 import $ from "jquery";
 import "./AutokritiRegistration.css";
 
@@ -49,7 +49,7 @@ function Quizsignup() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [category, setCategory] = useState("");
   const [getuserdata2, setGetuserdata2] = useState({});
-  let flag3 = 0;
+
   const handleCheckboxChange3 = (id) => {
     const updatedCheckboxes3 = iotoptions.map((checkbox3) => {
       if (checkbox3.id === id) {
@@ -62,11 +62,9 @@ function Quizsignup() {
         }
 
         if (checkbox3.checked) {
-          flag3 = flag3 + 1;
           setCategory(()=> {return id});
         }
         else {
-          flag3 = flag3 - 1;
           setCategory("");
         }
       }
@@ -79,7 +77,10 @@ function Quizsignup() {
     }, 0);
 
     if (checkedCount3 > 1) {
-      alert("You cannot choose both.");
+      toast.success("You cannot choose both.");
+      if(id==="group2"){
+        setShow2(false)
+      }
       const index = updatedCheckboxes3.findIndex(
         (checkbox) => checkbox.id === id
       );
@@ -109,19 +110,17 @@ function Quizsignup() {
 
 
 
-  let flag2 = 0;
+  
   const handleCheckboxChange2 = (id) => {
     const updatedCheckboxes2 = checkboxessoftware.map((checkbox2) => {
       if (checkbox2.id === id) {
         checkbox2.checked = !checkbox2.checked;
         if (checkbox2.checked) {
-          flag2 = flag2 + 1;
           setsettemp((prevdepartment) => {
             return [...prevdepartment, "Ansys", checkbox2.id.toUpperCase()];
           });
         }
         else {
-          flag2 = flag2 - 1;
           setsettemp((prevActions) =>
             prevActions.filter((i) => {
               return i !== checkbox2.id.toUpperCase();
@@ -137,7 +136,7 @@ function Quizsignup() {
     }, 0);
 
     if (checkedCount2 > 1) {
-      alert("You can choose a maximum of 1 Softwares.");
+      toast.success("You can choose a maximum of 1 Softwares.");
       const index = updatedCheckboxes2.findIndex(
         (checkbox) => checkbox.id === id
       );
@@ -146,7 +145,6 @@ function Quizsignup() {
   }
 
 
-  let flag = 0;
   const handleCheckboxChange = (id) => {
     const updatedCheckboxes = checkboxes.map((checkbox) => {
       if (checkbox.id === id) {
@@ -166,13 +164,11 @@ function Quizsignup() {
           setShow2(()=> {return false})
         }
         if (checkbox.checked) {
-          flag = flag + 1;
           setsettemp((prevdepartment) => {
             return [...prevdepartment, checkbox.id.toUpperCase()];
           });
         }
         else {
-          flag = flag - 1;
           setsettemp((prevActions) =>
             prevActions.filter((i) => {
               return i !== checkbox.id.toUpperCase();
@@ -188,7 +184,7 @@ function Quizsignup() {
     }, 0);
 
     if (checkedCount > 1) {
-      alert("You can choose a maximum of 1 workshops.");
+      toast.success("You can choose a maximum of 1 workshops.");
       const index = updatedCheckboxes.findIndex(
         (checkbox) => checkbox.id === id
       );
@@ -305,27 +301,27 @@ function Quizsignup() {
       );
 
       if (phone.length != 10) {
-        alert("Please enter a valid mobile number");
+        toast.success("Please enter a valid mobile number");
         return false;
       } else if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
-        alert("Please enter a valid email address.");
+        toast.success("Please enter a valid email address.");
         return false;
       } else if (count > 2) {
-        alert("You can choose maximum two department");
+        toast.success("You can choose maximum two department");
         return false;
       } else if (allCheckboxesEmpty) {
-        alert("Choose at least one department");
+        toast.success("Choose at least one department");
         return false;
       } else if (document.getElementById("agree").checked) {
         return true;
       } else {
-        alert("Please tick the checkbox under instructions to proceed");
+        toast.success("Please tick the checkbox under instructions to proceed");
         return false;
       }
     } else {
       console.log("failed1");
       
-      alert("Please fill the data");
+      toast.success("Please fill the data");
       return false;
     }
   }
@@ -344,10 +340,10 @@ function Quizsignup() {
       //if all fields are entered
 
       if (phone.length != 10) {
-        alert("Please enter a valid mobile number");
+        toast.success("Please enter a valid mobile number");
         return false;
       } else if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
-        alert("Please enter a valid email address.");
+        toast.success("Please enter a valid email address.");
         return false;
       }else if (document.getElementById("agree").checked) {
         return true;
@@ -355,7 +351,7 @@ function Quizsignup() {
     } else {
       console.log("failed");
       
-      alert("Please fill the data");
+      toast.success("Please fill the data");
       return false;
     }
   }
@@ -573,7 +569,7 @@ function Quizsignup() {
       }
 
       if (c > 1) {
-        alert("You can choose a maximum of 1 workshops.");
+        toast.success("You can choose a maximum of 1 workshops.");
         event.target.checked = false;
         c = 2;
       }
@@ -746,11 +742,11 @@ function Quizsignup() {
 
   //       return true;
   //     } else {
-  //       alert("Please tick the checkbox under instructions to proceed");
+  //       toast.success("Please tick the checkbox under instructions to proceed");
   //       return false;
   //     }
   //   } else {
-  //     alert("Please fill the data");
+  //     toast.success("Please fill the data");
   //   }
   // };
   useEffect(() => {
@@ -768,6 +764,7 @@ function Quizsignup() {
 
   return (
     <>
+      <Toaster/>
       <NavBar />
       <br />
       <p className="payform-heading">REGISTRATION FORM</p>
@@ -1270,13 +1267,13 @@ function Quizsignup() {
   //     docdata.email == "" ||
   //     docdata.transaction == ""
   //   ) {
-  //     alert("Please fill up the required fields.");
+  //     toast.success("Please fill up the required fields.");
   //   } else if (docdata.phone.length != 10) {
-  //     alert("phone number should be of length 10.");
+  //     toast.success("phone number should be of length 10.");
   //   } else if (
   //     !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(docdata.email)
   //   ) {
-  //     alert("Please enter a valid email address.");
+  //     toast.success("Please enter a valid email address.");
   //   } else {
   //     setInfo(docdata);
   //   }
@@ -1337,13 +1334,13 @@ function Quizsignup() {
   //     contentType: "application/json",
   //     dataType: "json",
   //     success: function (resultData) {
-  //       alert("Save Complete");
+  //       toast.success("Save Complete");
   //     },
   //     error: function (err) {
   //       console.log("error" + err);
   //     },
   //   });
-  //   alert("Congratulations! You are registered successfully.");
+  //   toast.success("Congratulations! You are registered successfully.");
   //   deletedata();
   //   window.location.reload();
   // }
