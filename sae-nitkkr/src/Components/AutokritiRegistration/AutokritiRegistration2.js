@@ -81,7 +81,7 @@ const AutokritiRegistration2 = ({ submit }) => {
     }, 0);
 
     if (checkedCount3 > 1) {
-      toast.success("You cannot choose both.");
+      toast.error("You cannot choose both.");
       const index = updatedCheckboxes3.findIndex(
         (checkbox) => checkbox.id === id
       );
@@ -120,7 +120,7 @@ const AutokritiRegistration2 = ({ submit }) => {
     }, 0);
 
     if (checkedCount2 > 1) {
-      toast.success("You can choose a maximum of 1 Softwares.");
+      toast.error("You can choose a maximum of 1 Softwares.");
       const index = updatedCheckboxes2.findIndex(
         (checkbox) => checkbox.id === id
       );
@@ -157,7 +157,7 @@ const AutokritiRegistration2 = ({ submit }) => {
     }, 0);
 
     if (checkedCount > 1) {
-      toast.success("You can choose a maximum of 1 workshops.");
+      toast.error("You can choose a maximum of 1 workshops.");
       const index = updatedCheckboxes.findIndex(
         (checkbox) => checkbox.id === id
       );
@@ -252,21 +252,21 @@ const AutokritiRegistration2 = ({ submit }) => {
       );
 
       if (phone.length != 10) {
-        toast.success("Please enter a valid mobile number");
+        toast.error("Please enter a valid mobile number");
         return false;
       } else if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
-        alert("Please enter a valid email address.");
+        toast.error("Please enter a valid email address.");
         return false;
       } else if (count > 2) {
-        alert("You can choose maximum two department");
+        toast.error("You can choose maximum two department");
         return false;
       } else if (allCheckboxesEmpty) {
-        alert("Choose at least one department");
+        toast.error("Choose at least one department");
         return false;
       } else if (document.getElementById("agree").checked) {
         return true;
       } else {
-        alert("Please tick the checkbox under instructions to proceed");
+        toast.error("Please tick the checkbox under instructions to proceed");
         return false;
       }
     } else {
@@ -322,22 +322,23 @@ const AutokritiRegistration2 = ({ submit }) => {
     college: "",
     branch: "",
     semester: "",
-    referal: "",
-    transaction: "",
+    // referal: "",
+    // transaction: "",
     orderid: "",
     paymentid: "",
     timeSlot1: "",
     // timeSlot2: "",
     status: "Registered",
-    mechanical: "",
-    ev: "",
+    // mechanical: "",
+    // ev: "",
     iot: "group2",
-    software: "",
+    // software: "",
     Registration_time: "",
     amount: finalcost,
-    firstChoice: "",
+    // firstChoice: "",
     accomodation: "No",
-    cod: "No",
+    // cod: "No",
+    verified:false
   });
 
 
@@ -488,8 +489,8 @@ const AutokritiRegistration2 = ({ submit }) => {
     //   submit({ ...userData, [name]: check });
     // }
     if (name == "timeSlot1") {
-      if (value == "20-22") {
-        userData.timeSlot1 = "20-22";
+      if (value == "27-29") {
+        userData.timeSlot1 = "27-29";
         // userData.timeSlot2 = "8-11";
         // console.log(userData.timeSlot1);
         // console.log(userData.timeSlot2);
@@ -508,7 +509,7 @@ const AutokritiRegistration2 = ({ submit }) => {
       //   console.log(userData.timeSlot2);
       // }
     }
-    userData.timeSlot1 = "20-22";
+    userData.timeSlot1 = "27-29";
 
     if (name == "accomodation") {
       if (checked == true) {

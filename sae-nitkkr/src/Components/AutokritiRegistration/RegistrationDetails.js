@@ -6,10 +6,11 @@ import toast, { Toaster } from 'react-hot-toast';
 import "./RegistrationDetails.css";
 import {
   collection,
-  getDocs, query, where, doc, setDoc
+  getDocs, query, where, doc, setDoc,orderBy, limit,
 } from "firebase/firestore";
 import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer.js";
+import { icon } from "@fortawesome/fontawesome-svg-core";
 
 var flag = true;
 function RegistrationDetails() {
@@ -19,8 +20,8 @@ function RegistrationDetails() {
   const [loading, setLoading] = useState(false);
   let totalamount = 0;
   useEffect(() => {
-    console.log("run");
-    flag = false;
+    // console.log("run");
+    // flag = false;
     const items = JSON.parse(localStorage.getItem("userData"));
     const depart = JSON.parse(localStorage.getItem("department"));
     const items2 = JSON.parse(localStorage.getItem("userData2"));
@@ -170,9 +171,9 @@ function RegistrationDetails() {
         },
         body: JSON.stringify({ amount }),
       });
-      console.log(result);
+      // console.log(result);
       const order = await result.json();
-  
+      console.log(authorised_user.phone);
       const options = {
         key: 'rzp_test_DpkksCCoV6nye1',
         amount: order.amount,
@@ -183,12 +184,18 @@ function RegistrationDetails() {
         image: { saelogo },
         handler: async (response) => {
           // alert(`Payment successful! Payment ID: ${response.razorpay_payment_id}`);
+          authorised_user.paymentid=response.razorpay_payment_id;
+          authorised_user.orderid=response.razorpay_order_id;
+          if(authorised_user.iot==="group2"){
+            authorised_user2.paymentid=response.razorpay_payment_id;
+            authorised_user2.orderid=response.razorpay_order_id;
+          }
           await secondaryMakePayment();
         },
         prefill: {
           name: 'SAE NIT KURUKSHETRA',
           email: 'saenitkkr@nitkkr.ac.in',
-          contact: '9520417250',
+          contact: `${authorised_user.phone}`,
         },
         theme: {
           color: '#3399cc',
@@ -201,7 +208,7 @@ function RegistrationDetails() {
     }
     catch (error) {
       setLoading(false);
-      toast.success('Something went wrong. Please try again.');
+      toast.error('Something went wrong. Please try again.');
     }
   };
 
@@ -255,87 +262,103 @@ function RegistrationDetails() {
       // alert('Failed to send email');
     }
   }
-  async function isRegistrationIdUnique(registrationId) {
+  // async function isRegistrationIdUnique(registrationId) {
+  //   const usersCollection = collection(db, "AutokritiRegistration2024"); // Replace with your collection name
+  //   const q = query(usersCollection, where("registrationId", "==", registrationId));
+
+  //   try {
+  //     const querySnapshot = await getDocs(q);
+
+  //     if (!querySnapshot.empty) {
+  //       // registrationId is already present
+  //       console.log("Registration ID already exists.");
+  //       return false;
+  //     } else {
+  //       // registrationId is unique
+  //       console.log("Registration ID is unique.");
+  //       return true;
+  //     }
+  //   } catch (error) {
+  //     console.error("Error checking registrationId:", error);
+  //     return false;
+  //   }
+  // }
+  // async function getUniqueRegistrationId() {
+  //   let isUnique = false;
+  //   let registrationId;
+
+  //   while (!isUnique) {
+  //     registrationId = generateRegId();
+  //     isUnique = await isRegistrationIdUnique(registrationId);
+  //   }
+  //   return registrationId;
+  // }
+  // function generateRegId() {
+  //   // Generate a random integer between 100000 and 999999
+  //   const min = 100000;
+  //   const max = 999999;
+  //   const registrationId = Math.floor(Math.random() * (max - min + 1)) + min;
+  //   return registrationId.toString();
+  // }
+  // async function generateRegistrationId() {
+  //   const id = await getUniqueRegistrationId();
+  //   return id;
+  // }
+  async function fetchLatestRegistrationId() {
     const usersCollection = collection(db, "AutokritiRegistration2024"); // Replace with your collection name
-    const q = query(usersCollection, where("registrationId", "==", registrationId));
+    const q = query(usersCollection, orderBy("registrationId", "desc"), limit(1));
 
     try {
       const querySnapshot = await getDocs(q);
-
       if (!querySnapshot.empty) {
-        // registrationId is already present
-        console.log("Registration ID already exists.");
-        return false;
+        const latestDoc = querySnapshot.docs[0];
+        return latestDoc.data().registrationId;
       } else {
-        // registrationId is unique
-        console.log("Registration ID is unique.");
-        return true;
+        return 124001; // Default start registrationId if no documents exist
       }
     } catch (error) {
-      console.error("Error checking registrationId:", error);
-      return false;
+      console.log("Error fetching latest registrationId:", error);
+      return null;
     }
-  }
-  async function getUniqueRegistrationId() {
-    let isUnique = false;
-    let registrationId;
-
-    while (!isUnique) {
-      registrationId = generateRegId();
-      isUnique = await isRegistrationIdUnique(registrationId);
-    }
-    return registrationId;
-  }
-  function generateRegId() {
-    // Generate a random integer between 100000 and 999999
-    const min = 100000;
-    const max = 999999;
-    const registrationId = Math.floor(Math.random() * (max - min + 1)) + min;
-    return registrationId.toString();
-  }
-  async function generateRegistrationId() {
-    const id = await getUniqueRegistrationId();
-    return id;
   }
   const secondaryMakePayment = async () => {
-    setLoading(true);
+    // setLoading(true);
     var newTimestamp = String(new Date().getTime());
-    authorised_user["department"] = department;
-    authorised_user.paymentid = newTimestamp;
-    authorised_user.registrationId = await generateRegistrationId();
-    // console.log(authorised_user.registrationId);
-    console.log(totalamount);
-    if (authorised_user.iot === "group2") {
-      authorised_user2.registrationId = await generateRegistrationId();
-      authorised_user2.paymentid = newTimestamp;
-      authorised_user2["department"] = department;
-      // console.log(authorised_user2.registrationId);
-    }
-    const Saving_user_data2 = authorised_user2;
-    const Saving_user_data = authorised_user;
-    Saving_user_data.Registration_time = new Date().toString();
-    let gotit = await setDoc(
-      doc(db, 'AutokritiRegistration2024', newTimestamp),
-      Saving_user_data
-    )
-    sendEmail(authorised_user);
-    if (authorised_user.iot === "group2") {
-      Saving_user_data2.Registration_time = new Date().toString();
-      sendEmail(authorised_user2)
-      // console.log("saved");
-      let gotit = await setDoc(
-        doc(db, 'AutokritiRegistration2024', newTimestamp),
-        Saving_user_data2
-      )
-      // loadRazorpay(authorised_user.amount+authorised_user2.amount);
-    }
-    setLoading(false);
-    toast.success("Registration Completed")
-    setTimeout(() => {
-      window.location.href = '/'; // Redirect to home page
-    }, 2000);
+    // authorised_user["department"] = department;
+    // // authorised_user.paymentid = newTimestamp;
+    // const latestRegistrationId = await fetchLatestRegistrationId();
+    // authorised_user.registrationId=latestRegistrationId+1;
+    // // console.log(authorised_user.registrationId);
+    // const Saving_user_data2 = authorised_user2;
+    // const Saving_user_data = authorised_user;
+    // Saving_user_data.Registration_time = new Date().toString();
+    // let gotit = await setDoc(
+    //   doc(db, 'AutokritiRegistration2024', newTimestamp),
+    //   Saving_user_data 
+    // )
+    // sendEmail(authorised_user);
+    // if (authorised_user.iot === "group2") {
+    //   var newTimestamp2 = String(new Date().getTime()+1);
+    //   const latestRegistrationId2 = await fetchLatestRegistrationId();
+    //   authorised_user2.registrationId=latestRegistrationId2+1;
+    //   authorised_user2["department"] = department;
+    //   Saving_user_data2.Registration_time = new Date().toString();
+    //   sendEmail(authorised_user2)
+    //   let gotit = await setDoc(
+    //     doc(db, 'AutokritiRegistration2024', newTimestamp2),
+    //     Saving_user_data2
+    //   )
+    //   // loadRazorpay(authorised_user.amount+authorised_user2.amount);
+    // }
+    // setLoading(false);
+    // toast.success("Registration Completed")
+    // setTimeout(() => {
+    //   window.location.href = '/autokriti'; // Redirect to home page
+    // }, 2000);
+    window.location.href=`/makepayment?id=${newTimestamp}`;
   }
   const handlemakepayment = () => {
+    document.getElementById("payform-button1").disabled = true;
     if (authorised_user.iot === "group2") {
       loadRazorpay(authorised_user.amount + authorised_user2.amount)
     }
@@ -362,13 +385,13 @@ function RegistrationDetails() {
           Pay Now
         </button>  */}
         <div style={{display:"flex",alignItems:"center",justifyContent:"center",gap:"10px"}}>
-          <button className="pay-btn" id="payform-button1" onClick={handlemakepayment}>
-            Pay Now
-          </button>
           {loading &&
             <div style={{width:"auto",display:"flex",justifyContent:"center",alignItems:"center",marginTop:"20px"}}>
               <MoonLoader loading={loading} size={25} />
             </div>}
+          <button className="pay-btn" id="payform-button1" onClick={secondaryMakePayment}>
+            Pay Now
+          </button>
         </div>
 
 
@@ -414,7 +437,7 @@ function RegistrationDetails() {
 
           })}
           <tr>
-            <td className="td-first">{department[0]}WORKSHOP</td>
+            <td className="td-first">WORKSHOP</td>
             <td>{authorised_user.timeSlot1} September</td>
           </tr>
           {/* <tr>
@@ -495,7 +518,7 @@ function RegistrationDetails() {
 
             })}
             <tr>
-              <td className="td-first">{department[0]}WORKSHOP</td>
+              <td className="td-first">WORKSHOP</td>
               <td>{authorised_user2.timeSlot1} September</td>
             </tr>
             {/* <tr>
