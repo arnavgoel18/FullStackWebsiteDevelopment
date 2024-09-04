@@ -28,9 +28,9 @@ import { IoIosArrowDropdown } from "react-icons/io";
 //poster
 //import autokriti12poster from "../../../Assets/Autokriti12/Autokriti12poster.jpg";
 import autokriti13poster from "../../../Assets/CheckOurEvents/autokriti13.jpg"
-import cv from "../../../Assets/Autokriti13/cv.webp";
-import iotposter from "../../../Assets/Autokriti13/iot.webp"
-import softwareposter from "../../../Assets/Autokriti13/software.webp"
+import cv from "../../../Assets/Autokriti13/cv-ev posters.webp";
+import iotposter from "../../../Assets/Autokriti13/iot posters.webp"
+import softwareposter from "../../../Assets/Autokriti13/software posters.webp"
 
 export default function AutokritiCard() {
   let software = useRef();
