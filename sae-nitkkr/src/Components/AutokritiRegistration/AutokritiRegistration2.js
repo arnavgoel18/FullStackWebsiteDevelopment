@@ -31,7 +31,7 @@ const AutokritiRegistration2 = ({ submit }) => {
   const [discountedAmount, setDiscountedAmount] = useState(0);
   const [checkboxes, setCheckboxes] = useState([
     { id: "mechanical", label: "Mechanical", price: 1999, checked: false },
-    { id: "iot", label: "IoT", price: 2250, checked: false },
+    { id: "iot", label: "IoT", price: 2500, checked: false },
     { id: "ev", label: "EV", price: 1999, checked: false },
     { id: "software", label: "Software", price: 1999, checked: false },
   ]);
@@ -174,7 +174,7 @@ const AutokritiRegistration2 = ({ submit }) => {
     setCheckboxes(updatedCheckboxes);
     setWorkshopAmount(updatedWorkshopAmount);
     const today = new Date();
-    const discountDeadline = new Date('2024-09-10'); // Change the year if needed
+    const discountDeadline = new Date('2024-09-20'); // Change the year if needed
 
     if (today < discountDeadline) {
       setDiscountedAmount(() => {

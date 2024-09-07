@@ -1,28 +1,36 @@
-[debug] [2024-09-04T08:03:15.275Z] ----------------------------------------------------------------------
-[debug] [2024-09-04T08:03:15.278Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\vipul\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
-[debug] [2024-09-04T08:03:15.279Z] CLI Version:   13.16.0
-[debug] [2024-09-04T08:03:15.279Z] Platform:      win32
-[debug] [2024-09-04T08:03:15.279Z] Node Version:  v20.17.0
-[debug] [2024-09-04T08:03:15.280Z] Time:          Wed Sep 04 2024 13:33:15 GMT+0530 (India Standard Time)
-[debug] [2024-09-04T08:03:15.280Z] ----------------------------------------------------------------------
+[debug] [2024-09-07T13:59:33.934Z] ----------------------------------------------------------------------
+[debug] [2024-09-07T13:59:33.937Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\vipul\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-09-07T13:59:33.938Z] CLI Version:   13.16.0
+[debug] [2024-09-07T13:59:33.938Z] Platform:      win32
+[debug] [2024-09-07T13:59:33.938Z] Node Version:  v20.17.0
+[debug] [2024-09-07T13:59:33.939Z] Time:          Sat Sep 07 2024 19:29:33 GMT+0530 (India Standard Time)
+[debug] [2024-09-07T13:59:33.939Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2024-09-04T08:03:15.362Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2024-09-04T08:03:15.362Z] > authorizing via signed-in user (vipulgoyal776@gmail.com)
-[debug] [2024-09-04T08:03:15.363Z] [iam] checking project saewebsite-8a145 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
-[debug] [2024-09-04T08:03:15.366Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/saewebsite-8a145:testIamPermissions [none]
-[debug] [2024-09-04T08:03:15.366Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/saewebsite-8a145:testIamPermissions x-goog-quota-user=projects/saewebsite-8a145
-[debug] [2024-09-04T08:03:15.367Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/saewebsite-8a145:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
-[debug] [2024-09-04T08:03:17.508Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/saewebsite-8a145:testIamPermissions 200
-[debug] [2024-09-04T08:03:17.508Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/saewebsite-8a145:testIamPermissions {}
-[debug] [2024-09-04T08:03:17.509Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project saewebsite-8a145:
+[debug] [2024-09-07T13:59:33.943Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2024-09-07T13:59:34.071Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-09-07T13:59:34.072Z] > authorizing via signed-in user (vipulgoyal776@gmail.com)
+[debug] [2024-09-07T13:59:34.072Z] [iam] checking project saewebsite-8a145 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-09-07T13:59:34.073Z] > refreshing access token with scopes: []
+[debug] [2024-09-07T13:59:34.074Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-09-07T13:59:34.074Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-09-07T13:59:34.562Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-09-07T13:59:34.563Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-09-07T13:59:34.603Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/saewebsite-8a145:testIamPermissions [none]
+[debug] [2024-09-07T13:59:34.603Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/saewebsite-8a145:testIamPermissions x-goog-quota-user=projects/saewebsite-8a145
+[debug] [2024-09-07T13:59:34.604Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/saewebsite-8a145:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-09-07T13:59:34.884Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2024-09-07T13:59:34.884Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2024-09-07T13:59:36.655Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/saewebsite-8a145:testIamPermissions 200
+[debug] [2024-09-07T13:59:36.655Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/saewebsite-8a145:testIamPermissions {}
+[debug] [2024-09-07T13:59:36.655Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project saewebsite-8a145:
 
   firebase.projects.get
   firebasehosting.sites.update
-[debug] [2024-09-04T08:03:17.510Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/saewebsite-8a145 [none]
-[debug] [2024-09-04T08:03:18.583Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/saewebsite-8a145 403
-[debug] [2024-09-04T08:03:18.583Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/saewebsite-8a145 {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
-[debug] [2024-09-04T08:03:18.585Z] HTTP Error: 403, The caller does not have permission
-[debug] [2024-09-04T08:03:19.006Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+[debug] [2024-09-07T13:59:36.656Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/saewebsite-8a145 [none]
+[debug] [2024-09-07T13:59:37.686Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/saewebsite-8a145 403
+[debug] [2024-09-07T13:59:37.687Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/saewebsite-8a145 {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2024-09-07T13:59:37.689Z] HTTP Error: 403, The caller does not have permission
+[debug] [2024-09-07T13:59:38.063Z] FirebaseError: HTTP Error: 403, The caller does not have permission
     at responseToError (C:\Users\vipul\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:49:12)
     at RetryOperation._fn (C:\Users\vipul\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:305:77)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)

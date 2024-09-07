@@ -1,7 +1,7 @@
 import "./CheckOurEvents.css";
 import React, { useState } from "react";
 import Autokriti2 from "../../../Assets/CheckOurEvents/Autokriti2.webp";
-import Autokriti13 from '../../../Assets/CheckOurEvents/autokriti13.jpg'
+import Autokriti13 from '../../../Assets/CheckOurEvents/coming soon copy.jpg'
 import Au2Poster from "../../../Assets/CheckOurEvents/Au2Poster.webp";
 import autokriti12poster from "../../../Assets/Autokriti12/Autokriti12poster.jpg";
 import campusAmbass from '../../../Assets/CheckOurEvents/CampusAmbassador.png'

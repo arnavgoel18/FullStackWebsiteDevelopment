@@ -33,7 +33,7 @@ function Quizsignup() {
   const [discountedAmount, setDiscountedAmount] = useState(0);
   const [checkboxes, setCheckboxes] = useState([
     { id: "Mechanical", label: "Mechanical", price: 1999, checked: false },
-    { id: "IOT", label: "IoT", price: 2450, checked: false },
+    { id: "IOT", label: "IoT", price: 2500, checked: false },
     { id: "EV + PCB Designing", label: "EV + PCB Designing", price: 1999, checked: false },
     { id: "Software", label: "Software", price: 1999, checked: false },
   ]);
@@ -45,8 +45,8 @@ function Quizsignup() {
     { id: "nx", label: "NX", checked: false }
   ]);
   const [iotoptions, setIotoptions] = useState([
-    { id: "individual", label: "Individuals", price: 2450, checked: false },
-    { id: "group2", label: "Group2", price: 2250, checked: false },
+    { id: "individual", label: "Individuals", price: 2500, checked: false },
+    { id: "group2", label: "Group2", price: 2500, checked: false },
   ])
   const [show2, setShow2] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -158,7 +158,7 @@ function Quizsignup() {
     );
     setWorkshopAmount(updatedWorkshopAmount);
     const today = new Date();
-    const discountDeadline = new Date('2024-09-10'); // Change the year if needed
+    const discountDeadline = new Date('2024-09-20'); // Change the year if needed
 
     if (today < discountDeadline) {
       setDiscountedAmount(() => {
@@ -193,7 +193,7 @@ function Quizsignup() {
     );
     setWorkshopAmount(updatedWorkshopAmount);
     const today = new Date();
-    const discountDeadline = new Date('2024-09-10'); // Change the year if needed
+    const discountDeadline = new Date('2024-09-20'); // Change the year if needed
 
     if (today < discountDeadline) {
       setDiscountedAmount(() => {

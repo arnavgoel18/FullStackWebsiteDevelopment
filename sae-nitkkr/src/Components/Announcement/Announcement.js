@@ -28,15 +28,12 @@ const Announcement = () => {
 
             <span>Welcome to SAE NIT KURUKSHETRA !   </span>
               <span>Autokriti 14.0 Registration Started !!</span> 
-            <span>10% off on Registration upto 10 September</span>
+            <span>10% off on Registration upto 20 September</span>
             <span></span>
         </div>
-
         <div className="announcemnt-text text2">
-            
             {/* <span>  <a href="/autokriti#ambassador">Click here </a> to register as Campus Ambassador. </span> */}
             {/* <button onClick={navigateToContact}>Click here to register</button> */}
-
         </div>
         </Marquee>
     </div>

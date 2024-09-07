@@ -33,7 +33,7 @@ function Autokriti(){
             <AutokritiEvent/>
             {/* <Autokirtee12/> */}
             
-            {/* <CheckOurEvents/> */}
+            <CheckOurEvents/>
             <AutokritiCard/>
             {/* <Saga/> */}
             {/* <BrandAmbassador/> */}
