@@ -19,7 +19,7 @@ function SecondaryPaymentPage() {
   const [authorised_user, setauthorised_user] = useState({});
   const [authorised_user2, setauthorised_user2] = useState({});
   const [loading, setLoading] = useState(false);
-  let totalamount = 0;
+  const [amount,setAmount] = useState(0);
   useEffect(() => {
     // console.log("run");
     // flag = false;
@@ -30,11 +30,26 @@ function SecondaryPaymentPage() {
     if (items) {
       setauthorised_user(items);
       setDepartment(depart);
+      if (items.amount) {
+        setAmount(items.amount);
+      }
     }
     if (items2) {
       setauthorised_user2(items2);
+      if (items2.amount) {
+        setAmount((prev) => prev + items2.amount);
+      }
     }
   }, []);
+  // useEffect(()=>{
+  //   if (authorised_user) {
+  //     setAmount(authorised_user.amount);
+  //   }
+  //   if (authorised_user2) {
+  //     setAmount((prev)=> prev+authorised_user2.amount)
+  //   }
+  //   console.log(amount);
+  // },[])
   const sendEmail = async (userDetails) => {
     try {
       const response = await fetch('https://sae-backend.vercel.app/send-email', {
@@ -146,10 +161,10 @@ function SecondaryPaymentPage() {
         <p>Due to some Reasons our Payment Gateway is disabled for now. &#128546;</p>
       </div>
       <div className='payform-container'>
-        <div style={{ display: "flex", justifyContent: "center" }} >
+        <div style={{ display: "flex",flexDirection:"column", alignItems:"center",gap:"10px",justifyContent: "center" }} >
           <img src={PAYTMQR} height="500" width="300" />
+          <h3 style={{fontSize:"30px"}}>Amount to be Paid: {amount}</h3>
         </div>
-
       </div>
       <h4 className="payform-heading">Upload the Screenshot of Payment Made:</h4>
       <div className='payform-container'>
