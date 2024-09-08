@@ -64,6 +64,30 @@ const Registrationdata = (props) => {
             console.error("Image URL is not available.");
         }
     };
+    const sendEmail = async (userDetails) => {
+        try {
+          const response = await fetch('https://sae-backend.vercel.app/verify-email', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(userDetails)
+          });
+    
+          const result = await response.json();
+          // console.log(response);
+          if (response.ok) {
+            // alert(result.message);
+          } else {
+            // alert(result.error);
+          }
+        } catch (error) {
+          console.error('Error:', error);
+          return;
+          // alert('Failed to send email');
+        }
+      }
+
     const verifyuser = async () => {
         try {
             const userDocRef = doc(db, "AutokritiRegistration2024", props.id); // Reference to the document
@@ -74,7 +98,7 @@ const Registrationdata = (props) => {
         } catch (error) {
             console.error("Error updating document: ", error);
         }
-
+        sendEmail(props)
         if (props.iot === "group2" && props.groupid != "") {
             try {
                 const userDocRef = doc(db, "AutokritiRegistration2024", props.groupid); // Reference to the document
