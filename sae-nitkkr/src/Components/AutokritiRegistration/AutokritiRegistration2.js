@@ -324,7 +324,7 @@ const AutokritiRegistration2 = ({ submit }) => {
     semester: "",
     // referal: "",
     // transaction: "",
-    orderid: "",
+    // orderid: "",
     paymentid: "",
     timeSlot1: "",
     // timeSlot2: "",
@@ -338,7 +338,8 @@ const AutokritiRegistration2 = ({ submit }) => {
     // firstChoice: "",
     accomodation: "No",
     // cod: "No",
-    verified:false
+    verified:false,
+    groupid:"",
   });
 
 

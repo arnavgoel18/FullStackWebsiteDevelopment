@@ -505,7 +505,6 @@ function Quizsignup() {
     branch: "",
     semester: "",
     // referal: "",
-    orderid: "",
     paymentid: "",
     timeSlot1: "",
     // timeSlot2: "",
@@ -517,7 +516,8 @@ function Quizsignup() {
     Registration_time: "",
     amount: finalcost,
     accomodation: "No",
-    cod: "No",
+    verified:false,
+    groupid:"",
   });
 
   let name, value, checked, type;
@@ -855,7 +855,7 @@ function Quizsignup() {
       <NavBar />
       <br />
       <p className="payform-heading">REGISTRATION FORM</p>
-      <div className="payform-container">
+      <div className="payform-container-2">
         <div method="POST" className="payform-form">
           <div className="field">
             {" "}
@@ -1293,7 +1293,7 @@ function Quizsignup() {
             </p> */}
             <p className="instruction_para">
               * In case of any issue or payment failure, please contact-<br />
-              Vipul Goyal +91-9520417250
+              Govind +91-9602562300
               Sourav +91-9306356371
             </p>
             {/*  <p className="instruction_para">* Referal IDs are case-sensitive</p> */}

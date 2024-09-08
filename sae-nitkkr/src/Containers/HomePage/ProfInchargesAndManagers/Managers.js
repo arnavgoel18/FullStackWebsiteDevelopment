@@ -6,6 +6,7 @@ import manager2 from "../../../Assets/ProfIncharges/Umesh Kumar.jpeg";
 import manager3 from "../../../Assets/ProfIncharges/Aditya Dabral.jpg";
 import manager4 from "../../../Assets/ProfIncharges/Asmita Singh.jpg";
 import manager5 from "../../../Assets/ProfIncharges/sourav.jpg";
+import manager6 from "../../../Assets/Teammembers/Govind.jpg";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 function Managers() {
@@ -57,6 +58,14 @@ function Managers() {
             linkedin={"https://www.linkedin.com/in/sourav-kumar-691270284"}
             email={"mailto:101souravkumar@gamil.com"}
           />
+          <PersonCard
+            name={"Govind Kumar Mahawar"}
+            designation={"Student Program Chairperson"}
+            page={"manager"}
+            url={manager6}
+            linkedin={"https://www.linkedin.com/in/govind-kumar-mahawar-955570259/"}
+            email={"govindmahawar960@gmail.com"}
+            />
         </div>
         <Link to="/Teammembers">
           <p className="know-more-text">

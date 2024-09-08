@@ -84,6 +84,8 @@ import icon232 from "../../Assets/Teammembers/Arjun Joshi.jpeg";
 import icon233 from "../../Assets/Teammembers/priyanshu.jpg";
 import icon234 from "../../Assets/Teammembers/atharva.jpg";
 import icon235 from "../../Assets/Teammembers/yashGarg.jpeg";
+import icon236 from "../../Assets/Teammembers/Sunny.jpg"
+import icon237 from "../../Assets/Teammembers/sahil.jpg";
 export const Alumni = [
   {
     id: 3,
@@ -91,7 +93,7 @@ export const Alumni = [
     name: "Vaibhav Dharmani",
     Team: "Accelerons",
     metadata: {
-      position1: "President",
+      position1: "Ex-President",
     },
     Department: "Vehicle Dynamics",
     LinkedIn: "https://www.linkedin.com/in/vaibhav-dharmani-aa91a7199",
@@ -103,7 +105,7 @@ export const Alumni = [
     name: "Himanshu Khatri",
     Team: "Nitrox",
     metadata: {
-      position1: "Vice-President",
+      position1: "Ex-Vice-President",
       position2: "Captain",
     },
     Department: "Transmission",
@@ -117,7 +119,7 @@ export const Alumni = [
     name: "Vinay Saini",
     Team: "Accelerons",
     metadata: {
-      position1: "Secretary",
+      position1: "Ex-Secretary",
     },
     Department: "Transmission",
     LinkedIn: "https://www.linkedin.com/in/vinay-saini-6a3044241",
@@ -129,7 +131,7 @@ export const Alumni = [
     name: "Lisha Garg",
     Team: "Nitrox",
     metadata: {
-      position1: "Secretary",
+      position1: "Ex-Secretary",
     },
     Department: "BMS,DAQ",
     LinkedIn: "https://www.linkedin.com/in/lisha-garg-61373a211",
@@ -141,7 +143,7 @@ export const Alumni = [
     name: "Yash Arora",
     Team: "Accelerons",
     metadata: {
-      position1: "Captain",
+      position1: "Ex-Captain",
     },
     Department: "Engine, Transmission",
     LinkedIn: "https://www.linkedin.com/in/yash-arora-0b2027215/",
@@ -153,7 +155,7 @@ export const Alumni = [
     name: "Bhupeksh Kaushik",
     Team: "Accelerons",
     metadata: {
-      position1: "Vice-Captain",
+      position1: "Ex-Vice-Captain",
     },
     Department: "Mechanical",
     LinkedIn: "https://www.linkedin.com/in/bhupeksh-kaushik-360424222",
@@ -165,7 +167,7 @@ export const Alumni = [
     name: "Anmol",
     Team: "Nitrox",
     metadata: {
-      position1: "Vice-caption",
+      position1: "Ex-Vice-caption",
     },
     Department: "Transmission",
     LinkedIn: "https://www.linkedin.com/in/anmol-chaudhary-278a22225/",
@@ -177,7 +179,7 @@ export const Alumni = [
     name: "Manikya",
     Team: "Accelerons",
     metadata: {
-      position1: "EV-Head",
+      position1: "Ex-EV-Head",
     },
     LinkedIn: "https://www.linkedin.com/in/10manikya/",
     Email: "NA@gmail.com",
@@ -188,7 +190,7 @@ export const Alumni = [
     name: "Parv Sarin",
     Team: "Nitrox",
     metadata: {
-      position1: "EV-Head",
+      position1: "Ex-EV-Head",
     },
     LinkedIn: "https://www.Linkedin.com/in/parv-sarin",
     Email: "Parvsarin01@gmail.com",
@@ -200,7 +202,7 @@ export const Alumni = [
     name: "Keshav Kumar Singh",
     Team: "Accelerons",
     metadata: {
-      position1: "Treasure Head",
+      position1: "Ex-Treasure Head",
     },
     Department: "Vehicle Dynamics",
     LinkedIn: "https://www.linkedin.com/in/keshav-k-singh/",
@@ -212,7 +214,7 @@ export const Alumni = [
     name: "Kritika Agrawal",
     Team: "IT Team",
     metadata: {
-      position1: "IT-Head",
+      position1: "Ex-IT-Head",
     },
     LinkedIn: "https://www.linkedin.com/in/kritikaagra/",
     Email: "kritika_12017030@nitkkr.ac.in",
@@ -224,7 +226,7 @@ export const Alumni = [
     name: "Navneet Raj",
     Team: "Nitrox",
     metadata: {
-      position1: "DAQ Head",
+      position1: "Ex-DAQ Head",
     },
     Department: "DAQ, IT-Team",
     LinkedIn: "https://www.linkedin.com/in/navneet-raj-94395a182",
@@ -237,7 +239,7 @@ export const Alumni = [
     name: "Aniruddha Dubey",
     Team: "Nitrox",
     metadata: {
-      position1: "Procurement Head",
+      position1: "Ex-Procurement Head",
     },
     Department: "EV",
     LinkedIn: "https://www.linkedin.com/in/aniruddha-dubey-811074189/",
@@ -526,6 +528,18 @@ export const Details4yr = [
     Email: "govindmahawar960@gmail.com",
   },
   {
+    id: 6,
+    img: icon35,
+    name: "Vivek Kumar",
+    Team: "Nitrox",
+    metadata:{
+      position1:"Treasurer"
+    },
+    Department: "Vehicle Dynamics",
+    LinkedIn: "https://www.linkedin.com/in/vivek-kumar-787b96237",
+    Email: "vicky746586@gmail.com",
+  },
+  {
     id: 18,
     img: icon318,
     name: "Rahul Meena",
@@ -533,9 +547,22 @@ export const Details4yr = [
     Department: "Vehicle Dynamics",
     metadata: {
       position1: "Media Head",
+      position2:"Procurement Head"
     },
     LinkedIn: "https://www.linkedin.com/in/rahul-kumar-meena-797138256/",
     Email: "rahulkm4723@gmail.com",
+  },
+  {
+    id: 19,
+    img: icon320,
+    name: "Harpreet Singh",
+    Team: "Nitrox",
+    metadata:{
+      position1:"Media Head"
+    },
+    Department: "Transmission",
+    LinkedIn: "https://www.linkedin.com/in/harpreet-singh-16bb83286/",
+    Email: "NA@gmail.com",
   },
   {
     id: 4,
@@ -559,24 +586,6 @@ export const Details4yr = [
     LinkedIn: "https://www.linkedin.com/in/rahul-siloniya-64776a231",
     Email: "rsiloniya@gmail.com",
     github: "https://github.com/rahulsiloniya",
-  },
-  {
-    id: 6,
-    img: icon35,
-    name: "Vivek Kumar",
-    Team: "Nitrox",
-    Department: "Vehicle Dynamics",
-    LinkedIn: "https://www.linkedin.com/in/vivek-kumar-787b96237",
-    Email: "vicky746586@gmail.com",
-  },
-  {
-    id: 19,
-    img: icon320,
-    name: "Harpreet Singh",
-    Team: "Nitrox",
-    Department: "Transmission",
-    LinkedIn: "https://www.linkedin.com/in/harpreet-singh-16bb83286/",
-    Email: "NA@gmail.com",
   },
   {
     id: 10,
@@ -726,15 +735,6 @@ export const Details3yr = [
     Email: "mahajanatharva43@gmail.com",
   },
   {
-    id: 9,
-    img: icon29,
-    name: "Neha",
-    Team: "Accelerons",
-    Department: "Brakes",
-    LinkedIn: "https://www.linkedin.com/in/neha-%F0%9F%8C%B8-3230bb284/",
-    Email: "12216124@nitkkr.ac.in",
-  },
-  {
     id: 16,
     img: icon216,
     name: "Lakshmi narayan",
@@ -771,22 +771,13 @@ export const Details3yr = [
     Email: "12216052@nitkkr.ac.in",
   },
   {
-    id: 13,
-    img: icon213,
-    name: "Sanjana",
-    Team: "Accelerons",
-    Department: "Transmission",
-    LinkedIn: "",
-    Email: "sanjanakatopuri@gmail.com",
-  },
-  {
-    id: 15,
-    img: icon215,
-    name: "Neha Bhadu",
-    Team: "Nitrox",
-    Department: "Transmission",
-    LinkedIn: "",
-    Email: "nehabhadu104@gmail.com ",
+    id:37,
+    img:icon237,
+    name:"Sahil",
+    Team:"Accelerons",
+    Department:"Transmission",
+    LinkedIn:"https://www.linkedin.com/in/sahil-meena-160628260/",
+    Email:"sahilghusinga@gmail.com",
   },
   {
     id: 24,
@@ -879,24 +870,6 @@ export const Details3yr = [
     Email: "12215078@nitkkr.ac.in",
   },
   {
-    id: 26,
-    img: icon226,
-    name: "Shivam Raj",
-    Team: "Accelerons",
-    Department: "DAQ",
-    LinkedIn: "https://www.linkedin.com/in/rajshivam157/",
-    Email: "Rajshivam0432@gmail.com",
-  },
-  {
-    id: 27,
-    img: icon227,
-    name: "Ankit Saini",
-    Team: "Nitrox",
-    Department: "DAQ",
-    LinkedIn: "",
-    Email: "ankitaashish121@gmail.com",
-  },
-  {
     id: 35,
     img: icon235,
     name: "Yash Garg",
@@ -905,4 +878,13 @@ export const Details3yr = [
     LinkedIn: "https://www.linkedin.com/in/yash-garg-566417281",
     Email: "Ygarg423@gmail.com",
   },
+  {
+    id: 36,
+    img: icon236,
+    name: "Sunny",
+    Team: "IT Team",
+    Department: "",
+    LinkedIn: "https://www.linkedin.com/in/sunny-sabharwal-761009289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app ",
+    Email: "sunnysabharwal2233@gmail.com",
+  }
 ];

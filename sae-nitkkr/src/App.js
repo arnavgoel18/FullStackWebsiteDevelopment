@@ -70,7 +70,7 @@ import Cart from "./Containers/Cart/Cart";
 
 import SecondaryPaymentPage from "./Containers/SecondaryPaymentPage/SecondaryPaymentPage";
 import TeammembersPage from "./Containers/TeammembersPage/teammembersPage.js";
-
+import Adminpanel from "./Components/AutokritiRegistration/Adminpanel.js";
 function App() {
   document.title = "SAE NIT Kurukshetra";
   return (
@@ -100,7 +100,8 @@ function App() {
               exact
               component={() => <Merchandise />}
             />
-
+            <Route path="/admin" exact component={()=><Adminpanel/>}/>
+            <Route path="/login" exact component={()=><AdminLogin/>}/>
             <Route
               path="/merchandise/tshirt"
               exact

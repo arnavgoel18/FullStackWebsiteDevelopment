@@ -9,17 +9,25 @@ import {
   collection,
   getDocs, query, where, doc, setDoc, orderBy, limit,
 } from "firebase/firestore";
+import {toast,Toaster} from 'react-hot-toast';
 
 function SecondaryPaymentPage() {
   const params = new URL(document.location).searchParams;
   const timestamp = params.get("id");
-  console.log(timestamp);
+  // console.log(timestamp);
   const [image, setImage] = useState('');
   let [department, setDepartment] = useState([]);
   const [authorised_user, setauthorised_user] = useState({});
   const [authorised_user2, setauthorised_user2] = useState({});
   const [loading, setLoading] = useState(false);
   const [amount,setAmount] = useState(0);
+  const [transactionid,setTransactionid] = useState(0);
+  // const upiID = "9389755501@ybl"; // Replace with your UPI ID
+  // const payeeName = "Vivek Kumar"; // Replace with your name
+  // const transactionNote = "Payment for autokriti"; // Reason for the payment
+  // const totalamount = amount; // Amount to pay (you can leave it blank if dynamic)
+  // const currency = "INR"; // Currency (INR for India)
+  // const upiLink = `upi://pay?pa=${upiID}&pn=${payeeName}&tn=${transactionNote}&am=${amount}&cu=${currency}`;
   useEffect(() => {
     // console.log("run");
     // flag = false;
@@ -91,6 +99,15 @@ function SecondaryPaymentPage() {
     }
   }
   const upload = async() => {
+    if(image===''){
+      toast.error('Please upload Screenshot')
+      return;
+    }
+    if(transactionid===0 || !transactionid){
+      toast.error('Plase Provide Transaction ID')
+      return;
+    }
+
     document.getElementById("payform-button1").disabled = true;
     document.getElementById("payform-button1").style.background = "grey";
     setLoading(true);
@@ -102,8 +119,14 @@ function SecondaryPaymentPage() {
     const coverPhotoRef = ref(storage, `/AutokritiRegistration2024/${timestamp}`);
     authorised_user["department"] = department;
     authorised_user.paymentid = timestamp;
+    authorised_user.transactionid=transactionid;
     const latestRegistrationId = await fetchLatestRegistrationId();
     authorised_user.registrationId=latestRegistrationId+1;
+    if(authorised_user2.iot==="group2"){
+      let increasedTimestamp = Number(timestamp) + 1;
+      var newTimestamp2 = String(increasedTimestamp);
+      authorised_user.groupid=newTimestamp2;
+    }
     console.log(authorised_user.registrationId);
     const Saving_user_data2 = authorised_user2;
     const Saving_user_data = authorised_user;
@@ -112,16 +135,16 @@ function SecondaryPaymentPage() {
       doc(db, 'AutokritiRegistration2024', timestamp),
       Saving_user_data 
     )
-    // sendEmail(authorised_user);
+    sendEmail(authorised_user);
     if (authorised_user.iot === "group2") {
-      let currentTimestampString = String(new Date().getTime());
-      let increasedTimestamp = Number(currentTimestampString) + 1;
+      let increasedTimestamp = Number(timestamp) + 1;
       var newTimestamp2 = String(increasedTimestamp);
       const latestRegistrationId2 = await fetchLatestRegistrationId();
       authorised_user2.registrationId=latestRegistrationId2+1;
       authorised_user2["department"] = department;
+      authorised_user2.transactionid = transactionid;
       Saving_user_data2.Registration_time = new Date().toString();
-      // sendEmail(authorised_user2) 
+      sendEmail(authorised_user2) 
       let gotit = await setDoc(
         doc(db, 'AutokritiRegistration2024', newTimestamp2),
         Saving_user_data2
@@ -151,9 +174,9 @@ function SecondaryPaymentPage() {
     // });
 
   }
-
   return (
     <>
+      <Toaster/>
       <NavBar />
       <br />
       <p className="payform-heading">SCAN THIS QR TO MAKE YOUR PAYMENT</p>
@@ -163,13 +186,15 @@ function SecondaryPaymentPage() {
       <div className='payform-container'>
         <div style={{ display: "flex",flexDirection:"column", alignItems:"center",gap:"10px",justifyContent: "center" }} >
           <img src={PAYTMQR} height="500" width="300" />
-          <h3 style={{fontSize:"30px"}}>Amount to be Paid: {amount}</h3>
+          <p>UPI ID: 9389755501@ybl</p>
+          <h3 style={{fontSize:"30px"}}>Amount to be Paid: {amount} /-</h3>
         </div>
       </div>
       <h4 className="payform-heading">Upload the Screenshot of Payment Made:</h4>
-      <div className='payform-container'>
-        <input type="file" width="200"
+      <div className='payform-container-3'>
+        <input type="file" style={{width:"unset"}}
           onChange={(e) => { setImage(e.target.files[0]) }} />
+        <input type="text" style={{width:"unset"}} placeholder='Enter Transaction ID' onChange={(e)=>setTransactionid(e.target.value)}/>
       </div>
       <div id="paynow">
         <button

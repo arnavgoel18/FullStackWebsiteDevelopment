@@ -8,9 +8,9 @@ import Footer from "../../../Components/Footer/Footer";
 import Carousel from "../../../Components/Carousel/Carousel";
 
 //These are autokriti 13 posters
-import Au2Poster from "../../../Assets/Autokriti13/cv.webp";
-import El2Poster from "../../../Assets/Autokriti13/iot.webp"
-import Sof2Poster from "../../../Assets/Autokriti13/software.webp"
+import Au2Poster from "../../../Assets/Autokriti13/cv-ev posters (2).webp";
+import El2Poster from "../../../Assets/Autokriti13/iot posters (1).webp"
+import Sof2Poster from "../../../Assets/Autokriti13/software posters (1).webp"
 
 //aut0kriti 13poster
 import autokriti13 from "../../../Assets/CheckOurEvents/autokriti13.jpg"
@@ -41,32 +41,40 @@ function Autorkriti12() {
         <div className='about_autokriti-left'>
           <h2 className='about_autokrit-left-heading'>
             Details of{' '}
-            <b className='about_autokrit-left-subheading'> Autokriti 13</b>{' '}
+            <b className='about_autokrit-left-subheading'> Autokriti 14</b>{' '}
             Workshop
           </h2>
           <p>
-            Interested in automobiles, but don’t know where to start? Let this
-            be your first stepping stone to the redefined world of mobility.
-            Join Autokriti 13 and be a part of this remaking.
-            <br />
-            <br />
-            From overhauling of a 2 stroke engine of a scooter in Autokriti 1 to
-            Porsche Cayenne Engine in Autokriti 11, we have always matched our
-            steps with innovation. It is our determination to keep up with the
-            ever-changing technology that makes us North India’s largest
-            automobile workshop. To continue our endeavour of knowledge sharing,
-            we are here with Autokriti 13. This time it will be a ride on both
-            CV and EV, not a rash one but a safe and steady one.
-            <b> #ChargedReality</b>
-            <br />
-            <br />
-            There are four workshops in Autokriti 13: CV, EV, IoT and Software.
-            All these workshops will help you create a proper theoretical as
-            well as practical understanding of their domain. You shall get a
-            personalised learning experience on physical models. Along with all
-            these, the workshop will have guest lectures from some reputed
-            dignitaries. Please visit the content of these workshops for more
-            details.
+          Interested in automobiles but unsure where to begin? Let this be your
+          gateway to the future of mobility. Join us for Autokriti 14.0 and
+          become a part of the revolution
+          <br />
+          <br />
+          From dismantling a 2-stroke engine of a scooter in Autokriti 1.0 to
+          exploring the intricacies of a Porsche Cayenne engine in Autokriti
+          11.0, we have consistently aligned ourselves with cutting-edge
+          innovation. Our commitment to staying abreast of evolving technology
+          has solidified our status as North India's largest automotive
+          workshop. In our ongoing pursuit of knowledge sharing, we proudly
+          present Autokriti 14.0.
+          <br />
+          <br />
+          This year, we're set to explore the future of mobility under the theme
+          <b> Fueling the Future </b>, focusing on a journey that’s safe,
+          steady, and insightful
+          <br />
+          <br />
+          Autokriti 14.0 features four dynamic workshops: Combustion Vehicles
+          (CV), Electric Vehicles (EV), Internet of Things (IoT), and Software.
+          Each workshop is meticulously designed to offer both theoretical
+          insights and hands-on practical experience, ensuring a comprehensive
+          understanding of the respective fields.
+          <br />
+          <br />
+          You'll have the opportunity to engage with physical models for a more
+          personalized learning experience. Additionally, the event will include
+          guest lectures by esteemed industry experts. Dive into the future with
+          us and explore the content of these workshops for more details.
           </p>
           <Link to='/autokriti/register'>
             <button>Register Here!</button>

@@ -385,7 +385,7 @@ function VerticalTimeline() {
           }}
         >
           {" "}
-          <h4 style={{ color: "blue", marginBottom: "15px" }}>Solidworks</h4>
+          <h4 style={{ color: "blue", marginBottom: "15px" }}>Solidworks/Catia/Siemens NX</h4>
           <p>
             1. Installation <br />
             2. Introduction to UI <br />
@@ -404,6 +404,18 @@ function VerticalTimeline() {
           <p>2. Design and Structural Analysis of components</p>{" "}
           <p>3. Design and Thermal Analysis of components</p>{" "}
           <p>4. Computational Fluid Analysis</p>
+          <br />
+          {/* <h4 style={{ color: "blue", marginBottom: "15px" }}>Catia</h4>
+          <p>1. Introduction to Ansys</p>
+          <p>2. Design and Structural Analysis of components</p>{" "}
+          <p>3. Design and Thermal Analysis of components</p>{" "}
+          <p>4. Computational Fluid Analysis</p>
+          <br />
+          <h4 style={{ color: "blue", marginBottom: "15px" }}>Seimens NX</h4>
+          <p>1. Introduction to Ansys</p>
+          <p>2. Design and Structural Analysis of components</p>{" "}
+          <p>3. Design and Thermal Analysis of components</p>{" "}
+          <p>4. Computational Fluid Analysis</p> */}
         </TimelineItem>
       </Timeline>
     </>

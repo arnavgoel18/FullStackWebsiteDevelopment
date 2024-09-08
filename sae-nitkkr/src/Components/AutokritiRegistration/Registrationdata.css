@@ -1,0 +1,44 @@
+/* Registrationdata.css */
+.registration-data {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 5px;
+    background-color: #f9f9f9;
+    display: flex;
+  }
+  
+  .registration-data h2 {
+    margin-top: 0;
+    color: #333;
+  }
+  
+  .registration-data p {
+    margin: 5px 0;
+    color: #555;
+  }
+  
+  .registration-data p strong {
+    color: #222;
+  }
+  
+  .verify-button{
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    align-items: center;
+  }
+  .btn-verify{
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    background-color: #1f63f8;
+    color: white;
+    cursor: pointer;    
+  }
+  .btn-view{
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+  }

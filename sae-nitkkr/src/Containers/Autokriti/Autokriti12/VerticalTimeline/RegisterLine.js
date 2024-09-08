@@ -23,31 +23,23 @@ function RegisterLine() {
             <li>Softwares</li>
           </ul>
           <br />
-          You can choose Max 2 Departments
+          You can choose Max 1 Departments
         </p>
         <p>2. Each Department/Workshop is 3 Days long</p>
         <p>
-          3. If you choose 1 workshop, your total duration will be 4 Days. 3
-          Days Workshop + 1 Day Guest Lecture
+          5. Each workshop (except IOT) is <b>2000/- INR</b>. IOT workshop is <b>2500/- INR</b>
         </p>
         <p>
-          4. If you choose 2 workshops, your total duration will be 7 Days. 3
-          Days Workshop (Department 1) + 1 Day Guest Lecture + 3 Days Workshop
-          (Department 2)
-        </p>
-        <p>
-          5. Each workshop (except IOT) is <b>2500/- INR</b>. IOT workshop is <b>2750/- INR</b>
-        </p>
-        <p>
-          6. Accomodation and Food is <b>750/-</b> Extra per Slot
+          6. Accomodation and Food is <b>279/-</b> Per Day
         </p>
         <p>
           7. For any queries on type of accomodation or food service, please
-          contact us{" "}
-          <Link to="/contactus" style={{ color: "blue" }}>
+          contact{" "}
+          {/* <Link to="/contactus" style={{ color: "blue" }}>
             {" "}
             here
-          </Link>
+          </Link> */}
+          Vivek : 9389755501
         </p>
         <h4>
           {" "}
