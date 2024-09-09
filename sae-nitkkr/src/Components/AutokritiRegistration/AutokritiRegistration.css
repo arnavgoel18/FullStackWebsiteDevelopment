@@ -18,6 +18,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 .instruction_para
 {
@@ -108,7 +109,7 @@
 #paynow
 {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -414,6 +415,11 @@ margin-top: 5px;
   }
 }
 
+@media (max-width: 547px){
+  .payform-container-3{
+    gap: 20px;
+  }
+}
 @media screen and (min-width: 720px){
   .payform-checkbox{
     position: relative;

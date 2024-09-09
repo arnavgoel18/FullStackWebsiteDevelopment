@@ -94,7 +94,7 @@ const Registrationdata = (props) => {
             await updateDoc(userDocRef, {
                 verified: true, // Set the verified field to true
             });
-            console.log("User has been verified!");
+            // console.log("User has been verified!");
         } catch (error) {
             console.error("Error updating document: ", error);
         }
@@ -105,7 +105,10 @@ const Registrationdata = (props) => {
                 await updateDoc(userDocRef, {
                     verified: true, // Set the verified field to true
                 });
-                console.log("User has been verified!");
+                if(userData){
+                    sendEmail(userData)
+                }
+                // console.log("User has been verified!");
             } catch (error) {
                 console.error("Error updating document: ", error);
             }

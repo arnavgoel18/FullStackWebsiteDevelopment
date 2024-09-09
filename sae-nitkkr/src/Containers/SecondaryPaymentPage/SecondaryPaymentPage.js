@@ -9,7 +9,8 @@ import {
   collection,
   getDocs, query, where, doc, setDoc, orderBy, limit,
 } from "firebase/firestore";
-import {toast,Toaster} from 'react-hot-toast';
+import { toast, Toaster } from 'react-hot-toast';
+import MoonLoader from "react-spinners/MoonLoader.js";
 
 function SecondaryPaymentPage() {
   const params = new URL(document.location).searchParams;
@@ -20,8 +21,8 @@ function SecondaryPaymentPage() {
   const [authorised_user, setauthorised_user] = useState({});
   const [authorised_user2, setauthorised_user2] = useState({});
   const [loading, setLoading] = useState(false);
-  const [amount,setAmount] = useState(0);
-  const [transactionid,setTransactionid] = useState(0);
+  const [amount, setAmount] = useState(0);
+  const [transactionid, setTransactionid] = useState(0);
   // const upiID = "9389755501@ybl"; // Replace with your UPI ID
   // const payeeName = "Vivek Kumar"; // Replace with your name
   // const transactionNote = "Payment for autokriti"; // Reason for the payment
@@ -98,20 +99,20 @@ function SecondaryPaymentPage() {
       return null;
     }
   }
-  const upload = async() => {
-    if(image===''){
+  const upload = async () => {
+    if (image === '') {
       toast.error('Please upload Screenshot')
       return;
     }
-    if(transactionid===0 || !transactionid){
+    if (transactionid === 0 || !transactionid) {
       toast.error('Plase Provide Transaction ID')
       return;
     }
 
+    setLoading(true);
     document.getElementById("payform-button1").disabled = true;
     document.getElementById("payform-button1").style.background = "grey";
-    setLoading(true);
-    if (image == null){
+    if (image == null) {
       setLoading(false)
       return;
     }
@@ -119,13 +120,13 @@ function SecondaryPaymentPage() {
     const coverPhotoRef = ref(storage, `/AutokritiRegistration2024/${timestamp}`);
     authorised_user["department"] = department;
     authorised_user.paymentid = timestamp;
-    authorised_user.transactionid=transactionid;
+    authorised_user.transactionid = transactionid;
     const latestRegistrationId = await fetchLatestRegistrationId();
-    authorised_user.registrationId=latestRegistrationId+1;
-    if(authorised_user2.iot==="group2"){
+    authorised_user.registrationId = latestRegistrationId + 1;
+    if (authorised_user2.iot === "group2") {
       let increasedTimestamp = Number(timestamp) + 1;
       var newTimestamp2 = String(increasedTimestamp);
-      authorised_user.groupid=newTimestamp2;
+      authorised_user.groupid = newTimestamp2;
     }
     console.log(authorised_user.registrationId);
     const Saving_user_data2 = authorised_user2;
@@ -133,24 +134,24 @@ function SecondaryPaymentPage() {
     Saving_user_data.Registration_time = new Date().toString();
     let gotit = await setDoc(
       doc(db, 'AutokritiRegistration2024', timestamp),
-      Saving_user_data 
+      Saving_user_data
     )
     sendEmail(authorised_user);
     if (authorised_user.iot === "group2") {
       let increasedTimestamp = Number(timestamp) + 1;
       var newTimestamp2 = String(increasedTimestamp);
       const latestRegistrationId2 = await fetchLatestRegistrationId();
-      authorised_user2.registrationId=latestRegistrationId2+1;
+      authorised_user2.registrationId = latestRegistrationId2 + 1;
       authorised_user2["department"] = department;
       authorised_user2.transactionid = transactionid;
       Saving_user_data2.Registration_time = new Date().toString();
-      sendEmail(authorised_user2) 
+      sendEmail(authorised_user2)
       let gotit = await setDoc(
         doc(db, 'AutokritiRegistration2024', newTimestamp2),
         Saving_user_data2
       )
     }
-    
+
     // toast.success("Registration Completed")
     uploadBytes(coverPhotoRef, image).then((res) => {
       setLoading(false);
@@ -176,7 +177,7 @@ function SecondaryPaymentPage() {
   }
   return (
     <>
-      <Toaster/>
+      <Toaster />
       <NavBar />
       <br />
       <p className="payform-heading">SCAN THIS QR TO MAKE YOUR PAYMENT</p>
@@ -184,19 +185,23 @@ function SecondaryPaymentPage() {
         <p>Due to some Reasons our Payment Gateway is disabled for now. &#128546;</p>
       </div>
       <div className='payform-container'>
-        <div style={{ display: "flex",flexDirection:"column", alignItems:"center",gap:"10px",justifyContent: "center" }} >
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "10px", justifyContent: "center" }} >
           <img src={PAYTMQR} height="500" width="300" />
           <p>UPI ID: 9389755501@ybl</p>
-          <h3 style={{fontSize:"30px"}}>Amount to be Paid: {amount} /-</h3>
+          <h3 style={{ fontSize: "30px" }}>Amount to be Paid: {amount} /-</h3>
         </div>
       </div>
       <h4 className="payform-heading">Upload the Screenshot of Payment Made:</h4>
       <div className='payform-container-3'>
-        <input type="file" style={{width:"unset"}}
+        <input type="file" style={{ width: "unset" }}
           onChange={(e) => { setImage(e.target.files[0]) }} />
-        <input type="text" style={{width:"unset"}} placeholder='Enter Transaction ID' onChange={(e)=>setTransactionid(e.target.value)}/>
+        <input type="text" style={{ width: "unset" }} placeholder='Enter Transaction ID' onChange={(e) => setTransactionid(e.target.value)} />
       </div>
       <div id="paynow">
+        {loading &&
+          <div style={{ width: "auto", display: "flex", justifyContent: "center", alignItems: "center", marginTop: "20px" }}>
+            <MoonLoader loading={loading} size={30} />
+          </div>}
         <button
           className="payform-button"
           id="payform-button1"
