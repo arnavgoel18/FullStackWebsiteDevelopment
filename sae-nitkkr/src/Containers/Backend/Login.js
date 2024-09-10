@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Login.css";
 import man_sitting from "../../Assets/LoginPageLogos/man_sitting.webp";
+import toast, { Toaster } from 'react-hot-toast';
 
 function Login() {
   const [email, setemail] = useState();
@@ -18,6 +19,7 @@ function Login() {
       });
 
       if (!response.ok) {
+        toast.error("Invalid email or password");
         throw new Error('Invalid email or password');
       }
 
@@ -36,51 +38,54 @@ function Login() {
     }
   };
     return (
-      <div id="logincontainer">
-        <div id="loginbox">
-          <div id="loginlogo">
-            {" "}
-            <img id="login_man-sitting" src={man_sitting} alt="" />
-          </div>
-          <div id="loginmain">
-            <div id="logincompo1">
+      <>
+        <Toaster/>
+        <div id="logincontainer">
+          <div id="loginbox">
+            <div id="loginlogo">
               {" "}
-              <h2 id="h2comp1">Login For SAE ADMIN</h2>{" "}
+              <img id="login_man-sitting" src={man_sitting} alt="" />
             </div>
-            <br />
-            <div id="logincompo2">
-              {" "}
-              <input
-                type="text"
-                id="loginadmin"
-                class="con"
-                placeholder="Admin"
-                onChange={(e) => {
-                  setemail(e.target.value);
-                }}
-              />
-            </div>
-            <div id="logincompo3">
-              {" "}
-              <input
-                type="password"
-                id="loginpass"
-                class="con"
-                placeholder="Password"
-                onChange={(e) => {
-                  setpassword(e.target.value);
-                }}
-              />
-            </div>
-            <br />
-            <div id="logincompo4">
-              <button id="loginbut" onClick={handleLogin}>
-                LOGIN
-              </button>
+            <div id="loginmain">
+              <div id="logincompo1">
+                {" "}
+                <h2 id="h2comp1">Login For SAE ADMIN</h2>{" "}
+              </div>
+              <br />
+              <div id="logincompo2">
+                {" "}
+                <input
+                  type="text"
+                  id="loginadmin"
+                  class="con"
+                  placeholder="Admin"
+                  onChange={(e) => {
+                    setemail(e.target.value);
+                  }}
+                />
+              </div>
+              <div id="logincompo3">
+                {" "}
+                <input
+                  type="password"
+                  id="loginpass"
+                  class="con"
+                  placeholder="Password"
+                  onChange={(e) => {
+                    setpassword(e.target.value);
+                  }}
+                />
+              </div>
+              <br />
+              <div id="logincompo4">
+                <button id="loginbut" onClick={handleLogin}>
+                  LOGIN
+                </button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </>
     );
 }
 
