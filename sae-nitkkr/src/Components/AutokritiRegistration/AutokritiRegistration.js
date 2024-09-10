@@ -141,33 +141,33 @@ function Quizsignup() {
   //     updatedCheckboxes2[index].checked = false;
   //   }
   // }
-  const handleiotcategory=(event)=>{
-    const iotcategory=event.target.value
-    setCategory(iotcategory);
-    if(iotcategory==="group2"){
-      setShow2(true);
-    }
-    else{
-      setShow2(false);
-    }
-    const updatedWorkshopAmount = iotoptions.reduce(
-      (total, checkbox) => {
-        return total + (checkbox.id === iotcategory ? checkbox.price : 0);
-      },
-      0
-    );
-    setWorkshopAmount(updatedWorkshopAmount);
-    const today = new Date();
-    const discountDeadline = new Date('2024-09-20'); // Change the year if needed
+  // const handleiotcategory=(event)=>{
+  //   const iotcategory=event.target.value
+  //   setCategory(iotcategory);
+  //   if(iotcategory==="group2"){
+  //     setShow2(true);
+  //   }
+  //   else{
+  //     setShow2(false);
+  //   }
+  //   const updatedWorkshopAmount = iotoptions.reduce(
+  //     (total, checkbox) => {
+  //       return total + (checkbox.id === iotcategory ? checkbox.price : 0);
+  //     },
+  //     0
+  //   );
+  //   setWorkshopAmount(updatedWorkshopAmount);
+  //   const today = new Date();
+  //   const discountDeadline = new Date('2024-09-20'); // Change the year if needed
 
-    if (today < discountDeadline) {
-      setDiscountedAmount(() => {
-        return parseInt(updatedWorkshopAmount * 0.9);
-      });
-    } else {
-      setDiscountedAmount(parseInt(updatedWorkshopAmount));
-    }
-  }
+  //   if (today < discountDeadline) {
+  //     setDiscountedAmount(() => {
+  //       return parseInt(updatedWorkshopAmount * 0.9);
+  //     });
+  //   } else {
+  //     setDiscountedAmount(parseInt(updatedWorkshopAmount));
+  //   }
+  // }
   const [subsoftware ,setsubsoftware]=useState([]);
   const handleSoftwareChange = (event)=>{
     const software = event.target.value;
@@ -1110,7 +1110,7 @@ function Quizsignup() {
                 </div>
               </div>
             }
-            {isIOT &&
+            {/* {isIOT &&
               <div>
                 <span>Register As:</span>
                 <div className="main-chheckbox">
@@ -1149,7 +1149,7 @@ function Quizsignup() {
                 </div>
                 {windowWidth < 1130 && show2 && <AutokritiRegistration2 submit={setGetuserdata2} />}
               </div>
-            }
+            } */}
 
             {/* <div className="main-chheckbox">
               <div className="department-checkbox">
@@ -1275,7 +1275,7 @@ function Quizsignup() {
             </div>
           </div>
         </div>
-        {windowWidth >= 1130 && show2 && <AutokritiRegistration2 submit={setGetuserdata2} />}
+        {/* {windowWidth >= 1130 && show2 && <AutokritiRegistration2 submit={setGetuserdata2} />} */}
         <div className="payform-infocontain">
           <div className="payform-info">
             <FaInfoCircle /> &nbsp;{" "}
