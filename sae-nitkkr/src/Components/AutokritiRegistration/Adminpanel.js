@@ -65,6 +65,7 @@ const Adminpanel = () => {
             iot={user.iot}
             groupid={user.groupid}
             verified={user.verified}
+            transactionid={user.transactionid}
             id={user.id}
           />
         );

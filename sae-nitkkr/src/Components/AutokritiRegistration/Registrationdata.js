@@ -34,7 +34,7 @@ const Registrationdata = (props) => {
     }, [props.iot, props.groupid]);
 
     useEffect(() => {
-        console.log(props.id);
+        // console.log(props.id);
 
         const fetchImageUrl = async () => {
             try {
@@ -56,7 +56,7 @@ const Registrationdata = (props) => {
             const link = document.createElement('a');
             link.href = imageUrl; // URL of the image from Firebase Storage
             link.setAttribute('download', `downloaded_image_${props.id}.jpg`); // Set the download attribute with the file name
-            // link.setAttribute('target', '_blank'); // Open in a new tab
+            link.setAttribute('target', '_blank'); // Open in a new tab
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link); // Clean up
@@ -133,6 +133,8 @@ const Registrationdata = (props) => {
                 <p><strong>Amount:</strong> {props.amount}</p>
                 <p><strong>Time Slot 1:</strong> {props.timeSlot1}</p>
                 <p><strong>Registration ID:</strong> {props.registrationId}</p>
+                <p><strong>Transaction ID:</strong>{props.transactionid}</p>
+                <p></p>
                 {props.iot==="group2" &&
                     <p><strong>IOT:</strong> group of Two</p>
                 }
