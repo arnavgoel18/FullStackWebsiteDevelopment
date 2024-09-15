@@ -673,12 +673,11 @@ function Quizsignup() {
         // console.log(userData.timeSlot1);
         // console.log(userData.timeSlot2);
       }
-      // else {
-      //   userData.timeSlot2 = "5-8";
-      //   userData.timeSlot1 = "8-11";
-      //   // console.log(userData.timeSlot1);
-      //   // console.log(userData.timeSlot2);
-      // }
+      else if(value === "4-6") {
+        userData.timeSlot1 = "4-6";
+        // console.log(userData.timeSlot1);
+        // console.log(userData.timeSlot2);
+      }
       // if (value == "25-28") {
       //   userData.timeSlot1 = "25-28";
       //   console.log(userData.timeSlot1);
@@ -1232,7 +1231,7 @@ function Quizsignup() {
                 <option value="DEFAULT">--None Selected--</option>
                 {/*<option value="22-25">22-25 September</option>*/}
                 <option value="27-29">27-29 September</option>
-                {/* <option value="8-11"></option> */}
+                <option value="4-6">4-6 October</option>
               </select>
             </div>
           </div>

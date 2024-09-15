@@ -438,7 +438,7 @@ function RegistrationDetails() {
           })}
           <tr>
             <td className="td-first">WORKSHOP</td>
-            <td>{authorised_user.timeSlot1} September</td>
+            <td>{authorised_user.timeSlot1==="27-29"?"27-29 September":"4-6 October"}</td>
           </tr>
           {/* <tr>
             <td className="td-first">{department[0]} WORKSHOP</td>
