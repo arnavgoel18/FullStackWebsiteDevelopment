@@ -182,7 +182,7 @@ function SecondaryPaymentPage() {
       <br />
       <p className="payform-heading">SCAN THIS QR TO MAKE YOUR PAYMENT</p>
       <div className='payform-container'>
-        <p>Due to some Reasons our Payment Gateway is disabled for now. &#128546;</p>
+        {/* <p>Due to some Reasons our Payment Gateway is disabled for now. &#128546;</p> */}
       </div>
       <div className='payform-container'>
         <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "10px", justifyContent: "center" }} >
