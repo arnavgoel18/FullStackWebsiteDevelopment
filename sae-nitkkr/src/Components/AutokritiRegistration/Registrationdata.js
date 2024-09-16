@@ -9,6 +9,7 @@ const Registrationdata = (props) => {
     const [userData, setUserData] = useState(null);
     const [imageUrl, setImageUrl] = useState(null);
     const [isVerified, setIsVerified] = useState(props.verified);
+    const [isCancelled,setIscancelled] = useState(props.cancelled);
     useEffect(() => {
         // Ensure that the hook runs only when props.iot is "group2" and groupid is not empty
         if (props.iot === "group2" && props.groupid != "") {
@@ -87,7 +88,29 @@ const Registrationdata = (props) => {
           // alert('Failed to send email');
         }
       }
-
+      const sendCancelEmail = async (userDetails) => {
+        try {
+          const response = await fetch('https://sae-backend.vercel.app/cancel-email', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(userDetails)
+          });
+    
+          const result = await response.json();
+          // console.log(response);
+          if (response.ok) {
+            // alert(result.message);
+          } else {
+            // alert(result.error);
+          }
+        } catch (error) {
+          console.error('Error:', error);
+          return;
+          // alert('Failed to send email');
+        }
+      }
     const verifyuser = async () => {
         try {
             const userDocRef = doc(db, "AutokritiRegistration2024", props.id); // Reference to the document
@@ -114,6 +137,20 @@ const Registrationdata = (props) => {
             }
         }
         setIsVerified(true)
+    }
+
+    const cancelUser= async()=>{
+        try {
+            const userDocRef = doc(db, "AutokritiRegistration2024", props.id); // Reference to the document
+            await updateDoc(userDocRef, {
+                cancelled: true, // Set the verified field to true
+            });
+            // console.log("User has been verified!");
+        } catch (error) {
+            console.error("Error updating document: ", error);
+        }
+        sendCancelEmail(props)
+        setIscancelled(true);
     }
     if (props.iot === "group2" && props.groupid === "") {
         return null; // Don't render anything if no groupid is provided
@@ -159,7 +196,7 @@ const Registrationdata = (props) => {
                 )
             }
             <div className='verify-button' style={{ gap: "20px" }}>
-                {!isVerified && (
+                {!isVerified && !isCancelled && (
                     imageUrl ? (
                         <div className='verify-button'>
                             <img src={imageUrl} alt="Uploaded file" style={{ width: '200px', height: '200px' }} onClick={handleDownload} />
@@ -171,9 +208,16 @@ const Registrationdata = (props) => {
                     )
                 )
                 }
-                <button className='btn-verify' onClick={isVerified ? null : verifyuser} // Only allow click if not verified
-                    disabled={isVerified} // Disable button if verified
-                    style={{ backgroundColor: isVerified && 'gray' }} >{isVerified ? "verified" : "verify"}</button>
+                <div style={{display:'flex' ,gap:"20px"}}>
+                    {!isCancelled &&
+                        <button className='btn-verify' onClick={isVerified ? null : verifyuser} // Only allow click if not verified
+                            disabled={isVerified} // Disable button if verified
+                            style={{ backgroundColor: isVerified && 'gray' }} >{isVerified ? "verified" : "verify"}</button>
+                    }
+                    {!isVerified && 
+                    <button className='btn-verify' disabled={isCancelled} style={{ backgroundColor: isCancelled && 'gray' }} onClick={isCancelled ? null:cancelUser}>{isCancelled ? "cancelled" : "cancel"}</button>
+                    }
+                </div>
             </div>
         </div>
     );

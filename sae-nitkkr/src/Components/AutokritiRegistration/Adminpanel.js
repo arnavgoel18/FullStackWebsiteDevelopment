@@ -67,6 +67,7 @@ const Adminpanel = () => {
             verified={user.verified}
             transactionid={user.transactionid}
             id={user.id}
+            cancelled={user.cancelled}
           />
         );
       })}

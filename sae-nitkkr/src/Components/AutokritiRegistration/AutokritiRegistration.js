@@ -518,6 +518,7 @@ function Quizsignup() {
     accomodation: "No",
     verified:false,
     groupid:"",
+    cancelled:false,
   });
 
   let name, value, checked, type;
