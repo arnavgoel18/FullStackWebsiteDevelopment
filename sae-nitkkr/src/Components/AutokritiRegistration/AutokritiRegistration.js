@@ -193,7 +193,7 @@ function Quizsignup() {
     );
     setWorkshopAmount(updatedWorkshopAmount);
     const today = new Date();
-    const discountDeadline = new Date('2024-09-20'); // Change the year if needed
+    const discountDeadline = new Date('2024-09-21'); // Change the year if needed
 
     if (today < discountDeadline) {
       setDiscountedAmount(() => {
