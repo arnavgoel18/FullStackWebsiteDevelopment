@@ -32,7 +32,10 @@ const Registrationdata = (props) => {
 
             fetchUserById();
         }
-    }, [props.iot, props.groupid]);
+        // console.log(props.verified," ",props.cancelled);
+        setIsVerified(props.verified)
+        setIscancelled(props.cancelled)
+    }, [props.iot, props.groupid,props.verified,props.cancelled]);
 
     useEffect(() => {
         // console.log(props.id);
@@ -138,7 +141,6 @@ const Registrationdata = (props) => {
         }
         setIsVerified(true)
     }
-
     const cancelUser= async()=>{
         try {
             const userDocRef = doc(db, "AutokritiRegistration2024", props.id); // Reference to the document

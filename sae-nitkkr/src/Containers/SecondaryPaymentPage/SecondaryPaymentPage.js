@@ -34,7 +34,7 @@ function SecondaryPaymentPage() {
     // flag = false;
     const items = JSON.parse(localStorage.getItem("userData"));
     const depart = JSON.parse(localStorage.getItem("department"));
-    const items2 = JSON.parse(localStorage.getItem("userData2"));
+    // const items2 = JSON.parse(localStorage.getItem("userData2"));
 
     if (items) {
       setauthorised_user(items);
@@ -43,12 +43,12 @@ function SecondaryPaymentPage() {
         setAmount(items.amount);
       }
     }
-    if (items2) {
-      setauthorised_user2(items2);
-      if (items2.amount) {
-        setAmount((prev) => prev + items2.amount);
-      }
-    }
+    // if (items2) {
+    //   setauthorised_user2(items2);
+    //   if (items2.amount) {
+    //     setAmount((prev) => prev + items2.amount);
+    //   }
+    // }
   }, []);
   // useEffect(()=>{
   //   if (authorised_user) {

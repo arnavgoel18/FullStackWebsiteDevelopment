@@ -42,3 +42,58 @@
     border-radius: 10px;
     cursor: pointer;
   }
+
+  .filter-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px; /* Adds space between buttons */
+    justify-content: center; /* Centers the buttons */
+}
+
+.filter-buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter-buttons button:hover {
+    background-color: #0056b3;
+}
+
+.filter-buttons button.active {
+    background-color: #28a745; /* Green color for the active button */
+    font-weight: bold;
+}
+
+.filter-buttons button:focus {
+    outline: none;
+}
+
+.college-filter-input {
+  width: 100%;
+  max-width: 300px; /* Limit the maximum width */
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  border: 1px solid #ccc; /* Light grey border */
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  margin-right: 20px;
+}
+
+.college-filter-input:focus {
+  outline: none;
+  border-color: #007bff; /* Blue border on focus */
+  box-shadow: 0 4px 6px rgba(0, 123, 255, 0.3); /* Highlighted shadow on focus */
+}
+
+.college-filter-input::placeholder {
+  color: #aaa; /* Light grey placeholder text */
+}
+

@@ -60,7 +60,8 @@
     "uuid": "^8.3.2",
     "vertical-timeline": "^2.0.0",
     "vertical-timeline-component-for-react": "^1.0.7",
-    "web-vitals": "^1.1.2"
+    "web-vitals": "^1.1.2",
+    "xlsx": "^0.18.5"
   },
   "scripts": {
     "start": "react-scripts start",

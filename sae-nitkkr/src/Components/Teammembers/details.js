@@ -57,7 +57,6 @@ import icon23 from "../../Assets/Teammembers/danish.jpg";
 import icon26 from "../../Assets/Teammembers/mukul.jpg";
 import icon27 from "../../Assets/Teammembers/IMG_8766 - Abhishek.jpeg";
 import icon28 from "../../Assets/Teammembers/pritam.jpg";
-import icon29 from "../../Assets/Teammembers/IMG_20230424_173056_927 - NEHA NEHA.jpg";
 import icon210 from "../../Assets/Teammembers/IMG_20230718_175019 - Sahaj Srivastava.jpg";
 import icon211 from "../../Assets/Teammembers/Vipul Goyal.jpg";
 import icon212 from "../../Assets/Teammembers/IMG-20230718-WA0006~2 - Daksh Singh Chauhan.jpg";
@@ -70,7 +69,6 @@ import icon218 from "../../Assets/Teammembers/somaa - SOMYA ARORA.jpg";
 import icon219 from "../../Assets/Teammembers/hemant2.jpeg";
 import icon220 from "../../Assets/Teammembers/photograph - Sarvagya Agrawal.jpg";
 import icon221 from "../../Assets/Teammembers/sarthak anand.jpg";
-import icon222 from "../../Assets/Teammembers/Akash.jpg";
 import icon223 from "../../Assets/Teammembers/Abhay Rana.jpg";
 import icon224 from "../../Assets/Teammembers/Jatin.jpg";
 import icon225 from "../../Assets/Teammembers/ankit rathore.jpg";
@@ -823,15 +821,6 @@ export const Details3yr = [
     Department: "Electrical",
     LinkedIn: "https://www.linkedin.com/in/sarvagya-agrawal-5371a3258/",
     Email: "12214084@nitkkr.ac.in",
-  },
-  {
-    id: 22,
-    img: icon222,
-    name: "Akash",
-    Team: "Accelerons",
-    Department: "DAQ",
-    LinkedIn: "https://www.linkedin.com/in/akash-jindhar-a97648294",
-    Email: "akashjindhar@gmail.com",
   },
   {
     id: 11,
