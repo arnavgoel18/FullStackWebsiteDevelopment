@@ -1232,7 +1232,7 @@ function Quizsignup() {
                 <option value="DEFAULT">--None Selected--</option>
                 {/*<option value="22-25">22-25 September</option>*/}
                 <option value="27-29">27-29 September</option>
-                <option value="4-6">4-6 October</option>
+                {/* <option value="4-6">4-6 October</option> */}
               </select>
             </div>
           </div>
