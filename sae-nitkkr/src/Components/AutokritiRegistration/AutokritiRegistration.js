@@ -440,6 +440,8 @@ function Quizsignup() {
   }
   //to save data in local storage and render to payment page
   function savetoLocal() {
+    toast.error("Registration Closed");
+    return;
     localStorage.removeItem("userData");
     localStorage.removeItem("department");
     localStorage.removeItem("userData2");
