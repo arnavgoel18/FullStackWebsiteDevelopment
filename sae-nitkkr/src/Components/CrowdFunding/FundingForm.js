@@ -74,7 +74,7 @@ export default function FundingForm() {
   }
 
   //form validation
-  function validateForm(fundingdata, checkbox) {
+  const validateForm = async (fundingdata, checkbox) => {
     if (
       fundingdata.amount == ""  ||
        fundingdata.FirstName == "" ||
@@ -96,7 +96,7 @@ export default function FundingForm() {
      else if (checkbox.checked == false) {
       alert("Please accept the terms and condition.");
     } else if(parseInt(fundingdata.amount) >= 20000){
-      saveDatabase(fundingdata);
+      await saveDatabase(fundingdata);
       var bankDetails = document.getElementById("bank_details");
       bankDetails.style.display = "flex";
     }else{

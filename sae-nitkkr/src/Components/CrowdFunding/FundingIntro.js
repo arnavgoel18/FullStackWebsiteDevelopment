@@ -39,7 +39,7 @@ export default function CrowdFunding({ netAmount, amountReceived }) {
           <div className='cf_helpText'>
             <b>help us achieve our goal</b>
             {/* <a href='/crowdfunding#funding_form'> */}
-            <a href='/crowdfunding#'>
+            <a href='/crowdfunding/form'>
               <button className='cf_button'>
                 {' '}
                 <b style={{ color: '#fff' }}>DONATE</b>

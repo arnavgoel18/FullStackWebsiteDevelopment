@@ -1,0 +1,90 @@
+
+.form-container {
+	margin: 20px auto;
+    max-width: 600px;
+    padding: 20px;
+    /* border: 1px solid #ccc; */
+    border-radius: 8px;
+    /* background-color: #f9f9f9; */
+}
+.progressbar-outerdiv{
+	margin-top: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.progress-bar {
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 20px;
+	width: 80%;
+}
+
+.progress {
+    height: 100%;
+    background-color: #76c7c0;
+    transition: width 0.3s ease;
+}
+
+.input-full-name, .input-dob, .select-gender, .input-contact-number, .input-email, .textarea-current-address, .textarea-permanent-address,
+.select-graduation-year, .select-branch, .input-branch-other, .input-roll-number, .select-hostel, .select-scholarship,
+.select-occupation, .input-occupation-other, .input-company-name, .input-designation, .input-work-experience, .input-key-skills,
+.input-linkedin, .input-website, .select-mentor, .select-contribute, .input-photograph {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.checkbox-email, .checkbox-phone, .checkbox-whatsapp,
+.checkbox-postal,.checkbox-terms-agreement, .checkbox-data-consent{
+	width: 5%;
+	display: inline-block;
+	margin: 10px 0;
+}
+
+.preferredmode-of-comm{
+	display: flex;
+	flex-direction: row;
+	/* justify-content: center; */
+	align-items: center;
+}
+
+.btn-prev, .btn-next, .btn-submit {
+    width: auto;
+    background-color: #76c7c0;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 5px;
+}
+
+.btn-prev:hover, .btn-next:hover, .btn-submit:hover {
+    background-color: #5aa9a4;
+}
+
+.step-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+	text-align: center;
+}
+.label-communication-mode{
+	display: block;
+	margin-bottom: 10px;
+	font-size: 14px;
+	color: #555;
+}
+.label-terms-agreement, .label-data-consent {
+    display: flex;
+	align-items: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #555;
+}

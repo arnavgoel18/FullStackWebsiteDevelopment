@@ -73,6 +73,10 @@ import TeammembersPage from "./Containers/TeammembersPage/teammembersPage.js";
 import Adminpanel from "./Components/AutokritiRegistration/Adminpanel.js";
 import RegistrationDataExport from "./Components/AutokritiRegistration/RegistrationDataExport.js";
 import RegistrationDataFiltered from "./Components/AutokritiRegistration/RegistrationDataFiltered.js";
+import FundingForm from "./Components/CrowdFunding/FundingForm.js";
+import DonationForm from "./Containers/Crowdfunding2024/DonationForm.js";
+import Alumniregistration from "./Components/Alumni/Alumniregistration.js";
+import CrowdfundingPage from "./Containers/Crowdfunding2024/CrowdFunding.js";
 function App() {
   document.title = "SAE NIT Kurukshetra";
   return (
@@ -269,7 +273,17 @@ function App() {
             <Route
               path="/crowdfunding"
               exact
-              component={() => <CrowdFunding />}
+              component={() => <CrowdfundingPage />}
+            />
+            <Route
+              path="/alumni"
+              exact
+              component={() => <Alumniregistration />}
+            />
+            <Route
+              path="/crowdfunding/form"
+              exact
+              component={()=> <DonationForm />}
             />
             <Route
               path="/admin/crowdfunding"

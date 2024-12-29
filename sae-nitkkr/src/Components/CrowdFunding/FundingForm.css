@@ -1,4 +1,4 @@
-input,
+/* input,
 textArea {
   width: 100%;
   padding: 12px 20px;
@@ -7,7 +7,7 @@ textArea {
   border-radius: 5px;
   box-sizing: border-box;
   margin: 10px;
-}
+} */
 #check {
   width: 50px;
 }
