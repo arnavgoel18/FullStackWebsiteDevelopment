@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import "./CrowdFunding-styles.css";
 import Footer from '../../Components/Footer/Footer';
 import NavBar from '../../Components/NavBar/NavBar';
-import heroimage from "../../Assets/Crowdfunding2024/hero-image.jpg"
-import nitrox from "../../Assets/Crowdfunding2024/nitrox.jpg";
-import accelerons from "../../Assets/Crowdfunding2024/accelerons.jpg";
+import heroimage from "../../Assets/Crowdfunding2024/hero-image.webp"
+import nitrox from "../../Assets/Crowdfunding2024/nitrox.webp";
+import accelerons from "../../Assets/Crowdfunding2024/accelerons.webp";
 const CrowdfundingPage = () => {
   const progress = {
     raised: 250000,
