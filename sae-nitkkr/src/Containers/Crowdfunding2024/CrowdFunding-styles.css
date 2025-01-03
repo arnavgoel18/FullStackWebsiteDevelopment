@@ -12,28 +12,30 @@
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent);
+  background: linear-gradient(to bottom, transparent,rgba(0, 0, 0, 0.7));
 }
 
 .hero-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.8;
+  /* opacity: 0.8; */
 }
-
+.progress-bar-container .contributors-0{
+  width: 350px;
+}
 .hero-content {
   position: relative;
   z-index: 10;
-  text-align:left;
+  text-align:right;
   color: white;
   padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: start;
+  align-items: end;
   margin-top: 14rem;
-  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .hero-content h1 {
@@ -49,18 +51,22 @@
 }
 
 .progress-bar-container {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 1rem;
-  border-radius: 8px;
-  backdrop-filter: blur(5px);
+  display: flex;
   max-width: 800px;
-  width: 100%;
+  gap: 2rem;
+  font-size: 1.7rem;
+  flex-wrap: wrap;
 }
 
 .progress-bar-stats {
   display: flex;
-  justify-content: space-between;
+  padding: 1rem;
+  backdrop-filter: blur(5px);
+  justify-content: center;
   color: white;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  width: 260px;
 }
 
 .progress-bar-bg {
@@ -79,8 +85,13 @@
 
 .progress-bar-info {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 1rem;
+  backdrop-filter: blur(5px);
   color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.1);
+  width: 260px;
 }
 
 .contribute-button {
@@ -99,6 +110,10 @@
   background: darkcyan;
 }
 @media (max-width:835px){
+  .progress-bar-container{
+    align-items: center;
+    justify-content: center;
+  }
   .hero-content{
     margin-top: 12rem;
   }
@@ -109,7 +124,7 @@
     text-align: center;
     align-items: center;
     margin-top: 9rem;
-    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -121,17 +136,21 @@
   }
 }
 
-@media (max-width:380px){
-  .hero-content{
-    text-align: center;
-    align-items: center;
-    margin-top: 4rem;
+@media (max-width:420px){
+  .progress-bar-container .contributors-0{
+    width: 90%;
   }
 }
 
-@media (max-width:280px){
+@media (max-width:372px){
   .hero-content{
+    text-align: center;
+    align-items: center;
     margin-top: 3rem;
+  }
+  .progress-bar-container{
+    font-size: 1.25rem;
+    gap: 1rem;
   }
 }
 
@@ -144,9 +163,22 @@
   }
 }
 
+@media (max-width:280px){
+  .hero-content{
+    margin-top: 3rem;
+  }
+}
+
+
 @media (max-width:285px){
   .hero-content h1{
     font-size: 2rem;
+  }
+  .progress-bar-stats{
+    width: 220px;
+  }
+  .progress-bar-info{
+    width: 220px;
   }
 }
 
