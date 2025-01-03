@@ -1,5 +1,5 @@
 import "./FirstDisplayDIV.css";
-import PictureH from "../../Assets/FirstDisplayDiv/HomePage_FirstDIV.webp";
+import PictureH from "../../Assets/FirstDisplayDiv/Homepage_hero.webp";
 import PictureAc from "../../Assets/FirstDisplayDiv/TeamAccelerons_FirstDIV.webp";
 import PictureN from "../../Assets/FirstDisplayDiv/TeamNitrox_FirstDIV.webp";
 import PictureAu from "../../Assets/FirstDisplayDiv/Autokriti_FirstDIV.webp";
@@ -25,14 +25,32 @@ function FirstDisplayDiv(props) {
     Picture = PictureAu;
     text1 = "AUTOKRITI";
   }
+  if(props.page === "Home"){
+    return (
+      <div className='FirstDisplayDIV-main-container homepage__div'>
+        <img alt='SOS' loading='eager' src={Picture}></img>
+        <div className="homepage_div__content">
+          <span>
+            SAE
+            <br />
+            NIT Kurukshetra
+          </span>
+          <span>
+            SAE Unity Drive<br/>
+            Is Live
+          </span>
+        </div>
+      </div>
+    )
+  }
   return (
     <>
       <div className='FirstDisplayDIV-main-container'>
         <img alt='SOS' loading='eager' src={Picture}></img>
         <p>
-          {text1}
+          SAE
           <br />
-          {text2}
+          NIT Kurukshetra
         </p>
       </div>
     </>
