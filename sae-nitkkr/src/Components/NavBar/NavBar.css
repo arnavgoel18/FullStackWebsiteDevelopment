@@ -107,7 +107,7 @@
     .NavigationBar_Nav-nav-links.active{
         background: #000;
         left: 0;
-        z-index: 5;
+        z-index: 100;
         top: 50px;
     }
     .NavigationBar_Nav-nav-item{
