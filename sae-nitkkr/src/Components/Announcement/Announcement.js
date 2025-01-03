@@ -15,7 +15,7 @@ const Announcement = () => {
 //    }
 //  }, 100);
   const handleclick=()=>{
-    window.location = `/autokriti/register`
+    window.location = `/crowdfunding`
   }
   return (
 
@@ -27,8 +27,8 @@ const Announcement = () => {
         <div className="announcement-text text1">
 
             <span>Welcome to SAE NIT KURUKSHETRA !   </span>
-              <span>Autokriti 14.0 Registration Started !!</span> 
-            <span>10% off on Registration upto 20 September</span>
+              <span>SAE Unity Drive is Live !!</span> 
+            {/* <span>10% off on Registration upto 20 September</span> */}
             <span></span>
         </div>
         <div className="announcemnt-text text2">
