@@ -2,16 +2,54 @@ import React, { useEffect, useState } from 'react';
 import "./CrowdFunding-styles.css";
 import Footer from '../../Components/Footer/Footer';
 import NavBar from '../../Components/NavBar/NavBar';
-import heroimage from "../../Assets/Crowdfunding2024/hero-image.webp"
+import heroimage from "../../Assets/Crowdfunding2024/hero__image.webp"
 import nitrox from "../../Assets/Crowdfunding2024/nitrox.webp";
 import accelerons from "../../Assets/Crowdfunding2024/accelerons.webp";
+import CountUp from 'react-countup';
+import { doc, getDoc } from "firebase/firestore";
+import db from "../../Firebase.js";
+import toast, { Toaster } from 'react-hot-toast';
+// import MoonLoader from "react-spinners/MoonLoader.js";
+import ClipLoader from "react-spinners/ClipLoader";
+
 const CrowdfundingPage = () => {
+  const [raisedAmount, setRaisedAmount] = useState();
+  const [contributors, setContributors] = useState();
+  const [loading, setLoading] = useState(true);
   const progress = {
-    raised: 250000,
-    target: 1000000,
-    contributors: 125,
+    raised: raisedAmount,
+    contributors: contributors,
     daysLeft: 45,
   };
+  useEffect(() => {
+    const fetchCurrentData = async () => {
+      try {
+        // Reference to the "CurrentData" document in the "DonationForm" collection
+        const docRef = doc(db, "DonationForm", "CurrentData");
+
+        // Retrieve the document
+        const docSnap = await getDoc(docRef);
+
+        if (docSnap.exists()) {
+          // Document data exists, set it to state
+          setRaisedAmount(docSnap.data().Amount);
+          setContributors(docSnap.data().Contributors);
+          // console.log("CurrentData:", docSnap.data());
+        } else {
+          // Document does not exist
+          toast.error('Something went wrong')
+          console.log("No such document!");
+        }
+      } catch (error) {
+        toast.error('Something went wrong')
+        console.error("Error fetching document:", error);
+      } finally {
+        setLoading(false)
+      }
+    };
+
+    fetchCurrentData();
+  }, []);
 
   const [animatedWidth, setAnimatedWidth] = useState(0);
 
@@ -71,13 +109,14 @@ const CrowdfundingPage = () => {
     },
   ];
 
-  const handleClick=()=>{
+  const handleClick = () => {
     window.location = "/crowdfunding/form";
   }
 
   return (
     <>
-      <NavBar/>
+      <Toaster />
+      <NavBar />
       <div className="page">
         {/* Hero Section */}
         <div className="hero-section">
@@ -89,25 +128,40 @@ const CrowdfundingPage = () => {
             />
           </div>
           <div className="hero-content">
-            <h1>Support SAE Unity Drive</h1>
+            <h1>SAE Unity Drive</h1>
             <p>
-            Your contribution empowers innovation, fuels dreams, and drives success.
+              Your contribution empowers innovation, fuels dreams, and drives success.
             </p>
             <div className="progress-bar-container">
-              <div className="progress-bar-stats">
-                <span>₹{progress.raised.toLocaleString()}</span>
-                <span>₹{progress.target.toLocaleString()}</span>
-              </div>
-              <div className="progress-bar-bg">
+              {loading ? <>
+                <ClipLoader loading={loading} size={40} /></> : (progress.contributors == 0 && progress.raised == 0) ?
+                (
+                  <>
+                    <div className="progress-bar-info contributors-0">
+                      <span>Be the first to make a difference!</span>
+                      {/* <span>{progress.daysLeft} Days Left</span> */}
+                    </div>
+                  </>
+
+                ) :
+                (
+                  <>
+                    <div className="progress-bar-stats">
+                      <span>₹<CountUp start={0} end={progress.raised} delay={0.5} duration={1} enableScrollSpy={true} scrollSpyOnce={true} className='counter-class' /></span>
+                      {/* <span>₹{progress.target.toLocaleString()}</span> */}
+                    </div>
+                    {/* <div className="progress-bar-bg">
                 <div
                   className="progress-bar-fill"
                   style={{ width: `${animatedWidth}%` ,transition:"width 2s ease"}}
                 ></div>
-              </div>
-              <div className="progress-bar-info">
-                <span>{progress.contributors} Contributors</span>
-                <span>{progress.daysLeft} Days Left</span>
-              </div>
+              </div> */}
+                    <div className="progress-bar-info">
+                      <span><CountUp start={0} delay={0.5} end={progress.contributors} duration={1} enableScrollSpy={true} scrollSpyOnce={true} className='counter-class' /> Contributors</span>
+                      {/* <span>{progress.daysLeft} Days Left</span> */}
+                    </div>
+                  </>
+                )}
             </div>
             <button className="contribute-button" onClick={handleClick}>Contribute Now</button>
           </div>
@@ -127,7 +181,7 @@ const CrowdfundingPage = () => {
 
         {/* Add other sections here */}
         {/* Quick Stats */}
-        <div className="quick-stats">
+        {/* <div className="quick-stats">
           <div className="container">
             <div className="stats-grid">
               {quickStats.map((stat, index) => (
@@ -139,10 +193,10 @@ const CrowdfundingPage = () => {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Teams Section */}
-        <div className="teams-section">
+        {/* <div className="teams-section">
           <div className="container">
             <h2>Our Teams</h2>
             <div className="teams-grid">
@@ -161,9 +215,9 @@ const CrowdfundingPage = () => {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
         {/* Impact Section */}
-        <div className="impact-section">
+        {/* <div className="impact-section">
           <div className="container">
             <h2>Our Impact</h2>
             <div className="impact-grid">
@@ -176,10 +230,10 @@ const CrowdfundingPage = () => {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* CTA Section */}
-        <div className="cta-section">
+        {/* <div className="cta-section">
           <div className="container">
             <h2>Support Our Journey</h2>
             <p>
@@ -187,7 +241,7 @@ const CrowdfundingPage = () => {
             </p>
             <button className="cta-button" onClick={handleClick}>Contribute Now</button>
           </div>
-        </div>
+        </div> */}
 
         {/* Contact Section */}
         <div className="contact-section">
@@ -210,7 +264,7 @@ const CrowdfundingPage = () => {
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 };
